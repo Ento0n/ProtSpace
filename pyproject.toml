@@ -1,0 +1,24 @@
+[tool.poetry]
+name = "protspace3d"
+version = "0.1.0"
+description = "Development of a protein-embedding visualization tool."
+authors = ["Anton Spannagl"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.8"
+jupyter-dash = "^0.4.2"
+matplotlib = "^3.5.3"
+seaborn = "^0.12.0"
+numpy = "^1.23.3"
+pandas = "^1.4.4"
+h5py = "^3.7.0"
+umap-learn = "^0.5.3"
+plotly = "^5.10.0"
+dash = "^2.6.1"
+dash-bio = "^1.0.2"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
