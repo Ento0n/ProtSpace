@@ -15,6 +15,8 @@ from visualization import render
 NON_WORD_RE = re.compile("[^a-zA-Z0-9]")
 AXIS_NAMES = ["x", "y", "z"]
 
+df = None
+
 
 def data_preprocessing(data_dir_path, basename, csv_separator, uid_col):
     # root directory that holds, proteins.fasta, embeddings.h5, labels.csv and some output_file.html
@@ -67,8 +69,18 @@ def data_preprocessing(data_dir_path, basename, csv_separator, uid_col):
 
     # generate initial figure
     fig = render(df=df_embeddings, selected_column=csv_header[0])
+
+    # save df_embeddings in global variable df
+    global df
+    df = df_embeddings
+
     # save_plotly_figure_to_html(fig, str(fig_3D_p))
     return df_embeddings, fig, csv_header
+
+
+# Returns the global variable df
+def get_df():
+    return df
 
 
 def get_embeddings(

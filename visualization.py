@@ -4,6 +4,15 @@
 import numpy as np
 import pandas as pd
 
+import dash
+from dash import Dash, dcc, html
+from dash import Input, Output
+from dash.exceptions import PreventUpdate
+
+import plotly.graph_objects as go
+
+from preprocessing import get_df
+
 SYMBOLS = [
     "circle",
     "square",
@@ -14,6 +23,39 @@ SYMBOLS = [
     "square-open",
     "diamond-open",
 ]
+
+styles = {
+    "pre": {
+        "border": "thin lightgrey solid",
+        "overflowX": "scroll",
+        "overflowY": "scroll",
+        "width": "100%",
+        "height": "90vh",
+    }
+}
+
+
+def init_app(fig: go.Figure, csv_header: list):
+    app = Dash(__name__)
+
+    app.layout = html.Div(
+        [
+            dcc.Markdown("""**3D scatter plot of embedding space.**"""),
+            dcc.Dropdown(
+                csv_header,
+                csv_header[0],
+                id="dd_menu",
+            ),
+            dcc.Graph(
+                id="graph",
+                figure=fig,
+                clear_on_unhover=True,
+                style=styles["pre"],
+            ),
+        ]
+    )
+
+    return app
 
 
 # https://github.com/sacdallago/bio_embeddings/blob/develop/bio_embeddings/visualize/plotly_plots.py

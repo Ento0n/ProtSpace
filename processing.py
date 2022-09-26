@@ -10,7 +10,7 @@ from dash import Input, Output
 from dash.exceptions import PreventUpdate
 
 from preprocessing import data_preprocessing
-from visualization import render
+from visualization import render, init_app
 
 @dash.callback(Output("graph", "figure"), Input("dd_menu", "value"))
 def update_graph(xaxis_column_name):
@@ -84,38 +84,17 @@ def parse_args():
     return data_dir_path, basename, csv_sep, uid_col
 
 
+# Parse arguments
 data_dir_path, basename, csv_sep, uid_col = parse_args()
+
+
+# Preprocessing
 df, fig, csv_header = data_preprocessing(data_dir_path, basename, csv_sep, uid_col)
+
+
 # --- APP creation ---
 # TODO separate code in a different script
-
-styles = {
-    "pre": {
-        "border": "thin lightgrey solid",
-        "overflowX": "scroll",
-        "overflowY": "scroll",
-        "width": "100%",
-        "height": "90vh",
-    }
-}
-
-app = Dash(__name__)
-app.layout = html.Div(
-    [
-        dcc.Markdown("""**3D scatter plot of embedding space.**"""),
-        dcc.Dropdown(
-            csv_header,
-            csv_header[0],
-            id="dd_menu",
-        ),
-        dcc.Graph(
-            id="graph",
-            figure=fig,
-            clear_on_unhover=True,
-            style=styles["pre"],
-        ),
-    ]
-)
+app = init_app(fig, csv_header)
 
 
 if __name__ == "__main__":
