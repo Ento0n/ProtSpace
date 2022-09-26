@@ -28,9 +28,3 @@ Example:
 ```shell
 python processing.py -d data -b VA --sep , --uid_col 0
 ```
-
-## Navigation
-
-The required files are to be found in the **origin/ToniWorking** branch.
-
-The folder MichaelProject holds the original project of mheinzinger (https://github.com/mheinzinger/ProtSpace3D)
