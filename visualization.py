@@ -19,7 +19,7 @@ SYMBOLS = [
     "x",
     "circle-open",
     "square-open",
-    "diamond-open",
+    "diamond-open"
 ]
 
 styles = {
@@ -75,7 +75,7 @@ def render(df: pd.DataFrame, selected_column: str):
             name=group_value,
             # TODO: figure something out to deal with the colors
             # 10 colors are available; once those are used, pick different symbol
-            marker=dict(symbol=SYMBOLS[group_idx % 10]),
+            marker=dict(symbol=SYMBOLS[group_idx % 8]),
         )
         data.append(trace)
         df.loc[df[selected_column] == group_value, "class_index"] = group_idx
