@@ -11,8 +11,6 @@ from dash.exceptions import PreventUpdate
 
 import plotly.graph_objects as go
 
-from preprocessing import get_df
-
 SYMBOLS = [
     "circle",
     "square",

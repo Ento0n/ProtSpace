@@ -19,7 +19,6 @@ def update_graph(xaxis_column_name):
         raise PreventUpdate
 
     fig = render(df, selected_column=xaxis_column_name)
-    print("Update call!")
     fig.update_traces(hoverinfo="none", hovertemplate=None)
     fig.update_layout(clickmode="event+select")
     fig.update_traces(
