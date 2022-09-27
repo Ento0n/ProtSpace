@@ -6,7 +6,7 @@ authors = ["Anton Spannagl"]
 readme = "README.md"
 
 [tool.poetry.dependencies]
-python = "^3.8"
+python = "^3.9"
 jupyter-dash = "^0.4.2"
 matplotlib = "^3.5.3"
 seaborn = "^0.12.0"

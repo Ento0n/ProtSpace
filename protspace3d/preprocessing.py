@@ -60,12 +60,13 @@ def data_preprocessing(data_dir_path, basename, csv_separator, uid_col):
     # df_umap = pd.DataFrame(data=data, columns=AXIS_NAMES)
     # df_umap.index = csv_uids
     # # --- END ---
+
     df_embeddings = df_csv.join(df_umap, how="right")
     csv_header = [
         header for header in df_embeddings.columns if header not in AXIS_NAMES
     ]
     # save dataframe
-    df_embeddings.to_csv(f"data/{basename}.csv")
+    df_embeddings.to_csv(f"{data_dir_path}/df.csv")
 
     # generate initial figure
     fig = render(df=df_embeddings, selected_column=csv_header[0])

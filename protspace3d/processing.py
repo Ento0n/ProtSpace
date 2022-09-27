@@ -3,7 +3,6 @@
 
 import argparse
 from pathlib import Path
-from dash import Dash, dcc, html
 
 import dash
 from dash import Input, Output
@@ -11,6 +10,7 @@ from dash.exceptions import PreventUpdate
 
 from preprocessing import data_preprocessing
 from visualization import render, init_app
+
 
 @dash.callback(Output("graph", "figure"), Input("dd_menu", "value"))
 def update_graph(xaxis_column_name):
@@ -31,7 +31,7 @@ def update_graph(xaxis_column_name):
 def parse_args():
     """Creates and returns the ArgumentParser object
 
-    Run example: python processing.py -d data -b VA --sep , --uid_col 0
+    Run example: python protspace3d/processing.py -d data -b VA --sep , --uid_col 0
     """
 
     # Instantiate the parser
