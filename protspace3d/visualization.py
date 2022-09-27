@@ -43,13 +43,19 @@ def init_app(fig: go.Figure, csv_header: list):
                 csv_header,
                 csv_header[0],
                 id="dd_menu",
+                searchable=False,
+                clearable=False
             ),
             dcc.Graph(
                 id="graph",
                 figure=fig,
                 clear_on_unhover=True,
-                style=styles["pre"],
+                style=styles["pre"]
             ),
+            dcc.Store(
+                id="store_data",
+                storage_type="memory"
+            )
         ]
     )
 
@@ -88,5 +94,23 @@ def render(df: pd.DataFrame, selected_column: str):
             yaxis=dict(showticklabels=False, showspikes=False, title=""),
             zaxis=dict(showticklabels=False, showspikes=False, title=""),
         ),
+    )
+    return fig
+
+
+@dash.callback(Output("graph", "figure"),
+               Input("store_data", "data"),
+               Input("dd_menu", "value"))
+def update_graph(df, xaxis_column_name):
+    ctx = dash.callback_context
+    if not ctx.triggered:
+        raise PreventUpdate
+
+    fig = render(pd.DataFrame.from_records(df), selected_column=xaxis_column_name)
+    fig.update_traces(hoverinfo="none", hovertemplate=None)
+    fig.update_layout(clickmode="event+select")
+    fig.update_traces(
+        marker=dict(size=6, line=dict(width=1, color="DarkSlateGrey")),
+        selector=dict(mode="markers"),
     )
     return fig

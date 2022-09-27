@@ -4,28 +4,8 @@
 import argparse
 from pathlib import Path
 
-import dash
-from dash import Input, Output
-from dash.exceptions import PreventUpdate
-
 from preprocessing import data_preprocessing
-from visualization import render, init_app
-
-
-@dash.callback(Output("graph", "figure"), Input("dd_menu", "value"))
-def update_graph(xaxis_column_name):
-    ctx = dash.callback_context
-    if not ctx.triggered:
-        raise PreventUpdate
-
-    fig = render(df, selected_column=xaxis_column_name)
-    fig.update_traces(hoverinfo="none", hovertemplate=None)
-    fig.update_layout(clickmode="event+select")
-    fig.update_traces(
-        marker=dict(size=6, line=dict(width=1, color="DarkSlateGrey")),
-        selector=dict(mode="markers"),
-    )
-    return fig
+from visualization import init_app
 
 
 def parse_args():

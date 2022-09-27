@@ -10,12 +10,16 @@ import re
 import umap
 from pandas import DataFrame
 
+import dash
+from dash import Input, Output
+from dash.exceptions import PreventUpdate
+
 from visualization import render
 
 NON_WORD_RE = re.compile("[^a-zA-Z0-9]")
 AXIS_NAMES = ["x", "y", "z"]
 
-df = None
+df = pd.DataFrame()
 
 
 def data_preprocessing(data_dir_path, basename, csv_separator, uid_col):
@@ -66,7 +70,7 @@ def data_preprocessing(data_dir_path, basename, csv_separator, uid_col):
         header for header in df_embeddings.columns if header not in AXIS_NAMES
     ]
     # save dataframe
-    df_embeddings.to_csv(f"{data_dir_path}/df.csv")
+    df_embeddings.to_csv(f"{root}/df.csv")
 
     # generate initial figure
     fig = render(df=df_embeddings, selected_column=csv_header[0])
@@ -77,11 +81,6 @@ def data_preprocessing(data_dir_path, basename, csv_separator, uid_col):
 
     # save_plotly_figure_to_html(fig, str(fig_3D_p))
     return df_embeddings, fig, csv_header
-
-
-# Returns the global variable df
-def get_df():
-    return df
 
 
 def get_embeddings(
@@ -137,3 +136,14 @@ def generate_umap(data: np.ndarray) -> pd.DataFrame:
     umap_fit = fit.fit_transform(data)  # fit umap to our embeddings
     df_umap = DataFrame(data=umap_fit, columns=AXIS_NAMES)
     return df_umap
+
+
+@dash.callback(Output("store_data", "data"),
+               Output("dd_menu", "value"),
+               Input("dd_menu", "value"))
+def store_data(value):
+    ctx = dash.callback_context
+    if not ctx.triggered:
+        raise PreventUpdate
+
+    return df.to_dict("records"), value
