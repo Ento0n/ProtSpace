@@ -19,7 +19,7 @@ SYMBOLS = [
     "x",
     "circle-open",
     "square-open",
-    "diamond-open"
+    "diamond-open",
 ]
 
 styles = {
@@ -33,7 +33,11 @@ styles = {
 }
 
 
-def init_app(fig: go.Figure, csv_header: list):
+def init_app(fig: go.Figure, csv_header: list, html_col: int):
+    # Assign html argument accordingly
+    if html_col == -1:
+        html_col = 0
+
     app = Dash(__name__)
 
     app.layout = html.Div(
@@ -41,21 +45,15 @@ def init_app(fig: go.Figure, csv_header: list):
             dcc.Markdown("""**3D scatter plot of embedding space.**"""),
             dcc.Dropdown(
                 csv_header,
-                csv_header[0],
+                csv_header[html_col],
                 id="dd_menu",
                 searchable=False,
-                clearable=False
+                clearable=False,
             ),
             dcc.Graph(
-                id="graph",
-                figure=fig,
-                clear_on_unhover=True,
-                style=styles["pre"]
+                id="graph", figure=fig, clear_on_unhover=True, style=styles["pre"]
             ),
-            dcc.Store(
-                id="store_data",
-                storage_type="memory"
-            )
+            dcc.Store(id="store_data", storage_type="memory"),
         ]
     )
 
@@ -64,8 +62,6 @@ def init_app(fig: go.Figure, csv_header: list):
 
 # https://github.com/sacdallago/bio_embeddings/blob/develop/bio_embeddings/visualize/plotly_plots.py
 def render(df: pd.DataFrame, selected_column: str):
-    import plotly.graph_objects as go
-
     col_groups = df[selected_column].unique().tolist()
 
     df["class_index"] = np.ones(len(df)) * -100
@@ -98,19 +94,14 @@ def render(df: pd.DataFrame, selected_column: str):
     return fig
 
 
-@dash.callback(Output("graph", "figure"),
-               Input("store_data", "data"),
-               Input("dd_menu", "value"))
+@dash.callback(
+    Output("graph", "figure"), Input("store_data", "data"), Input("dd_menu", "value")
+)
 def update_graph(df, xaxis_column_name):
+    # Check whether an input is triggered
     ctx = dash.callback_context
     if not ctx.triggered:
         raise PreventUpdate
 
     fig = render(pd.DataFrame.from_records(df), selected_column=xaxis_column_name)
-    fig.update_traces(hoverinfo="none", hovertemplate=None)
-    fig.update_layout(clickmode="event+select")
-    fig.update_traces(
-        marker=dict(size=6, line=dict(width=1, color="DarkSlateGrey")),
-        selector=dict(mode="markers"),
-    )
     return fig

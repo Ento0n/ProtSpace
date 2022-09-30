@@ -1,7 +1,8 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 
-from pathlib import Path, PosixPath
+import sys
+from pathlib import Path
 import h5py
 from scipy.spatial.distance import pdist, squareform
 import numpy as np
@@ -16,16 +17,30 @@ from dash.exceptions import PreventUpdate
 
 from visualization import render
 
-NON_WORD_RE = re.compile("[^a-zA-Z0-9]")
+NON_WORD_RE = re.compile(r"\W")
 AXIS_NAMES = ["x", "y", "z"]
 
 df = pd.DataFrame()
 
 
-def data_preprocessing(data_dir_path, basename, csv_separator, uid_col):
+def data_preprocessing(data_dir_path, basename, csv_separator, uid_col, html_col):
+    # Assign html argument accordingly
+    if html_col == -1:
+        html_set = False
+        html_col = 0
+    else:
+        html_set = True
+
     # root directory that holds, proteins.fasta, embeddings.h5, labels.csv and some output_file.html
     root = Path(data_dir_path)
-    rep_seqs = root /  f"{basename}.fasta"
+
+    # load df.csv if present
+    pres_df = root / "df.csv"
+
+    if pres_df.is_file():
+        pres_df_csv = pd.read_csv(pres_df, sep=csv_separator, index_col=uid_col)
+
+    rep_seqs = root / f"{basename}.fasta"
     emb_h5file = root / f"{basename}.h5"
     label_csv_p = root / f"{basename}.csv"
 
@@ -34,7 +49,7 @@ def data_preprocessing(data_dir_path, basename, csv_separator, uid_col):
 
     df_csv = pd.read_csv(label_csv_p, sep=csv_separator, index_col=uid_col)
     csv_uids = unify_seq_uids(
-        df_csv.index.to_list()
+        df_csv.index
     )  # TODO: where else does this operation need to be performed?
     df_csv.index = csv_uids
 
@@ -69,23 +84,25 @@ def data_preprocessing(data_dir_path, basename, csv_separator, uid_col):
     csv_header = [
         header for header in df_embeddings.columns if header not in AXIS_NAMES
     ]
-    # save dataframe
-    df_embeddings.to_csv(f"{root}/df.csv")
 
-    # generate initial figure
-    fig = render(df=df_embeddings, selected_column=csv_header[0])
+    # save dataframe
+    df_embeddings.to_csv(root / "df.csv")
 
     # save df_embeddings in global variable df
     global df
     df = df_embeddings
 
+    # generate initial figure
+    fig = render(df=df_embeddings, selected_column=csv_header[html_col])
+
     # save_plotly_figure_to_html(fig, str(fig_3D_p))
+    if html_set:
+        fig.write_html(root / "plot.html")
+
     return df_embeddings, fig, csv_header
 
 
-def get_embeddings(
-    emb_h5file: PosixPath, csv_uids: list[str]
-) -> dict[str, np.ndarray]:
+def get_embeddings(emb_h5file: Path, csv_uids: list[str]) -> dict[str, np.ndarray]:
     """load pre-computed embeddings in .h5 file format
 
     Args:
@@ -97,6 +114,7 @@ def get_embeddings(
             single vector (embeddings) per protein as value. Values have
             1024-dimensions for ProtT5 and 128-dimensions for ProtTucker
     """
+
     embeddings = dict()
     missing = list()
     print(f"Loading pre-computed embeddings from: {emb_h5file}")
@@ -106,6 +124,10 @@ def get_embeddings(
                 embeddings[identifier] = embd[:]
             else:
                 missing.append(identifier)
+
+    # Check whether any UIDs matched with the embedding.keys
+    if len(embeddings.keys()) == 0:
+        sys.exit("None of the Unique IDs of the h5 and the csv file matched.")
 
     print(f"Example: {next(iter(embeddings.keys()))}")
     print(f"Number of embeddings: {len(embeddings)}")
@@ -138,10 +160,11 @@ def generate_umap(data: np.ndarray) -> pd.DataFrame:
     return df_umap
 
 
-@dash.callback(Output("store_data", "data"),
-               Output("dd_menu", "value"),
-               Input("dd_menu", "value"))
+@dash.callback(
+    Output("store_data", "data"), Output("dd_menu", "value"), Input("dd_menu", "value")
+)
 def store_data(value):
+    # Check whether an input is triggered
     ctx = dash.callback_context
     if not ctx.triggered:
         raise PreventUpdate
