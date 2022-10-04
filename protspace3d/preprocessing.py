@@ -33,13 +33,6 @@ def data_preprocessing(data_dir_path, basename, csv_separator, uid_col, html_col
 
     # root directory that holds, proteins.fasta, embeddings.h5, labels.csv and some output_file.html
     root = Path(data_dir_path)
-
-    # load df.csv if present
-    pres_df = root / "df.csv"
-
-    if pres_df.is_file():
-        pres_df_csv = pd.read_csv(pres_df, sep=csv_separator, index_col=uid_col)
-
     rep_seqs = root / f"{basename}.fasta"
     emb_h5file = root / f"{basename}.h5"
     label_csv_p = root / f"{basename}.csv"
@@ -48,11 +41,73 @@ def data_preprocessing(data_dir_path, basename, csv_separator, uid_col, html_col
     fig_2D_p = root / f"{basename}.pdf"
 
     df_csv = pd.read_csv(label_csv_p, sep=csv_separator, index_col=uid_col)
+
+    # save index name for df.csv
+    index_name = df_csv.index.name
+
+    # Unify notation of the UIDs
     csv_uids = unify_seq_uids(
         df_csv.index
     )  # TODO: where else does this operation need to be performed?
     df_csv.index = csv_uids
 
+    # load & read df.csv if present
+    pres_df = root / "df.csv"
+    if pres_df.is_file():
+        print("Pre computed dataframe file df.csv is loaded.")
+        pres_df_csv = pd.read_csv(pres_df, sep=csv_separator, index_col=uid_col)
+
+        # Check each column x, y & z for incompleteness
+        if not check_coordinates(pres_df_csv):
+            print("Start recalculation!")
+            df_embeddings, csv_header = create_df(
+                root, emb_h5file, csv_uids, df_csv, index_name
+            )
+        # columns x, y & z are fine
+        else:
+            # Update df in case new columns were added to the csv
+            if len(df_csv.columns) - (len(pres_df_csv.columns) - len(AXIS_NAMES)) > 0:
+                print("New column(s) were found and will be added.")
+                pres_df_csv = update_df(df_csv, pres_df_csv)
+
+                # save the new obtained df
+                pres_df_csv.to_csv(root / "df.csv", index_label=index_name)
+
+            # save final column names
+            csv_header = [
+                header for header in pres_df_csv.columns if header not in AXIS_NAMES
+            ]
+
+            # Unify df name
+            df_embeddings = pres_df_csv
+
+    # create dataframe from files
+    else:
+        df_embeddings, csv_header = create_df(
+            root, emb_h5file, csv_uids, df_csv, index_name
+        )
+
+    # save df_embeddings in global variable df
+    global df
+    df = df_embeddings
+
+    # generate initial figure
+    fig = render(df=df_embeddings, selected_column=csv_header[html_col])
+
+    # save_plotly_figure_to_html(fig, str(fig_3D_p))
+    if html_set:
+        fig.write_html(root / "plot.html")
+
+    return df_embeddings, fig, csv_header
+
+
+def create_df(
+    root: Path,
+    emb_h5file: Path,
+    csv_uids: list[str],
+    df_csv: DataFrame,
+    index_name: str,
+):
     # read embeddings from HDF5 format
     embeddings = get_embeddings(emb_h5file=emb_h5file, csv_uids=csv_uids)
 
@@ -86,20 +141,9 @@ def data_preprocessing(data_dir_path, basename, csv_separator, uid_col, html_col
     ]
 
     # save dataframe
-    df_embeddings.to_csv(root / "df.csv")
+    df_embeddings.to_csv(root / "df.csv", index_label=index_name)
 
-    # save df_embeddings in global variable df
-    global df
-    df = df_embeddings
-
-    # generate initial figure
-    fig = render(df=df_embeddings, selected_column=csv_header[html_col])
-
-    # save_plotly_figure_to_html(fig, str(fig_3D_p))
-    if html_set:
-        fig.write_html(root / "plot.html")
-
-    return df_embeddings, fig, csv_header
+    return df_embeddings, csv_header
 
 
 def get_embeddings(emb_h5file: Path, csv_uids: list[str]) -> dict[str, np.ndarray]:
@@ -158,6 +202,43 @@ def generate_umap(data: np.ndarray) -> pd.DataFrame:
     umap_fit = fit.fit_transform(data)  # fit umap to our embeddings
     df_umap = DataFrame(data=umap_fit, columns=AXIS_NAMES)
     return df_umap
+
+
+def check_coordinates(df: DataFrame) -> bool:
+    # Do the columns x, y and z exist?
+    if not all(x in list(df.columns) for x in AXIS_NAMES):
+        print("Df corrupted as not x,y & z columns are present!")
+        return False
+
+    # Is the corresponding data complete ?
+    for col in AXIS_NAMES:
+        for value in list(df[col]):
+            if not isinstance(value, float):
+                # Value is corrupted
+                print(f"At least one value of the {col} column is corrupted!")
+                return False
+
+    # All values of the x,y & z column are correct
+    return True
+
+
+def update_df(df_csv: DataFrame, pres_df_csv: DataFrame):
+    # extract column names
+    df_cols = set(df_csv.columns)
+    pres_df_cols = set(pres_df_csv.columns)
+
+    # get missing columns in present df
+    missing_cols = df_cols - pres_df_cols
+
+    # add missing columns to the present df
+    for col in missing_cols:
+        pres_df_csv.insert(len(pres_df_cols) - len(AXIS_NAMES), col, df_csv[col])
+        print(
+            f"Missing column {col} from the .csv file has been added to the present df.csv file."
+        )
+
+    # return updated df
+    return pres_df_csv
 
 
 @dash.callback(
