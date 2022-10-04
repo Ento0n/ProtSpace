@@ -22,6 +22,7 @@ The script to be executed is processing.py with the arguments:
     ->  -b          Name of the files which are in the data folder, requires equal names (String)
     ->  --sep       The character which seperates the columns in the .csv file (Character)
     ->  --uid_col   The column number which holds the unique ID, starting from 0 (Integer)
+    ->  --html_col  If set, html file of the selected column is saved in data directory (Integer)
 
 Example:
 
