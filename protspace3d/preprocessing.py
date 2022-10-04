@@ -40,6 +40,11 @@ def data_preprocessing(data_dir_path, basename, csv_separator, uid_col, html_col
     fig_3D_p = root / f"{basename}.html"
     fig_2D_p = root / f"{basename}.pdf"
 
+    # Check whether all files are present
+    if not rep_seqs.is_file() or not emb_h5file.is_file() or not label_csv_p.is_file():
+        print("At least one file is missing in the data directory, exit processing!")
+        sys.exit(666)
+
     df_csv = pd.read_csv(label_csv_p, sep=csv_separator, index_col=uid_col)
 
     # save index name for df.csv
