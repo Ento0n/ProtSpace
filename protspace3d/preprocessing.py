@@ -8,7 +8,6 @@ from scipy.spatial.distance import pdist, squareform
 import numpy as np
 import pandas as pd
 import re
-import umap
 from pandas import DataFrame
 
 import dash
@@ -23,14 +22,7 @@ AXIS_NAMES = ["x", "y", "z"]
 df = pd.DataFrame()
 
 
-def data_preprocessing(data_dir_path, basename, csv_separator, uid_col, html_col):
-    # Assign html argument accordingly
-    if html_col == -1:
-        html_set = False
-        html_col = 0
-    else:
-        html_set = True
-
+def data_preprocessing(data_dir_path, basename, csv_separator, uid_col, html_cols):
     # root directory that holds, proteins.fasta, embeddings.h5, labels.csv and some output_file.html
     root = Path(data_dir_path)
     rep_seqs = root / f"{basename}.fasta"
@@ -41,9 +33,12 @@ def data_preprocessing(data_dir_path, basename, csv_separator, uid_col, html_col
     fig_2D_p = root / f"{basename}.pdf"
 
     # Check whether all files are present
-    if not rep_seqs.is_file() or not emb_h5file.is_file() or not label_csv_p.is_file():
-        print("At least one file is missing in the data directory, exit processing!")
-        sys.exit(666)
+    files = [rep_seqs, emb_h5file, label_csv_p]
+    for file in files:
+        if not file.is_file():
+            raise FileNotFoundError(
+                f"The {file} file is missing! Check data directory and basename."
+            )
 
     df_csv = pd.read_csv(label_csv_p, sep=csv_separator, index_col=uid_col)
 
@@ -60,31 +55,41 @@ def data_preprocessing(data_dir_path, basename, csv_separator, uid_col, html_col
     pres_df = root / "df.csv"
     if pres_df.is_file():
         print("Pre computed dataframe file df.csv is loaded.")
-        pres_df_csv = pd.read_csv(pres_df, sep=csv_separator, index_col=uid_col)
+        pres_df_csv = pd.read_csv(pres_df, index_col=uid_col)
 
-        # Check each column x, y & z for incompleteness
-        if not check_coordinates(pres_df_csv):
-            print("Start recalculation!")
+        # Check whether no. of rows equals data
+        if len(pres_df_csv) != len(df_csv):
+            print("# of rows doesn't match data!\nStart recalculation!")
             df_embeddings, csv_header = create_df(
                 root, emb_h5file, csv_uids, df_csv, index_name
             )
-        # columns x, y & z are fine
         else:
-            # Update df in case new columns were added to the csv
-            if len(df_csv.columns) - (len(pres_df_csv.columns) - len(AXIS_NAMES)) > 0:
-                print("New column(s) were found and will be added.")
-                pres_df_csv = update_df(df_csv, pres_df_csv)
+            # Check each column x, y & z for incompleteness
+            if not check_coordinates(pres_df_csv):
+                print("Start recalculation!")
+                df_embeddings, csv_header = create_df(
+                    root, emb_h5file, csv_uids, df_csv, index_name
+                )
+            # columns x, y & z are fine
+            else:
+                # Update df in case new columns were added to the csv
+                if (
+                    len(df_csv.columns) - (len(pres_df_csv.columns) - len(AXIS_NAMES))
+                    > 0
+                ):
+                    print("New column(s) were found and will be added.")
+                    pres_df_csv = update_df(df_csv, pres_df_csv)
 
-                # save the new obtained df
-                pres_df_csv.to_csv(root / "df.csv", index_label=index_name)
+                    # save the new obtained df
+                    pres_df_csv.to_csv(root / "df.csv", index_label=index_name)
 
-            # save final column names
-            csv_header = [
-                header for header in pres_df_csv.columns if header not in AXIS_NAMES
-            ]
+                # save final column names
+                csv_header = [
+                    header for header in pres_df_csv.columns if header not in AXIS_NAMES
+                ]
 
-            # Unify df name
-            df_embeddings = pres_df_csv
+                # Unify df name
+                df_embeddings = pres_df_csv
 
     # create dataframe from files
     else:
@@ -92,16 +97,29 @@ def data_preprocessing(data_dir_path, basename, csv_separator, uid_col, html_col
             root, emb_h5file, csv_uids, df_csv, index_name
         )
 
+    # save html figures if argument is set
+    if html_cols is not None:
+        # -1 indicates all columns to be saved
+        if html_cols == [-1]:
+            for col in range(len(csv_header)):
+                fig = render(df=df_embeddings, selected_column=csv_header[col])
+                fig.write_html(data_dir_path / f"3Dspace_{csv_header[col]}.html")
+
+        else:
+            # Given parameters existing columns?
+            if not all(x in list(range(len(csv_header))) for x in html_cols):
+                raise Exception("Given html column(s) not valid")
+
+            for col in html_cols:
+                fig = render(df=df_embeddings, selected_column=csv_header[col])
+                fig.write_html(data_dir_path / f"3Dspace_{csv_header[col]}.html")
+
     # save df_embeddings in global variable df
     global df
     df = df_embeddings
 
     # generate initial figure
-    fig = render(df=df_embeddings, selected_column=csv_header[html_col])
-
-    # save_plotly_figure_to_html(fig, str(fig_3D_p))
-    if html_set:
-        fig.write_html(root / "plot.html")
+    fig = render(df=df_embeddings, selected_column=csv_header[0])
 
     return df_embeddings, fig, csv_header
 
@@ -201,6 +219,8 @@ def generate_umap(data: np.ndarray) -> pd.DataFrame:
     # visualize high-dimensional embeddings with dimensionality reduction (here: umap)
     # Tutorial: https://umap-learn.readthedocs.io/en/latest/basic_usage.html
     # Parameters: https://umap-learn.readthedocs.io/en/latest/parameters.html
+    import umap
+
     fit = umap.UMAP(
         n_neighbors=25, min_dist=0.5, random_state=42, n_components=3
     )  # initialize umap; use random_state=42 for reproducability

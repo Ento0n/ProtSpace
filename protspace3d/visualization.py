@@ -33,10 +33,7 @@ styles = {
 }
 
 
-def init_app(fig: go.Figure, csv_header: list, html_col: int):
-    # Assign html argument accordingly
-    if html_col == -1:
-        html_col = 0
+def init_app(fig: go.Figure, csv_header: list):
 
     app = Dash(__name__)
 
@@ -45,7 +42,7 @@ def init_app(fig: go.Figure, csv_header: list, html_col: int):
             dcc.Markdown("""**3D scatter plot of embedding space.**"""),
             dcc.Dropdown(
                 csv_header,
-                csv_header[html_col],
+                csv_header[0],
                 id="dd_menu",
                 searchable=False,
                 clearable=False,

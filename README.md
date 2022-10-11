@@ -27,5 +27,5 @@ The script to be executed is processing.py with the arguments:
 Example:
 
 ```shell
-python processing.py -d data -b VA --sep , --uid_col 0
+python app.py -d data -b VA --sep , --uid_col 0
 ```

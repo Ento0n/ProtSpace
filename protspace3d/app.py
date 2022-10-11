@@ -11,7 +11,7 @@ from visualization import init_app
 def parse_args():
     """Creates and returns the ArgumentParser object
 
-    Run example: python protspace3d/processing.py -d data -b VA --sep , --uid_col 0
+    Run example: python protspace3d/app.py -d data -b VA --sep , --uid_col 0
     """
 
     # Instantiate the parser
@@ -54,11 +54,11 @@ def parse_args():
     )
     # Optional argument
     parser.add_argument(
-        "--html_col",
+        "--html_cols",
         required=False,
         type=int,
-        default=-1,
         help="CSV column data to be saved as html",
+        nargs="+",
     )
 
     args = parser.parse_args()
@@ -66,21 +66,26 @@ def parse_args():
     basename = Path(args.basename)
     csv_sep = args.sep
     uid_col = args.uid_col
-    html_col = args.html_col
+    html_cols = args.html_cols
 
-    return data_dir_path, basename, csv_sep, uid_col, html_col
+    return data_dir_path, basename, csv_sep, uid_col, html_cols
 
 
-# Parse arguments
-data_dir_path, basename, csv_sep, uid_col, html_col = parse_args()
+def main():
+    # Parse arguments
+    data_dir_path, basename, csv_sep, uid_col, html_cols = parse_args()
 
-# Preprocessing
-df, fig, csv_header = data_preprocessing(
-    data_dir_path, basename, csv_sep, uid_col, html_col
-)
+    # Preprocessing
+    df, fig, csv_header = data_preprocessing(
+        data_dir_path, basename, csv_sep, uid_col, html_cols
+    )
 
-# --- APP creation ---
-app = init_app(fig, csv_header, html_col)
+    # --- APP creation ---
+    application = init_app(fig, csv_header)
+
+    return application
+
 
 if __name__ == "__main__":
+    app = main()
     app.run_server(debug=True)
