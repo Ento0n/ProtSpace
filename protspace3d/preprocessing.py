@@ -30,7 +30,7 @@ def data_preprocessing(data_dir_path, basename, csv_separator, uid_col, html_col
     label_csv_p = root / f"{basename}.csv"
 
     # Check whether all files are present
-    files = [rep_seqs, emb_h5file, label_csv_p]
+    files = [emb_h5file, label_csv_p]
     for file in files:
         if not file.is_file():
             raise FileNotFoundError(
