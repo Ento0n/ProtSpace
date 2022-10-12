@@ -10,7 +10,7 @@ Usage:       python main.py
 """
 import argparse
 from itertools import product
-from math import log, ceil
+from math import ceil, log
 from pathlib import Path
 from typing import Generator
 
@@ -30,8 +30,9 @@ class FastaMapper:
         self,
         fasta_input: Path,
         fasta_output: Path = None,
-        csv_mapping: Path = None,
+        csv_mapping_output: Path = None,
         csv_features: Path = None,
+        csv_sep: str = ",",
     ) -> None:
         fasta_suffixes = [".fasta", ".fna", ".ffn", ".faa", ".frn", ".fa"]
         assert fasta_input.suffix in fasta_suffixes, (
@@ -44,13 +45,13 @@ class FastaMapper:
             if fasta_output is not None
             else fasta_input.with_stem(f"{fasta_input.stem}_mapped")
         )
-        self.csv_mapping = (
-            csv_mapping
-            if csv_mapping is not None
+        self.csv_mapping_output = (
+            csv_mapping_output
+            if csv_mapping_output is not None
             else self.fasta_output.with_suffix(".csv")
         )
         if csv_features is not None:
-            self.df_features = pd.read_csv(csv_features, sep=";")
+            self.df_features = pd.read_csv(csv_features, sep=csv_sep)
             self.df_features.iloc[:, 0] = self.df_features.iloc[:, 0].astype(
                 "str"
             )
@@ -106,9 +107,9 @@ class FastaMapper:
                 copy=False,
             )
             df = df.drop(columns=[first_column_name])
-        df.to_csv(self.csv_mapping, index=False)
+        df.to_csv(self.csv_mapping_output, index=False)
         print(f"Mapped FASTA file saved at: {self.fasta_output}")
-        print(f"CSV mapping to old file: {self.csv_mapping}")
+        print(f"CSV mapping to old file: {self.csv_mapping_output}")
 
         # remove cache
         self.cache.unlink()
@@ -142,16 +143,6 @@ def parse_args():
         ),
     )
     parser.add_argument(
-        "-m",
-        "--mapping",
-        required=False,
-        type=str,
-        help=(
-            "CSV path to store mapping. (default: same as fasta_output with"
-            " .csv as suffix). Column names: mapped_id, original_id"
-        ),
-    )
-    parser.add_argument(
         "-ff",
         "--feature_file",
         required=False,
@@ -161,28 +152,57 @@ def parse_args():
             " embeddings. If given, the features will be added to the CSV file."
         ),
     )
+    parser.add_argument(
+        "-sep",
+        "--separator",
+        required=False,
+        default=",",
+        type=str,
+        help="CSV separator for `feature file` (default=',')",
+    )
+    parser.add_argument(
+        "-m",
+        "--mapping",
+        required=False,
+        type=str,
+        help=(
+            "CSV path to store mapping. (default: same as fasta_output with"
+            " .csv as suffix). Column names: mapped_id, original_id, [feature"
+            " columns from `feature file`]"
+        ),
+    )
 
     args = parser.parse_args()
     fasta_input = Path(args.fasta_input)
     fasta_output = (
         Path(args.fasta_output) if args.fasta_output is not None else None
     )
-    csv_mapping = Path(args.mapping) if args.mapping is not None else None
+    csv_mapping_output = (
+        Path(args.mapping) if args.mapping is not None else None
+    )
     csv_features = (
         Path(args.feature_file) if args.feature_file is not None else None
     )
+    csv_sep = args.separator
 
-    return fasta_input, fasta_output, csv_mapping, csv_features
+    return fasta_input, fasta_output, csv_mapping_output, csv_features, csv_sep
 
 
 def main():
     """Run main script"""
-    fasta_input, fasta_output, csv_mapping, csv_features = parse_args()
+    (
+        fasta_input,
+        fasta_output,
+        csv_mapping_output,
+        csv_features,
+        csv_sep,
+    ) = parse_args()
     fasta_mapper = FastaMapper(
         fasta_input=fasta_input,
         fasta_output=fasta_output,
-        csv_mapping=csv_mapping,
+        csv_mapping_output=csv_mapping_output,
         csv_features=csv_features,
+        csv_sep=csv_sep,
     )
     fasta_mapper.create_mapping()
 
