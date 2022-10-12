@@ -1,0 +1,117 @@
+mapped_id,original_id,Effect,x,y,z
+AA,1,Muscle,14.687967,3.552522,10.731828
+AB,2,Fetal muscle,14.971638,3.0562263,10.873516
+AC,3,Fetal muscle,14.189781,2.9237428,11.207769
+AD,4,Fetal muscle,14.38461,3.3099434,11.042864
+AE,5,Torpedo,14.127532,2.2767727,10.766355
+AF,6,Muscle,13.476182,2.9404492,10.0719595
+AG,7,Muscle,13.271026,2.706125,10.267421
+AH,8,a9a10,13.664686,3.4808946,10.359593
+AI,9,Muscle,13.669642,3.4757926,11.049593
+AJ,10,a9a10,13.945837,3.3091946,9.641764
+AK,11,a7 a3b2 a4b2,14.934483,3.1229599,10.436351
+AL,12,Muscle,14.553256,3.2660701,9.539458
+AM,13,PC12 cells,13.714259,2.1678035,10.259206
+AN,14,Muscle,15.225932,3.6654534,10.275351
+AO,15,Torpedo,15.122861,3.397521,10.098593
+AP,16,Torpedo,14.958844,3.7965858,9.759498
+AQ,17,a9a10,14.96026,3.069302,9.429095
+AR,18,Neuronal,13.597541,2.4598117,10.695189
+AS,GII (Conus geographus (Geography cone)) [P00024], <NA> ,8.4609585,4.83598,13.851844
+AT,GI (Conus geographus (Geography cone)) [P00074], <NA> ,8.366536,2.7427423,11.796794
+AU,GIA (Conus geographus (Geography cone)) [P00022], <NA> ,9.231827,2.5057487,12.588638
+AV,PlXIVA (Conus planorbis) [P01539], <NA> ,11.227794,4.47933,11.533617
+AW,SI (Conus striatus (Striated cone)) [P00001], <NA> ,8.513171,3.079229,11.384171
+AX,ArIA (Conus arenatus) [P02748], <NA> ,11.094639,4.0256233,12.461745
+AY,GID (Conus geographus (Geography cone)) [P00098], <NA> ,10.539227,4.2357287,12.9207945
+AZ,MrIC (Conus marmoreus) [P06003], <NA> ,9.367109,5.4469366,12.257169
+BA,Mr1.7 (Conus marmoreus) [P04661], <NA> ,8.870966,5.529941,12.608734
+BB,GeXXA (Conus generalis) [P06732], <NA> ,14.1742325,3.5169578,9.79279
+BC,PIB (Conus purpurascens) [P00038], <NA> ,8.476464,3.9552348,11.227986
+BD,EIIA (Conus ermineus (Atlantic fish-hunting cone)) [P04069], <NA> ,8.37718,4.0783477,11.618598
+BE,LvIB (Conus lividus) [P10267], <NA> ,7.576674,4.2173877,12.058136
+BF,Qc1.2 (Conus quercinus) [P02511], <NA> ,8.131216,3.663228,12.123737
+BG,MIIIJ (Conus magus (Magus cone)) [P08892], <NA> ,10.026145,4.7854276,11.08083
+BH,Czon1107 (Conus zonatus (zoned cone)) [P08893], <NA> ,7.206615,5.249063,11.490227
+BI,PIIIF (Conus purpurascens) [P01594], <NA> ,11.139122,3.9457736,11.391956
+BJ,Pu1.2 (Conus pulicarius) [P02520], <NA> ,9.524959,3.4232433,11.244895
+BK,VnIB  (Conus ventricosus) [P07652], <NA> ,10.264234,2.4795752,12.9223385
+BL,TiIA (Conus tinianus) [P04228], <NA> ,10.149889,2.5567596,13.468882
+BM,AnIB (Conus anemone) [P00015], <NA> ,9.174443,4.4366093,10.80807
+BN,SII (Conus striatus (Striated cone)) [P00090], <NA> ,10.435925,2.5585523,11.98857
+BO,EIVA (Conus ermineus (Atlantic fish-hunting cone)) [P01635], <NA> ,12.316517,3.4556265,11.709971
+BP,PIVA (Conus purpurascens) [P01449], <NA> ,11.636414,3.3577416,12.249775
+BQ,EIVB (Conus ermineus (Atlantic fish-hunting cone)) [P01740], <NA> ,12.062438,3.33239,11.46241
+BR,TxIB (Conus textile (Cloth-of-gold cone)) [P05345], <NA> ,9.306178,4.550905,13.529036
+BS,Lv1d (Conus lividus) [P06424], <NA> ,8.116085,5.5466785,13.067635
+BT,RgIA (Conus regius) [P02585], <NA> ,7.9843984,2.9678206,12.923313
+BU,"RgIA [P6O,del13] (Conus regius) [P00030]", <NA> ,7.7285795,3.2781472,12.7530575
+BV,Reg1d (Conus regius) [P00029], <NA> ,8.217881,3.762039,13.57185
+BW,Reg1b/Reg1c (Conus regius) [P00028], <NA> ,8.135821,3.5700817,13.46567
+BX,EpI (Conus episcopatus) [P00405], <NA> ,10.104642,3.028941,13.854375
+BY,VcIA (Conus victoriae) [P02539], <NA> ,9.612869,4.0671206,14.323824
+BZ,ImI (Conus imperialis) [P00010], <NA> ,7.1456146,3.994,12.214777
+CA,PnIB (Conus pennaceus) [P00099], <NA> ,8.878667,4.5910387,12.113894
+CB,PnIA (Conus pennaceus) [P00051], <NA> ,9.858392,3.0579123,12.911581
+CC,TxIA (Conus textile (Cloth-of-gold cone)) [P02881], <NA> ,8.786412,4.9315286,10.932067
+CD,AuIB (Conus aulicus) [P00095], <NA> ,9.537785,3.7914662,12.66678
+CE,AuIA (Conus aulicus) [P00404], <NA> ,8.357277,4.5955496,11.580303
+CF,AuIC (Conus aulicus) [P00407], <NA> ,8.913273,3.5641959,10.964567
+CG,BuIA (Conus bullatus) [P00026], <NA> ,7.5732207,5.5329094,11.293755
+CH,TxID (Conus textile (Cloth-of-gold cone)) [P06831], <NA> ,8.105982,5.419385,11.546549
+CI,BnIA (Conus bandanus) [P02635], <NA> ,9.698445,3.98407,13.140866
+CJ,PeIA (Conus pergrandis) [P02608], <NA> ,8.675501,5.3592105,13.325496
+CK,Lp1.4 (Conus leopardus) [P02497], <NA> ,8.308877,5.0563397,13.325062
+CL,Lt1.3 [globular] (Conus litteratus) [P07480], <NA> ,9.254098,2.9751742,11.477348
+CM,LvIA (Conus lividus) [P05949], <NA> ,8.8844385,4.3554044,13.021296
+CN,OmIA (Conus omaria) [P00006], <NA> ,10.346943,3.0237527,13.2249
+CO,RegIIA (Conus regius) [P00032], <NA> ,9.554851,3.4093091,13.364358
+CP,GIC (Conus geographus (Geography cone)) [P00132], <NA> ,8.909021,3.6406631,11.9928465
+CQ,CIB (Conus catus) [P08017], <NA> ,8.717753,4.762875,12.890259
+CR,C1.3 (Conus catus) [P09973], <NA> ,8.236034,5.6705384,12.336953
+CS,Vc1.2 (Conus victoriae) [P04200], <NA> ,9.590967,3.0486825,12.217209
+CT,Lp1.1 (Conus leopardus) [P02496], <NA> ,7.5357447,5.4722757,12.318234
+CU,CnIA (Conus consors) [P01558], <NA> ,8.960185,2.8531966,13.590378
+CV,MI (Conus magus (Magus cone)) [P00023], <NA> ,9.167747,3.2222726,13.867482
+CW,GVIIIB (Conus geographus (Geography cone)) [P08941], <NA> ,14.391517,2.3188455,10.183151
+CX,LsIA (Conus limpusi) [P06776], <NA> ,10.190001,3.26501,13.456954
+CY,PIC[O7P] (Conus purpurascens) [P08505], <NA> ,8.399486,4.1740265,13.010222
+CZ,AusIA (Conus australis) [P06679], <NA> ,7.9690204,4.328735,12.795262
+DA,SIA (Conus striatus (Striated cone)) [P00025], <NA> ,9.296113,3.7123635,12.839624
+DB,PrXA (Conus parius) [P02859], <NA> ,12.717858,3.6719637,11.140223
+DC,RGIB (Conus regius) [P05941], <NA> ,11.179214,3.714584,12.810768
+DD,GeXIVA[bead] (Conus generalis) [P08686], <NA> ,11.802458,3.9871542,11.449062
+DE,TxVC (Conus textile (Cloth-of-gold cone)) [P06814], <NA> ,7.6881723,4.7169433,11.8308
+DF,RVIIIA (Conus radiatus) [P01574], <NA> ,14.136213,2.81483,10.408236
+DG,LtXIVA (Conus litteratus) [P02588], <NA> ,8.810474,3.3003871,12.460132
+DH,Pu14a (Conus pulicarius) [P03787], <NA> ,10.64342,4.8674397,11.838044
+DI,VxXXIVA (Conus vexillum) [P05526], <NA> ,13.05781,3.5039654,10.693266
+DJ,PIIIE (Conus purpurascens) [P01611], <NA> ,10.720985,4.3574977,10.987202
+DK,VxXXB (Conus vexillum) [P01685], <NA> ,15.128761,2.5764048,10.217757
+DL,ArIB (Conus arenatus) [P02752], <NA> ,10.781381,3.3747885,12.931671
+DM,VxXXC (Conus vexillum) [P01684], <NA> ,14.701706,2.5864632,9.675579
+DN,Reg1f (Conus regius) [P00031], <NA> ,7.931056,5.1136627,11.131969
+DO,MilIA (Conus milneedwardsi) [P09015], <NA> ,8.796805,4.229848,14.317186
+DP,VxXXA (Conus vexillum) [P01686], <NA> ,14.562705,2.9617922,10.0870075
+DQ,PeIVB (Conus pergrandis) [P01687], <NA> ,10.196311,3.223931,11.671463
+DR,OIVB (Conus obscurus) [P01688], <NA> ,10.666998,3.0458028,12.1003275
+DS,OIVA (Conus obscurus) [P01397], <NA> ,9.893206,3.84366,11.655023
+DT,PeIVA (Conus pergrandis) [P01689], <NA> ,10.01301,3.3212066,11.988205
+DU,MIC (Conus magus (Magus cone)) [P05865], <NA> ,7.9485254,3.35814,11.514913
+DV,AnIA (Conus anemone) [P02501], <NA> ,9.075684,4.229647,11.39444
+DW,ArchIIIA (Conus archon (magistrate cone)) [P10480], <NA> ,7.6737256,5.6221876,11.865926
+DX,Bu1.1 (Conus bullatus) [P02930], <NA> ,8.947421,3.4092433,12.923311
+DY,ImII (Conus imperialis) [P02586], <NA> ,7.2957726,4.654948,12.535839
+DZ,PiXXA (Conus princeps (Prince cone)) [P08998], <NA> ,14.736199,2.5363567,9.918779
+EA,PrIIIE (Conus parius) [P02832], <NA> ,10.689829,4.408464,11.365406
+EB,Ac1.1a (Conus achatinus) [P03833], <NA> ,9.1205635,3.7672923,14.284793
+EC,C4.3 (Conus catus) [P04083], <NA> ,8.877618,4.214775,14.059243
+ED,EI (Conus ermineus (Atlantic fish-hunting cone)) [P00050], <NA> ,8.834761,5.243125,11.635424
+EE,PIA (Conus purpurascens) [P00595], <NA> ,9.36797,5.153708,11.755461
+EF,ViIA (Conus virgo) [P06858], <NA> ,9.241758,4.043355,12.277154
+EG,Conorfamide-As2a (Conus austini) [P08701], <NA> ,7.366629,4.433083,10.78519
+EH,Conorfamide deamidated-As2b (Conus austini) [P08703], <NA> ,7.085303,4.617425,11.106546
+EI,Conorfamide-As1a (Conus austini) [P08700], <NA> ,7.654875,4.4090767,10.655089
+EJ,Conorfamide deamidated-As1b (Conus austini) [P08702], <NA> ,7.266388,4.3305097,11.183044
+EK,Tx1.2 (Conus textile (Cloth-of-gold cone)) [P02883], <NA> ,9.596922,4.9376636,12.451079
+EL,SrIA (Conus spurius) [P03752], <NA> ,9.304413,5.062971,11.093471

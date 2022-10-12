@@ -1,0 +1,708 @@
+mapped_id,original_id
+AAA,sp|A0A384E129|O16A_CONMB Omega-conotoxin MoVIA OS=Conus moncuri OX=2496636 PE=1 SV=2
+AAB,sp|K8DWB5|CA1D_CONTE Alpha-conotoxin TxID (Fragment) OS=Conus textile OX=6494 PE=1 SV=1
+AAC,sp|P01521|CA1_CONMA Alpha-conotoxin MI OS=Conus magus OX=6492 PE=1 SV=1
+AAD,sp|P01522|O16A_CONGE Omega-conotoxin GVIA OS=Conus geographus OX=6491 PE=1 SV=2
+AAE,sp|P01523|CM3A_CONGE Mu-conotoxin GIIIA OS=Conus geographus OX=6491 PE=1 SV=3
+AAF,sp|P05484|O17A_CONMA Omega-conotoxin MVIIA OS=Conus magus OX=6492 PE=1 SV=2
+AAG,sp|P0C195|CM3A_CONKI Mu-conotoxin KIIIB (Fragment) OS=Conus kinoshitai OX=376876 PE=2 SV=2
+AAH,sp|P0C1D0|CA1A_CONRE Alpha-conotoxin RgIA (Fragment) OS=Conus regius OX=101314 PE=1 SV=1
+AAI,sp|P0C1R7|CA1A_CONOM Alpha-conotoxin OmIA OS=Conus omaria OX=89429 PE=1 SV=1
+AAJ,sp|P0C1V7|CA1B_CONAN Alpha-conotoxin AnIB OS=Conus anemone OX=101285 PE=1 SV=1
+AAK,sp|P0C1W5|CDKA_CONVX Alpha-conotoxin VxXXA OS=Conus vexillum OX=89431 PE=1 SV=2
+AAL,sp|P0C1W6|CDKB_CONVX Alpha-conotoxin VxXXB OS=Conus vexillum OX=89431 PE=1 SV=3
+AAM,sp|P0C248|COW_CONAA Contryphan-Am OS=Conus amadis OX=198732 PE=1 SV=2
+AAN,sp|P0C349|CM3C_CONST Mu-conotoxin SIIIC OS=Conus striatus OX=6493 PE=1 SV=1
+AAO,sp|P0C350|CM3A_CONTU Mu-conotoxin TIIIA OS=Conus tulipa OX=6495 PE=1 SV=1
+AAP,sp|P0C828|CA4A_CONST Kappa-conotoxin SIVA OS=Conus striatus OX=6493 PE=1 SV=1
+AAQ,sp|P0CH24|CA1_CONAH Conopeptide-Ac1 (Fragment) OS=Conus achatinus OX=369967 PE=1 SV=1
+AAR,sp|P0CY66|O168_CONBU Omega-conotoxin Bu8 (Fragment) OS=Conus bullatus OX=89438 PE=1 SV=1
+AAS,sp|P0DL39|CA1A_CONAV Alpha-conotoxin AusIA OS=Conus australis OX=1519798 PE=1 SV=1
+AAT,sp|P0DL68|CA1A_CONLM Alpha-conotoxin LsIA OS=Conus limpusi OX=1967283 PE=1 SV=1
+AAU,sp|P0DM15|CO6A_CONMF MuO-conotoxin MfVIA OS=Conus magnificus OX=257332 PE=1 SV=1
+AAV,sp|P0DM21|CA1A_CONTE Alpha-conotoxin TxIA OS=Conus textile OX=6494 PE=1 SV=1
+AAW,sp|P28880|O16A_CONST Omega-conotoxin SVIA OS=Conus striatus OX=6493 PE=1 SV=2
+AAX,sp|P50982|CA1A_CONER Alpha-conotoxin EI OS=Conus ermineus OX=55423 PE=1 SV=2
+AAY,sp|P50983|CA1_CONIM Alpha-conotoxin ImI (Fragment) OS=Conus imperialis OX=35631 PE=1 SV=2
+AAZ,sp|P56633|O17A_CONPU Kappa-conotoxin PVIIA OS=Conus purpurascens OX=41690 PE=1 SV=2
+ABA,sp|P56636|CA12_CONMA Alpha-conotoxin MII OS=Conus magus OX=6492 PE=1 SV=3
+ABB,sp|P56638|CA1A_CONEP Alpha-conotoxin EpI OS=Conus episcopatus OX=88764 PE=1 SV=2
+ABC,sp|P58808|CTA1A_CONMR Chi-conotoxin MrIA OS=Conus marmoreus OX=42752 PE=1 SV=1
+ABD,sp|P58811|CA1A_CONTU Rho-conotoxin TIA OS=Conus tulipa OX=6495 PE=1 SV=2
+ABE,sp|P58913|O16A_CONPU Delta-conotoxin PVIA OS=Conus purpurascens OX=41690 PE=1 SV=1
+ABF,sp|P58920|O16D_CONCT Omega-conotoxin CVID OS=Conus catus OX=101291 PE=1 SV=1
+ABG,sp|P60274|CA1D_CONGE Alpha-conotoxin GID OS=Conus geographus OX=6491 PE=1 SV=2
+ABH,sp|P60513|U6A_CONER Delta-conotoxin EVIA OS=Conus ermineus OX=55423 PE=1 SV=1
+ABI,sp|P69657|CA1A_CONBU Alpha-conotoxin BuIA OS=Conus bullatus OX=89438 PE=1 SV=1
+ABJ,sp|P69747|CA1A_CONVC Alpha-conotoxin Vc1a OS=Conus victoriae OX=319920 PE=1 SV=1
+ABK,sp|P81755|CT5AS_CONTE Epsilon-conotoxin TxVA OS=Conus textile OX=6494 PE=1 SV=2
+ABL,sp|P84845|CT5A_CONSP Conotoxin sr5a OS=Conus spurius OX=192919 PE=1 SV=2
+ABM,sp|P85013|CA12A_CONRE Alpha-conotoxin RegIIA OS=Conus regius OX=101314 PE=1 SV=2
+ABN,sp|P85886|CA1AB_CONSP Alpha-conotoxin SrIA/SrIB OS=Conus spurius OX=192919 PE=1 SV=1
+ABO,sp|Q02294|CAC1B_RAT Voltage-dependent N-type calcium channel subunit alpha-1B OS=Rattus norvegicus OX=10116 GN=Cacna1b PE=1 SV=1
+ABP,sp|Q1L777|CA1A_CONPR Alpha-conotoxin PeIA (Fragment) OS=Conus pergrandis OX=330676 PE=3 SV=1
+ABQ,sp|Q86DU6|CM3A_CONST Mu-conotoxin SIIIA OS=Conus striatus OX=6493 PE=1 SV=1
+ABR,sp|Q9BPG6|CT5AP_CONTE Epsilon-conotoxin TxVA OS=Conus textile OX=6494 PE=1 SV=1
+ABS,sp|Q9U655|O16K0_CONTE Delta-conotoxin TxVIA OS=Conus textile OX=6494 PE=1 SV=1
+ABT,sp|X5I9Y2|CA1_CONGE Alpha-conotoxin GI OS=Conus geographus OX=6491 PE=1 SV=1
+ABU,sp|X5IWS1|O17J_CONGE Mu-conotoxin GVIIJ OS=Conus geographus OX=6491 PE=1 SV=2
+ABV,sp|A0A068B0Z6|CA13B_CONLT Alpha-conotoxin Lt1.3 b (Fragment) OS=Conus litteratus OX=89445 PE=1 SV=1
+ABW,sp|A0A0A0VBX4|CDKA_CONGR Alpha-conotoxin GeXXA OS=Conus generalis OX=101304 PE=1 SV=2
+ABX,sp|A0A2I6EDN5|CM3A_CONRE Conotoxin reg3a OS=Conus regius OX=101314 PE=1 SV=1
+ABY,sp|A0A2L2P6T1|O261_CONAA Conotoxin Am6.1 OS=Conus amadis OX=198732 PE=1 SV=1
+ABZ,sp|A0A2L2P6T9|O162_CONAA Omega-conotoxin-like Am6.2 OS=Conus amadis OX=198732 PE=1 SV=1
+ACA,sp|A0A3G3C7U9|CM34_CONAA Mu-conotoxin-like Am3.4 OS=Conus amadis OX=198732 PE=1 SV=1
+ACB,sp|A0A7M4DUE8|CM3C_CONSR Mu-conotoxin SxIIIC OS=Conus striolatus OX=101315 PE=1 SV=2
+ACC,sp|A1X8D8|CA12_CONPL Alpha-conotoxin-like Pu1.2 (Fragment) OS=Conus pulicarius OX=93154 PE=1 SV=1
+ACD,sp|A6YR20|COC1A_CONCL Mu-conotoxin cal12a OS=Californiconus californicus OX=1736779 PE=1 SV=1
+ACE,sp|A6YR21|COC1B_CONCL Mu-conotoxin cal12b OS=Californiconus californicus OX=1736779 PE=1 SV=1
+ACF,sp|C0HKF6|CA2B_CONER Alpha-conotoxin EIIB OS=Conus ermineus OX=55423 PE=1 SV=2
+ACG,sp|C0HLM2|CA1C_CONPU Alpha-conotoxin PIC OS=Conus purpurascens OX=41690 PE=1 SV=1
+ACH,sp|C1J5M6|CM3B_CONBU Mu-conotoxin BuIIIB OS=Conus bullatus OX=89438 PE=1 SV=1
+ACI,sp|C4PWC4|CXAT1_CONMI Alpha-conotoxin-like Ml20.1 OS=Conus miles OX=69564 PE=1 SV=1
+ACJ,sp|F5C0A0|CA1A_CONVR Alpha-conotoxin ViIA OS=Conus virgo OX=89427 PE=1 SV=1
+ACK,sp|F5C3U4|CA18_CONMR Alpha-conotoxin Mr1.7a OS=Conus marmoreus OX=42752 PE=1 SV=1
+ACL,sp|I1SB07|GM3C_CONCN Mu-conotoxin CnIIIC OS=Conus consors OX=101297 PE=1 SV=2
+ACM,sp|J7GY56|CO1EA_CONGR Alpha-conotoxin GeXIVA OS=Conus generalis OX=101304 PE=1 SV=2
+ACN,sp|K4RNX9|CA1B_CONTE Alpha-conotoxin TxIB (Fragment) OS=Conus textile OX=6494 PE=3 SV=1
+ACO,sp|P0C1N1|M3D_CONMR Conotoxin mr3d OS=Conus marmoreus OX=42752 PE=1 SV=1
+ACP,sp|P0C1N5|M3G_CONMR Conotoxin mr3g OS=Conus marmoreus OX=42752 PE=1 SV=1
+ACQ,sp|P0C1N6|CM3H_CONTE Conotoxin tx3h OS=Conus textile OX=6494 PE=1 SV=1
+ACR,sp|P0C1N7|M3F_CONTE Conotoxin Tx3.5-a OS=Conus textile OX=6494 PE=1 SV=1
+ACS,sp|P0C1N8|M3B_CONTE Conotoxin tx3b OS=Conus textile OX=6494 PE=1 SV=1
+ACT,sp|P0C1W3|CSA8A_CONRA Alpha-conotoxin RVIIIA OS=Conus radiatus OX=61198 PE=1 SV=2
+ACU,sp|P0C1W7|CDKC_CONVX Alpha-conotoxin VxXXC OS=Conus vexillum OX=89431 PE=1 SV=1
+ACV,sp|P0C1W8|CA4B_CONOB Alpha-conotoxin OIVB OS=Conus obscurus OX=89447 PE=1 SV=1
+ACW,sp|P0C1X1|CA4A_CONMA Kappa-conotoxin-like MIVA OS=Conus magus OX=6492 PE=1 SV=1
+ACX,sp|P0C249|COW_CONIN Contryphan-In OS=Conus inscriptus OX=257329 PE=1 SV=1
+ACY,sp|P0C2B0|CT5A_CONVR Conotoxin ViVA OS=Conus virgo OX=89427 PE=1 SV=2
+ACZ,sp|P0C425|CM3F_CONMR Conotoxin mr3f OS=Conus marmoreus OX=42752 PE=1 SV=2
+ADA,sp|P0C837|COW_CONST Contryphan-S OS=Conus striatus OX=6493 PE=1 SV=1
+ADB,sp|P0C8R2|CA1A_CONAE Alpha-conotoxin ArIA (Fragment) OS=Conus arenatus OX=89451 PE=1 SV=1
+ADC,sp|P0C8S5|CCAA_CONPI Alpha-conotoxin PrXA OS=Conus parius OX=505247 PE=1 SV=2
+ADD,sp|P0C8W0|CJA_CONDI Conotoxin Di19A OS=Conus distans OX=72281 PE=1 SV=1
+ADE,sp|P0CC15|O16D_CONCN Delta-conotoxin-like CnVID OS=Conus consors OX=101297 PE=1 SV=2
+ADF,sp|P0CE29|CXAT4_CONMS Alpha-conotoxin-like Ms20.4 OS=Conus mustelinus OX=101309 PE=1 SV=1
+ADG,sp|P0CE30|CXAT5_CONMS Alpha-conotoxin-like Ms20.5 OS=Conus mustelinus OX=101309 PE=1 SV=1
+ADH,sp|P0CE73|CA11_CONBN Alpha-conotoxin BnIA OS=Conus bandanus OX=72279 PE=1 SV=1
+ADI,sp|P0CE77|CM3B_CONST Mu-conotoxin SIIIB OS=Conus striatus OX=6493 PE=1 SV=1
+ADJ,sp|P0CG45|CM3J_CONRA Kappa-conotoxin RIIIJ OS=Conus radiatus OX=61198 PE=1 SV=1
+ADK,sp|P0DKQ3|M7E_CONCN Omega-conotoxin-like CnVIIE OS=Conus consors OX=101297 PE=1 SV=2
+ADL,sp|P0DP10|M3A_CONFI Conotoxin Fi3a OS=Conus figulinus OX=101301 PE=1 SV=1
+ADM,sp|P0DP16|COWA_CONCB Contryphan-C (Fragment) OS=Conus caracteristicus OX=89440 PE=1 SV=2
+ADN,sp|P0DPL9|CA1Z_CONTE Alpha-conotoxin-like Tx1.2 OS=Conus textile OX=6494 PE=1 SV=1
+ADO,sp|P0DQQ6|CA1A_CONMD Alpha-conotoxin MilIA OS=Conus milneedwardsi OX=2825866 PE=1 SV=1
+ADP,sp|P0DUR0|CA907_CONIN Alpha-conotoxin In1907 OS=Conus inscriptus OX=257329 PE=1 SV=1
+ADQ,sp|P15471|CAS1_CONST Alpha-conotoxin SI OS=Conus striatus OX=6493 PE=1 SV=2
+ADR,sp|P18511|O16A_CONTE Delta-conotoxin TxVIA OS=Conus textile OX=6494 PE=1 SV=1
+ADS,sp|P24160|O27A_CONTE Gamma-conotoxin-like TxVIIA OS=Conus textile OX=6494 PE=1 SV=3
+ADT,sp|P28879|CAS2_CONST Alpha-conotoxin SII OS=Conus striatus OX=6493 PE=1 SV=3
+ADU,sp|P28881|O16B_CONST Omega-conotoxin SVIB OS=Conus striatus OX=6493 PE=1 SV=2
+ADV,sp|P37300|O17C_CONMA Omega-conotoxin MVIIC (Fragment) OS=Conus magus OX=6492 PE=1 SV=1
+ADW,sp|P50984|CA1A_CONPE Alpha-conotoxin PnIA OS=Conus pennaceus OX=37335 PE=1 SV=1
+ADX,sp|P50985|CA1B_CONPE Alpha-conotoxin PnIB OS=Conus pennaceus OX=37335 PE=1 SV=2
+ADY,sp|P55963|CA4A_CONPU Alpha-conotoxin PIVA OS=Conus purpurascens OX=41690 PE=1 SV=2
+ADZ,sp|P56529|CM3E_CONPU Psi-conotoxin PIIIE OS=Conus purpurascens OX=41690 PE=1 SV=3
+AEA,sp|P56639|CA1A_CONAL Alpha-conotoxin AuIA OS=Conus aulicus OX=89437 PE=1 SV=2
+AEB,sp|P56640|CA1B_CONAL Alpha-conotoxin AuIB OS=Conus aulicus OX=89437 PE=1 SV=2
+AEC,sp|P56641|CA1C_CONAL Alpha-conotoxin AuIC OS=Conus aulicus OX=89437 PE=1 SV=1
+AED,sp|P56708|O16A_CONMR Mu-conotoxin MrVIA OS=Conus marmoreus OX=42752 PE=1 SV=2
+AEE,sp|P56711|O27A_CONPE Gamma-conotoxin PnVIIA OS=Conus pennaceus OX=37335 PE=1 SV=2
+AEF,sp|P56712|O16A_CONPE Omega-conotoxin PnVIA OS=Conus pennaceus OX=37335 PE=1 SV=2
+AEG,sp|P56714|O17_CONTE Omega-conotoxin TxVII OS=Conus textile OX=6494 PE=1 SV=2
+AEH,sp|P56973|CA1A_CONCN Alpha-conotoxin CnIA OS=Conus consors OX=101297 PE=1 SV=2
+AEI,sp|P58782|CA4A_CONER Alpha-conotoxin EIVA OS=Conus ermineus OX=55423 PE=1 SV=1
+AEJ,sp|P58809|CTAX_CONMR Chi-conotoxin CMrX OS=Conus marmoreus OX=42752 PE=1 SV=2
+AEK,sp|P58810|CTA1B_CONMR Chi-conotoxin MrIB OS=Conus marmoreus OX=42752 PE=1 SV=1
+AEL,sp|P58846|M3C_CONTE Conotoxin tx3c OS=Conus textile OX=6494 PE=1 SV=2
+AEM,sp|P58916|O17H_CONCN Omega-conotoxin-like CnVIIH OS=Conus consors OX=101297 PE=1 SV=2
+AEN,sp|P58917|O16A_CONCT Omega-conotoxin CVIA OS=Conus catus OX=101291 PE=1 SV=1
+AEO,sp|P58924|CS8A_CONGE Sigma-conotoxin GVIIIA OS=Conus geographus OX=6491 PE=1 SV=2
+AEP,sp|P58925|CM3A_CONPU Mu-conotoxin PIIIA OS=Conus purpurascens OX=41690 PE=2 SV=2
+AEQ,sp|P60179|O166_CONAA Delta-conotoxin Am2766 OS=Conus amadis OX=198732 PE=1 SV=1
+AER,sp|P60245|CM3F_CONPU Psi-conotoxin PIIIF OS=Conus purpurascens OX=41690 PE=1 SV=1
+AES,sp|P69658|CA1A_CONPU Alpha-conotoxin PIA (Fragment) OS=Conus purpurascens OX=41690 PE=1 SV=1
+AET,sp|P69746|CA4A_CONOB Alpha-conotoxin OIVA OS=Conus obscurus OX=89447 PE=1 SV=1
+AEU,sp|P85021|CM3B_CONRE Conotoxin Reg3b (Fragment) OS=Conus regius OX=101314 PE=1 SV=2
+AEV,sp|P86259|CT5C_CONTE Conotoxin tx5c OS=Conus textile OX=6494 PE=1 SV=1
+AEW,sp|P86261|CA1C_CONTE Alpha-conotoxin Tx1C OS=Conus textile OX=6494 PE=1 SV=1
+AEX,sp|Q0N4U8|CJEA_CONPO Alpha/kappa-conotoxin pl14a OS=Conus planorbis OX=97183 PE=1 SV=1
+AEY,sp|Q1A3R1|CT54_CONLT Mu-conotoxin Lt5d OS=Conus litteratus OX=89445 PE=1 SV=1
+AEZ,sp|Q26443|O16B_CONMR Mu-conotoxin MrVIB OS=Conus marmoreus OX=42752 PE=1 SV=1
+AFA,sp|Q2I2Q5|CM31_CONLT Iota-conotoxin LtIIIA OS=Conus litteratus OX=89445 PE=1 SV=1
+AFB,sp|Q2I2R5|CLE1_CONLT Alpha-conotoxin Lt14.1 OS=Conus litteratus OX=89445 PE=1 SV=2
+AFC,sp|Q2I2R8|CA11_CONLT Alpha-conotoxin Lt1a OS=Conus litteratus OX=89445 PE=1 SV=1
+AFD,sp|Q5EHP3|CM3E_CONMR Conotoxin mr3e OS=Conus marmoreus OX=42752 PE=1 SV=1
+AFE,sp|Q5K0C7|O161_CONVR Conotoxin Vi6.1 OS=Conus virgo OX=89427 PE=1 SV=1
+AFF,sp|Q7YT83|TX31_CONTE Cysteine-rich venom protein OS=Conus textile OX=6494 PE=1 SV=1
+AFG,sp|Q7YZS9|CI2_CONVR Kappa-conotoxin ViTx OS=Conus virgo OX=89427 GN=VITX PE=1 SV=1
+AFH,sp|Q7Z091|I1BD_CONRA Iota-conotoxin-like r11d OS=Conus radiatus OX=61198 PE=1 SV=1
+AFI,sp|Q7Z092|I1BB_CONRA Iota-conotoxin-like r11b OS=Conus radiatus OX=61198 PE=1 SV=1
+AFJ,sp|Q7Z094|I1BA_CONRA Iota-conotoxin RXIA OS=Conus radiatus OX=61198 PE=1 SV=1
+AFK,sp|Q7Z096|I1BC_CONRA Iota-conotoxin-like r11c OS=Conus radiatus OX=61198 PE=1 SV=2
+AFL,sp|Q9BH73|CM3A_CONTE Conotoxin elongated-tx3a-a OS=Conus textile OX=6494 PE=1 SV=1
+AFM,sp|Q9BPA9|O26_CONTE TxMEKL-P2 OS=Conus textile OX=6494 PE=1 SV=1
+AFN,sp|Q9BPI0|CM32_CONTE TxMLKM-021 OS=Conus textile OX=6494 PE=1 SV=1
+AFO,sp|Q9BPJ7|M3_CONTE TxMMSK-03 OS=Conus textile OX=6494 PE=1 SV=1
+AFP,sp|Q9GU58|CP9A_CONTE Conotoxin tx9a OS=Conus textile OX=6494 PE=1 SV=1
+AFQ,sp|Q9TWM7|O16A_CONGL Delta-conotoxin GmVIA OS=Conus gloriamaris OX=37336 PE=1 SV=2
+AFR,sp|Q9U6Z6|CT5A_CONPU Conotoxin p5a OS=Conus purpurascens OX=41690 PE=1 SV=1
+AFS,sp|Q9XZK2|O16O3_CONST Omega-conotoxin SO-3 OS=Conus striatus OX=6493 PE=1 SV=1
+AFT,sp|Q9XZK5|O16E_CONST Delta-conotoxin SVIE OS=Conus striatus OX=6493 GN=SO6 PE=1 SV=1
+AFU,sp|X1WB75|CA1A_CONLG Alpha-conotoxin Lo1a OS=Conasprella longurionis OX=1077918 PE=1 SV=1
+AFV,sp|X5IWT5|CSA8A_CONGE Alpha-conotoxin GVIIIB OS=Conus geographus OX=6491 PE=1 SV=1
+AFW,sp|A0A2D1P890|CM31_CONFG Conotoxin Fr3.1 OS=Conus frigidus OX=101755 PE=1 SV=1
+AFX,sp|A0A2I6EDL2|CM3K_CONRE Conotoxin reg3k OS=Conus regius OX=101314 PE=1 SV=1
+AFY,sp|A0A2I6EDL4|CM3H_CONRE Conotoxin reg3h (Fragment) OS=Conus regius OX=101314 PE=1 SV=1
+AFZ,sp|A0A2I6EDM8|CM3F_CONRE Conotoxin reg3f (Fragment) OS=Conus regius OX=101314 PE=1 SV=1
+AGA,sp|A0A346CED7|CU68_CONAA Conotoxin Am6.8 OS=Conus amadis OX=198732 PE=1 SV=1
+AGB,sp|A0A3G3C7S0|CA15_CONAA Alpha-conotoxine-like Am1.5 OS=Conus amadis OX=198732 PE=1 SV=1
+AGC,sp|A0A3G3C7S9|CA12_CONAA Alpha-conotoxine-like Am1.2 OS=Conus amadis OX=198732 PE=1 SV=1
+AGD,sp|A0A3G3C7T5|CM31_CONAA Mu-conotoxin-like Am3.1 OS=Conus amadis OX=198732 PE=1 SV=1
+AGE,sp|A0A3G3C7U1|CA16_CONAA Alpha-conotoxin-like Am1.6 OS=Conus amadis OX=198732 PE=1 SV=1
+AGF,sp|A0A3G3C7U2|CM32_CONAA Mu-onotoxin-like Am3.2 OS=Conus amadis OX=198732 PE=1 SV=1
+AGG,sp|A0A3G3C7U4|CA14_CONAA Alpha-conotoxine-like Am1.4 OS=Conus amadis OX=198732 PE=1 SV=1
+AGH,sp|A0A3G3C7U7|O165_CONAA Omega-conotoxin-like Am6.5 OS=Conus amadis OX=198732 PE=1 SV=1
+AGI,sp|A0A3G3C7V0|CA13_CONAA Alpha-conotoxine-like Am1.3 OS=Conus amadis OX=198732 PE=1 SV=1
+AGJ,sp|A0A3G3C7V6|O266_CONAA Gamma-conotoxin-like Am6.6 OS=Conus amadis OX=198732 PE=1 SV=1
+AGK,sp|A0A3G3C7V7|CM33_CONAA Mu-conotoxin-like Am3.3 OS=Conus amadis OX=198732 PE=1 SV=1
+AGL,sp|A0A4P8XV20|CA1B_CONVE Alpha-conotoxin VnIB (Fragment) OS=Conus ventricosus OX=117992 PE=1 SV=2
+AGM,sp|A0SE59|CA13_CONMR Alpha-conotoxin-like Mr1.3 OS=Conus marmoreus OX=42752 PE=3 SV=1
+AGN,sp|A0SE60|CA11_CONPL Alpha-conotoxin-like Pu1.1 OS=Conus pulicarius OX=93154 PE=3 SV=1
+AGO,sp|A1X8B6|CA14_CONLE Alpha-conotoxin Lp1.4 OS=Conus leopardus OX=101306 PE=1 SV=1
+AGP,sp|A1X8B8|CA1_CONQU Putative alpha-conotoxin Qc alphaL-1 OS=Conus quercinus OX=101313 PE=5 SV=1
+AGQ,sp|A1X8C2|CA18_CONLE Alpha-conotoxin-like Lp1.8 OS=Conus leopardus OX=101306 PE=3 SV=1
+AGR,sp|A1X8C3|CA17_CONLE Alpha-conotoxin-like Lp1.7 OS=Conus leopardus OX=101306 PE=3 SV=1
+AGS,sp|A3DT44|CA42_CONAH Kappa-conotoxin Ac4.2 (Fragment) OS=Conus achatinus OX=369967 PE=3 SV=1
+AGT,sp|A6M934|CA12_CONMR Alpha-conotoxin-like Mr1.2 OS=Conus marmoreus OX=42752 PE=3 SV=1
+AGU,sp|B3FIA5|CVFA_CONVR Conotoxin Vi15a OS=Conus virgo OX=89427 PE=1 SV=1
+AGV,sp|C0HJA8|CA1LB_CONRE Alpha-conotoxin-like RgIB OS=Conus regius OX=101314 PE=1 SV=1
+AGW,sp|C0HLK1|CA1B_CONBR Alpha-conotoxin BruIB OS=Conus brunneus OX=101289 PE=1 SV=1
+AGX,sp|C1J5M5|CM3A_CONBU Mu-conotoxin BuIIIA OS=Conus bullatus OX=89438 PE=1 SV=1
+AGY,sp|C1J5M7|CM3C_CONBU Mu-conotoxin BuIIIC OS=Conus bullatus OX=89438 PE=1 SV=1
+AGZ,sp|C4PWC3|CXAT1_CONMS Alpha-conotoxin-like Ms20.1 OS=Conus mustelinus OX=101309 PE=1 SV=1
+AHA,sp|C6ZJQ2|CAE1_CONPL Alpha-conotoxin Pu14.1 OS=Conus pulicarius OX=93154 PE=1 SV=1
+AHB,sp|D2DGD3|I3BA_CONCB Conotoxin Ca11a OS=Conus caracteristicus OX=89440 PE=1 SV=1
+AHC,sp|D2DGD4|I3BB_CONCB Conotoxin Ca11b OS=Conus caracteristicus OX=89440 PE=1 SV=1
+AHD,sp|D2Y171|CU5A_CONCL Conotoxin Cal5a L1 OS=Californiconus californicus OX=1736779 PE=1 SV=1
+AHE,sp|D4HPD6|CA1A_CONCT Alpha-conotoxin CIA OS=Conus catus OX=101291 PE=1 SV=1
+AHF,sp|D4HRK4|CA12A_CONER Alpha-conotoxin EIIA OS=Conus ermineus OX=55423 PE=1 SV=2
+AHG,sp|D4HRK7|CA12_CONKI Alpha-conotoxin-like Kn1.2 (Fragment) OS=Conus kinoshitai OX=376876 PE=1 SV=1
+AHH,sp|D9IWN7|CA168_CONPO Conotoxin Pl168 OS=Conus planorbis OX=97183 PE=1 SV=1
+AHI,sp|E2DIH5|CA12_CONVC Alpha-conotoxin Vc1.2 OS=Conus victoriae OX=319920 PE=1 SV=1
+AHJ,sp|F6JWU7|CDS1_CONLT Alpha-conotoxin Lt28.1 OS=Conus litteratus OX=89445 PE=3 SV=1
+AHK,sp|H2BK78|CM3A_CONVA Conotoxin Vr3a OS=Conus varius OX=89448 PE=3 SV=1
+AHL,sp|H2BKS9|CM3A_CONTS Mu-conotoxin TsIIIA OS=Conus tessulatus OX=101317 PE=3 SV=1
+AHM,sp|J7JU64|CBOA_CONVX Alpha-conotoxin VxXXIVA OS=Conus vexillum OX=89431 PE=3 SV=1
+AHN,sp|L8BU87|CA1A_CONLI Alpha-conotoxin LvIA (Fragment) OS=Conus lividus OX=89426 PE=3 SV=1
+AHO,sp|P01520|CA12_CONGE Alpha-conotoxin GII OS=Conus geographus OX=6491 PE=1 SV=1
+AHP,sp|P01524|CM3B_CONGE Mu-conotoxin GIIIB OS=Conus geographus OX=6491 PE=1 SV=1
+AHQ,sp|P05482|CM3C_CONGE Mu-conotoxin GIIIC OS=Conus geographus OX=6491 PE=1 SV=1
+AHR,sp|P05483|U7AB_CONGE Omega-conotoxins GVIIA/GVIIB OS=Conus geographus OX=6491 PE=1 SV=1
+AHS,sp|P05485|O17B_CONMA Omega-conotoxin MVIIB OS=Conus magus OX=6492 PE=1 SV=1
+AHT,sp|P0C1C8|O17A_CONCF Gamma-conotoxin-like As7a OS=Conus cancellatus OX=289020 PE=1 SV=1
+AHU,sp|P0C1C9|O17A_CONDE Gamma-conotoxin-like de7a OS=Conus delessertii OX=2547900 PE=1 SV=1
+AHV,sp|P0C1M9|M3A_CONMR Conotoxin mr3a OS=Conus marmoreus OX=42752 PE=1 SV=1
+AHW,sp|P0C1N0|M3B_CONMR Conotoxin mr3b OS=Conus marmoreus OX=42752 PE=1 SV=1
+AHX,sp|P0C1U0|CM3B_CONCN Mu-conotoxin CnIIIB OS=Conus consors OX=101297 PE=1 SV=1
+AHY,sp|P0C1V8|CA1C_CONAN Alpha-conotoxin-like AnIC OS=Conus anemone OX=101285 PE=1 SV=1
+AHZ,sp|P0C1W0|CA12_CONCB Alpha-conotoxin-like Ca1.2 OS=Conus caracteristicus OX=89440 PE=3 SV=1
+AIA,sp|P0C1W1|CA1A_CONMA Alpha-conotoxin-like MIA OS=Conus magus OX=6492 PE=1 SV=1
+AIB,sp|P0C1W2|CA1B_CONMA Alpha-conotoxin-like MIB OS=Conus magus OX=6492 PE=1 SV=1
+AIC,sp|P0C1W9|CA4A_CONPR Alpha-conotoxin PeIVA OS=Conus pergrandis OX=330676 PE=3 SV=1
+AID,sp|P0C1X0|CA4B_CONPR Alpha-conotoxin PeIVB OS=Conus pergrandis OX=330676 PE=3 SV=1
+AIE,sp|P0C1Y2|CA13_CONBN Alpha-conotoxin-like Bn1.3 OS=Conus bandanus OX=72279 PE=3 SV=1
+AIF,sp|P0C2B1|CT5B_CONVR Conotoxin ViVB OS=Conus virgo OX=89427 PE=1 SV=2
+AIG,sp|P0C2C5|CA4E_CONPU Conotoxin PIVE OS=Conus purpurascens OX=41690 PE=1 SV=1
+AIH,sp|P0C2C6|CA4F_CONPU Kappa-conotoxin-like PIVF OS=Conus purpurascens OX=41690 PE=1 SV=1
+AII,sp|P0C351|CA1B_CONPU Alpha-conotoxin PIB OS=Conus purpurascens OX=41690 PE=1 SV=1
+AIJ,sp|P0C424|M3C_CONMR Conotoxin mr3c OS=Conus marmoreus OX=42752 PE=1 SV=1
+AIK,sp|P0C607|I1BA_CONAE Conotoxin ar11a OS=Conus arenatus OX=89451 PE=1 SV=1
+AIL,sp|P0C615|I2BA_CONSP Kappa-conotoxin SrXIA OS=Conus spurius OX=192919 PE=1 SV=1
+AIM,sp|P0C642|CT361_CONVR Conotoxin Vi1361 OS=Conus virgo OX=89427 PE=1 SV=1
+AIN,sp|P0C6S2|CLEA_CONCF Kappa-conotoxin-like as14a OS=Conus cancellatus OX=289020 PE=1 SV=1
+AIO,sp|P0C6S3|CLEB_CONCF Kappa-conotoxin-like as14b OS=Conus cancellatus OX=289020 PE=1 SV=1
+AIP,sp|P0C7I1|CM3E_CONPI Psi-conotoxin PrIIIE OS=Conus parius OX=505247 PE=1 SV=1
+AIQ,sp|P0C829|CA4B_CONST Kappa-conotoxin-like SIVB OS=Conus striatus OX=6493 PE=1 SV=1
+AIR,sp|P0C8U4|CA1C_CONCN Alpha-conotoxin CnIC OS=Conus consors OX=101297 PE=1 SV=2
+AIS,sp|P0C8V1|CA11_CONSE Alpha-conotoxin-like Sm1.1 OS=Conus stercusmuscarum OX=89452 PE=1 SV=1
+AIT,sp|P0C8V2|CM3A_CONSR Mu-conotoxin SxIIIA OS=Conus striolatus OX=101315 PE=1 SV=1
+AIU,sp|P0C8V4|CA1A_CONVE Alpha-conotoxin-like Vn OS=Conus ventricosus OX=117992 PE=1 SV=1
+AIV,sp|P0C8V5|O161_CONAH Delta-conotoxin-like Ac6.1 OS=Conus achatinus OX=369967 PE=1 SV=1
+AIW,sp|P0C8V6|O162_CONAH Delta-conotoxin-like Ac6.2 OS=Conus achatinus OX=369967 PE=1 SV=1
+AIX,sp|P0C8V8|O164_CONAH Omega-conotoxin-like Ac6.4 OS=Conus achatinus OX=369967 PE=1 SV=1
+AIY,sp|P0C8V9|O165_CONAH Omega-conotoxin-like Ac6.5 OS=Conus achatinus OX=369967 PE=1 SV=1
+AIZ,sp|P0CAQ5|CA11B_CONAH Alpha-conotoxin-like Ac1.1b OS=Conus achatinus OX=369967 PE=2 SV=1
+AJA,sp|P0CAQ6|CA16A_CONLE Alpha-conotoxin-like Lp1.6a OS=Conus leopardus OX=101306 PE=1 SV=1
+AJB,sp|P0CAQ8|CA14A_CONQU Alpha-conotoxin-like Qc1.4a (Fragment) OS=Conus quercinus OX=101313 PE=2 SV=1
+AJC,sp|P0CB07|CA11_CONAJ Alpha-conotoxin-like Ai1.1 OS=Conus ammiralis OX=97188 PE=3 SV=1
+AJD,sp|P0CB08|CA12_CONAJ Alpha-conotoxin-like Ai1.2 OS=Conus ammiralis OX=97188 PE=3 SV=1
+AJE,sp|P0CB12|CA189_CONAJ Alpha-conotoxin-like 289 OS=Conus ammiralis OX=97188 PE=3 SV=1
+AJF,sp|P0CC13|O16B_CONCN Delta-conotoxin-like CnVIB OS=Conus consors OX=101297 PE=1 SV=1
+AJG,sp|P0CC14|O16C_CONCN Delta-conotoxin-like CnVIC OS=Conus consors OX=101297 PE=1 SV=2
+AJH,sp|P0CE24|CXAT1_CONCE Alpha-conotoxin-like Cp20.1 OS=Conus capitaneus OX=89439 PE=1 SV=1
+AJI,sp|P0CE25|CXAT2_CONCE Alpha-conotoxin-like Cp20.2 OS=Conus capitaneus OX=89439 PE=1 SV=1
+AJJ,sp|P0CE26|CXAT4_CONCE Alpha-conotoxin-like Cp20.4 OS=Conus capitaneus OX=89439 PE=2 SV=1
+AJK,sp|P0CE27|CXAT5_CONCE Alpha-conotoxin-like Cp20.5 OS=Conus capitaneus OX=89439 PE=1 SV=1
+AJL,sp|P0CE28|CXAT2_CONMS Alpha-conotoxin-like Ms20.2 OS=Conus mustelinus OX=101309 PE=2 SV=1
+AJM,sp|P0CE31|CXAT2_CONMI Alpha-conotoxin-like Ml20.2 OS=Conus miles OX=69564 PE=1 SV=1
+AJN,sp|P0CE32|CXAT3_CONMI Alpha-conotoxin-like Ml20.3 OS=Conus miles OX=69564 PE=2 SV=1
+AJO,sp|P0CE33|CXAT4_CONMI Alpha-conotoxin-like Ml20.4 OS=Conus miles OX=69564 PE=2 SV=1
+AJP,sp|P0CE34|CXAT1_CONRT Alpha-conotoxin-like Rt20.1 OS=Conus rattus OX=72283 PE=2 SV=1
+AJQ,sp|P0CE35|CXAT2_CONRT Alpha-conotoxin-like Rt20.2 OS=Conus rattus OX=72283 PE=2 SV=1
+AJR,sp|P0CE36|CXAT1_CONPO Alpha-conotoxin-like Vt20.1 OS=Conus planorbis OX=97183 PE=2 SV=1
+AJS,sp|P0CE75|CA4A_CONSE Kappa-conotoxin-like SmIVA OS=Conus stercusmuscarum OX=89452 PE=2 SV=1
+AJT,sp|P0CE76|CA4B_CONSE Kappa-conotoxin-like SmIVB OS=Conus stercusmuscarum OX=89452 PE=2 SV=1
+AJU,sp|P0CH14|CO1E_CONMR Conotoxin Mr1e OS=Conus marmoreus OX=42752 PE=1 SV=2
+AJV,sp|P0CH16|CM3B_CONPI Mu-conotoxin-like pr3b OS=Conus parius OX=505247 PE=1 SV=1
+AJW,sp|P0CI05|CA1A_CONTI Alpha-conotoxin CtIA OS=Conus tinianus OX=909294 PE=1 SV=1
+AJX,sp|P0CI22|CTA48_CONAO Chi-conotoxin-like Ar1248 OS=Conus araneosus OX=101286 PE=1 SV=1
+AJY,sp|P0CI23|CTA11_CONAO Chi-conotoxin-like Ar1311 OS=Conus araneosus OX=101286 PE=1 SV=1
+AJZ,sp|P0CI24|TXM46_CONAO Conotoxin Ar1446 OS=Conus araneosus OX=101286 PE=1 SV=1
+AKA,sp|P0CY86|CA11_CONBU Alpha-conotoxin-like Bu1.1 OS=Conus bullatus OX=89438 PE=3 SV=1
+AKB,sp|P0DJL6|CT5A_CONCN Tau-conotoxin CnVA OS=Conus consors OX=101297 PE=1 SV=1
+AKC,sp|P0DKQ4|M7F_CONCN Omega-conotoxin-like CnVIIF OS=Conus consors OX=101297 PE=1 SV=2
+AKD,sp|P0DKQ5|M7G_CONCN Omega-conotoxin-like CnVIIG OS=Conus consors OX=101297 PE=1 SV=2
+AKE,sp|P0DKQ6|M7J_CONCN Omega-conotoxin-like CnVIIJ OS=Conus consors OX=101297 PE=1 SV=2
+AKF,sp|P0DKQ9|CM31_CONTU Mu-conotoxin-like T3.1 OS=Conus tulipa OX=6495 PE=2 SV=1
+AKG,sp|P0DM23|CA12_CONPE Alpha-conotoxin Pn1.2 OS=Conus pennaceus OX=37335 PE=1 SV=1
+AKH,sp|P0DOW6|O27A_CONPG Gamma-conotoxin PiVIIA OS=Conus princeps OX=101311 PE=1 SV=1
+AKI,sp|P0DP11|M3C_CONFI Conotoxin Fi3c OS=Conus figulinus OX=101301 PE=1 SV=1
+AKJ,sp|P0DP13|COWB_CONFI Contryphan-Fib OS=Conus figulinus OX=101301 PE=1 SV=1
+AKK,sp|P0DP14|COWC_CONFI Contryphan-Fic OS=Conus figulinus OX=101301 PE=1 SV=1
+AKL,sp|P0DP20|COWA_CONFI Contryphan-Fia OS=Conus figulinus OX=101301 PE=1 SV=1
+AKM,sp|P0DPJ2|CM3C_CONRE Conotoxin reg3c OS=Conus regius OX=101314 PE=1 SV=1
+AKN,sp|P0DPJ3|CM3D_CONRE Conotoxin reg3d OS=Conus regius OX=101314 PE=1 SV=1
+AKO,sp|P0DPJ5|CM3G_CONRE Conotoxin reg3g OS=Conus regius OX=101314 PE=1 SV=1
+AKP,sp|P0DPJ6|CM3I_CONRE Conotoxin reg3i OS=Conus regius OX=101314 PE=1 SV=1
+AKQ,sp|P0DPJ7|CM3J_CONRE Conotoxin reg3j OS=Conus regius OX=101314 PE=1 SV=1
+AKR,sp|P0DPL8|CA1CB_CONTE Conotoxin TxIC OS=Conus textile OX=6494 PE=1 SV=1
+AKS,sp|P0DPM0|CA12_CONSE Alpha-conotoxin-like Sm1.2 OS=Conus stercusmuscarum OX=89452 PE=3 SV=1
+AKT,sp|P0DPM1|CA13_CONSE Alpha-conotoxin-like Sm1.3 OS=Conus stercusmuscarum OX=89452 PE=1 SV=1
+AKU,sp|P0DPM4|I166_CONTE Conotoxin Tx6.6 OS=Conus textile OX=6494 PE=1 SV=1
+AKV,sp|P0DPT2|CA1B_CONCT Alpha-conotoxin CIB (Fragment) OS=Conus catus OX=101291 PE=1 SV=1
+AKW,sp|P0DQD4|O16F_CONCT Omega conotoxin-CVIF OS=Conus catus OX=101291 PE=1 SV=1
+AKX,sp|P0DQQ5|CA1C_CONCT Alpha-conotoxin CIC OS=Conus catus OX=101291 PE=1 SV=1
+AKY,sp|P0DQR7|CAIA_CONGE Alpha-conotoxin GIA OS=Conus geographus OX=6491 PE=1 SV=1
+AKZ,sp|P0DUQ9|COW2_CONIN Contryphan-In1172 OS=Conus inscriptus OX=257329 PE=1 SV=1
+ALA,sp|P0DUR1|CA878_CONIN Alpha-conotoxin In1878 OS=Conus inscriptus OX=257329 PE=1 SV=1
+ALB,sp|P0DUR2|CA761_CONIN Alpha-conotoxin In1761 OS=Conus inscriptus OX=257329 PE=1 SV=1
+ALC,sp|P0DUR4|CM746_CONIN Conotoxin In1746 OS=Conus inscriptus OX=257329 PE=1 SV=1
+ALD,sp|P0DUU1|T1098_CONAA Conotoxin Am1099 OS=Conus amadis OX=198732 PE=1 SV=1
+ALE,sp|P0DUU2|T1309_CONAA Conotoxin Ama1309 OS=Conus amadis OX=198732 PE=1 SV=1
+ALF,sp|P0DUU4|A1245_CONAA Conotoxin Ama1245 OS=Conus amadis OX=198732 PE=1 SV=1
+ALG,sp|P0DW72|I1B1_CONXI Conopeptide X11.1 OS=Conasprella ximenes OX=257349 PE=1 SV=1
+ALH,sp|P15472|U6GS_CONGE Mu-conotoxin GS OS=Conus geographus OX=6491 PE=1 SV=1
+ALI,sp|P18512|O16K1_CONTE Conotoxin King-Kong 1 OS=Conus textile OX=6494 PE=1 SV=2
+ALJ,sp|P18513|O1K2_CONTE Conotoxin King-Kong 2 OS=Conus textile OX=6494 PE=1 SV=2
+ALK,sp|P28878|CA1A_CONST Alpha-conotoxin SIA OS=Conus striatus OX=6493 PE=1 SV=1
+ALL,sp|P56710|O16A_CONNI Delta-conotoxin NgVIA OS=Conus nigropunctatus OX=1520089 PE=1 SV=1
+ALM,sp|P56713|O16B_CONPE Omega-conotoxin PnVIB OS=Conus pennaceus OX=37335 PE=1 SV=2
+ALN,sp|P58623|M3A_CONBE Conotoxin BtIIIA OS=Conus betulinus OX=89764 PE=1 SV=1
+ALO,sp|P58624|M3B_CONBE BtIIIB OS=Conus betulinus OX=89764 PE=1 SV=1
+ALP,sp|P58783|CA4B_CONER Alpha-conotoxin EIVB OS=Conus ermineus OX=55423 PE=1 SV=1
+ALQ,sp|P58807|CTA6A_CONMR Chi-conotoxin CMrVIA OS=Conus marmoreus OX=42752 PE=1 SV=1
+ALR,sp|P58845|U6TC_CONTE Textile convulsant peptide OS=Conus textile OX=6494 PE=1 SV=1
+ALS,sp|P58848|CT5A_CONAL Conotoxin au5a OS=Conus aulicus OX=89437 PE=1 SV=1
+ALT,sp|P58914|O16A_CONRA Omega-conotoxin RVIA OS=Conus radiatus OX=61198 PE=1 SV=1
+ALU,sp|P58915|O16A_CONTU Omega-conotoxin TVIA OS=Conus tulipa OX=6495 PE=1 SV=1
+ALV,sp|P58918|O16B_CONCT Omega-conotoxin CVIB OS=Conus catus OX=101291 PE=1 SV=1
+ALW,sp|P58919|O16C_CONCT Omega-conotoxin CVIC OS=Conus catus OX=101291 PE=1 SV=1
+ALX,sp|P58922|O26G_CONTE Conotoxin Gla(1)-TxVI OS=Conus textile OX=6494 PE=1 SV=2
+ALY,sp|P58926|CM4A_CONPE Mu-conotoxin PnIVA OS=Conus pennaceus OX=37335 PE=1 SV=1
+ALZ,sp|P58927|CM4B_CONPE Mu-conotoxin PnIVB OS=Conus pennaceus OX=37335 PE=1 SV=2
+AMA,sp|P60207|CM3A_CONSE Mu-conotoxin SmIIIA (Fragment) OS=Conus stercusmuscarum OX=89452 PE=2 SV=1
+AMB,sp|P69749|O16A_CONBU Delta-conotoxin BuVIA OS=Conus bullatus OX=89438 PE=2 SV=2
+AMC,sp|P69758|O16A_CONVC Conotoxin Vc6a OS=Conus victoriae OX=319920 PE=1 SV=1
+AMD,sp|P69759|O16B_CONVC Conotoxin Vc6b OS=Conus victoriae OX=319920 PE=1 SV=1
+AME,sp|P69762|O16C_CONVC Conotoxin Vc6c OS=Conus victoriae OX=319920 PE=1 SV=1
+AMF,sp|P69764|CT5A_CONMR Conotoxin mr5a OS=Conus marmoreus OX=42752 PE=1 SV=1
+AMG,sp|P69765|CT5A_CONVC Conotoxin vc5a (Fragment) OS=Conus victoriae OX=319920 PE=1 SV=1
+AMH,sp|P69768|CT5B_CONVC Conotoxin vc5b (Fragment) OS=Conus victoriae OX=319920 PE=1 SV=1
+AMI,sp|P69769|CM3K_CONRA Kappa-conotoxin RIIIK OS=Conus radiatus OX=61198 PE=2 SV=2
+AMJ,sp|P69770|CX2_CONMR Conotoxin Gla-MrII OS=Conus marmoreus OX=42752 PE=1 SV=2
+AMK,sp|P81727|CP92_CONBE Conotoxin Bt9.2 OS=Conus betulinus OX=89764 PE=1 SV=1
+AML,sp|P83301|U6VN_CONVE Omega-conotoxin-like Vn2 OS=Conus ventricosus OX=117992 PE=1 SV=1
+AMM,sp|P84704|CLEA_CONVL Conotoxin vil14a OS=Conus villepinii OX=257347 PE=1 SV=2
+AMN,sp|P84707|CLEC_CONAW Conotoxin flf14c OS=Conus anabathrum floridanus OX=1520082 PE=1 SV=2
+AMO,sp|P85009|CA1B_CONRE Alpha-conotoxin-like Reg1b/Reg1c OS=Conus regius OX=101314 PE=1 SV=1
+AMP,sp|P85010|CA1D_CONRE Alpha-conotoxin-like Reg1d OS=Conus regius OX=101314 PE=1 SV=1
+AMQ,sp|P85011|CA1E_CONRE Alpha-conotoxin-like Reg1e OS=Conus regius OX=101314 PE=1 SV=1
+AMR,sp|P85012|CA1F_CONRE Alpha-conotoxin-like Reg1f OS=Conus regius OX=101314 PE=1 SV=1
+AMS,sp|P85017|CMCE_CONRE Conotoxin Reg12e OS=Conus regius OX=101314 PE=1 SV=3
+AMT,sp|P86255|CONO_CONTE Conopressin-Tx OS=Conus textile OX=6494 PE=1 SV=1
+AMU,sp|P86256|CTAB_CONTE Chi-conotoxin-like 1 OS=Conus textile OX=6494 PE=1 SV=1
+AMV,sp|P86257|CTAC_CONTE Chi-conotoxin-like 2 OS=Conus textile OX=6494 PE=1 SV=1
+AMW,sp|P86258|CT5B_CONTE Conotoxin tx5b OS=Conus textile OX=6494 PE=1 SV=1
+AMX,sp|P86260|M3D_CONTE Conotoxin tx3d OS=Conus textile OX=6494 PE=1 SV=1
+AMY,sp|P86262|M3E_CONTE Conotoxin tx3e OS=Conus textile OX=6494 PE=1 SV=1
+AMZ,sp|P86264|CT5D_CONTE Conotoxin tx5d OS=Conus textile OX=6494 PE=1 SV=1
+ANA,sp|P86362|CAEA_CONTS Alpha-conotoxin-like ts14a OS=Conus tessulatus OX=101317 PE=1 SV=1
+ANB,sp|Q26350|O17D_CONMA Omega-conotoxin MVIID (Fragment) OS=Conus magus OX=6492 PE=1 SV=1
+ANC,sp|Q2I2P8|CMG1_CONLT Conotoxin Lt16a OS=Conus litteratus OX=89445 PE=3 SV=1
+AND,sp|Q2I2R6|CA13_CONLT Alpha-conotoxin-like Lt1.3 OS=Conus litteratus OX=89445 PE=3 SV=1
+ANE,sp|Q2I2R7|CA12_CONLT Alpha-conotoxin-like Lt1.2 OS=Conus litteratus OX=89445 PE=3 SV=1
+ANF,sp|Q3YEE8|CT54A_CONTE Conotoxin TeAr154 OS=Conus textile OX=6494 PE=1 SV=1
+ANG,sp|Q3YEE9|CT51A_CONTE Conotoxin TeAr151 OS=Conus textile OX=6494 PE=1 SV=1
+ANH,sp|Q3YEH5|CT32_CONLI Conotoxin LiC32 OS=Conus lividus OX=89426 PE=1 SV=1
+ANI,sp|Q3YEH7|CT13_CONTE Conotoxin 3 OS=Conus textile OX=6494 PE=1 SV=1
+ANJ,sp|Q5I4E5|I2B_CONTE Conotoxin Gla-TxXI OS=Conus textile OX=6494 PE=1 SV=1
+ANK,sp|Q5I4E6|CXX_CONTE Conotoxin Gla-TxX OS=Conus textile OX=6494 PE=1 SV=1
+ANL,sp|Q5K0C4|O161_CONCE Omega-conotoxin-like 1 OS=Conus capitaneus OX=89439 PE=2 SV=1
+ANM,sp|Q6PN83|CT53_CONMR Conotoxin mr5.3 OS=Conus marmoreus OX=42752 PE=1 SV=1
+ANN,sp|Q6PN84|CT52_CONMR Conotoxin mr5.2 OS=Conus marmoreus OX=42752 PE=1 SV=1
+ANO,sp|Q6PPB3|CA11B_CONQU Alpha-conotoxin-like Qc1.1b OS=Conus quercinus OX=101313 PE=3 SV=1
+ANP,sp|Q6PTD1|CA11_CONMR Alpha-conotoxin Mr1.1 OS=Conus marmoreus OX=42752 PE=3 SV=1
+ANQ,sp|Q6PTD4|CA12_CONLE Alpha-conotoxin-like Lp1.2 OS=Conus leopardus OX=101306 PE=3 SV=1
+ANR,sp|Q6PTD5|CA11_CONLE Alpha-conotoxin Lp1.1 OS=Conus leopardus OX=101306 PE=1 SV=1
+ANS,sp|Q6PTD6|CA12_CONQU Alpha-conotoxin-like Qc1.2 OS=Conus quercinus OX=101313 PE=1 SV=1
+ANT,sp|Q86RA3|O16A_CONVX Conotoxin VxVIA OS=Conus vexillum OX=89431 PE=1 SV=1
+ANU,sp|Q86RB2|CA1C_CONGE Alpha-conotoxin GIC (Fragment) OS=Conus geographus OX=6491 PE=1 SV=1
+ANV,sp|Q8I6R5|CA12_CONIM Alpha-conotoxin ImII (Fragment) OS=Conus imperialis OX=35631 PE=1 SV=1
+ANW,sp|Q8IS41|O16B_CONVX Conotoxin VxVIB OS=Conus vexillum OX=89431 PE=1 SV=1
+ANX,sp|Q9BP55|CM4C_CONPE Mu-conotoxin pn4c (Fragment) OS=Conus pennaceus OX=37335 PE=1 SV=1
+ANY,sp|Q9BP56|CAL12_CONPE Alpha-conotoxin-like PnMGMR-02 OS=Conus pennaceus OX=37335 PE=3 SV=1
+ANZ,sp|Q9BPH1|CTDA_CONTE Conotoxin TxXIIIA OS=Conus textile OX=6494 PE=1 SV=1
+AOA,sp|Q9N633|O16E_CONCT Omega conotoxin-CVIE (Fragment) OS=Conus catus OX=101291 PE=1 SV=1
+AOB,sp|Q9U619|CA12A_CONIM Alpha-conotoxin-like ImIIA OS=Conus imperialis OX=35631 PE=1 SV=1
+AOC,sp|Q9XZK6|CA11_CONTE Alpha-conotoxin-like Tx1 OS=Conus textile OX=6494 PE=3 SV=1
+AOD,sp|Q9XZL1|O164_CONTE Omega-conotoxin-like TxO4 OS=Conus textile OX=6494 PE=1 SV=1
+AOE,sp|Q9XZL4|O161_CONST Omega-conotoxin-like SVIA mutant 1 OS=Conus striatus OX=6493 PE=2 SV=1
+AOF,sp|Q9XZL5|O16A2_CONST Omega-conotoxin-like SVIA mutant 2 OS=Conus striatus OX=6493 PE=2 SV=1
+AOG,sp|S4UJV1|CA14_CONLI Alpha-conotoxin-like Lv1.4 OS=Conus lividus OX=89426 PE=3 SV=1
+AOH,sp|S4UJW3|CA1A_CONQU Alpha-conotoxin QcIA OS=Conus quercinus OX=101313 PE=3 SV=1
+AOI,sp|X5I9Z2|CAI15_CONGE Alpha-conotoxin G1.5 OS=Conus geographus OX=6491 PE=1 SV=1
+AOJ,sp|X5IGW1|CAIB_CONGE Alpha-conotoxin GIB OS=Conus geographus OX=6491 PE=1 SV=1
+AOK,sp|A0A068B6Q6|CA18_CONBE Conotoxin Bt1.8 (Fragment) OS=Conus betulinus OX=89764 PE=1 SV=1
+AOL,sp|A0A142C197|CSST1_CONBE Consomatin Be1 OS=Conus betulinus OX=89764 PE=3 SV=1
+AOM,sp|A0A2I6EDL3|CM35_CONRE Conotoxin reg3.5 OS=Conus regius OX=101314 PE=3 SV=1
+AON,sp|A0A2I6EDL5|CMCL_CONRE Reg12l (Fragment) OS=Conus regius OX=101314 PE=1 SV=1
+AOO,sp|A0A2I6EDL6|CM38_CONRE Conotoxin reg3.8 OS=Conus regius OX=101314 PE=3 SV=1
+AOP,sp|A0A2I6EDL7|CM37_CONRE Conotoxin reg3.7 (Fragment) OS=Conus regius OX=101314 PE=2 SV=1
+AOQ,sp|A0A2I6EDM1|CM39_CONRE Conotoxin reg3.9 (Fragment) OS=Conus regius OX=101314 PE=2 SV=1
+AOR,sp|A0A2I6EDM2|CM310_CONRE Conotoxin reg3.10 OS=Conus regius OX=101314 PE=3 SV=1
+AOS,sp|A0A2I6EDM5|CM36_CONRE Conotoxin reg3.6 OS=Conus regius OX=101314 PE=3 SV=1
+AOT,sp|A0A2I6EDM9|CM312_CONRE Conotoxin reg3.12 (Fragment) OS=Conus regius OX=101314 PE=2 SV=1
+AOU,sp|A0A2I6EDN0|CM317_CONRE Conotoxin reg3.17 (Fragment) OS=Conus regius OX=101314 PE=2 SV=1
+AOV,sp|A0A2I6EDN1|CM314_CONRE Conotoxin reg3.14 OS=Conus regius OX=101314 PE=3 SV=1
+AOW,sp|A0A2I6EDN2|CM316_CONRE Conotoxin reg3.16 OS=Conus regius OX=101314 PE=3 SV=1
+AOX,sp|A0A2I6EDN3|CM315_CONRE Conotoxin reg3.15 (Fragment) OS=Conus regius OX=101314 PE=2 SV=1
+AOY,sp|A0A2I6EDN8|CM311_CONRE Conotoxin reg3.11 (Fragment) OS=Conus regius OX=101314 PE=2 SV=1
+AOZ,sp|A0A3G1VU73|CLE2_CONAW Conotoxin flf14.2 OS=Conus anabathrum floridanus OX=1520082 PE=2 SV=1
+APA,sp|A0A3G1VU77|CLE5_CONVL Conotoxin vil14.5 OS=Conus villepinii OX=257347 PE=3 SV=1
+APB,sp|A0A3G1VU78|CLE4_CONVL Conotoxin vil14.4 OS=Conus villepinii OX=257347 PE=3 SV=1
+APC,sp|A0A3G1VU81|CLE3_CONVL Conotoxin vil14.3 OS=Conus villepinii OX=257347 PE=3 SV=1
+APD,sp|A0A3G1VU84|CLE2_CONVL Conotoxin vil14.2 OS=Conus villepinii OX=257347 PE=3 SV=1
+APE,sp|A1X8B9|CA2_CONQU Putative alpha-conotoxin Qc alphaL-2 OS=Conus quercinus OX=101313 PE=5 SV=1
+APF,sp|A1X8C6|CA11C_CONQU Alpha-conotoxin-like Qc1.1c (Fragment) OS=Conus quercinus OX=101313 PE=3 SV=1
+APG,sp|A1X8D0|CA15_CONQU Alpha-conotoxin-like Qc1.5 (Fragment) OS=Conus quercinus OX=101313 PE=3 SV=1
+APH,sp|A1X8D1|CA16_CONQU Alpha-conotoxin-like Qc1.6 (Fragment) OS=Conus quercinus OX=101313 PE=3 SV=1
+API,sp|A1X8D6|CA19_CONLE Alpha-conotoxin-like Lp1.9 (Fragment) OS=Conus leopardus OX=101306 PE=3 SV=1
+APJ,sp|A1X8D9|CA13_CONPL Alpha-conotoxin-like Pu1.3 (Fragment) OS=Conus pulicarius OX=93154 PE=3 SV=1
+APK,sp|A6M938|CA1A_CONLE Alpha-conotoxin-like Lp1.10 (Fragment) OS=Conus leopardus OX=101306 PE=1 SV=1
+APL,sp|A6YR23|COC1C_CONCL Mu-conotoxin-like Cal 12.1.1c OS=Californiconus californicus OX=1736779 PE=2 SV=1
+APM,sp|A6YR24|COC1D_CONCL Mu-conotoxin-like Cal 12.1.1d OS=Californiconus californicus OX=1736779 PE=2 SV=1
+APN,sp|A6YR26|COC1E_CONCL Mu-conotoxin-like Cal 12.1.1e OS=Californiconus californicus OX=1736779 PE=2 SV=1
+APO,sp|A6YR28|COC2A_CONCL Mu-conotoxin-like Cal 12.1.2a OS=Californiconus californicus OX=1736779 PE=2 SV=1
+APP,sp|A6YR29|COC2B_CONCL Mu-conotoxin-like Cal 12.1.2b OS=Californiconus californicus OX=1736779 PE=2 SV=1
+APQ,sp|A6YR30|COC2C_CONCL Mu-conotoxin-like Cal 12.1.2c OS=Californiconus californicus OX=1736779 PE=2 SV=1
+APR,sp|A6YR31|COC2D_CONCL Mu-conotoxin-like Cal 12.1.2d OS=Californiconus californicus OX=1736779 PE=2 SV=1
+APS,sp|A6YR33|COC2E_CONCL Mu-conotoxin-like Cal 12.1.2e OS=Californiconus californicus OX=1736779 PE=2 SV=1
+APT,sp|A6YR34|COC2F_CONCL Mu-conotoxin-like Cal 12.1.2f OS=Californiconus californicus OX=1736779 PE=2 SV=1
+APU,sp|A6YR36|COC2G_CONCL Mu-conotoxin-like Cal 12.1.2g OS=Californiconus californicus OX=1736779 PE=2 SV=1
+APV,sp|A6YR37|COC2H_CONCL Mu-conotoxin-like Cal 12.1.2h OS=Californiconus californicus OX=1736779 PE=2 SV=1
+APW,sp|A6YR40|COC3A_CONCL Mu-conotoxin-like Cal 12.1.3a OS=Californiconus californicus OX=1736779 PE=2 SV=2
+APX,sp|A6YR41|COC3B_CONCL Mu-conotoxin-like Cal 12.1.3b OS=Californiconus californicus OX=1736779 PE=2 SV=1
+APY,sp|A6YR42|COCA_CONCL Mu-conotoxin-like Cal 12.2a OS=Californiconus californicus OX=1736779 PE=1 SV=1
+APZ,sp|A7LI90|COCB_CONCL Mu-conotoxin-like Cal 12.2b OS=Californiconus californicus OX=1736779 PE=2 SV=1
+AQA,sp|A7LI91|COCC_CONCL Mu-conotoxin-like Cal 12.2c (Fragment) OS=Californiconus californicus OX=1736779 PE=2 SV=1
+AQB,sp|A7LI92|COCD_CONCL Mu-conotoxin-like Cal 12.2d OS=Californiconus californicus OX=1736779 PE=2 SV=2
+AQC,sp|A9UH01|COCE_CONCL Mu-conotoxin-like CalTx 12.2.1E (Fragment) OS=Californiconus californicus OX=1736779 PE=2 SV=1
+AQD,sp|B1PZN6|CS82_CONCB Conotoxin Ca8.2 OS=Conus caracteristicus OX=89440 PE=2 SV=1
+AQE,sp|B2CS62|CTFA_CONCB Conotoxin Ca15a (Fragment) OS=Conus caracteristicus OX=89440 PE=1 SV=2
+AQF,sp|B2KJ30|O168_CONST Delta-conotoxin-like S6.8 OS=Conus striatus OX=6493 PE=2 SV=1
+AQG,sp|B3FIA6|CVF1_CONPO Conotoxin Vt15.1 OS=Conus planorbis OX=97183 PE=2 SV=1
+AQH,sp|C0HKY5|CT5D_CONAO Conotoxin ar5d OS=Conus araneosus OX=101286 PE=1 SV=1
+AQI,sp|C0KYC3|CT54_CONSP Conotoxin Sr5.4 OS=Conus spurius OX=192919 PE=3 SV=1
+AQJ,sp|C0KYC4|CT55_CONSP Conotoxin Sr5.5 OS=Conus spurius OX=192919 PE=3 SV=1
+AQK,sp|C0KYC5|CT56_CONSP Conotoxin Sr5.6 OS=Conus spurius OX=192919 PE=3 SV=1
+AQL,sp|C0KYC6|CT57_CONSP Conotoxin Sr5.7 OS=Conus spurius OX=192919 PE=3 SV=1
+AQM,sp|D2DGD5|I3B3_CONCB Conotoxin Ca11.3 OS=Conus caracteristicus OX=89440 PE=3 SV=1
+AQN,sp|D2DGD6|I3B1_CONPL Conotoxin Pu11.1 OS=Conus pulicarius OX=93154 PE=3 SV=1
+AQO,sp|D2DGD7|I3B2_CONPL Conotoxin Pu11.2 OS=Conus pulicarius OX=93154 PE=3 SV=1
+AQP,sp|D2DGD8|I361_CONPL Conotoxin Pu6.1 OS=Conus pulicarius OX=93154 PE=3 SV=1
+AQQ,sp|D2DGD9|I364_CONLT Conotoxin Lt6.4 OS=Conus litteratus OX=89445 PE=3 SV=1
+AQR,sp|D2Y169|CU51C_CONCL Conotoxin Cal5a L3 OS=Californiconus californicus OX=1736779 PE=3 SV=1
+AQS,sp|D2Y170|CU51B_CONCL Conotoxin Cal5a L2 OS=Californiconus californicus OX=1736779 PE=3 SV=1
+AQT,sp|D2Y172|CT52_CONCL Conotoxin Cal5.2 OS=Californiconus californicus OX=1736779 PE=1 SV=1
+AQU,sp|D6C4J9|CX53_CONCL Conotoxin Cl5.3 OS=Californiconus californicus OX=1736779 PE=3 SV=1
+AQV,sp|F5C3T9|COW_CONVR Contryphan-Vi OS=Conus virgo OX=89427 PE=3 SV=1
+AQW,sp|F5CEP0|CUC11_CONCL Conotoxin Cal12.1p1 (Fragment) OS=Californiconus californicus OX=1736779 PE=2 SV=1
+AQX,sp|G1C1T0|CUC12_CONCL Conotoxin Cal12.1p2 (Fragment) OS=Californiconus californicus OX=1736779 PE=2 SV=1
+AQY,sp|G1C1T1|CUC13_CONCL Conotoxin Cal12.1p3 (Fragment) OS=Californiconus californicus OX=1736779 PE=2 SV=1
+AQZ,sp|G1C1T2|CUC14_CONCL Conotoxin Cal12.1p4 (Fragment) OS=Californiconus californicus OX=1736779 PE=2 SV=1
+ARA,sp|G1C1T3|CUC15_CONCL Conotoxin Cal12.1p5 (Fragment) OS=Californiconus californicus OX=1736779 PE=2 SV=1
+ARB,sp|H8Y1U0|CT54_CONIM Conotoxin Im5.4 OS=Conus imperialis OX=35631 PE=1 SV=1
+ARC,sp|H9N3R7|CA1C_CONLI Alpha-conotoxin Li1.12 (Fragment) OS=Conus lividus OX=89426 PE=3 SV=1
+ARD,sp|P0C1T9|CM3A_CONCN Mu-conotoxin CnIIIA OS=Conus consors OX=101297 PE=1 SV=1
+ARE,sp|P0C1U1|CM3A_CONCT Mu-conotoxin CIIIA OS=Conus catus OX=101291 PE=2 SV=1
+ARF,sp|P0C1U2|CM3A_CONMA Mu-conotoxin MIIIA OS=Conus magus OX=6492 PE=1 SV=1
+ARG,sp|P0C1V9|CA11_CONCB Alpha-conotoxin-like Ca1.1 OS=Conus caracteristicus OX=89440 PE=3 SV=1
+ARH,sp|P0C1W4|CA11_CONST Alpha-conotoxin-like S1.1 OS=Conus striatus OX=6493 PE=2 SV=1
+ARI,sp|P0C251|I1B1_CONBE Conotoxin Bt11.1 OS=Conus betulinus OX=89764 PE=2 SV=1
+ARJ,sp|P0C252|I2BA_CONEM Kappa-conotoxin-like Em11.10 (Fragment) OS=Conus emaciatus OX=89442 PE=2 SV=1
+ARK,sp|P0C253|I1B1_CONEP Conotoxin Ep11.1 OS=Conus episcopatus OX=88764 PE=2 SV=1
+ARL,sp|P0C254|I2BC_CONEP Conotoxin Ep11.12 OS=Conus episcopatus OX=88764 PE=2 SV=1
+ARM,sp|P0C255|I2BB_CONFI Conotoxin Fi11.11 (Fragment) OS=Conus figulinus OX=101301 PE=2 SV=1
+ARN,sp|P0C256|I1B1_CONFI Iota-conotoxin-like Fi11.1 (Fragment) OS=Conus figulinus OX=101301 PE=2 SV=1
+ARO,sp|P0C257|I1B1_CONMA Iota-conotoxin-like M11.1 (Fragment) OS=Conus magus OX=6492 PE=2 SV=1
+ARP,sp|P0C258|I2B2_CONSR Kappa-conotoxin-like Sx11.2 OS=Conus striolatus OX=101315 PE=2 SV=1
+ARQ,sp|P0C259|I1B2_CONST Iota-conotoxin-like S11.2 (Fragment) OS=Conus striatus OX=6493 PE=2 SV=1
+ARR,sp|P0C608|I1B6_CONAL Conotoxin Au11.6 OS=Conus aulicus OX=89437 PE=2 SV=1
+ARS,sp|P0C609|I1B4_CONBE Conotoxin Bt11.4 OS=Conus betulinus OX=89764 PE=2 SV=1
+ART,sp|P0C610|I1B6_CONFI Iota-conotoxin-like Fi11.6 OS=Conus figulinus OX=101301 PE=2 SV=1
+ARU,sp|P0C611|I1B8_CONFI Iota-conotoxin-like Fi11.8 OS=Conus figulinus OX=101301 PE=2 SV=1
+ARV,sp|P0C612|I1B5_CONLY Iota-conotoxin-like L11.5 OS=Conus lynceus OX=289038 PE=2 SV=1
+ARW,sp|P0C613|I1B2_CONMA Conotoxin M11.2 OS=Conus magus OX=6492 PE=2 SV=1
+ARX,sp|P0C614|I1B5_CONMA Iota-conotoxin-like M11.5 OS=Conus magus OX=6492 PE=2 SV=1
+ARY,sp|P0C636|CT51_CONPL Conotoxin Pu5.1 OS=Conus pulicarius OX=93154 PE=2 SV=1
+ARZ,sp|P0C637|CT52_CONPL Conotoxin Pu5.2 OS=Conus pulicarius OX=93154 PE=2 SV=1
+ASA,sp|P0C638|CT53_CONPL Conotoxin Pu5.3 OS=Conus pulicarius OX=93154 PE=2 SV=1
+ASB,sp|P0C639|CT54_CONPL Conotoxin Pu5.4 OS=Conus pulicarius OX=93154 PE=2 SV=1
+ASC,sp|P0C640|CT55_CONPL Conotoxin Pu5.5 OS=Conus pulicarius OX=93154 PE=2 SV=1
+ASD,sp|P0C641|CT56_CONPL Conotoxin Pu5.6 OS=Conus pulicarius OX=93154 PE=2 SV=1
+ASE,sp|P0C666|CT51_CONCB Conotoxin Ca5.1 OS=Conus caracteristicus OX=89440 PE=2 SV=1
+ASF,sp|P0C667|CT52_CONCB Conotoxin Ca5.2 OS=Conus caracteristicus OX=89440 PE=2 SV=1
+ASG,sp|P0C668|CT53_CONCB Conotoxin Ca5.3 OS=Conus caracteristicus OX=89440 PE=2 SV=1
+ASH,sp|P0C669|CT51A_CONVR Conotoxin Vi5.1a OS=Conus virgo OX=89427 PE=2 SV=1
+ASI,sp|P0C670|CT51B_CONVR Conotoxin Vi5.1b OS=Conus virgo OX=89427 PE=2 SV=1
+ASJ,sp|P0C830|CA43_CONST Kappa-conotoxin-like S4.3 OS=Conus striatus OX=6493 PE=2 SV=1
+ASK,sp|P0C831|O166_CONST Omega-conotoxin-like S6.6 OS=Conus striatus OX=6493 PE=2 SV=1
+ASL,sp|P0C832|O167_CONST Omega-conotoxin-like S6.7 (Fragment) OS=Conus striatus OX=6493 PE=2 SV=1
+ASM,sp|P0C833|O16V_CONST Conotoxin S6.10 OS=Conus striatus OX=6493 PE=2 SV=1
+ASN,sp|P0C834|O26B_CONST Conotoxin S6.11 OS=Conus striatus OX=6493 PE=2 SV=1
+ASO,sp|P0C8U3|CA14_CONBR Alpha-conotoxin-like Br1.4 OS=Conus brunneus OX=101289 PE=2 SV=1
+ASP,sp|P0C8U5|CA14_CONMN Alpha-conotoxin-like Mn1.4 (Fragment) OS=Conus monachus OX=89446 PE=2 SV=1
+ASQ,sp|P0C8U6|CA1S1_CONPL Alpha-conotoxin-like PuSG1.1 OS=Conus pulicarius OX=93154 PE=3 SV=1
+ASR,sp|P0C8U7|CA1S2_CONPL Alpha-conotoxin-like PuSG1.2 OS=Conus pulicarius OX=93154 PE=3 SV=1
+ASS,sp|P0C8U8|CA14_CONPL Alpha-conotoxin-like Pu1.4 OS=Conus pulicarius OX=93154 PE=3 SV=1
+AST,sp|P0C8U9|CA15_CONPL Alpha-conotoxin-like Pu1.5 OS=Conus pulicarius OX=93154 PE=3 SV=1
+ASU,sp|P0C8V0|CA16_CONPL Alpha-conotoxin-like Pu1.6 OS=Conus pulicarius OX=93154 PE=3 SV=1
+ASV,sp|P0C8V3|CM3B_CONSR Mu-conotoxin-like SxIIIB OS=Conus striolatus OX=101315 PE=1 SV=1
+ASW,sp|P0C8V7|O163_CONAH Delta-conotoxin-like Ac6.3 OS=Conus achatinus OX=369967 PE=2 SV=1
+ASX,sp|P0C901|CA1A1_CONLE Alpha-conotoxin-like Leo-A1 OS=Conus leopardus OX=101306 PE=3 SV=1
+ASY,sp|P0C906|CT11_CONLE Conotoxin Leo-T1 OS=Conus leopardus OX=101306 PE=3 SV=1
+ASZ,sp|P0C907|CT12_CONLE Conotoxin Leo-T2 OS=Conus leopardus OX=101306 PE=3 SV=1
+ATA,sp|P0CAQ2|CA43A_CONAH Kappa-conotoxin-like Ac4.3a (Fragment) OS=Conus achatinus OX=369967 PE=3 SV=1
+ATB,sp|P0CAQ3|CA43B_CONAH Kappa-conotoxin-like Ac4.3b (Fragment) OS=Conus achatinus OX=369967 PE=3 SV=1
+ATC,sp|P0CAQ4|CA11A_CONAH Alpha-conotoxin-like Ac1.1a OS=Conus achatinus OX=369967 PE=2 SV=1
+ATD,sp|P0CAQ7|CA16B_CONLE Alpha-conotoxin-like Lp1.6b (Fragment) OS=Conus leopardus OX=101306 PE=2 SV=1
+ATE,sp|P0CAQ9|CA14B_CONQU Alpha-conotoxin-like Qc1.4b (Fragment) OS=Conus quercinus OX=101313 PE=3 SV=1
+ATF,sp|P0CB09|O161_CONAJ Delta-conotoxin-like Ai6.1 OS=Conus ammiralis OX=97188 PE=2 SV=1
+ATG,sp|P0CB10|O162_CONAJ Omega-conotoxin-like Ai6.2 OS=Conus ammiralis OX=97188 PE=2 SV=1
+ATH,sp|P0CB11|O163_CONAJ Omega-conotoxin-like Ai6.3 OS=Conus ammiralis OX=97188 PE=2 SV=1
+ATI,sp|P0CE74|CA12_CONBN Alpha-conotoxin-like Bn1.2 (Fragment) OS=Conus bandanus OX=72279 PE=2 SV=1
+ATJ,sp|P0CI41|CUG6A_CONCL Omega-conotoxin Cl16a OS=Californiconus californicus OX=1736779 PE=1 SV=1
+ATK,sp|P0CY60|O171_CONBU Omega-conotoxin-like Bu1 OS=Conus bullatus OX=89438 PE=2 SV=1
+ATL,sp|P0CY69|O17B_CONBU Omega-conotoxin-like Bu11 (Fragment) OS=Conus bullatus OX=89438 PE=2 SV=1
+ATM,sp|P0CY82|CA427_CONBU Kappa-conotoxin-like Bu27 (Fragment) OS=Conus bullatus OX=89438 PE=2 SV=1
+ATN,sp|P0DJC4|CT51_CONQU Conotoxin Qc5.1 OS=Conus quercinus OX=101313 PE=2 SV=1
+ATO,sp|P0DJC5|CT52_CONQU Conotoxin Qc5.2 OS=Conus quercinus OX=101313 PE=2 SV=1
+ATP,sp|P0DKM1|I2B1_CONFR Conotoxin fe11.1 OS=Conus ferrugineus OX=379542 PE=2 SV=1
+ATQ,sp|P0DL31|CXQA_CONRG Omega-conotoxin RsXXVIA OS=Conus regularis OX=1333719 PE=1 SV=1
+ATR,sp|P0DL66|O16A_CONTS Delta-conotoxin TsVIA OS=Conus tessulatus OX=101317 PE=1 SV=1
+ATS,sp|P0DP12|CM5A_CONFI Conotoxin Fi5a OS=Conus figulinus OX=101301 PE=1 SV=1
+ATT,sp|P0DPJ8|CM3M_CONRE Conotoxin reg3m OS=Conus regius OX=101314 PE=1 SV=1
+ATU,sp|P0DPK7|CX5E_CONTE Conotoxin tx5e OS=Conus textile OX=6494 PE=1 SV=1
+ATV,sp|P0DPK8|M313_CONTE Conotoxin SI.13 OS=Conus textile OX=6494 PE=1 SV=1
+ATW,sp|P0DPK9|M314_CONTE Conotoxin SI.14 OS=Conus textile OX=6494 PE=1 SV=1
+ATX,sp|P0DPL0|M316_CONTE Conotoxin SI.6 OS=Conus textile OX=6494 PE=1 SV=1
+ATY,sp|P0DPL1|CM32_CONSE Alpha-conotoxin-like Sm3.2 OS=Conus stercusmuscarum OX=89452 PE=1 SV=1
+ATZ,sp|P0DPL2|M3I_CONTE Conotoxin tx3i OS=Conus textile OX=6494 PE=1 SV=1
+AUA,sp|P0DPL3|M3J_CONTE Conotoxin tx3j OS=Conus textile OX=6494 PE=1 SV=1
+AUB,sp|P0DPL4|CT5F_CONTE Conotoxin tx5f OS=Conus textile OX=6494 PE=1 SV=1
+AUC,sp|P0DPL5|CT5G_CONTE Conotoxin tx5g OS=Conus textile OX=6494 PE=1 SV=1
+AUD,sp|P0DPL6|CT5H_CONTE Conotoxin tx5h OS=Conus textile OX=6494 PE=1 SV=1
+AUE,sp|P0DPL7|CT5E_CONTE Conotoxin tx5e OS=Conus textile OX=6494 PE=1 SV=1
+AUF,sp|P0DPM2|CA14_CONSE Alpha-conotoxin-like Sm1.4 OS=Conus stercusmuscarum OX=89452 PE=1 SV=1
+AUG,sp|P0DPM3|CU65_CONTE Conotoxin Tx6.5 OS=Conus textile OX=6494 PE=1 SV=1
+AUH,sp|P0DQO8|CM3L_CONRE Conotoxin reg3l OS=Conus regius OX=101314 PE=1 SV=1
+AUI,sp|P0DUR3|CM696_CONIN Conotoxin In1696 OS=Conus inscriptus OX=257329 PE=1 SV=1
+AUJ,sp|P0DUU3|T1251_CONAA Conotoxin Ama1251 OS=Conus amadis OX=198732 PE=1 SV=1
+AUK,sp|P0DW73|O161_CONKN Conotoxin Kt6.1 OS=Conus kintoki OX=568724 PE=3 SV=1
+AUL,sp|P0DW74|OV62_CONVR Conotoxin Vi6.2 OS=Conus virgo OX=89427 PE=3 SV=1
+AUM,sp|P0DW75|O164_CONVR Conotoxin Vi6.4 OS=Conus virgo OX=89427 PE=3 SV=1
+AUN,sp|P0DW77|O162_CONTC Conotoxin Tr6.2 OS=Conus terebra OX=89453 PE=3 SV=1
+AUO,sp|P0DW78|O163_CONTC Conotoxin Tr6.3 OS=Conus terebra OX=89453 PE=3 SV=1
+AUP,sp|P24159|O16B_CONTE Delta-conotoxin TxVIB OS=Conus textile OX=6494 PE=1 SV=1
+AUQ,sp|P58625|CX2A_CONBE Conotoxin Bt12.1 OS=Conus betulinus OX=89764 PE=1 SV=1
+AUR,sp|P58849|CT5B_CONAL Conotoxin au5b OS=Conus aulicus OX=89437 PE=1 SV=1
+AUS,sp|P69748|O16A_CONAI Delta-conotoxin-like AVIA OS=Conus aurisiacus OX=319919 PE=2 SV=2
+AUT,sp|P69750|O16A_CONCN Delta-conotoxin-like CnVIA OS=Conus consors OX=101297 PE=2 SV=2
+AUU,sp|P69751|O16DE_CONCT Delta-conotoxin-like CVIE OS=Conus catus OX=101291 PE=2 SV=2
+AUV,sp|P69752|O16B_CONER Delta-conotoxin-like EVIB OS=Conus ermineus OX=55423 PE=1 SV=1
+AUW,sp|P69753|O16A_CONMA Delta-conotoxin-like MVIA OS=Conus magus OX=6492 PE=2 SV=2
+AUX,sp|P69754|O16B_CONMA Delta-conotoxin-like MVIB OS=Conus magus OX=6492 PE=2 SV=2
+AUY,sp|P69755|O16C_CONMA Delta-conotoxin-like MVIC OS=Conus magus OX=6492 PE=2 SV=2
+AUZ,sp|P69756|O16D_CONMA Delta-conotoxin-like MVID OS=Conus magus OX=6492 PE=2 SV=1
+AVA,sp|P69757|O16A_CONSE Delta-conotoxin-like SmVIA OS=Conus stercusmuscarum OX=89452 PE=2 SV=2
+AVB,sp|P69760|O163_CONVC Conotoxin Vc6.3 OS=Conus victoriae OX=319920 PE=2 SV=1
+AVC,sp|P69761|O164_CONVC Omega-conotoxin-like Vc6.4 OS=Conus victoriae OX=319920 PE=2 SV=1
+AVD,sp|P69763|O166_CONVC Conotoxin Vc6.6 OS=Conus victoriae OX=319920 PE=2 SV=1
+AVE,sp|P69766|CT5C_CONVC Conotoxin vc5c (Fragment) OS=Conus victoriae OX=319920 PE=1 SV=1
+AVF,sp|P69767|CT53_CONVC Conotoxin Vc5.3 (Fragment) OS=Conus victoriae OX=319920 PE=2 SV=1
+AVG,sp|Q0N4U3|CJE2_CONFR Alpha/kappa-conotoxin-like fe14.2 OS=Conus ferrugineus OX=379542 PE=2 SV=1
+AVH,sp|Q0N4U4|CJE1_CONFR Alpha/kappa-conotoxin-like fe14.1 OS=Conus ferrugineus OX=379542 PE=2 SV=1
+AVI,sp|Q0N4U5|CJE3_CONPO Alpha/kappa-conotoxin-like pl14.3 OS=Conus planorbis OX=97183 PE=2 SV=1
+AVJ,sp|Q0N4U6|CJE2_CONPO Alpha/kappa-conotoxin-like pl14.2 (Fragment) OS=Conus planorbis OX=97183 PE=2 SV=1
+AVK,sp|Q0N4U7|CJE1_CONPO Alpha/kappa-conotoxin-like pl14.1 OS=Conus planorbis OX=97183 PE=2 SV=1
+AVL,sp|Q1A3Q1|CT5A_CONLT Conotoxin Lt5.10 OS=Conus litteratus OX=89445 PE=3 SV=1
+AVM,sp|Q1A3Q2|CT5B_CONLT Conotoxin Lt5.11 OS=Conus litteratus OX=89445 PE=3 SV=1
+AVN,sp|Q1A3Q5|CT58_CONLT Conotoxin Lt5.8 OS=Conus litteratus OX=89445 PE=3 SV=1
+AVO,sp|Q1A3Q6|CT57_CONLT Conotoxin Lt5.7 OS=Conus litteratus OX=89445 PE=3 SV=1
+AVP,sp|Q1A3Q7|CT59_CONLT Conotoxin Lt5.9 OS=Conus litteratus OX=89445 PE=3 SV=1
+AVQ,sp|Q1A3Q8|CT56_CONLT Conotoxin Lt5.6 OS=Conus litteratus OX=89445 PE=3 SV=1
+AVR,sp|Q1A3Q9|CT52_CONLT Conotoxin Lt5.2 OS=Conus litteratus OX=89445 PE=3 SV=1
+AVS,sp|Q1A3R0|CT55_CONLT Conotoxin Lt5.5 OS=Conus litteratus OX=89445 PE=3 SV=1
+AVT,sp|Q1A3R3|CT51_CONLT Conotoxin Lt5.1 OS=Conus litteratus OX=89445 PE=3 SV=1
+AVU,sp|Q2I2P1|CON1_CONLT Contulakin-Lt1 OS=Conus litteratus OX=89445 PE=2 SV=1
+AVV,sp|Q2I2P2|CON2_CONLT Contulakin-Lt2 OS=Conus litteratus OX=89445 PE=2 SV=1
+AVW,sp|Q2I2P3|COW1_CONLT Contryphan-Lt OS=Conus litteratus OX=89445 PE=3 SV=1
+AVX,sp|Q2I2P4|CP9A_CONLT Conotoxin Lt9a OS=Conus litteratus OX=89445 PE=1 SV=1
+AVY,sp|Q2I2Q1|M35_CONLT Conotoxin Lt3.5 OS=Conus litteratus OX=89445 PE=2 SV=1
+AVZ,sp|Q2I2Q2|CM34_CONLT Conotoxin Lt3.4 OS=Conus litteratus OX=89445 PE=3 SV=1
+AWA,sp|Q2I2Q3|CM33_CONLT Conotoxin Lt3.3 OS=Conus litteratus OX=89445 PE=3 SV=1
+AWB,sp|Q2I2Q4|CM32_CONLT Conotoxin Lt3.2 OS=Conus litteratus OX=89445 PE=3 SV=1
+AWC,sp|Q2I2Q6|CO2FA_CONLT Conotoxin Lt15a OS=Conus litteratus OX=89445 PE=2 SV=1
+AWD,sp|Q2I2Q9|O271_CONLT Conotoxin Lt7.1 OS=Conus litteratus OX=89445 PE=2 SV=1
+AWE,sp|Q2I2R0|O165_CONLT Conotoxin Lt6.5 OS=Conus litteratus OX=89445 PE=2 SV=1
+AWF,sp|Q2I2R1|O164_CONLT Conotoxin Lt6.4 OS=Conus litteratus OX=89445 PE=2 SV=1
+AWG,sp|Q2I2R2|O163_CONLT Conotoxin Lt6.3 OS=Conus litteratus OX=89445 PE=2 SV=1
+AWH,sp|Q2I2R3|O162_CONLT Conotoxin Lt6.2 OS=Conus litteratus OX=89445 PE=2 SV=1
+AWI,sp|Q2I2R4|O161_CONLT Conotoxin Lt6.1 OS=Conus litteratus OX=89445 PE=2 SV=1
+AWJ,sp|Q3YED3|O373_CONLI Conotoxin LiCr173 OS=Conus lividus OX=89426 PE=1 SV=2
+AWK,sp|Q3YED6|O167_CONMR Omega-conotoxin-like MaIr137 OS=Conus marmoreus OX=42752 PE=2 SV=1
+AWL,sp|Q3YEE2|O16H_CONCE Conotoxin CaHr91 OS=Conus capitaneus OX=89439 PE=2 SV=1
+AWM,sp|Q3YEE3|O162_CONMI Conotoxin MiEr92 OS=Conus miles OX=69564 PE=2 SV=1
+AWN,sp|Q3YEE4|O169_CONMI Conotoxin MiEr93 OS=Conus miles OX=69564 PE=2 SV=1
+AWO,sp|Q3YEE5|O165_CONMI Conotoxin MiEr95 OS=Conus miles OX=69564 PE=2 SV=1
+AWP,sp|Q3YEE6|O165_CONLI Conotoxin LiCr95 OS=Conus lividus OX=89426 PE=2 SV=1
+AWQ,sp|Q3YEF0|O379_CONCB Conotoxin CaFr179 OS=Conus caracteristicus OX=89440 PE=1 SV=1
+AWR,sp|Q3YEF3|O1661_CONTE Omega-conotoxin-like TeA61 OS=Conus textile OX=6494 PE=2 SV=1
+AWS,sp|Q3YEF7|O2651_CONLT Conotoxin LeD51 OS=Conus litteratus OX=89445 PE=2 SV=1
+AWT,sp|Q3YEF8|O265_CONLI Conotoxin LiC53 OS=Conus lividus OX=89426 PE=2 SV=1
+AWU,sp|Q3YEF9|O264_CONBE Conotoxin Bt6.6 OS=Conus betulinus OX=89764 PE=2 SV=1
+AWV,sp|Q3YEG0|O253_CONTE Gamma-conotoxin-like TeA53 OS=Conus textile OX=6494 PE=2 SV=1
+AWW,sp|Q3YEG3|O1642_CONMI Conotoxin MiK42 OS=Conus miles OX=69564 PE=2 SV=1
+AWX,sp|Q3YEG4|O1641_CONMI Conotoxin MiK41 OS=Conus miles OX=69564 PE=3 SV=2
+AWY,sp|Q3YEG6|O162_CONLI Conotoxin LiC42 OS=Conus lividus OX=89426 PE=2 SV=1
+AWZ,sp|Q3YEG7|O165_CONBE Conotoxin Bt6.5 OS=Conus betulinus OX=89764 PE=2 SV=1
+AXA,sp|Q3YEG9|CT121_CONLI Conotoxin LiC121 OS=Conus lividus OX=89426 PE=3 SV=1
+AXB,sp|Q3YEH0|CT243_CONLT Conotoxin LeDr243 OS=Conus litteratus OX=89445 PE=2 SV=1
+AXC,sp|Q3YEH1|CT192_CONLT Conotoxin LeDr192 OS=Conus litteratus OX=89445 PE=2 SV=1
+AXD,sp|Q3YEH2|CT593_CONTE Conotoxin TeAr193 OS=Conus textile OX=6494 PE=1 SV=1
+AXE,sp|Q3YEH3|CT53_CONLT Conotoxin Lt5.3 OS=Conus litteratus OX=89445 PE=3 SV=1
+AXF,sp|Q3YEH4|CT33_CONLI Conotoxin LiC33 OS=Conus lividus OX=89426 PE=2 SV=1
+AXG,sp|Q3YEH6|CT34_CONBE Conotoxin Bt5.1 OS=Conus betulinus OX=89764 PE=2 SV=1
+AXH,sp|Q45RU7|CS_CONST Conotoxin (Fragment) OS=Conus striatus OX=6493 PE=2 SV=1
+AXI,sp|Q5EHP1|CM31_CONQU Conotoxin Qc3.1 OS=Conus quercinus OX=101313 PE=2 SV=1
+AXJ,sp|Q5EHP2|CM38_CONMR Conotoxin Mr3.8 OS=Conus marmoreus OX=42752 PE=3 SV=1
+AXK,sp|Q5EHP4|CM32_CONLE Conotoxin Lp3.2 OS=Conus leopardus OX=101306 PE=3 SV=1
+AXL,sp|Q5I2P0|CM31_CONLE Conotoxin Lp3.1 OS=Conus leopardus OX=101306 PE=3 SV=1
+AXM,sp|Q5K0B9|O162_CONIM Omega-conotoxin-like 2/7 OS=Conus imperialis OX=35631 PE=2 SV=1
+AXN,sp|Q5K0C0|O163_CONIM Omega-conotoxin-like 3 OS=Conus imperialis OX=35631 PE=2 SV=1
+AXO,sp|Q5K0D2|O19_CONST Omega-conotoxin-like 9 OS=Conus striatus OX=6493 PE=2 SV=1
+AXP,sp|Q5K0D3|O16L6_CONST Omega-conotoxin-like 6 OS=Conus striatus OX=6493 PE=2 SV=1
+AXQ,sp|Q5K0D5|O16F_CONST Omega-conotoxin-like 15 OS=Conus striatus OX=6493 PE=2 SV=1
+AXR,sp|Q5K0D6|O16C_CONST Omega-conotoxin-like 12 OS=Conus striatus OX=6493 PE=2 SV=1
+AXS,sp|Q5K0D7|O163_CONST Conotoxin 3 OS=Conus striatus OX=6493 PE=2 SV=1
+AXT,sp|Q5K0D8|O162_CONST Omega-conotoxin-like 2 OS=Conus striatus OX=6493 PE=2 SV=1
+AXU,sp|Q68IP5|CT54B_CONMR Conotoxin mr5.4b (Fragment) OS=Conus marmoreus OX=42752 PE=2 SV=1
+AXV,sp|Q6PN80|CT52_CONLE Conotoxin Lp5.2 OS=Conus leopardus OX=101306 PE=3 SV=1
+AXW,sp|Q6PN81|CT51_CONLE Conotoxin Lp5.1 OS=Conus leopardus OX=101306 PE=3 SV=1
+AXX,sp|Q6PN82|CT54A_CONMR Conotoxin mr5.4a OS=Conus marmoreus OX=42752 PE=2 SV=1
+AXY,sp|Q6PN85|CT51B_CONMR Conotoxin mr5.1b OS=Conus marmoreus OX=42752 PE=2 SV=1
+AXZ,sp|Q6PN86|CT51A_CONMR Conotoxin mr5.1a OS=Conus marmoreus OX=42752 PE=2 SV=1
+AYA,sp|Q6PTD0|CT52_CONMI Conotoxin Mi5.2 OS=Conus miles OX=69564 PE=3 SV=1
+AYB,sp|Q6PTD7|CA11A_CONQU Alpha-conotoxin-like Qc1.1a OS=Conus quercinus OX=101313 PE=3 SV=1
+AYC,sp|Q7Z090|I1B3_CONRA Iota-conotoxin-like R11.3 OS=Conus radiatus OX=61198 PE=2 SV=2
+AYD,sp|Q7Z093|I1BH_CONRA Iota-conotoxin-like R11.17 OS=Conus radiatus OX=61198 PE=2 SV=1
+AYE,sp|Q7Z095|I1B7_CONRA Iota-conotoxin-like R11.7 OS=Conus radiatus OX=61198 PE=2 SV=1
+AYF,sp|Q7Z097|I1BI_CONRA Iota-conotoxin-like R11.18 (Fragment) OS=Conus radiatus OX=61198 PE=2 SV=1
+AYG,sp|Q7Z098|I1B5_CONRA Iota-conotoxin-like R11.5 (Fragment) OS=Conus radiatus OX=61198 PE=2 SV=1
+AYH,sp|Q7Z099|I1B2_CONRA Iota-conotoxin-like R11.2 (Fragment) OS=Conus radiatus OX=61198 PE=2 SV=1
+AYI,sp|Q7Z0A0|I1BV_CONRA Iota-conotoxin-like R11.11 (Fragment) OS=Conus radiatus OX=61198 PE=2 SV=1
+AYJ,sp|Q7Z0A1|I1BG_CONRA Iota-conotoxin-like R11.16 OS=Conus radiatus OX=61198 PE=2 SV=1
+AYK,sp|Q7Z0A2|I1BF_CONRA Iota-conotoxin-like R11.15 OS=Conus radiatus OX=61198 PE=2 SV=1
+AYL,sp|Q7Z0A3|I1BX_CONRA Iota-conotoxin-like R11.13 (Fragment) OS=Conus radiatus OX=61198 PE=2 SV=1
+AYM,sp|Q7Z0A4|I1BW_CONRA Iota-conotoxin-like R11.12 (Fragment) OS=Conus radiatus OX=61198 PE=2 SV=1
+AYN,sp|Q7Z0A5|I1BU_CONRA Iota-conotoxin-like R11.10 (Fragment) OS=Conus radiatus OX=61198 PE=2 SV=1
+AYO,sp|Q7Z0A6|I1B1_CONRA Iota-conotoxin-like R11.1 OS=Conus radiatus OX=61198 PE=2 SV=1
+AYP,sp|Q9BH21|CT21_CONTE Conotoxin Tx-D021 OS=Conus textile OX=6494 PE=3 SV=1
+AYQ,sp|Q9BH75|CT011_CONTS Conotoxin Ts-011 OS=Conus tessulatus OX=101317 PE=3 SV=1
+AYR,sp|Q9BH79|CT53_CONAE Conotoxin Ar5.3 OS=Conus arenatus OX=89451 PE=3 SV=1
+AYS,sp|Q9BH81|CT52_CONAE Conotoxin ArMLCL-012 OS=Conus arenatus OX=89451 PE=3 SV=1
+AYT,sp|Q9BH84|O162_CONAE Omega-conotoxin-like ArMKLT1-011 OS=Conus arenatus OX=89451 PE=2 SV=1
+AYU,sp|Q9BH86|CT14_CONPE Conotoxin Pn-014 OS=Conus pennaceus OX=37335 PE=3 SV=1
+AYV,sp|Q9BHA0|O26M_CONTE Gamma-conotoxin-like TxMEKL-0511 OS=Conus textile OX=6494 PE=2 SV=1
+AYW,sp|Q9BHA6|CT51_CONAE Conotoxin Ar5.1 a OS=Conus arenatus OX=89451 PE=3 SV=1
+AYX,sp|Q9BP46|CT55_CONTS Conotoxin Ts5.5 (Fragment) OS=Conus tessulatus OX=101317 PE=2 SV=1
+AYY,sp|Q9BP47|CT54_CONAE Conotoxin Ar5.4 (Fragment) OS=Conus arenatus OX=89451 PE=2 SV=1
+AYZ,sp|Q9BP51|CT51B_CONAE Conotoxin Ar5.1 b OS=Conus arenatus OX=89451 PE=3 SV=1
+AZA,sp|Q9BP99|O163_CONAE Omega-conotoxin-like ArMKLT1-02 OS=Conus arenatus OX=89451 PE=2 SV=1
+AZB,sp|Q9BPA5|O168_CONVE Omega-conotoxin-like VnMKLT1-0111 OS=Conus ventricosus OX=117992 PE=2 SV=1
+AZC,sp|Q9BPB0|O2653_CONTE Gamma-conotoxin-like TxMEKL-053 OS=Conus textile OX=6494 PE=2 SV=1
+AZD,sp|Q9BPD9|CT54_CONTS Conotoxin TsMLCL-04 OS=Conus tessulatus OX=101317 PE=3 SV=1
+AZE,sp|Q9BPE0|CT56_CONVE Conotoxin Vn5.6 OS=Conus ventricosus OX=117992 PE=3 SV=1
+AZF,sp|Q9BPE1|CT55_CONVE Conotoxin Vn5.5 OS=Conus ventricosus OX=117992 PE=3 SV=1
+AZG,sp|Q9BPE2|CT52_CONPE Conotoxin PnMLCL-01 OS=Conus pennaceus OX=37335 PE=3 SV=1
+AZH,sp|Q9BPE3|CT53_CONTS Conotoxin TsMLCL-03 OS=Conus tessulatus OX=101317 PE=3 SV=1
+AZI,sp|Q9BPE4|CT5C_CONTS Conotoxin Ts-011 OS=Conus tessulatus OX=101317 PE=3 SV=1
+AZJ,sp|Q9BPE5|CT52_CONTS Conotoxin TsMRCL-05 OS=Conus tessulatus OX=101317 PE=3 SV=1
+AZK,sp|Q9BPE6|CT5B_CONTS Conotoxin Ts-011 OS=Conus tessulatus OX=101317 PE=3 SV=1
+AZL,sp|Q9BPE7|CT411_CONPE Conotoxin Pn-B01411 OS=Conus pennaceus OX=37335 PE=3 SV=1
+AZM,sp|Q9BPE9|CTA1_CONPE Chi-conotoxin-like PnMRCL-013 OS=Conus pennaceus OX=37335 PE=1 SV=1
+AZN,sp|Q9BPF1|CT122_CONPE Conotoxin Pn-B01122 OS=Conus pennaceus OX=37335 PE=3 SV=1
+AZO,sp|Q9BPF2|CT05_CONVE Conotoxin Vn-05 OS=Conus ventricosus OX=117992 PE=3 SV=1
+AZP,sp|Q9BPF3|CT121_CONPE Conotoxin Pn-B01121 OS=Conus pennaceus OX=37335 PE=3 SV=1
+AZQ,sp|Q9BPF4|CT511_CONPE Conotoxin PnMRCL-0111 OS=Conus pennaceus OX=37335 PE=3 SV=1
+AZR,sp|Q9BPF5|CT51_CONTS Conotoxin TsMRCL-04 OS=Conus tessulatus OX=101317 PE=3 SV=1
+AZS,sp|Q9BPF6|CT03_CONTS Conotoxin Ts-03 OS=Conus tessulatus OX=101317 PE=3 SV=1
+AZT,sp|Q9BPF7|CT54_CONVE Conotoxin VnMRCL-04 OS=Conus ventricosus OX=117992 PE=3 SV=1
+AZU,sp|Q9BPF8|CT5_CONPE Conotoxin PnMRCL-0111 OS=Conus pennaceus OX=37335 PE=3 SV=1
+AZV,sp|Q9BPF9|CT54_CONTE Conotoxin TxMRCL-04 OS=Conus textile OX=6494 PE=3 SV=1
+AZW,sp|Q9BPG0|CT151_CONPE Conotoxin Pn-B0151 OS=Conus pennaceus OX=37335 PE=3 SV=1
+AZX,sp|Q9BPG1|CT53B_CONVE Conotoxin Vn5.3 OS=Conus ventricosus OX=117992 PE=3 SV=1
+AZY,sp|Q9BPG2|CT53A_CONVE Conotoxin Vn5.3 OS=Conus ventricosus OX=117992 PE=3 SV=1
+AZZ,sp|Q9BPG3|CT52_CONVE Conotoxin VnMRCL-011 OS=Conus ventricosus OX=117992 PE=3 SV=1
+BAA,sp|Q9BPG5|CT51_CONVE Conotoxin VnMRCL-012 OS=Conus ventricosus OX=117992 PE=3 SV=1
+BAB,sp|Q9BPG7|CT111_CONTE Conotoxin Tx-D0111 OS=Conus textile OX=6494 PE=1 SV=1
+BAC,sp|Q9BPG8|CT02_CONPE Conotoxin Pn-B02 OS=Conus pennaceus OX=37335 PE=3 SV=1
+BAD,sp|Q9BPH0|CT512_CONTE Conotoxin TxMRCL-D012 OS=Conus textile OX=6494 PE=3 SV=1
+BAE,sp|Q9BPH2|CT5M_CONPE Conotoxin PnMRCL-022 OS=Conus pennaceus OX=37335 PE=3 SV=1
+BAF,sp|Q9U644|O1631_CONTE Omega-conotoxin-like TxMKLT1-031 OS=Conus textile OX=6494 PE=2 SV=1
+BAG,sp|Q9U645|O16L_CONTE Omega-conotoxin-like TxMKLT1-0223 OS=Conus textile OX=6494 PE=2 SV=1
+BAH,sp|Q9U647|O194_CONTE Omega-conotoxin-like TeAr94 OS=Conus textile OX=6494 PE=2 SV=1
+BAI,sp|Q9U648|O16M_CONTE Omega-conotoxin-like TxMKLT1-0211 OS=Conus textile OX=6494 PE=2 SV=1
+BAJ,sp|Q9U650|O162_CONTE Omega-conotoxin-like TxMKLT1-0142 OS=Conus textile OX=6494 PE=2 SV=1
+BAK,sp|Q9U651|O161_CONTE Omega-conotoxin-like TxMKLT1-0141 OS=Conus textile OX=6494 PE=2 SV=1
+BAL,sp|Q9U654|O16K_CONTE Omega-conotoxin-like TxO5 OS=Conus textile OX=6494 PE=2 SV=1
+BAM,sp|Q9U656|O1613_CONTE Delta-conotoxin-like TxMKLT1-0111 OS=Conus textile OX=6494 PE=2 SV=1
+BAN,sp|Q9U657|O1614_CONPE Mu-conotoxin-like PnMKLT1-014 OS=Conus pennaceus OX=37335 PE=2 SV=1
+BAO,sp|Q9U6Z5|CT51_CONIM Conotoxin Im5.1 OS=Conus imperialis OX=35631 PE=3 SV=1
+BAP,sp|Q9U6Z8|CT52_CONGL Conotoxin Gm5.2 OS=Conus gloriamaris OX=37336 PE=3 SV=1
+BAQ,sp|Q9U6Z9|CT51_CONGL Conotoxin Gm5.1 OS=Conus gloriamaris OX=37336 PE=3 SV=1
+BAR,sp|Q9U700|CT51_CONTE Conotoxin Tx5.1 OS=Conus textile OX=6494 PE=1 SV=1
+BAS,sp|Q9XYZ0|O161A_CONPL Omega-conotoxin-like PuIA OS=Conus pulicarius OX=93154 PE=2 SV=1
+BAT,sp|Q9XYZ1|O162A_CONPL Omega-conotoxin-like PuIIA OS=Conus pulicarius OX=93154 PE=2 SV=1
+BAU,sp|Q9XZK3|O164_CONST Omega-conotoxin-like SO-4 OS=Conus striatus OX=6493 GN=SO4 PE=2 SV=1
+BAV,sp|Q9XZK4|O165_CONST Omega-conotoxin-like SO-5 OS=Conus striatus OX=6493 GN=SO5 PE=2 SV=1
+BAW,sp|Q9XZK7|CA2_CONTE Alpha-conotoxin-like Tx2 OS=Conus textile OX=6494 PE=3 SV=1
+BAX,sp|Q9XZK8|O1X1_CONTE Omega-conotoxin-like TxO1 OS=Conus textile OX=6494 PE=1 SV=1
+BAY,sp|Q9XZK9|O16O2_CONTE Omega-conotoxin-like TxO2 OS=Conus textile OX=6494 PE=1 SV=1
+BAZ,sp|Q9XZL0|O163_CONTE Omega-conotoxin-like TxO3 OS=Conus textile OX=6494 GN=TXO3 PE=2 SV=1
+BBA,sp|Q9XZL2|O165_CONTE Omega-conotoxin-like TxO5 OS=Conus textile OX=6494 GN=TXO5 PE=2 SV=1
+BBB,sp|Q9XZL3|O16O6_CONTE Omega-conotoxin-like TxO6 OS=Conus textile OX=6494 PE=1 SV=1
+BBC,sp|S4UKA9|I1B3_CONTE Conotoxin Tx11.3 OS=Conus textile OX=6494 PE=1 SV=1
+BBD,sp|X5IFZ1|CAI19_CONGE Conotoxin G1.9 OS=Conus geographus OX=6491 PE=3 SV=1
+BBE,sp|Q45RU8|C51_CONST Conotoxin S5.1 (Fragment) OS=Conus striatus OX=6493 PE=2 SV=1
