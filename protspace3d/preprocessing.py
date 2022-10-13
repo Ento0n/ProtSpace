@@ -38,7 +38,7 @@ def data_preprocessing(data_dir_path, basename, csv_separator, uid_col, html_col
             )
 
     df_csv = pd.read_csv(label_csv_p, sep=csv_separator, index_col=uid_col)
-    df_csv.fillna(' <NA> ', inplace=True)
+    df_csv.fillna(" <NA> ", inplace=True)
 
     # save index name for df.csv
     index_name = df_csv.index.name
@@ -99,16 +99,19 @@ def data_preprocessing(data_dir_path, basename, csv_separator, uid_col, html_col
     if html_cols is not None:
         # -1 indicates all columns to be saved
         if html_cols == [-1]:
-            for col in range(len(csv_header)):
-                fig = render(df=df_embeddings, selected_column=csv_header[col])
-                fig.write_html(data_dir_path / f"3Dspace_{csv_header[col]}.html")
+            for col in csv_header:
+                fig = render(df=df_embeddings, selected_column=col)
+                fig.write_html(data_dir_path / f"3Dspace_{col}.html")
 
         else:
-            # Given parameters existing columns?
-            if not all(x in list(range(len(csv_header))) for x in html_cols):
-                raise Exception("Given html column(s) not valid")
+            # Sort given column indexes
+            html_cols = sorted(html_cols)
 
+            # Given parameters existing columns?
             for col in html_cols:
+                if col not in range(len(csv_header)):
+                    raise Exception(f"Column no. {col} is not valid!")
+
                 fig = render(df=df_embeddings, selected_column=csv_header[col])
                 fig.write_html(data_dir_path / f"3Dspace_{csv_header[col]}.html")
 
