@@ -83,9 +83,11 @@ def main():
     # --- APP creation ---
     application = init_app(fig, csv_header)
 
-    return application
+    return application, html_cols
 
 
 if __name__ == "__main__":
-    app = main()
-    app.run_server(debug=True)
+    app, html = main()
+
+    if html is None:
+        app.run_server(debug=True)

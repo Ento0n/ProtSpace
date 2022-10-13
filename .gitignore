@@ -161,4 +161,4 @@ cython_debug/
 
 # Mac specific .DS_Store files
 .DS_Store
-data/DS_Store
+data/.DS_Store
