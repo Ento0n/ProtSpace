@@ -135,6 +135,9 @@ def create_df(
     # read embeddings from HDF5 format
     embeddings = get_embeddings(emb_h5file=emb_h5file, csv_uids=csv_uids)
 
+    # check for proteins in csv but not in h5 file
+    check_csv_uids(embeddings=embeddings, csv_uids=csv_uids)
+
     # matrix of values (protein-embeddings); n_proteins x embedding_dim
     uids, embs = zip(*embeddings.items())
     embs = np.vstack(embs)
@@ -195,14 +198,13 @@ def get_embeddings(emb_h5file: Path, csv_uids: list[str]) -> dict[str, np.ndarra
 
     # Check whether any UIDs matched with the embedding.keys
     if len(embeddings.keys()) == 0:
-        sys.exit("None of the Unique IDs of the h5 and the csv file matched.")
+        raise Exception("None of the Unique IDs of the h5 and the csv file matched.")
 
     print(f"Example: {next(iter(embeddings.keys()))}")
     print(f"Number of embeddings: {len(embeddings)}")
     if (nr_missed := len(missing)) > 0:
-        print(f"Lost {nr_missed} proteins due to ID-missmatch b/w CSV & FASTA")
-        if nr_missed >= 10:
-            print(", ".join(missing))
+        print(f"{nr_missed} protein(s) in h5 but not in csv file:")
+        print(", ".join(missing))
 
     return embeddings
 
@@ -265,6 +267,19 @@ def update_df(df_csv: DataFrame, pres_df_csv: DataFrame):
 
     # return updated df
     return pres_df_csv
+
+
+def check_csv_uids(embeddings: dict[str, np.ndarray], csv_uids: list[str]):
+    missing = list()
+
+    # iterate over csv uids
+    for uid in csv_uids:
+        if uid not in embeddings.keys():
+            missing.append(uid)
+
+    if (nr_missed := (len(missing))) > 0:
+        print(f"{nr_missed} protein(s) in csv but not in h5 file:")
+        print(", ".join(missing))
 
 
 @dash.callback(
