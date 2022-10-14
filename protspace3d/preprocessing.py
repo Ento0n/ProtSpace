@@ -25,17 +25,10 @@ df = pd.DataFrame()
 def data_preprocessing(data_dir_path, basename, csv_separator, uid_col, html_cols):
     # root directory that holds, proteins.fasta, embeddings.h5, labels.csv and some output_file.html
     root = Path(data_dir_path)
-    rep_seqs = root / f"{basename}.fasta"
     emb_h5file = root / f"{basename}.h5"
     label_csv_p = root / f"{basename}.csv"
 
-    # Check whether all files are present
-    files = [emb_h5file, label_csv_p]
-    for file in files:
-        if not file.is_file():
-            raise FileNotFoundError(
-                f"The {file} file is missing! Check data directory and basename."
-            )
+    check_files(emb_h5file, label_csv_p)
 
     df_csv = pd.read_csv(label_csv_p, sep=csv_separator, index_col=uid_col)
     df_csv.fillna(" <NA> ", inplace=True)
@@ -49,6 +42,65 @@ def data_preprocessing(data_dir_path, basename, csv_separator, uid_col, html_col
     )  # TODO: where else does this operation need to be performed?
     df_csv.index = csv_uids
 
+    df_embeddings, csv_header = read_df_csv(
+        root, uid_col, df_csv, emb_h5file, csv_uids, index_name
+    )
+
+    # save df_embeddings in global variable df
+    global df
+    df = df_embeddings
+
+    # generate initial figure
+    fig = render(df=df_embeddings, selected_column=csv_header[0])
+
+    return df_embeddings, fig, csv_header
+
+
+def check_files(emb_h5file: Path, label_csv_p: Path):
+    # Check whether all files are present
+    files = [emb_h5file, label_csv_p]
+    for file in files:
+        if not file.is_file():
+            raise FileNotFoundError(
+                f"The {file} file is missing! Check data directory and basename."
+            )
+
+
+def handle_html(
+    html_cols: list[int],
+    csv_header: list[str],
+    df_embeddings: DataFrame,
+    data_dir_path: Path,
+):
+    # save html figures if argument is set
+    if html_cols is not None:
+        # -1 indicates all columns to be saved
+        if html_cols == [-1]:
+            for col in csv_header:
+                fig = render(df=df_embeddings, selected_column=col)
+                fig.write_html(data_dir_path / f"3Dspace_{col}.html")
+
+        else:
+            # Sort given column indexes
+            html_cols = sorted(html_cols)
+
+            # Given parameters existing columns?
+            for col in html_cols:
+                if col not in range(len(csv_header)):
+                    raise Exception(f"Column no. {col} is not valid!")
+
+                fig = render(df=df_embeddings, selected_column=csv_header[col])
+                fig.write_html(data_dir_path / f"3Dspace_{csv_header[col]}.html")
+
+
+def read_df_csv(
+    root: Path,
+    uid_col: int,
+    df_csv: DataFrame,
+    emb_h5file: Path,
+    csv_uids: list[str],
+    index_name: str,
+):
     # load & read df.csv if present
     pres_df = root / "df.csv"
     if pres_df.is_file():
@@ -95,34 +147,7 @@ def data_preprocessing(data_dir_path, basename, csv_separator, uid_col, html_col
             root, emb_h5file, csv_uids, df_csv, index_name
         )
 
-    # save html figures if argument is set
-    if html_cols is not None:
-        # -1 indicates all columns to be saved
-        if html_cols == [-1]:
-            for col in csv_header:
-                fig = render(df=df_embeddings, selected_column=col)
-                fig.write_html(data_dir_path / f"3Dspace_{col}.html")
-
-        else:
-            # Sort given column indexes
-            html_cols = sorted(html_cols)
-
-            # Given parameters existing columns?
-            for col in html_cols:
-                if col not in range(len(csv_header)):
-                    raise Exception(f"Column no. {col} is not valid!")
-
-                fig = render(df=df_embeddings, selected_column=csv_header[col])
-                fig.write_html(data_dir_path / f"3Dspace_{csv_header[col]}.html")
-
-    # save df_embeddings in global variable df
-    global df
-    df = df_embeddings
-
-    # generate initial figure
-    fig = render(df=df_embeddings, selected_column=csv_header[0])
-
-    return df_embeddings, fig, csv_header
+    return df_embeddings, csv_header
 
 
 def create_df(
@@ -155,12 +180,6 @@ def create_df(
     # generate umap components and merge it to CSV DataFrame
     df_umap = generate_umap(embs)
     df_umap.index = uids
-
-    # # --- DUMMY data ---
-    # data = np.random.random((len(df_csv), 3))
-    # df_umap = pd.DataFrame(data=data, columns=AXIS_NAMES)
-    # df_umap.index = csv_uids
-    # # --- END ---
 
     df_embeddings = df_csv.join(df_umap, how="right")
     csv_header = [
