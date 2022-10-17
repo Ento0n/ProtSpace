@@ -36,12 +36,16 @@ class DataPreprocessor:
         self.html_cols = html_cols
 
     def data_preprocessing(self):
+        """
+        reads & processes the files
+        :return: dataframe wit collected information, graph & column headers
+        """
         # root directory that holds, proteins.fasta, embeddings.h5, labels.csv and some output_file.html
         root = Path(self.data_dir_path)
         emb_h5file = root / f"{self.basename}.h5"
         label_csv_p = root / f"{self.basename}.csv"
 
-        self.check_files(emb_h5file, label_csv_p)
+        self._check_files(emb_h5file, label_csv_p)
 
         df_csv = pd.read_csv(
             label_csv_p, sep=self.csv_separator, index_col=self.uid_col
@@ -52,16 +56,19 @@ class DataPreprocessor:
         index_name = df_csv.index.name
 
         # Unify notation of the UIDs
-        csv_uids = self.unify_seq_uids(df_csv.index)
+        csv_uids = self._unify_seq_uids(df_csv.index)
         df_csv.index = csv_uids
 
-        df_embeddings, csv_header = self.read_df_csv(
-            root, self.uid_col, df_csv, emb_h5file, csv_uids, index_name
+        df_embeddings, csv_header = self._read_df_csv(
+            root, df_csv, emb_h5file, csv_uids, index_name
         )
 
         # save df_embeddings in global variable df
         global df
         df = df_embeddings
+
+        # handle html saving
+        DataPreprocessor._handle_html(self.html_cols, csv_header, self.data_dir_path)
 
         # generate initial figure
         fig = Visualizator.render(df, selected_column=csv_header[0])
@@ -69,7 +76,12 @@ class DataPreprocessor:
         return df_embeddings, fig, csv_header
 
     @staticmethod
-    def check_files(emb_h5file: Path, label_csv_p: Path):
+    def _check_files(emb_h5file: Path, label_csv_p: Path):
+        """
+        Checks whether all files are present
+        :param emb_h5file: h5 file Path
+        :param label_csv_p: csv file Path
+        """
         # Check whether all files are present
         files = [emb_h5file, label_csv_p]
         for file in files:
@@ -79,11 +91,17 @@ class DataPreprocessor:
                 )
 
     @staticmethod
-    def handle_html(
+    def _handle_html(
         html_cols: list[int],
         csv_header: list[str],
         data_dir_path: Path,
     ):
+        """
+        Saves the html files as given by the --html_cols argument
+        :param html_cols: List of given columns
+        :param csv_header: List of dataframe headers
+        :param data_dir_path: Path to data directory
+        """
         # save html figures if argument is set
         if html_cols is not None:
             # -1 indicates all columns to be saved
@@ -96,6 +114,10 @@ class DataPreprocessor:
                 # Sort given column indexes
                 html_cols = sorted(html_cols)
 
+                # Edit input to required index numbers
+                for i, num in enumerate(html_cols):
+                    html_cols[i] = num - 1
+
                 # Given parameters existing columns?
                 for col in html_cols:
                     if col not in range(len(csv_header)):
@@ -104,32 +126,40 @@ class DataPreprocessor:
                     fig = Visualizator.render(df, selected_column=csv_header[col])
                     fig.write_html(data_dir_path / f"3Dspace_{csv_header[col]}.html")
 
-    def read_df_csv(
+    def _read_df_csv(
         self,
         root: Path,
-        uid_col: int,
         df_csv: DataFrame,
         emb_h5file: Path,
         csv_uids: list[str],
         index_name: str,
     ):
+        """
+        If present, read df.csv and check for completion
+        :param root: Path to data directory
+        :param df_csv: dataframe of given csv file
+        :param emb_h5file: Path to h5 file
+        :param csv_uids: unique IDs of the csv file
+        :param index_name: header of index row
+        :return: final dataframe and its column headers
+        """
         # load & read df.csv if present
         pres_df = root / "df.csv"
         if pres_df.is_file():
             print("Pre computed dataframe file df.csv is loaded.")
-            pres_df_csv = pd.read_csv(pres_df, index_col=uid_col)
+            pres_df_csv = pd.read_csv(pres_df, index_col=0)
 
             # Check whether no. of rows equals data
             if len(pres_df_csv) != len(df_csv):
                 print("# of rows doesn't match data!\nStart recalculation!")
-                df_embeddings, csv_header = self.create_df(
+                df_embeddings, csv_header = self._create_df(
                     root, emb_h5file, csv_uids, df_csv, index_name
                 )
             else:
                 # Check each column x, y & z for incompleteness
-                if not self.check_coordinates(pres_df_csv):
+                if not self._check_coordinates(pres_df_csv):
                     print("Start recalculation!")
-                    df_embeddings, csv_header = self.create_df(
+                    df_embeddings, csv_header = self._create_df(
                         root, emb_h5file, csv_uids, df_csv, index_name
                     )
                 # columns x, y & z are fine
@@ -141,7 +171,7 @@ class DataPreprocessor:
                         > 0
                     ):
                         print("New column(s) were found and will be added.")
-                        pres_df_csv = self.update_df(df_csv, pres_df_csv)
+                        pres_df_csv = self._update_df(df_csv, pres_df_csv)
 
                         # save the new obtained df
                         pres_df_csv.to_csv(root / "df.csv", index_label=index_name)
@@ -150,7 +180,7 @@ class DataPreprocessor:
                     csv_header = [
                         header
                         for header in pres_df_csv.columns
-                        if header not in self.AXIS_NAMES
+                        if header not in self.AXIS_NAMES or header is index_name
                     ]
 
                     # Unify df name
@@ -158,13 +188,13 @@ class DataPreprocessor:
 
         # create dataframe from files
         else:
-            df_embeddings, csv_header = self.create_df(
+            df_embeddings, csv_header = self._create_df(
                 root, emb_h5file, csv_uids, df_csv, index_name
             )
 
         return df_embeddings, csv_header
 
-    def create_df(
+    def _create_df(
         self,
         root: Path,
         emb_h5file: Path,
@@ -172,11 +202,20 @@ class DataPreprocessor:
         df_csv: DataFrame,
         index_name: str,
     ):
+        """
+        Use data and create corresponding dataframe
+        :param root: Path to data directory
+        :param emb_h5file: Path to h5 file
+        :param csv_uids: unique IDs of csv file
+        :param df_csv: dataframe of csv file
+        :param index_name: header of index column
+        :return: complete dataframe and list of its headers
+        """
         # read embeddings from HDF5 format
-        embeddings = self.get_embeddings(emb_h5file=emb_h5file, csv_uids=csv_uids)
+        embeddings = self._get_embeddings(emb_h5file=emb_h5file, csv_uids=csv_uids)
 
         # check for proteins in csv but not in h5 file
-        self.check_csv_uids(embeddings=embeddings, csv_uids=csv_uids)
+        self._check_csv_uids(embeddings=embeddings, csv_uids=csv_uids)
 
         # matrix of values (protein-embeddings); n_proteins x embedding_dim
         uids, embs = zip(*embeddings.items())
@@ -186,14 +225,14 @@ class DataPreprocessor:
         print(f"Shape of embeddings (num_proteins x embedding dim): {embs.shape}")
 
         # get pairwise distances; should be n_proteins x n_proteins
-        pairwise_dist = squareform(self.pairwise_distances(embs))
+        pairwise_dist = squareform(self._pairwise_distances(embs))
         print(
             "Shape of pairwise distance matrix (num_proteins x num_proteins):"
             f" {pairwise_dist.shape}"
         )
 
         # generate umap components and merge it to CSV DataFrame
-        df_umap = self.generate_umap(embs)
+        df_umap = self._generate_umap(embs)
         df_umap.index = uids
 
         df_embeddings = df_csv.join(df_umap, how="right")
@@ -207,12 +246,12 @@ class DataPreprocessor:
         return df_embeddings, csv_header
 
     @staticmethod
-    def get_embeddings(emb_h5file: Path, csv_uids: list[str]) -> dict[str, np.ndarray]:
+    def _get_embeddings(emb_h5file: Path, csv_uids: list[str]) -> dict[str, np.ndarray]:
         """load pre-computed embeddings in .h5 file format
 
         Args:
             emb_h5file (str): path to hdf5 file containing embeddings
-            csv_uids (list[str]): list of identifieres extracted from CSV file
+            csv_uids (list[str]): list of identifiers extracted from CSV file
 
         Returns:
             dict[str, np.ndarray]: dictionary with fasta headers as keys and a
@@ -245,14 +284,30 @@ class DataPreprocessor:
         return embeddings
 
     @staticmethod
-    def pairwise_distances(data, metric="euclidean"):
+    def _pairwise_distances(data, metric="euclidean"):
+        """
+        Calculate pairwise distance for given data
+        :param data: embedding data
+        :param metric: metric used for calculation
+        :return: calculated pairwise distance
+        """
         # usually euclidean or cosine distance worked best
         return pdist(data, metric=metric)
 
-    def unify_seq_uids(self, uids: list[str]) -> list[str]:
+    def _unify_seq_uids(self, uids: list[str]) -> list[str]:
+        """
+        Replaces all special characters with _
+        :param uids: unique IDs of the dataframe
+        :return: new list of unique IDs
+        """
         return list(map(lambda uid: self.NON_WORD_RE.sub("_", uid), uids))
 
-    def generate_umap(self, data: np.ndarray) -> pd.DataFrame:
+    def _generate_umap(self, data: np.ndarray) -> pd.DataFrame:
+        """
+        generated umap for given data
+        :param data: embeddings data
+        :return: dataframe of the umap coordinates
+        """
         # visualize high-dimensional embeddings with dimensionality reduction (here: umap)
         # Tutorial: https://umap-learn.readthedocs.io/en/latest/basic_usage.html
         # Parameters: https://umap-learn.readthedocs.io/en/latest/parameters.html
@@ -265,7 +320,12 @@ class DataPreprocessor:
         df_umap = DataFrame(data=umap_fit, columns=self.AXIS_NAMES)
         return df_umap
 
-    def check_coordinates(self, data_frame: DataFrame) -> bool:
+    def _check_coordinates(self, data_frame: DataFrame) -> bool:
+        """
+        Checks whether x, y & z column are present and complete in given dataframe
+        :param data_frame: given dataframe
+        :return: False if corrupted, True if not
+        """
         # Do the columns x, y and z exist?
         if not all(x in list(data_frame.columns) for x in self.AXIS_NAMES):
             print("Df corrupted as not x,y & z columns are present!")
@@ -282,7 +342,13 @@ class DataPreprocessor:
         # All values of the x,y & z column are correct
         return True
 
-    def update_df(self, df_csv: DataFrame, pres_df_csv: DataFrame):
+    def _update_df(self, df_csv: DataFrame, pres_df_csv: DataFrame):
+        """
+        new columns in data compared to present df.csv is added to df.csv
+        :param df_csv: dataframe of data
+        :param pres_df_csv: dataframe of df.csv
+        :return: updated dataframe of df.csv
+        """
         # extract column names
         df_cols = set(df_csv.columns)
         pres_df_cols = set(pres_df_csv.columns)
@@ -303,7 +369,12 @@ class DataPreprocessor:
         return pres_df_csv
 
     @staticmethod
-    def check_csv_uids(embeddings: dict[str, np.ndarray], csv_uids: list[str]):
+    def _check_csv_uids(embeddings: dict[str, np.ndarray], csv_uids: list[str]):
+        """
+        Check unique IDs in csv but not in h5 file
+        :param embeddings: data of the h5 file
+        :param csv_uids: unique IDs of the csv file
+        """
         missing = list()
 
         # iterate over csv uids
@@ -322,6 +393,11 @@ class DataPreprocessor:
         Input("dd_menu", "value"),
     )
     def store_data(value):
+        """
+        Stores df to be used in other callback
+        :param value: global value df
+        :return: df in dictionary form
+        """
         # Check whether an input is triggered
         ctx = dash.callback_context
         if not ctx.triggered:

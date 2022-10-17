@@ -19,6 +19,9 @@ class Parser:
         ) = self._parse_args()
 
     def get_params(self):
+        """
+        :return: class parameters
+        """
         return (
             self.data_dir_path,
             self.basename,
@@ -29,7 +32,8 @@ class Parser:
 
     @staticmethod
     def _parse_args():
-        """Creates and returns the ArgumentParser object
+        """
+        Creates and returns the ArgumentParser object
 
         Run example: python protspace3d/app.py -d data/ex1 -b VA --sep , --uid_col 0
         """
@@ -70,14 +74,14 @@ class Parser:
             required=False,
             type=int,
             default=0,
-            help="CSV column index containing the unique identifieres",
+            help="CSV column index containing the unique identifiers",
         )
         # Optional argument
         parser.add_argument(
             "--html_cols",
             required=False,
             type=int,
-            help="CSV column data to be saved as html",
+            help="CSV columns to be saved as html",
             nargs="+",
         )
 
@@ -92,6 +96,10 @@ class Parser:
 
 
 def main():
+    """
+    Handles the process of the application
+    :return: app & html_flag
+    """
     # Create Application object
     parser = Parser()
 
@@ -112,11 +120,14 @@ def main():
     # --- APP creation ---
     application = visualizator.init_app()
 
-    return application, html_cols
+    # html flag set or not
+    html_flag = True if html_cols is not None else False
+
+    return application, html_flag
 
 
 if __name__ == "__main__":
     app, html = main()
 
-    if html is None:
+    if not html:
         app.run_server(debug=True)

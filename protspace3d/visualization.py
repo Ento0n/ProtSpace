@@ -39,6 +39,10 @@ class Visualizator:
         self.csv_header = csv_header
 
     def init_app(self):
+        """
+        Initializes app & Builds html layout for Dash
+        :return: layout
+        """
         app = Dash(__name__)
 
         app.layout = html.Div(
@@ -66,6 +70,12 @@ class Visualizator:
     @staticmethod
     # https://github.com/sacdallago/bio_embeddings/blob/develop/bio_embeddings/visualize/plotly_plots.py
     def render(df: DataFrame, selected_column: str):
+        """
+        Renders the plotly graph with the selected column in the dataframe df
+        :param df: dataframe
+        :param selected_column: column of the dataframe
+        :return: plotly graphical object
+        """
         col_groups = df[selected_column].unique().tolist()
 
         df["class_index"] = np.ones(len(df)) * -100
@@ -102,7 +112,13 @@ class Visualizator:
         Input("store_data", "data"),
         Input("dd_menu", "value"),
     )
-    def update_graph(df: DataFrame, xaxis_column_name: str):
+    def update_graph(df: DataFrame, selected_value: str):
+        """
+        Renders new graph for selected drop down menu value
+        :param df: dataframe
+        :param selected_value: selected column of dropdown menu
+        :return: graph to be displayed
+        """
         # Check whether an input is triggered
         ctx = dash.callback_context
         if not ctx.triggered:
@@ -111,5 +127,5 @@ class Visualizator:
         # Convert records df form to origin
         df = DataFrame.from_records(df)
 
-        fig = Visualizator.render(df, selected_column=xaxis_column_name)
+        fig = Visualizator.render(df, selected_column=selected_value)
         return fig
