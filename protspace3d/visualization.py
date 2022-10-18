@@ -104,6 +104,7 @@ class Visualizator:
                 zaxis=dict(showticklabels=False, showspikes=False, title=""),
             ),
         )
+        fig.update_traces(hoverinfo="name", hoverlabel=dict(namelength=-1))
         return fig
 
     @staticmethod
