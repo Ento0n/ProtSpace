@@ -8,6 +8,7 @@ import dash
 from dash import Dash, dcc, html
 from dash import Input, Output
 from dash.exceptions import PreventUpdate
+import dash_bootstrap_components as dbc
 
 import plotly.graph_objects as go
 
@@ -38,30 +39,88 @@ class Visualizator:
         self.fig = fig
         self.csv_header = csv_header
 
+    @staticmethod
+    def header(app: Dash):
+        header = html.Div(
+            [
+                # ProtSpace text
+                html.Div(
+                    [html.H1(children="ProtSpace3D")],
+                    className="col-4",
+                ),
+                # Spacing between text and logo
+                html.Div([], className="col-4"),
+                html.Div(
+                    [
+                        html.Img(src=app.get_asset_url("logo.png")),
+                    ],
+                    className="col-4",
+                ),
+            ]
+        )
+
+        return header
+
     def init_app(self):
         """
         Initializes app & Builds html layout for Dash
         :return: layout
         """
-        app = Dash(__name__)
+        app = Dash(__name__, external_stylesheets=[dbc.themes.BOOTSTRAP])
 
-        app.layout = html.Div(
+        # app.layout = html.Div(
+        #    [
+        #        Visualizator.header(app),
+        #        dcc.Dropdown(
+        #            self.csv_header,
+        #            self.csv_header[0],
+        #            id="dd_menu",
+        #            searchable=False,
+        #            clearable=False,
+        #        ),
+        #        dcc.Graph(
+        #            id="graph",
+        #            figure=self.fig,
+        #            clear_on_unhover=True,
+        #            style=self.styles["pre"],
+        #        ),
+        #        dcc.Store(id="store_data", storage_type="memory"),
+        #    ]
+        # )
+
+        app.layout = dbc.Container(
             [
-                dcc.Markdown("""**3D scatter plot of embedding space.**"""),
-                dcc.Dropdown(
-                    self.csv_header,
-                    self.csv_header[0],
-                    id="dd_menu",
-                    searchable=False,
-                    clearable=False,
+                dbc.Row(
+                    [
+                        dbc.Col(html.H1("ProtSpace3D"), width=4),
+                        dbc.Col(width=4),
+                        dbc.Col(html.Img(src=app.get_asset_url("logo.png")), width=4),
+                    ]
                 ),
-                dcc.Graph(
-                    id="graph",
-                    figure=self.fig,
-                    clear_on_unhover=True,
-                    style=self.styles["pre"],
+                dbc.Row(
+                    [
+                        dbc.Col(
+                            [
+                                dcc.Dropdown(
+                                    self.csv_header,
+                                    self.csv_header[0],
+                                    id="dd_menu",
+                                    searchable=False,
+                                    clearable=False,
+                                ),
+                                dcc.Graph(
+                                    id="graph",
+                                    figure=self.fig,
+                                    clear_on_unhover=True,
+                                    # style=self.styles["pre"],
+                                    style={"width": "90%", "height": "90vh"},
+                                ),
+                                dcc.Store(id="store_data", storage_type="memory"),
+                            ],
+                            width=12,
+                        )
+                    ]
                 ),
-                dcc.Store(id="store_data", storage_type="memory"),
             ]
         )
 

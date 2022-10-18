@@ -226,6 +226,20 @@ scikit-learn = ">=0.20.1"
 scipy = "*"
 
 [[package]]
+name = "dash-bootstrap-components"
+version = "1.2.1"
+description = "Bootstrap themed components for use in Plotly Dash"
+category = "main"
+optional = false
+python-versions = ">=3.6, <4"
+
+[package.dependencies]
+dash = ">=2.0.0"
+
+[package.extras]
+pandas = ["numpy", "pandas"]
+
+[[package]]
 name = "dash-core-components"
 version = "2.0.0"
 description = "Core component suite for Dash"
@@ -1209,7 +1223,7 @@ testing = ["flake8 (<5)", "func-timeout", "jaraco.functools", "jaraco.itertools"
 [metadata]
 lock-version = "1.1"
 python-versions = "^3.9"
-content-hash = "036b887b4f99857928088bb029e8c36f5f3d57a9d1f6f18fb02d67da77670a76"
+content-hash = "72c953948f1cd47a8bd43ec4bfe3192a4af29d5f5b4d48e3565d3353d5b0155f"
 
 [metadata.files]
 ansi2html = [
@@ -1514,6 +1528,10 @@ dash = [
 ]
 dash-bio = [
     {file = "dash_bio-1.0.2.tar.gz", hash = "sha256:6de28e412a37aef19429579f3285c27a5d4f21d8f387564d0698d63466259a36"},
+]
+dash-bootstrap-components = [
+    {file = "dash-bootstrap-components-1.2.1.tar.gz", hash = "sha256:249b28d3240d64274e2cc18aee39a03e44c35e0920ec810e5ed4c1359272e063"},
+    {file = "dash_bootstrap_components-1.2.1-py3-none-any.whl", hash = "sha256:e52d94d2340e19bf35d7c89cbf4d95f30709ddc6e24d25cff4a5163ea7fd015b"},
 ]
 dash-core-components = [
     {file = "dash_core_components-2.0.0-py3-none-any.whl", hash = "sha256:52b8e8cce13b18d0802ee3acbc5e888cb1248a04968f962d63d070400af2e346"},
