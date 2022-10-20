@@ -25,16 +25,6 @@ class Visualizator:
         "diamond-open",
     ]
 
-    styles = {
-        "pre": {
-            "border": "thin lightgrey solid",
-            "overflowX": "scroll",
-            "overflowY": "scroll",
-            "width": "100%",
-            "height": "90vh",
-        }
-    }
-
     def __init__(self, fig: go.Figure, csv_header: list[str]):
         self.fig = fig
         self.csv_header = csv_header
@@ -50,9 +40,21 @@ class Visualizator:
             [
                 dbc.Row(
                     [
-                        dbc.Col(html.H1("ProtSpace3D"), width=4),
-                        dbc.Col(width=4),
-                        dbc.Col(html.Img(src=app.get_asset_url("logo.png")), width=4),
+                        dbc.Col(
+                            html.H1("ProtSpace3D", style={"color": "white"}),
+                            width=4,
+                            style={"background-color": "black"},
+                        ),
+                        dbc.Col(width=7, style={"background-color": "black"}),
+                        dbc.Col(
+                            html.Img(
+                                src=app.get_asset_url("logo.png"),
+                                alt="Rostlab-logo",
+                                style={"height": "60px", "width": "60px"},
+                            ),
+                            style={"background-color": "black"},
+                            width=1,
+                        ),
                     ]
                 ),
                 dbc.Row(
@@ -70,8 +72,10 @@ class Visualizator:
                                     id="graph",
                                     figure=self.fig,
                                     clear_on_unhover=True,
-                                    # style=self.styles["pre"],
-                                    style={"width": "90%", "height": "90vh"},
+                                    style={
+                                        "width": "90%",
+                                        "height": "90vh",
+                                    },
                                 ),
                                 dcc.Store(id="store_data", storage_type="memory"),
                             ],
@@ -79,7 +83,8 @@ class Visualizator:
                         )
                     ]
                 ),
-            ]
+            ],
+            no_gutters=True,
         )
 
         return app
