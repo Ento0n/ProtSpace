@@ -57,6 +57,8 @@ class Visualizator:
                         ),
                     ]
                 ),
+                # space between header and content below
+                dbc.Row([html.Br()]),
                 dbc.Row(
                     [
                         dbc.Col(
@@ -84,7 +86,7 @@ class Visualizator:
                     ]
                 ),
             ],
-            no_gutters=True,
+            fluid=True,
         )
 
         return app
