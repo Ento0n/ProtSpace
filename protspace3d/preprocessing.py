@@ -13,7 +13,39 @@ import dash
 from dash import Input, Output
 from dash.exceptions import PreventUpdate
 
+import dash_bio.utils.ngl_parser as ngl_parser
+
 from visualization import Visualizator
+
+
+class StructureContainer(object):
+    def __init__(self, pdb_d):
+        self.pdb_d = pdb_d
+        self.point_number = None
+        self.curve_number = None
+        self.public_seq_id = None
+
+    def __call__(self):
+        return self.public_seq_id
+
+    def set_focus_point(self, curve_number, point_number):
+        self.curve_number = curve_number
+        self.point_number = point_number
+        return None
+
+    def get_focus_point(self):
+        return self.curve_number, self.point_number
+
+    def get_structure_dir(self):
+        return self.pdb_d
+
+    def set_structure_ids(self, seq_ids):
+        if isinstance(seq_ids, list):
+            self.public_seq_id = [seq_id.replace(
+                ".", "_", 1) for seq_id in seq_ids]
+        else:
+            self.public_seq_id = [seq_ids.replace(".", "_", 1)]
+        return None
 
 
 class DataPreprocessor:
@@ -404,3 +436,35 @@ class DataPreprocessor:
             raise PreventUpdate
 
         return df.to_dict("records"), value
+
+    @staticmethod
+    @dash.callback(
+        Output("ngl_molecule_viewer", "data"),
+        Input("graph", "clickData"),
+    )
+    def display_molecule(clickdata):
+        """
+        callback function to handle the displaying of the molecule
+        :param clickdata: given data by clicking on a datapoint in the 3D plot
+        :return:
+        """
+
+        ctx = dash.callback_context
+        if not ctx.triggered:
+            raise PreventUpdate
+
+        # dict with data of clickdata
+        points = clickdata["points"][0]
+        # class_index value and it's index number
+        index_num = int(points["pointNumber"])
+        class_index = points["curveNumber"]
+
+        # extract df_row of selected protein
+        class_df = df[df["class_index"] == class_index]
+        df_row = class_df.iloc[index_num]
+        # add missing name to series
+        name = pd.Series(class_df.index[index_num])
+        name.index = ["Name"]
+        df_row = pd.concat([name, df_row])
+
+        print(df_row)

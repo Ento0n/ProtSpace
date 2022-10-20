@@ -100,14 +100,6 @@ class Visualizator:
         return app
 
     @staticmethod
-    @dash.callback(
-        Output("ngl_molecule_viewer", "data"),
-        Input("graph", "clickData"),
-    )
-    def display_molecule(clickdata):
-        print(clickdata)
-
-    @staticmethod
     # https://github.com/sacdallago/bio_embeddings/blob/develop/bio_embeddings/visualize/plotly_plots.py
     def render(df: DataFrame, selected_column: str):
         """
@@ -121,7 +113,9 @@ class Visualizator:
         df["class_index"] = np.ones(len(df)) * -100
 
         data = []
+        # iterate over different values of the selected column
         for group_idx, group_value in enumerate(col_groups):
+            # extract df with only group value
             df_group = df[df[selected_column] == group_value]
             trace = go.Scatter3d(
                 x=df_group["x"],
@@ -133,6 +127,7 @@ class Visualizator:
                 marker=dict(symbol=Visualizator.SYMBOLS[group_idx % 8]),
             )
             data.append(trace)
+            # Give the different group values a number
             df.loc[df[selected_column] == group_value, "class_index"] = group_idx
 
         fig = go.Figure(data=data)
