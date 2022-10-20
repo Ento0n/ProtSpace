@@ -10,6 +10,8 @@ from dash import Input, Output
 from dash.exceptions import PreventUpdate
 import dash_bootstrap_components as dbc
 
+import dash_bio as dashbio
+
 import plotly.graph_objects as go
 
 
@@ -38,6 +40,7 @@ class Visualizator:
 
         app.layout = dbc.Container(
             [
+                # Header
                 dbc.Row(
                     [
                         dbc.Col(
@@ -59,6 +62,7 @@ class Visualizator:
                 ),
                 # space between header and content below
                 dbc.Row([html.Br()]),
+                # graph and controls
                 dbc.Row(
                     [
                         dbc.Col(
@@ -81,8 +85,12 @@ class Visualizator:
                                 ),
                                 dcc.Store(id="store_data", storage_type="memory"),
                             ],
-                            width=12,
-                        )
+                            width=8,
+                        ),
+                        dbc.Col(
+                            [dashbio.NglMoleculeViewer(id="ngl_molecule_viewer")],
+                            width=4,
+                        ),
                     ]
                 ),
             ],
@@ -90,6 +98,14 @@ class Visualizator:
         )
 
         return app
+
+    @staticmethod
+    @dash.callback(
+        Output("ngl_molecule_viewer", "data"),
+        Input("graph", "clickData"),
+    )
+    def display_molecule(clickdata):
+        print(clickdata)
 
     @staticmethod
     # https://github.com/sacdallago/bio_embeddings/blob/develop/bio_embeddings/visualize/plotly_plots.py
