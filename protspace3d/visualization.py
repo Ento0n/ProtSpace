@@ -27,9 +27,10 @@ class Visualizator:
         "diamond-open",
     ]
 
-    def __init__(self, fig: go.Figure, csv_header: list[str]):
+    def __init__(self, fig: go.Figure, csv_header: list[str], df: DataFrame):
         self.fig = fig
         self.csv_header = csv_header
+        self.df = df
 
     def init_app(self):
         """

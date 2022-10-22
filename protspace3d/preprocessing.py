@@ -41,8 +41,7 @@ class StructureContainer(object):
 
     def set_structure_ids(self, seq_ids):
         if isinstance(seq_ids, list):
-            self.public_seq_id = [seq_id.replace(
-                ".", "_", 1) for seq_id in seq_ids]
+            self.public_seq_id = [seq_id.replace(".", "_", 1) for seq_id in seq_ids]
         else:
             self.public_seq_id = [seq_ids.replace(".", "_", 1)]
         return None
@@ -418,6 +417,14 @@ class DataPreprocessor:
             print(f"{nr_missed} protein(s) in csv but not in h5 file:")
             print(", ".join(missing))
 
+    def init_structure_container(self):
+        root = Path(self.data_dir_path)
+
+        structure_container = StructureContainer(root / "pdb")
+
+        global struct_container
+        struct_container = structure_container
+
     @staticmethod
     @dash.callback(
         Output("store_data", "data"),
@@ -459,12 +466,36 @@ class DataPreprocessor:
         index_num = int(points["pointNumber"])
         class_index = points["curveNumber"]
 
+        print(df)
+        print(points)
+
         # extract df_row of selected protein
         class_df = df[df["class_index"] == class_index]
+        print(f"class df: {class_df}")
+        print(f"type: {type(class_df)}")
+        print(f"index_num: {index_num}")
         df_row = class_df.iloc[index_num]
         # add missing name to series
         name = pd.Series(class_df.index[index_num])
         name.index = ["Name"]
         df_row = pd.concat([name, df_row])
 
-        print(df_row)
+        # extract sequence ID
+        seq_id = df_row["Name"]
+
+        # set structure container ID accordingly
+        struct_container.set_structure_ids(seq_id)
+
+        # path to .pdb file
+        struct_path = str(struct_container.get_structure_dir()) + "/"
+
+        # data format for molecule viewer
+        data_list = ngl_parser.get_data(
+            data_path=struct_path,
+            pdb_id=seq_id,
+            color="blue",
+            reset_view=True,
+            local=True,
+        )
+
+        return data_list

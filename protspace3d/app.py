@@ -16,6 +16,7 @@ class Parser:
             self.csv_sep,
             self.uid_col,
             self.html_cols,
+            self.pdb_flag,
         ) = self._parse_args()
 
     def get_params(self):
@@ -28,6 +29,7 @@ class Parser:
             self.csv_sep,
             self.uid_col,
             self.html_cols,
+            self.pdb_flag,
         )
 
     @staticmethod
@@ -84,6 +86,13 @@ class Parser:
             help="CSV columns to be saved as html",
             nargs="+",
         )
+        # Optional argument
+        parser.add_argument(
+            "--pdb",
+            required=False,
+            action="store_true",
+            help="PDB flag, if set 3D structures can be viewed.",
+        )
 
         args = parser.parse_args()
         data_dir_path = Path(args.data)
@@ -91,8 +100,9 @@ class Parser:
         csv_sep = args.sep
         uid_col = args.uid_col
         html_cols = args.html_cols
+        pdb_flag = args.pdb
 
-        return data_dir_path, basename, csv_sep, uid_col, html_cols
+        return data_dir_path, basename, csv_sep, uid_col, html_cols, pdb_flag
 
 
 def main():
@@ -104,7 +114,7 @@ def main():
     parser = Parser()
 
     # Parse arguments
-    data_dir_path, basename, csv_sep, uid_col, html_cols = parser.get_params()
+    data_dir_path, basename, csv_sep, uid_col, html_cols, pdb_flag = parser.get_params()
 
     # Create data preprocessor object
     data_preprocessor = DataPreprocessor(
@@ -114,8 +124,12 @@ def main():
     # Preprocessing
     df, fig, csv_header = data_preprocessor.data_preprocessing()
 
+    # initialize structure container if flag set
+    if pdb_flag:
+        data_preprocessor.init_structure_container()
+
     # Create visualization object
-    visualizator = Visualizator(fig, csv_header)
+    visualizator = Visualizator(fig, csv_header, df)
 
     # --- APP creation ---
     application = visualizator.init_app()
