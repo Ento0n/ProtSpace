@@ -142,27 +142,3 @@ class Visualizator:
         )
         fig.update_traces(hoverinfo="name", hoverlabel=dict(namelength=-1))
         return fig
-
-    @staticmethod
-    @dash.callback(
-        Output("graph", "figure"),
-        Input("store_data", "data"),
-        Input("dd_menu", "value"),
-    )
-    def update_graph(df: DataFrame, selected_value: str):
-        """
-        Renders new graph for selected drop down menu value
-        :param df: dataframe
-        :param selected_value: selected column of dropdown menu
-        :return: graph to be displayed
-        """
-        # Check whether an input is triggered
-        ctx = dash.callback_context
-        if not ctx.triggered:
-            raise PreventUpdate
-
-        # Convert records df form to origin
-        df = DataFrame.from_records(df)
-
-        fig = Visualizator.render(df, selected_column=selected_value)
-        return fig

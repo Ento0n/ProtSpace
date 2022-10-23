@@ -7,6 +7,15 @@ from pathlib import Path
 from preprocessing import DataPreprocessor
 from visualization import Visualizator
 
+from callbacks import get_callbacks
+
+from dash import Input, Output
+from dash.exceptions import PreventUpdate
+import dash
+from pandas import DataFrame
+import dash_bio.utils.ngl_parser as ngl_parser
+import pandas as pd
+
 
 class Parser:
     def __init__(self):
@@ -125,8 +134,9 @@ def main():
     df, fig, csv_header = data_preprocessor.data_preprocessing()
 
     # initialize structure container if flag set
+    struct_container = None
     if pdb_flag:
-        data_preprocessor.init_structure_container()
+        struct_container = data_preprocessor.init_structure_container()
 
     # Create visualization object
     visualizator = Visualizator(fig, csv_header, df)
@@ -137,11 +147,13 @@ def main():
     # html flag set or not
     html_flag = True if html_cols is not None else False
 
-    return application, html_flag
+    return application, html_flag, df, struct_container
 
 
 if __name__ == "__main__":
-    app, html = main()
+    app, html, df, struct_container = main()
+
+    get_callbacks(app, df, struct_container)
 
     if not html:
         app.run_server(debug=True)
