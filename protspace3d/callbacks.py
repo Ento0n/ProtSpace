@@ -1,16 +1,11 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 
-import argparse
-from pathlib import Path
-
-from preprocessing import DataPreprocessor
 from visualization import Visualizator
 
 from dash import Input, Output
 from dash.exceptions import PreventUpdate
 import dash
-from pandas import DataFrame
 import dash_bio.utils.ngl_parser as ngl_parser
 import pandas as pd
 
@@ -48,6 +43,8 @@ def get_callbacks(app, df, struct_container):
         ctx = dash.callback_context
         if not ctx.triggered:
             raise PreventUpdate
+
+        print(f"clickdata: {clickdata}")
 
         # dict with data of clickdata
         points = clickdata["points"][0]

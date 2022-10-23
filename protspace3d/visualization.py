@@ -4,10 +4,7 @@
 import numpy as np
 from pandas import DataFrame
 
-import dash
 from dash import Dash, dcc, html
-from dash import Input, Output
-from dash.exceptions import PreventUpdate
 import dash_bootstrap_components as dbc
 
 import dash_bio as dashbio

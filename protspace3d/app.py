@@ -9,13 +9,6 @@ from visualization import Visualizator
 
 from callbacks import get_callbacks
 
-from dash import Input, Output
-from dash.exceptions import PreventUpdate
-import dash
-from pandas import DataFrame
-import dash_bio.utils.ngl_parser as ngl_parser
-import pandas as pd
-
 
 class Parser:
     def __init__(self):
@@ -131,15 +124,15 @@ def main():
     )
 
     # Preprocessing
-    df, fig, csv_header = data_preprocessor.data_preprocessing()
+    data_f, fig, csv_header = data_preprocessor.data_preprocessing()
 
     # initialize structure container if flag set
-    struct_container = None
+    structure_container = None
     if pdb_flag:
-        struct_container = data_preprocessor.init_structure_container()
+        structure_container = data_preprocessor.init_structure_container()
 
     # Create visualization object
-    visualizator = Visualizator(fig, csv_header, df)
+    visualizator = Visualizator(fig, csv_header, data_f)
 
     # --- APP creation ---
     application = visualizator.init_app()
@@ -147,7 +140,7 @@ def main():
     # html flag set or not
     html_flag = True if html_cols is not None else False
 
-    return application, html_flag, df, struct_container
+    return application, html_flag, data_f, structure_container
 
 
 if __name__ == "__main__":

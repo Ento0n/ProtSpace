@@ -9,12 +9,6 @@ import pandas as pd
 import re
 from pandas import DataFrame
 
-import dash
-from dash import Input, Output
-from dash.exceptions import PreventUpdate
-
-import dash_bio.utils.ngl_parser as ngl_parser
-
 from visualization import Visualizator
 
 
@@ -94,15 +88,13 @@ class DataPreprocessor:
             root, df_csv, emb_h5file, csv_uids, index_name
         )
 
-        # save df_embeddings in global variable df
-        global df
-        df = df_embeddings
-
         # handle html saving
-        DataPreprocessor._handle_html(self.html_cols, csv_header, self.data_dir_path)
+        DataPreprocessor._handle_html(
+            self.html_cols, csv_header, self.data_dir_path, df=df_embeddings
+        )
 
         # generate initial figure
-        fig = Visualizator.render(df, selected_column=csv_header[0])
+        fig = Visualizator.render(df_embeddings, selected_column=csv_header[0])
 
         return df_embeddings, fig, csv_header
 
@@ -126,6 +118,7 @@ class DataPreprocessor:
         html_cols: list[int],
         csv_header: list[str],
         data_dir_path: Path,
+        df: DataFrame,
     ):
         """
         Saves the html files as given by the --html_cols argument
