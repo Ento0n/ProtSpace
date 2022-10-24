@@ -411,7 +411,7 @@ class DataPreprocessor:
             print(", ".join(missing))
 
     def init_structure_container(self):
-        root = Path(self.data_dir_path)
+        root = Path.cwd() / self.data_dir_path
 
         structure_container = StructureContainer(root / "pdb")
 

@@ -31,6 +31,7 @@ def get_callbacks(app, df, struct_container):
 
     @app.callback(
         Output("ngl_molecule_viewer", "data"),
+        Output("ngl_molecule_viewer", "molStyles"),
         Input("graph", "clickData"),
     )
     def display_molecule(clickdata):
@@ -40,11 +41,12 @@ def get_callbacks(app, df, struct_container):
         :return:
         """
 
+        if clickdata is None:
+            raise PreventUpdate
+
         ctx = dash.callback_context
         if not ctx.triggered:
             raise PreventUpdate
-
-        print(f"clickdata: {clickdata}")
 
         # dict with data of clickdata
         points = clickdata["points"][0]
@@ -52,14 +54,8 @@ def get_callbacks(app, df, struct_container):
         index_num = int(points["pointNumber"])
         class_index = points["curveNumber"]
 
-        print(df)
-        print(points)
-
         # extract df_row of selected protein
         class_df = df[df["class_index"] == class_index]
-        print(f"class df: {class_df}")
-        print(f"type: {type(class_df)}")
-        print(f"index_num: {index_num}")
         df_row = class_df.iloc[index_num]
         # add missing name to series
         name = pd.Series(class_df.index[index_num])
@@ -76,12 +72,23 @@ def get_callbacks(app, df, struct_container):
         struct_path = str(struct_container.get_structure_dir()) + "/"
 
         # data format for molecule viewer
-        data_list = ngl_parser.get_data(
-            data_path=struct_path,
-            pdb_id=seq_id,
-            color="blue",
-            reset_view=True,
-            local=True,
-        )
+        data_list = [
+            ngl_parser.get_data(
+                data_path=struct_path,
+                pdb_id=seq_id,
+                color="blue",
+                reset_view=True,
+                local=True,
+            )
+        ]
 
-        return data_list
+        print(data_list)
+
+        molstyles_dict = {
+            "representations": ["cartoon", "axes+box"],
+            "chosenAtomsColor": "white",
+            "chosenAtomsRadius": 1,
+            "molSpacingXaxis": 100,
+        }
+
+        return data_list, molstyles_dict

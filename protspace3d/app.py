@@ -146,7 +146,7 @@ def main():
 if __name__ == "__main__":
     app, html, df, struct_container = main()
 
-    get_callbacks(app, df, struct_container)
-
     if not html:
+        get_callbacks(app, df, struct_container)
+
         app.run_server(debug=True)

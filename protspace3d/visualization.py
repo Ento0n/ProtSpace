@@ -81,12 +81,13 @@ class Visualizator:
                                         "height": "90vh",
                                     },
                                 ),
-                                dcc.Store(id="store_data", storage_type="memory"),
                             ],
                             width=8,
                         ),
                         dbc.Col(
-                            [dashbio.NglMoleculeViewer(id="ngl_molecule_viewer")],
+                            [
+                                dashbio.NglMoleculeViewer(id="ngl_molecule_viewer"),
+                            ],
                             width=4,
                         ),
                     ]
