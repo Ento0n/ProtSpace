@@ -115,6 +115,7 @@ def unify_seq_uids(uids: list[str]) -> list[str]:
     return list(map(lambda uid: NON_WORD_RE.sub("_", uid), uids))
 
 
+<<<<<<< HEAD
 def generate_umap(data: np.ndarray) -> pd.DataFrame:
     # visualize high-dimensional embeddings with dimensionality reduction (here: umap)
     # Tutorial: https://umap-learn.readthedocs.io/en/latest/basic_usage.html
@@ -125,3 +126,66 @@ def generate_umap(data: np.ndarray) -> pd.DataFrame:
     umap_fit = fit.fit_transform(data)  # fit umap to our embeddings
     df_umap = DataFrame(data=umap_fit, columns=AXIS_NAMES)
     return df_umap
+=======
+        # Is the corresponding data complete ?
+        for col in self.AXIS_NAMES:
+            for value in list(data_frame[col]):
+                if not isinstance(value, float):
+                    # Value is corrupted
+                    print(f"At least one value of the {col} column is corrupted!")
+                    return False
+
+        # All values of the x,y & z column are correct
+        return True
+
+    def _update_df(self, df_csv: DataFrame, pres_df_csv: DataFrame):
+        """
+        new columns in data compared to present df.csv is added to df.csv
+        :param df_csv: dataframe of data
+        :param pres_df_csv: dataframe of df.csv
+        :return: updated dataframe of df.csv
+        """
+        # extract column names
+        df_cols = set(df_csv.columns)
+        pres_df_cols = set(pres_df_csv.columns)
+
+        # get missing columns in present df
+        missing_cols = df_cols - pres_df_cols
+
+        # add missing columns to the present df
+        for col in missing_cols:
+            pres_df_csv.insert(
+                len(pres_df_cols) - len(self.AXIS_NAMES), col, df_csv[col]
+            )
+            print(
+                f"Missing column {col} from the .csv file has been added to the present df.csv file."
+            )
+
+        # return updated df
+        return pres_df_csv
+
+    @staticmethod
+    def _check_csv_uids(embeddings: dict[str, np.ndarray], csv_uids: list[str]):
+        """
+        Check unique IDs in csv but not in h5 file
+        :param embeddings: data of the h5 file
+        :param csv_uids: unique IDs of the csv file
+        """
+        missing = list()
+
+        # iterate over csv uids
+        for uid in csv_uids:
+            if uid not in embeddings.keys():
+                missing.append(uid)
+
+        if (nr_missed := (len(missing))) > 0:
+            print(f"{nr_missed} protein(s) in csv but not in h5 file:")
+            print(", ".join(missing))
+
+    def init_structure_container(self):
+        root = Path.cwd() / self.data_dir_path
+
+        structure_container = StructureContainer(root / "pdb")
+
+        return structure_container
+>>>>>>> 3dd30fe (Working ngl molecule viewer)

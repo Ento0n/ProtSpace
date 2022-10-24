@@ -24,6 +24,7 @@ def render(df: pd.DataFrame, selected_column: str):
 
     df["class_index"] = np.ones(len(df)) * -100
 
+<<<<<<< HEAD
     data = []
     for group_idx, group_value in enumerate(col_groups):
         df_group = df[df[selected_column] == group_value]
@@ -36,6 +37,66 @@ def render(df: pd.DataFrame, selected_column: str):
             # TODO: figure something out to deal with the colors
             # 10 colors are available; once those are used, pick different symbol
             marker=dict(symbol=SYMBOLS[group_idx % 8]),
+=======
+        app.layout = dbc.Container(
+            [
+                # Header
+                dbc.Row(
+                    [
+                        dbc.Col(
+                            html.H1("ProtSpace3D", style={"color": "white"}),
+                            width=4,
+                            style={"background-color": "black"},
+                        ),
+                        dbc.Col(width=7, style={"background-color": "black"}),
+                        dbc.Col(
+                            html.Img(
+                                src=app.get_asset_url("logo.png"),
+                                alt="Rostlab-logo",
+                                style={"height": "60px", "width": "60px"},
+                            ),
+                            style={"background-color": "black"},
+                            width=1,
+                        ),
+                    ]
+                ),
+                # space between header and content below
+                dbc.Row([html.Br()]),
+                # graph and controls
+                dbc.Row(
+                    [
+                        dbc.Col(
+                            [
+                                dcc.Dropdown(
+                                    self.csv_header,
+                                    self.csv_header[0],
+                                    id="dd_menu",
+                                    searchable=False,
+                                    clearable=False,
+                                ),
+                                dcc.Graph(
+                                    id="graph",
+                                    figure=self.fig,
+                                    clear_on_unhover=True,
+                                    style={
+                                        "width": "90%",
+                                        "height": "90vh",
+                                    },
+                                ),
+                            ],
+                            width=8,
+                        ),
+                        dbc.Col(
+                            [
+                                dashbio.NglMoleculeViewer(id="ngl_molecule_viewer"),
+                            ],
+                            width=4,
+                        ),
+                    ]
+                ),
+            ],
+            fluid=True,
+>>>>>>> 3dd30fe (Working ngl molecule viewer)
         )
         data.append(trace)
         df.loc[df[selected_column] == group_value, "class_index"] = group_idx
