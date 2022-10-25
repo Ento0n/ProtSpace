@@ -43,7 +43,6 @@ class StructureContainer(object):
 
 class DataPreprocessor:
 
-    NON_WORD_RE = re.compile(r"\W")
     AXIS_NAMES = ["x", "y", "z"]
 
     def __init__(
@@ -80,9 +79,8 @@ class DataPreprocessor:
         # save index name for df.csv
         index_name = df_csv.index.name
 
-        # Unify notation of the UIDs
-        csv_uids = self._unify_seq_uids(df_csv.index)
-        df_csv.index = csv_uids
+        # get UIDs
+        csv_uids = df_csv.index
 
         df_embeddings, csv_header = self._read_df_csv(
             root, df_csv, emb_h5file, csv_uids, index_name
@@ -317,14 +315,6 @@ class DataPreprocessor:
         """
         # usually euclidean or cosine distance worked best
         return pdist(data, metric=metric)
-
-    def _unify_seq_uids(self, uids: list[str]) -> list[str]:
-        """
-        Replaces all special characters with _
-        :param uids: unique IDs of the dataframe
-        :return: new list of unique IDs
-        """
-        return list(map(lambda uid: self.NON_WORD_RE.sub("_", uid), uids))
 
     def _generate_umap(self, data: np.ndarray) -> pd.DataFrame:
         """
