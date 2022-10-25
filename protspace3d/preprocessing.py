@@ -48,7 +48,7 @@ class DataPreprocessor:
     def __init__(
         self,
         data_dir_path: Path,
-        basename: Path,
+        basename: str,
         csv_separator: str,
         uid_col: int,
         html_cols: list[int],
@@ -71,9 +71,21 @@ class DataPreprocessor:
 
         self._check_files(emb_h5file, label_csv_p)
 
-        df_csv = pd.read_csv(
-            label_csv_p, sep=self.csv_separator, index_col=self.uid_col
-        )
+        # processed by fasta_mapper.py?
+        if self.basename.endswith("_mapped"):
+            # UID col from fasta_mapper.py is always 0
+            df_csv = pd.read_csv(label_csv_p, sep=self.csv_separator, index_col=0)
+
+            # Extract original ID column
+            original_id_col = df_csv["original_id"].tolist()
+            df_csv.drop(columns=["original_id"], inplace=True)
+
+        else:
+            df_csv = pd.read_csv(
+                label_csv_p, sep=self.csv_separator, index_col=self.uid_col
+            )
+            original_id_col = df_csv.index.to_list()
+
         df_csv.fillna(" <NA> ", inplace=True)
 
         # save index name for df.csv

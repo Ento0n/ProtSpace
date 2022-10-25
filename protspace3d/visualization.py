@@ -187,6 +187,10 @@ class Visualizator:
                 name=group_value,
                 # 10 colors are available; once those are used, pick different symbol
                 marker=dict(symbol=Visualizator.SYMBOLS[group_idx % 8]),
+                text=df_group.index.to_list(),
+                # hoverinfo=["name", "text"],
+                # hoverlabel=dict(namelength=-1),
+                # texttemplate="ID: %{text}",
             )
             data.append(trace)
             # Give the different group values a number
@@ -201,5 +205,9 @@ class Visualizator:
                 zaxis=dict(showticklabels=False, showspikes=False, title=""),
             ),
         )
-        fig.update_traces(hoverinfo="name", hoverlabel=dict(namelength=-1))
+        fig.update_traces(
+            hoverinfo=["name", "text"],
+            hoverlabel=dict(namelength=-1),
+            hovertemplate="%{text}",
+        )
         return fig

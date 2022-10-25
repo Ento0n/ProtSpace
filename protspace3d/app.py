@@ -100,7 +100,7 @@ class Parser:
 
         args = parser.parse_args()
         data_dir_path = Path(args.data)
-        basename = Path(args.basename)
+        basename = args.basename
         csv_sep = args.sep
         uid_col = args.uid_col
         html_cols = args.html_cols
