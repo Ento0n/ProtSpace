@@ -29,7 +29,7 @@ class Visualizator:
         self.csv_header = csv_header
         self.df = df
 
-    def init_app(self):
+    def init_app_pdb(self):
         """
         Initializes app & Builds html layout for Dash
         :return: layout
@@ -89,6 +89,69 @@ class Visualizator:
                                 dashbio.NglMoleculeViewer(id="ngl_molecule_viewer"),
                             ],
                             width=4,
+                        ),
+                    ]
+                ),
+            ],
+            fluid=True,
+        )
+
+        return app
+
+    def init_app(self):
+        """
+        Initializes app & Builds html layout for Dash
+        :return: layout
+        """
+        app = Dash(__name__, external_stylesheets=[dbc.themes.BOOTSTRAP])
+
+        app.layout = dbc.Container(
+            [
+                # Header
+                dbc.Row(
+                    [
+                        dbc.Col(
+                            html.H1("ProtSpace3D", style={"color": "white"}),
+                            width=4,
+                            style={"background-color": "black"},
+                        ),
+                        dbc.Col(width=7, style={"background-color": "black"}),
+                        dbc.Col(
+                            html.Img(
+                                src=app.get_asset_url("logo.png"),
+                                alt="Rostlab-logo",
+                                style={"height": "60px", "width": "60px"},
+                            ),
+                            style={"background-color": "black"},
+                            width=1,
+                        ),
+                    ]
+                ),
+                # space between header and content below
+                dbc.Row([html.Br()]),
+                # graph and controls
+                dbc.Row(
+                    [
+                        dbc.Col(
+                            [
+                                dcc.Dropdown(
+                                    self.csv_header,
+                                    self.csv_header[0],
+                                    id="dd_menu",
+                                    searchable=False,
+                                    clearable=False,
+                                ),
+                                dcc.Graph(
+                                    id="graph",
+                                    figure=self.fig,
+                                    clear_on_unhover=True,
+                                    style={
+                                        "width": "90%",
+                                        "height": "90vh",
+                                    },
+                                ),
+                            ],
+                            width=12,
                         ),
                     ]
                 ),

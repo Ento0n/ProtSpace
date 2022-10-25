@@ -7,7 +7,7 @@ from pathlib import Path
 from preprocessing import DataPreprocessor
 from visualization import Visualizator
 
-from callbacks import get_callbacks
+from callbacks import get_callbacks, get_callbacks_pdb
 
 
 class Parser:
@@ -39,7 +39,9 @@ class Parser:
         """
         Creates and returns the ArgumentParser object
 
-        Run example: python protspace3d/app.py -d data/ex1 -b VA --sep , --uid_col 0
+        Run example:            python protspace3d/app.py -d data/ex1 -b VA --sep , --uid_col 0
+        Run example with pdb:   python protspace3d/app.py -b Conotoxins_try1_mapped -d data/ex3 --pdb
+
         """
 
         # Instantiate the parser
@@ -116,7 +118,7 @@ def main():
     parser = Parser()
 
     # Parse arguments
-    data_dir_path, basename, csv_sep, uid_col, html_cols, pdb_flag = parser.get_params()
+    data_dir_path, basename, csv_sep, uid_col, html_cols, pdb_bool = parser.get_params()
 
     # Create data preprocessor object
     data_preprocessor = DataPreprocessor(
@@ -128,25 +130,33 @@ def main():
 
     # initialize structure container if flag set
     structure_container = None
-    if pdb_flag:
+    if pdb_bool:
         structure_container = data_preprocessor.init_structure_container()
 
     # Create visualization object
     visualizator = Visualizator(fig, csv_header, data_f)
 
     # --- APP creation ---
-    application = visualizator.init_app()
+    if pdb_bool:
+        application = visualizator.init_app_pdb()
+    else:
+        application = visualizator.init_app()
 
     # html flag set or not
     html_flag = True if html_cols is not None else False
 
-    return application, html_flag, data_f, structure_container
+    return application, html_flag, data_f, structure_container, pdb_bool
 
 
 if __name__ == "__main__":
-    app, html, df, struct_container = main()
+    app, html, df, struct_container, pdb = main()
 
+    # don't start server if html is needed
     if not html:
-        get_callbacks(app, df, struct_container)
+        # different callbacks for different layout
+        if pdb:
+            get_callbacks_pdb(app, df, struct_container)
+        else:
+            get_callbacks(app, df)
 
         app.run_server(debug=True)

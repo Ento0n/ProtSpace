@@ -10,7 +10,7 @@ import dash_bio.utils.ngl_parser as ngl_parser
 import pandas as pd
 
 
-def get_callbacks(app, df, struct_container):
+def get_callbacks_pdb(app, df, struct_container):
     @app.callback(
         Output("graph", "figure"),
         Input("dd_menu", "value"),
@@ -82,8 +82,6 @@ def get_callbacks(app, df, struct_container):
             )
         ]
 
-        print(data_list)
-
         molstyles_dict = {
             "representations": ["cartoon", "axes+box"],
             "chosenAtomsColor": "white",
@@ -92,3 +90,23 @@ def get_callbacks(app, df, struct_container):
         }
 
         return data_list, molstyles_dict
+
+
+def get_callbacks(app, df):
+    @app.callback(
+        Output("graph", "figure"),
+        Input("dd_menu", "value"),
+    )
+    def update_graph(selected_value: str):
+        """
+        Renders new graph for selected drop down menu value
+        :param selected_value: selected column of dropdown menu
+        :return: graph to be displayed
+        """
+        # Check whether an input is triggered
+        ctx = dash.callback_context
+        if not ctx.triggered:
+            raise PreventUpdate
+
+        fig = Visualizator.render(df, selected_column=selected_value)
+        return fig
