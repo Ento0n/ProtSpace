@@ -74,7 +74,7 @@ class DataPreprocessor:
         original_id_col = None
         if self.basename.endswith("_mapped"):
             # UID col from fasta_mapper.py is always 0
-            df_csv = pd.read_csv(label_csv_p, sep=self.csv_separator, index_col=0)
+            df_csv = pd.read_csv(label_csv_p, index_col=0)
 
             # Extract original ID column
             original_id_col = df_csv["original_id"]
