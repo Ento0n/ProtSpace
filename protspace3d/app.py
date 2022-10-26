@@ -94,8 +94,8 @@ class Parser:
         parser.add_argument(
             "--pdb",
             required=False,
-            action="store_true",
-            help="PDB flag, if set 3D structures can be viewed.",
+            type=str,
+            help="Name of the directory in the data folder, that holds the .pdb files.",
         )
 
         args = parser.parse_args()
@@ -104,9 +104,9 @@ class Parser:
         csv_sep = args.sep
         uid_col = args.uid_col
         html_cols = args.html_cols
-        pdb_flag = args.pdb
+        pdb_d = args.pdb
 
-        return data_dir_path, basename, csv_sep, uid_col, html_cols, pdb_flag
+        return data_dir_path, basename, csv_sep, uid_col, html_cols, pdb_d
 
 
 def main():
@@ -118,7 +118,10 @@ def main():
     parser = Parser()
 
     # Parse arguments
-    data_dir_path, basename, csv_sep, uid_col, html_cols, pdb_bool = parser.get_params()
+    data_dir_path, basename, csv_sep, uid_col, html_cols, pdb_d = parser.get_params()
+
+    # pdb directory given or not
+    pdb_flag = True if pdb_d is not None else False
 
     # Create data preprocessor object
     data_preprocessor = DataPreprocessor(
@@ -130,22 +133,22 @@ def main():
 
     # initialize structure container if flag set
     structure_container = None
-    if pdb_bool:
-        structure_container = data_preprocessor.init_structure_container()
+    if pdb_flag:
+        structure_container = data_preprocessor.init_structure_container(pdb_d)
 
     # Create visualization object
     visualizator = Visualizator(fig, csv_header)
 
     # --- APP creation ---
-    if pdb_bool:
+    if pdb_flag:
         application = visualizator.init_app_pdb()
     else:
         application = visualizator.init_app()
 
-    # html flag set or not
+    # html cols set or not
     html_flag = True if html_cols is not None else False
 
-    return application, html_flag, data_f, structure_container, pdb_bool, old_index
+    return application, html_flag, data_f, structure_container, pdb_flag, old_index
 
 
 if __name__ == "__main__":

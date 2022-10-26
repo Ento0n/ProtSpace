@@ -419,9 +419,9 @@ class DataPreprocessor:
             print(f"{nr_missed} protein(s) in csv but not in h5 file:")
             print(", ".join(missing))
 
-    def init_structure_container(self):
+    def init_structure_container(self, pdb_d: str):
         root = Path.cwd() / self.data_dir_path
 
-        structure_container = StructureContainer(root / "pdb")
+        structure_container = StructureContainer(root / pdb_d)
 
         return structure_container

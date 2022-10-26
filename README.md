@@ -24,7 +24,7 @@ The script to be executed is processing.py with the arguments:
     ->  --sep       The character which seperates the columns in the .csv file (Character)
     ->  --uid_col   The column number which holds the unique ID, starting from 0 (Integer)
     ->  --html_cols If set, html file(s) of the selected column(s) is saved in data directory, starting from 1 ignoring the uid_col (Integer)
-    ->  --pdb       If set, a "pdb" directory with all the .pdb files of the proteins is needed for visualization
+    ->  --pdb       Name of the directory in the data directory, which holds the .pdb files for viewing the molecule (String)
 
 Example:
 
@@ -35,5 +35,5 @@ poetry run python app.py -d data/ex1 -b VA
 or with molecule visualization
 
 ```shell
-poetry run python protspace3d/app.py -b Conotoxins_try1_mapped -d data/ex3 --pdb
+poetry run python protspace3d/app.py -b Conotoxins_try1_mapped -d data/ex3 --pdb pdb
 ```
