@@ -10,7 +10,7 @@ import dash_bio.utils.ngl_parser as ngl_parser
 import pandas as pd
 
 
-def get_callbacks_pdb(app, df, struct_container):
+def get_callbacks_pdb(app, df, struct_container, old_index):
     @app.callback(
         Output("graph", "figure"),
         Input("dd_menu", "value"),
@@ -47,6 +47,9 @@ def get_callbacks_pdb(app, df, struct_container):
         ctx = dash.callback_context
         if not ctx.triggered:
             raise PreventUpdate
+
+        # replace index with old index
+        df.index = old_index
 
         # dict with data of clickdata
         points = clickdata["points"][0]

@@ -126,7 +126,7 @@ def main():
     )
 
     # Preprocessing
-    data_f, fig, csv_header = data_preprocessor.data_preprocessing()
+    data_f, fig, csv_header, old_index = data_preprocessor.data_preprocessing()
 
     # initialize structure container if flag set
     structure_container = None
@@ -145,17 +145,17 @@ def main():
     # html flag set or not
     html_flag = True if html_cols is not None else False
 
-    return application, html_flag, data_f, structure_container, pdb_bool
+    return application, html_flag, data_f, structure_container, pdb_bool, old_index
 
 
 if __name__ == "__main__":
-    app, html, df, struct_container, pdb = main()
+    app, html, df, struct_container, pdb, old_idx = main()
 
     # don't start server if html is needed
     if not html:
         # different callbacks for different layout
         if pdb:
-            get_callbacks_pdb(app, df, struct_container)
+            get_callbacks_pdb(app, df, struct_container, old_idx)
         else:
             get_callbacks(app, df)
 
