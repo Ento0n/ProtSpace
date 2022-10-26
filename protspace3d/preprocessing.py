@@ -6,7 +6,6 @@ import h5py
 from scipy.spatial.distance import pdist, squareform
 import numpy as np
 import pandas as pd
-import re
 from pandas import DataFrame
 
 from visualization import Visualizator
@@ -44,7 +43,6 @@ class StructureContainer(object):
 class DataPreprocessor:
 
     AXIS_NAMES = ["x", "y", "z"]
-    orid_header = "original_id"
 
     def __init__(
         self,
