@@ -44,6 +44,7 @@ class StructureContainer(object):
 class DataPreprocessor:
 
     AXIS_NAMES = ["x", "y", "z"]
+    orid_header = "original_id"
 
     def __init__(
         self,
@@ -72,19 +73,19 @@ class DataPreprocessor:
         self._check_files(emb_h5file, label_csv_p)
 
         # processed by fasta_mapper.py?
+        original_id_col = None
         if self.basename.endswith("_mapped"):
             # UID col from fasta_mapper.py is always 0
             df_csv = pd.read_csv(label_csv_p, sep=self.csv_separator, index_col=0)
 
             # Extract original ID column
-            original_id_col = df_csv["original_id"].tolist()
+            original_id_col = df_csv["original_id"]
             df_csv.drop(columns=["original_id"], inplace=True)
 
         else:
             df_csv = pd.read_csv(
                 label_csv_p, sep=self.csv_separator, index_col=self.uid_col
             )
-            original_id_col = df_csv.index.to_list()
 
         df_csv.fillna(" <NA> ", inplace=True)
 
@@ -102,6 +103,10 @@ class DataPreprocessor:
         DataPreprocessor._handle_html(
             self.html_cols, csv_header, self.data_dir_path, df=df_embeddings
         )
+
+        # Replace mapped index with original IDs
+        if self.basename.endswith("_mapped"):
+            df_embeddings.index = original_id_col
 
         # generate initial figure
         fig = Visualizator.render(df_embeddings, selected_column=csv_header[0])

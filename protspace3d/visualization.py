@@ -24,10 +24,9 @@ class Visualizator:
         "diamond-open",
     ]
 
-    def __init__(self, fig: go.Figure, csv_header: list[str], df: DataFrame):
+    def __init__(self, fig: go.Figure, csv_header: list[str]):
         self.fig = fig
         self.csv_header = csv_header
-        self.df = df
 
     def init_app_pdb(self):
         """
@@ -188,9 +187,6 @@ class Visualizator:
                 # 10 colors are available; once those are used, pick different symbol
                 marker=dict(symbol=Visualizator.SYMBOLS[group_idx % 8]),
                 text=df_group.index.to_list(),
-                # hoverinfo=["name", "text"],
-                # hoverlabel=dict(namelength=-1),
-                # texttemplate="ID: %{text}",
             )
             data.append(trace)
             # Give the different group values a number
