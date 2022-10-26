@@ -132,7 +132,7 @@ def main():
         structure_container = data_preprocessor.init_structure_container()
 
     # Create visualization object
-    visualizator = Visualizator(fig, csv_header, data_f)
+    visualizator = Visualizator(fig, csv_header)
 
     # --- APP creation ---
     application = visualizator.init_app()
