@@ -28,6 +28,35 @@ class Visualizator:
         self.fig = fig
         self.csv_header = csv_header
 
+    def get_header(self, app: Dash):
+        header = dbc.Row(
+            [
+                dbc.Col(
+                    html.H1("ProtSpace3D", style={"color": "white"}),
+                    width=4,
+                    style={"background-color": "black"},
+                ),
+                dbc.Col(width=7, style={"background-color": "black"}),
+                dbc.Col(
+                    html.A(
+                        [
+                            html.Img(
+                                src=app.get_asset_url("logo.png"),
+                                alt="Rostlab-logo",
+                                style={"height": "60px", "width": "60px"},
+                            ),
+                        ],
+                        href="https://rostlab.org/",
+                        target="_blank",
+                    ),
+                    style={"background-color": "black"},
+                    width=1,
+                ),
+            ]
+        )
+
+        return header
+
     def init_app_pdb(self):
         """
         Initializes app & Builds html layout for Dash
@@ -38,25 +67,7 @@ class Visualizator:
         app.layout = dbc.Container(
             [
                 # Header
-                dbc.Row(
-                    [
-                        dbc.Col(
-                            html.H1("ProtSpace3D", style={"color": "white"}),
-                            width=4,
-                            style={"background-color": "black"},
-                        ),
-                        dbc.Col(width=7, style={"background-color": "black"}),
-                        dbc.Col(
-                            html.Img(
-                                src=app.get_asset_url("logo.png"),
-                                alt="Rostlab-logo",
-                                style={"height": "60px", "width": "60px"},
-                            ),
-                            style={"background-color": "black"},
-                            width=1,
-                        ),
-                    ]
-                ),
+                self.get_header(app),
                 # space between header and content below
                 dbc.Row([html.Br()]),
                 # graph and controls
@@ -107,25 +118,7 @@ class Visualizator:
         app.layout = dbc.Container(
             [
                 # Header
-                dbc.Row(
-                    [
-                        dbc.Col(
-                            html.H1("ProtSpace3D", style={"color": "white"}),
-                            width=4,
-                            style={"background-color": "black"},
-                        ),
-                        dbc.Col(width=7, style={"background-color": "black"}),
-                        dbc.Col(
-                            html.Img(
-                                src=app.get_asset_url("logo.png"),
-                                alt="Rostlab-logo",
-                                style={"height": "60px", "width": "60px"},
-                            ),
-                            style={"background-color": "black"},
-                            width=1,
-                        ),
-                    ]
-                ),
+                self.get_header(app),
                 # space between header and content below
                 dbc.Row([html.Br()]),
                 # graph and controls
