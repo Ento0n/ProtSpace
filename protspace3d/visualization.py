@@ -186,6 +186,7 @@ class Visualizator:
             df.loc[df[selected_column] == group_value, "class_index"] = group_idx
 
         fig = go.Figure(data=data)
+
         fig.update_layout(
             # Remove axes ticks and labels as they are usually not informative
             scene=dict(
@@ -194,9 +195,15 @@ class Visualizator:
                 zaxis=dict(showticklabels=False, showspikes=False, title=""),
             ),
         )
+
+        # Set hoverinfo
         fig.update_traces(
             hoverinfo=["name", "text"],
             hoverlabel=dict(namelength=-1),
             hovertemplate="%{text}",
         )
+
+        # Set legend in right upper corner of the plot
+        fig.update_layout(legend=dict(yanchor="top", y=0.99, xanchor="right", x=0.99))
+
         return fig
