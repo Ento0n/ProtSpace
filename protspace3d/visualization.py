@@ -24,11 +24,22 @@ class Visualizator:
         "diamond-open",
     ]
 
+    representation_options = [
+        {"label": "backbone", "value": "backbone"},
+        {"label": "ball+stick", "value": "ball+stick"},
+        {"label": "cartoon", "value": "cartoon"},
+        {"label": "hyperball", "value": "hyperball"},
+        {"label": "licorice", "value": "licorice"},
+        {"label": "axes+box", "value": "axes+box"},
+        {"label": "helixorient", "value": "helixorient"},
+    ]
+
     def __init__(self, fig: go.Figure, csv_header: list[str]):
         self.fig = fig
         self.csv_header = csv_header
 
-    def get_header(self, app: Dash):
+    @staticmethod
+    def get_header(app: Dash):
         header = dbc.Row(
             [
                 dbc.Col(
@@ -87,7 +98,7 @@ class Visualizator:
                                     figure=self.fig,
                                     clear_on_unhover=True,
                                     style={
-                                        "width": "90%",
+                                        "width": "110%",
                                         "height": "90vh",
                                     },
                                 ),
@@ -96,6 +107,12 @@ class Visualizator:
                         ),
                         dbc.Col(
                             [
+                                dcc.Dropdown(
+                                    id="representation_dropdown",
+                                    options=self.representation_options,
+                                    multi=True,
+                                    value=["cartoon"],
+                                ),
                                 dashbio.NglMoleculeViewer(id="ngl_molecule_viewer"),
                             ],
                             width=4,

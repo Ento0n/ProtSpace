@@ -31,7 +31,6 @@ def get_callbacks_pdb(app, df, struct_container, old_index):
 
     @app.callback(
         Output("ngl_molecule_viewer", "data"),
-        Output("ngl_molecule_viewer", "molStyles"),
         Input("graph", "clickData"),
     )
     def display_molecule(clickdata):
@@ -85,14 +84,21 @@ def get_callbacks_pdb(app, df, struct_container, old_index):
             )
         ]
 
+        return data_list
+
+    @app.callback(
+        Output("ngl_molecule_viewer", "molStyles"),
+        Input("representation_dropdown", "value"),
+    )
+    def set_mol_style(selected_representation):
         molstyles_dict = {
-            "representations": ["cartoon", "axes+box"],
+            "representations": selected_representation,
             "chosenAtomsColor": "white",
             "chosenAtomsRadius": 1,
             "molSpacingXaxis": 100,
         }
 
-        return data_list, molstyles_dict
+        return molstyles_dict
 
 
 def get_callbacks(app, df):
