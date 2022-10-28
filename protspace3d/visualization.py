@@ -68,7 +68,7 @@ class Visualizator:
 
         return header
 
-    def init_app_pdb(self):
+    def init_app_pdb(self, original_id_col: list):
         """
         Initializes app & Builds html layout for Dash
         :return: layout
@@ -112,6 +112,11 @@ class Visualizator:
                                     options=self.representation_options,
                                     multi=True,
                                     value=["cartoon"],
+                                ),
+                                dcc.Dropdown(
+                                    id="molecules_dropdown",
+                                    options=original_id_col,
+                                    multi=True,
                                 ),
                                 dashbio.NglMoleculeViewer(id="ngl_molecule_viewer"),
                             ],

@@ -103,15 +103,15 @@ class DataPreprocessor:
         )
 
         # Replace mapped index with original IDs
-        old_index = None
+        mapped_index = None
         if self.basename.endswith("_mapped"):
-            old_index = df_embeddings.index
+            mapped_index = df_embeddings.index
             df_embeddings.index = original_id_col
 
         # generate initial figure
         fig = Visualizator.render(df_embeddings, selected_column=csv_header[0])
 
-        return df_embeddings, fig, csv_header, old_index
+        return df_embeddings, fig, csv_header, mapped_index, original_id_col.to_list()
 
     @staticmethod
     def _check_files(emb_h5file: Path, label_csv_p: Path):

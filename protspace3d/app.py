@@ -129,7 +129,13 @@ def main():
     )
 
     # Preprocessing
-    data_f, fig, csv_header, old_index = data_preprocessor.data_preprocessing()
+    (
+        data_f,
+        fig,
+        csv_header,
+        mapped_index,
+        original_id_col,
+    ) = data_preprocessor.data_preprocessing()
 
     # initialize structure container if flag set
     structure_container = None
@@ -141,24 +147,24 @@ def main():
 
     # --- APP creation ---
     if pdb_flag:
-        application = visualizator.init_app_pdb()
+        application = visualizator.init_app_pdb(original_id_col)
     else:
         application = visualizator.init_app()
 
     # html cols set or not
     html_flag = True if html_cols is not None else False
 
-    return application, html_flag, data_f, structure_container, pdb_flag, old_index
+    return application, html_flag, data_f, structure_container, pdb_flag, mapped_index
 
 
 if __name__ == "__main__":
-    app, html, df, struct_container, pdb, old_idx = main()
+    app, html, df, struct_container, pdb, mapped_idx = main()
 
     # don't start server if html is needed
     if not html:
         # different callbacks for different layout
         if pdb:
-            get_callbacks_pdb(app, df, struct_container, old_idx)
+            get_callbacks_pdb(app, df, struct_container, mapped_idx)
         else:
             get_callbacks(app, df)
 
