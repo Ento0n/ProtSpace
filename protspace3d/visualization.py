@@ -177,13 +177,18 @@ class Visualizator:
 
     @staticmethod
     # https://github.com/sacdallago/bio_embeddings/blob/develop/bio_embeddings/visualize/plotly_plots.py
-    def render(df: DataFrame, selected_column: str):
+    def render(df: DataFrame, selected_column: str, original_id_col: list):
         """
         Renders the plotly graph with the selected column in the dataframe df
         :param df: dataframe
         :param selected_column: column of the dataframe
         :return: plotly graphical object
         """
+
+        # swap index
+        mapped_index = df.index
+        df.index = original_id_col
+
         col_groups = df[selected_column].unique().tolist()
 
         df["class_index"] = np.ones(len(df)) * -100
@@ -227,5 +232,8 @@ class Visualizator:
 
         # Set legend in right upper corner of the plot
         fig.update_layout(legend=dict(yanchor="top", y=0.99, xanchor="right", x=0.99))
+
+        # swap index again
+        df.index = mapped_index
 
         return fig

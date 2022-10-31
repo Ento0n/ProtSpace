@@ -77,7 +77,7 @@ class DataPreprocessor:
             df_csv = pd.read_csv(label_csv_p, index_col=0)
 
             # Extract original ID column
-            original_id_col = df_csv["original_id"]
+            original_id_col = df_csv["original_id"].to_list()
             df_csv.drop(columns=["original_id"], inplace=True)
 
         else:
@@ -85,6 +85,7 @@ class DataPreprocessor:
                 label_csv_p, sep=self.csv_separator, index_col=self.uid_col
             )
 
+        # replace empty values with NA
         df_csv.fillna(" <NA> ", inplace=True)
 
         # save index name for df.csv
@@ -102,16 +103,14 @@ class DataPreprocessor:
             self.html_cols, csv_header, self.data_dir_path, df=df_embeddings
         )
 
-        # Replace mapped index with original IDs
-        mapped_index = None
-        if self.basename.endswith("_mapped"):
-            mapped_index = df_embeddings.index
-            df_embeddings.index = original_id_col
-
         # generate initial figure
-        fig = Visualizator.render(df_embeddings, selected_column=csv_header[0])
+        fig = Visualizator.render(
+            df_embeddings,
+            selected_column=csv_header[0],
+            original_id_col=original_id_col,
+        )
 
-        return df_embeddings, fig, csv_header, mapped_index, original_id_col.to_list()
+        return df_embeddings, fig, csv_header, original_id_col
 
     @staticmethod
     def _check_files(emb_h5file: Path, label_csv_p: Path):

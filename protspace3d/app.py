@@ -133,7 +133,6 @@ def main():
         data_f,
         fig,
         csv_header,
-        mapped_index,
         original_id_col,
     ) = data_preprocessor.data_preprocessing()
 
@@ -160,19 +159,18 @@ def main():
         data_f,
         structure_container,
         pdb_flag,
-        mapped_index,
         original_id_col,
     )
 
 
 if __name__ == "__main__":
-    app, html, df, struct_container, pdb, mapped_idx, orig_id_col = main()
+    app, html, df, struct_container, pdb, orig_id_col = main()
 
     # don't start server if html is needed
     if not html:
         # different callbacks for different layout
         if pdb:
-            get_callbacks_pdb(app, df, struct_container, mapped_idx, orig_id_col)
+            get_callbacks_pdb(app, df, struct_container, orig_id_col)
         else:
             get_callbacks(app, df)
 
