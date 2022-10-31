@@ -154,17 +154,25 @@ def main():
     # html cols set or not
     html_flag = True if html_cols is not None else False
 
-    return application, html_flag, data_f, structure_container, pdb_flag, mapped_index
+    return (
+        application,
+        html_flag,
+        data_f,
+        structure_container,
+        pdb_flag,
+        mapped_index,
+        original_id_col,
+    )
 
 
 if __name__ == "__main__":
-    app, html, df, struct_container, pdb, mapped_idx = main()
+    app, html, df, struct_container, pdb, mapped_idx, orig_id_col = main()
 
     # don't start server if html is needed
     if not html:
         # different callbacks for different layout
         if pdb:
-            get_callbacks_pdb(app, df, struct_container, mapped_idx)
+            get_callbacks_pdb(app, df, struct_container, mapped_idx, orig_id_col)
         else:
             get_callbacks(app, df)
 

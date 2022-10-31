@@ -10,7 +10,7 @@ import dash_bio.utils.ngl_parser as ngl_parser
 import pandas as pd
 
 
-def get_callbacks_pdb(app, df, struct_container, mapped_index):
+def get_callbacks_pdb(app, df, struct_container, mapped_index, original_id_col):
     @app.callback(
         Output("graph", "figure"),
         Input("dd_menu", "value"),
@@ -31,6 +31,7 @@ def get_callbacks_pdb(app, df, struct_container, mapped_index):
 
     @app.callback(
         Output("ngl_molecule_viewer", "data"),
+        Output("molecules_dropdown", "value"),
         Input("graph", "clickData"),
     )
     def display_molecule(clickdata):
@@ -47,7 +48,7 @@ def get_callbacks_pdb(app, df, struct_container, mapped_index):
         if not ctx.triggered:
             raise PreventUpdate
 
-        # replace index with old index
+        # replace index with mapped index
         df.index = mapped_index
 
         # dict with data of clickdata
@@ -84,7 +85,11 @@ def get_callbacks_pdb(app, df, struct_container, mapped_index):
             )
         ]
 
-        return data_list
+        # get original ID of mapped ID
+        index_num = df.index.get_indexer_for([seq_id])[0]
+        original_id = original_id_col[index_num]
+
+        return data_list, original_id
 
     @app.callback(
         Output("ngl_molecule_viewer", "molStyles"),
