@@ -75,9 +75,6 @@ def get_callbacks_pdb(app, df, struct_container, original_id_col):
         if not ctx.triggered or dd_molecules == []:
             raise PreventUpdate
 
-        print(f"selected molecules: {dd_molecules}")
-        print(df)
-
         # convert original to mapped IDs
         seq_ids = list()
         if dd_molecules is not None:

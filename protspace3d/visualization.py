@@ -103,7 +103,7 @@ class Visualizator:
                                     },
                                 ),
                             ],
-                            width=8,
+                            width=6,
                         ),
                         dbc.Col(
                             [
@@ -120,7 +120,7 @@ class Visualizator:
                                 ),
                                 dashbio.NglMoleculeViewer(id="ngl_molecule_viewer"),
                             ],
-                            width=4,
+                            width=6,
                         ),
                     ]
                 ),
