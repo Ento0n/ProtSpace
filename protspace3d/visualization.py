@@ -80,7 +80,16 @@ class Visualizator:
                 # Header
                 self.get_header(app),
                 # space between header and content below
-                dbc.Row([html.Br()]),
+                dbc.Row(
+                    [
+                        dbc.Col(
+                            html.Br(),
+                            width=6,
+                            style={"border-right": "solid black 1px"},
+                        ),
+                        dbc.Col(html.Br(), width=6),
+                    ]
+                ),
                 # graph and controls
                 dbc.Row(
                     [
@@ -105,6 +114,7 @@ class Visualizator:
                                 ),
                             ],
                             width=6,
+                            style={"border-right": "solid black 1px"},
                         ),
                         dbc.Col(
                             [
@@ -123,6 +133,30 @@ class Visualizator:
                                     multi=True,
                                 ),
                                 dashbio.NglMoleculeViewer(id="ngl_molecule_viewer"),
+                                dbc.Row(
+                                    [
+                                        dbc.Col(
+                                            [
+                                                dcc.Markdown("Start"),
+                                                dcc.Dropdown(id="range_start"),
+                                            ]
+                                        ),
+                                        dbc.Col(
+                                            [
+                                                dcc.Markdown("End:"),
+                                                dcc.Dropdown(id="range_end"),
+                                            ]
+                                        ),
+                                        dbc.Col(
+                                            [
+                                                dcc.Markdown("Highlighted atoms:"),
+                                                dcc.Dropdown(
+                                                    id="selected_atoms", multi=True
+                                                ),
+                                            ]
+                                        ),
+                                    ]
+                                ),
                             ],
                             width=6,
                         ),
@@ -235,7 +269,7 @@ class Visualizator:
         )
 
         # Set legend in right upper corner of the plot
-        fig.update_layout(legend=dict(yanchor="top", y=0.99, xanchor="right", x=0.99))
+        fig.update_layout(legend=dict(yanchor="top", y=0.97, xanchor="right", x=0.99))
 
         # change margins of the graph
         fig.update_layout(margin=dict(l=1, r=1, t=1, b=1))
