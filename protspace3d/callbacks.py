@@ -65,11 +65,9 @@ def get_callbacks_pdb(app, df, struct_container, original_id_col):
         """
         callback function to handle the displaying of the molecule
         :param clickdata: given data by clicking on a datapoint in the 3D plot
+        :param dd_molecules: selected molecules in the dropdown menu
         :return:
         """
-
-        if clickdata is None:
-            raise PreventUpdate
 
         ctx = dash.callback_context
         if not ctx.triggered or dd_molecules == []:

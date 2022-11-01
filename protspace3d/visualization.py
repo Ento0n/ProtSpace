@@ -98,21 +98,25 @@ class Visualizator:
                                     figure=self.fig,
                                     clear_on_unhover=True,
                                     style={
-                                        "width": "110%",
+                                        "width": "100%",
                                         "height": "90vh",
                                     },
+                                    responsive=True,
                                 ),
                             ],
                             width=6,
                         ),
                         dbc.Col(
                             [
+                                dcc.Markdown("Representations:"),
                                 dcc.Dropdown(
                                     id="representation_dropdown",
                                     options=self.representation_options,
                                     multi=True,
                                     value=["cartoon"],
                                 ),
+                                html.Br(),
+                                dcc.Markdown("Molecules:"),
                                 dcc.Dropdown(
                                     id="molecules_dropdown",
                                     options=original_id_col,
@@ -232,6 +236,9 @@ class Visualizator:
 
         # Set legend in right upper corner of the plot
         fig.update_layout(legend=dict(yanchor="top", y=0.99, xanchor="right", x=0.99))
+
+        # change margins of the graph
+        fig.update_layout(margin=dict(l=1, r=1, t=1, b=1))
 
         # swap index again
         df.index = mapped_index
