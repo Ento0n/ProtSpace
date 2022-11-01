@@ -39,6 +39,23 @@ class StructureContainer(object):
             self.public_seq_id = [seq_ids.replace(".", "_", 1)]
         return None
 
+    def get_range(self, id: str):
+        # add .pdb file type to ID
+        id = id + ".pdb"
+
+        range = set()
+        with open(self.pdb_d / id, "r") as f:
+            lines = f.readlines()
+
+            for line in lines:
+                if line.startswith("ATOM"):
+                    pieces = line.split(" ")
+                    print(pieces)
+
+                    range.add(pieces[12])
+
+        return list(range)
+
 
 class DataPreprocessor:
 

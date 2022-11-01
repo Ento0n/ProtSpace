@@ -58,6 +58,12 @@ def get_callbacks_pdb(app, df, struct_container, original_id_col):
     @app.callback(
         Output("ngl_molecule_viewer", "data"),
         Output("molecules_dropdown", "value"),
+        Output("range_start", "disabled"),
+        Output("range_end", "disabled"),
+        Output("selected_atoms", "disabled"),
+        Output("range_start", "options"),
+        Output("range_end", "options"),
+        Output("selected_atoms", "options"),
         Input("graph", "clickData"),
         Input("molecules_dropdown", "value"),
     )
@@ -115,10 +121,34 @@ def get_callbacks_pdb(app, df, struct_container, original_id_col):
             for seq_id in seq_ids
         ]
 
+        # disable range and highlighting selection in case more than 1 atom is selected
+        start_disabled = False
+        end_disabled = False
+        atoms_disabled = False
+
+        range = list()
+        if len(seq_ids) > 1:
+            start_disabled = True
+            end_disabled = True
+            atoms_disabled = True
+
+        # only one molecule selected
+        else:
+            range = struct_container.get_range(seq_ids[0])
+
         # back to original IDs
         seq_ids = to_original_id(seq_ids, original_id_col, df)
 
-        return data_list, seq_ids
+        return (
+            data_list,
+            seq_ids,
+            start_disabled,
+            end_disabled,
+            atoms_disabled,
+            range,
+            range,
+            range,
+        )
 
     @app.callback(
         Output("ngl_molecule_viewer", "molStyles"),
