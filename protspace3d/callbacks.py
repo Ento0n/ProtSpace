@@ -67,8 +67,11 @@ def get_callbacks_pdb(app, df, struct_container, original_id_col):
         Input("graph", "clickData"),
         Input("molecules_dropdown", "value"),
         Input("range_start", "value"),
+        Input("range_end", "value"),
     )
-    def display_molecule(clickdata, dd_molecules: list, range_start):
+    def display_molecule(
+        clickdata, dd_molecules: list, range_start: list, range_end: list
+    ):
         """
         callback function to handle the displaying of the molecule
         :param clickdata: given data by clicking on a datapoint in the 3D plot
@@ -127,7 +130,10 @@ def get_callbacks_pdb(app, df, struct_container, original_id_col):
         end_disabled = False
         atoms_disabled = False
 
-        range = list()
+        range_for_start = list()
+        range_for_end = list()
+        selectable_atoms = list()
+
         if len(seq_ids) > 1 or len(seq_ids) == 0:
             start_disabled = True
             end_disabled = True
@@ -135,21 +141,48 @@ def get_callbacks_pdb(app, df, struct_container, original_id_col):
 
         # only one molecule selected
         else:
-            range = struct_container.get_range(seq_ids[0])
+            molecule_range = struct_container.get_range(seq_ids[0])
+            range_for_start = molecule_range
+            range_for_end = molecule_range
+            selectable_atoms = molecule_range
 
             # start of range selected
             if range_start is not None:
-                # remove numbers below for selection of end of range
-                range_for_end = list
+                # reset values
+                range_for_end = []
 
-                for num in range:
+                # remove numbers below for selection of end of range
+                for num in molecule_range:
                     if num > range_start:
                         range_for_end.append(num)
 
+                # set selectable atoms accordingly
+                selectable_atoms = range_for_end
+
+            # end of range selected
+            if range_end is not None:
+                # reset values
+                range_for_start = []
+
+                # remove numbers above for selection of start of range
+                for num in molecule_range:
+                    if num > range_end:
+                        range_for_start.append(num)
+
+                # set selectable atoms accordingly
+                selectable_atoms = range_for_start
+
+            # both, start and end selected
+            if range_start is not None and range_end is not None:
+                # reset values
+                selectable_atoms = []
+
+                for num in molecule_range:
+                    if range_start < num < range_end:
+                        selectable_atoms.append(num)
+
         # back to original IDs
         seq_ids = to_original_id(seq_ids, original_id_col, df)
-
-        print(f"data_list: {data_list}")
 
         # prevent updating if data list is empty since molecule viewer gives error otherwise
         if not data_list:
@@ -161,9 +194,9 @@ def get_callbacks_pdb(app, df, struct_container, original_id_col):
             start_disabled,
             end_disabled,
             atoms_disabled,
-            range,
-            range,
-            range,
+            range_for_start,
+            range_for_end,
+            selectable_atoms,
         )
 
     @app.callback(
