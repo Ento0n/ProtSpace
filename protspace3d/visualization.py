@@ -138,20 +138,26 @@ class Visualizator:
                                         dbc.Col(
                                             [
                                                 dcc.Markdown("Start"),
-                                                dcc.Dropdown(id="range_start"),
+                                                dcc.Dropdown(
+                                                    id="range_start", disabled=True
+                                                ),
                                             ]
                                         ),
                                         dbc.Col(
                                             [
                                                 dcc.Markdown("End:"),
-                                                dcc.Dropdown(id="range_end"),
+                                                dcc.Dropdown(
+                                                    id="range_end", disabled=True
+                                                ),
                                             ]
                                         ),
                                         dbc.Col(
                                             [
                                                 dcc.Markdown("Highlighted atoms:"),
                                                 dcc.Dropdown(
-                                                    id="selected_atoms", multi=True
+                                                    id="selected_atoms",
+                                                    multi=True,
+                                                    disabled=True,
                                                 ),
                                             ]
                                         ),

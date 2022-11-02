@@ -49,12 +49,11 @@ class StructureContainer(object):
 
             for line in lines:
                 if line.startswith("ATOM"):
-                    pieces = line.split(" ")
-                    print(pieces)
+                    pieces = line.split(r" ")
 
                     range.add(pieces[12])
 
-        return list(range)
+        return sorted(list(range))
 
 
 class DataPreprocessor:

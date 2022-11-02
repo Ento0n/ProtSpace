@@ -66,8 +66,9 @@ def get_callbacks_pdb(app, df, struct_container, original_id_col):
         Output("selected_atoms", "options"),
         Input("graph", "clickData"),
         Input("molecules_dropdown", "value"),
+        Input("range_start", "value"),
     )
-    def display_molecule(clickdata, dd_molecules: list):
+    def display_molecule(clickdata, dd_molecules: list, range_start):
         """
         callback function to handle the displaying of the molecule
         :param clickdata: given data by clicking on a datapoint in the 3D plot
@@ -76,7 +77,7 @@ def get_callbacks_pdb(app, df, struct_container, original_id_col):
         """
 
         ctx = dash.callback_context
-        if not ctx.triggered or dd_molecules == []:
+        if not ctx.triggered:
             raise PreventUpdate
 
         # convert original to mapped IDs
@@ -127,7 +128,7 @@ def get_callbacks_pdb(app, df, struct_container, original_id_col):
         atoms_disabled = False
 
         range = list()
-        if len(seq_ids) > 1:
+        if len(seq_ids) > 1 or len(seq_ids) == 0:
             start_disabled = True
             end_disabled = True
             atoms_disabled = True
@@ -136,8 +137,23 @@ def get_callbacks_pdb(app, df, struct_container, original_id_col):
         else:
             range = struct_container.get_range(seq_ids[0])
 
+            # start of range selected
+            if range_start is not None:
+                # remove numbers below for selection of end of range
+                range_for_end = list
+
+                for num in range:
+                    if num > range_start:
+                        range_for_end.append(num)
+
         # back to original IDs
         seq_ids = to_original_id(seq_ids, original_id_col, df)
+
+        print(f"data_list: {data_list}")
+
+        # prevent updating if data list is empty since molecule viewer gives error otherwise
+        if not data_list:
+            raise PreventUpdate
 
         return (
             data_list,
