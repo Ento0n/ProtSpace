@@ -8,6 +8,8 @@ import numpy as np
 import pandas as pd
 from pandas import DataFrame
 
+import re
+
 from visualization import Visualizator
 
 
@@ -44,20 +46,21 @@ class StructureContainer(object):
         id = id + ".pdb"
 
         range = set()
+        strand = None
         with open(self.pdb_d / id, "r") as f:
             lines = f.readlines()
 
             for line in lines:
                 if line.startswith("ATOM"):
-                    pieces = line.split(r" ")
+                    pieces = re.split("\\s+", line)
 
-                    range.add(pieces[12])
+                    range.add(int(pieces[5]))
+                    strand = pieces[4]
 
-        return sorted(list(range))
+        return sorted(list(range)), strand
 
 
 class DataPreprocessor:
-
     AXIS_NAMES = ["x", "y", "z"]
 
     def __init__(

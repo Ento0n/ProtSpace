@@ -64,13 +64,19 @@ def get_callbacks_pdb(app, df, struct_container, original_id_col):
         Output("range_start", "options"),
         Output("range_end", "options"),
         Output("selected_atoms", "options"),
+        Output("selected_atoms", "value"),
         Input("graph", "clickData"),
         Input("molecules_dropdown", "value"),
         Input("range_start", "value"),
         Input("range_end", "value"),
+        Input("selected_atoms", "value"),
     )
     def display_molecule(
-        clickdata, dd_molecules: list, range_start: list, range_end: list
+        clickdata,
+        dd_molecules: list,
+        range_start: int,
+        range_end: int,
+        selected_atoms: list,
     ):
         """
         callback function to handle the displaying of the molecule
@@ -113,18 +119,6 @@ def get_callbacks_pdb(app, df, struct_container, original_id_col):
         # path to .pdb file
         struct_path = str(struct_container.get_structure_dir()) + "/"
 
-        # data format for molecule viewer
-        data_list = [
-            ngl_parser.get_data(
-                data_path=struct_path,
-                pdb_id=seq_id,
-                color="blue",
-                reset_view=True,
-                local=True,
-            )
-            for seq_id in seq_ids
-        ]
-
         # disable range and highlighting selection in case more than 1 atom is selected
         start_disabled = False
         end_disabled = False
@@ -134,14 +128,17 @@ def get_callbacks_pdb(app, df, struct_container, original_id_col):
         range_for_end = list()
         selectable_atoms = list()
 
+        strand = None
+
         if len(seq_ids) > 1 or len(seq_ids) == 0:
+            # disable the dropdown menus for range selection and highlighting if more than 1 molecule is selected
             start_disabled = True
             end_disabled = True
             atoms_disabled = True
 
         # only one molecule selected
         else:
-            molecule_range = struct_container.get_range(seq_ids[0])
+            molecule_range, strand = struct_container.get_range(seq_ids[0])
             range_for_start = molecule_range
             range_for_end = molecule_range
             selectable_atoms = molecule_range
@@ -166,7 +163,7 @@ def get_callbacks_pdb(app, df, struct_container, original_id_col):
 
                 # remove numbers above for selection of start of range
                 for num in molecule_range:
-                    if num > range_end:
+                    if num < range_end:
                         range_for_start.append(num)
 
                 # set selectable atoms accordingly
@@ -178,8 +175,58 @@ def get_callbacks_pdb(app, df, struct_container, original_id_col):
                 selectable_atoms = []
 
                 for num in molecule_range:
-                    if range_start < num < range_end:
+                    if range_start <= num <= range_end:
                         selectable_atoms.append(num)
+
+                # remove selected atom if not in range of selectable atoms
+                if selected_atoms is not None:
+                    for atom in selected_atoms:
+                        if atom not in selectable_atoms:
+                            selected_atoms.remove(atom)
+
+            # seq id has to be edited if range start and end are selected
+            seq_id = seq_ids[0]
+            strand_set = False
+
+            # append the range selection to the seq id accordingly
+            if range_start is not None and range_end is not None:
+                # append strand to seq id string
+                seq_id = seq_id + f".{strand}"
+                strand_set = True
+
+                seq_id = seq_id + f":{range_start}-{range_end}"
+
+            # append selected atoms to the string accordingly
+            if selected_atoms is not None:
+                if len(selected_atoms) > 0:
+                    if not strand_set:
+                        # append strand to seq id string
+                        seq_id = seq_id + f".{strand}"
+
+                    # bring selected atoms into string format comma separated
+                    atoms = ""
+                    for atom in selected_atoms:
+                        atoms = atoms + f"{atom},"
+
+                    # remove last comma
+                    atoms = atoms[:-1]
+
+                    seq_id = seq_id + f"@{atoms}"
+
+            # replace seq id with new edited seq id
+            seq_ids[0] = seq_id
+
+        # data format for molecule viewer
+        data_list = [
+            ngl_parser.get_data(
+                data_path=struct_path,
+                pdb_id=seq_id,
+                color="blue",
+                reset_view=True,
+                local=True,
+            )
+            for seq_id in seq_ids
+        ]
 
         # back to original IDs
         seq_ids = to_original_id(seq_ids, original_id_col, df)
@@ -197,6 +244,7 @@ def get_callbacks_pdb(app, df, struct_container, original_id_col):
             range_for_start,
             range_for_end,
             selectable_atoms,
+            selected_atoms,
         )
 
     @app.callback(
@@ -207,7 +255,7 @@ def get_callbacks_pdb(app, df, struct_container, original_id_col):
         molstyles_dict = {
             "representations": selected_representation,
             "chosenAtomsColor": "white",
-            "chosenAtomsRadius": 1,
+            "chosenAtomsRadius": 0.5,
             "molSpacingXaxis": 30,
             "sideByside": True,
         }
