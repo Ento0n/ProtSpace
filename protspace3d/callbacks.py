@@ -82,6 +82,9 @@ def get_callbacks_pdb(app, df, struct_container, original_id_col):
         callback function to handle the displaying of the molecule
         :param clickdata: given data by clicking on a datapoint in the 3D plot
         :param dd_molecules: selected molecules in the dropdown menu
+        :param range_start: in the dropdown menu selected start
+        :param range_end: in the dropdown menu selected end
+        :param selected_atoms: selected values of the dropdown menu for highlighted atoms
         :return:
         """
 
@@ -91,8 +94,13 @@ def get_callbacks_pdb(app, df, struct_container, original_id_col):
 
         # convert original to mapped IDs
         seq_ids = list()
+        saved_seq_ids = list()
         if dd_molecules is not None:
             seq_ids = to_mapped_id(dd_molecules, original_id_col, df)
+
+            # save unedited seq ids to replace edited seq ids later
+            # (editing for range selection and highlighting)
+            saved_seq_ids = list(seq_ids)
 
         # triggered by click on graph
         if ctx.triggered_id == "graph":
@@ -227,6 +235,10 @@ def get_callbacks_pdb(app, df, struct_container, original_id_col):
             )
             for seq_id in seq_ids
         ]
+
+        if ctx.triggered_id != "graph":
+            # replace edited seq ids with saved unedited seq ids
+            seq_ids = saved_seq_ids
 
         # back to original IDs
         seq_ids = to_original_id(seq_ids, original_id_col, df)
