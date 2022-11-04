@@ -2,6 +2,7 @@
 # -*- coding: utf-8 -*-
 
 from visualization import Visualizator
+from preprocessing import StructureContainer
 
 from dash import Input, Output
 from dash.exceptions import PreventUpdate
@@ -32,6 +33,118 @@ def to_original_id(mapped_seq_ids: list, original_id_col: list, df: DataFrame):
         seq_ids.append(original_id)
 
     return seq_ids
+
+
+def handle_highlighting(
+    seq_ids: list,
+    struct_container: StructureContainer,
+    range_start: int,
+    range_end: int,
+    selected_atoms: list,
+):
+    # disable range and highlighting selection in case more than 1 atom is selected
+    start_disabled = False
+    end_disabled = False
+    atoms_disabled = False
+
+    range_for_start = list()
+    range_for_end = list()
+    selectable_atoms = list()
+
+    if len(seq_ids) > 1 or len(seq_ids) == 0:
+        # disable the dropdown menus for range selection and highlighting if more than 1 molecule is selected
+        start_disabled = True
+        end_disabled = True
+        atoms_disabled = True
+
+    # only one molecule selected
+    else:
+        molecule_range, strand = struct_container.get_range(seq_ids[0])
+        range_for_start = molecule_range
+        range_for_end = molecule_range
+        selectable_atoms = molecule_range
+
+        # start of range selected
+        if range_start is not None:
+            # reset values
+            range_for_end = []
+
+            # remove numbers below for selection of end of range
+            for num in molecule_range:
+                if num > range_start:
+                    range_for_end.append(num)
+
+            # set selectable atoms accordingly
+            selectable_atoms = range_for_end
+
+        # end of range selected
+        if range_end is not None:
+            # reset values
+            range_for_start = []
+
+            # remove numbers above for selection of start of range
+            for num in molecule_range:
+                if num < range_end:
+                    range_for_start.append(num)
+
+            # set selectable atoms accordingly
+            selectable_atoms = range_for_start
+
+        # both, start and end selected
+        if range_start is not None and range_end is not None:
+            # reset values
+            selectable_atoms = []
+
+            for num in molecule_range:
+                if range_start <= num <= range_end:
+                    selectable_atoms.append(num)
+
+            # remove selected atom if not in range of selectable atoms
+            if selected_atoms is not None:
+                for atom in selected_atoms:
+                    if atom not in selectable_atoms:
+                        selected_atoms.remove(atom)
+
+        # seq id has to be edited if range start and end are selected
+        seq_id = seq_ids[0]
+        strand_set = False
+
+        # append the range selection to the seq id accordingly
+        if range_start is not None and range_end is not None:
+            # append strand to seq id string
+            seq_id = seq_id + f".{strand}"
+            strand_set = True
+
+            seq_id = seq_id + f":{range_start}-{range_end}"
+
+        # append selected atoms to the string accordingly
+        if selected_atoms is not None:
+            if len(selected_atoms) > 0:
+                if not strand_set:
+                    # append strand to seq id string
+                    seq_id = seq_id + f".{strand}"
+
+                # bring selected atoms into string format comma separated
+                atoms = ""
+                for atom in selected_atoms:
+                    atoms = atoms + f"{atom},"
+
+                # remove last comma
+                atoms = atoms[:-1]
+
+                seq_id = seq_id + f"@{atoms}"
+
+        # replace seq id with new edited seq id
+        seq_ids[0] = seq_id
+
+    return (
+        start_disabled,
+        end_disabled,
+        atoms_disabled,
+        range_for_start,
+        range_for_end,
+        selectable_atoms,
+    )
 
 
 def get_callbacks_pdb(app, df, struct_container, original_id_col):
@@ -127,102 +240,17 @@ def get_callbacks_pdb(app, df, struct_container, original_id_col):
         # path to .pdb file
         struct_path = str(struct_container.get_structure_dir()) + "/"
 
-        # disable range and highlighting selection in case more than 1 atom is selected
-        start_disabled = False
-        end_disabled = False
-        atoms_disabled = False
-
-        range_for_start = list()
-        range_for_end = list()
-        selectable_atoms = list()
-
-        strand = None
-
-        if len(seq_ids) > 1 or len(seq_ids) == 0:
-            # disable the dropdown menus for range selection and highlighting if more than 1 molecule is selected
-            start_disabled = True
-            end_disabled = True
-            atoms_disabled = True
-
-        # only one molecule selected
-        else:
-            molecule_range, strand = struct_container.get_range(seq_ids[0])
-            range_for_start = molecule_range
-            range_for_end = molecule_range
-            selectable_atoms = molecule_range
-
-            # start of range selected
-            if range_start is not None:
-                # reset values
-                range_for_end = []
-
-                # remove numbers below for selection of end of range
-                for num in molecule_range:
-                    if num > range_start:
-                        range_for_end.append(num)
-
-                # set selectable atoms accordingly
-                selectable_atoms = range_for_end
-
-            # end of range selected
-            if range_end is not None:
-                # reset values
-                range_for_start = []
-
-                # remove numbers above for selection of start of range
-                for num in molecule_range:
-                    if num < range_end:
-                        range_for_start.append(num)
-
-                # set selectable atoms accordingly
-                selectable_atoms = range_for_start
-
-            # both, start and end selected
-            if range_start is not None and range_end is not None:
-                # reset values
-                selectable_atoms = []
-
-                for num in molecule_range:
-                    if range_start <= num <= range_end:
-                        selectable_atoms.append(num)
-
-                # remove selected atom if not in range of selectable atoms
-                if selected_atoms is not None:
-                    for atom in selected_atoms:
-                        if atom not in selectable_atoms:
-                            selected_atoms.remove(atom)
-
-            # seq id has to be edited if range start and end are selected
-            seq_id = seq_ids[0]
-            strand_set = False
-
-            # append the range selection to the seq id accordingly
-            if range_start is not None and range_end is not None:
-                # append strand to seq id string
-                seq_id = seq_id + f".{strand}"
-                strand_set = True
-
-                seq_id = seq_id + f":{range_start}-{range_end}"
-
-            # append selected atoms to the string accordingly
-            if selected_atoms is not None:
-                if len(selected_atoms) > 0:
-                    if not strand_set:
-                        # append strand to seq id string
-                        seq_id = seq_id + f".{strand}"
-
-                    # bring selected atoms into string format comma separated
-                    atoms = ""
-                    for atom in selected_atoms:
-                        atoms = atoms + f"{atom},"
-
-                    # remove last comma
-                    atoms = atoms[:-1]
-
-                    seq_id = seq_id + f"@{atoms}"
-
-            # replace seq id with new edited seq id
-            seq_ids[0] = seq_id
+        # handle the range and atom selection
+        (
+            start_disabled,
+            end_disabled,
+            atoms_disabled,
+            range_for_start,
+            range_for_end,
+            selectable_atoms,
+        ) = handle_highlighting(
+            seq_ids, struct_container, range_start, range_end, selected_atoms
+        )
 
         # data format for molecule viewer
         data_list = [
