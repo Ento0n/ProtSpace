@@ -87,7 +87,7 @@ class DataPreprocessor:
         emb_h5file = root / f"{self.basename}.h5"
         label_csv_p = root / f"{self.basename}.csv"
 
-        self._check_files(emb_h5file, label_csv_p)
+        csv_less_flag = self._check_files(emb_h5file, label_csv_p)
 
         # processed by fasta_mapper.py?
         original_id_col = None
@@ -137,14 +137,20 @@ class DataPreprocessor:
         Checks whether all files are present
         :param emb_h5file: h5 file Path
         :param label_csv_p: csv file Path
+        :return boolean flag whether csv less mode is activated or not
         """
-        # Check whether all files are present
-        files = [emb_h5file, label_csv_p]
-        for file in files:
-            if not file.is_file():
-                raise FileNotFoundError(
-                    f"The {file} file is missing! Check data directory and basename."
-                )
+        # Check whether the h5 files is present (mandatory)
+        if not emb_h5file.is_file():
+            raise FileNotFoundError(
+                f"The {emb_h5file} file is missing! Check data directory and basename."
+            )
+
+        # Check whether csv file is present (csv less mode activated if not)
+        csv_less_flag = False
+        if not label_csv_p.is_file():
+            csv_less_flag = True
+
+        return csv_less_flag
 
     @staticmethod
     def _handle_html(

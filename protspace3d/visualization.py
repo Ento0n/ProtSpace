@@ -229,9 +229,11 @@ class Visualizator:
         :return: plotly graphical object
         """
 
-        # swap index
-        mapped_index = df.index
-        df.index = original_id_col
+        mapped_index = None
+        if original_id_col is not None:
+            # swap index
+            mapped_index = df.index
+            df.index = original_id_col
 
         col_groups = df[selected_column].unique().tolist()
 
@@ -281,6 +283,7 @@ class Visualizator:
         fig.update_layout(margin=dict(l=1, r=1, t=1, b=1))
 
         # swap index again
-        df.index = mapped_index
+        if original_id_col is not None:
+            df.index = mapped_index
 
         return fig

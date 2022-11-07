@@ -172,6 +172,6 @@ if __name__ == "__main__":
         if pdb:
             get_callbacks_pdb(app, df, struct_container, orig_id_col)
         else:
-            get_callbacks(app, df)
+            get_callbacks(app, df, orig_id_col)
 
         app.run_server(debug=True)

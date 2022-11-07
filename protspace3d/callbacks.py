@@ -303,12 +303,12 @@ def get_callbacks_pdb(app, df, struct_container, original_id_col):
         return molstyles_dict
 
 
-def get_callbacks(app, df):
+def get_callbacks(app, df: DataFrame, original_id_col: list):
     @app.callback(
         Output("graph", "figure"),
         Input("dd_menu", "value"),
     )
-    def update_graph(selected_value: str, original_id_col: list):
+    def update_graph(selected_value: str):
         """
         Renders new graph for selected drop down menu value
         :param selected_value: selected column of dropdown menu
