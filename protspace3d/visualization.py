@@ -221,11 +221,12 @@ class Visualizator:
 
     @staticmethod
     # https://github.com/sacdallago/bio_embeddings/blob/develop/bio_embeddings/visualize/plotly_plots.py
-    def render(df: DataFrame, selected_column: str, original_id_col: list):
+    def render(df: DataFrame, selected_column: str, original_id_col: object):
         """
         Renders the plotly graph with the selected column in the dataframe df
         :param df: dataframe
         :param selected_column: column of the dataframe
+        :param original_id_col: the colum "original id" of the mapped csv file
         :return: plotly graphical object
         """
 

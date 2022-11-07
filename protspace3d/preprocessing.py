@@ -99,6 +99,8 @@ class DataPreprocessor:
             original_id_col = df_csv["original_id"].to_list()
             df_csv.drop(columns=["original_id"], inplace=True)
 
+        elif csv_less_flag:
+            df_csv = self._create_csv_less_df(emb_h5file)
         else:
             df_csv = pd.read_csv(
                 label_csv_p, sep=self.csv_separator, index_col=self.uid_col
@@ -153,6 +155,24 @@ class DataPreprocessor:
         return csv_less_flag
 
     @staticmethod
+    def _create_csv_less_df(emb_h5file: Path):
+        # get all ids of the h5 file
+        h5_uids = list()
+        with h5py.File(emb_h5file, "r") as hdf:
+            for identifier, embd in hdf.items():
+                h5_uids.append(identifier)
+
+        # create new dataframe with collected identifiers
+        df = pd.DataFrame(index=h5_uids, columns=["no group"])
+        df.index.name = "Name"
+
+        print(
+            "No csv file found!\nActivate csv less mode, no groups or features are visualized."
+        )
+
+        return df
+
+    @staticmethod
     def _handle_html(
         html_cols: list[int],
         csv_header: list[str],
@@ -170,7 +190,9 @@ class DataPreprocessor:
             # -1 indicates all columns to be saved
             if html_cols == [-1]:
                 for col in csv_header:
-                    fig = Visualizator.render(df, selected_column=col)
+                    fig = Visualizator.render(
+                        df, selected_column=col, original_id_col=None
+                    )
                     fig.write_html(data_dir_path / f"3Dspace_{col}.html")
 
             else:
@@ -186,7 +208,9 @@ class DataPreprocessor:
                     if col not in range(len(csv_header)):
                         raise Exception(f"Column no. {col} is not valid!")
 
-                    fig = Visualizator.render(df, selected_column=csv_header[col])
+                    fig = Visualizator.render(
+                        df, selected_column=csv_header[col], original_id_col=None
+                    )
                     fig.write_html(data_dir_path / f"3Dspace_{csv_header[col]}.html")
 
     def _read_df_csv(
