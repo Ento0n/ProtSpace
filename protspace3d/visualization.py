@@ -137,7 +137,7 @@ class Visualizator:
                                     [
                                         dbc.Col(
                                             [
-                                                dcc.Markdown("Start"),
+                                                dcc.Markdown("Start:"),
                                                 dcc.Dropdown(
                                                     id="range_start", disabled=True
                                                 ),
@@ -204,7 +204,7 @@ class Visualizator:
                                     figure=self.fig,
                                     clear_on_unhover=True,
                                     style={
-                                        "width": "90%",
+                                        "width": "100%",
                                         "height": "90vh",
                                     },
                                 ),
