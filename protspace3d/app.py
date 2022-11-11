@@ -109,7 +109,7 @@ class Parser:
         return data_dir_path, basename, csv_sep, uid_col, html_cols, pdb_d
 
 
-def main():
+def setup():
     """
     Handles the process of the application
     :return: app & html_flag
@@ -130,7 +130,7 @@ def main():
 
     # Preprocessing
     (
-        data_f,
+        df,
         fig,
         csv_header,
         original_id_col,
@@ -156,15 +156,15 @@ def main():
     return (
         application,
         html_flag,
-        data_f,
+        df,
         structure_container,
         pdb_flag,
         original_id_col,
     )
 
 
-if __name__ == "__main__":
-    app, html, df, struct_container, pdb, orig_id_col = main()
+def main():
+    app, html, df, struct_container, pdb, orig_id_col = setup()
 
     # don't start server if html is needed
     if not html:
@@ -175,3 +175,7 @@ if __name__ == "__main__":
             get_callbacks(app, df, orig_id_col)
 
         app.run_server(debug=True)
+
+
+if __name__ == "__main__":
+    main()
