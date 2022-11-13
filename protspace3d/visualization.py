@@ -79,22 +79,12 @@ class Visualizator:
             [
                 # Header
                 self.get_header(app),
-                # space between header and content below
-                dbc.Row(
-                    [
-                        dbc.Col(
-                            html.Br(),
-                            width=6,
-                            style={"border-right": "solid black 1px"},
-                        ),
-                        dbc.Col(html.Br(), width=6),
-                    ]
-                ),
                 # graph and controls
                 dbc.Row(
                     [
                         dbc.Col(
                             [
+                                html.Br(),
                                 dcc.Dropdown(
                                     self.csv_header,
                                     self.csv_header[0],
@@ -108,7 +98,7 @@ class Visualizator:
                                     clear_on_unhover=True,
                                     style={
                                         "width": "100%",
-                                        "height": "90vh",
+                                        "height": "80vh",
                                     },
                                     responsive=True,
                                 ),
@@ -118,74 +108,113 @@ class Visualizator:
                         ),
                         dbc.Col(
                             [
-                                dcc.Markdown("Representations:"),
-                                dcc.Dropdown(
-                                    id="representation_dropdown",
-                                    options=self.representation_options,
-                                    multi=True,
-                                    value=["cartoon"],
-                                ),
-                                html.Br(),
-                                dcc.Markdown("Molecules:"),
-                                dcc.Dropdown(
-                                    id="molecules_dropdown",
-                                    options=original_id_col,
-                                    multi=True,
-                                ),
-                                dashbio.NglMoleculeViewer(id="ngl_molecule_viewer"),
-                                dcc.Slider(
-                                    id="size_slider",
-                                    min=300,
-                                    max=800,
-                                    value=500,
-                                    marks=None,
-                                    tooltip={
-                                        "placement": "bottom",
-                                        "always_visible": False,
-                                    },
-                                ),
-                                dcc.Slider(
-                                    id="spacing_slider",
-                                    min=10,
-                                    max=200,
-                                    value=50,
-                                    marks=None,
-                                    tooltip={
-                                        "placement": "bottom",
-                                        "always_visible": False,
-                                    },
-                                ),
-                                dbc.Row(
-                                    [
-                                        dbc.Col(
-                                            [
-                                                dcc.Markdown("Start:"),
+                                dcc.Tabs(
+                                    id="tabs",
+                                    value="Visualization",
+                                    children=[
+                                        dcc.Tab(
+                                            id="visualization_tab",
+                                            value="Visualization",
+                                            label="Visualization",
+                                            children=[
+                                                dcc.Markdown("Molecules:"),
                                                 dcc.Dropdown(
-                                                    id="range_start", disabled=True
-                                                ),
-                                            ]
-                                        ),
-                                        dbc.Col(
-                                            [
-                                                dcc.Markdown("End:"),
-                                                dcc.Dropdown(
-                                                    id="range_end", disabled=True
-                                                ),
-                                            ]
-                                        ),
-                                        dbc.Col(
-                                            [
-                                                dcc.Markdown(
-                                                    "Highlighted atoms:",
-                                                ),
-                                                dcc.Dropdown(
-                                                    id="selected_atoms",
+                                                    id="molecules_dropdown",
+                                                    options=original_id_col,
                                                     multi=True,
-                                                    disabled=True,
                                                 ),
-                                            ]
+                                                dashbio.NglMoleculeViewer(
+                                                    id="ngl_molecule_viewer"
+                                                ),
+                                            ],
                                         ),
-                                    ]
+                                        dcc.Tab(
+                                            id="settings_tab",
+                                            value="Settings",
+                                            label="Settings",
+                                            children=[
+                                                dcc.Markdown("Representations:"),
+                                                dcc.Dropdown(
+                                                    id="representation_dropdown",
+                                                    options=self.representation_options,
+                                                    multi=True,
+                                                    value=["cartoon"],
+                                                ),
+                                                html.Br(),
+                                                dbc.Row(
+                                                    [
+                                                        dbc.Col(
+                                                            [
+                                                                dcc.Markdown("Start:"),
+                                                                dcc.Dropdown(
+                                                                    id="range_start",
+                                                                    disabled=True,
+                                                                ),
+                                                            ]
+                                                        ),
+                                                        dbc.Col(
+                                                            [
+                                                                dcc.Markdown("End:"),
+                                                                dcc.Dropdown(
+                                                                    id="range_end",
+                                                                    disabled=True,
+                                                                ),
+                                                            ]
+                                                        ),
+                                                        dbc.Col(
+                                                            [
+                                                                dcc.Markdown(
+                                                                    "Highlighted atoms:",
+                                                                ),
+                                                                dcc.Dropdown(
+                                                                    id="selected_atoms",
+                                                                    multi=True,
+                                                                    disabled=True,
+                                                                ),
+                                                            ]
+                                                        ),
+                                                    ]
+                                                ),
+                                                html.Br(),
+                                                dcc.Markdown("Height:"),
+                                                dcc.Slider(
+                                                    id="height_slider",
+                                                    min=300,
+                                                    max=800,
+                                                    value=300,
+                                                    marks=None,
+                                                    tooltip={
+                                                        "placement": "bottom",
+                                                        "always_visible": False,
+                                                    },
+                                                ),
+                                                dcc.Markdown("Width:"),
+                                                dcc.Slider(
+                                                    id="width_slider",
+                                                    min=300,
+                                                    max=800,
+                                                    value=500,
+                                                    marks=None,
+                                                    tooltip={
+                                                        "placement": "bottom",
+                                                        "always_visible": False,
+                                                    },
+                                                ),
+                                                dcc.Markdown("Spacing:"),
+                                                dcc.Slider(
+                                                    id="spacing_slider",
+                                                    min=10,
+                                                    max=200,
+                                                    value=50,
+                                                    marks=None,
+                                                    tooltip={
+                                                        "placement": "bottom",
+                                                        "always_visible": False,
+                                                    },
+                                                ),
+                                            ],
+                                        ),
+                                    ],
                                 ),
                             ],
                             width=6,

@@ -306,11 +306,12 @@ def get_callbacks_pdb(app, df, struct_container, original_id_col):
     @app.callback(
         Output("ngl_molecule_viewer", "height"),
         Output("ngl_molecule_viewer", "width"),
-        Input("size_slider", "value"),
+        Input("height_slider", "value"),
+        Input("width_slider", "value"),
     )
-    def set_molviewer_size(slider_value):
-        height = slider_value
-        width = slider_value
+    def set_molviewer_size(height_value, width_value):
+        height = height_value
+        width = width_value
 
         return height, width
 
