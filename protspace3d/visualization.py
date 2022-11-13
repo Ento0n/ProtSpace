@@ -87,9 +87,7 @@ class Visualizator:
                             width=6,
                             style={"border-right": "solid black 1px"},
                         ),
-                        dbc.Col(
-                            html.Br(), width=6, style={"background-color": "black"}
-                        ),
+                        dbc.Col(html.Br(), width=6),
                     ]
                 ),
                 # graph and controls
@@ -120,9 +118,7 @@ class Visualizator:
                         ),
                         dbc.Col(
                             [
-                                dcc.Markdown(
-                                    "Representations:", style={"color": "white"}
-                                ),
+                                dcc.Markdown("Representations:"),
                                 dcc.Dropdown(
                                     id="representation_dropdown",
                                     options=self.representation_options,
@@ -130,7 +126,7 @@ class Visualizator:
                                     value=["cartoon"],
                                 ),
                                 html.Br(),
-                                dcc.Markdown("Molecules:", style={"color": "white"}),
+                                dcc.Markdown("Molecules:"),
                                 dcc.Dropdown(
                                     id="molecules_dropdown",
                                     options=original_id_col,
@@ -163,9 +159,7 @@ class Visualizator:
                                     [
                                         dbc.Col(
                                             [
-                                                dcc.Markdown(
-                                                    "Start:", style={"color": "white"}
-                                                ),
+                                                dcc.Markdown("Start:"),
                                                 dcc.Dropdown(
                                                     id="range_start", disabled=True
                                                 ),
@@ -173,9 +167,7 @@ class Visualizator:
                                         ),
                                         dbc.Col(
                                             [
-                                                dcc.Markdown(
-                                                    "End:", style={"color": "white"}
-                                                ),
+                                                dcc.Markdown("End:"),
                                                 dcc.Dropdown(
                                                     id="range_end", disabled=True
                                                 ),
@@ -185,7 +177,6 @@ class Visualizator:
                                             [
                                                 dcc.Markdown(
                                                     "Highlighted atoms:",
-                                                    style={"color": "white"},
                                                 ),
                                                 dcc.Dropdown(
                                                     id="selected_atoms",
@@ -198,7 +189,6 @@ class Visualizator:
                                 ),
                             ],
                             width=6,
-                            style={"background-color": "black"},
                         ),
                     ]
                 ),
