@@ -257,7 +257,7 @@ def get_callbacks_pdb(app, df, struct_container, original_id_col):
             ngl_parser.get_data(
                 data_path=struct_path,
                 pdb_id=seq_id,
-                color="blue",
+                color="black",
                 reset_view=True,
                 local=True,
             )
@@ -290,17 +290,29 @@ def get_callbacks_pdb(app, df, struct_container, original_id_col):
     @app.callback(
         Output("ngl_molecule_viewer", "molStyles"),
         Input("representation_dropdown", "value"),
+        Input("spacing_slider", "value"),
     )
-    def set_mol_style(selected_representation):
+    def set_mol_style(selected_representation, spacing_slider_value):
         molstyles_dict = {
             "representations": selected_representation,
             "chosenAtomsColor": "white",
             "chosenAtomsRadius": 0.5,
-            "molSpacingXaxis": 30,
+            "molSpacingXaxis": spacing_slider_value,
             "sideByside": True,
         }
 
         return molstyles_dict
+
+    @app.callback(
+        Output("ngl_molecule_viewer", "height"),
+        Output("ngl_molecule_viewer", "width"),
+        Input("size_slider", "value"),
+    )
+    def set_molviewer_size(slider_value):
+        height = slider_value
+        width = slider_value
+
+        return height, width
 
 
 def get_callbacks(app, df: DataFrame, original_id_col: list):

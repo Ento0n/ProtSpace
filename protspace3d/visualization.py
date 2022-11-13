@@ -87,7 +87,9 @@ class Visualizator:
                             width=6,
                             style={"border-right": "solid black 1px"},
                         ),
-                        dbc.Col(html.Br(), width=6),
+                        dbc.Col(
+                            html.Br(), width=6, style={"background-color": "black"}
+                        ),
                     ]
                 ),
                 # graph and controls
@@ -118,7 +120,9 @@ class Visualizator:
                         ),
                         dbc.Col(
                             [
-                                dcc.Markdown("Representations:"),
+                                dcc.Markdown(
+                                    "Representations:", style={"color": "white"}
+                                ),
                                 dcc.Dropdown(
                                     id="representation_dropdown",
                                     options=self.representation_options,
@@ -126,18 +130,42 @@ class Visualizator:
                                     value=["cartoon"],
                                 ),
                                 html.Br(),
-                                dcc.Markdown("Molecules:"),
+                                dcc.Markdown("Molecules:", style={"color": "white"}),
                                 dcc.Dropdown(
                                     id="molecules_dropdown",
                                     options=original_id_col,
                                     multi=True,
                                 ),
                                 dashbio.NglMoleculeViewer(id="ngl_molecule_viewer"),
+                                dcc.Slider(
+                                    id="size_slider",
+                                    min=300,
+                                    max=800,
+                                    value=500,
+                                    marks=None,
+                                    tooltip={
+                                        "placement": "bottom",
+                                        "always_visible": False,
+                                    },
+                                ),
+                                dcc.Slider(
+                                    id="spacing_slider",
+                                    min=10,
+                                    max=200,
+                                    value=50,
+                                    marks=None,
+                                    tooltip={
+                                        "placement": "bottom",
+                                        "always_visible": False,
+                                    },
+                                ),
                                 dbc.Row(
                                     [
                                         dbc.Col(
                                             [
-                                                dcc.Markdown("Start:"),
+                                                dcc.Markdown(
+                                                    "Start:", style={"color": "white"}
+                                                ),
                                                 dcc.Dropdown(
                                                     id="range_start", disabled=True
                                                 ),
@@ -145,7 +173,9 @@ class Visualizator:
                                         ),
                                         dbc.Col(
                                             [
-                                                dcc.Markdown("End:"),
+                                                dcc.Markdown(
+                                                    "End:", style={"color": "white"}
+                                                ),
                                                 dcc.Dropdown(
                                                     id="range_end", disabled=True
                                                 ),
@@ -153,7 +183,10 @@ class Visualizator:
                                         ),
                                         dbc.Col(
                                             [
-                                                dcc.Markdown("Highlighted atoms:"),
+                                                dcc.Markdown(
+                                                    "Highlighted atoms:",
+                                                    style={"color": "white"},
+                                                ),
                                                 dcc.Dropdown(
                                                     id="selected_atoms",
                                                     multi=True,
@@ -165,6 +198,7 @@ class Visualizator:
                                 ),
                             ],
                             width=6,
+                            style={"background-color": "black"},
                         ),
                     ]
                 ),
