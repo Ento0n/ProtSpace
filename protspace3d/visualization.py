@@ -289,7 +289,12 @@ class Visualizator:
             mapped_index = df.index
             df.index = original_id_col
 
-        col_groups = df[selected_column].unique().tolist()
+        sorted_df = df.sort_values(
+            by=selected_column,
+            ascending=True,
+        )
+
+        col_groups = sorted_df[selected_column].unique().tolist()
 
         df["class_index"] = np.ones(len(df)) * -100
 
