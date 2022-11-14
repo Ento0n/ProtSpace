@@ -149,26 +149,6 @@ def handle_highlighting(
 
 def get_callbacks_pdb(app, df, struct_container, original_id_col):
     @app.callback(
-        Output("graph", "figure"),
-        Input("dd_menu", "value"),
-    )
-    def update_graph(selected_value: str):
-        """
-        Renders new graph for selected drop down menu value
-        :param selected_value: selected column of dropdown menu
-        :return: graph to be displayed
-        """
-        # Check whether an input is triggered
-        ctx = dash.callback_context
-        if not ctx.triggered:
-            raise PreventUpdate
-
-        fig = Visualizator.render(
-            df, selected_column=selected_value, original_id_col=original_id_col
-        )
-        return fig
-
-    @app.callback(
         Output("ngl_molecule_viewer", "data"),
         Output("molecules_dropdown", "value"),
         Output("range_start", "disabled"),
@@ -330,6 +310,10 @@ def get_callbacks(app, df: DataFrame, original_id_col: list):
         # Check whether an input is triggered
         ctx = dash.callback_context
         if not ctx.triggered:
+            raise PreventUpdate
+
+        # In case dropdown menu is being cleared
+        if selected_value is None:
             raise PreventUpdate
 
         fig = Visualizator.render(

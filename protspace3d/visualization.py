@@ -8,7 +8,7 @@ from dash import Dash, dcc, html
 import dash_bootstrap_components as dbc
 
 import dash_bio as dashbio
-
+import dash_bio.NglMoleculeViewer as NglMoleculeViewer
 import plotly.graph_objects as go
 
 
@@ -89,8 +89,6 @@ class Visualizator:
                                     self.csv_header,
                                     self.csv_header[0],
                                     id="dd_menu",
-                                    searchable=False,
-                                    clearable=False,
                                 ),
                                 dcc.Graph(
                                     id="graph",
@@ -249,8 +247,6 @@ class Visualizator:
                                     self.csv_header,
                                     self.csv_header[0],
                                     id="dd_menu",
-                                    searchable=False,
-                                    clearable=False,
                                 ),
                                 dcc.Graph(
                                     id="graph",
@@ -289,12 +285,9 @@ class Visualizator:
             mapped_index = df.index
             df.index = original_id_col
 
-        sorted_df = df.sort_values(
-            by=selected_column,
-            ascending=True,
-        )
+        col_groups = df[selected_column].unique().tolist()
 
-        col_groups = sorted_df[selected_column].unique().tolist()
+        col_groups.sort(key=str.lower)
 
         df["class_index"] = np.ones(len(df)) * -100
 

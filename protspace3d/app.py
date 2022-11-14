@@ -170,6 +170,7 @@ def main():
     if not html:
         # different callbacks for different layout
         if pdb:
+            get_callbacks(app, df, orig_id_col)
             get_callbacks_pdb(app, df, struct_container, orig_id_col)
         else:
             get_callbacks(app, df, orig_id_col)
