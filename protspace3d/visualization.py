@@ -113,8 +113,11 @@ class Visualizator:
                                                 dcc.Markdown(
                                                     "Molecules:",
                                                     style={
-                                                        "margin-top": "10px",
+                                                        "margin-top": "20px",
                                                         "margin-bottom": "0px",
+                                                        "padding-top": "0px",
+                                                        "padding-bottom": "0px",
+                                                        "height": "30px",
                                                     },
                                                 ),
                                             ],
@@ -141,8 +144,20 @@ class Visualizator:
                                     id="molecules_dropdown",
                                     options=original_id_col,
                                     multi=True,
+                                    style={"margin-bottom": "5px"},
                                 ),
-                                dashbio.NglMoleculeViewer(id="ngl_molecule_viewer"),
+                                html.Div(
+                                    [
+                                        dashbio.NglMoleculeViewer(
+                                            id="ngl_molecule_viewer",
+                                        ),
+                                    ],
+                                    style={
+                                        "border-bottom": "1px solid grey",
+                                        "border-right": "1px solid grey",
+                                        "margin-left": "0px",
+                                    },
+                                ),
                                 dbc.Offcanvas(
                                     id="offcanvas",
                                     title="Settings",
