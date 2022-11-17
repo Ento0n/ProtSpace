@@ -283,22 +283,46 @@ def get_callbacks_pdb(app, df, struct_container, original_id_col):
 
         return molstyles_dict
 
-    @app.callback(
-        Output("ngl_molecule_viewer", "height"),
-        Output("ngl_molecule_viewer", "width"),
-        Input("height_slider", "value"),
-        Input("width_slider", "value"),
-    )
-    def set_molviewer_size(height_value, width_value):
-        height = height_value
-        width = width_value
-
-        return height, width
-
     @app.callback(Output("offcanvas", "is_open"), Input("settings_button", "n_clicks"))
     def handle_canvas(button_click):
         if button_click:
             return True
+
+    # molecule viewer sizing
+    app.clientside_callback(
+        """
+        function(href) {
+            var w = window.innerWidth;
+            var h = window.innerHeight;
+            return [h, w];
+        }
+        """,
+        Output("molviewer_sizing_div", "children"),
+        Input("url", "href"),
+    )
+
+    @app.callback(
+        Output("ngl_molecule_viewer", "height"),
+        Output("ngl_molecule_viewer", "width"),
+        Input("molviewer_sizing_div", "children"),
+        Input("height_slider", "value"),
+        Input("width_slider", "value"),
+    )
+    def set_molviewer_size(sizing, slider_height, slider_width):
+        ctx = dash.callback_context
+        if not ctx.triggered:
+            raise PreventUpdate
+
+        print(f"trigger id: {ctx.triggered_id}")
+
+        # sliders are used
+        if ctx.triggered_id == "height_slider" or ctx.triggered_id == "width_slider":
+            return slider_height, slider_width
+
+        # automatic sizing
+        height = sizing[0] / 1.2
+        width = sizing[1] / 2.1
+        return height, width
 
 
 def get_callbacks(app, df: DataFrame, original_id_col: list):

@@ -8,7 +8,6 @@ from dash import Dash, dcc, html
 import dash_bootstrap_components as dbc
 
 import dash_bio as dashbio
-import dash_bio.NglMoleculeViewer as NglMoleculeViewer
 import plotly.graph_objects as go
 
 
@@ -79,6 +78,9 @@ class Visualizator:
             [
                 # Header
                 self.get_header(app),
+                # sizing of the molecule viewer
+                dcc.Location(id="url"),
+                html.Div(id="molviewer_sizing_div"),
                 # graph and controls
                 dbc.Row(
                     [
