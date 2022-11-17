@@ -295,6 +295,11 @@ def get_callbacks_pdb(app, df, struct_container, original_id_col):
 
         return height, width
 
+    @app.callback(Output("offcanvas", "is_open"), Input("settings_button", "n_clicks"))
+    def handle_canvas(button_click):
+        if button_click:
+            return True
+
 
 def get_callbacks(app, df: DataFrame, original_id_col: list):
     @app.callback(
