@@ -163,6 +163,7 @@ def get_callbacks_pdb(app, df, struct_container, original_id_col):
         Input("range_start", "value"),
         Input("range_end", "value"),
         Input("selected_atoms", "value"),
+        Input("reset_view_button", "n_clicks"),
     )
     def display_molecule(
         clickdata,
@@ -170,6 +171,7 @@ def get_callbacks_pdb(app, df, struct_container, original_id_col):
         range_start: int,
         range_end: int,
         selected_atoms: list,
+        reset_view_clicks: int,
     ):
         """
         callback function to handle the displaying of the molecule
@@ -178,6 +180,7 @@ def get_callbacks_pdb(app, df, struct_container, original_id_col):
         :param range_start: in the dropdown menu selected start
         :param range_end: in the dropdown menu selected end
         :param selected_atoms: selected values of the dropdown menu for highlighted atoms
+        :param reset_view_clicks: button to reset the view of the molecule viewer.
         :return:
         """
 
@@ -317,8 +320,6 @@ def get_callbacks_pdb(app, df, struct_container, original_id_col):
         if not ctx.triggered:
             raise PreventUpdate
 
-        print(div_style_dic)
-
         # sliders are used
         if ctx.triggered_id == "height_slider" or ctx.triggered_id == "width_slider":
             # set style of div accordingly
@@ -340,8 +341,6 @@ def get_callbacks_pdb(app, df, struct_container, original_id_col):
         # set style of div accordingly
         div_style_dic["height"] = str(height + 1) + "px"
         div_style_dic["width"] = str(width + 1) + "px"
-
-        print(div_style_dic)
 
         return height, width, height, width, div_style_dic
 

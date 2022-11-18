@@ -72,7 +72,9 @@ class Visualizator:
         Initializes app & Builds html layout for Dash
         :return: layout
         """
-        app = Dash(__name__, external_stylesheets=[dbc.themes.BOOTSTRAP])
+        app = Dash(
+            __name__, external_stylesheets=[dbc.themes.BOOTSTRAP, dbc.icons.BOOTSTRAP]
+        )
 
         app.layout = dbc.Container(
             [
@@ -123,7 +125,23 @@ class Visualizator:
                                                     },
                                                 ),
                                             ],
-                                            width=9,
+                                            width=8,
+                                        ),
+                                        dbc.Col(
+                                            [
+                                                dbc.Button(
+                                                    "",
+                                                    id="reset_view_button",
+                                                    class_name="bi bi-arrow-counterclockwise",
+                                                    color="dark",
+                                                    outline=True,
+                                                    style={
+                                                        "margin-top": "5px",
+                                                        "margin-bottom": "5px",
+                                                    },
+                                                )
+                                            ],
+                                            width=1,
                                         ),
                                         dbc.Col(
                                             [
