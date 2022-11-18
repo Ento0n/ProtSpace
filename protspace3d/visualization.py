@@ -80,7 +80,7 @@ class Visualizator:
                 self.get_header(app),
                 # sizing of the molecule viewer
                 dcc.Location(id="url"),
-                html.Div(id="molviewer_sizing_div"),
+                html.Div(id="molviewer_sizing_div", hidden=True),
                 # graph and controls
                 dbc.Row(
                     [
@@ -154,6 +154,7 @@ class Visualizator:
                                             id="ngl_molecule_viewer",
                                         ),
                                     ],
+                                    id="moleculeviewer_div",
                                     style={
                                         "border-bottom": "1px solid grey",
                                         "border-right": "1px solid grey",

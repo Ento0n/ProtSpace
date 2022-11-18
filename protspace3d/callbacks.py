@@ -304,25 +304,46 @@ def get_callbacks_pdb(app, df, struct_container, original_id_col):
     @app.callback(
         Output("ngl_molecule_viewer", "height"),
         Output("ngl_molecule_viewer", "width"),
+        Output("height_slider", "value"),
+        Output("width_slider", "value"),
+        Output("moleculeviewer_div", "style"),
         Input("molviewer_sizing_div", "children"),
         Input("height_slider", "value"),
         Input("width_slider", "value"),
+        Input("moleculeviewer_div", "style"),
     )
-    def set_molviewer_size(sizing, slider_height, slider_width):
+    def set_molviewer_size(sizing, slider_height, slider_width, div_style_dic):
         ctx = dash.callback_context
         if not ctx.triggered:
             raise PreventUpdate
 
-        print(f"trigger id: {ctx.triggered_id}")
+        print(div_style_dic)
 
         # sliders are used
         if ctx.triggered_id == "height_slider" or ctx.triggered_id == "width_slider":
-            return slider_height, slider_width
+            # set style of div accordingly
+            div_style_dic["height"] = slider_height
+            div_style_dic["width"] = slider_width
+
+            return (
+                slider_height,
+                slider_width,
+                slider_height,
+                slider_width,
+                div_style_dic,
+            )
 
         # automatic sizing
         height = sizing[0] / 1.2
         width = sizing[1] / 2.1
-        return height, width
+
+        # set style of div accordingly
+        div_style_dic["height"] = str(height + 1) + "px"
+        div_style_dic["width"] = str(width + 1) + "px"
+
+        print(div_style_dic)
+
+        return height, width, height, width, div_style_dic
 
 
 def get_callbacks(app, df: DataFrame, original_id_col: list):
