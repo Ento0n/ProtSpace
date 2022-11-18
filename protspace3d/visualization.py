@@ -227,6 +227,14 @@ class Visualizator:
                                             ]
                                         ),
                                         html.Br(),
+                                        dbc.Button(
+                                            "Recalculate molecule viewing size",
+                                            id="recal_size_button",
+                                            class_name="d-grid mx-auto",
+                                            color="dark",
+                                            outline=True,
+                                            style={"margin-bottom": "10px"},
+                                        ),
                                         dcc.Markdown("Height:"),
                                         dcc.Slider(
                                             id="height_slider",

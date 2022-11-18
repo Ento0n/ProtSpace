@@ -302,6 +302,7 @@ def get_callbacks_pdb(app, df, struct_container, original_id_col):
         """,
         Output("molviewer_sizing_div", "children"),
         Input("url", "href"),
+        Input("recal_size_button", "n_clicks"),
     )
 
     @app.callback(
