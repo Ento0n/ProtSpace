@@ -70,6 +70,22 @@ class Visualizator:
 
         return header
 
+    @staticmethod
+    def get_disclaimer_modal():
+        modal = dbc.Modal(
+            [
+                dbc.ModalHeader(dbc.ModalTitle("Disclaimer"), close_button=False),
+                dbc.ModalBody("Here the disclaimer text is shown!"),
+                dbc.ModalFooter(dbc.Button("Agree", id="disclaimer_modal_button")),
+            ],
+            id="disclaimer_modal",
+            size="xl",
+            is_open=True,
+            backdrop="static",
+        )
+
+        return modal
+
     def init_app_pdb(self, original_id_col: list):
         """
         Initializes app & Builds html layout for Dash
@@ -281,6 +297,9 @@ class Visualizator:
                         ),
                     ]
                 ),
+                # modal with disclaimer that opens on startup
+                # has to be at the end, otherwise automatic sizing doesn't work...
+                self.get_disclaimer_modal(),
             ],
             fluid=True,
         )
@@ -298,6 +317,8 @@ class Visualizator:
             [
                 # Header
                 self.get_header(app),
+                # model with disclaimer that opens on startup
+                self.get_disclaimer_modal(),
                 # space between header and content below
                 dbc.Row([html.Br()]),
                 # graph and controls

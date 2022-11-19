@@ -370,3 +370,13 @@ def get_callbacks(app, df: DataFrame, original_id_col: list):
             df, selected_column=selected_value, original_id_col=original_id_col
         )
         return fig
+
+    @app.callback(
+        Output("disclaimer_modal", "is_open"),
+        Input("disclaimer_modal_button", "n_clicks"),
+    )
+    def close_disclaimer_modal(button):
+        if button:
+            return False
+
+        return True
