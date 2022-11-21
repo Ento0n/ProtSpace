@@ -336,7 +336,7 @@ def get_callbacks_pdb(app, df, struct_container, original_id_col):
             )
 
         # automatic sizing
-        height = sizing[0] / 1.2
+        height = (sizing[0] - 150) / 1.05
         width = sizing[1] / 2.1
 
         # set style of div accordingly

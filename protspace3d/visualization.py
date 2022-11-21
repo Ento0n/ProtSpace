@@ -246,6 +246,17 @@ class Visualizator:
                                             ]
                                         ),
                                         html.Br(),
+                                        dcc.Slider(
+                                            id="spacing_slider",
+                                            min=10,
+                                            max=200,
+                                            value=50,
+                                            marks=None,
+                                            tooltip={
+                                                "placement": "bottom",
+                                                "always_visible": False,
+                                            },
+                                        ),
                                         dbc.Button(
                                             "Recalculate molecule viewing size",
                                             id="recal_size_button",
@@ -279,17 +290,6 @@ class Visualizator:
                                             },
                                         ),
                                         dcc.Markdown("Spacing:"),
-                                        dcc.Slider(
-                                            id="spacing_slider",
-                                            min=10,
-                                            max=200,
-                                            value=50,
-                                            marks=None,
-                                            tooltip={
-                                                "placement": "bottom",
-                                                "always_visible": False,
-                                            },
-                                        ),
                                     ],
                                 ),
                             ],
