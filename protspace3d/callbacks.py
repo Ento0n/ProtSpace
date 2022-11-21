@@ -380,3 +380,13 @@ def get_callbacks(app, df: DataFrame, original_id_col: list):
             return False
 
         return True
+
+    @app.callback(
+        Output("help_modal", "is_open"),
+        Input("help_button", "n_clicks"),
+    )
+    def open_help_modal(button):
+        if button:
+            return True
+
+        return False

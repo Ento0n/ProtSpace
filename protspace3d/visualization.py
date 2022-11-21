@@ -40,16 +40,43 @@ class Visualizator:
         csv_header.sort(key=str.lower)
         self.csv_header = csv_header
 
-    @staticmethod
-    def get_header(app: Dash):
+    def get_header(self, app: Dash):
         header = dbc.Row(
             [
                 dbc.Col(
                     html.H1("ProtSpace3D", style={"color": "white"}),
-                    width=4,
+                    style={"background-color": "black"},
+                    xxl=10,
+                    xl=10,
+                    lg=9,
+                    md=9,
+                    sm=7,
+                    xs=7,
+                ),
+                dbc.Col(
+                    [
+                        dbc.Button(
+                            "",
+                            id="help_button",
+                            class_name="bi bi-question-lg",
+                            color="dark",
+                            style={
+                                "margin-top": "10px",
+                                "margin-bottom": "5px",
+                                "margin-right": "20px",
+                                "background-color": "black",
+                            },
+                        ),
+                        self.get_help_modal(),
+                    ],
+                    xxl=1,
+                    xl=1,
+                    lg=2,
+                    md=2,
+                    sm=3,
+                    xs=3,
                     style={"background-color": "black"},
                 ),
-                dbc.Col(width=7, style={"background-color": "black"}),
                 dbc.Col(
                     html.A(
                         [
@@ -63,7 +90,12 @@ class Visualizator:
                         target="_blank",
                     ),
                     style={"background-color": "black"},
-                    width=1,
+                    xxl=1,
+                    xl=1,
+                    lg=1,
+                    md=1,
+                    sm=2,
+                    xs=2,
                 ),
             ]
         )
@@ -82,6 +114,21 @@ class Visualizator:
             size="xl",
             is_open=True,
             backdrop="static",
+        )
+
+        return modal
+
+    @staticmethod
+    def get_help_modal():
+        modal = dbc.Modal(
+            [
+                dbc.ModalHeader(dbc.ModalTitle("Help"), close_button=True),
+                dbc.ModalBody("Here the help text is shown!"),
+            ],
+            id="help_modal",
+            size="xl",
+            is_open=False,
+            backdrop=True,
         )
 
         return modal
@@ -252,6 +299,7 @@ class Visualizator:
                                             ]
                                         ),
                                         html.Br(),
+                                        dcc.Markdown("Spacing:"),
                                         dcc.Slider(
                                             id="spacing_slider",
                                             min=10,
@@ -295,7 +343,6 @@ class Visualizator:
                                                 "always_visible": False,
                                             },
                                         ),
-                                        dcc.Markdown("Spacing:"),
                                     ],
                                 ),
                             ],
