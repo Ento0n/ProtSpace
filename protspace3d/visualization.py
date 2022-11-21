@@ -144,7 +144,12 @@ class Visualizator:
                                                     },
                                                 ),
                                             ],
-                                            width=8,
+                                            xxl=9,
+                                            xl=8,
+                                            lg=7,
+                                            md=6,
+                                            sm=5,
+                                            xs=4,
                                         ),
                                         dbc.Col(
                                             [
@@ -157,13 +162,9 @@ class Visualizator:
                                                     style={
                                                         "margin-top": "5px",
                                                         "margin-bottom": "5px",
+                                                        "margin-right": "20px",
                                                     },
-                                                )
-                                            ],
-                                            width=1,
-                                        ),
-                                        dbc.Col(
-                                            [
+                                                ),
                                                 dbc.Button(
                                                     "Settings",
                                                     id="settings_button",
@@ -175,7 +176,12 @@ class Visualizator:
                                                     },
                                                 ),
                                             ],
-                                            width=3,
+                                            xxl=3,
+                                            xl=4,
+                                            lg=5,
+                                            md=6,
+                                            sm=7,
+                                            xs=8,
                                         ),
                                     ]
                                 ),
