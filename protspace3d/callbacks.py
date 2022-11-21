@@ -51,15 +51,11 @@ def handle_highlighting(
     range_for_end = list()
     selectable_atoms = list()
 
-    download_disabled = False
-
     if len(seq_ids) > 1 or len(seq_ids) == 0:
         # disable the dropdown menus for range selection and highlighting if more than 1 molecule is selected
         start_disabled = True
         end_disabled = True
         atoms_disabled = True
-
-        download_disabled = True
 
     # only one molecule selected
     else:
@@ -148,7 +144,6 @@ def handle_highlighting(
         range_for_start,
         range_for_end,
         selectable_atoms,
-        download_disabled,
     )
 
 
@@ -237,7 +232,6 @@ def get_callbacks_pdb(app, df, struct_container, original_id_col):
             range_for_start,
             range_for_end,
             selectable_atoms,
-            download_disabled,
         ) = handle_highlighting(
             seq_ids, struct_container, range_start, range_end, selected_atoms
         )
@@ -260,6 +254,9 @@ def get_callbacks_pdb(app, df, struct_container, original_id_col):
 
         # back to original IDs
         seq_ids = to_original_id(seq_ids, original_id_col, df)
+
+        # enable download button if one protein is selected
+        download_disabled = False
 
         # prevent updating if data list is empty since molecule viewer gives error otherwise
         if not data_list:
@@ -359,18 +356,25 @@ def get_callbacks_pdb(app, df, struct_container, original_id_col):
         Input("download_molecule_button", "n_clicks"),
         Input("filename_input", "value"),
     )
-    def download_molecule(button, filename_input):
+    def download_molecule(button_clicks: int, filename_input: str):
+        ctx = dash.callback_context
+        if not ctx.triggered:
+            raise PreventUpdate
+
+        if filename_input is None:
+            filename_input = "molecule_image"
+
         image_parameters = {
             "antialias": True,
             "transparent": True,
             "trim": True,
-            "defaultfilename": filename_input,
+            "defaultFilename": filename_input,
         }
 
-        if button:
+        download_image = False
+
+        if ctx.triggered_id == "download_molecule_button":
             download_image = True
-        else:
-            download_image = False
 
         return download_image, image_parameters
 
