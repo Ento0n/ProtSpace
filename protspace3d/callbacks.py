@@ -51,11 +51,15 @@ def handle_highlighting(
     range_for_end = list()
     selectable_atoms = list()
 
+    download_disabled = False
+
     if len(seq_ids) > 1 or len(seq_ids) == 0:
         # disable the dropdown menus for range selection and highlighting if more than 1 molecule is selected
         start_disabled = True
         end_disabled = True
         atoms_disabled = True
+
+        download_disabled = True
 
     # only one molecule selected
     else:
@@ -144,6 +148,7 @@ def handle_highlighting(
         range_for_start,
         range_for_end,
         selectable_atoms,
+        download_disabled,
     )
 
 
@@ -158,6 +163,7 @@ def get_callbacks_pdb(app, df, struct_container, original_id_col):
         Output("range_end", "options"),
         Output("selected_atoms", "options"),
         Output("selected_atoms", "value"),
+        Output("download_molecule_button", "disabled"),
         Input("graph", "clickData"),
         Input("molecules_dropdown", "value"),
         Input("range_start", "value"),
@@ -231,6 +237,7 @@ def get_callbacks_pdb(app, df, struct_container, original_id_col):
             range_for_start,
             range_for_end,
             selectable_atoms,
+            download_disabled,
         ) = handle_highlighting(
             seq_ids, struct_container, range_start, range_end, selected_atoms
         )
@@ -268,6 +275,7 @@ def get_callbacks_pdb(app, df, struct_container, original_id_col):
             range_for_end,
             selectable_atoms,
             selected_atoms,
+            download_disabled,
         )
 
     @app.callback(
@@ -344,6 +352,27 @@ def get_callbacks_pdb(app, df, struct_container, original_id_col):
         div_style_dic["width"] = str(width + 1) + "px"
 
         return height, width, height, width, div_style_dic
+
+    @app.callback(
+        Output("ngl_molecule_viewer", "downloadImage"),
+        Output("ngl_molecule_viewer", "imageParameters"),
+        Input("download_molecule_button", "n_clicks"),
+        Input("filename_input", "value"),
+    )
+    def download_molecule(button, filename_input):
+        image_parameters = {
+            "antialias": True,
+            "transparent": True,
+            "trim": True,
+            "defaultfilename": filename_input,
+        }
+
+        if button:
+            download_image = True
+        else:
+            download_image = False
+
+        return download_image, image_parameters
 
 
 def get_callbacks(app, df: DataFrame, original_id_col: list):

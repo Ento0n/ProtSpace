@@ -343,6 +343,32 @@ class Visualizator:
                                                 "always_visible": False,
                                             },
                                         ),
+                                        dbc.Row(
+                                            [
+                                                dbc.Col(
+                                                    dcc.Input(
+                                                        id="filename_input",
+                                                        type="text",
+                                                        placeholder="filename",
+                                                        style={
+                                                            "height": "38px",
+                                                            "margin-right": "20px",
+                                                        },
+                                                    ),
+                                                    width=6,
+                                                ),
+                                                dbc.Col(
+                                                    dbc.Button(
+                                                        "Download image",
+                                                        id="download_molecule_button",
+                                                        color="dark",
+                                                        outline=True,
+                                                        disabled=True,
+                                                    ),
+                                                    width=6,
+                                                ),
+                                            ]
+                                        ),
                                     ],
                                 ),
                             ],
