@@ -159,6 +159,7 @@ def get_callbacks_pdb(app, df, struct_container, original_id_col):
         Output("selected_atoms", "options"),
         Output("selected_atoms", "value"),
         Output("download_molecule_button", "disabled"),
+        Output("mol_name_storage", "data"),
         Input("graph", "clickData"),
         Input("molecules_dropdown", "value"),
         Input("range_start", "value"),
@@ -258,6 +259,9 @@ def get_callbacks_pdb(app, df, struct_container, original_id_col):
         # enable download button if one protein is selected
         download_disabled = False
 
+        # convert sequence ids list into string format
+        mol_names = "_".join(seq_ids)
+
         # prevent updating if data list is empty since molecule viewer gives error otherwise
         if not data_list:
             raise PreventUpdate
@@ -273,6 +277,7 @@ def get_callbacks_pdb(app, df, struct_container, original_id_col):
             selectable_atoms,
             selected_atoms,
             download_disabled,
+            mol_names,
         )
 
     @app.callback(
@@ -355,14 +360,15 @@ def get_callbacks_pdb(app, df, struct_container, original_id_col):
         Output("ngl_molecule_viewer", "imageParameters"),
         Input("download_molecule_button", "n_clicks"),
         Input("filename_input", "value"),
+        Input("mol_name_storage", "data"),
     )
-    def download_molecule(button_clicks: int, filename_input: str):
+    def download_molecule(button_clicks: int, filename_input: str, mol_names: str):
         ctx = dash.callback_context
         if not ctx.triggered:
             raise PreventUpdate
 
         if filename_input is None:
-            filename_input = "molecule_image"
+            filename_input = mol_names
 
         image_parameters = {
             # Antialiasing, makes image smoother

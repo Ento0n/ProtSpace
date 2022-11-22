@@ -149,6 +149,9 @@ class Visualizator:
                 # sizing of the molecule viewer
                 dcc.Location(id="url"),
                 html.Div(id="molviewer_sizing_div", hidden=True),
+                # storage to save the selected molecules
+                # Needed for image download name
+                dcc.Store(id="mol_name_storage"),
                 # graph and controls
                 dbc.Row(
                     [
