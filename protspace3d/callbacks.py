@@ -365,8 +365,11 @@ def get_callbacks_pdb(app, df, struct_container, original_id_col):
             filename_input = "molecule_image"
 
         image_parameters = {
+            # Antialiasing, makes image smoother
             "antialias": True,
+            # change the background from black to transparent
             "transparent": True,
+            # trim background to edges of molecule, only works with transparent
             "trim": True,
             "defaultFilename": filename_input,
         }
