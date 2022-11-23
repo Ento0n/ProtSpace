@@ -222,8 +222,9 @@ def get_callbacks_pdb(app, df, struct_container, original_id_col):
             # extract sequence ID
             seq_id = df_row["Name"]
 
-            # add selected sequence ID to already selected IDs
-            seq_ids.append(seq_id)
+            if seq_id not in seq_ids:
+                # add selected sequence ID to already selected IDs
+                seq_ids.append(seq_id)
 
         # path to .pdb file
         struct_path = str(struct_container.get_structure_dir()) + "/"
