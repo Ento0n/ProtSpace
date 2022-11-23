@@ -133,14 +133,20 @@ class Visualizator:
 
         return modal
 
+    @staticmethod
+    def get_app():
+        app = Dash(
+            __name__, external_stylesheets=[dbc.themes.BOOTSTRAP, dbc.icons.BOOTSTRAP]
+        )
+
+        return app
+
     def init_app_pdb(self, original_id_col: list):
         """
         Initializes app & Builds html layout for Dash
         :return: layout
         """
-        app = Dash(
-            __name__, external_stylesheets=[dbc.themes.BOOTSTRAP, dbc.icons.BOOTSTRAP]
-        )
+        app = self.get_app()
 
         app.layout = dbc.Container(
             [
@@ -394,9 +400,7 @@ class Visualizator:
         Initializes app & Builds html layout for Dash
         :return: layout
         """
-        app = Dash(
-            __name__, external_stylesheets=[dbc.themes.BOOTSTRAP, dbc.icons.BOOTSTRAP]
-        )
+        app = self.get_app()
 
         app.layout = dbc.Container(
             [
