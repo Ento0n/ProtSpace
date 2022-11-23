@@ -13,10 +13,10 @@ import pandas as pd
 from pandas import DataFrame
 
 
-def to_mapped_id(original_seq_ids: list, original_id_col: list, df: DataFrame):
+def to_mapped_id(sel_original_seq_ids: list, original_id_col: list, df: DataFrame):
     seq_ids = list()
 
-    for id in original_seq_ids:
+    for id in sel_original_seq_ids:
         index_num = original_id_col.index(id)
         mapped_id = df.index[index_num]
         seq_ids.append(mapped_id)
@@ -24,10 +24,10 @@ def to_mapped_id(original_seq_ids: list, original_id_col: list, df: DataFrame):
     return seq_ids
 
 
-def to_original_id(mapped_seq_ids: list, original_id_col: list, df: DataFrame):
+def to_original_id(sel_mapped_seq_ids: list, original_id_col: list, df: DataFrame):
     seq_ids = list()
 
-    for id in mapped_seq_ids:
+    for id in sel_mapped_seq_ids:
         index_num = df.index.get_indexer_for([id])[0]
         original_id = original_id_col[index_num]
         seq_ids.append(original_id)
@@ -194,7 +194,10 @@ def get_callbacks_pdb(app, df, struct_container, original_id_col):
         seq_ids = list()
         saved_seq_ids = list()
         if dd_molecules is not None:
-            seq_ids = to_mapped_id(dd_molecules, original_id_col, df)
+            if original_id_col is not None:
+                seq_ids = to_mapped_id(dd_molecules, original_id_col, df)
+            else:
+                seq_ids = dd_molecules
 
             # save unedited seq ids to replace edited seq ids later
             # (editing for range selection and highlighting)
@@ -253,10 +256,11 @@ def get_callbacks_pdb(app, df, struct_container, original_id_col):
             # replace edited seq ids with saved unedited seq ids
             seq_ids = saved_seq_ids
 
-        # back to original IDs
-        seq_ids = to_original_id(seq_ids, original_id_col, df)
+        if original_id_col is not None:
+            # back to original IDs
+            seq_ids = to_original_id(seq_ids, original_id_col, df)
 
-        # enable download button if one protein is selected
+        # enable download button at first protein selection
         download_disabled = False
 
         # convert sequence ids list into string format
@@ -366,9 +370,6 @@ def get_callbacks_pdb(app, df, struct_container, original_id_col):
         ctx = dash.callback_context
         if not ctx.triggered:
             raise PreventUpdate
-
-        print(filename_input)
-        print(mol_names)
 
         if filename_input is None or filename_input is "":
             filename_input = mol_names

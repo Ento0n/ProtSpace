@@ -144,9 +144,15 @@ def setup():
     # Create visualization object
     visualizator = Visualizator(fig, csv_header)
 
+    # get ids of the proteins
+    if original_id_col is not None:
+        ids = original_id_col
+    else:
+        ids = df.index.to_list()
+
     # --- APP creation ---
     if pdb_flag:
-        application = visualizator.init_app_pdb(original_id_col)
+        application = visualizator.init_app_pdb(ids)
     else:
         application = visualizator.init_app()
 

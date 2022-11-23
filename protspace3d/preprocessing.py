@@ -105,7 +105,6 @@ class DataPreprocessor:
             df_csv = pd.read_csv(
                 label_csv_p, sep=self.csv_separator, index_col=self.uid_col
             )
-            original_id_col = df_csv.index.to_list()
 
         # replace empty values with NA
         df_csv.fillna("NA", inplace=True)
