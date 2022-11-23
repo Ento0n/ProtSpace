@@ -373,6 +373,7 @@ class Visualizator:
                                             ]
                                         ),
                                     ],
+                                    style={"width": "50%"},
                                 ),
                             ],
                             width=6,
