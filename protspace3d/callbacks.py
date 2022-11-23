@@ -371,7 +371,7 @@ def get_callbacks_pdb(app, df, struct_container, original_id_col):
         if not ctx.triggered:
             raise PreventUpdate
 
-        if filename_input is None or filename_input is "":
+        if filename_input is None or filename_input == "":
             filename_input = mol_names
 
         image_parameters = {
