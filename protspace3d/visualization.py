@@ -394,7 +394,9 @@ class Visualizator:
         Initializes app & Builds html layout for Dash
         :return: layout
         """
-        app = Dash(__name__, external_stylesheets=[dbc.themes.BOOTSTRAP])
+        app = Dash(
+            __name__, external_stylesheets=[dbc.themes.BOOTSTRAP, dbc.icons.BOOTSTRAP]
+        )
 
         app.layout = dbc.Container(
             [
