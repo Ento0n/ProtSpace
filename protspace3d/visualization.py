@@ -35,9 +35,6 @@ class Visualizator:
 
     def __init__(self, fig: go.Figure, csv_header: list[str]):
         self.fig = fig
-
-        # sort csv header alphabetically
-        csv_header.sort(key=str.lower)
         self.csv_header = csv_header
 
     def get_header(self, app: Dash):

@@ -124,6 +124,9 @@ class DataPreprocessor:
             root, df_csv, emb_h5file, csv_uids, index_name
         )
 
+        # sort csv header alphabetically
+        csv_header.sort(key=str.lower)
+
         # handle html saving
         DataPreprocessor._handle_html(
             self.html_cols, csv_header, self.data_dir_path, df=df_embeddings
