@@ -451,6 +451,19 @@ class Visualizator:
         :return: plotly graphical object
         """
 
+        # custom separator to sort str, int and float (str case-insensitive)
+        # order: 1. int and float 2. str 3. rest 4. NA
+        def my_comparator(item):
+            if isinstance(item, float) or isinstance(item, int):
+                return 0, item
+            elif item == "NA":
+                return 3, item
+            elif isinstance(item, str):
+                item = item.lower()
+                return 1, item
+            else:
+                return 2, item
+
         mapped_index = None
         if original_id_col is not None:
             # swap index
@@ -459,7 +472,7 @@ class Visualizator:
 
         col_groups = df[selected_column].unique().tolist()
 
-        col_groups.sort(key=str.lower)
+        col_groups.sort(key=my_comparator)
 
         df["class_index"] = np.ones(len(df)) * -100
 

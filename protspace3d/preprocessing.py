@@ -87,20 +87,25 @@ class DataPreprocessor:
         emb_h5file = root / f"{self.basename}.h5"
         label_csv_p = root / f"{self.basename}.csv"
 
-        csv_less_flag = self._check_files(emb_h5file, label_csv_p)
+        csv_less_flag = self._check_files(emb_h5file, label_csv_p, self.csv_separator)
+
+        mapped_flag = self._check_mapped(label_csv_p, self.csv_separator)
 
         # processed by fasta_mapper.py?
         original_id_col = None
-        if self.basename.endswith("_mapped"):
+        if self.basename.endswith("_mapped") and csv_less_flag is False:
             # UID col from fasta_mapper.py is always 0
             df_csv = pd.read_csv(label_csv_p, index_col=0)
 
             # Extract original ID column
             original_id_col = df_csv["original_id"].to_list()
             df_csv.drop(columns=["original_id"], inplace=True)
-
+        # no csv given or csv only exists for mnapping
         elif csv_less_flag:
-            df_csv = self._create_csv_less_df(emb_h5file)
+            df_csv, original_id_col = self._create_csv_less_df(
+                emb_h5file, mapped_flag, label_csv_p
+            )
+        # not mapped and csv given
         else:
             df_csv = pd.read_csv(
                 label_csv_p, sep=self.csv_separator, index_col=self.uid_col
@@ -133,8 +138,12 @@ class DataPreprocessor:
 
         return df_embeddings, fig, csv_header, original_id_col
 
-    @staticmethod
-    def _check_files(emb_h5file: Path, label_csv_p: Path):
+    def _check_files(
+        self,
+        emb_h5file: Path,
+        label_csv_p: Path,
+        separator: str,
+    ):
         """
         Checks whether all files are present
         :param emb_h5file: h5 file Path
@@ -152,25 +161,72 @@ class DataPreprocessor:
         if not label_csv_p.is_file():
             csv_less_flag = True
 
+            print(
+                "No csv file found!\nActivate csv less mode, no groups or features are visualized."
+            )
+        # get csv headers to check whether csv only exists for mapping
+        else:
+            headers = self._get_headers(label_csv_p, separator)
+            mapped_headers = ["mapped_id", "original_id"]
+
+            mapped_headers.sort()
+            headers.sort()
+
+            if headers == mapped_headers:
+                csv_less_flag = True
+
+                print("No groups/features in csv file!")
+
         return csv_less_flag
 
+    def _check_mapped(self, label_csv_p: Path, separator: str):
+        mapped_flag = False
+        if label_csv_p.is_file():
+            headers = self._get_headers(label_csv_p, separator)
+
+            mapped_headers = ["mapped_id", "original_id"]
+
+            if mapped_headers in headers or headers.sort() == mapped_headers.sort():
+                mapped_flag = True
+
+        return mapped_flag
+
     @staticmethod
-    def _create_csv_less_df(emb_h5file: Path):
-        # get all ids of the h5 file
-        h5_uids = list()
-        with h5py.File(emb_h5file, "r") as hdf:
-            for identifier, embd in hdf.items():
-                h5_uids.append(identifier)
+    def _get_headers(label_csv_p: Path, separator: str):
+        with open(label_csv_p, "r", encoding="utf-8-sig") as f:
+            first_line = f.readline()
+            headers = first_line.split(separator)
 
-        # create new dataframe with collected identifiers
-        df = pd.DataFrame(index=h5_uids, columns=["no group"])
-        df.index.name = "Name"
+        last_item = headers.pop()
+        headers.append(last_item.strip())
 
-        print(
-            "No csv file found!\nActivate csv less mode, no groups or features are visualized."
-        )
+        return headers
 
-        return df
+    @staticmethod
+    def _create_csv_less_df(emb_h5file: Path, mapped_flag: bool, label_csv_p: Path):
+        original_id_col = None
+        if mapped_flag:
+            # read csv file
+            df = pd.read_csv(label_csv_p, sep=",", index_col=0)
+
+            # extract original ID column
+            original_id_col = df["original_id"].to_list()
+            df.drop(columns=["original_id"], inplace=True)
+
+            # create empty column no_group
+            df["no_group"] = ""
+        else:
+            # get all ids of the h5 file
+            h5_uids = list()
+            with h5py.File(emb_h5file, "r") as hdf:
+                for identifier, embd in hdf.items():
+                    h5_uids.append(identifier)
+
+            # create new dataframe with collected identifiers
+            df = pd.DataFrame(index=h5_uids, columns=["no group"])
+            df.index.name = "ID"
+
+        return df, original_id_col
 
     @staticmethod
     def _handle_html(
