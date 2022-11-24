@@ -118,7 +118,7 @@ class DataPreprocessor:
         index_name = df_csv.index.name
 
         # get UIDs
-        csv_uids = df_csv.index
+        csv_uids = df_csv.index.to_list()
 
         df_embeddings, csv_header = self._read_df_csv(
             root, df_csv, emb_h5file, csv_uids, index_name
