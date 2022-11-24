@@ -177,6 +177,7 @@ class Visualizator:
                                     responsive=True,
                                 ),
                             ],
+                            id="left_col",
                             width=6,
                             style={"border-right": "solid black 1px"},
                         ),
@@ -317,6 +318,15 @@ class Visualizator:
                                                 "always_visible": False,
                                             },
                                         ),
+                                        dcc.Markdown("Space distribution:"),
+                                        dcc.Slider(
+                                            id="distribution_slider",
+                                            min=0,
+                                            max=12,
+                                            value=6,
+                                            step=1,
+                                            marks=None,
+                                        ),
                                         dbc.Button(
                                             "Recalculate molecule viewing size",
                                             id="recal_size_button",
@@ -379,6 +389,7 @@ class Visualizator:
                                     style={"width": "50%"},
                                 ),
                             ],
+                            id="right_col",
                             width=6,
                         ),
                     ]

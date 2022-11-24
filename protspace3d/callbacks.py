@@ -392,6 +392,16 @@ def get_callbacks_pdb(app, df, struct_container, original_id_col):
 
         return download_image, image_parameters
 
+    @app.callback(
+        Output("left_col", "width"),
+        Output("right_col", "width"),
+        Input("distribution_slider", "value"),
+    )
+    def set_space_distribution(left_width):
+        right_width = 12 - left_width
+
+        return left_width, right_width
+
 
 def get_callbacks(app, df: DataFrame, original_id_col: list):
     @app.callback(
