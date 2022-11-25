@@ -194,7 +194,8 @@ class DataPreprocessor:
             headers.sort()
             mapped_headers.sort()
 
-            if mapped_headers in headers or headers == mapped_headers:
+            check = all(item in headers for item in mapped_headers)
+            if check or headers == mapped_headers:
                 mapped_flag = True
 
         return mapped_flag
