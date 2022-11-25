@@ -79,10 +79,11 @@ def extract_rank1_models(from_dir: PosixPath, pdb_dir: PosixPath, json_dir: Posi
 
 def main():
     colabfold_dir = setup_arguments()
+    predictions = colabfold_dir / "predictions"
     pdb_dir = colabfold_dir.parent / "pdb"
     json_dir = colabfold_dir.parent / "json"
 
-    extract_rank1_models(from_dir=colabfold_dir, pdb_dir=pdb_dir, json_dir=json_dir)
+    extract_rank1_models(from_dir=predictions, pdb_dir=pdb_dir, json_dir=json_dir)
 
 
 if __name__ == "__main__":
