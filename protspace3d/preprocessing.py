@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 
+import os
 from pathlib import Path
 import h5py
 from scipy.spatial.distance import pdist, squareform
@@ -71,6 +72,7 @@ class DataPreprocessor:
         csv_separator: str,
         uid_col: int,
         html_cols: list[int],
+        reset: bool,
     ):
         self.output_d = output_d
         self.hdf_path = hdf_path
@@ -78,6 +80,7 @@ class DataPreprocessor:
         self.csv_separator = csv_separator
         self.uid_col = uid_col
         self.html_cols = html_cols
+        self.reset = reset
 
     def data_preprocessing(self):
         """
@@ -87,6 +90,12 @@ class DataPreprocessor:
         # root directory that holds, proteins.fasta, embeddings.h5, labels.csv and some output_file.html
         emb_h5file = self.hdf_path
         label_csv_p = self.csv_path
+
+        # delete df.csv
+        if self.reset:
+            df_csv_path = self.output_d / "df.csv"
+            if df_csv_path.is_file():
+                os.remove(df_csv_path)
 
         csv_less_flag = self._check_files(emb_h5file, label_csv_p, self.csv_separator)
 

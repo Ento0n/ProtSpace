@@ -20,6 +20,7 @@ class Parser:
             self.uid_col,
             self.html_cols,
             self.pdb_flag,
+            self.reset,
         ) = self._parse_args()
 
     def get_params(self):
@@ -34,6 +35,7 @@ class Parser:
             self.uid_col,
             self.html_cols,
             self.pdb_flag,
+            self.reset,
         )
 
     @staticmethod
@@ -105,6 +107,13 @@ class Parser:
             type=str,
             help="Name of the directory in the output folder, that holds the .pdb files.",
         )
+        # Optional argument
+        parser.add_argument(
+            "--reset",
+            required=False,
+            action="store_true",
+            help="Generated df.csv is deleted and recalculated.",
+        )
 
         args = parser.parse_args()
         output_d = Path(args.output)
@@ -114,8 +123,9 @@ class Parser:
         uid_col = args.uid_col
         html_cols = args.html_cols
         pdb_d = args.pdb
+        reset = args.reset
 
-        return output_d, hdf_path, csv_path, csv_sep, uid_col, html_cols, pdb_d
+        return output_d, hdf_path, csv_path, csv_sep, uid_col, html_cols, pdb_d, reset
 
 
 def setup():
@@ -135,6 +145,7 @@ def setup():
         uid_col,
         html_cols,
         pdb_d,
+        reset,
     ) = parser.get_params()
 
     # pdb directory given or not
@@ -142,7 +153,7 @@ def setup():
 
     # Create data preprocessor object
     data_preprocessor = DataPreprocessor(
-        output_d, hdf_path, csv_path, csv_sep, uid_col, html_cols
+        output_d, hdf_path, csv_path, csv_sep, uid_col, html_cols, reset
     )
 
     # Preprocessing
