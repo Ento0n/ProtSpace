@@ -1,0 +1,1019 @@
+Original fasta header,Name (existing or suggested),Major group,Species,Major taxon for the purposes of this study
+sp|P34073|3L2D_ACAAN AlphaelapitoxinAa2d OS=Acanthophis antarcticus OX=8605 PE=1 SV=1,AlphaelapitoxinAa2d,3FTx,Acanthophis antarcticus,Elapidae
+sp|P01385|3L21_ACAAN AlphaelapitoxinAa2b OS=Acanthophis antarcticus OX=8605 PE=1 SV=1,AlphaelapitoxinAa2b,3FTx,Acanthophis antarcticus,Elapidae
+sp|P0DKW9|3L22E_ACAAN AlphaelapitoxinAa2e OS=Acanthophis antarcticus OX=8605 PE=1 SV=1,AlphaelapitoxinAa2e,3FTx,Acanthophis antarcticus,Elapidae
+sp|P01434|3S11_ACAAN Short neurotoxin 1 OS=Acanthophis antarcticus OX=8605 PE=1 SV=1,Short neurotoxin 1,3FTx,Acanthophis antarcticus,Elapidae
+Ahaetulla_prasina_A0A346CLY6,-,3FTx,Ahaetulla prasina,Colubridae
+Ahaetulla_prasina_A0A193CHL3,-,3FTx,Ahaetulla prasina,Colubridae
+Ahaetulla_prasina_A0A346CLY7,-,3FTx,Ahaetulla prasina,Colubridae
+Ahaetulla_prasina_A0A346CLY8,-,3FTx,Ahaetulla prasina,Colubridae
+Ahaetulla_prasina_A0A193CHL5,-,3FTx,Ahaetulla prasina,Colubridae
+Ahaetulla_prasina_A0A346CLZ1,-,3FTx,Ahaetulla prasina,Colubridae
+Ahaetulla_prasina_A0A346CLZ0,-,3FTx,Ahaetulla prasina,Colubridae
+Ahaetulla_prasina_A0A346CM25,-,3FTx,Ahaetulla prasina,Colubridae
+Ahaetulla_prasina_A0A346CM15,-,3FTx,Ahaetulla prasina,Colubridae
+sp|P19959|3S12_AIPLA Short neurotoxin B OS=Aipysurus laevis OX=8678 PE=1 SV=1,Short neurotoxin B,3FTx,Aipysurus laevis,Elapidae
+sp|P19960|3S14_AIPLA Short neurotoxin D OS=Aipysurus laevis OX=8678 PE=3 SV=1,Short neurotoxin D,3FTx,Aipysurus laevis,Elapidae
+sp|P32879|3S11_AIPLA Short neurotoxin A OS=Aipysurus laevis OX=8678 PE=1 SV=1,Short neurotoxin A,3FTx,Aipysurus laevis,Elapidae
+sp|P19958|3S13_AIPLA Short neurotoxin C OS=Aipysurus laevis OX=8678 PE=1 SV=1,Short neurotoxin C,3FTx,Aipysurus laevis,Elapidae
+"Alsi_9 Alligator sinensis unplaced genomic scaffold, ASM45574v1 scaffold1054_1, whole genome shotgun sequence",-,Ly-6,Alligator sinensis,Crocodilia
+"Alsi_1 Alligator sinensis unplaced genomic scaffold, ASM45574v1 scaffold1054_1, whole genome shotgun sequence",-,Ly-6,Alligator sinensis,Crocodilia
+"Alsi_2 Alligator sinensis unplaced genomic scaffold, ASM45574v1 scaffold1054_1, whole genome shotgun sequence",-,Ly-6,Alligator sinensis,Crocodilia
+"Alsi_3 Alligator sinensis unplaced genomic scaffold, ASM45574v1 scaffold1054_1, whole genome shotgun sequence",-,Ly-6,Alligator sinensis,Crocodilia
+"Alsi_4 Alligator sinensis unplaced genomic scaffold, ASM45574v1 scaffold1054_1, whole genome shotgun sequence",-,Ly-6,Alligator sinensis,Crocodilia
+"Alsi_6 Alligator sinensis unplaced genomic scaffold, ASM45574v1 scaffold1054_1, whole genome shotgun sequence",-,Ly-6,Alligator sinensis,Crocodilia
+"Alsi_10 Alligator sinensis unplaced genomic scaffold, ASM45574v1 scaffold1054_1, whole genome shotgun sequence",-,Ly-6,Alligator sinensis,Crocodilia
+"Alsi_8 Alligator sinensis unplaced genomic scaffold, ASM45574v1 scaffold1054_1, whole genome shotgun sequence",-,Ly-6,Alligator sinensis,Crocodilia
+"Alsi_7 Alligator sinensis unplaced genomic scaffold, ASM45574v1 scaffold1054_1, whole genome shotgun sequence",-,Ly-6,Alligator sinensis,Crocodilia
+"Alsi_5 Alligator sinensis unplaced genomic scaffold, ASM45574v1 scaffold1054_1, whole genome shotgun sequence",-,Ly-6,Alligator sinensis,Crocodilia
+"Anca_6 Anolis carolinensis unplaced genomic scaffold, AnoCar2.0 chrUn0030, whole genome shotgun sequence",-,Ly-6,Anolis carolinensis,Dactyloidae
+"Anca_1 Anolis carolinensis unplaced genomic scaffold, AnoCar2.0 chrUn0030, whole genome shotgun sequence",-,Ly-6,Anolis carolinensis,Dactyloidae
+"Anca_3 Anolis carolinensis unplaced genomic scaffold, AnoCar2.0 chrUn0030, whole genome shotgun sequence",-,Ly-6,Anolis carolinensis,Dactyloidae
+"Anca_2 Anolis carolinensis unplaced genomic scaffold, AnoCar2.0 chrUn0030, whole genome shotgun sequence",-,Ly-6,Anolis carolinensis,Dactyloidae
+"Anca_4 Anolis carolinensis unplaced genomic scaffold, AnoCar2.0 chrUn0030, whole genome shotgun sequence",-,Ly-6,Anolis carolinensis,Dactyloidae
+"Anca_8 Anolis carolinensis unplaced genomic scaffold, AnoCar2.0 chrUn0030, whole genome shotgun sequence",-,Ly-6,Anolis carolinensis,Dactyloidae
+"Anca_7 Anolis carolinensis unplaced genomic scaffold, AnoCar2.0 chrUn0030, whole genome shotgun sequence",-,Ly-6,Anolis carolinensis,Dactyloidae
+"Anca_10 Anolis carolinensis unplaced genomic scaffold, AnoCar2.0 chrUn0030, whole genome shotgun sequence",-,Ly-6,Anolis carolinensis,Dactyloidae
+"Anca_9 Anolis carolinensis unplaced genomic scaffold, AnoCar2.0 chrUn0030, whole genome shotgun sequence",-,Ly-6,Anolis carolinensis,Dactyloidae
+"Anca_5 Anolis carolinensis unplaced genomic scaffold, AnoCar2.0 chrUn0030, whole genome shotgun sequence",-,Ly-6,Anolis carolinensis,Dactyloidae
+sp|P19004|3SOD_ASPSC Cytotoxin homolog S4C8 OS=Aspidelaps scutatus OX=8607 PE=1 SV=1,Cytotoxin homolog S4C8,3FTx,Aspidelaps scutatus,Elapidae
+sp|P19003|3SOG_ASPSC Cytotoxin homolog S3C2 OS=Aspidelaps scutatus OX=8607 PE=1 SV=1,Cytotoxin homolog S3C2,3FTx,Aspidelaps scutatus,Elapidae
+sp|P25670|3L21_ASPSC Long neurotoxin 1 OS=Aspidelaps scutatus OX=8607 PE=1 SV=1,Long neurotoxin 1,3FTx,Aspidelaps scutatus,Elapidae
+Atractaspis_aterrima_GAME01026808,-,3FTx,Atractaspis aterrima,Atractaspididae
+Atractaspis_aterrima_GAMF01050194,-,3FTx,Atractaspis aterrima,Atractaspididae
+Atractaspis_aterrima_GAMF01055489,-,3FTx,Atractaspis aterrima,Atractaspididae
+Atractaspis_aterrima_GAMF01040875,-,3FTx,Atractaspis aterrima,Atractaspididae
+Atractaspis_aterrima_GAMF01005539,-,3FTx,Atractaspis aterrima,Atractaspididae
+sp|B2BRQ6|3L22A_AUSLA AlphaelapitoxinAl2a OS=Austrelaps labialis OX=471292 PE=3 SV=1,AlphaelapitoxinAl2a,3FTx,Austrelaps labialis,Elapidae
+sp|B2BRQ5|3L21_AUSLA AlphaelapitoxinAl2b OS=Austrelaps labialis OX=471292 PE=1 SV=1,AlphaelapitoxinAl2b,3FTx,Austrelaps labialis,Elapidae
+sp|A8S6A8|3L21_AUSSU Long neurotoxin 1 OS=Austrelaps superbus OX=29156 PE=3 SV=1,Long neurotoxin 1,3FTx,Austrelaps superbus,Elapidae
+sp|A8S6B0|3L22_AUSSU AlphaelapitoxinAs2a OS=Austrelaps superbus OX=29156 PE=3 SV=1,AlphaelapitoxinAs2a,3FTx,Austrelaps superbus,Elapidae
+sp|A8S6A4|3S11_AUSSU Short neurotoxin 1 OS=Austrelaps superbus OX=29156 PE=3 SV=1,Short neurotoxin 1,3FTx,Austrelaps superbus,Elapidae
+Azemiops_feae_M9T2J4,-,3FTx,Azemiops feae,Viperidae
+Boiga_cynodon_A0A193CHL1,-,3FTx,Boiga cynodon,Colubridae
+Boiga_cynodon_GGUA01000001,-,3FTx,Boiga cynodon,Colubridae
+Boiga_cynodon_A0A193CHL1,-,3FTx,Boiga cynodon,Colubridae
+sp|Q06ZW0|3NB_BOIDE Denmotoxin OS=Boiga dendrophila OX=46286 PE=1 SV=1,Denmotoxin,3FTx,Boiga dendrophila,Colubridae
+Boiga_dendrophila_Q06ZW0,-,3FTx,Boiga dendrophila,Colubridae
+Boiga_dendrophila_dendrophila_3FTx_23,-,3FTx,Boiga dendrophila dendrophila,Colubridae
+Boiga_dendrophila_dendrophila_3FTx_24,-,3FTx,Boiga dendrophila dendrophila,Colubridae
+Boiga_dendrophila_dendrophila_3FTx_04,-,3FTx,Boiga dendrophila dendrophila,Colubridae
+Boiga_dendrophila_dendrophila_3FTx_25,-,3FTx,Boiga dendrophila dendrophila,Colubridae
+Boiga_dendrophila_dendrophila_3FTx_17,-,3FTx,Boiga dendrophila dendrophila,Colubridae
+Boiga_dendrophila_dendrophila_3FTx_18,-,3FTx,Boiga dendrophila dendrophila,Colubridae
+Boiga_dendrophila_dendrophila_3FTx_02,-,3FTx,Boiga dendrophila dendrophila,Colubridae
+Boiga_dendrophila_dendrophila_3FTx_01,-,3FTx,Boiga dendrophila dendrophila,Colubridae
+Boiga_dendrophila_dendrophila_3FTx_03,-,3FTx,Boiga dendrophila dendrophila,Colubridae
+Boiga_dendrophila_dendrophila_3FTx_14,-,3FTx,Boiga dendrophila dendrophila,Colubridae
+Boiga_dendrophila_dendrophila_3FTx_08,-,3FTx,Boiga dendrophila dendrophila,Colubridae
+Boiga_dendrophila_dendrophila_3FTx_13,-,3FTx,Boiga dendrophila dendrophila,Colubridae
+Boiga_dendrophila_dendrophila_3FTx_05,-,3FTx,Boiga dendrophila dendrophila,Colubridae
+Boiga_dendrophila_dendrophila_3FTx_11,-,3FTx,Boiga dendrophila dendrophila,Colubridae
+Boiga_dendrophila_dendrophila_3FTx_28,-,3FTx,Boiga dendrophila dendrophila,Colubridae
+Boiga_dendrophila_dendrophila_3FTx_41,-,3FTx,Boiga dendrophila dendrophila,Colubridae
+Boiga_dendrophila_dendrophila_3FTx_40,-,3FTx,Boiga dendrophila dendrophila,Colubridae
+Boiga_dendrophila_dendrophila_3FTx_16,-,3FTx,Boiga dendrophila dendrophila,Colubridae
+Boiga_dendrophila_dendrophila_3FTx_06,-,3FTx,Boiga dendrophila dendrophila,Colubridae
+Boiga_dendrophila_dendrophila_3FTx_07,-,3FTx,Boiga dendrophila dendrophila,Colubridae
+Boiga_dendrophila_dendrophila_3FTx_12,-,3FTx,Boiga dendrophila dendrophila,Colubridae
+Boiga_dendrophila_dendrophila_3FTx_34,-,3FTx,Boiga dendrophila dendrophila,Colubridae
+Boiga_dendrophila_dendrophila_3FTx_09,-,3FTx,Boiga dendrophila dendrophila,Colubridae
+Boiga_dendrophila_dendrophila_3FTx_37,-,3FTx,Boiga dendrophila dendrophila,Colubridae
+Boiga_dendrophila_dendrophila_3FTx_38,-,3FTx,Boiga dendrophila dendrophila,Colubridae
+Boiga_dendrophila_dendrophila_3FTx_10,-,3FTx,Boiga dendrophila dendrophila,Colubridae
+Boiga_dendrophila_dendrophila_3FTx_33,-,3FTx,Boiga dendrophila dendrophila,Colubridae
+Boiga_dendrophila_dendrophila_3FTx_32,-,3FTx,Boiga dendrophila dendrophila,Colubridae
+Boiga_dendrophila_dendrophila_GGUB01000001,-,3FTx,Boiga dendrophila dendrophila,Colubridae
+Boiga_dendrophila_dendrophila_GGUB01000025,-,3FTx,Boiga dendrophila dendrophila,Colubridae
+Boiga_dendrophila_dendrophila_GGUB01000027,-,3FTx,Boiga dendrophila dendrophila,Colubridae
+Boiga_dendrophila_dendrophila_GGUB01000024,-,3FTx,Boiga dendrophila dendrophila,Colubridae
+Boiga_dendrophila_dendrophila_GGUB01000002,-,3FTx,Boiga dendrophila dendrophila,Colubridae
+Boiga_dendrophila_dendrophila_GGUB01000005,-,3FTx,Boiga dendrophila dendrophila,Colubridae
+Boiga_dendrophila_dendrophila_GGUB01000015,-,3FTx,Boiga dendrophila dendrophila,Colubridae
+Boiga_dendrophila_gemmicincta_3FTx_00,-,3FTx,Boiga dendrophila gemmicincta,Colubridae
+Boiga_dendrophila_gemmicincta_3FTx_02,-,3FTx,Boiga dendrophila gemmicincta,Colubridae
+Boiga_dendrophila_gemmicincta_3FTx_04,-,3FTx,Boiga dendrophila gemmicincta,Colubridae
+Boiga_dendrophila_gemmicincta_3FTx_03,-,3FTx,Boiga dendrophila gemmicincta,Colubridae
+Boiga_dendrophila_gemmicincta_3FTx_01,-,3FTx,Boiga dendrophila gemmicincta,Colubridae
+Boiga_dendrophila_gemmicincta_3FTx_05,-,3FTx,Boiga dendrophila gemmicincta,Colubridae
+Boiga_dendrophila_gemmicincta_3FTx_09,-,3FTx,Boiga dendrophila gemmicincta,Colubridae
+Boiga_dendrophila_gemmicincta_3FTx_10,-,3FTx,Boiga dendrophila gemmicincta,Colubridae
+Boiga_dendrophila_gemmicincta_3FTx_11,-,3FTx,Boiga dendrophila gemmicincta,Colubridae
+Boiga_dendrophila_gemmicincta_GGUC01000007,-,3FTx,Boiga dendrophila gemmicincta,Colubridae
+Boiga_dendrophila_gemmicincta_GGUC01000009,-,3FTx,Boiga dendrophila gemmicincta,Colubridae
+Boiga_dendrophila_gemmicincta_GGUC01000002,-,3FTx,Boiga dendrophila gemmicincta,Colubridae
+Boiga_dendrophila_gemmicincta_GGUC01000001,-,3FTx,Boiga dendrophila gemmicincta,Colubridae
+Boiga_irregularis_A0A0B8RZX5,-,3FTx,Boiga irregularis,Colubridae
+Boiga_irregularis_Brisbane_3FTx_00,-,3FTx,Boiga irregularis,Colubridae
+Boiga_irregularis_A0A193CHL9,-,3FTx,Boiga irregularis,Colubridae
+Boiga_irregularis_A0A0B8RYW2,-,3FTx,Boiga irregularis,Colubridae
+Boiga_irregularis_A0A0B8RZW9,-,3FTx,Boiga irregularis,Colubridae
+Boiga_irregularis_Sulawesi_3FTx_05,-,3FTx,Boiga irregularis,Colubridae
+Boiga_irregularis_A0A193CHL4,-,3FTx,Boiga irregularis,Colubridae
+Boiga_irregularis_Sulawesi_3FTx_03,-,3FTx,Boiga irregularis,Colubridae
+Boiga_irregularis_Sulawesi_3FTx_01,-,3FTx,Boiga irregularis,Colubridae
+Boiga_irregularis_A0A0B8RS37,-,3FTx,Boiga irregularis,Colubridae
+Boiga_irregularis_A0A0B8RSY6,-,3FTx,Boiga irregularis,Colubridae
+Boiga_irregularis_A0A0B8RYX1,-,3FTx,Boiga irregularis,Colubridae
+Boiga_irregularis_Sulawesi_3FTx_02,-,3FTx,Boiga irregularis,Colubridae
+Boiga_irregularis_A0A0B8RZY0,-,3FTx,Boiga irregularis,Colubridae
+Boiga_irregularis_A0A0B8RSZ3,-,3FTx,Boiga irregularis,Colubridae
+Boiga_irregularis_A0A0B8RVC5,-,3FTx,Boiga irregularis,Colubridae
+Boiga_irregularis_Sulawesi_3FTx_04,-,3FTx,Boiga irregularis,Colubridae
+Boiga_irregularis_A0A0B8RS48,-,3FTx,Boiga irregularis,Colubridae
+Boiga_irregularis_Brisbane_3FTx_06,-,3FTx,Boiga irregularis,Colubridae
+Boiga_irregularis_A0A193CHL6,-,3FTx,Boiga irregularis,Colubridae
+Boiga_irregularis_Brisbane_3FTx_07,-,3FTx,Boiga irregularis,Colubridae
+Boiga_irregularis_Brisbane_3FTx_08,-,3FTx,Boiga irregularis,Colubridae
+Boiga_irregularis_Sulawesi_3FTx_13,-,3FTx,Boiga irregularis,Colubridae
+Boiga_irregularis_A0A0B8RVB2,-,3FTx,Boiga irregularis,Colubridae
+Boiga_irregularis_A0A0B8RVB7,-,3FTx,Boiga irregularis,Colubridae
+Boiga_irregularis_Brisbane_3FTx_03,-,3FTx,Boiga irregularis,Colubridae
+Boiga_irregularis_A0A0B8RYX5,-,3FTx,Boiga irregularis,Colubridae
+Boiga_irregularis_A0A0B8RS42,-,3FTx,Boiga irregularis,Colubridae
+Boiga_irregularis_A0A0B8RYY0,-,3FTx,Boiga irregularis,Colubridae
+Boiga_irregularis_A0A0B8RSZ0,-,3FTx,Boiga irregularis,Colubridae
+Boiga_irregularis_A0A0B8RVB9,-,3FTx,Boiga irregularis,Colubridae
+Boiga_irregularis_A0A0B8RZX6,-,3FTx,Boiga irregularis,Colubridae
+Boiga_irregularis_A0A0B8RYY3,-,3FTx,Boiga irregularis,Colubridae
+Boiga_irregularis_A0A0B8RS43,-,3FTx,Boiga irregularis,Colubridae
+Boiga_irregularis_A0A0B8RSZ1,-,3FTx,Boiga irregularis,Colubridae
+Boiga_irregularis_A0A0B8RS45,-,3FTx,Boiga irregularis,Colubridae
+Boiga_irregularis_Sulawesi_3FTx_11,-,3FTx,Boiga irregularis,Colubridae
+Boiga_irregularis_A0A0B8RYY5,-,3FTx,Boiga irregularis,Colubridae
+Boiga_irregularis_Brisbane_3FTx_02,-,3FTx,Boiga irregularis,Colubridae
+Boiga_irregularis_A0A0B8RZX8,-,3FTx,Boiga irregularis,Colubridae
+Boiga_irregularis_Sulawesi_3FTx_08,-,3FTx,Boiga irregularis,Colubridae
+Boiga_irregularis_A0A0B8RS19,-,3FTx,Boiga irregularis,Colubridae
+Boiga_irregularis_Sulawesi_3FTx_09,-,3FTx,Boiga irregularis,Colubridae
+Boiga_irregularis_A0A0B8RZX0,-,3FTx,Boiga irregularis,Colubridae
+Boiga_irregularis_Sulawesi_3FTx_07,-,3FTx,Boiga irregularis,Colubridae
+Boiga_irregularis_Brisbane_3FTx_13,-,3FTx,Boiga irregularis,Colubridae
+Boiga_irregularis_A0A0B8RS22,-,3FTx,Boiga irregularis,Colubridae
+Boiga_irregularis_A0A0B8RSY0,-,3FTx,Boiga irregularis,Colubridae
+Boiga_irregularis_A0A0B8RVA5,-,3FTx,Boiga irregularis,Colubridae
+Boiga_irregularis_Sulawesi_3FTx_06,-,3FTx,Boiga irregularis,Colubridae
+Boiga_irregularis_Brisbane_GGUD01000006,-,3FTx,Boiga irregularis,Colubridae
+sp|A0S864|3NBA_BOIIR Irditoxin both subunnits OS=Boiga irregularis OX=92519 PE=1 SV=1,Irditoxin both subunnits,3FTx,Boiga irregularis,Colubridae
+sp|A0S864_2|3NBA_BOIIR Irditoxin both subunnits OS=Boiga irregularis OX=92519 PE=1 SV=1,Irditoxin both subunnits,3FTx,Boiga irregularis,Colubridae
+Boiga_irregularis_Sulawesi_GGUE01000001,-,3FTx,Boiga irregularis,Colubridae
+Boiga_irregularis_A0A193CHM0,-,3FTx,Boiga irregularis,Colubridae
+Boiga_irregularis_Brisbane_GGUD01000001,-,3FTx,Boiga irregularis,Colubridae
+Boiga_irregularis_A0A193CHL9,-,3FTx,Boiga irregularis,Colubridae
+Boiga_irregularis_A0A0B8RYX1,-,3FTx,Boiga irregularis,Colubridae
+Boiga_irregularis_A0A0B8RSZ3,-,3FTx,Boiga irregularis,Colubridae
+Boiga_irregularis_A0A0B8RYY9,-,3FTx,Boiga irregularis,Colubridae
+Boiga_irregularis_A0A0B8RS48,-,3FTx,Boiga irregularis,Colubridae
+Boiga_irregularis_Brisbane_GGUD01000007,-,3FTx,Boiga irregularis,Colubridae
+Boiga_irregularis_A0A193CHL6,-,3FTx,Boiga irregularis,Colubridae
+Boiga_irregularis_A0S865,-,3FTx,Boiga irregularis,Colubridae
+Boiga_irregularis_A0A0B8RZX5,-,3FTx,Boiga irregularis,Colubridae
+Boiga_irregularis_A0A0B8RVB7,-,3FTx,Boiga irregularis,Colubridae
+Boiga_irregularis_Brisbane_GGUD01000016,-,3FTx,Boiga irregularis,Colubridae
+Boiga_irregularis_A0A0B8RZX6,-,3FTx,Boiga irregularis,Colubridae
+Boiga_nigriceps_3FTx_01,-,3FTx,Boiga nigriceps,Colubridae
+Boiga_nigriceps_3FTx_02,-,3FTx,Boiga nigriceps,Colubridae
+Boiga_nigriceps_3FTx_06,-,3FTx,Boiga nigriceps,Colubridae
+Boiga_nigriceps_3FTx_03,-,3FTx,Boiga nigriceps,Colubridae
+Boiga_nigriceps_3FTx_04,-,3FTx,Boiga nigriceps,Colubridae
+Boiga_nigriceps_A0A193CHL8,-,3FTx,Boiga nigriceps,Colubridae
+Boiga_nigriceps_GGUF01000001,-,3FTx,Boiga nigriceps,Colubridae
+Boiga_nigriceps_GGUF01000002,-,3FTx,Boiga nigriceps,Colubridae
+Boiga_nigriceps_GGUF01000003,-,3FTx,Boiga nigriceps,Colubridae
+Boiga_nigriceps_A0A193CHL8,-,3FTx,Boiga nigriceps,Colubridae
+Boiga_nigriceps_GGUF01000004,-,3FTx,Boiga nigriceps,Colubridae
+Boiga_trigonata_3FTx_04,-,3FTx,Boiga trigonata,Colubridae
+Boiga_trigonata_3FTx_01,-,3FTx,Boiga trigonata,Colubridae
+Boiga_trigonata_3FTx_05,-,3FTx,Boiga trigonata,Colubridae
+Boiga_trigonata_GGUG01000004,-,3FTx,Boiga trigonata,Colubridae
+Boiga_trigonata_GGUG01000001,-,3FTx,Boiga trigonata,Colubridae
+Boiga_trigonata_GGUG01000005,-,3FTx,Boiga trigonata,Colubridae
+Boiga_trigonata_GGUG01000002,-,3FTx,Boiga trigonata,Colubridae
+Boiga_trigonata_GGUG01000007,-,3FTx,Boiga trigonata,Colubridae
+Boiga_trigonata_GGUG01000006,-,3FTx,Boiga trigonata,Colubridae
+sp|P81783|3NO4_BUNCA Candoxin OS=Bungarus candidus OX=92438 PE=1 SV=2,Candoxin,3FTx,Bungarus candidus,Elapidae
+sp|P81782|3NOJ_BUNCA Bucandin OS=Bungarus candidus OX=92438 PE=1 SV=1,Bucandin,3FTx,Bungarus candidus,Elapidae
+sp|Q8AY52|3SO92_BUNCA Candiduxin2 OS=Bungarus candidus OX=92438 PE=3 SV=1,Candiduxin2,3FTx,Bungarus candidus,Elapidae
+sp|Q8AY53|3SO91_BUNCA Candiduxin1 OS=Bungarus candidus OX=92438 PE=3 SV=1,Candiduxin1,3FTx,Bungarus candidus,Elapidae
+sp|Q8AY49|3NO23_BUNCA Weak toxin 3 OS=Bungarus candidus OX=92438 PE=3 SV=1,Weak toxin 3,3FTx,Bungarus candidus,Elapidae
+sp|Q8AY50|3NO22_BUNCA Weak toxin 2 OS=Bungarus candidus OX=92438 PE=3 SV=1,Weak toxin 2,3FTx,Bungarus candidus,Elapidae
+sp|Q8AY51|3NO21_BUNCA Weak toxin 1 OS=Bungarus candidus OX=92438 PE=1 SV=1,Weak toxin 1,3FTx,Bungarus candidus,Elapidae
+sp|P85140|3L2N3_BUNCA Alphabungarotoxin N3 OS=Bungarus candidus OX=92438 PE=1 SV=2,Alphabungarotoxin N3,3FTx,Bungarus candidus,Elapidae
+sp|P83346|3SO3_BUNCA Bucain OS=Bungarus candidus OX=92438 PE=1 SV=1,Bucain,3FTx,Bungarus candidus,Elapidae
+sp|Q8AY55|3LKB_BUNCA Kappa 1bbungarotoxin OS=Bungarus candidus OX=92438 PE=3 SV=1,Kappa 1bbungarotoxin,3FTx,Bungarus candidus,Elapidae
+sp|Q8AY56|3LKA_BUNCA Kappa 1abungarotoxin OS=Bungarus candidus OX=92438 PE=3 SV=1,Kappa 1abungarotoxin,3FTx,Bungarus candidus,Elapidae
+Bungarus_candidus_P81782,-,3FTx,Bungarus candidus,Elapidae
+Bungarus_candidus_Q6IZ95,-,3FTx,Bungarus candidus,Elapidae
+Bungarus_candidus_Q8AY49,-,3FTx,Bungarus candidus,Elapidae
+Bungarus_candidus_Q8AY50,-,3FTx,Bungarus candidus,Elapidae
+Bungarus_candidus_Q8AY51,-,3FTx,Bungarus candidus,Elapidae
+Bungarus_candidus_P81783,-,3FTx,Bungarus candidus,Elapidae
+sp|P14534|3SOI2_BUNFA Short neurotoxin 2 OS=Bungarus fasciatus OX=8613 PE=1 SV=1,Short neurotoxin 2,3FTx,Bungarus fasciatus,Elapidae
+sp|P0C553|3SOII_BUNFA Neurotoxin 3FTxLI OS=Bungarus fasciatus OX=8613 PE=1 SV=1,Neurotoxin 3FTxLI,3FTx,Bungarus fasciatus,Elapidae
+sp|P0C552|3SOIK_BUNFA Neurotoxin 3FTxLK OS=Bungarus fasciatus OX=8613 PE=1 SV=1,Neurotoxin 3FTxLK,3FTx,Bungarus fasciatus,Elapidae
+sp|A2CKF6|3NO28_BUNFA Neurotoxin 3FTx8a OS=Bungarus fasciatus OX=8613 PE=1 SV=1,Neurotoxin 3FTx8a,3FTx,Bungarus fasciatus,Elapidae
+sp|A2CKF7|3NO2_BUNFA Neurotoxin 3FTxLT OS=Bungarus fasciatus OX=8613 PE=1 SV=1,Neurotoxin 3FTxLT,3FTx,Bungarus fasciatus,Elapidae
+sp|P0C554|3SO3_BUNFA Neurotoxin 3FTxRK OS=Bungarus fasciatus OX=8613 PE=1 SV=1,Neurotoxin 3FTxRK,3FTx,Bungarus fasciatus,Elapidae
+sp|P10808|3S11_BUNFA Short neurotoxin 1 OS=Bungarus fasciatus OX=8613 PE=1 SV=1,Short neurotoxin 1,3FTx,Bungarus fasciatus,Elapidae
+sp|P0C555|3S1RI_BUNFA Neurotoxin 3FTxRI OS=Bungarus fasciatus OX=8613 PE=3 SV=1,Neurotoxin 3FTxRI,3FTx,Bungarus fasciatus,Elapidae
+Bungarus_fasciatus_A2CKF6,-,3FTx,Bungarus fasciatus,Elapidae
+Bungarus_flaviceps_D5J9Q0,-,3FTx,Bungarus flaviceps,Elapidae
+Bungarus_flaviceps_D5J9P8,-,3FTx,Bungarus flaviceps,Elapidae
+sp|P15815|3LKF_BUNFL Kappaflavitoxin OS=Bungarus flaviceps flaviceps OX=8615 PE=1 SV=1,Kappaflavitoxin,3FTx,Bungarus flaviceps flaviceps,Elapidae
+sp|Q8JFX7|3NOHE_BUNMU Muscarinic toxin BM14 OS=Bungarus multicinctus OX=8616 PE=1 SV=1,Muscarinic toxin BM14,3FTx,Bungarus multicinctus,Elapidae
+sp|Q9PW19|3NOH_BUNMU Toxin BMLCL OS=Bungarus multicinctus OX=8616 PE=1 SV=1,Toxin BMLCL,3FTx,Bungarus multicinctus,Elapidae
+sp|Q9YGH0|3NOH3_BUNMU Cytotoxinlike protein TABMBGT3 OS=Bungarus multicinctus OX=8616 PE=3 SV=1,Cytotoxinlike protein TABMBGT3,3FTx,Bungarus multicinctus,Elapidae
+sp|Q70WS8|3NO41_BUNMU Neurotoxin BM101like OS=Bungarus multicinctus OX=8616 PE=3 SV=1,Neurotoxin BM101like,3FTx,Bungarus multicinctus,Elapidae
+sp|P15818|3NO4H_BUNMU Long neurotoxin homolog OS=Bungarus multicinctus OX=8616 PE=1 SV=1,Long neurotoxin homolog,3FTx,Bungarus multicinctus,Elapidae
+sp|P01398|3LKB_BUNMU Kappa-bungarotoxin OS=Bungarus multicinctus OX=8616 PE=1 SV=2,Kappa-bungarotoxin,3FTx,Bungarus multicinctus,Elapidae
+sp|P43445|3SO7_BUNMU Short neurotoxin homolog OS=Bungarus multicinctus OX=8616 PE=3 SV=1,Short neurotoxin homolog,3FTx,Bungarus multicinctus,Elapidae
+sp|P79688|3SO9L_BUNMU Cardiotoxin homolog TActxlike OS=Bungarus multicinctus OX=8616 PE=3 SV=1,Cardiotoxin homolog TActxlike,3FTx,Bungarus multicinctus,Elapidae
+sp|Q800Y3|3SO93_BUNMU Neurotoxinlike protein pMD18NTL3 OS=Bungarus multicinctus OX=8616 PE=3 SV=1,Neurotoxinlike protein pMD18NTL3,3FTx,Bungarus multicinctus,Elapidae
+sp|Q9YGI0|3SO91_BUNMU Short neurotoxin homolog NTL1 OS=Bungarus multicinctus OX=8616 PE=1 SV=1,Short neurotoxin homolog NTL1,3FTx,Bungarus multicinctus,Elapidae
+sp|Q9W727|3SO8_BUNMU Muscarinic toxinlike protein OS=Bungarus multicinctus OX=8616 PE=3 SV=1,Muscarinic toxinlike protein,3FTx,Bungarus multicinctus,Elapidae
+sp|P60615|3L21A_BUNMU Alphabungarotoxin OS=Bungarus multicinctus OX=8616 PE=1 SV=1,Alphabungarotoxin,3FTx,Bungarus multicinctus,Elapidae
+sp|P60616|3L21V_BUNMU Alphabungarotoxin isoform V31 OS=Bungarus multicinctus OX=8616 PE=1 SV=1,Alphabungarotoxin isoform V31,3FTx,Bungarus multicinctus,Elapidae
+sp|Q9YGI8|3SO3_BUNMU Short neurotoxin homolog NTL4 OS=Bungarus multicinctus OX=8616 PE=3 SV=1,Short neurotoxin homolog NTL4,3FTx,Bungarus multicinctus,Elapidae
+sp|O12963|3NO56_BUNMU Long neurotoxin homolog TAbm16 OS=Bungarus multicinctus OX=8616 PE=3 SV=1,Long neurotoxin homolog TAbm16,3FTx,Bungarus multicinctus,Elapidae
+sp|Q9YGJ0|3NO5I_BUNMU Gammabungarotoxin OS=Bungarus multicinctus OX=8616 PE=1 SV=1,Gammabungarotoxin,3FTx,Bungarus multicinctus,Elapidae
+sp|Q9YGH9|3NO52_BUNMU Long neurotoxin homolog NTL2 OS=Bungarus multicinctus OX=8616 PE=3 SV=1,Long neurotoxin homolog NTL2,3FTx,Bungarus multicinctus,Elapidae
+sp|O12961|3LK4_BUNMU Kappa4bungarotoxin OS=Bungarus multicinctus OX=8616 PE=3 SV=1,Kappa4bungarotoxin,3FTx,Bungarus multicinctus,Elapidae
+sp|Q9W729|3LK6_BUNMU Kappa6bungarotoxin OS=Bungarus multicinctus OX=8616 PE=3 SV=1,Kappa6bungarotoxin,3FTx,Bungarus multicinctus,Elapidae
+sp|P15816|3LK2_BUNMU Kappa2bungarotoxin OS=Bungarus multicinctus OX=8616 PE=1 SV=1,Kappa2bungarotoxin,3FTx,Bungarus multicinctus,Elapidae
+sp|O12962|3LK5_BUNMU Kappa5bungarotoxin OS=Bungarus multicinctus OX=8616 PE=3 SV=1,Kappa5bungarotoxin,3FTx,Bungarus multicinctus,Elapidae
+sp|P15817|3LK3_BUNMU Kappa3bungarotoxin OS=Bungarus multicinctus OX=8616 PE=1 SV=1,Kappa3bungarotoxin,3FTx,Bungarus multicinctus,Elapidae
+Bungarus_multicinctus_P15818,-,3FTx,Bungarus multicinctus,Elapidae
+Cbivi_3FTx_110,-,3FTx,Calliophis bivirgatus,Elapidae
+Cbivi_3FTx_039,-,3FTx,Calliophis bivirgatus,Elapidae
+Cbivi_3FTx_118,-,3FTx,Calliophis bivirgatus,Elapidae
+Cbivi_3FTx_065,-,3FTx,Calliophis bivirgatus,Elapidae
+Cbivi_3FTx_070,-,3FTx,Calliophis bivirgatus,Elapidae
+Cbivi_3FTx_041,-,3FTx,Calliophis bivirgatus,Elapidae
+Cbivi_3FTx_053,-,3FTx,Calliophis bivirgatus,Elapidae
+Cbivi_3FTx_078,-,3FTx,Calliophis bivirgatus,Elapidae
+Cbivi_3FTx_100,-,3FTx,Calliophis bivirgatus,Elapidae
+Cbivi_3FTx_106,-,3FTx,Calliophis bivirgatus,Elapidae
+Cbivi_3FTx_040,-,3FTx,Calliophis bivirgatus,Elapidae
+Cbivi_3FTx_037,-,3FTx,Calliophis bivirgatus,Elapidae
+Cbivi_3FTx_115,-,3FTx,Calliophis bivirgatus,Elapidae
+Cbivi_3FTx_048,-,3FTx,Calliophis bivirgatus,Elapidae
+Cbivi_3FTx_063,-,3FTx,Calliophis bivirgatus,Elapidae
+Cbivi_3FTx_088,-,3FTx,Calliophis bivirgatus,Elapidae
+Cbivi_3FTx_097,-,3FTx,Calliophis bivirgatus,Elapidae
+Cbivi_3FTx_045,-,3FTx,Calliophis bivirgatus,Elapidae
+Cbivi_3FTx_094,-,3FTx,Calliophis bivirgatus,Elapidae
+Cbivi_3FTx_075,-,3FTx,Calliophis bivirgatus,Elapidae
+Cbivi_3FTx_086,-,3FTx,Calliophis bivirgatus,Elapidae
+Cbivi_3FTx_102,-,3FTx,Calliophis bivirgatus,Elapidae
+Cbivi_3FTx_058,-,3FTx,Calliophis bivirgatus,Elapidae
+Cbivi_3FTx_074,-,3FTx,Calliophis bivirgatus,Elapidae
+Cbivi_3FTx_012,-,3FTx,Calliophis bivirgatus,Elapidae
+Cbivi_3FTx_098,-,3FTx,Calliophis bivirgatus,Elapidae
+Cbivi_3FTx_024,-,3FTx,Calliophis bivirgatus,Elapidae
+Cbivi_3FTx_034,-,3FTx,Calliophis bivirgatus,Elapidae
+Cbivi_3FTx_029,-,3FTx,Calliophis bivirgatus,Elapidae
+Cbivi_3FTx_032,-,3FTx,Calliophis bivirgatus,Elapidae
+Cbivi_3FTx_116,-,3FTx,Calliophis bivirgatus,Elapidae
+Cbivi_3FTx_031,-,3FTx,Calliophis bivirgatus,Elapidae
+Cbivi_3FTx_020,-,3FTx,Calliophis bivirgatus,Elapidae
+Cbivi_3FTx_022,-,3FTx,Calliophis bivirgatus,Elapidae
+Cbivi_3FTx_036,-,3FTx,Calliophis bivirgatus,Elapidae
+Cbivi_3FTx_015,-,3FTx,Calliophis bivirgatus,Elapidae
+Cbivi_3FTx_044,-,3FTx,Calliophis bivirgatus,Elapidae
+Cbivi_3FTx_095,-,3FTx,Calliophis bivirgatus,Elapidae
+Cbivi_3FTx_019,-,3FTx,Calliophis bivirgatus,Elapidae
+Cbivi_3FTx_038,-,3FTx,Calliophis bivirgatus,Elapidae
+Cbivi_3FTx_067,-,3FTx,Calliophis bivirgatus,Elapidae
+Cbivi_3FTx_047,-,3FTx,Calliophis bivirgatus,Elapidae
+Cbivi_3FTx_085,-,3FTx,Calliophis bivirgatus,Elapidae
+Cbivi_3FTx_009,-,3FTx,Calliophis bivirgatus,Elapidae
+Cbivi_3FTx_011,-,3FTx,Calliophis bivirgatus,Elapidae
+Cbivi_3FTx_003,-,3FTx,Calliophis bivirgatus,Elapidae
+Cbivi_3FTx_087,-,3FTx,Calliophis bivirgatus,Elapidae
+Cbivi_3FTx_096,-,3FTx,Calliophis bivirgatus,Elapidae
+Cbivi_3FTx_000,-,3FTx,Calliophis bivirgatus,Elapidae
+sp|P0DL82|3SXNA_CALBG DeltaelapitoxinCb1a OS=Calliophis bivirgatus OX=8633 PE=1 SV=1,DeltaelapitoxinCb1a,3FTx,Calliophis bivirgatus,Elapidae
+sp|P84716|3SO3_CAURH Neurotoxinlike protein 1 OS=Causus rhombeatus OX=44735 PE=1 SV=1,Neurotoxinlike protein 1,3FTx,Causus rhombeatus,Viperidae
+"Chmy_5 Chelonia mydas unplaced genomic scaffold, CheMyd_1.0 scaffold708, whole genome shotgun sequence",-,Ly-6,Chelonia mydas,Testudines
+"Chmy_4 Chelonia mydas unplaced genomic scaffold, CheMyd_1.0 scaffold708, whole genome shotgun sequence",-,Ly-6,Chelonia mydas,Testudines
+"Chmy_12 Chelonia mydas unplaced genomic scaffold, CheMyd_1.0 scaffold708, whole genome shotgun sequence",-,Ly-6,Chelonia mydas,Testudines
+"Chmy_1 Chelonia mydas unplaced genomic scaffold, CheMyd_1.0 scaffold708, whole genome shotgun sequence",-,Ly-6,Chelonia mydas,Testudines
+"Chmy_3 Chelonia mydas unplaced genomic scaffold, CheMyd_1.0 scaffold708, whole genome shotgun sequence",-,Ly-6,Chelonia mydas,Testudines
+"Chmy_2 Chelonia mydas unplaced genomic scaffold, CheMyd_1.0 scaffold708, whole genome shotgun sequence",-,Ly-6,Chelonia mydas,Testudines
+"Chmy_9 Chelonia mydas unplaced genomic scaffold, CheMyd_1.0 scaffold708, whole genome shotgun sequence",-,Ly-6,Chelonia mydas,Testudines
+"Chmy_13 Chelonia mydas unplaced genomic scaffold, CheMyd_1.0 scaffold708, whole genome shotgun sequence",-,Ly-6,Chelonia mydas,Testudines
+"Chmy_10 Chelonia mydas unplaced genomic scaffold, CheMyd_1.0 scaffold708, whole genome shotgun sequence",-,Ly-6,Chelonia mydas,Testudines
+"Chmy_11 Chelonia mydas unplaced genomic scaffold, CheMyd_1.0 scaffold708, whole genome shotgun sequence",-,Ly-6,Chelonia mydas,Testudines
+"Chmy_6 Chelonia mydas unplaced genomic scaffold, CheMyd_1.0 scaffold708, whole genome shotgun sequence",-,Ly-6,Chelonia mydas,Testudines
+"Chmy_7 Chelonia mydas unplaced genomic scaffold, CheMyd_1.0 scaffold708, whole genome shotgun sequence",-,Ly-6,Chelonia mydas,Testudines
+sp|P83490|3NBB_COERA Alphacolubritoxin OS=Coelognathus radiatus OX=201391 PE=1 SV=1,Alphacolubritoxin,3FTx,Coelognathus radiatus,Colubridae
+Coelognathus_radiatus_P83490,-,3FTx,Coelognathus radiatus,Colubridae
+Crotalus_adamanteus_A0A1W7RBD9,-,3FTx,Crotalus adamanteus,Viperidae
+Crotalus_adamanteus_A0A1W7RBC9,-,3FTx,Crotalus adamanteus,Viperidae
+sp|A8HDJ8|3S12_CRYNI Short neurotoxin 2 OS=Cryptophis nigrescens OX=292442 PE=3 SV=1,Short neurotoxin 2,3FTx,Cryptophis nigrescens,Elapidae
+sp|A8HDJ7|3S11_CRYNI Short neurotoxin 1 OS=Cryptophis nigrescens OX=292442 PE=3 SV=1,Short neurotoxin 1,3FTx,Cryptophis nigrescens,Elapidae
+sp|A6MFK4|3L21_DEMVE Long neurotoxin LNTX1 OS=Demansia vestigiata OX=412038 PE=1 SV=1,Long neurotoxin LNTX1,3FTx,Demansia vestigiata,Elapidae
+sp|A6MFK5|3L22_DEMVE Long neurotoxin LNTX2 OS=Demansia vestigiata OX=412038 PE=1 SV=1,Long neurotoxin LNTX2,3FTx,Demansia vestigiata,Elapidae
+sp|A6MFK6|3S11_DEMVE Short neurotoxin SNTX1 OS=Demansia vestigiata OX=412038 PE=3 SV=1,Short neurotoxin SNTX1,3FTx,Demansia vestigiata,Elapidae
+"sp|P01411|3SIY2_DENAN Synergistictype venom protein C8S2, chain 2 OS=Dendroaspis angusticeps OX=8618 PE=1 SV=1",Synergistictype venom protein C8S2,3FTx,Dendroaspis angusticeps,Elapidae
+"sp|P01409|3SIY4_DENAN Synergistictype venom protein C9S3, chain 2 OS=Dendroaspis angusticeps OX=8618 PE=1 SV=1",Synergistictype venom protein C9S3,3FTx,Dendroaspis angusticeps,Elapidae
+"sp|P01408|3SIY3_DENAN Synergistictype venom protein C9S3, chain 1 OS=Dendroaspis angusticeps OX=8618 PE=1 SV=1",Synergistictype venom protein C9S3,3FTx,Dendroaspis angusticeps,Elapidae
+"sp|P01410|3SIY1_DENAN Synergistictype venom protein C8S2, chain 1 OS=Dendroaspis angusticeps OX=8618 PE=1 SV=1",Synergistictype venom protein C8S2,3FTx,Dendroaspis angusticeps,Elapidae
+sp|C0HJT4|3NOJ_DENAN Toxin Tx7335 OS=Dendroaspis angusticeps OX=8618 PE=1 SV=1,Toxin Tx7335,3FTx,Dendroaspis angusticeps,Elapidae
+sp|P81946|3SPT_DENAN Thrombostatin OS=Dendroaspis angusticeps OX=8618 PE=1 SV=1,Thrombostatin,3FTx,Dendroaspis angusticeps,Elapidae
+sp|P17696|3SIYL_DENAN Synergisticlike venom protein OS=Dendroaspis angusticeps OX=8618 PE=3 SV=1,Synergisticlike venom protein,3FTx,Dendroaspis angusticeps,Elapidae
+sp|P18328|3SIM2_DENAN Muscarinic toxin 2 OS=Dendroaspis angusticeps OX=8618 PE=1 SV=1,Muscarinic toxin 2,3FTx,Dendroaspis angusticeps,Elapidae
+sp|P60234|3SI12_DENAN Muscarinic m1toxin2 OS=Dendroaspis angusticeps OX=8618 PE=1 SV=1,Muscarinic m1toxin2,3FTx,Dendroaspis angusticeps,Elapidae
+sp|Q8QGR0|3SIM7_DENAN Muscarinic toxin 7 OS=Dendroaspis angusticeps OX=8618 PE=1 SV=1,Muscarinic toxin 7,3FTx,Dendroaspis angusticeps,Elapidae
+sp|P81030|3SIM1_DENAN Muscarinic toxin 1 OS=Dendroaspis angusticeps OX=8618 PE=1 SV=1,Muscarinic toxin 1,3FTx,Dendroaspis angusticeps,Elapidae
+sp|Q9PSN1|3SIM4_DENAN Muscarinic toxin 4 OS=Dendroaspis angusticeps OX=8618 PE=1 SV=1,Muscarinic toxin 4,3FTx,Dendroaspis angusticeps,Elapidae
+sp|P86419|3SI1B_DENAN RhoelapitoxinDa1b OS=Dendroaspis angusticeps OX=8618 PE=1 SV=1,RhoelapitoxinDa1b,3FTx,Dendroaspis angusticeps,Elapidae
+sp|P81031|3SIM3_DENAN Muscarinic toxin 3 OS=Dendroaspis angusticeps OX=8618 PE=1 SV=2,Muscarinic toxin 3,3FTx,Dendroaspis angusticeps,Elapidae
+sp|P85092|3SI1A_DENAN Toxin AdTx1 OS=Dendroaspis angusticeps OX=8618 PE=1 SV=1,Toxin AdTx1,3FTx,Dendroaspis angusticeps,Elapidae
+sp|C0HJB0|3SX3_DENAN Mambalgin3 OS=Dendroaspis angusticeps OX=8618 PE=1 SV=1,Mambalgin3,3FTx,Dendroaspis angusticeps,Elapidae
+sp|P25684|3SL2_DENAN Toxin C10S2C2 OS=Dendroaspis angusticeps OX=8618 PE=1 SV=1,Toxin C10S2C2,3FTx,Dendroaspis angusticeps,Elapidae
+sp|P0C1Z0|3SE2_DENAN Fasciculin2 OS=Dendroaspis angusticeps OX=8618 PE=1 SV=1,Fasciculin2,3FTx,Dendroaspis angusticeps,Elapidae
+sp|P0C1Y9|3SE1_DENAN Fasciculin1 OS=Dendroaspis angusticeps OX=8618 PE=1 SV=1,Fasciculin1,3FTx,Dendroaspis angusticeps,Elapidae
+sp|P18329|3SOA1_DENAN Toxin C13S1C1 OS=Dendroaspis angusticeps OX=8618 PE=1 SV=1,Toxin C13S1C1,3FTx,Dendroaspis angusticeps,Elapidae
+sp|P01404|3SOB8_DENAN Toxin FVIII OS=Dendroaspis angusticeps OX=8618 PE=1 SV=2,Toxin FVIII,3FTx,Dendroaspis angusticeps,Elapidae
+sp|P60237|3SUB_DENAN Muscarinic toxin 2 OS=Dendroaspis angusticeps OX=8618 PE=1 SV=1,Muscarinic toxin 2,3FTx,Dendroaspis angusticeps,Elapidae
+Dendroaspis_angusticeps_GILR01002482,-,3FTx,Dendroaspis angusticeps,Elapidae
+Dendroaspis_angusticeps_GILR01002080,-,3FTx,Dendroaspis angusticeps,Elapidae
+Dendroaspis_jamesoni_jamesoni_GHPA01000962,-,3FTx,Dendroaspis jamesoni jamesoni,Elapidae
+sp|P01407|3SIY_DENJA Synergistictype venom protein S2C4 OS=Dendroaspis jamesoni kaimosae OX=8619 PE=1 SV=1,Synergistictype venom protein S2C4,3FTx,Dendroaspis jamesoni kaimosae,Elapidae
+sp|P28375|3SPM_DENJA Dendroaspin OS=Dendroaspis jamesoni kaimosae OX=8619 PE=1 SV=1,Dendroaspin,3FTx,Dendroaspis jamesoni kaimosae,Elapidae
+sp|P01413|3SP1_DENJA Toxin S5C1 OS=Dendroaspis jamesoni kaimosae OX=8619 PE=1 SV=1,Toxin S5C1,3FTx,Dendroaspis jamesoni kaimosae,Elapidae
+sp|P25682|3NOJ6_DENJA Toxin S6C6 OS=Dendroaspis jamesoni kaimosae OX=8619 PE=1 SV=1,Toxin S6C6,3FTx,Dendroaspis jamesoni kaimosae,Elapidae
+sp|P25683|3SL8_DENJA Toxin S4C8 OS=Dendroaspis jamesoni kaimosae OX=8619 PE=1 SV=1,Toxin S4C8,3FTx,Dendroaspis jamesoni kaimosae,Elapidae
+sp|P01406|3SOB4_DENJA Toxin S5C4 OS=Dendroaspis jamesoni kaimosae OX=8619 PE=1 SV=1,Toxin S5C4,3FTx,Dendroaspis jamesoni kaimosae,Elapidae
+sp|P01393|3L21_DENJA AlphaelapitoxinDjk2a OS=Dendroaspis jamesoni kaimosae OX=8619 PE=1 SV=1,AlphaelapitoxinDjk2a,3FTx,Dendroaspis jamesoni kaimosae,Elapidae
+sp|P01419|3S110_DENJA Toxin S5C10 OS=Dendroaspis jamesoni kaimosae OX=8619 PE=1 SV=1,Toxin S5C10,3FTx,Dendroaspis jamesoni kaimosae,Elapidae
+sp|P01417|3S11_DENJA Short neurotoxin 1 OS=Dendroaspis jamesoni kaimosae OX=8619 PE=1 SV=1,Short neurotoxin 1,3FTx,Dendroaspis jamesoni kaimosae,Elapidae
+Dendroaspis_jamesoni_kaimosae_P25682,-,3FTx,Dendroaspis jamesoni kaimosae,Elapidae
+Dendroaspis_polylepis_T2720,-,3FTx,Dendroaspis polylepis,Elapidae
+sp|P80494|3SIMA_DENPO Muscarinic toxin alpha OS=Dendroaspis polylepis polylepis OX=8620 PE=1 SV=1,Muscarinic toxin alpha,3FTx,Dendroaspis polylepis polylepis,Elapidae
+sp|P25518|3SI3_DENPO Adrenergic toxin rhoelapitoxinDp1b OS=Dendroaspis polylepis polylepis OX=8620 PE=1 SV=1,Adrenergic toxin rhoelapitoxinDp1b,3FTx,Dendroaspis polylepis polylepis,Elapidae
+sp|P80495|3SIMB_DENPO Adrenergic toxin rhoelapitoxinDp1a OS=Dendroaspis polylepis polylepis OX=8620 PE=1 SV=1,Adrenergic toxin rhoelapitoxinDp1a,3FTx,Dendroaspis polylepis polylepis,Elapidae
+sp|P0DKR6|3SX1_DENPO Mambalgin1 OS=Dendroaspis polylepis polylepis OX=8620 PE=1 SV=1,Mambalgin1,3FTx,Dendroaspis polylepis polylepis,Elapidae
+sp|P0DKS3|3SX2_DENPO Mambalgin2 OS=Dendroaspis polylepis polylepis OX=8620 PE=1 SV=1,Mambalgin2,3FTx,Dendroaspis polylepis polylepis,Elapidae
+sp|A0A4P1LYC9|3SX_DENPO Dendroaspis polylepis MT9 OS=Dendroaspis polylepis polylepis OX=8620 PE=1 SV=1,Dendroaspis polylepis MT9,3FTx,Dendroaspis polylepis polylepis,Elapidae
+sp|P01414|3SL2_DENPO Toxin FS2 OS=Dendroaspis polylepis polylepis OX=8620 PE=1 SV=1,Toxin FS2,3FTx,Dendroaspis polylepis polylepis,Elapidae
+sp|P22947|3SLS_DENPO Calciseptin OS=Dendroaspis polylepis polylepis OX=8620 PE=1 SV=1,Calciseptin,3FTx,Dendroaspis polylepis polylepis,Elapidae
+sp|P25681|3SEC_DENPO Acetylcholinesterase toxin C OS=Dendroaspis polylepis polylepis OX=8620 PE=1 SV=1,Acetylcholinesterase toxin C,3FTx,Dendroaspis polylepis polylepis,Elapidae
+sp|P25667|3L23_DENPO AlphaelapitoxinDpp2b OS=Dendroaspis polylepis polylepis OX=8620 PE=1 SV=1,AlphaelapitoxinDpp2b,3FTx,Dendroaspis polylepis polylepis,Elapidae
+sp|P01397|3L22_DENPO AlphaelapitoxinDpp2c OS=Dendroaspis polylepis polylepis OX=8620 PE=1 SV=2,AlphaelapitoxinDpp2c,3FTx,Dendroaspis polylepis polylepis,Elapidae
+sp|C0HJD7|3L24_DENPO AlphaelapitoxinDpp2d OS=Dendroaspis polylepis polylepis OX=8620 PE=1 SV=1,AlphaelapitoxinDpp2d,3FTx,Dendroaspis polylepis polylepis,Elapidae
+sp|P01396|3L21_DENPO AlphaelapitoxinDpp2a OS=Dendroaspis polylepis polylepis OX=8620 PE=1 SV=1,AlphaelapitoxinDpp2a,3FTx,Dendroaspis polylepis polylepis,Elapidae
+sp|P01416|3S11_DENPO Short neurotoxin 1 OS=Dendroaspis polylepis polylepis OX=8620 PE=1 SV=1,Short neurotoxin 1,3FTx,Dendroaspis polylepis polylepis,Elapidae
+sp|P01405|3SOB6_DENVI Toxin 4.9.6 OS=Dendroaspis viridis OX=8621 PE=1 SV=1,Toxin 4.9.6,3FTx,Dendroaspis viridis,Elapidae
+sp|P01394|3L21_DENVI AlphaelapitoxinDv2b OS=Dendroaspis viridis OX=8621 PE=1 SV=1,AlphaelapitoxinDv2b,3FTx,Dendroaspis viridis,Elapidae
+sp|P01395|3L22_DENVI AlphaelapitoxinDv2a OS=Dendroaspis viridis OX=8621 PE=1 SV=1,AlphaelapitoxinDv2a,3FTx,Dendroaspis viridis,Elapidae
+sp|P01418|3S11_DENVI Short neurotoxin 1 OS=Dendroaspis viridis OX=8621 PE=1 SV=1,Short neurotoxin 1,3FTx,Dendroaspis viridis,Elapidae
+Dendroaspis_viridis_GHPC01002050,-,3FTx,Dendroaspis viridis,Elapidae
+Dendroaspis_viridis_GHPC01002196,-,3FTx,Dendroaspis viridis,Elapidae
+sp|A7X6J0|3NX4_DISTY Toxin 3FTxDis4 OS=Dispholidus typus OX=46295 PE=1 SV=1,Toxin 3FTxDis4,3FTx,Dispholidus typus,Colubridae
+Dispholidus_typus_A7X6J0,-,3FTx,Dispholidus typus,Colubridae
+Dispholidus_typus_A7X3Q4,-,3FTx,Dispholidus typus,Colubridae
+Dispholidus_typus_A7X3U0,-,3FTx,Dispholidus typus,Colubridae
+Dispholidus_typus_A7X3T2,-,3FTx,Dispholidus typus,Colubridae
+sp|F8J2E6|3L231_DRYCN Long neurotoxin 31 OS=Drysdalia coronoides OX=66186 PE=1 SV=1,Long neurotoxin 31,3FTx,Drysdalia coronoides,Elapidae
+sp|F8J2F2|3L220_DRYCN Long neurotoxin 20 OS=Drysdalia coronoides OX=66186 PE=1 SV=1,Long neurotoxin 20,3FTx,Drysdalia coronoides,Elapidae
+sp|F8J2E5|3L246_DRYCN Long neurotoxin 469 OS=Drysdalia coronoides OX=66186 PE=1 SV=1,Long neurotoxin 469,3FTx,Drysdalia coronoides,Elapidae
+sp|F8J2E1|3L273_DRYCN Long neurotoxin 73 OS=Drysdalia coronoides OX=66186 PE=1 SV=1,Long neurotoxin 73,3FTx,Drysdalia coronoides,Elapidae
+sp|F8J2B3|3L213_DRYCN Long neurotoxin 13 OS=Drysdalia coronoides OX=66186 PE=1 SV=1,Long neurotoxin 13,3FTx,Drysdalia coronoides,Elapidae
+sp|F8J2D7|3L243_DRYCN Long neurotoxin 43 OS=Drysdalia coronoides OX=66186 PE=1 SV=1,Long neurotoxin 43,3FTx,Drysdalia coronoides,Elapidae
+sp|F8J2E2|3L277_DRYCN Long neurotoxin 77 OS=Drysdalia coronoides OX=66186 PE=1 SV=1,Long neurotoxin 77,3FTx,Drysdalia coronoides,Elapidae
+sp|F8J2G5|3S134_DRYCN Short neurotoxin 342 OS=Drysdalia coronoides OX=66186 PE=1 SV=1,Short neurotoxin 342,3FTx,Drysdalia coronoides,Elapidae
+sp|F8J2G3|3S12A_DRYCN Short neurotoxin 2 OS=Drysdalia coronoides OX=66186 PE=1 SV=1,Short neurotoxin 2,3FTx,Drysdalia coronoides,Elapidae
+Erythrolamprus_poecilogyrus_A7X3M9,-,3FTx,Erythrolamprus poecilogyrus,Colubridae
+sp|A7X3M9|3NX1_ERYPO Probable weak neurotoxin 3FTxLio1 OS=Erythrolamprus poecilogyrus OX=338838 PE=3 SV=1,Probable weak neurotoxin 3FTxLio1,3FTx,Erythrolamprus poecilogyrus,Colubridae
+Erythrolamprus_poecilogyrus_A7X3P2,-,3FTx,Erythrolamprus poecilogyrus,Colubridae
+Erythrolamprus_poecilogyrus_A7X3P8,-,3FTx,Erythrolamprus poecilogyrus,Colubridae
+"Gaga_8 Gallus gallus isolate RJF #256 breed Red Jungle fowl, inbred line UCD001 chromosome 2, Gallus_gallus5.0, whole genome shotgun sequence",-,Ly-6,Gallus gallus,Galliformes
+"Gaga_1 Gallus gallus isolate RJF #256 breed Red Jungle fowl, inbred line UCD001 chromosome 2, Gallus_gallus5.0, whole genome shotgun sequence",-,Ly-6,Gallus gallus,Galliformes
+"Gaga_2 Gallus gallus isolate RJF #256 breed Red Jungle fowl, inbred line UCD001 chromosome 2, Gallus_gallus5.0, whole genome shotgun sequence",-,Ly-6,Gallus gallus,Galliformes
+"Gaga_3 Gallus gallus isolate RJF #256 breed Red Jungle fowl, inbred line UCD001 chromosome 2, Gallus_gallus5.0, whole genome shotgun sequence",-,Ly-6,Gallus gallus,Galliformes
+"Gaga_5 Gallus gallus isolate RJF #256 breed Red Jungle fowl, inbred line UCD001 chromosome 2, Gallus_gallus5.0, whole genome shotgun sequence",-,Ly-6,Gallus gallus,Galliformes
+"Gaga_7 Gallus gallus isolate RJF #256 breed Red Jungle fowl, inbred line UCD001 chromosome 2, Gallus_gallus5.0, whole genome shotgun sequence",-,Ly-6,Gallus gallus,Galliformes
+"Gaga_6 Gallus gallus isolate RJF #256 breed Red Jungle fowl, inbred line UCD001 chromosome 2, Gallus_gallus5.0, whole genome shotgun sequence",-,Ly-6,Gallus gallus,Galliformes
+"Gaga_4 Gallus gallus isolate RJF #256 breed Red Jungle fowl, inbred line UCD001 chromosome 2, Gallus_gallus5.0, whole genome shotgun sequence",-,Ly-6,Gallus gallus,Galliformes
+Helicops_leopardinus_unigene312780,-,3FTx,Helicops leopardinus,Colubridae
+Helicops_leopardinus_unigene57119,-,3FTx,Helicops leopardinus,Colubridae
+Helicops_leopardinus_unigene312792,-,3FTx,Helicops leopardinus,Colubridae
+Helicops_leopardinus_unigene1409,-,3FTx,Helicops leopardinus,Colubridae
+Helicops_leopardinus_unigene488904,-,3FTx,Helicops leopardinus,Colubridae
+Helicops_leopardinus_unigene490899,-,3FTx,Helicops leopardinus,Colubridae
+Helicops_leopardinus_unigene488093,-,3FTx,Helicops leopardinus,Colubridae
+Helicops_leopardinus_unigene312779,-,3FTx,Helicops leopardinus,Colubridae
+Helicops_leopardinus_unigene312798,-,3FTx,Helicops leopardinus,Colubridae
+Helicops_leopardinus_unigene312793,-,3FTx,Helicops leopardinus,Colubridae
+sp|P01402|3SOK1_HEMHA Weak toxin CM1b OS=Hemachatus haemachatus OX=8626 PE=1 SV=1,Weak toxin CM1b,3FTx,Hemachatus haemachatus,Elapidae
+sp|P01433|3S12_HEMHA Short neurotoxin 2 OS=Hemachatus haemachatus OX=8626 PE=1 SV=1,Short neurotoxin 2,3FTx,Hemachatus haemachatus,Elapidae
+sp|P01425|3S11_HEMHA Short neurotoxin 1 OS=Hemachatus haemachatus OX=8626 PE=1 SV=1,Short neurotoxin 1,3FTx,Hemachatus haemachatus,Elapidae
+sp|P0DQH2|3SOKA_HEMHA Exactin OS=Hemachatus haemachatus OX=8626 PE=1 SV=1,Exactin,3FTx,Hemachatus haemachatus,Elapidae
+sp|P24778|3SOE_HEMHA Cytotoxin homolog OS=Hemachatus haemachatus OX=8626 PE=1 SV=1,Cytotoxin homolog,3FTx,Hemachatus haemachatus,Elapidae
+sp|P24777|3SB3_HEMHA Cytotoxin 3 OS=Hemachatus haemachatus OX=8626 PE=1 SV=1,Cytotoxin 3,3FTx,Hemachatus haemachatus,Elapidae
+sp|B3EWH9|3SBH_HEMHA Threefinger hemachatoxin OS=Hemachatus haemachatus OX=8626 PE=1 SV=1,Threefinger hemachatoxin,3FTx,Hemachatus haemachatus,Elapidae
+sp|P01471|3SB1_HEMHA Cytotoxin 1 OS=Hemachatus haemachatus OX=8626 PE=1 SV=1,Cytotoxin 1,3FTx,Hemachatus haemachatus,Elapidae
+sp|P24776|3SB2_HEMHA Cytotoxin 2 OS=Hemachatus haemachatus OX=8626 PE=1 SV=1,Cytotoxin 2,3FTx,Hemachatus haemachatus,Elapidae
+sp|C0HJT5|3SO1_HEMHA Ringhalexin OS=Hemachatus haemachatus OX=8626 PE=1 SV=1,Ringhalexin,3FTx,Hemachatus haemachatus,Elapidae
+sp|P25676|3SO61_HEMHA Weak toxin CM1c OS=Hemachatus haemachatus OX=8626 PE=1 SV=1,Weak toxin CM1c,3FTx,Hemachatus haemachatus,Elapidae
+Heterodon_nasicus_unigene14895,-,3FTx,Heterodon nasicus,Colubridae
+Heterodon_nasicus_unigene617783,-,3FTx,Heterodon nasicus,Colubridae
+Heterodon_nasicus_unigene2480,-,3FTx,Heterodon nasicus,Colubridae
+Heterodon_nasicus_unigene384518,-,3FTx,Heterodon nasicus,Colubridae
+"Hosa_2 Homo sapiens chromosome 8, GRCh38.p12 Primary Assembly",LY6K,Ly-6,Homo sapiens,Placentalia
+"Hosa_1 Homo sapiens chromosome 8, GRCh38.p12 Primary Assembly",PSCA (prostate stem cell antigen),Ly-6,Homo sapiens,Placentalia
+"Hosa_13 Homo sapiens chromosome 8, GRCh38.p12 Primary Assembly",LY6L,Ly-6,Homo sapiens,Placentalia
+"Hosa_3 Homo sapiens chromosome 8, GRCh38.p12 Primary Assembly",SLURP1 (secreted Ly-6/uPAR-related protein 1),Ly-6,Homo sapiens,Placentalia
+"Hosa_4 Homo sapiens chromosome 8, GRCh38.p12 Primary Assembly",LYPD2,Ly-6,Homo sapiens,Placentalia
+"Hosa_14 Homo sapiens chromosome 8, GRCh38.p12 Primary Assembly",LY6H,Ly-6,Homo sapiens,Placentalia
+"Hosa_7 Homo sapiens chromosome 8, GRCh38.p12 Primary Assembly",LY6D,Ly-6,Homo sapiens,Placentalia
+"Hosa_6 Homo sapiens chromosome 8, GRCh38.p12 Primary Assembly",LYNX1 (ly-6/neurotoxin-like protein 1),Ly-6,Homo sapiens,Placentalia
+"Hosa_5 Homo sapiens chromosome 8, GRCh38.p12 Primary Assembly",LYNX1-SLURP2,Ly-6,Homo sapiens,Placentalia
+"Hosa_11 Homo sapiens chromosome 8, GRCh38.p12 Primary Assembly",LY6E,Ly-6,Homo sapiens,Placentalia
+"Hosa_15 Homo sapiens chromosome 8, GRCh38.p12 Primary Assembly",GPIHBP1 (glycosylphosphatidylinositol-anchored high density lipoprotein-binding protein 1),Ly-6,Homo sapiens,Placentalia
+sp|A8HDJ9|3S11_HOPST Short neurotoxin 1 OS=Hoplocephalus stephensii OX=196418 PE=3 SV=1,Short neurotoxin 1,3FTx,Hoplocephalus stephensii,Elapidae
+sp|P25494|3S11_HYDCY Short neurotoxin 1 OS=Hydrophis cyanocinctus OX=8686 PE=1 SV=1,Short neurotoxin 1,3FTx,Hydrophis cyanocinctus,Elapidae
+sp|Q8UW29|3L21_HYDHA Long neurotoxin 1 OS=Hydrophis hardwickii OX=8781 PE=3 SV=1,Long neurotoxin 1,3FTx,Hydrophis hardwickii,Elapidae
+sp|A3FM53|3L22_HYDHA Long neurotoxin 2 OS=Hydrophis hardwickii OX=8781 PE=3 SV=1,Long neurotoxin 2,3FTx,Hydrophis hardwickii,Elapidae
+sp|Q8UW28|3L23_HYDHA AlphaelapitoxinLh2a OS=Hydrophis hardwickii OX=8781 PE=3 SV=1,AlphaelapitoxinLh2a,3FTx,Hydrophis hardwickii,Elapidae
+sp|P68416|3S11_HYDHA Short neurotoxin 1 OS=Hydrophis hardwickii OX=8781 PE=1 SV=2,Short neurotoxin 1,3FTx,Hydrophis hardwickii,Elapidae
+sp|Q8UW26|3S12_HYDHA Short neurotoxin 2 OS=Hydrophis hardwickii OX=8781 PE=3 SV=1,Short neurotoxin 2,3FTx,Hydrophis hardwickii,Elapidae
+sp|Q8UW27|3S116_HYDHA Short neurotoxin SN160 OS=Hydrophis hardwickii OX=8781 PE=3 SV=1,Short neurotoxin SN160,3FTx,Hydrophis hardwickii,Elapidae
+sp|P01437|3S11_HYDLA Short neurotoxin 1 OS=Hydrophis lapemoides OX=8684 PE=1 SV=1,Short neurotoxin 1,3FTx,Hydrophis lapemoides,Elapidae
+sp|Q5UFR8|3S11_HYDPR Short neurotoxin 1 OS=Hydrophis peronii OX=8676 PE=1 SV=1,Short neurotoxin 1,3FTx,Hydrophis peronii,Elapidae
+sp|P62389|3S15_HYDSC Toxin 5 OS=Hydrophis schistosus OX=8682 PE=1 SV=1,Toxin 5,3FTx,Hydrophis schistosus,Elapidae
+sp|P01380|3L21_HYDST AlphaelapitoxinAst2a OS=Hydrophis stokesii OX=355677 PE=1 SV=1,AlphaelapitoxinAst2a,3FTx,Hydrophis stokesii,Elapidae
+sp|P01381|3L22_HYDST AlphaelapitoxinAst2b OS=Hydrophis stokesii OX=355677 PE=1 SV=1,AlphaelapitoxinAst2b,3FTx,Hydrophis stokesii,Elapidae
+Hypsiglena_sp_A0A098M253,-,3FTx,Hypsiglena sp,Colubridae
+sp|P10456|3S1D_LATCO Short neurotoxin D OS=Laticauda colubrina OX=8628 PE=1 SV=2,Short neurotoxin D,3FTx,Laticauda colubrina,Elapidae
+sp|P10457|3S12_LATCO Short neurotoxin II OS=Laticauda colubrina OX=8628 PE=1 SV=2,Short neurotoxin II,3FTx,Laticauda colubrina,Elapidae
+sp|P10455|3S1C_LATCO Short neurotoxin C OS=Laticauda colubrina OX=8628 PE=3 SV=2,Short neurotoxin C,3FTx,Laticauda colubrina,Elapidae
+sp|P0C8R6|3L21_LATCO AlphaelapitoxinLc2c OS=Laticauda colubrina OX=8628 PE=1 SV=1,AlphaelapitoxinLc2c,3FTx,Laticauda colubrina,Elapidae
+sp|P0C8R7|3L2A_LATCO Toxin Lc a OS=Laticauda colubrina OX=8628 PE=1 SV=1,Toxin Lc a,3FTx,Laticauda colubrina,Elapidae
+sp|P0C8R8|3L2B_LATCO Toxin Lc b OS=Laticauda colubrina OX=8628 PE=1 SV=1,Toxin Lc b,3FTx,Laticauda colubrina,Elapidae
+sp|Q9YGC7|3S15_LATCO Short neurotoxin NCA02/NCA05/UER05 OS=Laticauda colubrina OX=8628 PE=3 SV=1,Short neurotoxin NCA02/NCA05/UER05,3FTx,Laticauda colubrina,Elapidae
+sp|P10458|3S1C_LATCR Short neurotoxin C OS=Laticauda crockeri OX=8629 PE=1 SV=1,Short neurotoxin C,3FTx,Laticauda crockeri,Elapidae
+sp|P25496|3S1B_LATCR Short neurotoxin B OS=Laticauda crockeri OX=8629 PE=1 SV=1,Short neurotoxin B,3FTx,Laticauda crockeri,Elapidae
+sp|P25495|3S1A_LATCR Short neurotoxin A OS=Laticauda crockeri OX=8629 PE=1 SV=1,Short neurotoxin A,3FTx,Laticauda crockeri,Elapidae
+sp|P10460|3S1C_LATLA Short neurotoxin C OS=Laticauda laticaudata OX=8630 PE=1 SV=1,Short neurotoxin C,3FTx,Laticauda laticaudata,Elapidae
+sp|Q9YGW9|3S12_LATLA Short neurotoxin VAN10 OS=Laticauda laticaudata OX=8630 PE=3 SV=1,Short neurotoxin VAN10,3FTx,Laticauda laticaudata,Elapidae
+sp|Q9YGW8|3S14_LATLA Short neurotoxin VAN29 OS=Laticauda laticaudata OX=8630 PE=3 SV=1,Short neurotoxin VAN29,3FTx,Laticauda laticaudata,Elapidae
+sp|P10459|3S1B_LATLA Short neurotoxin B OS=Laticauda laticaudata OX=8630 PE=1 SV=2,Short neurotoxin B,3FTx,Laticauda laticaudata,Elapidae
+sp|Q9YGC2|3S11_LATLA Short neurotoxin OKI17/NCA06 OS=Laticauda laticaudata OX=8630 PE=3 SV=1,Short neurotoxin OKI17/NCA06,3FTx,Laticauda laticaudata,Elapidae
+sp|Q9YGC4|3S13_LATLA Short neurotoxin OKI01/OKI19 OS=Laticauda laticaudata OX=8630 PE=3 SV=1,Short neurotoxin OKI01/OKI19,3FTx,Laticauda laticaudata,Elapidae
+sp|Q9YGX1|3S1ED_LATSE Short neurotoxin OKIEd OS=Laticauda semifasciata OX=8631 PE=3 SV=1,Short neurotoxin OKIEd,3FTx,Laticauda semifasciata,Elapidae
+sp|P01379|3L21_LATSE AlphaelapitoxinLs2a OS=Laticauda semifasciata OX=8631 PE=1 SV=2,AlphaelapitoxinLs2a,3FTx,Laticauda semifasciata,Elapidae
+sp|P60775|3S1EA_LATSE Erabutoxin a OS=Laticauda semifasciata OX=8631 PE=1 SV=1,Erabutoxin a,3FTx,Laticauda semifasciata,Elapidae
+sp|Q7T2I5|3S1EC_LATSE Erabutoxin c OS=Laticauda semifasciata OX=8631 PE=1 SV=1,Erabutoxin c,3FTx,Laticauda semifasciata,Elapidae
+sp|Q90VW1|3S1EB_LATSE Erabutoxin b OS=Laticauda semifasciata OX=8631 PE=1 SV=1,Erabutoxin b,3FTx,Laticauda semifasciata,Elapidae
+sp|A7X3R6|3NX1_LEIMD Toxin 3FTxLei1 OS=Leioheterodon madagascariensis OX=46577 PE=3 SV=1,Toxin 3FTxLei1,3FTx,Leioheterodon madagascariensis,Pseudoxyrhophiidae
+Leioheterodon_madagascariensis_A7X3R6,-,3FTx,Leioheterodon madagascariensis,Pseudoxyrhophiidae
+Malpolon_monspessulanus_unigene50403,-,3FTx,Malpolon monspessulanus,Psammophiidae
+Micrurus_altirostris_F5CPD2,-,3FTx,Micrurus altirostris,Elapidae
+Micrurus_altirostris_AED89572,-,3FTx,Micrurus altirostris,Elapidae
+Micrurus_altirostris_F5CPD1,-,3FTx,Micrurus altirostris,Elapidae
+Micrurus_altirostris_F5CPD4,-,3FTx,Micrurus altirostris,Elapidae
+sp|F5CPD8|3S157_MICAT Three finger toxin MALT0057C OS=Micrurus altirostris OX=129457 PE=1 SV=1,Three finger toxin MALT0057C,3FTx,Micrurus altirostris,Elapidae
+sp|F5CPD5|3S151_MICAT Three finger toxin MALT0051C OS=Micrurus altirostris OX=129457 PE=1 SV=1,Three finger toxin MALT0051C,3FTx,Micrurus altirostris,Elapidae
+sp|F5CPE2|3SX3_MICAT Threefinger toxin MALT0063C OS=Micrurus altirostris OX=129457 PE=1 SV=1,Threefinger toxin MALT0063C,3FTx,Micrurus altirostris,Elapidae
+sp|F5CPE0|3SX9_MICAT Threefinger toxin MALT0059C OS=Micrurus altirostris OX=129457 PE=1 SV=1,Threefinger toxin MALT0059C,3FTx,Micrurus altirostris,Elapidae
+sp|F5CPD3|3SX4_MICAT Threefinger toxin MALT0044C OS=Micrurus altirostris OX=129457 PE=1 SV=1,Threefinger toxin MALT0044C,3FTx,Micrurus altirostris,Elapidae
+sp|F5CPE6|3SX0_MICAT Threefinger toxin MALT0070C OS=Micrurus altirostris OX=129457 PE=1 SV=1,Threefinger toxin MALT0070C,3FTx,Micrurus altirostris,Elapidae
+sp|F5CPE3|3SX5_MICAT Threefinger toxin MALT0065C OS=Micrurus altirostris OX=129457 PE=1 SV=1,Threefinger toxin MALT0065C,3FTx,Micrurus altirostris,Elapidae
+sp|F5CPE4|3S166_MICAT Three finger toxin MALT0066C OS=Micrurus altirostris OX=129457 PE=1 SV=1,Three finger toxin MALT0066C,3FTx,Micrurus altirostris,Elapidae
+sp|F5CPD7|3S154_MICAT Three finger toxin MALT0054C OS=Micrurus altirostris OX=129457 PE=1 SV=1,Three finger toxin MALT0054C,3FTx,Micrurus altirostris,Elapidae
+sp|F5CPD6|3S152_MICAT Three finger toxin MALT0052C OS=Micrurus altirostris OX=129457 PE=1 SV=1,Three finger toxin MALT0052C,3FTx,Micrurus altirostris,Elapidae
+sp|F5CPD9|3S158_MICAT Three finger toxin MALT0058C OS=Micrurus altirostris OX=129457 PE=1 SV=1,Three finger toxin MALT0058C,3FTx,Micrurus altirostris,Elapidae
+Micrurus_browni_A0A0H4IRA8,-,3FTx,Micrurus browni,Elapidae
+Micrurus_browni_A0A0H4IUN8,-,3FTx,Micrurus browni,Elapidae
+Micrurus_browni_A0A0H4J512,-,3FTx,Micrurus browni,Elapidae
+Micrurus_browni_A0A0H4IVP7,-,3FTx,Micrurus browni,Elapidae
+Micrurus_browni_A0A0H4BJD8,-,3FTx,Micrurus browni,Elapidae
+Micrurus_browni_A0A0H4IS74,-,3FTx,Micrurus browni,Elapidae
+Micrurus_browni_A0A0H4BEG5,-,3FTx,Micrurus browni,Elapidae
+Micrurus_browni_A0A0H4BLZ7,-,3FTx,Micrurus browni,Elapidae
+sp|C0HK04|3SX1_MICCK Clarkitoxin1 OS=Micrurus clarki OX=1817999 PE=1 SV=1,Clarkitoxin1,3FTx,Micrurus clarki,Elapidae
+Micrurus_corallinus_C6JUP4,-,3FTx,Micrurus corallinus,Elapidae
+Micrurus_corallinus_C6JUP5,-,3FTx,Micrurus corallinus,Elapidae
+Micrurus_corallinus_C6JUP0,-,3FTx,Micrurus corallinus,Elapidae
+sp|P58370|3NO48_MICCO Alphaneurotoxin homolog 8 OS=Micrurus corallinus OX=54390 PE=1 SV=1,Alphaneurotoxin homolog 8,3FTx,Micrurus corallinus,Elapidae
+sp|C6JUP1|3SX1_MICCO Threefinger toxin 3FTx1 OS=Micrurus corallinus OX=54390 PE=1 SV=1,Threefinger toxin 3FTx1,3FTx,Micrurus corallinus,Elapidae
+sp|C6JUP2|3NO22_MICCO Threefinger toxin 3FTx2 OS=Micrurus corallinus OX=54390 PE=1 SV=1,Threefinger toxin 3FTx2,3FTx,Micrurus corallinus,Elapidae
+sp|C6JUP3|3SX3_MICCO Threefinger toxin MicTx3 OS=Micrurus corallinus OX=54390 PE=1 SV=1,Threefinger toxin MicTx3,3FTx,Micrurus corallinus,Elapidae
+sp|Q9PUB7|3SOC1_MICCO Alphaneurotoxin homolog 1 OS=Micrurus corallinus OX=54390 PE=1 SV=1,Alphaneurotoxin homolog 1,3FTx,Micrurus corallinus,Elapidae
+sp|Q9PRI1|3SOC7_MICCO Alphaneurotoxin homolog 7 OS=Micrurus corallinus OX=54390 PE=1 SV=1,Alphaneurotoxin homolog 7,3FTx,Micrurus corallinus,Elapidae
+Micrurus_corallinus_P58370,-,3FTx,Micrurus corallinus,Elapidae
+Micrurus_diastema_A0A0H4BKJ5,-,3FTx,Micrurus diastema,Elapidae
+Micrurus_diastema_A0A0H4BEG1,-,3FTx,Micrurus diastema,Elapidae
+Micrurus_diastema_A0A0G3YJD1,-,3FTx,Micrurus diastema,Elapidae
+Micrurus_diastema_A0A0H4BFQ4,-,3FTx,Micrurus diastema,Elapidae
+Micrurus_diastema_A0A0H4BLZ2,-,3FTx,Micrurus diastema,Elapidae
+Micrurus_diastema_A0A0H4BEF7,-,3FTx,Micrurus diastema,Elapidae
+sp|C0HLK5|3SX1_MICDM ClarkitoxinIMdum OS=Micrurus dumerilii OX=1337871 PE=1 SV=1,ClarkitoxinIMdum,3FTx,Micrurus dumerilii,Elapidae
+Micrurus_frontalis_P86420,-,3FTx,Micrurus frontalis,Elapidae
+Micrurus_frontalis_P86424,-,3FTx,Micrurus frontalis,Elapidae
+sp|P86421|3SX2_MICFR Frontoxin II OS=Micrurus frontalis OX=129461 PE=1 SV=1,Frontoxin II,3FTx,Micrurus frontalis,Elapidae
+sp|P86422|3S13_MICFR Frontoxin III OS=Micrurus frontalis OX=129461 PE=1 SV=1,Frontoxin III,3FTx,Micrurus frontalis,Elapidae
+sp|P86423|3NX4_MICFR Frontoxin IV OS=Micrurus frontalis OX=129461 PE=1 SV=1,Frontoxin IV,3FTx,Micrurus frontalis,Elapidae
+sp|P86424|3NX5_MICFR Frontoxin V OS=Micrurus frontalis OX=129461 PE=1 SV=1,Frontoxin V,3FTx,Micrurus frontalis,Elapidae
+Micrurus_fulvius_U3FAF0,-,3FTx,Micrurus fulvius,Elapidae
+Micrurus_fulvius_U3F5D3,-,3FTx,Micrurus fulvius,Elapidae
+Micrurus_fulvius_A0A0F7Z3S7,-,3FTx,Micrurus fulvius,Elapidae
+Micrurus_fulvius_U3EPM4,-,3FTx,Micrurus fulvius,Elapidae
+Micrurus_fulvius_U3FAE7,-,3FTx,Micrurus fulvius,Elapidae
+Micrurus_fulvius_U3F5E9,-,3FTx,Micrurus fulvius,Elapidae
+Micrurus_fulvius_U3FVG5,-,3FTx,Micrurus fulvius,Elapidae
+Micrurus_fulvius_U3FAC0,-,3FTx,Micrurus fulvius,Elapidae
+Micrurus_fulvius_U3F5B5,-,3FTx,Micrurus fulvius,Elapidae
+Micrurus_fulvius_U3FVG7,-,3FTx,Micrurus fulvius,Elapidae
+Micrurus_fulvius_U3FYQ0,-,3FTx,Micrurus fulvius,Elapidae
+Micrurus_fulvius_U3EPI1,-,3FTx,Micrurus fulvius,Elapidae
+Micrurus_fulvius_U3FYR0,-,3FTx,Micrurus fulvius,Elapidae
+Micrurus_fulvius_U3FVI0,-,3FTx,Micrurus fulvius,Elapidae
+Micrurus_fulvius_U3EPL9,-,3FTx,Micrurus fulvius,Elapidae
+Micrurus_fulvius_U3FYQ7,-,3FTx,Micrurus fulvius,Elapidae
+Micrurus_fulvius_U3FYQ5,-,3FTx,Micrurus fulvius,Elapidae
+Micrurus_fulvius_U3FVI5,-,3FTx,Micrurus fulvius,Elapidae
+Micrurus_fulvius_A0A0F7YZP6,-,3FTx,Micrurus fulvius,Elapidae
+Micrurus_fulvius_JAS05071,-,3FTx,Micrurus fulvius,Elapidae
+Micrurus_fulvius_U3FVH8,-,3FTx,Micrurus fulvius,Elapidae
+Micrurus_fulvius_U3FYQ9,-,3FTx,Micrurus fulvius,Elapidae
+Micrurus_fulvius_U3FVH6,-,3FTx,Micrurus fulvius,Elapidae
+sp|U3EPL2|3SXB_MICFL Threefinger toxin 3b OS=Micrurus fulvius OX=8637 PE=3 SV=1,Threefinger toxin 3b,3FTx,Micrurus fulvius,Elapidae
+sp|U3FAE1|3SXA_MICFL Fulditoxin OS=Micrurus fulvius OX=8637 PE=1 SV=1,Fulditoxin,3FTx,Micrurus fulvius,Elapidae
+Micrurus_laticollaris_A0A0G3YLL2,-,3FTx,Micrurus laticollaris,Elapidae
+Micrurus_laticollaris_A0A0H4BJD1,-,3FTx,Micrurus laticollaris,Elapidae
+Micrurus_laticollaris_A0A0H4BLY9,-,3FTx,Micrurus laticollaris,Elapidae
+Micrurus_laticollaris_A0A0H4BKI7,-,3FTx,Micrurus laticollaris,Elapidae
+Micrurus_laticollaris_A0A0H4BFP9,-,3FTx,Micrurus laticollaris,Elapidae
+sp|K9MCH1|3S11_MICLL Threefinger toxin A1 OS=Micrurus laticollaris OX=1240351 PE=1 SV=1,Threefinger toxin A1,3FTx,Micrurus laticollaris,Elapidae
+sp|K9MCX0|3SX2_MICLL Threefinger toxin A2 OS=Micrurus laticollaris OX=1240351 PE=3 SV=1,Threefinger toxin A2,3FTx,Micrurus laticollaris,Elapidae
+sp|A0A2P1BSU3|3SX3_MICMP Mipartoxin3 OS=Micrurus mipartitus OX=430902 PE=2 SV=1,Mipartoxin3,3FTx,Micrurus mipartitus,Elapidae
+sp|B3EWF8|3SX1_MICMP Mipartoxin1 OS=Micrurus mipartitus OX=430902 PE=1 SV=2,Mipartoxin1,3FTx,Micrurus mipartitus,Elapidae
+sp|A0A2P1BST7|3SX1A_MICMP Mipartoxin1A OS=Micrurus mipartitus OX=430902 PE=2 SV=1,Mipartoxin1A,3FTx,Micrurus mipartitus,Elapidae
+sp|A0A2P1BSS9|3SX2_MICMP Mipartoxin2 OS=Micrurus mipartitus OX=430902 PE=2 SV=1,Mipartoxin2,3FTx,Micrurus mipartitus,Elapidae
+sp|A0A2P1BSS8|3SX4_MICMP Mipartoxin4 OS=Micrurus mipartitus OX=430902 PE=2 SV=1,Mipartoxin4,3FTx,Micrurus mipartitus,Elapidae
+sp|C0HJR2|3NX2_MICMP Micrurotoxin 2 OS=Micrurus mipartitus OX=430902 PE=1 SV=1,Micrurotoxin 2,3FTx,Micrurus mipartitus,Elapidae
+sp|C0HJR1|3NX1_MICMP Micrurotoxin 1 OS=Micrurus mipartitus OX=430902 PE=1 SV=1,Micrurotoxin 1,3FTx,Micrurus mipartitus,Elapidae
+Micrurus_mipartitus_C0HJR2,-,3FTx,Micrurus mipartitus,Elapidae
+sp|P80548|3S11_MICNI Threefinger toxin Mnn I OS=Micrurus nigrocinctus OX=8635 PE=1 SV=1,Threefinger toxin Mnn I,3FTx,Micrurus nigrocinctus,Elapidae
+sp|P0CAR1|3S1D1_MICPY Short neurotoxin D1 OS=Micrurus pyrrhocryptus OX=129468 PE=1 SV=1,Short neurotoxin D1,3FTx,Micrurus pyrrhocryptus,Elapidae
+sp|P86095|3S11_MICSU Threefinger toxin MS1 OS=Micrurus surinamensis OX=129470 PE=1 SV=1,Threefinger toxin MS1,3FTx,Micrurus surinamensis,Elapidae
+sp|P86094|3SX_MICSU Short neurotoxin MS11 OS=Micrurus surinamensis OX=129470 PE=1 SV=1,Short neurotoxin MS11,3FTx,Micrurus surinamensis,Elapidae
+sp|P86099|3NX5_MICSU Long neurotoxin MS5 OS=Micrurus surinamensis OX=129470 PE=1 SV=1,Long neurotoxin MS5,3FTx,Micrurus surinamensis,Elapidae
+sp|P86098|3NX4_MICSU Long neurotoxin MS4 OS=Micrurus surinamensis OX=129470 PE=1 SV=1,Long neurotoxin MS4,3FTx,Micrurus surinamensis,Elapidae
+sp|P86096|3NX2_MICSU Long neurotoxin MS2 OS=Micrurus surinamensis OX=129470 PE=1 SV=1,Long neurotoxin MS2,3FTx,Micrurus surinamensis,Elapidae
+sp|P86097|3S13_MICSU Threefinger toxin MS3 OS=Micrurus surinamensis OX=129470 PE=1 SV=1,Threefinger toxin MS3,3FTx,Micrurus surinamensis,Elapidae
+Micrurus_surinamensis_P86096,-,3FTx,Micrurus surinamensis,Elapidae
+Micrurus_tener_A0A194ATD7,-,3FTx,Micrurus_ tener,Elapidae
+Micrurus_tener_A0A194ARK8,-,3FTx,Micrurus_ tener,Elapidae
+Micrurus_tener_A0A194ATD1,-,3FTx,Micrurus_ tener,Elapidae
+Micrurus_tener_A0A194APE1,-,3FTx,Micrurus_ tener,Elapidae
+Micrurus_tener_A0A0H4IVQ6,-,3FTx,Micrurus_ tener,Elapidae
+Micrurus_tener_A0A0H4IRB3,-,3FTx,Micrurus_ tener,Elapidae
+Micrurus_tener_A0A194ARB2,-,3FTx,Micrurus_ tener,Elapidae
+Micrurus_tener_A0A194ATA3,-,3FTx,Micrurus_ tener,Elapidae
+Micrurus_tener_A0A194ARH7,-,3FTx,Micrurus_ tener,Elapidae
+Micrurus_tener_A0A194ATA6,-,3FTx,Micrurus_ tener,Elapidae
+Micrurus_tener_A0A194ASD1,-,3FTx,Micrurus_ tener,Elapidae
+Micrurus_tener_A0A194APG0,-,3FTx,Micrurus_ tener,Elapidae
+Micrurus_tener_A0A194ASE2,-,3FTx,Micrurus_ tener,Elapidae
+Micrurus_tener_A0A194ASE0,-,3FTx,Micrurus_ tener,Elapidae
+Micrurus_tener_A0A194ATB0,-,3FTx,Micrurus_ tener,Elapidae
+Micrurus_tener_A0A194AT81,-,3FTx,Micrurus_ tener,Elapidae
+Micrurus_tener_A0A194APB1,-,3FTx,Micrurus_ tener,Elapidae
+Micrurus_tener_A0A194ASE3,-,3FTx,Micrurus_ tener,Elapidae
+Micrurus_tener_A0A0H4J521,-,3FTx,Micrurus_ tener,Elapidae
+Micrurus_tener_A0A194ARJ0,-,3FTx,Micrurus_ tener,Elapidae
+Micrurus_tener_A0A194ARC5,-,3FTx,Micrurus_ tener,Elapidae
+Micrurus_tener_A0A194ATC0,-,3FTx,Micrurus_ tener,Elapidae
+Micrurus_tener_A0A194APG5,-,3FTx,Micrurus_ tener,Elapidae
+Micrurus_tener_A0A194ASE5,-,3FTx,Micrurus_ tener,Elapidae
+Micrurus_tener_A0A194ARJ5,-,3FTx,Micrurus_ tener,Elapidae
+Micrurus_tener_A0A194ATC3,-,3FTx,Micrurus_ tener,Elapidae
+Micrurus_tener_A0A194APH0,-,3FTx,Micrurus_ tener,Elapidae
+Micrurus_tener_A0A194ATB5,-,3FTx,Micrurus_ tener,Elapidae
+Micrurus_tener_A0A194APH5,-,3FTx,Micrurus_ tener,Elapidae
+Micrurus_tener_A0A194ARC1,-,3FTx,Micrurus_ tener,Elapidae
+Micrurus_tener_A0A194ARK4,-,3FTx,Micrurus_ tener,Elapidae
+Micrurus_tener_JAS05188,-,3FTx,Micrurus_ tener,Elapidae
+Micrurus_tener_A0A194API9,-,3FTx,Micrurus_ tener,Elapidae
+Micrurus_tener_A0A0H4IUP1,-,3FTx,Micrurus_ tener,Elapidae
+Micrurus_tener_JAS05190,-,3FTx,Micrurus_ tener,Elapidae
+Micrurus_tener_A0A0H4IS80,-,3FTx,Micrurus_ tener,Elapidae
+Micrurus_tener_A0A194ASF5,-,3FTx,Micrurus_ tener,Elapidae
+sp|P01389|3L21_NAJAC Long neurotoxin 1 OS=Naja anchietae OX=263737 PE=1 SV=1,Long neurotoxin 1,3FTx,Naja anchietae,Elapidae
+sp|P34075|3S11_NAJAN Short neurotoxin 1 OS=Naja annulata annulata OX=8610 PE=1 SV=1,Short neurotoxin 1,3FTx,Naja annulata annulata,Elapidae
+sp|P34074|3L221_NAJAN Long neurotoxin 1 OS=Naja annulata annulata OX=8610 PE=1 SV=2,Long neurotoxin 1,3FTx,Naja annulata annulata,Elapidae
+sp|P01421|3S14_NAJHA Short neurotoxin 4 OS=Naja annulifera OX=96794 PE=1 SV=1,Short neurotoxin 4,3FTx,Naja annulifera,Elapidae
+sp|P01420|3S13_NAJHA Short neurotoxin 3 OS=Naja annulifera OX=96794 PE=1 SV=1,Short neurotoxin 3,3FTx,Naja annulifera,Elapidae
+sp|P01422|3S12_NAJHA Short neurotoxin 2 OS=Naja annulifera OX=96794 PE=1 SV=1,Short neurotoxin 2,3FTx,Naja annulifera,Elapidae
+sp|P68417|3S11_NAJHA Short neurotoxin 1 OS=Naja annulifera OX=96794 PE=1 SV=1,Short neurotoxin 1,3FTx,Naja annulifera,Elapidae
+sp|P25678|3SOK2_NAJHA Weak toxin CM2a OS=Naja annulifera OX=96794 PE=1 SV=1,Weak toxin CM2a,3FTx,Naja annulifera,Elapidae
+sp|P25677|3SOK3_NAJHA Weak toxin CM3 OS=Naja annulifera OX=96794 PE=1 SV=1,Weak toxin CM3,3FTx,Naja annulifera,Elapidae
+sp|P62390|3SOFB_NAJHA Cytotoxin 11 OS=Naja annulifera OX=96794 PE=1 SV=1,Cytotoxin 11,3FTx,Naja annulifera,Elapidae
+sp|P01464|3SA5_NAJHA Cytotoxin 5 OS=Naja annulifera OX=96794 PE=1 SV=1,Cytotoxin 5,3FTx,Naja annulifera,Elapidae
+sp|P01462|3SA2_NAJHA Cytotoxin 2 OS=Naja annulifera OX=96794 PE=1 SV=1,Cytotoxin 2,3FTx,Naja annulifera,Elapidae
+sp|P01466|3SA7_NAJHA Cytotoxin 7 OS=Naja annulifera OX=96794 PE=1 SV=1,Cytotoxin 7,3FTx,Naja annulifera,Elapidae
+sp|P01465|3SA6_NAJHA Cytotoxin 6 OS=Naja annulifera OX=96794 PE=1 SV=1,Cytotoxin 6,3FTx,Naja annulifera,Elapidae
+sp|P01455|3SA1_NAJHA Cytotoxin 1 OS=Naja annulifera OX=96794 PE=1 SV=1,Cytotoxin 1,3FTx,Naja annulifera,Elapidae
+sp|P01461|3SA4_NAJHA Cytotoxin 4 OS=Naja annulifera OX=96794 PE=1 SV=1,Cytotoxin 4,3FTx,Naja annulifera,Elapidae
+sp|P01459|3SA3_NAJHA Cytotoxin 3 OS=Naja annulifera OX=96794 PE=1 SV=1,Cytotoxin 3,3FTx,Naja annulifera,Elapidae
+sp|P01460|3SA8_NAJHA Cytotoxin 8 OS=Naja annulifera OX=96794 PE=1 SV=1,Cytotoxin 8,3FTx,Naja annulifera,Elapidae
+sp|P01454|3SA9_NAJHA Cytotoxin 9 OS=Naja annulifera OX=96794 PE=1 SV=1,Cytotoxin 9,3FTx,Naja annulifera,Elapidae
+sp|P01453|3SAA_NAJHA Cytotoxin 10 OS=Naja annulifera OX=96794 PE=1 SV=1,Cytotoxin 10,3FTx,Naja annulifera,Elapidae
+sp|P01399|3NO2D_NAJHA Weak toxin CM13b OS=Naja annulifera OX=96794 PE=1 SV=1,Weak toxin CM13b,3FTx,Naja annulifera,Elapidae
+sp|P60770|3S1CB_NAJAT Cobrotoxin OS=Naja atra OX=8656 PE=1 SV=1,Cobrotoxin,3FTx,Naja atra,Elapidae
+sp|P80958|3S1CC_NAJAT Cobrotoxinb OS=Naja atra OX=8656 PE=1 SV=2,Cobrotoxinb,3FTx,Naja atra,Elapidae
+sp|Q8UUK0|3SOF3_NAJAT Cytotoxin homolog Clbp3 OS=Naja atra OX=8656 PE=3 SV=1,Cytotoxin homolog Clbp3,3FTx,Naja atra,Elapidae
+sp|P49122|3SOF7_NAJAT Cytotoxin 7 OS=Naja atra OX=8656 PE=2 SV=1,Cytotoxin 7,3FTx,Naja atra,Elapidae
+sp|P0DUK7|3SOF1_NAJAT MuelapitoxinNa1a OS=Naja atra OX=8656 PE=1 SV=1,MuelapitoxinNa1a,3FTx,Naja atra,Elapidae
+sp|Q91137|3SOFL_NAJAT Cytotoxin homolog 5 OS=Naja atra OX=8656 PE=3 SV=1,Cytotoxin homolog 5,3FTx,Naja atra,Elapidae
+sp|Q91126|3SOFA_NAJAT Cardiotoxin 7a OS=Naja atra OX=8656 PE=3 SV=1,Cardiotoxin 7a,3FTx,Naja atra,Elapidae
+sp|P62375|3SOF5_NAJAT Cytotoxin A5 OS=Naja atra OX=8656 PE=1 SV=1,Cytotoxin A5,3FTx,Naja atra,Elapidae
+sp|Q9W716|3SOFV_NAJAT Cytotoxin homolog 5V OS=Naja atra OX=8656 PE=3 SV=1,Cytotoxin homolog 5V,3FTx,Naja atra,Elapidae
+sp|Q98956|3SA1B_NAJAT Cytotoxin 1b OS=Naja atra OX=8656 PE=3 SV=1,Cytotoxin 1b,3FTx,Naja atra,Elapidae
+sp|Q98958|3SA1D_NAJAT Cytotoxin 1d/1e OS=Naja atra OX=8656 PE=3 SV=1,Cytotoxin 1d/1e,3FTx,Naja atra,Elapidae
+sp|Q91136|3SATF_NAJAT Cytotoxin Ilike T15 OS=Naja atra OX=8656 PE=3 SV=1,Cytotoxin Ilike T15,3FTx,Naja atra,Elapidae
+sp|P79810|3SA1C_NAJAT Cytotoxin 1c OS=Naja atra OX=8656 PE=3 SV=1,Cytotoxin 1c,3FTx,Naja atra,Elapidae
+sp|Q91135|3SAPF_NAJAT Cytotoxin Ilike P15 OS=Naja atra OX=8656 PE=3 SV=1,Cytotoxin Ilike P15,3FTx,Naja atra,Elapidae
+sp|Q98957|3SA1A_NAJAT Cytotoxin 1a OS=Naja atra OX=8656 PE=3 SV=1,Cytotoxin 1a,3FTx,Naja atra,Elapidae
+sp|P60304|3SA1_NAJAT Cytotoxin 1 OS=Naja atra OX=8656 PE=1 SV=1,Cytotoxin 1,3FTx,Naja atra,Elapidae
+sp|Q98965|3SA6_NAJAT Cytotoxin 6 OS=Naja atra OX=8656 PE=3 SV=1,Cytotoxin 6,3FTx,Naja atra,Elapidae
+sp|Q9W6W6|3SAA_NAJAT Cytotoxin 10 OS=Naja atra OX=8656 PE=3 SV=1,Cytotoxin 10,3FTx,Naja atra,Elapidae
+sp|P80245|3SAN_NAJAT Cytotoxin 6 OS=Naja atra OX=8656 PE=1 SV=2,Cytotoxin 6,3FTx,Naja atra,Elapidae
+sp|P49123|3SA8A_NAJAT Cytotoxin 8 OS=Naja atra OX=8656 PE=3 SV=1,Cytotoxin 8,3FTx,Naja atra,Elapidae
+sp|P60309|3SAFD_NAJAT Cytotoxin SP15d OS=Naja atra OX=8656 PE=1 SV=1,Cytotoxin SP15d,3FTx,Naja atra,Elapidae
+sp|P60307|3SAFA_NAJAT Cytotoxin SP15a OS=Naja atra OX=8656 PE=1 SV=1,Cytotoxin SP15a,3FTx,Naja atra,Elapidae
+sp|P60308|3SAFC_NAJAT Cytotoxin SP15c OS=Naja atra OX=8656 PE=1 SV=1,Cytotoxin SP15c,3FTx,Naja atra,Elapidae
+sp|P60306|3SADB_NAJAT Cytotoxin SP13b OS=Naja atra OX=8656 PE=1 SV=1,Cytotoxin SP13b,3FTx,Naja atra,Elapidae
+sp|Q91124|3SA8B_NAJAT Cytotoxin 8 OS=Naja atra OX=8656 PE=3 SV=1,Cytotoxin 8,3FTx,Naja atra,Elapidae
+sp|Q98962|3SA3D_NAJAT Cytotoxin 3d OS=Naja atra OX=8656 PE=3 SV=1,Cytotoxin 3d,3FTx,Naja atra,Elapidae
+sp|Q9W6W9|3SA4N_NAJAT Cytotoxin 4N OS=Naja atra OX=8656 PE=3 SV=1,Cytotoxin 4N,3FTx,Naja atra,Elapidae
+sp|P01443|3SA4_NAJAT Cytotoxin 4 OS=Naja atra OX=8656 PE=1 SV=2,Cytotoxin 4,3FTx,Naja atra,Elapidae
+sp|P01442|3SA2_NAJAT Cytotoxin 2 OS=Naja atra OX=8656 PE=1 SV=2,Cytotoxin 2,3FTx,Naja atra,Elapidae
+sp|Q98961|3SA5_NAJAT Cytotoxin 5 OS=Naja atra OX=8656 PE=3 SV=1,Cytotoxin 5,3FTx,Naja atra,Elapidae
+sp|P07525|3SAT_NAJAT Cytotoxin 5 OS=Naja atra OX=8656 PE=1 SV=1,Cytotoxin 5,3FTx,Naja atra,Elapidae
+sp|Q98959|3SA3A_NAJAT Cytotoxin 3a OS=Naja atra OX=8656 PE=3 SV=1,Cytotoxin 3a,3FTx,Naja atra,Elapidae
+sp|Q98960|3SA3B_NAJAT Cytotoxin 3b OS=Naja atra OX=8656 PE=3 SV=2,Cytotoxin 3b,3FTx,Naja atra,Elapidae
+sp|Q9YGI4|3NO22_NAJAT Probable weak neurotoxin NNAM2 OS=Naja atra OX=8656 PE=1 SV=1,Probable weak neurotoxin NNAM2,3FTx,Naja atra,Elapidae
+sp|P60814|3NO2I_NAJAT Probable weak neurotoxin NNAM2I OS=Naja atra OX=8656 PE=3 SV=1,Probable weak neurotoxin NNAM2I,3FTx,Naja atra,Elapidae
+sp|Q9YGI1|3NO23_NAJAT Probable weak neurotoxin NNAM3 OS=Naja atra OX=8656 PE=3 SV=1,Probable weak neurotoxin NNAM3,3FTx,Naja atra,Elapidae
+sp|O93422|3NO2H_NAJAT Long neurotoxin homolog OS=Naja atra OX=8656 PE=3 SV=1,Long neurotoxin homolog,3FTx,Naja atra,Elapidae
+Naja_atra_Q9YGI4,-,3FTx,Naja atra,Elapidae
+Naja_atra_E2ITZ6,-,3FTx,Naja atra,Elapidae
+sp|P34076|3S11_NAJCH Short neurotoxin 1 OS=Naja christyi OX=8611 PE=1 SV=1,Short neurotoxin 1,3FTx,Naja christyi,Elapidae
+sp|P25675|3S12_NAJHH Short neurotoxin 2 OS=Naja haje haje OX=8642 PE=1 SV=1,Short neurotoxin 2,3FTx,Naja haje haje,Elapidae
+sp|P01457|3SA5_NAJHH Cytotoxin 5 OS=Naja haje haje OX=8642 PE=1 SV=1,Cytotoxin 5,3FTx,Naja haje haje,Elapidae
+sp|P01401|3NO2B_NAJHH Weak toxin CM11 OS=Naja haje haje OX=8642 PE=1 SV=1,Weak toxin CM11,3FTx,Naja haje haje,Elapidae
+sp|P25674|3L21_NAJHH Long neurotoxin 1 OS=Naja haje haje OX=8642 PE=1 SV=1,Long neurotoxin 1,3FTx,Naja haje haje,Elapidae
+sp|P01415|3SO62_NAJHH Weak toxin CM2 OS=Naja haje haje OX=8642 PE=1 SV=1,Weak toxin CM2,3FTx,Naja haje haje,Elapidae
+sp|P0DSM9|3NO2N_NAJKA Weak toxin NWT OS=Naja kaouthia OX=8649 PE=1 SV=1,Weak toxin NWT,3FTx,Naja kaouthia,Elapidae
+sp|P82849|3S1B2_NAJKA Cobrotoxin II OS=Naja kaouthia OX=8649 PE=1 SV=1,Cobrotoxin II,3FTx,Naja kaouthia,Elapidae
+sp|P14613|3S1B1_NAJKA Short neurotoxin 1 OS=Naja kaouthia OX=8649 PE=1 SV=1,Short neurotoxin 1,3FTx,Naja kaouthia,Elapidae
+sp|P59275|3S1B_NAJKA Cobrotoxinb OS=Naja kaouthia OX=8649 PE=1 SV=1,Cobrotoxinb,3FTx,Naja kaouthia,Elapidae
+sp|P59276|3S1C_NAJKA Cobrotoxinc OS=Naja kaouthia OX=8649 PE=1 SV=1,Cobrotoxinc,3FTx,Naja kaouthia,Elapidae
+sp|P82463|3SUC2_NAJKA Muscarinic toxinlike protein 2 OS=Naja kaouthia OX=8649 PE=1 SV=1,Muscarinic toxinlike protein 2,3FTx,Naja kaouthia,Elapidae
+sp|P0DSN0|3SX_NAJKA Nakoroxin OS=Naja kaouthia OX=8649 PE=1 SV=1,Nakoroxin,3FTx,Naja kaouthia,Elapidae
+sp|P01391|3L21_NAJKA Alpha-cobratoxin OS=Naja kaouthia OX=8649 PE=1 SV=1,Alpha-cobratoxin,3FTx,Naja kaouthia,Elapidae
+sp|P14541|3SOFH_NAJKA Cytotoxin homolog OS=Naja kaouthia OX=8649 PE=1 SV=1,Cytotoxin homolog,3FTx,Naja kaouthia,Elapidae
+sp|P01445|3SA7A_NAJKA Cytotoxin 2 OS=Naja kaouthia OX=8649 PE=1 SV=1,Cytotoxin 2,3FTx,Naja kaouthia,Elapidae
+sp|P01446|3SA3_NAJKA Cytotoxin 3 OS=Naja kaouthia OX=8649 PE=1 SV=1,Cytotoxin 3,3FTx,Naja kaouthia,Elapidae
+sp|P24779|3SA5_NAJKA Cytotoxin 5 OS=Naja kaouthia OX=8649 PE=1 SV=1,Cytotoxin 5,3FTx,Naja kaouthia,Elapidae
+sp|P0CH80|3SA1_NAJKA Cytotoxin 1 OS=Naja kaouthia OX=8649 PE=1 SV=1,Cytotoxin 1,3FTx,Naja kaouthia,Elapidae
+sp|Q9DGH9|3SA2_NAJKA Cytotoxin 2 OS=Naja kaouthia OX=8649 PE=3 SV=1,Cytotoxin 2,3FTx,Naja kaouthia,Elapidae
+sp|P82464|3SO8_NAJKA Muscarinic toxinlike protein 3 OS=Naja kaouthia OX=8649 PE=1 SV=1,Muscarinic toxinlike protein 3,3FTx,Naja kaouthia,Elapidae
+sp|P82935|3NO2_NAJKA Tryptophancontaining weak neurotoxin OS=Naja kaouthia OX=8649 PE=1 SV=2,Tryptophancontaining weak neurotoxin,3FTx,Naja kaouthia,Elapidae
+sp|P25679|3NO29_NAJKA Weak toxin CM9a OS=Naja kaouthia OX=8649 PE=1 SV=2,Weak toxin CM9a,3FTx,Naja kaouthia,Elapidae
+Naja_kaouthia_P82935,-,3FTx,Naja kaouthia,Elapidae
+sp|P01424|3S11_NAJME Short neurotoxin 1 OS=Naja melanoleuca OX=8643 PE=1 SV=1,Short neurotoxin 1,3FTx,Naja melanoleuca,Elapidae
+sp|P0DQQ3|3SUC1_NAJME Muscarinic toxinlike protein TxNM32 OS=Naja melanoleuca OX=8643 PE=1 SV=1,Muscarinic toxinlike protein TxNM32,3FTx,Naja melanoleuca,Elapidae
+sp|P01474|3SOF2_NAJME Cytotoxin homolog 2 OS=Naja melanoleuca OX=8643 PE=1 SV=1,Cytotoxin homolog 2,3FTx,Naja melanoleuca,Elapidae
+sp|P01473|3SOF3_NAJME Cytotoxin homolog 3 OS=Naja melanoleuca OX=8643 PE=1 SV=1,Cytotoxin homolog 3,3FTx,Naja melanoleuca,Elapidae
+sp|P01448|3SA1_NAJME Cytotoxin 1 OS=Naja melanoleuca OX=8643 PE=1 SV=1,Cytotoxin 1,3FTx,Naja melanoleuca,Elapidae
+sp|P01400|3NO2B_NAJME Weak toxin S4C11 OS=Naja melanoleuca OX=8643 PE=1 SV=1,Weak toxin S4C11,3FTx,Naja melanoleuca,Elapidae
+sp|P01388|3L22_NAJME Long neurotoxin 2 OS=Naja melanoleuca OX=8643 PE=1 SV=1,Long neurotoxin 2,3FTx,Naja melanoleuca,Elapidae
+sp|P0DQQ2|3L24_NAJME Long neurotoxin TxNM31 OS=Naja melanoleuca OX=8643 PE=1 SV=1,Long neurotoxin TxNM31,3FTx,Naja melanoleuca,Elapidae
+sp|P0DQQ1|3L23_NAJME Long neurotoxin TxNM2 OS=Naja melanoleuca OX=8643 PE=1 SV=1,Long neurotoxin TxNM2,3FTx,Naja melanoleuca,Elapidae
+sp|P01383|3L21_NAJME Long neurotoxin 1 OS=Naja melanoleuca OX=8643 PE=1 SV=1,Long neurotoxin 1,3FTx,Naja melanoleuca,Elapidae
+sp|P01432|3S13_NAJMO Short neurotoxin 3 OS=Naja mossambica OX=8644 PE=1 SV=1,Short neurotoxin 3,3FTx,Naja mossambica,Elapidae
+sp|P01431|3S11_NAJMO Short neurotoxin 1 OS=Naja mossambica OX=8644 PE=1 SV=1,Short neurotoxin 1,3FTx,Naja mossambica,Elapidae
+sp|P01452|3SA4_NAJMO Cytotoxin 4 OS=Naja mossambica OX=8644 PE=1 SV=1,Cytotoxin 4,3FTx,Naja mossambica,Elapidae
+sp|P01470|3SA3_NAJMO Cytotoxin 3 OS=Naja mossambica OX=8644 PE=1 SV=1,Cytotoxin 3,3FTx,Naja mossambica,Elapidae
+sp|P01469|3SA2_NAJMO Cytotoxin 2 OS=Naja mossambica OX=8644 PE=1 SV=1,Cytotoxin 2,3FTx,Naja mossambica,Elapidae
+sp|P01467|3SA1_NAJMO Cytotoxin 1 OS=Naja mossambica OX=8644 PE=1 SV=1,Cytotoxin 1,3FTx,Naja mossambica,Elapidae
+sp|P25517|3SA5_NAJMO Cytotoxin 5 OS=Naja mossambica OX=8644 PE=1 SV=3,Cytotoxin 5,3FTx,Naja mossambica,Elapidae
+"Nana_c3_11 Naja naja isolate NN01 chromosome 3, whole genome shotgun sequence",-,snake genomic,Naja naja,Elapidae
+"Nana_c3_dn_7 Naja naja isolate NN01 chromosome 3, whole genome shotgun sequence",-,snake genomic,Naja naja,Elapidae
+"Nana_c3_8 Naja naja isolate NN01 chromosome 3, whole genome shotgun sequence",-,snake genomic,Naja naja,Elapidae
+"Nana_c3_dn_9 Naja naja isolate NN01 chromosome 3, whole genome shotgun sequence",-,snake genomic,Naja naja,Elapidae
+"Nana_c1_1 Naja naja isolate NN01 chromosome 1, whole genome shotgun sequence",-,snake genomic,Naja naja,Elapidae
+"Nana_c3_dn_19 Naja naja isolate NN01 chromosome 3, whole genome shotgun sequence",-,snake genomic,Naja naja,Elapidae
+"Nana_c3_16 Naja naja isolate NN01 chromosome 3, whole genome shotgun sequence",-,snake genomic,Naja naja,Elapidae
+"Nana_c3_dn_17 Naja naja isolate NN01 chromosome 3, whole genome shotgun sequence",-,snake genomic,Naja naja,Elapidae
+"Nana_c3_dn_5 Naja naja isolate NN01 chromosome 3, whole genome shotgun sequence",-,snake genomic,Naja naja,Elapidae
+"Nana_c3_dn_1 Naja naja isolate NN01 chromosome 3, whole genome shotgun sequence",-,snake genomic,Naja naja,Elapidae
+"Nana_c3_dn_4 Naja naja isolate NN01 chromosome 3, whole genome shotgun sequence",-,snake genomic,Naja naja,Elapidae
+"Nana_c3_28 Naja naja isolate NN01 chromosome 3, whole genome shotgun sequence",-,snake genomic,Naja naja,Elapidae
+"Nana_c3_dn_12 Naja naja isolate NN01 chromosome 3, whole genome shotgun sequence",-,snake genomic,Naja naja,Elapidae
+"Nana_c3_dn_15 Naja naja isolate NN01 chromosome 3, whole genome shotgun sequence",-,snake genomic,Naja naja,Elapidae
+"Nana_c3_dn_14 Naja naja isolate NN01 chromosome 3, whole genome shotgun sequence",-,snake genomic,Naja naja,Elapidae
+"Nana_c3_dn_18 Naja naja isolate NN01 chromosome 3, whole genome shotgun sequence",-,snake genomic,Naja naja,Elapidae
+"Nana_c3_dn_26 Naja naja isolate NN01 chromosome 3, whole genome shotgun sequence",-,snake genomic,Naja naja,Elapidae
+"Nana_c3_dn_20 Naja naja isolate NN01 chromosome 3, whole genome shotgun sequence",-,snake genomic,Naja naja,Elapidae
+"Nana_c3_dn_27 Naja naja isolate NN01 chromosome 3, whole genome shotgun sequence",-,snake genomic,Naja naja,Elapidae
+"Nana_c4_dn_1 Naja naja isolate NN01 chromosome 4, whole genome shotgun sequence",-,snake genomic,Naja naja,Elapidae
+"Nana_c3_dn_2 Naja naja isolate NN01 chromosome 3, whole genome shotgun sequence",-,snake genomic,Naja naja,Elapidae
+"Nana_c3_dn_3 Naja naja isolate NN01 chromosome 3, whole genome shotgun sequence",-,snake genomic,Naja naja,Elapidae
+"Nana_c3_dn_6 Naja naja isolate NN01 chromosome 3, whole genome shotgun sequence",-,snake genomic,Naja naja,Elapidae
+"Nana_c3_dn_24 Naja naja isolate NN01 chromosome 3, whole genome shotgun sequence",-,snake genomic,Naja naja,Elapidae
+"Nana_c3_dn_23 Naja naja isolate NN01 chromosome 3, whole genome shotgun sequence",-,snake genomic,Naja naja,Elapidae
+"Nana_c3_dn_25 Naja naja isolate NN01 chromosome 3, whole genome shotgun sequence",-,snake genomic,Naja naja,Elapidae
+"Nana_c3_dn_10 Naja naja isolate NN01 chromosome 3, whole genome shotgun sequence",-,snake genomic,Naja naja,Elapidae
+sp|P86538|3SA2A_NAJNA Cytotoxin 2a OS=Naja naja OX=35670 PE=1 SV=2,Cytotoxin 2a,3FTx,Naja naja,Elapidae
+sp|P86540|3SA8_NAJNA Cytotoxin 8 OS=Naja naja OX=35670 PE=1 SV=2,Cytotoxin 8,3FTx,Naja naja,Elapidae
+sp|P86382|3SA7_NAJNA Cytotoxin 7 OS=Naja naja OX=35670 PE=1 SV=1,Cytotoxin 7,3FTx,Naja naja,Elapidae
+sp|P01447|3SA1_NAJNA Cytotoxin 1 OS=Naja naja OX=35670 PE=1 SV=1,Cytotoxin 1,3FTx,Naja naja,Elapidae
+sp|P24780|3SA3_NAJNA Cytotoxin 3 OS=Naja naja OX=35670 PE=1 SV=1,Cytotoxin 3,3FTx,Naja naja,Elapidae
+sp|P86541|3SAA_NAJNA Cytotoxin 10 OS=Naja naja OX=35670 PE=1 SV=2,Cytotoxin 10,3FTx,Naja naja,Elapidae
+sp|P01440|3SA2_NAJNA Cytotoxin 2 OS=Naja naja OX=35670 PE=1 SV=1,Cytotoxin 2,3FTx,Naja naja,Elapidae
+sp|P29181|3NO27_NAJNA Weak neurotoxin 7 OS=Naja naja OX=35670 PE=1 SV=1,Weak neurotoxin 7,3FTx,Naja naja,Elapidae
+sp|P29182|3NO28_NAJNA Weak neurotoxin 8 OS=Naja naja OX=35670 PE=1 SV=1,Weak neurotoxin 8,3FTx,Naja naja,Elapidae
+sp|P29179|3NO25_NAJNA Weak neurotoxin 5 OS=Naja naja OX=35670 PE=1 SV=1,Weak neurotoxin 5,3FTx,Naja naja,Elapidae
+sp|P29180|3NO26_NAJNA Weak neurotoxin 6 OS=Naja naja OX=35670 PE=1 SV=1,Weak neurotoxin 6,3FTx,Naja naja,Elapidae
+sp|P25672|3L24_NAJNA Long neurotoxin 4 OS=Naja naja OX=35670 PE=1 SV=1,Long neurotoxin 4,3FTx,Naja naja,Elapidae
+sp|P25673|3L25_NAJNA Long neurotoxin 5 OS=Naja naja OX=35670 PE=1 SV=1,Long neurotoxin 5,3FTx,Naja naja,Elapidae
+sp|P25668|3L21_NAJNA Long neurotoxin 1 OS=Naja naja OX=35670 PE=1 SV=1,Long neurotoxin 1,3FTx,Naja naja,Elapidae
+sp|P25669|3L22_NAJNA Long neurotoxin 2 OS=Naja naja OX=35670 PE=1 SV=1,Long neurotoxin 2,3FTx,Naja naja,Elapidae
+sp|P25671|3L23_NAJNA Long neurotoxin 3 OS=Naja naja OX=35670 PE=1 SV=1,Long neurotoxin 3,3FTx,Naja naja,Elapidae
+sp|P0DSN1|3SAN_NAJNG Naniproin OS=Naja nigricollis OX=8654 PE=1 SV=1,Naniproin,3FTx,Naja nigricollis,Elapidae
+sp|P01423|3S12_NAJNI Short neurotoxin 2 OS=Naja nivea OX=8655 PE=1 SV=1,Short neurotoxin 2,3FTx,Naja nivea,Elapidae
+sp|P01463|3SA2_NAJNI Cytotoxin 2 OS=Naja nivea OX=8655 PE=1 SV=1,Cytotoxin 2,3FTx,Naja nivea,Elapidae
+sp|P01456|3SA1_NAJNI Cytotoxin 1 OS=Naja nivea OX=8655 PE=1 SV=1,Cytotoxin 1,3FTx,Naja nivea,Elapidae
+sp|P01458|3SA3_NAJNI Cytotoxin 3 OS=Naja nivea OX=8655 PE=1 SV=1,Cytotoxin 3,3FTx,Naja nivea,Elapidae
+sp|P25680|3NO2A_NAJNI Weak toxin CM10 OS=Naja nivea OX=8655 PE=1 SV=1,Weak toxin CM10,3FTx,Naja nivea,Elapidae
+sp|P01390|3L21_NAJNI Long neurotoxin 1 OS=Naja nivea OX=8655 PE=1 SV=1,Long neurotoxin 1,3FTx,Naja nivea,Elapidae
+sp|P01451|3SA1_NAJOX Cytotoxin 1 OS=Naja oxiana OX=8657 PE=1 SV=1,Cytotoxin 1,3FTx,Naja oxiana,Elapidae
+sp|P01441|3SA2_NAJOX Cytotoxin 2 OS=Naja oxiana OX=8657 PE=1 SV=1,Cytotoxin 2,3FTx,Naja oxiana,Elapidae
+sp|Q9PS34|3SA5_NAJOX Cytotoxin Vc5 OS=Naja oxiana OX=8657 PE=1 SV=1,Cytotoxin Vc5,3FTx,Naja oxiana,Elapidae
+sp|P85520|3NO2_NAJOX Oxiana weak toxin OS=Naja oxiana OX=8657 PE=1 SV=2,Oxiana weak toxin,3FTx,Naja oxiana,Elapidae
+sp|P01382|3L21_NAJOX AlphaelapitoxinNno2a OS=Naja oxiana OX=8657 PE=1 SV=1,AlphaelapitoxinNno2a,3FTx,Naja oxiana,Elapidae
+sp|P01426|3S11_NAJPA Short neurotoxin 1 OS=Naja pallida OX=8658 PE=1 SV=1,Short neurotoxin 1,3FTx,Naja pallida,Elapidae
+sp|P01468|3SA1_NAJPA Cytotoxin 1 OS=Naja pallida OX=8658 PE=1 SV=1,Cytotoxin 1,3FTx,Naja pallida,Elapidae
+sp|P60773|3S11_NAJPH Short neurotoxin 1 OS=Naja philippinensis OX=8659 PE=1 SV=1,Short neurotoxin 1,3FTx,Naja philippinensis,Elapidae
+sp|P83345|3SAS_NAJSG Cytotoxin sagitoxin OS=Naja sagittifera OX=195058 PE=1 SV=1,Cytotoxin sagitoxin,3FTx,Naja sagittifera,Elapidae
+sp|O93472|3SA2C_NAJSP Cytotoxin 2c OS=Naja sputatrix OX=33626 PE=3 SV=1,Cytotoxin 2c,3FTx,Naja sputatrix,Elapidae
+sp|Q9PSN6|3S13_NAJSP Neurotoxin 3 OS=Naja sputatrix OX=33626 PE=1 SV=1,Neurotoxin 3,3FTx,Naja sputatrix,Elapidae
+sp|O57327|3S1A4_NAJSP Alphaneurotoxin NTX4 OS=Naja sputatrix OX=33626 PE=3 SV=1,Alphaneurotoxin NTX4,3FTx,Naja sputatrix,Elapidae
+sp|Q9YGJ5|3S1A2_NAJSP Alphaneurotoxin NTX2 OS=Naja sputatrix OX=33626 PE=3 SV=1,Alphaneurotoxin NTX2,3FTx,Naja sputatrix,Elapidae
+sp|Q9YGJ6|3S1A1_NAJSP Alphaneurotoxin NTX1 OS=Naja sputatrix OX=33626 PE=3 SV=1,Alphaneurotoxin NTX1,3FTx,Naja sputatrix,Elapidae
+sp|O57326|3S1A3_NAJSP Alphaneurotoxin NTX3 OS=Naja sputatrix OX=33626 PE=3 SV=1,Alphaneurotoxin NTX3,3FTx,Naja sputatrix,Elapidae
+sp|P60772|3S15_NAJSP Neurotoxin 5 OS=Naja sputatrix OX=33626 PE=1 SV=1,Neurotoxin 5,3FTx,Naja sputatrix,Elapidae
+sp|P60311|3SAC3_NAJSP Cytotoxin KJC3 OS=Naja sputatrix OX=33626 PE=1 SV=1,Cytotoxin KJC3,3FTx,Naja sputatrix,Elapidae
+sp|Q02454|3SA0_NAJSP Cytotoxin OS=Naja sputatrix OX=33626 PE=3 SV=1,Cytotoxin,3FTx,Naja sputatrix,Elapidae
+sp|O93471|3SA1_NAJSP Cytotoxin 1 OS=Naja sputatrix OX=33626 PE=3 SV=1,Cytotoxin 1,3FTx,Naja sputatrix,Elapidae
+sp|O93473|3SA4A_NAJSP Cytotoxin 4a OS=Naja sputatrix OX=33626 PE=3 SV=1,Cytotoxin 4a,3FTx,Naja sputatrix,Elapidae
+sp|O73856|3SA4B_NAJSP Cytotoxin 4b OS=Naja sputatrix OX=33626 PE=1 SV=2,Cytotoxin 4b,3FTx,Naja sputatrix,Elapidae
+sp|Q9W7I3|3NO29_NAJSP Weak neurotoxin 9 OS=Naja sputatrix OX=33626 PE=3 SV=1,Weak neurotoxin 9,3FTx,Naja sputatrix,Elapidae
+sp|Q802B3|3NO28_NAJSP Weak neurotoxin 8 OS=Naja sputatrix OX=33626 PE=3 SV=2,Weak neurotoxin 8,3FTx,Naja sputatrix,Elapidae
+sp|O42255|3NO25_NAJSP Weak neurotoxin 5 OS=Naja sputatrix OX=33626 PE=3 SV=1,Weak neurotoxin 5,3FTx,Naja sputatrix,Elapidae
+sp|O42256|3NO26_NAJSP Weak neurotoxin 6 OS=Naja sputatrix OX=33626 PE=3 SV=1,Weak neurotoxin 6,3FTx,Naja sputatrix,Elapidae
+sp|Q802B2|3NO2A_NAJSP Weak neurotoxin 10 OS=Naja sputatrix OX=33626 GN=WNTX10 PE=3 SV=1,Weak neurotoxin 10,3FTx,Naja sputatrix,Elapidae
+sp|O42257|3L27_NAJSP Long neurotoxin 7 OS=Naja sputatrix OX=33626 PE=1 SV=1,Long neurotoxin 7,3FTx,Naja sputatrix,Elapidae
+Naja_sputatrix_Q802B3,-,3FTx,Naja sputatrix,Elapidae
+Naja_sputatrix_Q802B2,-,3FTx,Naja sputatrix,Elapidae
+sp|P01384|3L21_NOTSC AlphaelapitoxinNss2a OS=Notechis scutatus scutatus OX=70142 PE=1 SV=2,AlphaelapitoxinNss2a,3FTx,Notechis scutatus scutatus,Elapidae
+sp|A8HDK0|3S11_NOTSC Short neurotoxin 1 OS=Notechis scutatus scutatus OX=70142 PE=3 SV=1,Short neurotoxin 1,3FTx,Notechis scutatus scutatus,Elapidae
+sp|Q53B55|3L231_OPHHA Long neurotoxinlike OH31 OS=Ophiophagus hannah OX=8665 PE=3 SV=1,Long neurotoxinlike OH31,3FTx,Ophiophagus hannah,Elapidae
+sp|Q2VBP5|3L222_OPHHA Long neurotoxin LNTX22 OS=Ophiophagus hannah OX=8665 PE=1 SV=1,Long neurotoxin LNTX22,3FTx,Ophiophagus hannah,Elapidae
+sp|Q53B49|3SI35_OPHHA Short neurotoxin OH35 OS=Ophiophagus hannah OX=8665 PE=1 SV=1,Short neurotoxin OH35,3FTx,Ophiophagus hannah,Elapidae
+sp|Q53B47|3SX5_OPHHA Short neurotoxin OH5 OS=Ophiophagus hannah OX=8665 PE=1 SV=1,Short neurotoxin OH5,3FTx,Ophiophagus hannah,Elapidae
+sp|P83302|3SX1_OPHHA Neurotoxin Oh91 OS=Ophiophagus hannah OX=8665 PE=1 SV=1,Neurotoxin Oh91,3FTx,Ophiophagus hannah,Elapidae
+sp|Q2VBP2|3SX6_OPHHA Short neurotoxin SNTX6 OS=Ophiophagus hannah OX=8665 PE=3 SV=1,Short neurotoxin SNTX6,3FTx,Ophiophagus hannah,Elapidae
+sp|Q2VBP0|3SXE_OPHHA Short neurotoxin SNTX14 OS=Ophiophagus hannah OX=8665 PE=3 SV=1,Short neurotoxin SNTX14,3FTx,Ophiophagus hannah,Elapidae
+sp|Q53B48|3SX7_OPHHA Short neurotoxin OH46 OS=Ophiophagus hannah OX=8665 PE=3 SV=1,Short neurotoxin OH46,3FTx,Ophiophagus hannah,Elapidae
+sp|Q2VBN9|3SXQ_OPHHA Short neurotoxin SNTX26 OS=Ophiophagus hannah OX=8665 PE=3 SV=1,Short neurotoxin SNTX26,3FTx,Ophiophagus hannah,Elapidae
+sp|Q53B52|3SXZ_OPHHA Short neurotoxin OH26 OS=Ophiophagus hannah OX=8665 PE=1 SV=1,Short neurotoxin OH26,3FTx,Ophiophagus hannah,Elapidae
+sp|Q53B50|3SX2_OPHHA Short neurotoxin OH32 OS=Ophiophagus hannah OX=8665 PE=3 SV=1,Short neurotoxin OH32,3FTx,Ophiophagus hannah,Elapidae
+sp|A8N286|3SO8_OPHHA Haditoxin OS=Ophiophagus hannah OX=8665 PE=1 SV=1,Haditoxin,3FTx,Ophiophagus hannah,Elapidae
+sp|Q2VBN4|3SDC3_OPHHA Betacardiotoxin CTX23 OS=Ophiophagus hannah OX=8665 PE=1 SV=1,Betacardiotoxin CTX23,3FTx,Ophiophagus hannah,Elapidae
+sp|Q2VBN5|3SDC1_OPHHA Betacardiotoxin CTX21 OS=Ophiophagus hannah OX=8665 PE=3 SV=1,Betacardiotoxin CTX21,3FTx,Ophiophagus hannah,Elapidae
+sp|Q2VBN7|3SDC4_OPHHA Betacardiotoxin CTX14 OS=Ophiophagus hannah OX=8665 PE=1 SV=1,Betacardiotoxin CTX14,3FTx,Ophiophagus hannah,Elapidae
+sp|Q69CK0|3SDC7_OPHHA Betacardiotoxin CTX27 OS=Ophiophagus hannah OX=8665 PE=1 SV=1,Betacardiotoxin CTX27,3FTx,Ophiophagus hannah,Elapidae
+sp|Q53B46|3SDC5_OPHHA Betacardiotoxin CTX15 OS=Ophiophagus hannah OX=8665 PE=1 SV=1,Betacardiotoxin CTX15,3FTx,Ophiophagus hannah,Elapidae
+sp|Q2VBN8|3SDC9_OPHHA Betacardiotoxin CTX9 OS=Ophiophagus hannah OX=8665 PE=1 SV=1,Betacardiotoxin CTX9,3FTx,Ophiophagus hannah,Elapidae
+sp|Q2VBN0|3SIM8_OPHHA Muscarinic toxin 38 OS=Ophiophagus hannah OX=8665 PE=3 SV=1,Muscarinic toxin 38,3FTx,Ophiophagus hannah,Elapidae
+sp|Q2VBN1|3SIM6_OPHHA Muscarinic toxin MTX6 OS=Ophiophagus hannah OX=8665 PE=3 SV=1,Muscarinic toxin MTX6,3FTx,Ophiophagus hannah,Elapidae
+sp|Q2VBN2|3NO24_OPHHA Weak neurotoxin WNTX34 OS=Ophiophagus hannah OX=8665 PE=1 SV=1,Weak neurotoxin WNTX34,3FTx,Ophiophagus hannah,Elapidae
+sp|Q53B56|3L257_OPHHA Long neurotoxin OH57 OS=Ophiophagus hannah OX=8665 PE=3 SV=1,Long neurotoxin OH57,3FTx,Ophiophagus hannah,Elapidae
+sp|Q2VBP4|3L228_OPHHA Long neurotoxin LNTX28 OS=Ophiophagus hannah OX=8665 PE=1 SV=1,Long neurotoxin LNTX28,3FTx,Ophiophagus hannah,Elapidae
+sp|P82662|3L26_OPHHA AlphaelapitoxinOh2b OS=Ophiophagus hannah OX=8665 PE=1 SV=2,AlphaelapitoxinOh2b,3FTx,Ophiophagus hannah,Elapidae
+sp|Q53B59|3L237_OPHHA Long neurotoxin OH37 OS=Ophiophagus hannah OX=8665 PE=1 SV=1,Long neurotoxin OH37,3FTx,Ophiophagus hannah,Elapidae
+sp|P07526|3L23_OPHHA Long neurotoxin 3 OS=Ophiophagus hannah OX=8665 PE=1 SV=1,Long neurotoxin 3,3FTx,Ophiophagus hannah,Elapidae
+sp|Q53B58|3L255_OPHHA Long neurotoxin OH55 OS=Ophiophagus hannah OX=8665 PE=1 SV=1,Long neurotoxin OH55,3FTx,Ophiophagus hannah,Elapidae
+sp|P01387|3L21_OPHHA Long neurotoxin 1 OS=Ophiophagus hannah OX=8665 PE=1 SV=1,Long neurotoxin 1,3FTx,Ophiophagus hannah,Elapidae
+sp|Q53B57|3L256_OPHHA Long neurotoxin OH56 OS=Ophiophagus hannah OX=8665 PE=1 SV=1,Long neurotoxin OH56,3FTx,Ophiophagus hannah,Elapidae
+sp|P01386|3L22_OPHHA Long neurotoxin 2 OS=Ophiophagus hannah OX=8665 PE=1 SV=1,Long neurotoxin 2,3FTx,Ophiophagus hannah,Elapidae
+sp|A8N285|3L22H_OPHHA Long neurotoxin LNTX2 homolog OS=Ophiophagus hannah OX=8665 PE=3 SV=1,Long neurotoxin LNTX2 homolog,3FTx,Ophiophagus hannah,Elapidae
+sp|Q53B54|3L217_OPHHA Long neurotoxin OH17 OS=Ophiophagus hannah OX=8665 PE=1 SV=1,Long neurotoxin OH17,3FTx,Ophiophagus hannah,Elapidae
+sp|P80965|3L25_OPHHA Long neurotoxin OH5 OS=Ophiophagus hannah OX=8665 PE=1 SV=1,Long neurotoxin OH5,3FTx,Ophiophagus hannah,Elapidae
+sp|P80156|3L24_OPHHA Long neurotoxin 4 OS=Ophiophagus hannah OX=8665 PE=1 SV=1,Long neurotoxin 4,3FTx,Ophiophagus hannah,Elapidae
+sp|Q2VBP6|3L2X8_OPHHA Long neurotoxin LNTX8 OS=Ophiophagus hannah OX=8665 PE=3 SV=1,Long neurotoxin LNTX8,3FTx,Ophiophagus hannah,Elapidae
+sp|Q2VBP3|3L23X_OPHHA Long neurotoxin LNTX37 OS=Ophiophagus hannah OX=8665 PE=3 SV=1,Long neurotoxin LNTX37,3FTx,Ophiophagus hannah,Elapidae
+sp|Q2VBP8|3L2X1_OPHHA Long neurotoxin LNTX1 OS=Ophiophagus hannah OX=8665 PE=3 SV=1,Long neurotoxin LNTX1,3FTx,Ophiophagus hannah,Elapidae
+sp|C5ILC5|3L22A_OPHHA AlphaelapitoxinOh2a OS=Ophiophagus hannah OX=8665 PE=3 SV=1,AlphaelapitoxinOh2a,3FTx,Ophiophagus hannah,Elapidae
+sp|Q69CJ8|3S11H_OPHHA Weak toxin DE1 homolog 1 OS=Ophiophagus hannah OX=8665 PE=1 SV=1,Weak toxin DE1 homolog 1,3FTx,Ophiophagus hannah,Elapidae
+sp|P01412|3S11A_OPHHA Weak toxin DE1 OS=Ophiophagus hannah OX=8665 PE=1 SV=2,Weak toxin DE1,3FTx,Ophiophagus hannah,Elapidae
+sp|Q2VBN3|3SX3_OPHHA Weak neurotoxin WNTX33 OS=Ophiophagus hannah OX=8665 PE=3 SV=1,Weak neurotoxin WNTX33,3FTx,Ophiophagus hannah,Elapidae
+Ophiophagus_hannah_Q2VBN2,-,3FTx,Ophiophagus hannah,Elapidae
+"Oran3 Ornithorhynchus anatinus isolate Pmale09 chromosome 4, mOrnAna1.pri.v4, whole genome shotgun sequence",-,Ly-6,Ornithorhynchus anatinus,Monotremata
+"Oran2 Ornithorhynchus anatinus isolate Pmale09 chromosome 4, mOrnAna1.pri.v4, whole genome shotgun sequence",-,Ly-6,Ornithorhynchus anatinus,Monotremata
+"Oran1 Ornithorhynchus anatinus isolate Pmale09 chromosome 4, mOrnAna1.pri.v4, whole genome shotgun sequence",-,Ly-6,Ornithorhynchus anatinus,Monotremata
+"Oran_dn_10 Ornithorhynchus anatinus isolate Pmale09 chromosome 4, mOrnAna1.pri.v4, whole genome shotgun sequence",-,Ly-6,Ornithorhynchus anatinus,Monotremata
+"Oran6 Ornithorhynchus anatinus isolate Pmale09 chromosome 4, mOrnAna1.pri.v4, whole genome shotgun sequence",-,Ly-6,Ornithorhynchus anatinus,Monotremata
+"Oran_dn5 Ornithorhynchus anatinus isolate Pmale09 chromosome 4, mOrnAna1.pri.v4, whole genome shotgun sequence",-,Ly-6,Ornithorhynchus anatinus,Monotremata
+"Oran9 Ornithorhynchus anatinus isolate Pmale09 chromosome 4, mOrnAna1.pri.v4, whole genome shotgun sequence",-,Ly-6,Ornithorhynchus anatinus,Monotremata
+"Oran7 Ornithorhynchus anatinus isolate Pmale09 chromosome 4, mOrnAna1.pri.v4, whole genome shotgun sequence",-,Ly-6,Ornithorhynchus anatinus,Monotremata
+"Oran_2 Ornithorhynchus anatinus isolate Glennie unplaced genomic scaffold, Ornithorhynchus_anatinus5.0.1, whole genome shotgun sequence",-,Ly-6,Ornithorhynchus anatinus,Monotremata
+"Oran_dn4 Ornithorhynchus anatinus isolate Pmale09 chromosome 4, mOrnAna1.pri.v4, whole genome shotgun sequence",-,Ly-6,Ornithorhynchus anatinus,Monotremata
+"Oran8 Ornithorhynchus anatinus isolate Pmale09 chromosome 4, mOrnAna1.pri.v4, whole genome shotgun sequence",-,Ly-6,Ornithorhynchus anatinus,Monotremata
+"Oran_1 Ornithorhynchus anatinus isolate Glennie unplaced genomic scaffold, Ornithorhynchus_anatinus5.0.1, whole genome shotgun sequence",-,Ly-6,Ornithorhynchus anatinus,Monotremata
+Oxybelis_fulgidus_A0A193CHK9,-,3FTx,Oxybelis fulgidus,Colubridae
+sp|C0HJD3|3NB_OXYFU Fulgimotoxin OS=Oxybelis fulgidus OX=121355 PE=1 SV=1,Fulgimotoxin,3FTx,Oxybelis fulgidus,Colubridae
+Oxybelis_fulgidus_A0A193CHK9,-,3FTx,Oxybelis fulgidus,Colubridae
+sp|A7X4T2|3SX6_OXYMI Threefinger toxin 3FTxOxy6 OS=Oxyuranus microlepidotus OX=111177 PE=3 SV=1,Threefinger toxin 3FTxOxy6,3FTx,Oxyuranus microlepidotus,Elapidae
+sp|A7X4S7|3SX5_OXYMI Toxin 3FTxOxy5 OS=Oxyuranus microlepidotus OX=111177 PE=3 SV=1,Toxin 3FTxOxy5,3FTx,Oxyuranus microlepidotus,Elapidae
+sp|A7X4R0|3L2O2_OXYMI Long neurotoxin 3FTxOxy2 OS=Oxyuranus microlepidotus OX=111177 PE=3 SV=1,Long neurotoxin 3FTxOxy2,3FTx,Oxyuranus microlepidotus,Elapidae
+sp|A8HDK7|3L21_OXYMI Long neurotoxin 1 OS=Oxyuranus microlepidotus OX=111177 PE=3 SV=1,Long neurotoxin 1,3FTx,Oxyuranus microlepidotus,Elapidae
+sp|A7X4Q3|3L2O1_OXYMI Long neurotoxin 3FTxOxy1 OS=Oxyuranus microlepidotus OX=111177 PE=3 SV=1,Long neurotoxin 3FTxOxy1,3FTx,Oxyuranus microlepidotus,Elapidae
+sp|A8HDK8|3L22_OXYMI Long neurotoxin 2 OS=Oxyuranus microlepidotus OX=111177 PE=3 SV=1,Long neurotoxin 2,3FTx,Oxyuranus microlepidotus,Elapidae
+sp|A7X4S0|3S14_OXYMI Short neurotoxin 3FTxOxy4 OS=Oxyuranus microlepidotus OX=111177 PE=3 SV=1,Short neurotoxin 3FTxOxy4,3FTx,Oxyuranus microlepidotus,Elapidae
+sp|A7X4R5|3S13_OXYMI Short neurotoxin 3FTxOxy3 OS=Oxyuranus microlepidotus OX=111177 PE=3 SV=1,Short neurotoxin 3FTxOxy3,3FTx,Oxyuranus microlepidotus,Elapidae
+sp|A8HDK2|3SX3_OXYSC Short neurotoxin 3 OS=Oxyuranus scutellatus scutellatus OX=8667 PE=3 SV=1,Short neurotoxin 3,3FTx,Oxyuranus scutellatus scutellatus,Elapidae
+sp|Q4VRI0|3SXS_OXYSC Scutelatoxin OS=Oxyuranus scutellatus scutellatus OX=8667 PE=3 SV=1,Scutelatoxin,3FTx,Oxyuranus scutellatus scutellatus,Elapidae
+sp|A8HDK9|3L21_OXYSC Long neurotoxin 1 OS=Oxyuranus scutellatus scutellatus OX=8667 PE=3 SV=1,Long neurotoxin 1,3FTx,Oxyuranus scutellatus scutellatus,Elapidae
+sp|Q45Z11|3S11_OXYSC Short neurotoxin 1 OS=Oxyuranus scutellatus scutellatus OX=8667 PE=1 SV=1,Short neurotoxin 1,3FTx,Oxyuranus scutellatus scutellatus,Elapidae
+sp|P0CB06|3S12_OXYSC Short neurotoxin 2 OS=Oxyuranus scutellatus scutellatus OX=8667 PE=1 SV=1,Short neurotoxin 2,3FTx,Oxyuranus scutellatus scutellatus,Elapidae
+Phalotris_mertensi_A0A182C5Y1,-,3FTx,Phalotris mertensi,Colubridae
+Phalotris_mertensi_A0A182C5S7,-,3FTx,Phalotris mertensi,Colubridae
+"Phci_2 Phascolarctos cinereus isolate Bilbo 61053 unplaced genomic scaffold, phaCin_unsw_v4.1 phaCin_unsw_v4.1.fa.scaf00059, whole genome shotgun sequence",-,Ly-6,Phascolarctos cinctus,Marsupials
+"Phci_8 Phascolarctos cinereus isolate Bilbo 61053 unplaced genomic scaffold, phaCin_unsw_v4.1 phaCin_unsw_v4.1.fa.scaf00059, whole genome shotgun sequence",-,Ly-6,Phascolarctos cinctus,Marsupials
+"Phci_14 Phascolarctos cinereus isolate Bilbo 61053 unplaced genomic scaffold, phaCin_unsw_v4.1 phaCin_unsw_v4.1.fa.scaf00059, whole genome shotgun sequence",-,Ly-6,Phascolarctos cinctus,Marsupials
+"Phci_3 Phascolarctos cinereus isolate Bilbo 61053 unplaced genomic scaffold, phaCin_unsw_v4.1 phaCin_unsw_v4.1.fa.scaf00059, whole genome shotgun sequence",-,Ly-6,Phascolarctos cinctus,Marsupials
+"Phci_11 Phascolarctos cinereus isolate Bilbo 61053 unplaced genomic scaffold, phaCin_unsw_v4.1 phaCin_unsw_v4.1.fa.scaf00059, whole genome shotgun sequence",-,Ly-6,Phascolarctos cinctus,Marsupials
+"Phci_15 Phascolarctos cinereus isolate Bilbo 61053 unplaced genomic scaffold, phaCin_unsw_v4.1 phaCin_unsw_v4.1.fa.scaf00059, whole genome shotgun sequence",-,Ly-6,Phascolarctos cinctus,Marsupials
+"Phci_16 Phascolarctos cinereus isolate Bilbo 61053 unplaced genomic scaffold, phaCin_unsw_v4.1 phaCin_unsw_v4.1.fa.scaf00059, whole genome shotgun sequence",-,Ly-6,Phascolarctos cinctus,Marsupials
+"Phci_7 Phascolarctos cinereus isolate Bilbo 61053 unplaced genomic scaffold, phaCin_unsw_v4.1 phaCin_unsw_v4.1.fa.scaf00059, whole genome shotgun sequence",-,Ly-6,Phascolarctos cinctus,Marsupials
+"Phci_13 Phascolarctos cinereus isolate Bilbo 61053 unplaced genomic scaffold, phaCin_unsw_v4.1 phaCin_unsw_v4.1.fa.scaf00059, whole genome shotgun sequence",-,Ly-6,Phascolarctos cinctus,Marsupials
+"Phci_6 Phascolarctos cinereus isolate Bilbo 61053 unplaced genomic scaffold, phaCin_unsw_v4.1 phaCin_unsw_v4.1.fa.scaf00059, whole genome shotgun sequence",-,Ly-6,Phascolarctos cinctus,Marsupials
+"Phci_4 Phascolarctos cinereus isolate Bilbo 61053 unplaced genomic scaffold, phaCin_unsw_v4.1 phaCin_unsw_v4.1.fa.scaf00059, whole genome shotgun sequence",-,Ly-6,Phascolarctos cinctus,Marsupials
+"Phci_5 Phascolarctos cinereus isolate Bilbo 61053 unplaced genomic scaffold, phaCin_unsw_v4.1 phaCin_unsw_v4.1.fa.scaf00059, whole genome shotgun sequence",-,Ly-6,Phascolarctos cinctus,Marsupials
+"Phci_17 Phascolarctos cinereus isolate Bilbo 61053 unplaced genomic scaffold, phaCin_unsw_v4.1 phaCin_unsw_v4.1.fa.scaf00059, whole genome shotgun sequence",-,Ly-6,Phascolarctos cinctus,Marsupials
+"Povi_6 Pogona vitticeps unplaced genomic scaffold, pvi1.1.0 contig9221, whole genome shotgun sequence",-,Ly-6,Pogona vitticeps,Agamidae
+"Povi_1 Pogona vitticeps unplaced genomic scaffold, pvi1.1.0 contig9221, whole genome shotgun sequence",-,Ly-6,Pogona vitticeps,Agamidae
+"Povi_3 Pogona vitticeps unplaced genomic scaffold, pvi1.1.0 contig9221, whole genome shotgun sequence",-,Ly-6,Pogona vitticeps,Agamidae
+"Povi_7 Pogona vitticeps unplaced genomic scaffold, pvi1.1.0 contig9221, whole genome shotgun sequence",-,Ly-6,Pogona vitticeps,Agamidae
+"Povi_4 Pogona vitticeps unplaced genomic scaffold, pvi1.1.0 contig9221, whole genome shotgun sequence",-,Ly-6,Pogona vitticeps,Agamidae
+"Povi_9 Pogona vitticeps unplaced genomic scaffold, pvi1.1.0 contig9221, whole genome shotgun sequence",-,Ly-6,Pogona vitticeps,Agamidae
+"Povi_8 Pogona vitticeps unplaced genomic scaffold, pvi1.1.0 contig9221, whole genome shotgun sequence",-,Ly-6,Pogona vitticeps,Agamidae
+"Povi_12 Pogona vitticeps unplaced genomic scaffold, pvi1.1.0 contig9221, whole genome shotgun sequence",-,Ly-6,Pogona vitticeps,Agamidae
+"Povi_11 Pogona vitticeps unplaced genomic scaffold, pvi1.1.0 contig9221, whole genome shotgun sequence",-,Ly-6,Pogona vitticeps,Agamidae
+"Povi_10 Pogona vitticeps unplaced genomic scaffold, pvi1.1.0 contig9221, whole genome shotgun sequence",-,Ly-6,Pogona vitticeps,Agamidae
+"Povi_5 Pogona vitticeps unplaced genomic scaffold, pvi1.1.0 contig9221, whole genome shotgun sequence",-,Ly-6,Pogona vitticeps,Agamidae
+Protobothrops_flavoviridis_U3T794,-,3FTx,Protobothrops flavoviridis,Viperidae
+"Prmu_7 Protobothrops mucrosquamatus isolate PMUCROS unplaced genomic scaffold, P.Mucros_1.0 scaffold4200, whole genome shotgun sequence",-,snake genomic,Protobothrops mucrosquamatus,Viperidae
+"Prmu_3 Protobothrops mucrosquamatus isolate PMUCROS unplaced genomic scaffold, P.Mucros_1.0 scaffold1777, whole genome shotgun sequence",-,snake genomic,Protobothrops mucrosquamatus,Viperidae
+"Prmu_4 Protobothrops mucrosquamatus isolate PMUCROS unplaced genomic scaffold, P.Mucros_1.0 scaffold1777, whole genome shotgun sequence",-,snake genomic,Protobothrops mucrosquamatus,Viperidae
+"Prmu_2 Protobothrops mucrosquamatus isolate PMUCROS unplaced genomic scaffold, P.Mucros_1.0 scaffold1777, whole genome shotgun sequence",-,snake genomic,Protobothrops mucrosquamatus,Viperidae
+"Prmu_6 Protobothrops mucrosquamatus isolate PMUCROS unplaced genomic scaffold, P.Mucros_1.0 scaffold1777, whole genome shotgun sequence",-,snake genomic,Protobothrops mucrosquamatus,Viperidae
+"Prmu_5 Protobothrops mucrosquamatus isolate PMUCROS unplaced genomic scaffold, P.Mucros_1.0 scaffold1777, whole genome shotgun sequence",-,snake genomic,Protobothrops mucrosquamatus,Viperidae
+Protobothrops_mucrosquamatus_XP_015678608,-,snake genomic,Protobothrops mucrosquamatus,Viperidae
+Protobothrops_mucrosquamatus_XP_015678603,-,snake genomic,Protobothrops mucrosquamatus,Viperidae
+sp|A7X3M3|3NX1_PSAMO Toxin 3FTxPsa1 OS=Psammophis mossambicus OX=234064 PE=3 SV=1,Toxin 3FTxPsa1,3FTx,Psammophis mossambicus,Psammophiidae
+Psammophis_schokari_unigene276500,-,3FTx,Psammophis schokari,Psammophiidae
+Psammophis_schokari_unigene503446,-,3FTx,Psammophis schokari,Psammophiidae
+Psammophis_schokari_unigene221596,-,3FTx,Psammophis schokari,Psammophiidae
+Psammophis_schokari_unigene36962,-,3FTx,Psammophis schokari,Psammophiidae
+Psammophis_subtaeniatus_unigene33896,-,3FTx,Psammophis subtaeniatus,Psammophiidae
+Psammophis_subtaeniatus_unigene107172,-,3FTx,Psammophis subtaeniatus,Psammophiidae
+sp|P14612|3L2H_PSEAU Long neurotoxin homolog Pa ID OS=Pseudechis australis OX=8670 PE=1 SV=2,Long neurotoxin homolog Pa ID,3FTx,Pseudechis australis,Elapidae
+sp|P25497|3S11_PSEAU Short neurotoxin 1 OS=Pseudechis australis OX=8670 PE=1 SV=2,Short neurotoxin 1,3FTx,Pseudechis australis,Elapidae
+sp|A8HDJ4|3S11_PSEPO Short neurotoxin 1 OS=Pseudechis porphyriacus OX=8671 PE=3 SV=1,Short neurotoxin 1,3FTx,Pseudechis porphyriacus,Elapidae
+Pseudocerastes_urarachnoides_3FTx_06,-,3FTx,Pseudocerastes urarachnoides,Viperidae
+Pseudocerastes_urarachnoides_3FTx_05,-,3FTx,Pseudocerastes urarachnoides,Viperidae
+"Pste_6 Pseudonaja textilis unplaced genomic scaffold, EBS10Xv2PRI ULFR01000082.1, whole genome shotgun sequence",-,snake genomic,Pseudonaja textilis,Elapidae
+"Pste_2 Pseudonaja textilis unplaced genomic scaffold, EBS10Xv2PRI ULFR01000082.1, whole genome shotgun sequence",-,snake genomic,Pseudonaja textilis,Elapidae
+"Pste_4 Pseudonaja textilis unplaced genomic scaffold, EBS10Xv2PRI ULFR01000082.1, whole genome shotgun sequence",-,snake genomic,Pseudonaja textilis,Elapidae
+"Pste_3 Pseudonaja textilis unplaced genomic scaffold, EBS10Xv2PRI ULFR01000082.1, whole genome shotgun sequence",-,snake genomic,Pseudonaja textilis,Elapidae
+"Pste1 Pseudonaja textilis unplaced genomic scaffold, EBS10Xv2PRI ULFR01000082.1, whole genome shotgun sequence",-,snake genomic,Pseudonaja textilis,Elapidae
+"Pste_7 Pseudonaja textilis unplaced genomic scaffold, EBS10Xv2PRI ULFR01000082.1, whole genome shotgun sequence",-,snake genomic,Pseudonaja textilis,Elapidae
+"Pste_s337_1 Pseudonaja textilis unplaced genomic scaffold, EBS10Xv2PRI ULFR01000030.1, whole genome shotgun sequence",-,snake genomic,Pseudonaja textilis,Elapidae
+"Pste_9 Pseudonaja textilis unplaced genomic scaffold, EBS10Xv2PRI ULFR01000082.1, whole genome shotgun sequence",-,snake genomic,Pseudonaja textilis,Elapidae
+"Pste_8 Pseudonaja textilis unplaced genomic scaffold, EBS10Xv2PRI ULFR01000082.1, whole genome shotgun sequence",-,snake genomic,Pseudonaja textilis,Elapidae
+"Pste_5 Pseudonaja textilis unplaced genomic scaffold, EBS10Xv2PRI ULFR01000082.1, whole genome shotgun sequence",-,snake genomic,Pseudonaja textilis,Elapidae
+sp|Q9W7J9|3S34_PSETE Short neurotoxin 4 OS=Pseudonaja textilis OX=8673 PE=3 SV=1,Short neurotoxin 4,3FTx,Pseudonaja textilis,Elapidae
+sp|Q9W7J7|3S36_PSETE Short neurotoxin 6 OS=Pseudonaja textilis OX=8673 PE=1 SV=1,Short neurotoxin 6,3FTx,Pseudonaja textilis,Elapidae
+sp|Q9W7J6|3S37_PSETE Short neurotoxin 7 OS=Pseudonaja textilis OX=8673 PE=1 SV=1,Short neurotoxin 7,3FTx,Pseudonaja textilis,Elapidae
+sp|Q9W7K2|3S31_PSETE Short neurotoxin 1/5 OS=Pseudonaja textilis OX=8673 PE=3 SV=1,Short neurotoxin 1/5,3FTx,Pseudonaja textilis,Elapidae
+sp|A8HDK1|3S38_PSETE Short neurotoxin 8 OS=Pseudonaja textilis OX=8673 PE=3 SV=1,Short neurotoxin 8,3FTx,Pseudonaja textilis,Elapidae
+sp|Q9W7K1|3S32_PSETE Short neurotoxin 2 OS=Pseudonaja textilis OX=8673 PE=1 SV=1,Short neurotoxin 2,3FTx,Pseudonaja textilis,Elapidae
+sp|Q9W7K0|3S33_PSETE Short neurotoxin 3 OS=Pseudonaja textilis OX=8673 PE=1 SV=1,Short neurotoxin 3,3FTx,Pseudonaja textilis,Elapidae
+sp|A8HDK6|3L21_PSETE Long neurotoxin 1 OS=Pseudonaja textilis OX=8673 PE=3 SV=1,Long neurotoxin 1,3FTx,Pseudonaja textilis,Elapidae
+sp|Q9W7J5|3L2P_PSETE Pseudonajatoxin b homolog OS=Pseudonaja textilis OX=8673 PE=1 SV=1,Pseudonajatoxin b homolog,3FTx,Pseudonaja textilis,Elapidae
+sp|P13495|3L2B_PSETE Pseudonajatoxin b OS=Pseudonaja textilis OX=8673 PE=1 SV=1,Pseudonajatoxin b,3FTx,Pseudonaja textilis,Elapidae
+"Pybi_3 Python bivittatus unplaced genomic scaffold, Python_molurus_bivittatus5.0.2 Scaffold2194, whole genome shotgun sequence",-,snake genomic,Python bivittatus,Pythonidae
+"Pybi_2 Python bivittatus unplaced genomic scaffold, Python_molurus_bivittatus5.0.2 Scaffold2194, whole genome shotgun sequence",-,snake genomic,Python bivittatus,Pythonidae
+"Pybi_1 Python bivittatus unplaced genomic scaffold, Python_molurus_bivittatus5.0.2 Scaffold2194, whole genome shotgun sequence",-,snake genomic,Python bivittatus,Pythonidae
+Rhabdophis_subminiatus_unigene144234,-,3FTx,Rhabdophis subminiatus,Colubridae
+Rhabdophis_subminiatus_unigene61055,-,3FTx,Rhabdophis subminiatus,Colubridae
+Rhabdophis_subminiatus_unigene497406,-,3FTx,Rhabdophis subminiatus,Colubridae
+Rhabdophis_subminiatus_unigene52075,-,3FTx,Rhabdophis subminiatus,Colubridae
+Rhabdophis_subminiatus_unigene76486,-,3FTx,Rhabdophis subminiatus,Colubridae
+Rhabdophis_subminiatus_unigene76489,-,3FTx,Rhabdophis subminiatus,Colubridae
+Rhabdophis_subminiatus_unigene24430,-,3FTx,Rhabdophis subminiatus,Colubridae
+Rhabdophis_subminiatus_unigene76481,-,3FTx,Rhabdophis subminiatus,Colubridae
+Sistrurus_catenatus_edwardsii_A5X2W8,-,3FTx,Sistrurus catenatus edwardsii,Viperidae
+Sistrurus_catenatus_edwardsii_B4Y143,-,3FTx,Sistrurus catenatus edwardsii,Viperidae
+sp|A5X2W8|3NX3_SISCA Threefinger toxin 3 OS=Sistrurus catenatus edwardsii OX=8762 PE=1 SV=1,Threefinger toxin 3,3FTx,Sistrurus catenatus edwardsii,Viperidae
+Spilotes_sulphureus_A0A346CI88,-,3FTx,Spilotes sulphureus,Colubridae
+Spilotes_sulphureus_A0A346CI89,-,3FTx,Spilotes sulphureus,Colubridae
+Spilotes_sulphureus_A0A346CIB7,-,3FTx,Spilotes sulphureus,Colubridae
+Spilotes_sulphureus_A0A346CIB0,-,3FTx,Spilotes sulphureus,Colubridae
+Spilotes_sulphureus_A0A346CI95,-,3FTx,Spilotes sulphureus,Colubridae
+Spilotes_sulphureus_A0A346CIB4,-,3FTx,Spilotes sulphureus,Colubridae
+Spilotes_sulphureus_A0A346CIB5,-,3FTx,Spilotes sulphureus,Colubridae
+Spilotes_sulphureus_A0A346CIA9,-,3FTx,Spilotes sulphureus,Colubridae
+Spilotes_sulphureus_A0A346CIB2,-,3FTx,Spilotes sulphureus,Colubridae
+Spilotes_sulphureus_A0A346CI94,-,3FTx,Spilotes sulphureus,Colubridae
+Spilotes_sulphureus_A0A346CIB1,-,3FTx,Spilotes sulphureus,Colubridae
+Spilotes_sulphureus_A0A346CIB3,-,3FTx,Spilotes sulphureus,Colubridae
+Spilotes_sulphureus_A0A346CI93,-,3FTx,Spilotes sulphureus,Colubridae
+Spilotes_sulphureus_A0A346CIA0,-,3FTx,Spilotes sulphureus,Colubridae
+Spilotes_sulphureus_A0A346CIB6,-,3FTx,Spilotes sulphureus,Colubridae
+Telescopus_dhara_A7X3S5,-,3FTx,Telescopus dhara,Colubridae
+Telescopus_dhara_A7X3S8,-,3FTx,Telescopus dhara,Colubridae
+Telescopus_dhara_A7X3N6,-,3FTx,Telescopus dhara,Colubridae
+sp|A7X3V0|3NB4_TELDH Toxin 3FTxTel4 OS=Telescopus dhara OX=338837 PE=3 SV=1,Toxin 3FTxTel4,3FTx,Telescopus dhara,Colubridae
+Telescopus_dhara_A7X3S5,-,3FTx,Telescopus dhara,Colubridae
+Telescopus_dhara_A7X3S8,-,3FTx,Telescopus dhara,Colubridae
+Telescopus_dhara_A7X3V0,-,3FTx,Telescopus dhara,Colubridae
+Thelotornis_mossambicanus_3FTx_05,-,3FTx,Thelotornis mossambicanus,Colubridae
+Thelotornis_mossambicanus_3FTx_03,-,3FTx,Thelotornis mossambicanus,Colubridae
+Thelotornis_mossambicanus_3FTx_00,-,3FTx,Thelotornis mossambicanus,Colubridae
+Thelotornis_mossambicanus_3FTx_04,-,3FTx,Thelotornis mossambicanus,Colubridae
+Thelotornis_mossambicanus_3FTx_01,-,3FTx,Thelotornis mossambicanus,Colubridae
+Thelotornis_mossambicanus_3FTx_06,-,3FTx,Thelotornis mossambicanus,Colubridae
+Thelotornis_mossambicanus_3FTx_08,-,3FTx,Thelotornis mossambicanus,Colubridae
+Thelotornis_mossambicanus_3FTx_15,-,3FTx,Thelotornis mossambicanus,Colubridae
+Thelotornis_mossambicanus_3FTx_11,-,3FTx,Thelotornis mossambicanus,Colubridae
+Thelotornis_mossambicanus_3FTx_09,-,3FTx,Thelotornis mossambicanus,Colubridae
+sp|A7X6I4|3NX5_THRJA Toxin 3FTxThr5 OS=Thrasops jacksonii OX=186611 PE=3 SV=1,Toxin 3FTxThr5,3FTx,Thrasops jacksonii,Colubridae
+Thrasops_jacksonii_A7X6I4,-,3FTx,Thrasops jacksonii,Colubridae
+Thrasops_jacksonii_A7X3U7,-,3FTx,Thrasops jacksonii,Colubridae
+Thrasops_jacksonii_A7X3U4,-,3FTx,Thrasops jacksonii,Colubridae
+Thrasops_jacksonii_A7X3T6,-,3FTx,Thrasops jacksonii,Colubridae
+sp|A7X3S2|3NB3_TRIBI Toxin 3FTxTri3 OS=Trimorphodon biscutatus OX=338818 PE=3 SV=1,Toxin 3FTxTri3,3FTx,Trimorphodon biscutatus,Colubridae
+sp|A7X3S0|3NB2_TRIBI Toxin 3FTxTri2 OS=Trimorphodon biscutatus OX=338818 PE=3 SV=1,Toxin 3FTxTri2,3FTx,Trimorphodon biscutatus,Colubridae
+Trimorphodon_biscutatus_A7X3Q9,-,3FTx,Trimorphodon biscutatus,Colubridae
+Trimorphodon_biscutatus_A7X3S2,-,3FTx,Trimorphodon biscutatus,Colubridae
+Trimorphodon_biscutatus_A7X3S0,-,3FTx,Trimorphodon biscutatus,Colubridae
+Trimorphodon_lambda_A0A193CHM1,-,3FTx,Trimorphodon lambda,Colubridae
+Trimorphodon_lambda_A0A193CHM4,-,3FTx,Trimorphodon lambda,Colubridae
+Trimorphodon_lambda_A0A193CHM5,-,3FTx,Trimorphodon lambda,Colubridae
+Trimorphodon_lambda_A0A193CHM4,-,3FTx,Trimorphodon lambda,Colubridae
+Trimorphodon_lambda_A0A193CHM5,-,3FTx,Trimorphodon lambda,Colubridae
+Trimorphodon_lambda_A0A193CHM1,-,3FTx,Trimorphodon lambda,Colubridae
+sp|A8HDK4|3L21_TROCA Long neurotoxin 1 OS=Tropidechis carinatus OX=100989 PE=3 SV=1,Long neurotoxin 1,3FTx,Tropidechis carinatus,Elapidae
+sp|A8HDJ5|3S11_TROCA Short neurotoxin 1 OS=Tropidechis carinatus OX=100989 PE=3 SV=1,Short neurotoxin 1,3FTx,Tropidechis carinatus,Elapidae
+sp|A8HDJ6|3S12_TROCA Short neurotoxin 2 OS=Tropidechis carinatus OX=100989 PE=3 SV=1,Short neurotoxin 2,3FTx,Tropidechis carinatus,Elapidae
+"Vako6 Varanus komodoensis strain SLA01 unplaced genomic scaffold, ASM479886v1 scaffold78, whole genome shotgun sequence",-,Ly-6,Varanus komodoensis,Anguimorpha
+"Vako10 Varanus komodoensis strain SLA01 unplaced genomic scaffold, ASM479886v1 scaffold78, whole genome shotgun sequence",-,Ly-6,Varanus komodoensis,Anguimorpha
+"Vako1 Varanus komodoensis strain SLA01 unplaced genomic scaffold, ASM479886v1 scaffold78, whole genome shotgun sequence",-,Ly-6,Varanus komodoensis,Anguimorpha
+"Vako_dn2 Varanus komodoensis strain SLA01 unplaced genomic scaffold, ASM479886v1 scaffold78, whole genome shotgun sequence",-,Ly-6,Varanus komodoensis,Anguimorpha
+"Vako_dn3 Varanus komodoensis strain SLA01 unplaced genomic scaffold, ASM479886v1 scaffold78, whole genome shotgun sequence",-,Ly-6,Varanus komodoensis,Anguimorpha
+"Vako_dn4 Varanus komodoensis strain SLA01 unplaced genomic scaffold, ASM479886v1 scaffold78, whole genome shotgun sequence",-,Ly-6,Varanus komodoensis,Anguimorpha
+"Vako_dn8 Varanus komodoensis strain SLA01 unplaced genomic scaffold, ASM479886v1 scaffold78, whole genome shotgun sequence",-,Ly-6,Varanus komodoensis,Anguimorpha
+"Vako7 Varanus komodoensis strain SLA01 unplaced genomic scaffold, ASM479886v1 scaffold78, whole genome shotgun sequence",-,Ly-6,Varanus komodoensis,Anguimorpha
+"Vako9 Varanus komodoensis strain SLA01 unplaced genomic scaffold, ASM479886v1 scaffold78, whole genome shotgun sequence",-,Ly-6,Varanus komodoensis,Anguimorpha
+"Vako5 Varanus komodoensis strain SLA01 unplaced genomic scaffold, ASM479886v1 scaffold78, whole genome shotgun sequence",-,Ly-6,Varanus komodoensis,Anguimorpha
+Vipera_transcaucasiana_3FTx_10,-,3FTx,Vipera transcaucasiana,Viperidae
+Vipera_transcaucasiana_3FTx_08,-,3FTx,Vipera transcaucasiana,Viperidae
+Vipera_transcaucasiana_3FTx_07,-,3FTx,Vipera transcaucasiana,Viperidae
+Vipera_transcaucasiana_3FTx_09,-,3FTx,Vipera transcaucasiana,Viperidae
+sp|C1IC47|3S13_WALAE Threefinger toxin WIII OS=Walterinnesia aegyptia OX=64182 PE=1 SV=1,Threefinger toxin WIII,3FTx,Walterinnesia aegyptia,Elapidae
+sp|C1IC48|3S14_WALAE Threefinger toxin WIV OS=Walterinnesia aegyptia OX=64182 PE=1 SV=1,Threefinger toxin WIV,3FTx,Walterinnesia aegyptia,Elapidae
+sp|C0HKZ8|3NOJ_WALAE Actiflagelin OS=Walterinnesia aegyptia OX=64182 PE=1 SV=2,Actiflagelin,3FTx,Walterinnesia aegyptia,Elapidae
+sp|C1IC49|3NO25_WALAE Three finger toxin WV OS=Walterinnesia aegyptia OX=64182 PE=1 SV=1,Three finger toxin WV,3FTx,Walterinnesia aegyptia,Elapidae
+Walterinnesia_aegyptia_C0HKZ8,-,3FTx,Walterinnesia aegyptia,Elapidae
+Walterinnesia_aegyptia_C1IC49,-,3FTx,Walterinnesia aegyptia,Elapidae
+"Xetr_9 Xenopus tropicalis strain Nigerian chromosome 6, Xenopus_tropicalis_v9.1, whole genome shotgun sequence",-,Ly-6,Xenopus tropicalis,Anura
+"Xetr_2 Xenopus tropicalis strain Nigerian chromosome 6, Xenopus_tropicalis_v9.1, whole genome shotgun sequence",-,Ly-6,Xenopus tropicalis,Anura
+"Xetr4 Xenopus tropicalis strain Nigerian chromosome 6, Xenopus_tropicalis_v9.1, whole genome shotgun sequence",-,Ly-6,Xenopus tropicalis,Anura
+"Xetr_7 Xenopus tropicalis strain Nigerian chromosome 6, Xenopus_tropicalis_v9.1, whole genome shotgun sequence",-,Ly-6,Xenopus tropicalis,Anura
+"Xetr_6 Xenopus tropicalis strain Nigerian chromosome 6, Xenopus_tropicalis_v9.1, whole genome shotgun sequence",-,Ly-6,Xenopus tropicalis,Anura
+"Xetr_1 Xenopus tropicalis strain Nigerian chromosome 6, Xenopus_tropicalis_v9.1, whole genome shotgun sequence",-,Ly-6,Xenopus tropicalis,Anura
+"Xetr_3 Xenopus tropicalis strain Nigerian chromosome 6, Xenopus_tropicalis_v9.1, whole genome shotgun sequence",-,Ly-6,Xenopus tropicalis,Anura
+"Xetr_8 Xenopus tropicalis strain Nigerian chromosome 6, Xenopus_tropicalis_v9.1, whole genome shotgun sequence",-,Ly-6,Xenopus tropicalis,Anura
+"Xetr_5 Xenopus tropicalis strain Nigerian chromosome 6, Xenopus_tropicalis_v9.1, whole genome shotgun sequence",-,Ly-6,Xenopus tropicalis,Anura
