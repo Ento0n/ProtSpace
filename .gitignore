@@ -1,5 +1,7 @@
 # colabfold output (too large)
-*colabfold/
+data/*/colabfold/out/
+data/*/PPIHP/out/
+config/
 
 # Byte-compiled / optimized / DLL files
 __pycache__/

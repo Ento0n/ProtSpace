@@ -1,0 +1,39 @@
+data/Pla2g2
+├── PPIHP
+│   └── predictions/                            # predictions from embeddings
+│   │   ├── binding_bindEmbed_metal_pred.txt
+│   │   ├── binding_bindEmbed_nucleic_pred.txt
+│   │   ├── binding_bindEmbed_small_pred.txt
+│   │   ├── conservation_pred.txt
+│   │   ├── dssp3_pred.txt
+│   │   ├── dssp8_pred.txt
+│   │   ├── goPredSim_GO_bpo_pred.csv
+│   │   ├── goPredSim_GO_cco_pred.csv
+│   │   ├── goPredSim_GO_mfo_pred.csv
+│   │   ├── ids.txt
+│   │   ├── la_mem_pred.txt
+│   │   ├── la_subcell_pred.txt
+│   │   ├── membrane_tmbed.txt
+│   │   ├── protein_embeddings.npy
+│   │   ├── prottucker_CATH_pred.csv
+│   │   ├── seqs.txt
+│   │   └── seth_disorder_pred.csv
+│   └── features.csv                            # Parsed PPIHP features, which would be interesting to look at
+├── Pla2g2.csv                                  # Features by which ProtSpace3D colors dots
+├── Pla2g2.fasta                                # FASTA file with sequences
+├── Pla2g2.fasta.fai                            # Pointers to FASTA file used by pyfaidx
+├── Pla2g2_noDash.csv                           # same as Pla2g2.csv (exists because of how we scripted app.py)
+├── Pla2g2_noDash.fasta                         # FASTA file cleaned
+├── Pla2g2_noDash.h5                            # HDF5 file with embeddings
+├── colabfold                                   # ColabFold output
+│   ├── scores/                                 # 3D structure confidence (pLDDT, PAE, pTM)
+│   ├── pdb/                                    # PDB files with 3D structures
+│   └── predictions/                            # All outputs from ColabFold: all 5 models, model scores, MSAs, alignment errors, PNGs (coverage, PAE, pLDDT)
+└── df.csv                                      # DataFrame used to store all informations needed for ProtSpace3D
+
+
+
+# get parameters from file: https://stackoverflow.com/questions/27433316/how-to-get-argparse-to-read-arguments-from-a-file-with-an-option-rather-than-pre
+# hydra video: https://www.youtube.com/watch?v=tEsPyYnzt8s
+# hydra docs: https://hydra.cc/docs/intro/
+# yaml intro: https://www.cloudbees.com/blog/yaml-tutorial-everything-you-need-get-started
