@@ -65,14 +65,16 @@ class DataPreprocessor:
 
     def __init__(
         self,
-        data_dir_path: Path,
-        basename: str,
+        output_d: Path,
+        hdf_path: Path,
+        csv_path: Path,
         csv_separator: str,
         uid_col: int,
         html_cols: list[int],
     ):
-        self.data_dir_path = data_dir_path
-        self.basename = basename
+        self.output_d = output_d
+        self.hdf_path = hdf_path
+        self.csv_path = csv_path
         self.csv_separator = csv_separator
         self.uid_col = uid_col
         self.html_cols = html_cols
@@ -83,9 +85,8 @@ class DataPreprocessor:
         :return: dataframe wit collected information, graph & column headers
         """
         # root directory that holds, proteins.fasta, embeddings.h5, labels.csv and some output_file.html
-        root = Path(self.data_dir_path)
-        emb_h5file = root / f"{self.basename}.h5"
-        label_csv_p = root / f"{self.basename}.csv"
+        emb_h5file = self.hdf_path
+        label_csv_p = self.csv_path
 
         csv_less_flag = self._check_files(emb_h5file, label_csv_p, self.csv_separator)
 
@@ -93,14 +94,14 @@ class DataPreprocessor:
 
         # processed by fasta_mapper.py?
         original_id_col = None
-        if self.basename.endswith("_mapped") and csv_less_flag is False:
+        if mapped_flag and csv_less_flag is False:
             # UID col from fasta_mapper.py is always 0
             df_csv = pd.read_csv(label_csv_p, index_col=0)
 
             # Extract original ID column
             original_id_col = df_csv["original_id"].to_list()
             df_csv.drop(columns=["original_id"], inplace=True)
-        # no csv given or csv only exists for mnapping
+        # no csv given or csv only exists for mapping
         elif csv_less_flag:
             df_csv, original_id_col = self._create_csv_less_df(
                 emb_h5file, mapped_flag, label_csv_p
@@ -121,7 +122,7 @@ class DataPreprocessor:
         csv_uids = df_csv.index.to_list()
 
         df_embeddings, csv_header = self._read_df_csv(
-            root, df_csv, emb_h5file, csv_uids, index_name
+            self.output_d, df_csv, emb_h5file, csv_uids, index_name
         )
 
         # sort csv header alphabetically
@@ -129,7 +130,7 @@ class DataPreprocessor:
 
         # handle html saving
         DataPreprocessor._handle_html(
-            self.html_cols, csv_header, self.data_dir_path, df=df_embeddings
+            self.html_cols, csv_header, self.output_d, df=df_embeddings
         )
 
         # generate initial figure
@@ -143,25 +144,25 @@ class DataPreprocessor:
 
     def _check_files(
         self,
-        emb_h5file: Path,
-        label_csv_p: Path,
+        hdf_path: Path,
+        csv_path: Path,
         separator: str,
     ):
         """
         Checks whether all files are present
-        :param emb_h5file: h5 file Path
-        :param label_csv_p: csv file Path
+        :param hdf_path: h5 file Path
+        :param csv_path: csv file Path
         :return boolean flag whether csv less mode is activated or not
         """
         # Check whether the h5 files is present (mandatory)
-        if not emb_h5file.is_file():
+        if not hdf_path.is_file():
             raise FileNotFoundError(
-                f"The {emb_h5file} file is missing! Check data directory and basename."
+                f"The {hdf_path} file is missing! Check data directory and basename."
             )
 
         # Check whether csv file is present (csv less mode activated if not)
         csv_less_flag = False
-        if not label_csv_p.is_file():
+        if not csv_path.is_file():
             csv_less_flag = True
 
             print(
@@ -169,7 +170,7 @@ class DataPreprocessor:
             )
         # get csv headers to check whether csv only exists for mapping
         else:
-            headers = self._get_headers(label_csv_p, separator)
+            headers = self._get_headers(csv_path, separator)
             mapped_headers = ["mapped_id", "original_id"]
 
             mapped_headers.sort()
@@ -182,21 +183,25 @@ class DataPreprocessor:
 
         return csv_less_flag
 
-    def _check_mapped(self, label_csv_p: Path, separator: str):
+    def _check_mapped(self, csv_path: Path, separator: str):
         mapped_flag = False
-        if label_csv_p.is_file():
-            headers = self._get_headers(label_csv_p, separator)
-
+        if csv_path.is_file():
+            # get headers of csv file and create headers to be expected by a mapped file
+            headers = self._get_headers(csv_path, separator)
             mapped_headers = ["mapped_id", "original_id"]
 
-            if mapped_headers in headers or headers.sort() == mapped_headers.sort():
+            # sort the headers that comparison is possible
+            headers.sort()
+            mapped_headers.sort()
+
+            if mapped_headers in headers or headers == mapped_headers:
                 mapped_flag = True
 
         return mapped_flag
 
     @staticmethod
-    def _get_headers(label_csv_p: Path, separator: str):
-        with open(label_csv_p, "r", encoding="utf-8-sig") as f:
+    def _get_headers(csv_path: Path, separator: str):
+        with open(csv_path, "r", encoding="utf-8-sig") as f:
             first_line = f.readline()
             headers = first_line.split(separator)
 
@@ -206,11 +211,11 @@ class DataPreprocessor:
         return headers
 
     @staticmethod
-    def _create_csv_less_df(emb_h5file: Path, mapped_flag: bool, label_csv_p: Path):
+    def _create_csv_less_df(hdf_path: Path, mapped_flag: bool, csv_path: Path):
         original_id_col = None
         if mapped_flag:
             # read csv file
-            df = pd.read_csv(label_csv_p, sep=",", index_col=0)
+            df = pd.read_csv(csv_path, sep=",", index_col=0)
 
             # extract original ID column
             original_id_col = df["original_id"].to_list()
@@ -221,7 +226,7 @@ class DataPreprocessor:
         else:
             # get all ids of the h5 file
             h5_uids = list()
-            with h5py.File(emb_h5file, "r") as hdf:
+            with h5py.File(hdf_path, "r") as hdf:
                 for identifier, embd in hdf.items():
                     h5_uids.append(identifier)
 
@@ -235,14 +240,14 @@ class DataPreprocessor:
     def _handle_html(
         html_cols: list[int],
         csv_header: list[str],
-        data_dir_path: Path,
+        output_d: Path,
         df: DataFrame,
     ):
         """
         Saves the html files as given by the --html_cols argument
         :param html_cols: List of given columns
         :param csv_header: List of dataframe headers
-        :param data_dir_path: Path to data directory
+        :param output_d: Path to data directory
         """
         # save html figures if argument is set
         if html_cols is not None:
@@ -252,7 +257,7 @@ class DataPreprocessor:
                     fig = Visualizator.render(
                         df, selected_column=col, original_id_col=None
                     )
-                    fig.write_html(data_dir_path / f"3Dspace_{col}.html")
+                    fig.write_html(output_d / f"3Dspace_{col}.html")
 
             else:
                 # Sort given column indexes
@@ -270,27 +275,27 @@ class DataPreprocessor:
                     fig = Visualizator.render(
                         df, selected_column=csv_header[col], original_id_col=None
                     )
-                    fig.write_html(data_dir_path / f"3Dspace_{csv_header[col]}.html")
+                    fig.write_html(output_d / f"3Dspace_{csv_header[col]}.html")
 
     def _read_df_csv(
         self,
-        root: Path,
+        output_d: Path,
         df_csv: DataFrame,
-        emb_h5file: Path,
+        hdf_path: Path,
         csv_uids: list[str],
         index_name: str,
     ):
         """
         If present, read df.csv and check for completion
-        :param root: Path to data directory
+        :param output_d: Path to data directory
         :param df_csv: dataframe of given csv file
-        :param emb_h5file: Path to h5 file
+        :param hdf_path: Path to h5 file
         :param csv_uids: unique IDs of the csv file
         :param index_name: header of index row
         :return: final dataframe and its column headers
         """
         # load & read df.csv if present
-        pres_df = root / "df.csv"
+        pres_df = output_d / "df.csv"
         if pres_df.is_file():
             print("Pre computed dataframe file df.csv is loaded.")
             pres_df_csv = pd.read_csv(pres_df, index_col=0, na_filter=False)
@@ -299,14 +304,14 @@ class DataPreprocessor:
             if len(pres_df_csv) != len(df_csv):
                 print("# of rows doesn't match data!\nStart recalculation!")
                 df_embeddings, csv_header = self._create_df(
-                    root, emb_h5file, csv_uids, df_csv, index_name
+                    output_d, hdf_path, csv_uids, df_csv, index_name
                 )
             else:
                 # Check each column x, y & z for incompleteness
                 if not self._check_coordinates(pres_df_csv):
                     print("Start recalculation!")
                     df_embeddings, csv_header = self._create_df(
-                        root, emb_h5file, csv_uids, df_csv, index_name
+                        output_d, hdf_path, csv_uids, df_csv, index_name
                     )
                 # columns x, y & z are fine
                 else:
@@ -320,7 +325,7 @@ class DataPreprocessor:
                         pres_df_csv = self._update_df(df_csv, pres_df_csv)
 
                         # save the new obtained df
-                        pres_df_csv.to_csv(root / "df.csv", index_label=index_name)
+                        pres_df_csv.to_csv(output_d / "df.csv", index_label=index_name)
 
                     # save final column names
                     csv_header = [
@@ -335,7 +340,7 @@ class DataPreprocessor:
         # create dataframe from files
         else:
             df_embeddings, csv_header = self._create_df(
-                root, emb_h5file, csv_uids, df_csv, index_name
+                output_d, hdf_path, csv_uids, df_csv, index_name
             )
 
         return df_embeddings, csv_header
@@ -525,7 +530,7 @@ class DataPreprocessor:
             print(", ".join(missing))
 
     def init_structure_container(self, pdb_d: str):
-        root = Path.cwd() / self.data_dir_path
+        root = Path.cwd() / self.output_d
 
         structure_container = StructureContainer(root / pdb_d)
 

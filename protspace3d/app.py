@@ -13,8 +13,9 @@ from callbacks import get_callbacks, get_callbacks_pdb
 class Parser:
     def __init__(self):
         (
-            self.data_dir_path,
-            self.basename,
+            self.output_d,
+            self.hdf_path,
+            self.csv_path,
             self.csv_sep,
             self.uid_col,
             self.html_cols,
@@ -26,8 +27,9 @@ class Parser:
         :return: class parameters
         """
         return (
-            self.data_dir_path,
-            self.basename,
+            self.output_d,
+            self.hdf_path,
+            self.csv_path,
             self.csv_sep,
             self.uid_col,
             self.html_cols,
@@ -39,8 +41,10 @@ class Parser:
         """
         Creates and returns the ArgumentParser object
 
-        Run example:            python protspace3d/app.py -d data/ex1 -b VA --sep , --uid_col 0
-        Run example with pdb:   python protspace3d/app.py -b Conotoxins_try1_mapped -d data/ex3 --pdb
+        Pla2g2:                 python protspace3d/app.py -o data/Pla2g2 --hdf data/Pla2g2/Pla2g2_noDash.h5 --csv data/Pla2g2/Pla2g2_noDash.csv --sep ";" --pdb pdb
+        conotoxins_swiss_prot:  python protspace3d/app.py -o data/conotoxins_swiss_prot --hdf data/conotoxins_swiss_prot/Swiss_Prot_Conotoxins_mapped.h5 --csv data/conotoxins_swiss_prot/Swiss_Prot_Conotoxins_mapped.csv
+        conotoxins:             python protspace3d/app.py -o data/conotoxins --hdf data/conotoxins/Conotoxins_try1_mapped.h5 --csv data/conotoxins/Conotoxins_try1_mapped.csv --pdb pdb
+
 
         """
 
@@ -48,23 +52,27 @@ class Parser:
         parser = argparse.ArgumentParser(description="ProtSpace3D")
         # Required argument
         parser.add_argument(
-            "-d",
-            "--data",
+            "-o",
+            "--output",
             required=True,
             type=str,
             help=(
-                "A path to the data directory containing containing as a stem"
-                " basename with different extensions for different files (.csv,"
-                " .h5, .fasta)"
+                "Name of the output folder in the project directory where generated files will be stored."
             ),
         )
         # Required argument
         parser.add_argument(
-            "-b",
-            "--basename",
+            "--hdf",
             required=True,
             type=str,
-            help="Base filename for data in directory",
+            help="Path to HDF5-file containing the per protein embeddings as a key-value pair, aka UID-embedding",
+        )
+        # Required argument
+        parser.add_argument(
+            "--csv",
+            required=True,
+            type=str,
+            help="Path to CSV-file containg groups/features by which the dots in the 3D-plot are colored",
         )
         # Optional argument
         parser.add_argument(
@@ -95,18 +103,19 @@ class Parser:
             "--pdb",
             required=False,
             type=str,
-            help="Name of the directory in the data folder, that holds the .pdb files.",
+            help="Name of the directory in the output folder, that holds the .pdb files.",
         )
 
         args = parser.parse_args()
-        data_dir_path = Path(args.data)
-        basename = args.basename
+        output_d = Path(args.output)
+        hdf_path = Path(args.hdf)
+        csv_path = Path(args.csv)
         csv_sep = args.sep
         uid_col = args.uid_col
         html_cols = args.html_cols
         pdb_d = args.pdb
 
-        return data_dir_path, basename, csv_sep, uid_col, html_cols, pdb_d
+        return output_d, hdf_path, csv_path, csv_sep, uid_col, html_cols, pdb_d
 
 
 def setup():
@@ -118,14 +127,22 @@ def setup():
     parser = Parser()
 
     # Parse arguments
-    data_dir_path, basename, csv_sep, uid_col, html_cols, pdb_d = parser.get_params()
+    (
+        output_d,
+        hdf_path,
+        csv_path,
+        csv_sep,
+        uid_col,
+        html_cols,
+        pdb_d,
+    ) = parser.get_params()
 
     # pdb directory given or not
     pdb_flag = True if pdb_d is not None else False
 
     # Create data preprocessor object
     data_preprocessor = DataPreprocessor(
-        data_dir_path, basename, csv_sep, uid_col, html_cols
+        output_d, hdf_path, csv_path, csv_sep, uid_col, html_cols
     )
 
     # Preprocessing
