@@ -36,7 +36,7 @@ def setup_arguments() -> argparse.Namespace:
 def extract_embeddings(esm_dir: Path) -> None:
     """Extract per-protein embeddings from `esm_dir` and merges in an .h5 file
     """
-    hdf_file = esm_dir.parent / "ems_emb.h5"
+    hdf_file = esm_dir.parent / "emb_esm2.h5"
     with h5py.File(hdf_file, "w") as hdf:
         for pt_file in esm_dir.glob("*.pt"):
             data = torch.load(pt_file)
