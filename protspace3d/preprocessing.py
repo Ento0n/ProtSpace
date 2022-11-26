@@ -139,7 +139,11 @@ class DataPreprocessor:
 
         # handle html saving
         DataPreprocessor._handle_html(
-            self.html_cols, csv_header, self.output_d, df=df_embeddings, original_id_col=original_id_col
+            self.html_cols,
+            csv_header,
+            self.output_d,
+            df=df_embeddings,
+            original_id_col=original_id_col,
         )
 
         # generate initial figure
@@ -284,7 +288,9 @@ class DataPreprocessor:
                         raise Exception(f"Column no. {col} is not valid!")
 
                     fig = Visualizator.render(
-                        df, selected_column=csv_header[col], original_id_col=original_id_col
+                        df,
+                        selected_column=csv_header[col],
+                        original_id_col=original_id_col,
                     )
                     fig.write_html(output_d / f"3Dspace_{csv_header[col]}.html")
 
@@ -358,23 +364,23 @@ class DataPreprocessor:
 
     def _create_df(
         self,
-        root: Path,
-        emb_h5file: Path,
+        output_d: Path,
+        hdf_path: Path,
         csv_uids: list[str],
         df_csv: DataFrame,
         index_name: str,
     ):
         """
         Use data and create corresponding dataframe
-        :param root: Path to data directory
-        :param emb_h5file: Path to h5 file
+        :param output_d: Path to data directory
+        :param hdf_path: Path to h5 file
         :param csv_uids: unique IDs of csv file
         :param df_csv: dataframe of csv file
         :param index_name: header of index column
         :return: complete dataframe and list of its headers
         """
         # read embeddings from HDF5 format
-        embeddings = self._get_embeddings(emb_h5file=emb_h5file, csv_uids=csv_uids)
+        embeddings = self._get_embeddings(emb_h5file=hdf_path, csv_uids=csv_uids)
 
         # check for proteins in csv but not in h5 file
         self._check_csv_uids(embeddings=embeddings, csv_uids=csv_uids)
@@ -403,7 +409,7 @@ class DataPreprocessor:
         ]
 
         # save dataframe
-        df_embeddings.to_csv(root / "df.csv", index_label=index_name)
+        df_embeddings.to_csv(output_d / "df.csv", index_label=index_name)
 
         return df_embeddings, csv_header
 
@@ -541,8 +547,6 @@ class DataPreprocessor:
             print(", ".join(missing))
 
     def init_structure_container(self, pdb_d: str):
-        root = Path.cwd() / self.output_d
-
-        structure_container = StructureContainer(root / pdb_d)
+        structure_container = StructureContainer(pdb_d)
 
         return structure_container

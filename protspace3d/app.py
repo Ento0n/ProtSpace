@@ -44,7 +44,7 @@ class Parser:
         Creates and returns the ArgumentParser object
 
         Pla2g2:                 python protspace3d/app.py -o data/Pla2g2 --hdf data/Pla2g2/emb_prott5.h5 --csv data/Pla2g2/Pla2g2.csv --sep ";" --pdb data/Pla2g2/colabfold/pdb
-                                python protspace3d/app.py -o data/Pla2g2 --hdf data/Pla2g2/emb_ems2.h5 --csv data/Pla2g2/Pla2g2.csv --sep ";" --html 1
+                                python protspace3d/app.py -o data/Pla2g2 --hdf data/Pla2g2/emb_esm2.h5 --csv data/Pla2g2/Pla2g2.csv --sep ";" --html 1
         conotoxins_swiss_prot:  python protspace3d/app.py -o data/conotoxins_swiss_prot --hdf data/conotoxins_swiss_prot/Swiss_Prot_Conotoxins_mapped.h5 --csv data/conotoxins_swiss_prot/Swiss_Prot_Conotoxins_mapped.csv
         conotoxins:             python protspace3d/app.py -o data/conotoxins --hdf data/conotoxins/Conotoxins_mapped.h5 --csv data/conotoxins/Conotoxins_mapped.csv --pdb data/conotoxins/colabfold/pdb
 
@@ -106,7 +106,7 @@ class Parser:
             "--pdb",
             required=False,
             type=str,
-            help="Name of the directory in the output folder, that holds the .pdb files.",
+            help="Path the directory that holds the .pdb files.",
         )
         # Optional argument
         parser.add_argument(
@@ -123,7 +123,7 @@ class Parser:
         csv_sep = args.sep
         uid_col = args.uid_col
         html_cols = args.html_cols
-        pdb_d = args.pdb
+        pdb_d = Path(args.pdb)
         reset = args.reset
 
         return output_d, hdf_path, csv_path, csv_sep, uid_col, html_cols, pdb_d, reset
@@ -167,8 +167,11 @@ def setup():
 
     # initialize structure container if flag set
     structure_container = None
+    print(pdb_d)
     if pdb_flag:
         structure_container = data_preprocessor.init_structure_container(pdb_d)
+
+    print(structure_container.get_structure_dir())
 
     # Create visualization object
     visualizator = Visualizator(fig, csv_header)
