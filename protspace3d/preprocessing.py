@@ -139,7 +139,7 @@ class DataPreprocessor:
 
         # handle html saving
         DataPreprocessor._handle_html(
-            self.html_cols, csv_header, self.output_d, df=df_embeddings
+            self.html_cols, csv_header, self.output_d, df=df_embeddings, original_id_col=original_id_col
         )
 
         # generate initial figure
@@ -251,6 +251,7 @@ class DataPreprocessor:
         html_cols: list[int],
         csv_header: list[str],
         output_d: Path,
+        original_id_col: list,
         df: DataFrame,
     ):
         """
@@ -265,7 +266,7 @@ class DataPreprocessor:
             if html_cols == [-1]:
                 for col in csv_header:
                     fig = Visualizator.render(
-                        df, selected_column=col, original_id_col=None
+                        df, selected_column=col, original_id_col=original_id_col
                     )
                     fig.write_html(output_d / f"3Dspace_{col}.html")
 
@@ -283,7 +284,7 @@ class DataPreprocessor:
                         raise Exception(f"Column no. {col} is not valid!")
 
                     fig = Visualizator.render(
-                        df, selected_column=csv_header[col], original_id_col=None
+                        df, selected_column=csv_header[col], original_id_col=original_id_col
                     )
                     fig.write_html(output_d / f"3Dspace_{csv_header[col]}.html")
 

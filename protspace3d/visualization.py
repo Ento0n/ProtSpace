@@ -1,14 +1,25 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 
-import numpy as np
-from pandas import DataFrame
-
-from dash import Dash, dcc, html
-import dash_bootstrap_components as dbc
-
 import dash_bio as dashbio
+import dash_bootstrap_components as dbc
+import numpy as np
 import plotly.graph_objects as go
+from dash import Dash, dcc, html
+from pandas import DataFrame
+from colorsys import hls_to_rgb
+
+def gen_distinct_colors(n):
+    color_list = list()
+    np.random.seed(42)
+    hues = np.arange(0, 360, 360/n)
+    hues = hues[np.random.permutation(hues.size)]
+    for hue in hues:
+        saturation = 90 + np.random.ranf() * 10;
+        luminosity = 50 + np.random.ranf() * 10;
+        color_list.append(hls_to_rgb(hue/360, luminosity/100, saturation/100))
+    # color_list.sort()
+    return color_list
 
 
 class Visualizator:
@@ -16,11 +27,6 @@ class Visualizator:
         "circle",
         "square",
         "diamond",
-        "cross",
-        "x",
-        "circle-open",
-        "square-open",
-        "diamond-open",
     ]
 
     representation_options = [
@@ -484,6 +490,8 @@ class Visualizator:
 
         df["class_index"] = np.ones(len(df)) * -100
 
+        color_list = gen_distinct_colors(n=len(col_groups))
+
         data = []
         # iterate over different values of the selected column
         for group_idx, group_value in enumerate(col_groups):
@@ -496,7 +504,12 @@ class Visualizator:
                 mode="markers",
                 name=group_value,
                 # 10 colors are available; once those are used, pick different symbol
-                marker=dict(symbol=Visualizator.SYMBOLS[group_idx % 8]),
+                # marker=dict(symbol=Visualizator.SYMBOLS[group_idx % 8]),
+                marker=dict(
+                    color=f"rgb{color_list[group_idx]}",
+                    symbol=Visualizator.SYMBOLS[group_idx % len(Visualizator.SYMBOLS)],
+                    line=dict(color="black", width=1),
+                    ),
                 text=df_group.index.to_list(),
             )
             data.append(trace)
