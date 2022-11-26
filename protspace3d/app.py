@@ -167,11 +167,8 @@ def setup():
 
     # initialize structure container if flag set
     structure_container = None
-    print(pdb_d)
     if pdb_flag:
         structure_container = data_preprocessor.init_structure_container(pdb_d)
-
-    print(structure_container.get_structure_dir())
 
     # Create visualization object
     visualizator = Visualizator(fig, csv_header)
