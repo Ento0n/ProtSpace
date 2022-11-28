@@ -9,15 +9,16 @@ from dash import Dash, dcc, html
 from pandas import DataFrame
 from colorsys import hls_to_rgb
 
+
 def gen_distinct_colors(n):
     color_list = list()
     np.random.seed(42)
-    hues = np.arange(0, 360, 360/n)
+    hues = np.arange(0, 360, 360 / n)
     hues = hues[np.random.permutation(hues.size)]
     for hue in hues:
-        saturation = 90 + np.random.ranf() * 10;
-        luminosity = 50 + np.random.ranf() * 10;
-        color_list.append(hls_to_rgb(hue/360, luminosity/100, saturation/100))
+        saturation = 90 + np.random.ranf() * 10
+        luminosity = 50 + np.random.ranf() * 10
+        color_list.append(hls_to_rgb(hue / 360, luminosity / 100, saturation / 100))
     # color_list.sort()
     return color_list
 
@@ -327,8 +328,8 @@ class Visualizator:
                                         dcc.Markdown("Space distribution:"),
                                         dcc.Slider(
                                             id="distribution_slider",
-                                            min=0,
-                                            max=12,
+                                            min=3,
+                                            max=9,
                                             value=6,
                                             step=1,
                                             marks=None,
@@ -509,7 +510,7 @@ class Visualizator:
                     color=f"rgb{color_list[group_idx]}",
                     symbol=Visualizator.SYMBOLS[group_idx % len(Visualizator.SYMBOLS)],
                     line=dict(color="black", width=1),
-                    ),
+                ),
                 text=df_group.index.to_list(),
             )
             data.append(trace)

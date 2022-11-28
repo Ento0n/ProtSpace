@@ -42,13 +42,13 @@ class StructureContainer(object):
             self.public_seq_id = [seq_ids.replace(".", "_", 1)]
         return None
 
-    def get_range(self, id: str):
+    def get_range(self, uid: str):
         # add .pdb file type to ID
-        id = id + ".pdb"
+        uid = uid + ".pdb"
 
         range = set()
         strand = None
-        with open(self.pdb_d / id, "r") as f:
+        with open(self.pdb_d / uid, "r") as f:
             lines = f.readlines()
 
             for line in lines:

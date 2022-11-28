@@ -330,8 +330,11 @@ def get_callbacks_pdb(app, df, struct_container, original_id_col):
         Input("height_slider", "value"),
         Input("width_slider", "value"),
         Input("moleculeviewer_div", "style"),
+        Input("distribution_slider", "value"),
     )
-    def set_molviewer_size(sizing, slider_height, slider_width, div_style_dic):
+    def set_molviewer_size(
+        sizing, slider_height, slider_width, div_style_dic, distribution
+    ):
         ctx = dash.callback_context
         if not ctx.triggered:
             raise PreventUpdate
@@ -353,6 +356,29 @@ def get_callbacks_pdb(app, df, struct_container, original_id_col):
         # automatic sizing
         height = (sizing[0] - 150) / 1.05
         width = sizing[1] / 2.1
+
+        # fit sizing to distribution
+        if distribution == 3:
+            height = (sizing[0] - 150) / 1.05
+            width = sizing[1] / 1.4
+        elif distribution == 4:
+            height = (sizing[0] - 150) / 1.05
+            width = sizing[1] / 1.6
+        elif distribution == 5:
+            height = (sizing[0] - 150) / 1.05
+            width = sizing[1] / 1.8
+        elif distribution == 6:
+            height = (sizing[0] - 150) / 1.05
+            width = sizing[1] / 2.1
+        elif distribution == 7:
+            height = (sizing[0] - 150) / 1.05
+            width = sizing[1] / 2.55
+        elif distribution == 8:
+            height = (sizing[0] - 180) / 1.05
+            width = sizing[1] / 3.3
+        elif distribution == 9:
+            height = (sizing[0] - 180) / 1.05
+            width = sizing[1] / 4.5
 
         # set style of div accordingly
         div_style_dic["height"] = str(height + 1) + "px"
