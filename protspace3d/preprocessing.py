@@ -130,6 +130,10 @@ class DataPreprocessor:
         # get UIDs
         csv_uids = df_csv.index.to_list()
 
+        # Unify UIDs
+        for idx, uid in enumerate(csv_uids):
+            csv_uids[idx] = uid.replace("-", "_")
+
         df_embeddings, csv_header = self._read_df_csv(
             self.output_d, df_csv, emb_h5file, csv_uids, index_name
         )
@@ -539,6 +543,7 @@ class DataPreprocessor:
 
         # iterate over csv uids
         for uid in csv_uids:
+
             if uid not in embeddings.keys():
                 missing.append(uid)
 

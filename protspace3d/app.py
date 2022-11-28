@@ -46,7 +46,7 @@ class Parser:
         Pla2g2:                 python protspace3d/app.py -o data/Pla2g2 --hdf data/Pla2g2/emb_prott5.h5 --csv data/Pla2g2/Pla2g2.csv --sep ";" --pdb data/Pla2g2/colabfold/pdb
                                 python protspace3d/app.py -o data/Pla2g2 --hdf data/Pla2g2/emb_esm2.h5 --csv data/Pla2g2/Pla2g2.csv --sep ";" --html 1
         conotoxins_swiss_prot:  python protspace3d/app.py -o data/conotoxins_swiss_prot --hdf data/conotoxins_swiss_prot/Swiss_Prot_Conotoxins_mapped.h5 --csv data/conotoxins_swiss_prot/Swiss_Prot_Conotoxins_mapped.csv
-        conotoxins:             python protspace3d/app.py -o data/conotoxins --hdf data/conotoxins/Conotoxins_mapped.h5 --csv data/conotoxins/Conotoxins_mapped.csv --pdb data/conotoxins/colabfold/pdb
+        conotoxins:             python protspace3d/app.py -o data/conotoxins --hdf data/conotoxins/Conotoxins.h5 --csv data/conotoxins/Conotoxins_mapped.csv --pdb data/conotoxins/colabfold/pdb
 
 
         """
