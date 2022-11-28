@@ -73,7 +73,7 @@ class Parser:
         # Required argument
         parser.add_argument(
             "--csv",
-            required=True,
+            required=False,
             type=str,
             help="Path to CSV-file containg groups/features by which the dots in the 3D-plot are colored",
         )
@@ -119,11 +119,11 @@ class Parser:
         args = parser.parse_args()
         output_d = Path(args.output)
         hdf_path = Path(args.hdf)
-        csv_path = Path(args.csv)
+        csv_path = args.csv
         csv_sep = args.sep
         uid_col = args.uid_col
         html_cols = args.html_cols
-        pdb_d = Path(args.pdb)
+        pdb_d = args.pdb
         reset = args.reset
 
         return output_d, hdf_path, csv_path, csv_sep, uid_col, html_cols, pdb_d, reset
@@ -149,6 +149,12 @@ def setup():
         reset,
     ) = parser.get_params()
 
+    # Set up csv argument in path, even if not set
+    if csv_path is not None:
+        csv_path = Path(csv_path)
+    else:
+        csv_path = Path("")
+
     # pdb directory given or not
     pdb_flag = True if pdb_d is not None else False
 
@@ -168,6 +174,7 @@ def setup():
     # initialize structure container if flag set
     structure_container = None
     if pdb_flag:
+        pdb_d = Path(pdb_d)
         structure_container = data_preprocessor.init_structure_container(pdb_d)
 
     # Create visualization object
