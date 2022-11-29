@@ -144,13 +144,13 @@ class Parser:
         )
 
         args = parser.parse_args()
-        output_d = Path(args.output)
-        hdf_path = Path(args.hdf)
-        csv_path = args.csv
+        output_d = Path(args.output) if args.output is not None else None
+        hdf_path = Path(args.hdf) if args.hdf is not None else None
+        csv_path = Path(args.csv) if args.csv is not None else None
         csv_sep = args.sep
         uid_col = args.uid_col
         html_cols = args.html_cols
-        pdb_d = args.pdb
+        pdb_d = Path(args.pdb) if args.pdb is not None else None
         reset = args.reset
         conf_file = args.configuration
 
@@ -188,11 +188,20 @@ def setup():
         conf,
     ) = parser.get_params()
 
-    # Set up csv argument in path, even if not set
-    if csv_path is not None:
-        csv_path = Path(csv_path)
-    else:
-        csv_path = Path("")
+    # Check if h5 file is present
+    if hdf_path is None or output_d is None:
+        if hdf_path is None and output_d is None:
+            raise Exception(
+                "hdf path and output directory must be given either in config file or as argument!"
+            )
+        elif hdf_path is None:
+            raise Exception(
+                "hdf path must be given either in config file or as argument!"
+            )
+        else:
+            raise Exception(
+                "output directory must be given either in config file or as argument!"
+            )
 
     # pdb directory given or not
     pdb_flag = True if pdb_d is not None else False
