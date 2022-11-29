@@ -2,6 +2,7 @@
 # -*- coding: utf-8 -*-
 
 import argparse
+import sys
 from pathlib import Path
 
 from preprocessing import DataPreprocessor
@@ -12,10 +13,17 @@ from callbacks import get_callbacks, get_callbacks_pdb
 
 class LoadConfFile(argparse.Action):
     def __call__(self, parser, namespace, values, option_string=None):
-        with open(values, "r") as f:
-            arguments = f.read().split()
+        first_arg = sys.argv[1]
 
-        parser.parse_args(arguments, namespace)
+        if first_arg == "-conf" or first_arg == "--configuration":
+            with open(values, "r") as f:
+                arguments = f.read().split()
+
+            parser.parse_args(arguments, namespace)
+        else:
+            raise Exception(
+                "Argument -conf or --configuration must be the first argument!"
+            )
 
 
 class Parser:
