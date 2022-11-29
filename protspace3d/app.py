@@ -10,6 +10,14 @@ from visualization import Visualizator
 from callbacks import get_callbacks, get_callbacks_pdb
 
 
+class LoadConfFile(argparse.Action):
+    def __call__(self, parser, namespace, values, option_string=None):
+        with open(values, "r") as f:
+            arguments = f.read().split()
+
+        parser.parse_args(arguments, namespace)
+
+
 class Parser:
     def __init__(self):
         (
@@ -21,6 +29,7 @@ class Parser:
             self.html_cols,
             self.pdb_flag,
             self.reset,
+            self.conf,
         ) = self._parse_args()
 
     def get_params(self):
@@ -36,6 +45,7 @@ class Parser:
             self.html_cols,
             self.pdb_flag,
             self.reset,
+            self.conf,
         )
 
     @staticmethod
@@ -57,7 +67,7 @@ class Parser:
         parser.add_argument(
             "-o",
             "--output",
-            required=True,
+            required=False,
             type=str,
             help=(
                 "Name of the output folder in the project directory where generated files will be stored."
@@ -66,7 +76,7 @@ class Parser:
         # Required argument
         parser.add_argument(
             "--hdf",
-            required=True,
+            required=False,
             type=str,
             help="Path to HDF5-file containing the per protein embeddings as a key-value pair, aka UID-embedding",
         )
@@ -76,6 +86,15 @@ class Parser:
             required=False,
             type=str,
             help="Path to CSV-file containg groups/features by which the dots in the 3D-plot are colored",
+        )
+        # Optional argument
+        parser.add_argument(
+            "-conf",
+            "--configuration",
+            required=False,
+            type=str,
+            action=LoadConfFile,
+            help="Path to configuration file.",
         )
         # Optional argument
         parser.add_argument(
@@ -125,8 +144,19 @@ class Parser:
         html_cols = args.html_cols
         pdb_d = args.pdb
         reset = args.reset
+        conf_file = args.configuration
 
-        return output_d, hdf_path, csv_path, csv_sep, uid_col, html_cols, pdb_d, reset
+        return (
+            output_d,
+            hdf_path,
+            csv_path,
+            csv_sep,
+            uid_col,
+            html_cols,
+            pdb_d,
+            reset,
+            conf_file,
+        )
 
 
 def setup():
@@ -147,6 +177,7 @@ def setup():
         html_cols,
         pdb_d,
         reset,
+        conf,
     ) = parser.get_params()
 
     # Set up csv argument in path, even if not set
