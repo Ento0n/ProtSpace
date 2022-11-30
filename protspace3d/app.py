@@ -31,7 +31,8 @@ class LoadConfFile(argparse.Action):
                 "Argument -conf or --configuration must be the first argument!"
             )
 
-    def yaml_to_parser(self, dictionary: dict):
+    @staticmethod
+    def yaml_to_parser(dictionary: dict):
         arguments = list()
         if "o" in dictionary.keys():
             arguments.append("-o")
