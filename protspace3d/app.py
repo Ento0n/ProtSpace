@@ -10,6 +10,8 @@ from visualization import Visualizator
 
 from callbacks import get_callbacks, get_callbacks_pdb
 
+import yaml
+
 
 class LoadConfFile(argparse.Action):
     def __call__(self, parser, namespace, values, option_string=None):
@@ -17,13 +19,46 @@ class LoadConfFile(argparse.Action):
 
         if first_arg == "-conf" or first_arg == "--configuration":
             with open(values, "r") as f:
-                arguments = f.read().split()
+                dictionary = yaml.full_load(f)
+
+            arguments = self.yaml_to_parser(dictionary)
+
+            print(arguments)
 
             parser.parse_args(arguments, namespace)
         else:
             raise Exception(
                 "Argument -conf or --configuration must be the first argument!"
             )
+
+    def yaml_to_parser(self, dictionary: dict):
+        arguments = list()
+        if "o" in dictionary.keys():
+            arguments.append("-o")
+            arguments.append(str(dictionary["o"]))
+        if "hdf" in dictionary.keys():
+            arguments.append("--hdf")
+            arguments.append(str(dictionary["hdf"]))
+        if "csv" in dictionary.keys():
+            arguments.append("--csv")
+            arguments.append(str(dictionary["csv"]))
+        if "sep" in dictionary.keys():
+            arguments.append("--sep")
+            arguments.append(str(dictionary["sep"]))
+        if "uid_col" in dictionary.keys():
+            arguments.append("--uid_col")
+            arguments.append(str(dictionary["uid_col"]))
+        if "html_cols" in dictionary.keys():
+            arguments.append("--html_cols")
+            arguments.append(str(dictionary["html_cols"]))
+        if "pdb" in dictionary.keys():
+            arguments.append("--pdb")
+            arguments.append(str(dictionary["pdb"]))
+        if "reset" in dictionary.keys():
+            if dictionary["reset"]:
+                arguments.append("--reset")
+
+        return arguments
 
 
 class Parser:

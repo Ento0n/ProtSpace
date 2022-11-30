@@ -1,1 +1,0 @@
--o data/Pla2g2 --hdf data/Pla2g2/emb_esm2.h5 --csv data/Pla2g2/Pla2g2.csv --sep ; --pdb data/Pla2g2/colabfold/pdb --hdf data/Pla2g2/emb_esm2.h5
