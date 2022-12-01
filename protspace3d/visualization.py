@@ -1,16 +1,17 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 
+from colorsys import hls_to_rgb
+
 import dash_bio as dashbio
 import dash_bootstrap_components as dbc
 import numpy as np
 import plotly.graph_objects as go
 from dash import Dash, dcc, html
 from pandas import DataFrame
-from colorsys import hls_to_rgb
 
 
-def gen_distinct_colors(n):
+def gen_distinct_colors(n, sort: bool=False):
     color_list = list()
     np.random.seed(42)
     hues = np.arange(0, 360, 360 / n)
@@ -18,9 +19,10 @@ def gen_distinct_colors(n):
     for hue in hues:
         saturation = 90 + np.random.ranf() * 10
         luminosity = 50 + np.random.ranf() * 10
-        color_list.append(hls_to_rgb(hue / 360, luminosity / 100, saturation / 100))
-    # color_list.sort()
-    return color_list
+        color_list.append(tuple([hue / 360, luminosity / 100, saturation / 100]))
+    if sort:
+        color_list.sort()
+    return [hls_to_rgb(*color) for color in color_list]
 
 
 class Visualizator:
