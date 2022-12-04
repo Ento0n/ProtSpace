@@ -73,6 +73,7 @@ class DataPreprocessor:
         uid_col: int,
         html_cols: list[int],
         reset: bool,
+        umap_parameters: list,
     ):
         self.output_d = output_d
         self.hdf_path = hdf_path
@@ -81,6 +82,7 @@ class DataPreprocessor:
         self.uid_col = uid_col
         self.html_cols = html_cols
         self.reset = reset
+        self.umap_parameters = umap_parameters
 
     def data_preprocessing(self):
         """
@@ -135,7 +137,12 @@ class DataPreprocessor:
             csv_uids[idx] = uid.replace("-", "_")
 
         df_embeddings, csv_header = self._read_df_csv(
-            self.output_d, df_csv, emb_h5file, csv_uids, index_name
+            self.output_d,
+            df_csv,
+            emb_h5file,
+            csv_uids,
+            index_name,
+            self.umap_parameters,
         )
 
         # sort csv header alphabetically
@@ -305,6 +312,7 @@ class DataPreprocessor:
         hdf_path: Path,
         csv_uids: list[str],
         index_name: str,
+        umap_parameters: list,
     ):
         """
         If present, read df.csv and check for completion
@@ -325,14 +333,19 @@ class DataPreprocessor:
             if len(pres_df_csv) != len(df_csv):
                 print("# of rows doesn't match data!\nStart recalculation!")
                 df_embeddings, csv_header = self._create_df(
-                    output_d, hdf_path, csv_uids, df_csv, index_name
+                    output_d, hdf_path, csv_uids, df_csv, index_name, umap_parameters
                 )
             else:
                 # Check each column x, y & z for incompleteness
                 if not self._check_coordinates(pres_df_csv):
                     print("Start recalculation!")
                     df_embeddings, csv_header = self._create_df(
-                        output_d, hdf_path, csv_uids, df_csv, index_name
+                        output_d,
+                        hdf_path,
+                        csv_uids,
+                        df_csv,
+                        index_name,
+                        umap_parameters,
                     )
                 # columns x, y & z are fine
                 else:
@@ -361,7 +374,7 @@ class DataPreprocessor:
         # create dataframe from files
         else:
             df_embeddings, csv_header = self._create_df(
-                output_d, hdf_path, csv_uids, df_csv, index_name
+                output_d, hdf_path, csv_uids, df_csv, index_name, umap_parameters
             )
 
         return df_embeddings, csv_header
@@ -373,6 +386,7 @@ class DataPreprocessor:
         csv_uids: list[str],
         df_csv: DataFrame,
         index_name: str,
+        umap_parameters: list,
     ):
         """
         Use data and create corresponding dataframe
@@ -404,7 +418,7 @@ class DataPreprocessor:
         )
 
         # generate umap components and merge it to CSV DataFrame
-        df_umap = self._generate_umap(embs)
+        df_umap = self._generate_umap(embs, umap_parameters)
         df_umap.index = uids
 
         df_embeddings = df_csv.join(df_umap, how="right")
@@ -466,7 +480,7 @@ class DataPreprocessor:
         # usually euclidean or cosine distance worked best
         return pdist(data, metric=metric)
 
-    def _generate_umap(self, data: np.ndarray) -> pd.DataFrame:
+    def _generate_umap(self, data: np.ndarray, umap_parameters: list) -> pd.DataFrame:
         """
         generated umap for given data
         :param data: embeddings data
@@ -478,7 +492,11 @@ class DataPreprocessor:
         import umap
 
         fit = umap.UMAP(
-            n_neighbors=25, min_dist=0.5, random_state=42, n_components=3
+            n_neighbors=umap_parameters[0],
+            min_dist=umap_parameters[1],
+            random_state=42,
+            n_components=3,
+            metric=umap_parameters[2],
         )  # initialize umap; use random_state=42 for reproducibility
         umap_fit = fit.fit_transform(data)  # fit umap to our embeddings
         df_umap = DataFrame(data=umap_fit, columns=self.AXIS_NAMES)

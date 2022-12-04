@@ -56,6 +56,9 @@ class LoadConfFile(argparse.Action):
         if "reset" in dictionary.keys():
             if dictionary["reset"]:
                 arguments.append("--reset")
+        if "UMAP" in dictionary.keys():
+            arguments.append("--UMAP")
+            arguments.append(str(dictionary["UMAP"]))
 
         return arguments
 
@@ -72,6 +75,7 @@ class Parser:
             self.pdb_flag,
             self.reset,
             self.conf,
+            self.umap_parameters,
         ) = self._parse_args()
 
     def get_params(self):
@@ -88,6 +92,7 @@ class Parser:
             self.pdb_flag,
             self.reset,
             self.conf,
+            self.umap_parameters,
         )
 
     @staticmethod
@@ -176,6 +181,13 @@ class Parser:
             action="store_true",
             help="Generated df.csv is deleted and recalculated.",
         )
+        # Optional argument
+        parser.add_argument(
+            "--UMAP",
+            required=False,
+            default=[25, 0.5, "euclidean"],
+            help="Parameters for UMAP calculation.",
+        )
 
         args = parser.parse_args()
         output_d = Path(args.output) if args.output is not None else None
@@ -187,6 +199,7 @@ class Parser:
         pdb_d = Path(args.pdb) if args.pdb is not None else None
         reset = args.reset
         conf_file = args.configuration
+        umap_parameters = args.UMAP
 
         return (
             output_d,
@@ -198,6 +211,7 @@ class Parser:
             pdb_d,
             reset,
             conf_file,
+            umap_parameters,
         )
 
 
@@ -220,6 +234,7 @@ def setup():
         pdb_d,
         reset,
         conf,
+        umap_parameters,
     ) = parser.get_params()
 
     # Check if h5 file is present
@@ -242,7 +257,14 @@ def setup():
 
     # Create data preprocessor object
     data_preprocessor = DataPreprocessor(
-        output_d, hdf_path, csv_path, csv_sep, uid_col, html_cols, reset
+        output_d,
+        hdf_path,
+        csv_path,
+        csv_sep,
+        uid_col,
+        html_cols,
+        reset,
+        umap_parameters,
     )
 
     # Preprocessing

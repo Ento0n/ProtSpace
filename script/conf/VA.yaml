@@ -1,3 +1,7 @@
 o: data/VA
 hdf: data/VA/VA.h5
 csv: data/VA/VA.csv
+UMAP:
+  - 15
+  - 0.4
+  - manhattan
