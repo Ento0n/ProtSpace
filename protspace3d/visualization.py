@@ -11,7 +11,7 @@ from dash import Dash, dcc, html
 from pandas import DataFrame
 
 
-def gen_distinct_colors(n, sort: bool=False):
+def gen_distinct_colors(n, sort: bool = False):
     color_list = list()
     np.random.seed(42)
     hues = np.arange(0, 360, 360 / n)
@@ -490,6 +490,14 @@ class Visualizator:
         col_groups = df[selected_column].unique().tolist()
 
         col_groups.sort(key=my_comparator)
+
+        numeric_flag = False
+        if all(
+            [isinstance(item, int) or isinstance(item, float) for item in col_groups]
+        ):
+            numeric_flag = True
+
+        print(f"Numeric flag: {numeric_flag}")
 
         df["class_index"] = np.ones(len(df)) * -100
 
