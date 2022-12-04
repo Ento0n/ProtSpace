@@ -23,8 +23,6 @@ class LoadConfFile(argparse.Action):
 
             arguments = self.yaml_to_parser(dictionary)
 
-            print(arguments)
-
             parser.parse_args(arguments, namespace)
         else:
             raise Exception(

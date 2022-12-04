@@ -342,8 +342,8 @@ def get_callbacks_pdb(app, df, struct_container, original_id_col):
         # sliders are used
         if ctx.triggered_id == "height_slider" or ctx.triggered_id == "width_slider":
             # set style of div accordingly
-            div_style_dic["height"] = slider_height
-            div_style_dic["width"] = slider_width
+            div_style_dic["height"] = str(slider_height + 1) + "px"
+            div_style_dic["width"] = str(slider_width + 1) + "px"
 
             return (
                 slider_height,
