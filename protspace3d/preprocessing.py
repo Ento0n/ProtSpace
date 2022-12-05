@@ -74,6 +74,7 @@ class DataPreprocessor:
         html_cols: list[int],
         reset: bool,
         umap_parameters: list,
+        umap_flag: bool,
     ):
         self.output_d = output_d
         self.hdf_path = hdf_path
@@ -83,6 +84,7 @@ class DataPreprocessor:
         self.html_cols = html_cols
         self.reset = reset
         self.umap_parameters = umap_parameters
+        self.umap_flag = umap_flag
 
     def data_preprocessing(self):
         """
@@ -92,6 +94,10 @@ class DataPreprocessor:
         # root directory that holds, proteins.fasta, embeddings.h5, labels.csv and some output_file.html
         emb_h5file = self.hdf_path
         label_csv_p = self.csv_path
+
+        # automatically reset if PCA
+        if not self.umap_flag:
+            self.reset = True
 
         # delete df.csv
         if self.reset:
@@ -132,17 +138,14 @@ class DataPreprocessor:
         # get UIDs
         csv_uids = df_csv.index.to_list()
 
-        # Unify UIDs
-        for idx, uid in enumerate(csv_uids):
-            csv_uids[idx] = uid.replace("-", "_")
-
-        df_embeddings, csv_header = self._read_df_csv(
+        df_embeddings, csv_header, pca_variance = self._read_df_csv(
             self.output_d,
             df_csv,
             emb_h5file,
             csv_uids,
             index_name,
             self.umap_parameters,
+            self.umap_flag,
         )
 
         # sort csv header alphabetically
@@ -150,11 +153,12 @@ class DataPreprocessor:
 
         # handle html saving
         DataPreprocessor._handle_html(
+            self,
             self.html_cols,
             csv_header,
             self.output_d,
-            df=df_embeddings,
             original_id_col=original_id_col,
+            df=df_embeddings,
         )
 
         # generate initial figure
@@ -162,9 +166,11 @@ class DataPreprocessor:
             df_embeddings,
             selected_column=csv_header[0],
             original_id_col=original_id_col,
+            umap_flag=self.umap_flag,
+            pca_variance=pca_variance,
         )
 
-        return df_embeddings, fig, csv_header, original_id_col
+        return df_embeddings, fig, csv_header, original_id_col, pca_variance
 
     def _check_files(
         self,
@@ -261,8 +267,8 @@ class DataPreprocessor:
 
         return df, original_id_col
 
-    @staticmethod
     def _handle_html(
+        self,
         html_cols: list[int],
         csv_header: list[str],
         output_d: Path,
@@ -281,7 +287,10 @@ class DataPreprocessor:
             if html_cols == [-1]:
                 for col in csv_header:
                     fig = Visualizator.render(
-                        df, selected_column=col, original_id_col=original_id_col
+                        df,
+                        selected_column=col,
+                        original_id_col=original_id_col,
+                        umap_flag=self.umap_flag,
                     )
                     fig.write_html(output_d / f"3Dspace_{col}.html")
 
@@ -302,6 +311,7 @@ class DataPreprocessor:
                         df,
                         selected_column=csv_header[col],
                         original_id_col=original_id_col,
+                        umap_flag=self.umap_flag,
                     )
                     fig.write_html(output_d / f"3Dspace_{csv_header[col]}.html")
 
@@ -313,6 +323,7 @@ class DataPreprocessor:
         csv_uids: list[str],
         index_name: str,
         umap_parameters: list,
+        umap_flag: bool,
     ):
         """
         If present, read df.csv and check for completion
@@ -332,20 +343,27 @@ class DataPreprocessor:
             # Check whether no. of rows equals data
             if len(pres_df_csv) != len(df_csv):
                 print("# of rows doesn't match data!\nStart recalculation!")
-                df_embeddings, csv_header = self._create_df(
-                    output_d, hdf_path, csv_uids, df_csv, index_name, umap_parameters
+                df_embeddings, csv_header, pca_variance = self._create_df(
+                    output_d,
+                    hdf_path,
+                    csv_uids,
+                    df_csv,
+                    index_name,
+                    umap_parameters,
+                    umap_flag,
                 )
             else:
                 # Check each column x, y & z for incompleteness
                 if not self._check_coordinates(pres_df_csv):
                     print("Start recalculation!")
-                    df_embeddings, csv_header = self._create_df(
+                    df_embeddings, csv_header, pca_variance = self._create_df(
                         output_d,
                         hdf_path,
                         csv_uids,
                         df_csv,
                         index_name,
                         umap_parameters,
+                        umap_flag,
                     )
                 # columns x, y & z are fine
                 else:
@@ -373,11 +391,17 @@ class DataPreprocessor:
 
         # create dataframe from files
         else:
-            df_embeddings, csv_header = self._create_df(
-                output_d, hdf_path, csv_uids, df_csv, index_name, umap_parameters
+            df_embeddings, csv_header, pca_variance = self._create_df(
+                output_d,
+                hdf_path,
+                csv_uids,
+                df_csv,
+                index_name,
+                umap_parameters,
+                umap_flag,
             )
 
-        return df_embeddings, csv_header
+        return df_embeddings, csv_header, pca_variance
 
     def _create_df(
         self,
@@ -387,6 +411,7 @@ class DataPreprocessor:
         df_csv: DataFrame,
         index_name: str,
         umap_parameters: list,
+        umap_flag: bool,
     ):
         """
         Use data and create corresponding dataframe
@@ -417,11 +442,16 @@ class DataPreprocessor:
             f" {pairwise_dist.shape}"
         )
 
-        # generate umap components and merge it to CSV DataFrame
-        df_umap = self._generate_umap(embs, umap_parameters)
-        df_umap.index = uids
+        # generate dimensionality reduction components and merge it to CSV DataFrame
+        pca_variance = None
+        if umap_flag:
+            df_dim_red = self._generate_umap(embs, umap_parameters)
+            df_dim_red.index = uids
+        else:
+            df_dim_red, pca_variance = self._generate_pca(embs)
+            df_dim_red.index = uids
 
-        df_embeddings = df_csv.join(df_umap, how="right")
+        df_embeddings = df_csv.join(df_dim_red, how="right")
         csv_header = [
             header for header in df_embeddings.columns if header not in self.AXIS_NAMES
         ]
@@ -429,7 +459,7 @@ class DataPreprocessor:
         # save dataframe
         df_embeddings.to_csv(output_d / "df.csv", index_label=index_name)
 
-        return df_embeddings, csv_header
+        return df_embeddings, csv_header, pca_variance
 
     @staticmethod
     def _get_embeddings(emb_h5file: Path, csv_uids: list[str]) -> dict[str, np.ndarray]:
@@ -501,6 +531,20 @@ class DataPreprocessor:
         umap_fit = fit.fit_transform(data)  # fit umap to our embeddings
         df_umap = DataFrame(data=umap_fit, columns=self.AXIS_NAMES)
         return df_umap
+
+    def _generate_pca(self, data: np.ndarray):
+        from sklearn.decomposition import PCA
+
+        fit = PCA(n_components=3, random_state=42)
+        pca_fit = fit.fit_transform(data)
+        df_pca = DataFrame(data=pca_fit, columns=self.AXIS_NAMES)
+
+        # extract variance information from pca
+        pca_variance = list()
+        for variance in fit.explained_variance_ratio_:
+            pca_variance.append(variance * 100)
+
+        return df_pca, pca_variance
 
     def _check_coordinates(self, data_frame: DataFrame) -> bool:
         """

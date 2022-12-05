@@ -59,6 +59,9 @@ class LoadConfFile(argparse.Action):
         if "UMAP" in dictionary.keys():
             arguments.append("--UMAP")
             arguments.append(str(dictionary["UMAP"]))
+        if "UMAP_flag" in dictionary.keys():
+            if dictionary["UMAP_flag"]:
+                arguments.append("--UMAP_flag")
 
         return arguments
 
@@ -76,6 +79,7 @@ class Parser:
             self.reset,
             self.conf,
             self.umap_parameters,
+            self.umap_flag,
         ) = self._parse_args()
 
     def get_params(self):
@@ -93,6 +97,7 @@ class Parser:
             self.reset,
             self.conf,
             self.umap_parameters,
+            self.umap_flag,
         )
 
     @staticmethod
@@ -188,6 +193,13 @@ class Parser:
             default=[25, 0.5, "euclidean"],
             help="Parameters for UMAP calculation.",
         )
+        # Optional argument
+        parser.add_argument(
+            "--UMAP_flag",
+            required=False,
+            action="store_true",
+            help="By default PCA is used for dimensionality reduction. But if UMAP_flag is set, UMAP is used.",
+        )
 
         args = parser.parse_args()
         output_d = Path(args.output) if args.output is not None else None
@@ -200,6 +212,7 @@ class Parser:
         reset = args.reset
         conf_file = args.configuration
         umap_parameters = args.UMAP
+        umap_flag = args.UMAP_flag
 
         return (
             output_d,
@@ -212,6 +225,7 @@ class Parser:
             reset,
             conf_file,
             umap_parameters,
+            umap_flag,
         )
 
 
@@ -235,6 +249,7 @@ def setup():
         reset,
         conf,
         umap_parameters,
+        umap_flag,
     ) = parser.get_params()
 
     # Check if h5 file is present
@@ -265,6 +280,7 @@ def setup():
         html_cols,
         reset,
         umap_parameters,
+        umap_flag,
     )
 
     # Preprocessing
@@ -273,6 +289,7 @@ def setup():
         fig,
         csv_header,
         original_id_col,
+        pca_variance,
     ) = data_preprocessor.data_preprocessing()
 
     # initialize structure container if flag set
@@ -306,20 +323,22 @@ def setup():
         structure_container,
         pdb_flag,
         original_id_col,
+        umap_flag,
+        pca_variance,
     )
 
 
 def main():
-    app, html, df, struct_container, pdb, orig_id_col = setup()
+    app, html, df, struct_container, pdb, orig_id_col, umap_flag, pca_variance = setup()
 
     # don't start server if html is needed
     if not html:
         # different callbacks for different layout
         if pdb:
-            get_callbacks(app, df, orig_id_col)
+            get_callbacks(app, df, orig_id_col, umap_flag, pca_variance)
             get_callbacks_pdb(app, df, struct_container, orig_id_col)
         else:
-            get_callbacks(app, df, orig_id_col)
+            get_callbacks(app, df, orig_id_col, umap_flag, pca_variance)
 
         app.run_server(debug=True)
 

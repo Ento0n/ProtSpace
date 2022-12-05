@@ -459,12 +459,19 @@ class Visualizator:
 
     @staticmethod
     # https://github.com/sacdallago/bio_embeddings/blob/develop/bio_embeddings/visualize/plotly_plots.py
-    def render(df: DataFrame, selected_column: str, original_id_col: object):
+    def render(
+        df: DataFrame,
+        selected_column: str,
+        original_id_col: object,
+        umap_flag: bool,
+        pca_variance: list,
+    ):
         """
         Renders the plotly graph with the selected column in the dataframe df
         :param df: dataframe
         :param selected_column: column of the dataframe
         :param original_id_col: the colum "original id" of the mapped csv file
+        :param umap_flag: flag is set if umap calculations are used.
         :return: plotly graphical object
         """
 
@@ -529,14 +536,36 @@ class Visualizator:
 
         fig = go.Figure(data=data)
 
-        fig.update_layout(
-            # Remove axes ticks and labels as they are usually not informative
-            scene=dict(
-                xaxis=dict(showticklabels=False, showspikes=False, title=""),
-                yaxis=dict(showticklabels=False, showspikes=False, title=""),
-                zaxis=dict(showticklabels=False, showspikes=False, title=""),
-            ),
-        )
+        if umap_flag:
+            fig.update_layout(
+                # Remove axes ticks and labels as they are usually not informative
+                scene=dict(
+                    xaxis=dict(showticklabels=False, showspikes=False, title=""),
+                    yaxis=dict(showticklabels=False, showspikes=False, title=""),
+                    zaxis=dict(showticklabels=False, showspikes=False, title=""),
+                ),
+            )
+        else:
+            fig.update_layout(
+                # Remove axes ticks and labels as they are usually not informative
+                scene=dict(
+                    xaxis=dict(
+                        showticklabels=True,
+                        showspikes=True,
+                        title=f"PC1 ({pca_variance[0]:.1f}%)",
+                    ),
+                    yaxis=dict(
+                        showticklabels=True,
+                        showspikes=True,
+                        title=f"PC2 ({pca_variance[1]:.1f}%)",
+                    ),
+                    zaxis=dict(
+                        showticklabels=True,
+                        showspikes=True,
+                        title=f"PC3 ({pca_variance[2]:.1f}%)",
+                    ),
+                ),
+            )
 
         # Set hoverinfo
         fig.update_traces(

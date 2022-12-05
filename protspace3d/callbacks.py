@@ -429,7 +429,9 @@ def get_callbacks_pdb(app, df, struct_container, original_id_col):
         return left_width, right_width
 
 
-def get_callbacks(app, df: DataFrame, original_id_col: list):
+def get_callbacks(
+    app, df: DataFrame, original_id_col: list, umap_flag: bool, pca_variance: list
+):
     @app.callback(
         Output("graph", "figure"),
         Input("dd_menu", "value"),
@@ -450,7 +452,11 @@ def get_callbacks(app, df: DataFrame, original_id_col: list):
             raise PreventUpdate
 
         fig = Visualizator.render(
-            df, selected_column=selected_value, original_id_col=original_id_col
+            df,
+            selected_column=selected_value,
+            original_id_col=original_id_col,
+            umap_flag=umap_flag,
+            pca_variance=pca_variance,
         )
         return fig
 
