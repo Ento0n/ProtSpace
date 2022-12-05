@@ -4,6 +4,7 @@
 import os
 from pathlib import Path
 import h5py
+import pandas
 from scipy.spatial.distance import pdist, squareform
 import numpy as np
 import pandas as pd
@@ -46,7 +47,7 @@ class StructureContainer(object):
         # add .pdb file type to ID
         uid = uid + ".pdb"
 
-        range = set()
+        mol_range = set()
         strand = None
         with open(self.pdb_d / uid, "r") as f:
             lines = f.readlines()
@@ -55,10 +56,10 @@ class StructureContainer(object):
                 if line.startswith("ATOM"):
                     pieces = re.split("\\s+", line)
 
-                    range.add(int(pieces[5]))
+                    mol_range.add(int(pieces[5]))
                     strand = pieces[4]
 
-        return sorted(list(range)), strand
+        return sorted(list(mol_range)), strand
 
 
 class DataPreprocessor:
@@ -138,7 +139,7 @@ class DataPreprocessor:
         # get UIDs
         csv_uids = df_csv.index.to_list()
 
-        df_embeddings, csv_header, pca_variance = self._read_df_csv(
+        df_embeddings, csv_header = self._read_df_csv(
             self.output_d,
             df_csv,
             emb_h5file,
@@ -167,10 +168,9 @@ class DataPreprocessor:
             selected_column=csv_header[0],
             original_id_col=original_id_col,
             umap_flag=self.umap_flag,
-            pca_variance=pca_variance,
         )
 
-        return df_embeddings, fig, csv_header, original_id_col, pca_variance
+        return df_embeddings, fig, csv_header, original_id_col
 
     def _check_files(
         self,
@@ -343,7 +343,7 @@ class DataPreprocessor:
             # Check whether no. of rows equals data
             if len(pres_df_csv) != len(df_csv):
                 print("# of rows doesn't match data!\nStart recalculation!")
-                df_embeddings, csv_header, pca_variance = self._create_df(
+                df_embeddings, csv_header = self._create_df(
                     output_d,
                     hdf_path,
                     csv_uids,
@@ -356,7 +356,7 @@ class DataPreprocessor:
                 # Check each column x, y & z for incompleteness
                 if not self._check_coordinates(pres_df_csv):
                     print("Start recalculation!")
-                    df_embeddings, csv_header, pca_variance = self._create_df(
+                    df_embeddings, csv_header = self._create_df(
                         output_d,
                         hdf_path,
                         csv_uids,
@@ -391,7 +391,7 @@ class DataPreprocessor:
 
         # create dataframe from files
         else:
-            df_embeddings, csv_header, pca_variance = self._create_df(
+            df_embeddings, csv_header = self._create_df(
                 output_d,
                 hdf_path,
                 csv_uids,
@@ -401,7 +401,7 @@ class DataPreprocessor:
                 umap_flag,
             )
 
-        return df_embeddings, csv_header, pca_variance
+        return df_embeddings, csv_header
 
     def _create_df(
         self,
@@ -443,12 +443,11 @@ class DataPreprocessor:
         )
 
         # generate dimensionality reduction components and merge it to CSV DataFrame
-        pca_variance = None
         if umap_flag:
             df_dim_red = self._generate_umap(embs, umap_parameters)
             df_dim_red.index = uids
         else:
-            df_dim_red, pca_variance = self._generate_pca(embs)
+            df_dim_red = self._generate_pca(embs)
             df_dim_red.index = uids
 
         df_embeddings = df_csv.join(df_dim_red, how="right")
@@ -459,7 +458,7 @@ class DataPreprocessor:
         # save dataframe
         df_embeddings.to_csv(output_d / "df.csv", index_label=index_name)
 
-        return df_embeddings, csv_header, pca_variance
+        return df_embeddings, csv_header
 
     @staticmethod
     def _get_embeddings(emb_h5file: Path, csv_uids: list[str]) -> dict[str, np.ndarray]:
@@ -544,7 +543,10 @@ class DataPreprocessor:
         for variance in fit.explained_variance_ratio_:
             pca_variance.append(variance * 100)
 
-        return df_pca, pca_variance
+        variance_df = DataFrame({"variance": pca_variance})
+        df_pca = pandas.concat([df_pca, variance_df], axis=1)
+
+        return df_pca
 
     def _check_coordinates(self, data_frame: DataFrame) -> bool:
         """
@@ -613,7 +615,8 @@ class DataPreprocessor:
             print(f"{nr_missed} protein(s) in csv but not in h5 file:")
             print(", ".join(missing))
 
-    def init_structure_container(self, pdb_d: Path):
+    @staticmethod
+    def init_structure_container(pdb_d: Path):
         structure_container = StructureContainer(pdb_d)
 
         return structure_container

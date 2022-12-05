@@ -464,7 +464,6 @@ class Visualizator:
         selected_column: str,
         original_id_col: object,
         umap_flag: bool,
-        pca_variance: list,
     ):
         """
         Renders the plotly graph with the selected column in the dataframe df
@@ -546,6 +545,9 @@ class Visualizator:
                 ),
             )
         else:
+            # extract variance column
+            pca_variance = df["variance"].to_list()
+
             fig.update_layout(
                 # Remove axes ticks and labels as they are usually not informative
                 scene=dict(
