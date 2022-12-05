@@ -379,7 +379,9 @@ class DataPreprocessor:
                     csv_header = [
                         header
                         for header in pres_df_csv.columns
-                        if header not in self.AXIS_NAMES or header is index_name
+                        if header not in self.AXIS_NAMES
+                        and header != index_name
+                        and header != "variance"
                     ]
 
                     # Unify df name
@@ -448,7 +450,9 @@ class DataPreprocessor:
 
         df_embeddings = df_csv.join(df_dim_red, how="right")
         csv_header = [
-            header for header in df_embeddings.columns if header not in self.AXIS_NAMES
+            header
+            for header in df_embeddings.columns
+            if header not in self.AXIS_NAMES and header != "variance"
         ]
 
         # save dataframe
