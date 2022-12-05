@@ -96,10 +96,6 @@ class DataPreprocessor:
         emb_h5file = self.hdf_path
         label_csv_p = self.csv_path
 
-        # automatically reset if PCA
-        if not self.umap_flag:
-            self.reset = True
-
         # delete df.csv
         if self.reset:
             df_csv_path = self.output_d / "df.csv"

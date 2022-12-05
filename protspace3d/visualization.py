@@ -554,17 +554,17 @@ class Visualizator:
                     xaxis=dict(
                         showticklabels=True,
                         showspikes=True,
-                        title=f"PC1 ({pca_variance[0]:.1f}%)",
+                        title=f"PC1 ({float(pca_variance[0]):.1f}%)",
                     ),
                     yaxis=dict(
                         showticklabels=True,
                         showspikes=True,
-                        title=f"PC2 ({pca_variance[1]:.1f}%)",
+                        title=f"PC2 ({float(pca_variance[1]):.1f}%)",
                     ),
                     zaxis=dict(
                         showticklabels=True,
                         showspikes=True,
-                        title=f"PC3 ({pca_variance[2]:.1f}%)",
+                        title=f"PC3 ({float(pca_variance[2]):.1f}%)",
                     ),
                 ),
             )
