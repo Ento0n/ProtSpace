@@ -51,7 +51,7 @@ Cogi014,3,Predicted,N/A
 Duno895b,3,Predicted,Venom Allergen 5
 Duno917U,2,Predicted,N/A
 Duno986V3,7,Predicted,Venom Allergen 3
-EAT39749_1_AAEL008479-PA_Aedes_aegypti,N/A,Predicted,N/A
+EAT39749_1_AAEL008479_PA_Aedes_aegypti,N/A,Predicted,N/A
 Eudi193aU,2,Predicted,N/A
 Eudi508aU,3,Predicted,N/A
 Eudi940aU,2,Predicted,N/A
@@ -75,7 +75,7 @@ Hasa183c,2,Predicted,N/A
 Hasa425V3,4,Predicted,Venom Allergen 3
 Hasa700aV3,7,Predicted,Venom Allergen 3
 Hasa700bV5,7,Predicted,Venom Allergen 5
-KDR20657_1_Golgi-associated_plant_pathogenesis-related_protein_1_Zootermopsis_nevadensis,N/A,Predicted,Golgi-associated plant pathogenesis-related protein
+KDR20657_1_Golgi_associated_plant_pathogenesis_related_protein_1_Zootermopsis_nevadensis,N/A,Predicted,Golgi-associated plant pathogenesis-related protein
 Lihu620,6,Predicted,Venom Allergen 3
 Lihu699a,5,Predicted,Venom Allergen 3
 Lihu699b,6,Predicted,Venom Allergen 3
@@ -145,7 +145,7 @@ Osli257Ug,2,Predicted,N/A
 Osli257V3a,5,Predicted,Venom Allergen 3
 Osli257V5e,5,Predicted,Venom Allergen 5
 Osli271V3,6,Predicted,Venom Allergen 3
-PNF42604_1_Golgi-associated_plant_pathogenesis-related_protein_1_Cryptotermes_secundus,N/A,Predicted,Golgi-associated plant pathogenesis-related protein
+PNF42604_1_Golgi_associated_plant_pathogenesis_related_protein_1_Cryptotermes_secundus,N/A,Predicted,Golgi-associated plant pathogenesis-related protein
 Poca602V5,7,Predicted,Venom Allergen 5
 Poca736,8,Predicted,N/A
 Podo111V5,7,Predicted,Venom Allergen 5
