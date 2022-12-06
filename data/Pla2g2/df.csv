@@ -1,453 +1,453 @@
-ID,Group,Species,Taxa,x,y,z,variance
-Xela,pre_g2,Xenopus laevis,Anura,-0.752957,0.021165965,0.006195419,50.435781478881836
-bAncyB,B,Anser cygnoides,Aves,-1.3146181,2.7016032,-0.14563182,11.584341526031494
-bAncyC,C,Anser cygnoides,Aves,0.2115606,0.284492,-0.24965113,7.63544887304306
-bAncyD,D3,Anser cygnoides,Aves,-0.4042616,0.20611383,-0.6514425,
-bAncyE,E,Anser cygnoides,Aves,0.09363333,-0.42726094,-0.29934433,
-bAnplB,B,Anas platyrhynchos platyrhynchos,Aves,-1.0825716,2.728365,-0.26103145,
-bAnplC,C,Anas platyrhynchos platyrhynchos,Aves,0.27935067,0.28671092,-0.34277955,
-bAnplD,D3,Anas platyrhynchos platyrhynchos,Aves,-0.44021377,0.26926816,-0.50735956,
-bAnplE,E,Anas platyrhynchos platyrhynchos,Aves,0.3220324,-0.14305407,-0.87352306,
-bApauC,C,Apteryx australis mantelli,Aves,0.12954625,0.13611168,-0.06916678,
-bApfoB,B,Aptenodytes forsteri,Aves,-1.2967545,2.2801769,-0.47586143,
-bApfoC,C,Aptenodytes forsteri,Aves,0.2908197,-0.074990995,-0.1703984,
-bApfoD,D3,Aptenodytes forsteri,Aves,-0.09356779,-0.13759226,-0.55893534,
-bApfoE,E,Aptenodytes forsteri,Aves,1.0121789,-0.43594542,-0.6796994,
-bAqchB,B,Aquila chrysaetos canadensis,Aves,-1.3026497,2.284568,-0.2587808,
-bAqchC,C,Aquila chrysaetos canadensis,Aves,0.28488216,0.0415697,-0.11076687,
-bAqchD,D3,Aquila chrysaetos canadensis,Aves,-0.15957443,-0.04843743,-0.46556064,
-bBareB,B,Balearica regulorum gibbericeps,Aves,-1.5043179,2.145021,-0.2825088,
-bBareC,C,Balearica regulorum gibbericeps,Aves,0.39849663,0.064378776,-0.20703769,
-bBareD,D3,Balearica regulorum gibbericeps,Aves,-0.39173692,0.10833131,-0.34431714,
-bBareE,E,Balearica regulorum gibbericeps,Aves,0.6019977,-0.4376658,-0.6134153,
-bChmaB,B,Chlamydotis macqueenii,Aves,-1.2722162,2.232342,-0.42264524,
-bChmaC,C,Chlamydotis macqueenii,Aves,0.29097423,0.23719272,-0.21947962,
-bChmaD,D3,Chlamydotis macqueenii,Aves,-0.32069993,-0.0144189885,-0.34998327,
-bChmaE,E,Chlamydotis macqueenii,Aves,0.89473563,-0.24327743,-0.6227977,
-bCocoD,D3,Corvus cornix cornix,Aves,-0.111910045,-0.05789045,-0.57548374,
-bCocoE,E,Corvus cornix cornix,Aves,0.8217191,-0.5003727,-0.94923514,
-bCucaB,B,Cuculus canorus,Aves,-1.1856316,2.2531703,-0.43950894,
-bCucaC,C,Cuculus canorus,Aves,0.13393946,0.03611122,-0.14824037,
-bCucaD,D3,Cuculus canorus,Aves,-0.019641312,0.059102565,-0.41582593,
-bGagaB,B,Gallus gallus,Aves,-1.1832354,2.7637086,-0.48447958,
-bGagaC,C,Gallus gallus,Aves,0.45797035,0.3911653,-0.3811468,
-bGagaD,D3,Gallus gallus,Aves,-0.17822097,0.00037963293,-0.69390553,
-bGagaE,E,Gallus gallus,Aves,0.607094,-0.3756128,-0.74870443,
-bHaleB,B,Haliaeetus leucocephalus,Aves,-1.4097009,2.1640956,-0.36731473,
-bHaleC,C,Haliaeetus leucocephalus,Aves,0.31357473,0.11199445,-0.13284114,
-bHaleD,D3,Haliaeetus leucocephalus,Aves,-0.12732747,-0.06716419,-0.443883,
-bNaauB,B,Nannopterum auritus,Aves,-1.3494481,2.1996741,-0.48434588,
-bNaauC,C,Nannopterum auritus,Aves,0.35002938,0.14463282,-0.24626552,
-bNaauD,D3,Nannopterum auritus,Aves,-0.50981945,-0.25956115,-0.25716949,
-bOphoC,C,Opisthocomus hoazin,Aves,0.114576735,-0.15787326,-0.026681792,
-bOphoD,D3,Opisthocomus hoazin,Aves,-0.3697346,-0.110389225,-0.20008117,
-bOphoE,E,Opisthocomus hoazin,Aves,1.3305901,-0.6184539,-0.80454916,
-bPafaB,B,Patagioenas fasciata monilis,Aves,-1.4083966,2.4154632,-0.4380832,
-bPafaC,C,Patagioenas fasciata monilis,Aves,-0.010335974,0.2332206,-0.12914747,
-bPafaD,D3,Patagioenas fasciata monilis,Aves,-0.14402434,-0.038189758,-0.52955705,
-bPskrB,B,Psittacula krameri,Aves,-1.40237,2.4325686,-0.40303814,
-bPskrC,C,Psittacula krameri,Aves,0.1093814,0.16072975,-0.04386676,
-bPskrD,D3,Psittacula krameri,Aves,-0.018661704,0.00034869584,-0.6199027,
-bPskrE,E,Psittacula krameri,Aves,1.3912419,-0.20160824,-1.0037305,
-bPyadB,B,Pygoscelis adeliae,Aves,-1.3323687,2.2117927,-0.42929357,
-bPyadC,C,Pygoscelis adeliae,Aves,0.105221175,-0.0468645,-0.12580515,
-bPyadD,D3,Pygoscelis adeliae,Aves,-0.2539907,-0.24441934,-0.5485811,
-bSecoD,D3,Setophaga coronata coronata,Aves,-0.039555594,0.17567548,-0.41627023,
-bSecoE,E,Setophaga coronata coronata,Aves,1.0203143,-0.42265937,-1.0401609,
-bStocB,B,Strix occidentalis caurina,Aves,-1.4426588,2.1628277,-0.38644615,
-bStocC,C,Strix occidentalis caurina,Aves,-0.010909897,-0.13199632,-0.09566674,
-bStocD,D3,Strix occidentalis caurina,Aves,-0.23138751,-0.19270948,-0.5307133,
-bStocE,E,Strix occidentalis caurina,Aves,0.97107303,-0.4071716,-0.9418951,
-bUrpeB,B,Urile pelagicus,Aves,-1.3494481,2.1996741,-0.48434588,
-bUrpeC,C,Urile pelagicus,Aves,0.33756825,0.07255479,-0.18572353,
-bUrpeD,D3,Urile pelagicus,Aves,-0.3683689,-0.30130747,-0.4190241,
-cAlmiC,C,Alligator mississippiensis,Crocodylia,-0.034243457,-0.28587136,-0.5735112,
-cAlmiD1,D1,Alligator mississippiensis,Crocodylia,-0.39872545,-0.22918294,0.32959217,
-cAlmiD3,D3,Alligator mississippiensis,Crocodylia,-0.4523568,-0.48619547,0.1575962,
-cAlmiE,E,Alligator mississippiensis,Crocodylia,-0.46550697,-0.53267694,0.24985744,
-cAlsiC,C,Alligator sinensis,Crocodylia,-0.6990905,-0.1845449,-0.3792326,
-cAlsiD3,D3,Alligator sinensis,Crocodylia,-0.5439643,-0.40878543,0.1701808,
-cAlsiE,E,Alligator sinensis,Crocodylia,-0.46550697,-0.53267694,0.24985744,
-cChmyD1,D1,Chelonia mydas,Testudines,0.37814063,-0.030519519,-0.017628467,
-cChmyD3,D3,Chelonia mydas,Testudines,-0.17151739,-0.6112065,-0.020935789,
-cChmyF,F,Chelonia mydas,Testudines,-0.077659644,-0.37151495,-0.053914774,
-cChpiD1,D1,Chrysemys picta bellii,Testudines,0.5895398,-0.13876514,0.007258935,
-cChpiD2,D2,Chrysemys picta bellii,Testudines,0.20194137,-0.40682426,-0.28963435,
-cChpiD3,D3,Chrysemys picta bellii,Testudines,-0.8322674,-0.45264876,0.16692209,
-cChpiF,F,Chrysemys picta bellii,Testudines,-0.17470936,-0.444433,0.03076492,
-cCrpoC,C,Crocodylus porosus,Crocodylia,-0.27006966,-0.2673503,-0.55192095,
-cCrpoD1,D1,Crocodylus porosus,Crocodylia,-0.44328836,-0.24042962,0.40400267,
-cCrpoD3,D3,Crocodylus porosus,Crocodylia,-0.37880343,-0.43362862,-0.021601098,
-cCrpoE,E,Crocodylus porosus,Crocodylia,-0.21637708,-0.49999043,0.19529536,
-cGavganC,C,Gavialis gangeticus,Crocodylia,-0.053305935,-0.24968018,-0.6675287,
-cGavganD1,D1,Gavialis gangeticus,Crocodylia,-0.44550952,-0.2298477,0.38346192,
-cGavganD3,D3,Gavialis gangeticus,Crocodylia,-0.34998158,-0.47936878,0.04482076,
-cGavganE,E,Gavialis gangeticus,Crocodylia,-0.45788473,-0.3856898,0.38212273,
-cGoagD1,D1,Gopherus agassizii,Testudines,0.49270213,-0.26833257,0.06766446,
-cGoagD2,D2,Gopherus agassizii,Testudines,0.40328324,-0.32210514,-0.4638882,
-cGoagD3,D3,Gopherus agassizii,Testudines,-0.40183997,-0.26716286,-0.097481176,
-cGoagE,E,Gopherus agassizii,Testudines,0.2946235,-0.50806177,-0.19137423,
-cGoagF,F,Gopherus agassizii,Testudines,0.054226555,-0.4585482,0.017684642,
-cPesiD1,D1,Pelodiscus sinensis,Testudines,0.32211107,-0.047790993,-0.06445212,
-cPesiD2,D2,Pelodiscus sinensis,Testudines,0.58387214,-0.26053143,-0.40434802,
-cPesiD3,D3,Pelodiscus sinensis,Testudines,-0.038284283,-0.34978533,0.16959871,
-cPesiE,E,Pelodiscus sinensis,Testudines,0.7070473,-0.24911377,-0.34070736,
-cPesiF,F,Pelodiscus sinensis,Testudines,-0.11707936,-0.42968714,-0.11016917,
-mAifuC,C,Ailurus fulgens styani,Placentalia,2.529413,0.4384028,0.94750303,
-mAifuD,D1,Ailurus fulgens styani,Placentalia,-0.03692318,-0.29447293,-0.042151596,
-mAifuE,E,Ailurus fulgens styani,Placentalia,1.7005807,0.12767793,-0.59083927,
-mAifuF,F,Ailurus fulgens styani,Placentalia,-1.1817989,0.22853112,0.4542478,
-mAifuV,V,Ailurus fulgens styani,Placentalia,-0.79752195,-0.08583243,-0.044346064,
-mAimeC,C,Ailuropoda melanoleuca,Placentalia,3.225798,0.5597282,0.84633714,
-mAimeDa,D1,Ailuropoda melanoleuca,Placentalia,-0.2015729,-0.14480728,0.061505184,
-mAimeDb,D1,Ailuropoda melanoleuca,Placentalia,-0.2015729,-0.14480728,0.061505184,
-mAimeE,E,Ailuropoda melanoleuca,Placentalia,2.0173733,0.26370132,-0.67980874,
-mAimeF,F,Ailuropoda melanoleuca,Placentalia,-1.0834533,0.08208525,0.47001198,
-mBibiA2,A,Bison bison bison,Placentalia,-0.60425353,-0.29312652,-0.076384656,
-mBibiA3,A,Bison bison bison,Placentalia,-0.4232647,-0.3843043,-0.26526663,
-mBibiA4,A,Bison bison bison,Placentalia,0.028781071,-0.19053404,-0.5493425,
-mBibiC,C,Bison bison bison,Placentalia,2.967222,0.51646644,0.7771498,
-mBibiDa,D1,Bison bison bison,Placentalia,-0.019518584,0.010310423,0.35139078,
-mBibiDb,D1,Bison bison bison,Placentalia,-0.08220983,-0.0087064775,0.3893237,
-mBibiE,E,Bison bison bison,Placentalia,2.7779765,0.13073434,-0.68669033,
-mBibiF,F,Bison bison bison,Placentalia,-1.0183572,-0.05797119,0.42775896,
-mBotaA,A,Bos taurus,Placentalia,-0.4489529,-0.4343639,-0.26039448,
-mBotaA2,A,Bos taurus,Placentalia,0.05279628,-0.15693857,-0.5600361,
-mBotaA3,A,Bos taurus,Placentalia,-0.60425353,-0.29312652,-0.076384656,
-mBotaA5,A,Bos taurus,Placentalia,-1.4749055,0.072423115,0.5650168,
-mBotaC,C,Bos taurus,Placentalia,3.0152178,0.54142135,0.7859357,
-mBotaDa,D1,Bos taurus,Placentalia,-0.021439582,0.040332913,0.3611193,
-mBotaDb,D1,Bos taurus,Placentalia,-0.32675865,0.037682172,0.45720893,
-mBotaE,E,Bos taurus,Placentalia,2.8475454,0.16977836,-0.72289693,
-mBotaF,F,Bos taurus,Placentalia,-1.1232456,0.049949396,0.46658617,
-mBotaV,V,Bos taurus,Placentalia,-0.78984535,-0.00818557,0.20950648,
-mCahiA,A,Capra hircus,Placentalia,-0.49900368,-0.2532061,-0.106584586,
-mCahiA2,A,Capra hircus,Placentalia,-0.63963825,-0.24349238,-0.149941,
-mCahiA4,A,Capra hircus,Placentalia,-2.0291486,0.68968266,0.7947056,
-mCahiA5,A,Capra hircus,Placentalia,-0.68951654,-0.0109140845,-0.16767466,
-mCahiC,C,Capra hircus,Placentalia,2.882547,0.4692955,0.86689305,
-mCahiDa,D1,Capra hircus,Placentalia,-0.35802022,-0.17269692,0.2612025,
-mCahiDb,D1,Capra hircus,Placentalia,-0.09050506,-0.19022109,0.17217919,
-mCahiE,E,Capra hircus,Placentalia,2.3880255,0.2793301,-0.7473994,
-mCahiF,F,Capra hircus,Placentalia,-1.0102872,0.14086664,0.40679294,
-mCahiV,V,Capra hircus,Placentalia,-0.55381095,0.12013777,-0.011362607,
-mCaluC,C,Canis lupus familiaris,Placentalia,3.0217202,0.48029828,0.9537141,
-mCaluD,D1,Canis lupus familiaris,Placentalia,0.3290859,0.001977561,-0.02365355,
-mCaluE,E,Canis lupus familiaris,Placentalia,2.0937133,0.28421292,-0.78896934,
-mCaluF,F,Canis lupus familiaris,Placentalia,-1.259164,0.021475712,0.5647891,
-mCaluV,V,Canis lupus familiaris,Placentalia,-0.6684264,-0.052914128,-0.07475485,
-mChlaA2,A,Chinchilla lanigera,Placentalia,-1.0302173,-0.08584491,0.18223205,
-mChlaA3,A,Chinchilla lanigera,Placentalia,-0.38050097,-0.42989436,-0.62636966,
-mChlaA4,A,Chinchilla lanigera,Placentalia,-0.0032925212,-0.3163538,-0.8640873,
-mChlaC,C,Chinchilla lanigera,Placentalia,2.7843697,0.26265085,0.8763898,
-mChlaD,D1,Chinchilla lanigera,Placentalia,-0.68331474,0.04693771,0.16427311,
-mChlaE,E,Chinchilla lanigera,Placentalia,1.0996814,0.07599093,-0.3153493,
-mChlaF,F,Chinchilla lanigera,Placentalia,-1.4015338,0.28083488,0.56038725,
-mChlaV,V,Chinchilla lanigera,Placentalia,-0.84408855,-0.15219899,0.10459221,
-mCocrA2,A,Condylura cristata,Placentalia,-0.19637622,-0.42441761,-0.816364,
-mCocrA3,A,Condylura cristata,Placentalia,-0.587625,-0.3226545,-0.51367337,
-mCocrD,D1,Condylura cristata,Placentalia,-0.060578607,-0.24299315,-0.06876721,
-mCocrE,E,Condylura cristata,Placentalia,1.7270911,0.1824575,-0.5599892,
-mCocrF,F,Condylura cristata,Placentalia,-1.1133591,0.20663163,0.44722813,
-mCocrV,V,Condylura cristata,Placentalia,-0.8795992,0.0551605,-0.0050994824,
-mDanoA,A,Dasypus novemcinctus,Placentalia,-0.019376365,-0.16641526,-0.6826305,
-mDanoC,C,Dasypus novemcinctus,Placentalia,3.0610778,0.6049305,0.8444726,
-mDanoD,D1,Dasypus novemcinctus,Placentalia,0.25507736,0.2859784,-0.17249234,
-mDanoF,F,Dasypus novemcinctus,Placentalia,-1.333989,0.59630615,0.46266255,
-mDanoV,V,Dasypus novemcinctus,Placentalia,-0.74451303,0.2747002,-0.023081677,
-mEledA1,A,Elephantulus edwardii,Placentalia,-0.8809546,-0.4907028,0.17971393,
-mEledA2,A,Elephantulus edwardii,Placentalia,-0.33268297,-0.56256324,-0.4547324,
-mEledA3,A,Elephantulus edwardii,Placentalia,-0.8160097,-0.33399802,0.103560776,
-mEledD,D1,Elephantulus edwardii,Placentalia,-0.4501529,-0.40532807,0.10961068,
-mEledE,E,Elephantulus edwardii,Placentalia,2.076408,0.2113352,-0.5258878,
-mEledF,F,Elephantulus edwardii,Placentalia,-1.2286655,0.16113299,0.4631375,
-mEledV,V,Elephantulus edwardii,Placentalia,-0.67839277,0.053658623,-0.035435956,
-mEnluC,C,Enhydra lutris kenyoni,Placentalia,2.7055948,0.49232292,0.90818685,
-mEnluD,D1,Enhydra lutris kenyoni,Placentalia,-0.20777704,-0.16944818,0.11153387,
-mEnluE,E,Enhydra lutris kenyoni,Placentalia,1.9820732,0.25533083,-0.75577086,
-mEnluF,F,Enhydra lutris kenyoni,Placentalia,-1.220587,0.18244556,0.5324549,
-mEnluV,V,Enhydra lutris kenyoni,Placentalia,-0.39082482,0.09422128,-0.10707742,
-mEqcaA,A,Equus caballus,Placentalia,0.26589173,-0.35958722,-0.90250075,
-mEqcaC,C,Equus caballus,Placentalia,3.0033994,0.4963823,0.9242833,
-mEqcaD,D1,Equus caballus,Placentalia,0.19151424,-0.10869705,0.124876246,
-mEqcaE,E,Equus caballus,Placentalia,2.6176803,0.3136436,-0.64920557,
-mEqcaF,F,Equus caballus,Placentalia,-1.2592754,0.103643864,0.44548863,
-mEqcaV,V,Equus caballus,Placentalia,-0.6290659,0.103510894,-0.008960272,
-mEreuA1,A,Erinaceus europaeus,Placentalia,-0.31157634,-0.42711142,-0.33102182,
-mEreuA10,A,Erinaceus europaeus,Placentalia,-1.3690089,0.09275659,0.13454638,
-mEreuA11,A,Erinaceus europaeus,Placentalia,-1.3156024,0.15037537,-0.00068927807,
-mEreuA12,A,Erinaceus europaeus,Placentalia,-1.3176085,0.2119486,-0.021863574,
-mEreuA13,A,Erinaceus europaeus,Placentalia,-0.63358396,-0.28662547,0.1596422,
-mEreuA14,A,Erinaceus europaeus,Placentalia,-0.90527743,-0.15980798,0.18735553,
-mEreuA15,A,Erinaceus europaeus,Placentalia,-1.6000208,0.29177776,0.3845679,
-mEreuA2,A,Erinaceus europaeus,Placentalia,-0.26667207,0.10801655,-0.3881382,
-mEreuA3,A,Erinaceus europaeus,Placentalia,-1.0679922,-0.32125053,0.12436832,
-mEreuA5,A,Erinaceus europaeus,Placentalia,-1.7584985,0.05496574,0.5862834,
-mEreuA6,A,Erinaceus europaeus,Placentalia,-1.7698368,0.062885776,0.5034716,
-mEreuA7,A,Erinaceus europaeus,Placentalia,-1.4564538,-0.23355392,0.21588393,
-mEreuA8,A,Erinaceus europaeus,Placentalia,-1.5736396,-0.1338579,0.35780337,
-mEreuA9,A,Erinaceus europaeus,Placentalia,-1.2144086,0.11267043,-0.025291847,
-mEreuC,C,Erinaceus europaeus,Placentalia,2.6007557,0.8211956,0.806885,
-mEreuD,D1,Erinaceus europaeus,Placentalia,-0.09300503,0.2677624,-0.10970615,
-mEreuE,E,Erinaceus europaeus,Placentalia,1.760763,0.31726047,-0.4623228,
-mEreuF,F,Erinaceus europaeus,Placentalia,-1.3401608,0.4105288,0.56950927,
-mEreuV,V,Erinaceus europaeus,Placentalia,-0.66586924,0.4043647,-0.069131985,
-mFecaD,D1,Felis catus,Placentalia,0.24385692,0.007080607,0.030318307,
-mFecaE,E,Felis catus,Placentalia,2.2391136,0.46105817,-0.6353841,
-mFecaF,F,Felis catus,Placentalia,-1.1582237,0.048273493,0.53615135,
-mFecaV,V,Felis catus,Placentalia,-0.693528,0.06711286,-0.058028124,
-mHeglA1,A,Heterocephalus glaber,Placentalia,-0.7008917,-0.13909325,-0.066829376,
-mHeglA2,A,Heterocephalus glaber,Placentalia,-0.114963114,-0.4824532,-0.52327436,
-mHeglA3,A,Heterocephalus glaber,Placentalia,-0.26365355,-0.22317234,-0.75510263,
-mHeglD,D1,Heterocephalus glaber,Placentalia,-0.37436864,-0.025446592,-0.03748589,
-mHeglE,E,Heterocephalus glaber,Placentalia,1.267476,0.1791333,-0.38243893,
-mHeglF,F,Heterocephalus glaber,Placentalia,-1.3707224,0.25142446,0.55437267,
-mHeglV,V,Heterocephalus glaber,Placentalia,-0.7925839,-0.14791377,0.013028147,
-mHosaA,A,Homo sapiens,Placentalia,0.28527033,-0.2876026,-0.90323323,
-mHosaD,D1,Homo sapiens,Placentalia,0.3706252,-0.11557255,-0.03470844,
-mHosaE,E,Homo sapiens,Placentalia,2.8105824,0.19312818,-0.5901386,
-mHosaF,F,Homo sapiens,Placentalia,-1.1439773,0.28819317,0.5081905,
-mHosaV,V,Homo sapiens,Placentalia,-0.7748237,-0.08052879,-0.0516516,
-mLoafA1,A,Loxodonta africana,Placentalia,0.016861234,-0.3979832,-0.5616769,
-mLoafA2,A,Loxodonta africana,Placentalia,-0.13341425,-0.42048398,-0.7492206,
-mLoafC,C,Loxodonta africana,Placentalia,3.13536,0.4272963,0.9666541,
-mLoafD,D1,Loxodonta africana,Placentalia,-0.086362675,0.07701031,0.18845685,
-mLoafE,E,Loxodonta africana,Placentalia,1.9162507,0.14462513,-0.45662555,
-mLoafF,F,Loxodonta africana,Placentalia,-1.2972114,0.28374988,0.52671206,
-mLoafV,V,Loxodonta africana,Placentalia,-0.8824994,-0.12581648,0.0044629793,
-mMamaA1,A,Marmota marmota marmota,Placentalia,-0.23343395,-0.4653579,-0.6623492,
-mMamaD,D1,Marmota marmota marmota,Placentalia,-0.14847104,-0.10499475,-0.019207608,
-mMamaE,E,Marmota marmota marmota,Placentalia,2.2347658,0.14119866,-0.6995833,
-mMamaF,F,Marmota marmota marmota,Placentalia,-1.3091315,0.2831497,0.51030415,
-mMamaV,V,Marmota marmota marmota,Placentalia,-0.80979365,-0.013589464,-0.019599289,
-mMimuA,A,Microcebus murinus,Placentalia,-0.92502207,-0.4023302,0.11693945,
-mMimuC,C,Microcebus murinus,Placentalia,2.6979418,0.36537686,1.0049199,
-mMimuD,D1,Microcebus murinus,Placentalia,-0.36528298,-0.3397437,0.08016599,
-mMimuE,E,Microcebus murinus,Placentalia,2.4334695,0.19275534,-0.50791264,
-mMimuF,F,Microcebus murinus,Placentalia,-1.1583586,0.3409072,0.49379435,
-mMimuV,V,Microcebus murinus,Placentalia,-0.48837072,0.257338,-0.30668977,
-mModoC,C,Monodelphis domestica,Marsupialia,2.0223017,0.052542496,0.5555101,
-mModoD,D1,Monodelphis domestica,Marsupialia,-0.3553632,-0.34158358,0.13945828,
-mModoE,E,Monodelphis domestica,Marsupialia,1.0829805,-0.23496321,-0.20304288,
-mModoF,F,Monodelphis domestica,Marsupialia,-1.2035717,-0.078848764,0.6459846,
-mModoV1,V,Monodelphis domestica,Marsupialia,-0.17251298,-0.6691326,-0.46608025,
-mModoV2,V,Monodelphis domestica,Marsupialia,-0.94838315,-0.34939447,0.5533654,
-mMumuA,A,Mus musculus,Placentalia,-0.28569695,-0.3363684,-0.37209073,
-mMumuC,C,Mus musculus,Placentalia,3.3439124,0.19418393,0.8409577,
-mMumuD,D1,Mus musculus,Placentalia,0.1342951,-0.3969216,-0.08918946,
-mMumuE,E,Mus musculus,Placentalia,2.1544983,0.057142917,-0.4984331,
-mMumuF,F,Mus musculus,Placentalia,-1.5396028,0.15205677,0.55003726,
-mMumuV,V,Mus musculus,Placentalia,-0.62201536,-0.14343767,0.17647526,
-mMupuC,C,Mustela putorius furo,Placentalia,2.857502,0.49075204,0.96423525,
-mMupuD,D1,Mustela putorius furo,Placentalia,0.06988881,-0.067183256,0.22589107,
-mMupuE,E,Mustela putorius furo,Placentalia,1.9217483,0.21784236,-0.696443,
-mMupuF,F,Mustela putorius furo,Placentalia,-1.1506164,0.19204804,0.49434125,
-mMupuV,V,Mustela putorius furo,Placentalia,-0.7110975,-0.11076834,-0.028333686,
-mMyluA1,A,Myotis lucifugus,Placentalia,-0.39235234,-0.21653415,-0.1214778,
-mMyluA2,A,Myotis lucifugus,Placentalia,-0.4325628,-0.14905813,-0.14301677,
-mMyluA4,A,Myotis lucifugus,Placentalia,-0.045130383,-0.33530766,-0.71576285,
-mMyluC,C,Myotis lucifugus,Placentalia,3.243091,0.40944684,0.94201106,
-mMyluD,D1,Myotis lucifugus,Placentalia,-0.14352813,0.10258327,-0.026956921,
-mMyluE,E,Myotis lucifugus,Placentalia,1.4975092,0.0325347,-0.46086985,
-mMyluF,F,Myotis lucifugus,Placentalia,-1.1578729,0.06868263,0.39638475,
-mMyluV,V,Myotis lucifugus,Placentalia,-0.7067448,-0.26137006,0.09636904,
-mNescD,D1,Neomonachus schauinslandi,Placentalia,-0.120355025,-0.19541079,0.11294267,
-mNescE,E,Neomonachus schauinslandi,Placentalia,2.3476136,0.47843957,-0.6855412,
-mNescF,F,Neomonachus schauinslandi,Placentalia,-1.2783482,0.3004872,0.5424398,
-mNescV,V,Neomonachus schauinslandi,Placentalia,-0.35401094,0.030189497,-0.22131109,
-mOcprA1,A,Ochotona princeps,Placentalia,-0.1876603,-0.5783508,-0.14437321,
-mOcprA2,A,Ochotona princeps,Placentalia,-0.023260016,-0.10959269,-1.0395668,
-mOcprA3,A,Ochotona princeps,Placentalia,-0.48394647,-0.46678957,-0.011324565,
-mOcprC,C,Ochotona princeps,Placentalia,2.438209,0.40131423,0.89167434,
-mOcprD,D1,Ochotona princeps,Placentalia,-0.12599291,-0.16272004,0.07338291,
-mOcprE,E,Ochotona princeps,Placentalia,2.3061237,0.3357575,-0.6380236,
-mOcprF,F,Ochotona princeps,Placentalia,-1.3698759,0.34659815,0.47497004,
-mOcprV,V,Ochotona princeps,Placentalia,-0.79771084,0.033842027,-0.11833886,
-mOdviA1,A,Odocoileus virginianus texanus,Placentalia,-0.6346348,-0.27073562,-0.18467888,
-mOdviA2,A,Odocoileus virginianus texanus,Placentalia,-0.16750635,-0.39336005,-0.36026326,
-mOdviA3,A,Odocoileus virginianus texanus,Placentalia,-0.062413093,-0.030249044,-0.29245687,
-mOdviC,C,Odocoileus virginianus texanus,Placentalia,3.1941888,0.40329966,0.9194015,
-mOdviD,D1,Odocoileus virginianus texanus,Placentalia,-0.34133512,-0.008515705,0.18646668,
-mOdviE,E,Odocoileus virginianus texanus,Placentalia,2.2147071,0.31611627,-0.74749804,
-mOdviF,F,Odocoileus virginianus texanus,Placentalia,-0.9894783,0.014675711,0.38672,
-mOdviV,V,Odocoileus virginianus texanus,Placentalia,-0.79480034,0.07983643,0.18903328,
-mOran2,D1,Ornithorhynchus anatinus,Monotremata,-1.1824526,0.34790063,0.41279137,
-mOran3,V,Ornithorhynchus anatinus,Monotremata,0.11069726,-0.3476279,-0.34313163,
-mOran4,D1,Ornithorhynchus anatinus,Monotremata,-0.8493352,0.26728702,0.04647705,
-mOranD,D1,Ornithorhynchus anatinus,Monotremata,-0.071647964,-0.008723268,-0.21474631,
-mOranE,E,Ornithorhynchus anatinus,Monotremata,0.88783747,-0.10237859,-0.43974632,
-mOranF,F,Ornithorhynchus anatinus,Monotremata,-1.2438579,-0.026361693,0.6825739,
-mOrcuA1,A,Oryctolagus cuniculus,Placentalia,0.07382801,-0.43926567,-0.40378213,
-mOrcuA2,A,Oryctolagus cuniculus,Placentalia,0.10873067,-0.47137463,-0.5360706,
-mOrcuA3,A,Oryctolagus cuniculus,Placentalia,0.13121225,-0.08843864,-0.9688048,
-mOrcuA4,A,Oryctolagus cuniculus,Placentalia,-0.23894358,-0.54459023,-0.3793189,
-mOrcuC,C,Oryctolagus cuniculus,Placentalia,2.6705227,0.5118603,0.84956557,
-mOrcuD,D1,Oryctolagus cuniculus,Placentalia,0.21119744,0.082623534,-0.04671059,
-mOrcuE,E,Oryctolagus cuniculus,Placentalia,2.0469675,0.18584271,-0.66432714,
-mOrcuF,F,Oryctolagus cuniculus,Placentalia,-1.3703212,0.28401262,0.5435399,
-mOrcuV,V,Oryctolagus cuniculus,Placentalia,-0.8246924,-0.075373776,-0.034844715,
-mOrorC,C,Orcinus orca,Placentalia,0.24194916,1.0295336,0.7512058,
-mOrorD,D1,Orcinus orca,Placentalia,0.19898632,-0.35947895,0.07206441,
-mOrorE,E,Orcinus orca,Placentalia,1.2051651,0.32204878,-0.38229698,
-mOrorV,V,Orcinus orca,Placentalia,-0.43221295,0.08951754,-0.24145892,
-mOvarA1,A,Ovis aries,Placentalia,-0.6491577,-0.33111992,-0.20023192,
-mOvarA2,A,Ovis aries,Placentalia,-0.4781488,-0.25402874,-0.11388491,
-mOvarA3,A,Ovis aries,Placentalia,-0.33130845,-0.31287536,-0.394529,
-mOvarC,C,Ovis aries,Placentalia,3.0616634,0.5271575,0.88369703,
-mOvarD,D1,Ovis aries,Placentalia,-0.19959317,-0.20392646,0.23219067,
-mOvarF,F,Ovis aries,Placentalia,-1.0531536,0.07854448,0.4323173,
-mPahoA1,A,Pantholops hodgsonii,Placentalia,-0.663806,-0.24262977,-0.17576714,
-mPahoA3,A,Pantholops hodgsonii,Placentalia,-0.42476392,-0.48846376,-0.11562319,
-mPahoA5,A,Pantholops hodgsonii,Placentalia,-0.21125999,-0.3831683,-0.46305782,
-mPahoC,C,Pantholops hodgsonii,Placentalia,3.0042462,0.40416518,0.9499632,
-mPahoD,D1,Pantholops hodgsonii,Placentalia,-0.20945963,-0.050232153,0.10166618,
-mPahoE,E,Pantholops hodgsonii,Placentalia,2.6365032,0.20239945,-0.7494298,
-mPahoF,F,Pantholops hodgsonii,Placentalia,-1.0142702,0.020557445,0.40404305,
-mPahoV,V,Pantholops hodgsonii,Placentalia,-0.6469081,0.008019213,0.0018527798,
-mPatiC,C,Panthera tigris altaica,Placentalia,2.7202616,0.43622527,0.86245126,
-mPatiD,D1,Panthera tigris altaica,Placentalia,0.2808603,0.05595754,0.017034063,
-mPatiE,E,Panthera tigris altaica,Placentalia,2.1830425,0.45843238,-0.59532326,
-mPatiF,F,Panthera tigris altaica,Placentalia,-1.2490973,0.184027,0.5647727,
-mPatiV,V,Panthera tigris altaica,Placentalia,-0.7150878,-0.04518825,-0.043334812,
-mPhciC,C,Phascolarctos cinereus,Marsupialia,2.098096,0.11379648,0.714778,
-mPhciDa,D1,Phascolarctos cinereus,Marsupialia,-1.1177825,-0.31923294,0.08029065,
-mPhciDb,D1,Phascolarctos cinereus,Marsupialia,0.38195485,-0.39118314,-0.027346084,
-mPhciE,E,Phascolarctos cinereus,Marsupialia,1.2946053,-0.38498625,-0.20273484,
-mPhciF,F,Phascolarctos cinereus,Marsupialia,-1.2129288,-0.045750715,0.6040354,
-mPhciV1,V,Phascolarctos cinereus,Marsupialia,-0.28549528,-0.6854664,-0.52970034,
-mPhciV2,V,Phascolarctos cinereus,Marsupialia,-0.60399604,-0.65797675,-0.021155603,
-mPhciV3,V,Phascolarctos cinereus,Marsupialia,-0.53231984,-0.7475422,0.13432626,
-mPtvaC,C,Pteropus vampyrus,Placentalia,3.2052581,0.2904292,1.01494,
-mPtvaD,D1,Pteropus vampyrus,Placentalia,-0.60553396,0.18914944,0.11259069,
-mPtvaE,E,Pteropus vampyrus,Placentalia,2.1767545,0.04870963,-0.3203405,
-mPtvaF,F,Pteropus vampyrus,Placentalia,-1.2518699,0.14331456,0.4849746,
-mPtvaV,V,Pteropus vampyrus,Placentalia,-0.8475789,-0.11349579,-0.04942173,
-mSahaC,C,Sarcophilus harrisii,Marsupialia,2.3401906,0.23032252,0.6640566,
-mSahaD,D1,Sarcophilus harrisii,Marsupialia,0.018624872,-0.62791854,0.1980542,
-mSahaE,E,Sarcophilus harrisii,Marsupialia,1.0720301,-0.45377275,-0.14283507,
-mSahaF,F,Sarcophilus harrisii,Marsupialia,-1.2485785,-0.010034575,0.5587107,
-mSahaV1,V,Sarcophilus harrisii,Marsupialia,-0.03565689,-0.7270046,-0.38364986,
-mSahaV2,V,Sarcophilus harrisii,Marsupialia,0.07670507,-0.66223484,-0.53238994,
-mSahaV4,V,Sarcophilus harrisii,Marsupialia,-0.22692989,-0.574825,-0.12263851,
-mSahaV5,V,Sarcophilus harrisii,Marsupialia,-0.6934367,-0.26502016,0.23450705,
-mSoarA2,A,Sorex araneus,Placentalia,-0.46114898,-0.23727384,0.20524481,
-mSoarA3,A,Sorex araneus,Placentalia,-0.5690141,-0.57113284,-0.52648187,
-mSoarC,C,Sorex araneus,Placentalia,2.1705961,0.46415368,0.6551563,
-mSoarD,D1,Sorex araneus,Placentalia,-0.29733965,-0.16339737,-0.030678341,
-mSoarE,E,Sorex araneus,Placentalia,2.0033302,0.25825495,-0.67757887,
-mSoarF,F,Sorex araneus,Placentalia,-1.1395513,0.057118896,0.5899107,
-mSoarV,V,Sorex araneus,Placentalia,-0.33330125,0.35398105,-0.22467296,
-mTrmaA2,A,Trichechus manatus latirostris,Placentalia,-0.15503974,-0.31098723,-0.27132574,
-mTrmaC,C,Trichechus manatus latirostris,Placentalia,3.4922283,0.42542413,1.0570582,
-mTrmaD,D1,Trichechus manatus latirostris,Placentalia,0.22204131,-0.3869525,-0.030169878,
-mTrmaE,E,Trichechus manatus latirostris,Placentalia,1.2635729,0.25458574,-0.28902364,
-mTrmaF,F,Trichechus manatus latirostris,Placentalia,-1.1342074,0.015124715,0.4995476,
-mTrmaV,V,Trichechus manatus latirostris,Placentalia,-0.74083924,-0.1250074,-0.041075714,
-mUrmaC,C,Ursus maritimus,Placentalia,3.0303142,0.5282211,0.80063754,
-mUrmaD,D1,Ursus maritimus,Placentalia,0.09112253,-0.054838214,0.023388863,
-mUrmaV,V,Ursus maritimus,Placentalia,-0.6166421,-0.022843482,-0.07728472,
-sBocoD,D1,Boa constrictor constrictor,Squamata,-0.21458083,-0.09907741,-0.31667668,
-sBocoE,E,Boa constrictor constrictor,Squamata,-0.23846196,0.3751355,-0.24987209,
-sBocoF,F,Boa constrictor constrictor,Squamata,-0.7255305,-0.009536727,0.07016852,
-sBocoGo,G,Boa constrictor constrictor,Squamata,-0.23553814,-0.42302507,0.34564725,
-sCradD,D1,Crotalus adamanteus,Squamata,-0.079852045,0.34145057,-0.24130318,
-sCradE,E,Crotalus adamanteus,Squamata,-0.23658462,0.3559263,-0.12464559,
-sCradF,F,Crotalus adamanteus,Squamata,-0.5295863,-0.2783905,0.35655236,
-sCradGa,G,Crotalus adamanteus,Squamata,-0.50484234,-0.17337455,0.15356557,
-sCradGc,G,Crotalus adamanteus,Squamata,0.5762077,-0.46730652,0.24335589,
-sCratE,E,Crotalus atrox,Squamata,-0.19931339,0.37424245,-0.15408924,
-sCratF,F,Crotalus atrox,Squamata,-0.5201231,-0.25268123,0.32621685,
-sCratGa,G,Crotalus atrox,Squamata,-0.49349487,-0.2094689,0.11275658,
-sCratGb,G,Crotalus atrox,Squamata,0.46066988,-0.6129912,0.35428768,
-sCratGc,G,Crotalus atrox,Squamata,0.59258175,-0.553665,0.20550296,
-sCratGk49,G,Crotalus atrox,Squamata,-0.8348038,-0.58562815,0.43518743,
-sCrheAE,E,Crotalus helleri,Squamata,-0.18498133,0.34818467,-0.09749213,
-sCrheAF,F,Crotalus helleri,Squamata,-0.5201231,-0.25268123,0.32621685,
-sCrheAGa1,G,Crotalus helleri,Squamata,-1.1265681,0.11974183,0.3417249,
-sCrheAGa2,G,Crotalus helleri,Squamata,-0.62629056,-0.15013686,0.23567243,
-sCrheAGb,G,Crotalus helleri,Squamata,-0.21820763,-0.43266168,-0.07335186,
-sCrheAGc1,G,Crotalus helleri,Squamata,0.47485468,-0.4517462,0.3447392,
-sCrheBE,E,Crotalus helleri,Squamata,-0.2525874,0.3666116,-0.06614988,
-sCrheBF,F,Crotalus helleri,Squamata,-0.5300666,-0.27152708,0.37285328,
-sCrheBGa1,G,Crotalus helleri,Squamata,-0.50484234,-0.17337455,0.15356557,
-sCrhoAF,F,Crotalus horridus,Squamata,-0.57247055,-0.2816726,0.29304412,
-sCrhoAGa1,G,Crotalus horridus,Squamata,-1.0447758,0.20920447,0.36219567,
-sCrhoAGa2,G,Crotalus horridus,Squamata,-0.46208218,-0.15941012,0.17647453,
-sCrhoAGb,G,Crotalus horridus,Squamata,-0.18846847,-0.52449656,-0.020271365,
-sCrhoAGc1,G,Crotalus horridus,Squamata,0.46366695,-0.4458531,0.30137843,
-sCrhoBD,D1,Crotalus horridus,Squamata,-0.10554367,0.33423337,-0.2598023,
-sCrhoBE,E,Crotalus horridus,Squamata,-0.2011634,0.39806688,-0.15170488,
-sCrhoBF,F,Crotalus horridus,Squamata,-0.57247055,-0.2816726,0.29304412,
-sCrhoBGc1,G,Crotalus horridus,Squamata,0.6110515,-0.5781272,0.18710043,
-sCrhoGa,G,Crotalus horridus,Squamata,-0.50968593,-0.30276063,0.19696636,
-sCrhoGc,G,Crotalus horridus,Squamata,-0.05212556,-0.315361,0.47337642,
-sCrscAE,E,Crotalus scutulatus,Squamata,-0.18498133,0.34818467,-0.09749213,
-sCrscAF,F,Crotalus scutulatus,Squamata,-0.5300666,-0.27152708,0.37285328,
-sCrscAGa1,G,Crotalus scutulatus,Squamata,-0.76716274,-0.09222221,0.1841312,
-sCrscAGa2,G,Crotalus scutulatus,Squamata,-0.6066801,-0.17963706,0.2588618,
-sCrscAGb,G,Crotalus scutulatus,Squamata,-0.25477213,-0.46307078,-0.06427677,
-sCrscAGc1,G,Crotalus scutulatus,Squamata,0.24548984,-0.44436365,0.37341782,
-sCrscAGc2,G,Crotalus scutulatus,Squamata,0.53961235,-0.47435582,0.29106054,
-sCrscBE,E,Crotalus scutulatus,Squamata,-0.18498133,0.34818467,-0.09749213,
-sCrscBF,F,Crotalus scutulatus,Squamata,-0.5300666,-0.27152708,0.37285328,
-sCrscBGa1,G,Crotalus scutulatus,Squamata,-0.408449,-0.3277501,0.15200672,
-sCrscBGb,G,Crotalus scutulatus,Squamata,0.47685012,-0.60241556,0.3463596,
-sCrscBGc2,G,Crotalus scutulatus,Squamata,0.58374923,-0.52606225,0.18962897,
-sCrscBGk49,G,Crotalus scutulatus,Squamata,-0.78727067,-0.50423354,0.48106155,
-sDeacE,E,Deinakgistrodon acutus,Squamata,-0.06507202,0.38892925,-0.31957746,
-sDeacF,F,Deinakgistrodon acutus,Squamata,-0.45535436,-0.23113313,0.25527853,
-sDeacGa,G,Deinakgistrodon acutus,Squamata,-0.5215414,-0.3182643,0.14141883,
-sDeacGb,G,Deinakgistrodon acutus,Squamata,0.011951965,-0.5464139,0.20307767,
-sDeacGc,G,Deinakgistrodon acutus,Squamata,0.116593175,-0.53232676,0.24794732,
-sDeacGk49,G,Deinakgistrodon acutus,Squamata,-0.5738221,-0.45368502,0.30898362,
-sLabiD,D1,Lacerta bilineata,Squamata,-0.61555517,0.0015494239,0.49239194,
-sLabiE,E,Lacerta bilineata,Squamata,0.37530205,-0.2831311,-0.14110646,
-sLabiF,F,Lacerta bilineata,Squamata,-0.5278643,-0.4476116,-0.10212026,
-sLabiGo,G,Lacerta bilineata,Squamata,0.6998681,-0.5754925,0.3828494,
-sLaviD,D1,Lacerta viridis,Squamata,-0.5308955,-0.022964219,0.46165568,
-sLaviE,E,Lacerta viridis,Squamata,0.37530205,-0.2831311,-0.14110646,
-sLaviF,F,Lacerta viridis,Squamata,-0.5278643,-0.4476116,-0.10212026,
-sLaviGo,G,Lacerta viridis,Squamata,0.8069886,-0.53098565,0.3860544,
-sNoscD,D1,Notechis scutatus,Squamata,-0.23038408,0.3515673,-0.21621726,
-sNoscE,E,Notechis scutatus,Squamata,-0.1301215,0.28570962,-0.008240861,
-sNoscF,F,Notechis scutatus,Squamata,-0.76915634,-0.27248916,0.32899153,
-sNoscGc,G,Notechis scutatus,Squamata,1.0550536,-0.40682286,0.49737686,
-sOpgrDb,D1,Ophisaurus gracilis,Squamata,-0.84196514,-0.14483033,0.037005212,
-sOpgrE,E,Ophisaurus gracilis,Squamata,-0.38722095,0.09455587,-0.056321066,
-sOpgrF,F,Ophisaurus gracilis,Squamata,-1.208598,0.032203387,0.55944246,
-sOpgrGo,G,Ophisaurus gracilis,Squamata,0.3066003,-0.6073125,0.45223773,
-sOphaD,D1,Ophiophagus hannah,Squamata,-0.20547184,-0.055049974,-0.1702862,
-sOphaE,E,Ophiophagus hannah,Squamata,0.05655844,0.3438919,-0.008779086,
-sOphaF,F,Ophiophagus hannah,Squamata,-0.7941523,-0.27230513,0.27957338,
-sOphaGc,G,Ophiophagus hannah,Squamata,0.3451874,-0.40803984,0.31627682,
-sPapiE,E,Paroedura picta,Squamata,0.15412581,-0.4434738,-0.119739234,
-sPapiF,F,Paroedura picta,Squamata,-1.1727831,0.2398824,0.7294889,
-sPapiGo,G,Paroedura picta,Squamata,-0.3174993,-0.20177253,0.43363807,
-sPoviD,D1,Pogona vitticeps,Squamata,-0.8221254,-0.050152887,0.14366618,
-sPoviE,E,Pogona vitticeps,Squamata,-0.0042574285,-0.04556711,-0.21158063,
-sPoviF,F,Pogona vitticeps,Squamata,-1.0336404,-0.062010556,0.40027618,
-sPoviGo,G,Pogona vitticeps,Squamata,0.07420866,-0.5214823,0.5129528,
-sPrflE,E,Protobothrops flavoviridis,Squamata,-0.106546186,0.37547132,-0.14055502,
-sPrflGa1,G,Protobothrops flavoviridis,Squamata,-0.22698979,-0.71961755,0.20236959,
-sPrflGa2,G,Protobothrops flavoviridis,Squamata,-0.19152369,-0.74593884,0.21991399,
-sPrflGb,G,Protobothrops flavoviridis,Squamata,0.26785842,-0.71470106,0.27663854,
-sPrflGck,G,Protobothrops flavoviridis,Squamata,-0.656524,0.19969887,0.018931737,
-sPrflGk49,G,Protobothrops flavoviridis,Squamata,-0.2664362,-0.41229522,0.017259292,
-sPrmuE,E,Protobothrops mucrosquamatus,Squamata,-0.17153867,0.35555297,-0.1596418,
-sPrmuF,F,Protobothrops mucrosquamatus,Squamata,-0.5493556,-0.24092595,0.34275386,
-sPrmuGa1,G,Protobothrops mucrosquamatus,Squamata,-0.16901264,-0.5613534,0.29727012,
-sPrmuGa2,G,Protobothrops mucrosquamatus,Squamata,-0.48868492,-0.3627216,-0.10849127,
-sPrmuGb,G,Protobothrops mucrosquamatus,Squamata,0.06279386,-0.6725469,0.31726325,
-sPrmuGck,G,Protobothrops mucrosquamatus,Squamata,0.29891983,-0.5473624,0.29739287,
-sPrmuGk49,G,Protobothrops mucrosquamatus,Squamata,-0.51057166,-0.24363264,0.12693036,
-sPsteD,D1,Pseudonaja textilis,Squamata,-0.2916047,0.38765392,-0.20712136,
-sPsteE,E,Pseudonaja textilis,Squamata,-0.13838662,0.27933165,-0.008281186,
-sPsteF,F,Pseudonaja textilis,Squamata,-0.81161636,-0.3061116,0.31191784,
-sPsteGc,G,Pseudonaja textilis,Squamata,1.2880856,-0.46845368,0.5337542,
-sPybiE,E,Python bivittatus,Squamata,-0.099302284,0.41477692,-0.2572212,
-sPybiF,F,Python bivittatus,Squamata,-0.6660145,-0.007779709,0.052483786,
-sVibeEa,E,Vipera berus berus,Squamata,-0.14428268,0.39590168,-0.19152038,
-sVibeF,F,Vipera berus berus,Squamata,-0.675764,-0.14206858,0.4422384,
-sVibeGa1,G,Vipera berus berus,Squamata,-0.3375396,-0.6120086,-0.119709365,
-sVibeGa2,G,Vipera berus berus,Squamata,-0.34200352,-0.629358,-0.13743483,
-sVibeGa4,G,Vipera berus berus,Squamata,-0.5603243,-0.5721099,0.05164266,
+ID,Group,Species,Taxa,x,y,z
+Xela,pre_g2,Xenopus laevis,Anura,14.295315,4.556362,9.092942
+bAncyB,B,Anser cygnoides,Aves,-5.2494183,-4.466512,18.197325
+bAncyC,C,Anser cygnoides,Aves,9.450084,9.627615,9.556724
+bAncyD,D3,Anser cygnoides,Aves,14.572898,7.311912,12.081694
+bAncyE,E,Anser cygnoides,Aves,12.433836,8.170178,8.269684
+bAnplB,B,Anas platyrhynchos platyrhynchos,Aves,-5.156617,-4.727788,18.366611
+bAnplC,C,Anas platyrhynchos platyrhynchos,Aves,9.586921,9.917028,9.54696
+bAnplD,D3,Anas platyrhynchos platyrhynchos,Aves,14.207934,7.2864733,11.709612
+bAnplE,E,Anas platyrhynchos platyrhynchos,Aves,12.117866,8.772559,8.320319
+bApauC,C,Apteryx australis mantelli,Aves,9.855458,9.469796,9.104265
+bApfoB,B,Aptenodytes forsteri,Aves,-5.4561768,-4.6048393,18.137453
+bApfoC,C,Aptenodytes forsteri,Aves,10.029029,9.627325,9.437846
+bApfoD,D3,Aptenodytes forsteri,Aves,14.88597,7.7333364,11.910845
+bApfoE,E,Aptenodytes forsteri,Aves,11.307391,8.570404,7.8781466
+bAqchB,B,Aquila chrysaetos canadensis,Aves,-5.14156,-4.606076,18.506464
+bAqchC,C,Aquila chrysaetos canadensis,Aves,9.7491455,9.886971,9.499545
+bAqchD,D3,Aquila chrysaetos canadensis,Aves,15.0060005,7.6184735,11.624684
+bBareB,B,Balearica regulorum gibbericeps,Aves,-4.9882264,-4.17142,18.343348
+bBareC,C,Balearica regulorum gibbericeps,Aves,9.675842,9.875718,9.151516
+bBareD,D3,Balearica regulorum gibbericeps,Aves,14.882452,7.112602,11.503283
+bBareE,E,Balearica regulorum gibbericeps,Aves,11.501138,8.505071,8.0097275
+bChmaB,B,Chlamydotis macqueenii,Aves,-5.158302,-4.229699,18.018578
+bChmaC,C,Chlamydotis macqueenii,Aves,9.404941,9.775242,9.66524
+bChmaD,D3,Chlamydotis macqueenii,Aves,14.52205,7.2128563,11.2772665
+bChmaE,E,Chlamydotis macqueenii,Aves,11.375618,8.718272,7.7347174
+bCocoD,D3,Corvus cornix cornix,Aves,14.781147,7.2096553,12.144681
+bCocoE,E,Corvus cornix cornix,Aves,11.846545,8.864167,8.0328865
+bCucaB,B,Cuculus canorus,Aves,-5.1547513,-4.0632954,18.293043
+bCucaC,C,Cuculus canorus,Aves,9.751724,9.457631,9.671198
+bCucaD,D3,Cuculus canorus,Aves,14.523992,7.3337517,11.909642
+bGagaB,B,Gallus gallus,Aves,-5.049794,-4.886645,18.201818
+bGagaC,C,Gallus gallus,Aves,9.575427,10.053689,9.529454
+bGagaD,D3,Gallus gallus,Aves,14.685014,7.778603,11.749013
+bGagaE,E,Gallus gallus,Aves,11.779023,8.680542,8.183724
+bHaleB,B,Haliaeetus leucocephalus,Aves,-5.245548,-4.2687845,18.198631
+bHaleC,C,Haliaeetus leucocephalus,Aves,9.7190485,9.917814,9.331652
+bHaleD,D3,Haliaeetus leucocephalus,Aves,14.594843,7.5387464,11.43616
+bNaauB,B,Nannopterum auritus,Aves,-5.2896686,-4.2091904,18.447535
+bNaauC,C,Nannopterum auritus,Aves,9.844412,9.852997,9.357472
+bNaauD,D3,Nannopterum auritus,Aves,14.982189,7.2165985,11.207408
+bOphoC,C,Opisthocomus hoazin,Aves,9.704905,9.321559,9.491377
+bOphoD,D3,Opisthocomus hoazin,Aves,14.725515,7.113976,11.523879
+bOphoE,E,Opisthocomus hoazin,Aves,11.654516,9.048508,7.554259
+bPafaB,B,Patagioenas fasciata monilis,Aves,-5.334741,-4.601043,18.584192
+bPafaC,C,Patagioenas fasciata monilis,Aves,9.761801,9.662313,9.928406
+bPafaD,D3,Patagioenas fasciata monilis,Aves,14.415485,7.688723,11.691761
+bPskrB,B,Psittacula krameri,Aves,-4.8972716,-4.6429305,18.193539
+bPskrC,C,Psittacula krameri,Aves,9.920187,9.738308,9.883554
+bPskrD,D3,Psittacula krameri,Aves,14.758554,7.3431,12.014905
+bPskrE,E,Psittacula krameri,Aves,11.738416,9.041469,7.6878886
+bPyadB,B,Pygoscelis adeliae,Aves,-5.3729877,-4.2041636,18.54724
+bPyadC,C,Pygoscelis adeliae,Aves,10.0323925,9.428426,9.4473095
+bPyadD,D3,Pygoscelis adeliae,Aves,14.94603,7.6299496,11.74637
+bSecoD,D3,Setophaga coronata coronata,Aves,14.204368,7.2350497,11.742565
+bSecoE,E,Setophaga coronata coronata,Aves,11.8692465,8.905159,7.901995
+bStocB,B,Strix occidentalis caurina,Aves,-4.947445,-4.495998,18.100569
+bStocC,C,Strix occidentalis caurina,Aves,9.773607,9.188388,9.533863
+bStocD,D3,Strix occidentalis caurina,Aves,14.571379,7.7083216,11.757906
+bStocE,E,Strix occidentalis caurina,Aves,11.428594,8.896373,7.591743
+bUrpeB,B,Urile pelagicus,Aves,-5.2806196,-4.3438425,18.308899
+bUrpeC,C,Urile pelagicus,Aves,9.868193,9.554172,9.59527
+bUrpeD,D3,Urile pelagicus,Aves,14.798246,7.4983687,11.355731
+cAlmiC,C,Alligator mississippiensis,Crocodylia,12.948107,8.890497,8.523257
+cAlmiD1,D1,Alligator mississippiensis,Crocodylia,12.39357,5.324816,9.674578
+cAlmiD3,D3,Alligator mississippiensis,Crocodylia,14.850866,6.428144,10.164821
+cAlmiE,E,Alligator mississippiensis,Crocodylia,13.787623,6.272107,6.545028
+cAlsiC,C,Alligator sinensis,Crocodylia,13.968024,7.9937477,8.519923
+cAlsiD3,D3,Alligator sinensis,Crocodylia,15.180833,6.239994,10.36413
+cAlsiE,E,Alligator sinensis,Crocodylia,13.764106,6.0364304,6.5836444
+cChmyD1,D1,Chelonia mydas,Testudines,10.836663,6.6441097,10.2530365
+cChmyD3,D3,Chelonia mydas,Testudines,13.167746,6.7410345,9.479688
+cChmyF,F,Chelonia mydas,Testudines,11.967485,6.555075,8.486121
+cChpiD1,D1,Chrysemys picta bellii,Testudines,10.825112,7.023905,9.985092
+cChpiD2,D2,Chrysemys picta bellii,Testudines,11.948532,7.6204,9.303702
+cChpiD3,D3,Chrysemys picta bellii,Testudines,15.227903,5.286179,8.872102
+cChpiF,F,Chrysemys picta bellii,Testudines,12.244839,6.6243443,8.510346
+cCrpoC,C,Crocodylus porosus,Crocodylia,13.581719,8.601249,8.749774
+cCrpoD1,D1,Crocodylus porosus,Crocodylia,12.63355,5.2825007,9.565872
+cCrpoD3,D3,Crocodylus porosus,Crocodylia,15.021745,6.722213,10.638811
+cCrpoE,E,Crocodylus porosus,Crocodylia,13.7681875,6.345112,6.383959
+cGavganC,C,Gavialis gangeticus,Crocodylia,13.086465,8.706317,8.6981325
+cGavganD1,D1,Gavialis gangeticus,Crocodylia,12.270915,5.390588,9.8491
+cGavganD3,D3,Gavialis gangeticus,Crocodylia,14.894411,6.680435,10.572997
+cGavganE,E,Gavialis gangeticus,Crocodylia,13.707059,6.0411425,6.570703
+cGoagD1,D1,Gopherus agassizii,Testudines,10.905786,6.8522105,9.837786
+cGoagD2,D2,Gopherus agassizii,Testudines,11.812755,8.078913,8.940365
+cGoagD3,D3,Gopherus agassizii,Testudines,13.871671,6.486917,9.96889
+cGoagE,E,Gopherus agassizii,Testudines,11.6352005,7.5210047,8.378659
+cGoagF,F,Gopherus agassizii,Testudines,11.963515,6.888123,8.550116
+cPesiD1,D1,Pelodiscus sinensis,Testudines,10.920891,6.616028,9.86491
+cPesiD2,D2,Pelodiscus sinensis,Testudines,11.48062,7.9384675,9.036342
+cPesiD3,D3,Pelodiscus sinensis,Testudines,12.857766,6.4836164,9.965936
+cPesiE,E,Pelodiscus sinensis,Testudines,11.111006,8.050516,8.239207
+cPesiF,F,Pelodiscus sinensis,Testudines,12.227884,6.822949,8.422876
+mAifuC,C,Ailurus fulgens styani,Placentalia,10.506766,-6.243247,7.829804
+mAifuD,D1,Ailurus fulgens styani,Placentalia,11.78742,6.756423,11.048412
+mAifuE,E,Ailurus fulgens styani,Placentalia,8.750336,6.505911,3.5133593
+mAifuF,F,Ailurus fulgens styani,Placentalia,13.384128,1.1104137,7.9962406
+mAifuV,V,Ailurus fulgens styani,Placentalia,15.876309,5.1000867,9.949642
+mAimeC,C,Ailuropoda melanoleuca,Placentalia,10.0241375,-6.935686,6.943084
+mAimeDa,D1,Ailuropoda melanoleuca,Placentalia,12.140257,6.3597136,11.054711
+mAimeDb,D1,Ailuropoda melanoleuca,Placentalia,11.979675,6.389398,10.905159
+mAimeE,E,Ailuropoda melanoleuca,Placentalia,8.428787,6.641802,3.2537677
+mAimeF,F,Ailuropoda melanoleuca,Placentalia,14.080568,1.459877,7.4396234
+mBibiA2,A,Bison bison bison,Placentalia,14.000413,5.8831697,9.492178
+mBibiA3,A,Bison bison bison,Placentalia,13.543766,6.7482815,8.770902
+mBibiA4,A,Bison bison bison,Placentalia,12.850302,7.935575,9.398619
+mBibiC,C,Bison bison bison,Placentalia,10.402588,-6.904808,7.7740226
+mBibiDa,D1,Bison bison bison,Placentalia,11.213625,5.437848,11.1956
+mBibiDb,D1,Bison bison bison,Placentalia,11.44847,5.2026706,10.917321
+mBibiE,E,Bison bison bison,Placentalia,8.112161,6.1451864,2.3948042
+mBibiF,F,Bison bison bison,Placentalia,14.283278,1.9023771,7.262921
+mBotaA,A,Bos taurus,Placentalia,13.694116,6.6693873,8.882022
+mBotaA2,A,Bos taurus,Placentalia,12.833477,8.24285,9.291861
+mBotaA3,A,Bos taurus,Placentalia,14.086574,5.5977855,9.381063
+mBotaA5,A,Bos taurus,Placentalia,14.068758,3.6909356,7.995558
+mBotaC,C,Bos taurus,Placentalia,10.389918,-7.1417804,7.819562
+mBotaDa,D1,Bos taurus,Placentalia,11.2487,5.5301666,11.076409
+mBotaDb,D1,Bos taurus,Placentalia,11.611034,5.229336,10.871332
+mBotaE,E,Bos taurus,Placentalia,8.231872,5.989162,2.5263386
+mBotaF,F,Bos taurus,Placentalia,14.350312,1.7112485,7.4846864
+mBotaV,V,Bos taurus,Placentalia,15.747668,4.945821,10.541986
+mCahiA,A,Capra hircus,Placentalia,13.783088,6.1287436,8.731359
+mCahiA2,A,Capra hircus,Placentalia,13.984157,5.784252,9.119995
+mCahiA4,A,Capra hircus,Placentalia,14.074102,3.2979875,8.238864
+mCahiA5,A,Capra hircus,Placentalia,13.586181,6.5087667,9.301345
+mCahiC,C,Capra hircus,Placentalia,10.2357025,-7.0297775,7.5766487
+mCahiDa,D1,Capra hircus,Placentalia,11.897379,5.3956823,10.923736
+mCahiDb,D1,Capra hircus,Placentalia,11.425995,5.8323207,10.8433895
+mCahiE,E,Capra hircus,Placentalia,7.8335834,6.245623,2.6358798
+mCahiF,F,Capra hircus,Placentalia,14.585314,1.6142299,7.6025767
+mCahiV,V,Capra hircus,Placentalia,15.706932,5.3866954,10.893259
+mCaluC,C,Canis lupus familiaris,Placentalia,10.23848,-6.7369294,6.9556527
+mCaluD,D1,Canis lupus familiaris,Placentalia,10.813418,6.3745914,11.167729
+mCaluE,E,Canis lupus familiaris,Placentalia,8.312769,6.4653115,2.814153
+mCaluF,F,Canis lupus familiaris,Placentalia,13.25591,1.4974706,7.5581913
+mCaluV,V,Canis lupus familiaris,Placentalia,15.85309,5.5923276,9.815255
+mChlaA2,A,Chinchilla lanigera,Placentalia,12.926638,3.6464965,8.888995
+mChlaA3,A,Chinchilla lanigera,Placentalia,13.892368,8.490003,8.723266
+mChlaA4,A,Chinchilla lanigera,Placentalia,13.240106,8.914986,8.958957
+mChlaC,C,Chinchilla lanigera,Placentalia,10.119725,-6.0993853,7.225458
+mChlaD,D1,Chinchilla lanigera,Placentalia,12.541291,5.0788584,10.087298
+mChlaE,E,Chinchilla lanigera,Placentalia,9.336013,6.2937613,4.214414
+mChlaF,F,Chinchilla lanigera,Placentalia,13.597356,1.9661669,8.713836
+mChlaV,V,Chinchilla lanigera,Placentalia,15.591351,5.2227907,9.682416
+mCocrA2,A,Condylura cristata,Placentalia,13.526864,8.562717,9.139577
+mCocrA3,A,Condylura cristata,Placentalia,13.908064,7.886806,9.032222
+mCocrD,D1,Condylura cristata,Placentalia,11.942923,6.529435,10.499296
+mCocrE,E,Condylura cristata,Placentalia,8.830272,6.3386836,3.6156948
+mCocrF,F,Condylura cristata,Placentalia,13.775322,1.2829463,7.5592403
+mCocrV,V,Condylura cristata,Placentalia,16.348211,5.7157707,10.219126
+mDanoA,A,Dasypus novemcinctus,Placentalia,13.057274,8.815403,9.236339
+mDanoC,C,Dasypus novemcinctus,Placentalia,9.957449,-6.798963,7.197021
+mDanoD,D1,Dasypus novemcinctus,Placentalia,11.245002,6.572533,11.533831
+mDanoF,F,Dasypus novemcinctus,Placentalia,13.668906,1.1683615,8.392813
+mDanoV,V,Dasypus novemcinctus,Placentalia,16.03756,5.490012,10.75326
+mEledA1,A,Elephantulus edwardii,Placentalia,14.044132,4.9855,8.112849
+mEledA2,A,Elephantulus edwardii,Placentalia,13.622428,8.009652,8.841821
+mEledA3,A,Elephantulus edwardii,Placentalia,15.095059,5.5861797,8.380674
+mEledD,D1,Elephantulus edwardii,Placentalia,12.051652,6.1773033,10.30957
+mEledE,E,Elephantulus edwardii,Placentalia,8.200307,6.3345246,3.4633467
+mEledF,F,Elephantulus edwardii,Placentalia,13.221487,1.6538298,7.94901
+mEledV,V,Elephantulus edwardii,Placentalia,16.215746,5.5436935,10.156811
+mEnluC,C,Enhydra lutris kenyoni,Placentalia,10.219512,-6.3453965,7.656232
+mEnluD,D1,Enhydra lutris kenyoni,Placentalia,11.973266,6.1399264,11.053367
+mEnluE,E,Enhydra lutris kenyoni,Placentalia,8.731172,6.4707403,3.080861
+mEnluF,F,Enhydra lutris kenyoni,Placentalia,13.307952,1.2583479,7.728549
+mEnluV,V,Enhydra lutris kenyoni,Placentalia,15.297917,5.4678082,10.826181
+mEqcaA,A,Equus caballus,Placentalia,12.607493,9.121145,9.088743
+mEqcaC,C,Equus caballus,Placentalia,10.256303,-6.6275373,7.1535335
+mEqcaD,D1,Equus caballus,Placentalia,11.127271,6.286606,10.856286
+mEqcaE,E,Equus caballus,Placentalia,8.069678,6.1649456,2.4403145
+mEqcaF,F,Equus caballus,Placentalia,13.576014,1.3740652,7.368841
+mEqcaV,V,Equus caballus,Placentalia,15.994076,5.544532,10.453791
+mEreuA1,A,Erinaceus europaeus,Placentalia,13.609066,7.674442,8.6066
+mEreuA10,A,Erinaceus europaeus,Placentalia,14.602168,3.6924055,8.038328
+mEreuA11,A,Erinaceus europaeus,Placentalia,14.560638,3.989877,8.27213
+mEreuA12,A,Erinaceus europaeus,Placentalia,14.728231,3.914739,8.460301
+mEreuA13,A,Erinaceus europaeus,Placentalia,14.31406,5.5241547,8.987769
+mEreuA14,A,Erinaceus europaeus,Placentalia,14.675776,4.919431,9.177357
+mEreuA15,A,Erinaceus europaeus,Placentalia,13.835595,2.5997527,8.420983
+mEreuA2,A,Erinaceus europaeus,Placentalia,13.443543,7.3900514,9.6614
+mEreuA3,A,Erinaceus europaeus,Placentalia,14.22322,4.379149,8.265138
+mEreuA5,A,Erinaceus europaeus,Placentalia,13.640903,2.895473,8.206983
+mEreuA6,A,Erinaceus europaeus,Placentalia,13.7913885,3.0839858,8.334105
+mEreuA7,A,Erinaceus europaeus,Placentalia,14.166847,3.9892843,8.220641
+mEreuA8,A,Erinaceus europaeus,Placentalia,14.126296,3.601117,8.373668
+mEreuA9,A,Erinaceus europaeus,Placentalia,14.467694,4.0880036,8.307716
+mEreuC,C,Erinaceus europaeus,Placentalia,10.574287,-6.264909,7.756363
+mEreuD,D1,Erinaceus europaeus,Placentalia,11.646623,6.4467793,11.44844
+mEreuE,E,Erinaceus europaeus,Placentalia,8.595118,6.2730284,3.7530706
+mEreuF,F,Erinaceus europaeus,Placentalia,13.765425,1.2943227,8.454628
+mEreuV,V,Erinaceus europaeus,Placentalia,15.722521,5.427768,10.77788
+mFecaD,D1,Felis catus,Placentalia,11.133132,6.5240326,11.331772
+mFecaE,E,Felis catus,Placentalia,8.3210125,6.0793552,2.943526
+mFecaF,F,Felis catus,Placentalia,13.28559,1.5533508,7.5029807
+mFecaV,V,Felis catus,Placentalia,15.77893,5.752261,10.256682
+mHeglA1,A,Heterocephalus glaber,Placentalia,14.308439,5.0603356,9.674492
+mHeglA2,A,Heterocephalus glaber,Placentalia,13.311008,8.441112,8.456431
+mHeglA3,A,Heterocephalus glaber,Placentalia,13.4497,8.848956,8.706022
+mHeglD,D1,Heterocephalus glaber,Placentalia,12.162279,5.7504215,10.547602
+mHeglE,E,Heterocephalus glaber,Placentalia,9.124714,6.26862,3.809803
+mHeglF,F,Heterocephalus glaber,Placentalia,13.477458,1.8158835,8.390314
+mHeglV,V,Heterocephalus glaber,Placentalia,15.511097,4.9906173,9.899423
+mHosaA,A,Homo sapiens,Placentalia,12.638212,8.9228115,8.923709
+mHosaD,D1,Homo sapiens,Placentalia,11.000775,6.744423,10.980122
+mHosaE,E,Homo sapiens,Placentalia,7.8207717,5.95792,2.4010894
+mHosaF,F,Homo sapiens,Placentalia,13.900297,1.320737,7.9514484
+mHosaV,V,Homo sapiens,Placentalia,15.407989,5.273609,10.079475
+mLoafA1,A,Loxodonta africana,Placentalia,13.002748,8.289408,8.991578
+mLoafA2,A,Loxodonta africana,Placentalia,13.245806,8.656504,9.128519
+mLoafC,C,Loxodonta africana,Placentalia,10.182761,-6.9607635,6.7998333
+mLoafD,D1,Loxodonta africana,Placentalia,11.311628,6.046391,11.107583
+mLoafE,E,Loxodonta africana,Placentalia,8.5287285,6.333457,3.5656664
+mLoafF,F,Loxodonta africana,Placentalia,13.325195,1.338344,8.194519
+mLoafV,V,Loxodonta africana,Placentalia,15.960274,5.4007297,9.498412
+mMamaA1,A,Marmota marmota marmota,Placentalia,13.398841,8.569135,8.834788
+mMamaD,D1,Marmota marmota marmota,Placentalia,12.121692,6.255523,11.251193
+mMamaE,E,Marmota marmota marmota,Placentalia,7.843343,6.318038,2.943417
+mMamaF,F,Marmota marmota marmota,Placentalia,13.968938,1.8446037,8.624283
+mMamaV,V,Marmota marmota marmota,Placentalia,16.024134,4.9386196,9.856756
+mMimuA,A,Microcebus murinus,Placentalia,14.825829,5.3757553,8.7106905
+mMimuC,C,Microcebus murinus,Placentalia,10.279968,-6.1646557,7.105145
+mMimuD,D1,Microcebus murinus,Placentalia,12.40527,6.1873827,10.321509
+mMimuE,E,Microcebus murinus,Placentalia,7.8627424,6.0240984,3.0872865
+mMimuF,F,Microcebus murinus,Placentalia,13.843669,1.0167512,8.0090475
+mMimuV,V,Microcebus murinus,Placentalia,15.761411,5.9945006,10.614359
+mModoC,C,Monodelphis domestica,Marsupialia,10.881846,-6.267846,7.1582065
+mModoD,D1,Monodelphis domestica,Marsupialia,12.279846,6.002614,10.435528
+mModoE,E,Monodelphis domestica,Marsupialia,9.565466,6.5958242,4.498731
+mModoF,F,Monodelphis domestica,Marsupialia,13.03359,2.124393,7.5629416
+mModoV1,V,Monodelphis domestica,Marsupialia,13.157958,8.263829,7.988315
+mModoV2,V,Monodelphis domestica,Marsupialia,14.471649,5.157714,8.21209
+mMumuA,A,Mus musculus,Placentalia,13.53364,8.195326,8.337864
+mMumuC,C,Mus musculus,Placentalia,10.405299,-7.0364547,7.131556
+mMumuD,D1,Mus musculus,Placentalia,11.508707,6.8550725,10.368605
+mMumuE,E,Mus musculus,Placentalia,8.139067,6.3117447,3.4574676
+mMumuF,F,Mus musculus,Placentalia,13.705827,2.19176,8.451687
+mMumuV,V,Mus musculus,Placentalia,15.560743,5.3594537,10.14056
+mMupuC,C,Mustela putorius furo,Placentalia,10.430297,-6.676728,7.492921
+mMupuD,D1,Mustela putorius furo,Placentalia,11.403114,6.0377326,10.931243
+mMupuE,E,Mustela putorius furo,Placentalia,8.790251,6.5822387,3.3088353
+mMupuF,F,Mustela putorius furo,Placentalia,13.470286,1.4479204,7.668176
+mMupuV,V,Mustela putorius furo,Placentalia,15.258222,5.444701,9.865267
+mMyluA1,A,Myotis lucifugus,Placentalia,13.843214,6.2030663,8.938688
+mMyluA2,A,Myotis lucifugus,Placentalia,14.1924095,6.263833,8.845645
+mMyluA4,A,Myotis lucifugus,Placentalia,12.910996,8.567631,8.974239
+mMyluC,C,Myotis lucifugus,Placentalia,10.372272,-7.1946435,7.221853
+mMyluD,D1,Myotis lucifugus,Placentalia,11.75352,6.0899115,11.333728
+mMyluE,E,Myotis lucifugus,Placentalia,8.976521,6.1551876,3.923818
+mMyluF,F,Myotis lucifugus,Placentalia,13.828412,2.0052912,7.694065
+mMyluV,V,Myotis lucifugus,Placentalia,15.461916,5.4974003,9.426373
+mNescD,D1,Neomonachus schauinslandi,Placentalia,11.67247,6.2279696,11.018348
+mNescE,E,Neomonachus schauinslandi,Placentalia,8.387399,6.3940725,2.8394854
+mNescF,F,Neomonachus schauinslandi,Placentalia,13.617284,1.2837616,8.164341
+mNescV,V,Neomonachus schauinslandi,Placentalia,15.254571,5.9351125,10.6415615
+mOcprA1,A,Ochotona princeps,Placentalia,13.163829,6.8861775,8.303633
+mOcprA2,A,Ochotona princeps,Placentalia,13.133845,9.07264,9.224779
+mOcprA3,A,Ochotona princeps,Placentalia,14.42255,6.3450737,8.381713
+mOcprC,C,Ochotona princeps,Placentalia,10.410188,-6.189823,7.5640416
+mOcprD,D1,Ochotona princeps,Placentalia,11.737106,6.5145087,10.92124
+mOcprE,E,Ochotona princeps,Placentalia,8.009434,5.844453,3.2467253
+mOcprF,F,Ochotona princeps,Placentalia,13.773246,1.6033128,8.37575
+mOcprV,V,Ochotona princeps,Placentalia,16.237106,5.356748,10.257254
+mOdviA1,A,Odocoileus virginianus texanus,Placentalia,13.89652,5.694418,9.439763
+mOdviA2,A,Odocoileus virginianus texanus,Placentalia,13.321389,6.8900576,8.86841
+mOdviA3,A,Odocoileus virginianus texanus,Placentalia,12.898413,7.462142,9.679383
+mOdviC,C,Odocoileus virginianus texanus,Placentalia,10.469884,-7.2962437,7.59782
+mOdviD,D1,Odocoileus virginianus texanus,Placentalia,11.697598,5.380417,11.067553
+mOdviE,E,Odocoileus virginianus texanus,Placentalia,8.160895,6.3129025,2.6766896
+mOdviF,F,Odocoileus virginianus texanus,Placentalia,14.568103,1.8565614,7.5764465
+mOdviV,V,Odocoileus virginianus texanus,Placentalia,15.970024,5.0420585,10.580432
+mOran2,D1,Ornithorhynchus anatinus,Monotremata,14.442042,2.9506624,8.02017
+mOran3,V,Ornithorhynchus anatinus,Monotremata,12.66917,8.099304,8.463554
+mOran4,D1,Ornithorhynchus anatinus,Monotremata,13.216769,4.5083723,9.523081
+mOranD,D1,Ornithorhynchus anatinus,Monotremata,13.829588,7.10742,10.987781
+mOranE,E,Ornithorhynchus anatinus,Monotremata,9.369817,6.6661587,4.591621
+mOranF,F,Ornithorhynchus anatinus,Monotremata,13.063478,2.1636322,7.786016
+mOrcuA1,A,Oryctolagus cuniculus,Placentalia,12.956887,7.7994533,8.647231
+mOrcuA2,A,Oryctolagus cuniculus,Placentalia,12.753466,8.290321,8.644749
+mOrcuA3,A,Oryctolagus cuniculus,Placentalia,12.809624,9.023023,9.241373
+mOrcuA4,A,Oryctolagus cuniculus,Placentalia,13.696492,7.2774305,8.520426
+mOrcuC,C,Oryctolagus cuniculus,Placentalia,9.896339,-6.295125,7.2945356
+mOrcuD,D1,Oryctolagus cuniculus,Placentalia,11.464481,6.6776752,11.259598
+mOrcuE,E,Oryctolagus cuniculus,Placentalia,8.406896,6.1984243,3.1020606
+mOrcuF,F,Oryctolagus cuniculus,Placentalia,13.753469,1.93236,8.26057
+mOrcuV,V,Oryctolagus cuniculus,Placentalia,16.270332,5.2674794,10.14779
+mOrorC,C,Orcinus orca,Placentalia,11.594183,5.7018733,9.458894
+mOrorD,D1,Orcinus orca,Placentalia,11.064291,6.5991616,10.704354
+mOrorE,E,Orcinus orca,Placentalia,9.041652,6.4530997,4.007882
+mOrorV,V,Orcinus orca,Placentalia,15.866524,5.699944,10.727721
+mOvarA1,A,Ovis aries,Placentalia,13.906948,5.9890823,9.275777
+mOvarA2,A,Ovis aries,Placentalia,13.564938,5.917449,8.7287245
+mOvarA3,A,Ovis aries,Placentalia,13.483946,7.526466,9.013939
+mOvarC,C,Ovis aries,Placentalia,10.221825,-7.081003,7.8676724
+mOvarD,D1,Ovis aries,Placentalia,11.74104,5.495965,10.792519
+mOvarF,F,Ovis aries,Placentalia,14.494359,1.47596,7.710346
+mPahoA1,A,Pantholops hodgsonii,Placentalia,13.927034,5.5611997,9.445849
+mPahoA3,A,Pantholops hodgsonii,Placentalia,13.489685,6.4610357,8.553865
+mPahoA5,A,Pantholops hodgsonii,Placentalia,13.228433,7.8153877,9.218879
+mPahoC,C,Pantholops hodgsonii,Placentalia,10.351842,-6.7638345,7.7158833
+mPahoD,D1,Pantholops hodgsonii,Placentalia,11.487272,5.368537,11.227894
+mPahoE,E,Pantholops hodgsonii,Placentalia,7.993402,6.1427345,2.3501744
+mPahoF,F,Pantholops hodgsonii,Placentalia,14.627807,1.5362823,7.6802607
+mPahoV,V,Pantholops hodgsonii,Placentalia,15.6038475,5.1745415,10.574704
+mPatiC,C,Panthera tigris altaica,Placentalia,10.180293,-6.245495,7.5212817
+mPatiD,D1,Panthera tigris altaica,Placentalia,11.047017,6.3378005,11.373543
+mPatiE,E,Panthera tigris altaica,Placentalia,8.2281,6.046984,3.1469805
+mPatiF,F,Panthera tigris altaica,Placentalia,13.588431,1.8370607,7.696269
+mPatiV,V,Panthera tigris altaica,Placentalia,16.13381,5.416835,10.1043625
+mPhciC,C,Phascolarctos cinereus,Marsupialia,10.65612,-6.2907662,7.3965645
+mPhciDa,D1,Phascolarctos cinereus,Marsupialia,14.054614,4.5747957,8.435125
+mPhciDb,D1,Phascolarctos cinereus,Marsupialia,11.274153,7.1001506,10.294337
+mPhciE,E,Phascolarctos cinereus,Marsupialia,9.251555,6.625869,4.1139703
+mPhciF,F,Phascolarctos cinereus,Marsupialia,13.185391,1.9681953,7.5403957
+mPhciV1,V,Phascolarctos cinereus,Marsupialia,13.44881,8.074667,8.174316
+mPhciV2,V,Phascolarctos cinereus,Marsupialia,13.98219,6.557343,8.308662
+mPhciV3,V,Phascolarctos cinereus,Marsupialia,14.00548,6.171229,8.146311
+mPtvaC,C,Pteropus vampyrus,Placentalia,10.205988,-7.1395316,7.231613
+mPtvaD,D1,Pteropus vampyrus,Placentalia,12.319066,5.5557246,10.782298
+mPtvaE,E,Pteropus vampyrus,Placentalia,7.9775467,6.366765,3.5655625
+mPtvaF,F,Pteropus vampyrus,Placentalia,13.578009,1.6542231,7.828322
+mPtvaV,V,Pteropus vampyrus,Placentalia,16.348532,5.384857,9.717186
+mSahaC,C,Sarcophilus harrisii,Marsupialia,10.74372,-6.2605095,7.3812904
+mSahaD,D1,Sarcophilus harrisii,Marsupialia,11.688872,6.5463805,10.371314
+mSahaE,E,Sarcophilus harrisii,Marsupialia,9.643904,6.6583233,4.4400277
+mSahaF,F,Sarcophilus harrisii,Marsupialia,13.270823,2.3666968,7.934793
+mSahaV1,V,Sarcophilus harrisii,Marsupialia,13.022157,8.178522,8.044725
+mSahaV2,V,Sarcophilus harrisii,Marsupialia,12.897987,8.328438,8.152004
+mSahaV4,V,Sarcophilus harrisii,Marsupialia,13.33412,7.634129,7.89275
+mSahaV5,V,Sarcophilus harrisii,Marsupialia,14.879722,5.654096,8.786044
+mSoarA2,A,Sorex araneus,Placentalia,13.565461,5.7990556,9.24667
+mSoarA3,A,Sorex araneus,Placentalia,13.788891,8.066932,8.605842
+mSoarC,C,Sorex araneus,Placentalia,10.381814,-5.9956427,7.674565
+mSoarD,D1,Sorex araneus,Placentalia,11.914178,6.214995,10.779788
+mSoarE,E,Sorex araneus,Placentalia,8.391896,6.1733856,3.5838504
+mSoarF,F,Sorex araneus,Placentalia,13.251031,1.1581665,7.694635
+mSoarV,V,Sorex araneus,Placentalia,15.5398035,5.77731,10.916647
+mTrmaA2,A,Trichechus manatus latirostris,Placentalia,13.378002,7.046242,8.773853
+mTrmaC,C,Trichechus manatus latirostris,Placentalia,10.160575,-7.229581,6.915466
+mTrmaD,D1,Trichechus manatus latirostris,Placentalia,11.278276,6.7438884,10.542238
+mTrmaE,E,Trichechus manatus latirostris,Placentalia,8.930217,6.4658217,4.0836573
+mTrmaF,F,Trichechus manatus latirostris,Placentalia,13.504819,2.0160916,7.8460574
+mTrmaV,V,Trichechus manatus latirostris,Placentalia,15.837282,5.1363497,9.801743
+mUrmaC,C,Ursus maritimus,Placentalia,9.868113,-6.6403146,7.343305
+mUrmaD,D1,Ursus maritimus,Placentalia,11.1363535,6.2743144,11.076571
+mUrmaV,V,Ursus maritimus,Placentalia,15.680936,5.7574425,10.150202
+sBocoD,D1,Boa constrictor constrictor,Squamata,13.7253475,7.051945,10.543587
+sBocoE,E,Boa constrictor constrictor,Squamata,7.7126307,7.2127995,8.968326
+sBocoF,F,Boa constrictor constrictor,Squamata,10.722425,3.0283005,8.75508
+sBocoGo,G,Boa constrictor constrictor,Squamata,14.59294,6.3989882,6.1738667
+sCradD,D1,Crotalus adamanteus,Squamata,13.306632,6.913677,11.120189
+sCradE,E,Crotalus adamanteus,Squamata,7.5274725,7.2761636,8.740856
+sCradF,F,Crotalus adamanteus,Squamata,10.4788885,2.5381167,8.234811
+sCradGa,G,Crotalus adamanteus,Squamata,14.997936,5.260881,6.5421906
+sCradGc,G,Crotalus adamanteus,Squamata,14.589498,7.5999274,4.7947335
+sCratE,E,Crotalus atrox,Squamata,7.2318206,6.9521046,8.36564
+sCratF,F,Crotalus atrox,Squamata,10.434707,2.7398543,8.418082
+sCratGa,G,Crotalus atrox,Squamata,14.779993,5.4946795,6.523272
+sCratGb,G,Crotalus atrox,Squamata,14.119511,7.353358,5.4445558
+sCratGc,G,Crotalus atrox,Squamata,14.598971,7.3790836,4.894815
+sCratGk49,G,Crotalus atrox,Squamata,14.252685,5.339861,7.636527
+sCrheAE,E,Crotalus helleri,Squamata,7.3764505,7.026637,8.448347
+sCrheAF,F,Crotalus helleri,Squamata,10.496429,2.8046417,8.275087
+sCrheAGa1,G,Crotalus helleri,Squamata,14.951457,4.711461,7.4600315
+sCrheAGa2,G,Crotalus helleri,Squamata,14.904527,5.389992,6.600831
+sCrheAGb,G,Crotalus helleri,Squamata,13.845146,6.954139,7.182584
+sCrheAGc1,G,Crotalus helleri,Squamata,14.35293,7.4789467,4.968092
+sCrheBE,E,Crotalus helleri,Squamata,7.4878044,7.180866,8.434992
+sCrheBF,F,Crotalus helleri,Squamata,10.711697,2.657529,7.9900723
+sCrheBGa1,G,Crotalus helleri,Squamata,15.0973215,5.594128,6.542295
+sCrhoAF,F,Crotalus horridus,Squamata,10.414202,2.5805469,8.464817
+sCrhoAGa1,G,Crotalus horridus,Squamata,15.027057,4.875,7.2127337
+sCrhoAGa2,G,Crotalus horridus,Squamata,15.122861,5.627913,6.6682005
+sCrhoAGb,G,Crotalus horridus,Squamata,14.032389,6.8406425,6.9931207
+sCrhoAGc1,G,Crotalus horridus,Squamata,14.44118,7.3738775,4.5348706
+sCrhoBD,D1,Crotalus horridus,Squamata,13.249589,6.9623756,11.207147
+sCrhoBE,E,Crotalus horridus,Squamata,7.3862553,6.734373,8.670071
+sCrhoBF,F,Crotalus horridus,Squamata,10.67994,2.6684036,8.5835285
+sCrhoBGc1,G,Crotalus horridus,Squamata,14.503814,7.7461357,4.8948393
+sCrhoGa,G,Crotalus horridus,Squamata,15.108885,5.7755585,6.9228625
+sCrhoGc,G,Crotalus horridus,Squamata,14.736553,6.9448333,5.365184
+sCrscAE,E,Crotalus scutulatus,Squamata,7.2348313,6.8042607,8.539623
+sCrscAF,F,Crotalus scutulatus,Squamata,10.666714,3.0116475,8.226312
+sCrscAGa1,G,Crotalus scutulatus,Squamata,15.21967,5.126794,6.770166
+sCrscAGa2,G,Crotalus scutulatus,Squamata,14.614078,5.453239,6.7963686
+sCrscAGb,G,Crotalus scutulatus,Squamata,13.914256,6.8583384,7.2115135
+sCrscAGc1,G,Crotalus scutulatus,Squamata,14.752102,7.2484193,5.2457156
+sCrscAGc2,G,Crotalus scutulatus,Squamata,14.448809,7.329234,4.702046
+sCrscBE,E,Crotalus scutulatus,Squamata,7.3665085,6.776414,8.282196
+sCrscBF,F,Crotalus scutulatus,Squamata,10.35408,2.8501823,8.283229
+sCrscBGa1,G,Crotalus scutulatus,Squamata,14.796243,5.9408493,6.746526
+sCrscBGb,G,Crotalus scutulatus,Squamata,14.097402,7.2597084,5.571687
+sCrscBGc2,G,Crotalus scutulatus,Squamata,14.305886,7.6173825,4.6956153
+sCrscBGk49,G,Crotalus scutulatus,Squamata,14.14622,5.4647827,7.5420628
+sDeacE,E,Deinakgistrodon acutus,Squamata,7.2954855,6.9161835,8.853622
+sDeacF,F,Deinakgistrodon acutus,Squamata,10.522507,3.017055,8.825099
+sDeacGa,G,Deinakgistrodon acutus,Squamata,15.045771,6.0010405,7.1020913
+sDeacGb,G,Deinakgistrodon acutus,Squamata,14.030736,7.0232863,6.103652
+sDeacGc,G,Deinakgistrodon acutus,Squamata,14.691441,7.2630987,5.3124065
+sDeacGk49,G,Deinakgistrodon acutus,Squamata,13.861721,5.670872,7.452162
+sLabiD,D1,Lacerta bilineata,Squamata,12.451341,4.259024,9.235226
+sLabiE,E,Lacerta bilineata,Squamata,11.181829,7.2475953,8.603688
+sLabiF,F,Lacerta bilineata,Squamata,10.530769,2.619433,8.919051
+sLabiGo,G,Lacerta bilineata,Squamata,14.107445,7.06101,5.0066996
+sLaviD,D1,Lacerta viridis,Squamata,12.485778,4.474207,9.3659315
+sLaviE,E,Lacerta viridis,Squamata,11.058374,7.266143,8.498715
+sLaviF,F,Lacerta viridis,Squamata,10.7647915,2.7496147,8.698281
+sLaviGo,G,Lacerta viridis,Squamata,14.170128,7.044289,4.7955356
+sNoscD,D1,Notechis scutatus,Squamata,13.71414,6.909091,11.127993
+sNoscE,E,Notechis scutatus,Squamata,7.994763,6.7822084,8.478747
+sNoscF,F,Notechis scutatus,Squamata,10.951365,2.9571145,8.441553
+sNoscGc,G,Notechis scutatus,Squamata,14.136976,7.064493,4.8669977
+sOpgrDb,D1,Ophisaurus gracilis,Squamata,14.611897,5.0577574,9.044298
+sOpgrE,E,Ophisaurus gracilis,Squamata,8.22696,6.9650187,8.736511
+sOpgrF,F,Ophisaurus gracilis,Squamata,12.974729,2.8995378,8.500465
+sOpgrGo,G,Ophisaurus gracilis,Squamata,14.433981,7.185447,5.49416
+sOphaD,D1,Ophiophagus hannah,Squamata,13.666024,7.1184707,10.997585
+sOphaE,E,Ophiophagus hannah,Squamata,7.7703037,6.720177,8.49755
+sOphaF,F,Ophiophagus hannah,Squamata,11.018547,3.2130227,8.5779505
+sOphaGc,G,Ophiophagus hannah,Squamata,14.887666,7.1541953,4.793996
+sPapiE,E,Paroedura picta,Squamata,11.417792,7.3331375,8.455291
+sPapiF,F,Paroedura picta,Squamata,13.401022,2.2536328,8.30697
+sPapiGo,G,Paroedura picta,Squamata,14.518658,6.1273904,6.106235
+sPoviD,D1,Pogona vitticeps,Squamata,15.401799,4.9721456,9.447109
+sPoviE,E,Pogona vitticeps,Squamata,10.668011,7.3998823,8.605595
+sPoviF,F,Pogona vitticeps,Squamata,12.145126,3.1366725,8.60556
+sPoviGo,G,Pogona vitticeps,Squamata,14.460566,6.769946,5.559337
+sPrflE,E,Protobothrops flavoviridis,Squamata,7.4903564,6.9339323,8.41651
+sPrflGa1,G,Protobothrops flavoviridis,Squamata,14.495856,6.5050755,6.6248245
+sPrflGa2,G,Protobothrops flavoviridis,Squamata,14.534162,6.578481,6.5604706
+sPrflGb,G,Protobothrops flavoviridis,Squamata,14.181209,7.1047835,5.772363
+sPrflGck,G,Protobothrops flavoviridis,Squamata,14.982914,5.1499615,7.262077
+sPrflGk49,G,Protobothrops flavoviridis,Squamata,13.882299,6.1543007,7.330504
+sPrmuE,E,Protobothrops mucrosquamatus,Squamata,7.034079,7.0129075,8.740894
+sPrmuF,F,Protobothrops mucrosquamatus,Squamata,10.554626,3.3348343,8.376005
+sPrmuGa1,G,Protobothrops mucrosquamatus,Squamata,14.235394,6.759541,6.0971584
+sPrmuGa2,G,Protobothrops mucrosquamatus,Squamata,14.895817,6.0348725,7.236366
+sPrmuGb,G,Protobothrops mucrosquamatus,Squamata,14.224507,6.9152584,5.9256563
+sPrmuGck,G,Protobothrops mucrosquamatus,Squamata,14.223695,7.462765,4.9621983
+sPrmuGk49,G,Protobothrops mucrosquamatus,Squamata,14.063322,5.73742,7.379444
+sPsteD,D1,Pseudonaja textilis,Squamata,13.826846,6.772464,11.265104
+sPsteE,E,Pseudonaja textilis,Squamata,7.8508425,6.9864016,8.570138
+sPsteF,F,Pseudonaja textilis,Squamata,11.040536,2.9154153,8.748365
+sPsteGc,G,Pseudonaja textilis,Squamata,14.084739,7.2521806,4.792828
+sPybiE,E,Python bivittatus,Squamata,7.7004204,7.0688877,8.9561405
+sPybiF,F,Python bivittatus,Squamata,10.724797,2.5848944,8.774699
+sVibeEa,E,Vipera berus berus,Squamata,7.3434706,6.9740934,8.829156
+sVibeF,F,Vipera berus berus,Squamata,10.876181,2.8374617,8.074589
+sVibeGa1,G,Vipera berus berus,Squamata,14.761351,6.345624,7.2971272
+sVibeGa2,G,Vipera berus berus,Squamata,14.294292,6.731568,7.498634
+sVibeGa4,G,Vipera berus berus,Squamata,14.818371,6.1732283,7.180866
