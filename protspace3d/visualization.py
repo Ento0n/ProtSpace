@@ -11,14 +11,14 @@ from dash import Dash, dcc, html
 from pandas import DataFrame
 
 
-def gen_distinct_colors(n, sort: bool = False):
+def gen_distinct_colors(n, sort: bool = True):
     color_list = list()
     np.random.seed(42)
     hues = np.arange(0, 360, 360 / n)
     hues = hues[np.random.permutation(hues.size)]
     for hue in hues:
-        saturation = 90 + np.random.ranf() * 10
-        luminosity = 50 + np.random.ranf() * 10
+        saturation = 30 + np.random.ranf() * 70
+        luminosity = 40 + np.random.ranf() * 60
         color_list.append(tuple([hue / 360, luminosity / 100, saturation / 100]))
     if sort:
         color_list.sort()
@@ -30,6 +30,14 @@ class Visualizator:
         "circle",
         "square",
         "diamond",
+        "circle",
+        "circle-open",
+        "cross",
+        "diamond",
+        "diamond-open",
+        "square",
+        "square-open",
+        # "x"
     ]
 
     representation_options = [
