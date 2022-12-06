@@ -141,7 +141,6 @@ class DataPreprocessor:
             emb_h5file,
             csv_uids,
             index_name,
-            self.umap_flag,
         )
 
         # sort csv header alphabetically
@@ -317,7 +316,6 @@ class DataPreprocessor:
         hdf_path: Path,
         csv_uids: list[str],
         index_name: str,
-        umap_flag: bool,
     ):
         """
         If present, read df.csv and check for completion
@@ -334,54 +332,74 @@ class DataPreprocessor:
             print("Pre computed dataframe file df.csv is loaded.")
             pres_df_csv = pd.read_csv(pres_df, index_col=0, na_filter=False)
 
-            # Check whether no. of rows equals data
-            if len(pres_df_csv) != len(df_csv):
-                print("# of rows doesn't match data!\nStart recalculation!")
+            # Check whether df.csv holds false x,y & z coordinates for selected dimensionality reduction!
+            if (
+                "variance" in pres_df_csv.columns.to_list()
+                and self.umap_flag
+                or "variance" not in pres_df_csv.columns.to_list()
+                and not self.umap_flag
+            ):
+                print(
+                    "df.csv holds false dimensionality reduction calculation,\nstart recalculating!"
+                )
                 df_embeddings, csv_header = self._create_df(
                     output_d,
                     hdf_path,
                     csv_uids,
                     df_csv,
                     index_name,
-                    umap_flag,
                 )
+
             else:
-                # Check each column x, y & z for incompleteness
-                if not self._check_coordinates(pres_df_csv):
-                    print("Start recalculation!")
+
+                # Check whether no. of rows equals data
+                if len(pres_df_csv) != len(df_csv):
+                    print("# of rows doesn't match data!\nStart recalculation!")
                     df_embeddings, csv_header = self._create_df(
                         output_d,
                         hdf_path,
                         csv_uids,
                         df_csv,
                         index_name,
-                        umap_flag,
                     )
-                # columns x, y & z are fine
                 else:
-                    # Update df in case new columns were added to the csv
-                    if (
-                        len(df_csv.columns)
-                        - (len(pres_df_csv.columns) - len(self.AXIS_NAMES))
-                        > 0
-                    ):
-                        print("New column(s) were found and will be added.")
-                        pres_df_csv = self._update_df(df_csv, pres_df_csv)
+                    # Check each column x, y & z for incompleteness
+                    if not self._check_coordinates(pres_df_csv):
+                        print("Start recalculation!")
+                        df_embeddings, csv_header = self._create_df(
+                            output_d,
+                            hdf_path,
+                            csv_uids,
+                            df_csv,
+                            index_name,
+                        )
+                    # columns x, y & z are fine
+                    else:
+                        # Update df in case new columns were added to the csv
+                        if (
+                            len(df_csv.columns)
+                            - (len(pres_df_csv.columns) - len(self.AXIS_NAMES))
+                            > 0
+                        ):
+                            print("New column(s) were found and will be added.")
+                            pres_df_csv = self._update_df(df_csv, pres_df_csv)
 
-                        # save the new obtained df
-                        pres_df_csv.to_csv(output_d / "df.csv", index_label=index_name)
+                            # save the new obtained df
+                            pres_df_csv.to_csv(
+                                output_d / "df.csv", index_label=index_name
+                            )
 
-                    # save final column names
-                    csv_header = [
-                        header
-                        for header in pres_df_csv.columns
-                        if header not in self.AXIS_NAMES
-                        and header != index_name
-                        and header != "variance"
-                    ]
+                        # save final column names
+                        csv_header = [
+                            header
+                            for header in pres_df_csv.columns
+                            if header not in self.AXIS_NAMES
+                            and header != index_name
+                            and header != "variance"
+                        ]
 
-                    # Unify df name
-                    df_embeddings = pres_df_csv
+                        # Unify df name
+                        df_embeddings = pres_df_csv
 
         # create dataframe from files
         else:
@@ -391,7 +409,6 @@ class DataPreprocessor:
                 csv_uids,
                 df_csv,
                 index_name,
-                umap_flag,
             )
 
         return df_embeddings, csv_header
@@ -403,7 +420,6 @@ class DataPreprocessor:
         csv_uids: list[str],
         df_csv: DataFrame,
         index_name: str,
-        umap_flag: bool,
     ):
         """
         Use data and create corresponding dataframe
@@ -435,7 +451,7 @@ class DataPreprocessor:
         )
 
         # generate dimensionality reduction components and merge it to CSV DataFrame
-        if umap_flag:
+        if self.umap_flag:
             df_dim_red = self._generate_umap(embs)
             df_dim_red.index = uids
         else:
