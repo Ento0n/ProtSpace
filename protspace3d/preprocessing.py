@@ -74,8 +74,8 @@ class DataPreprocessor:
         uid_col: int,
         html_cols: list[int],
         reset: bool,
-        umap_parameters: list,
         umap_flag: bool,
+        umap_paras: dict,
     ):
         self.output_d = output_d
         self.hdf_path = hdf_path
@@ -84,8 +84,8 @@ class DataPreprocessor:
         self.uid_col = uid_col
         self.html_cols = html_cols
         self.reset = reset
-        self.umap_parameters = umap_parameters
         self.umap_flag = umap_flag
+        self.umap_paras = umap_paras
 
     def data_preprocessing(self):
         """
@@ -141,7 +141,6 @@ class DataPreprocessor:
             emb_h5file,
             csv_uids,
             index_name,
-            self.umap_parameters,
             self.umap_flag,
         )
 
@@ -318,7 +317,6 @@ class DataPreprocessor:
         hdf_path: Path,
         csv_uids: list[str],
         index_name: str,
-        umap_parameters: list,
         umap_flag: bool,
     ):
         """
@@ -345,7 +343,6 @@ class DataPreprocessor:
                     csv_uids,
                     df_csv,
                     index_name,
-                    umap_parameters,
                     umap_flag,
                 )
             else:
@@ -358,7 +355,6 @@ class DataPreprocessor:
                         csv_uids,
                         df_csv,
                         index_name,
-                        umap_parameters,
                         umap_flag,
                     )
                 # columns x, y & z are fine
@@ -395,7 +391,6 @@ class DataPreprocessor:
                 csv_uids,
                 df_csv,
                 index_name,
-                umap_parameters,
                 umap_flag,
             )
 
@@ -408,7 +403,6 @@ class DataPreprocessor:
         csv_uids: list[str],
         df_csv: DataFrame,
         index_name: str,
-        umap_parameters: list,
         umap_flag: bool,
     ):
         """
@@ -442,7 +436,7 @@ class DataPreprocessor:
 
         # generate dimensionality reduction components and merge it to CSV DataFrame
         if umap_flag:
-            df_dim_red = self._generate_umap(embs, umap_parameters)
+            df_dim_red = self._generate_umap(embs)
             df_dim_red.index = uids
         else:
             df_dim_red = self._generate_pca(embs)
@@ -509,7 +503,7 @@ class DataPreprocessor:
         # usually euclidean or cosine distance worked best
         return pdist(data, metric=metric)
 
-    def _generate_umap(self, data: np.ndarray, umap_parameters: list) -> pd.DataFrame:
+    def _generate_umap(self, data: np.ndarray) -> pd.DataFrame:
         """
         generated umap for given data
         :param data: embeddings data
@@ -521,11 +515,11 @@ class DataPreprocessor:
         import umap
 
         fit = umap.UMAP(
-            n_neighbors=umap_parameters[0],
-            min_dist=umap_parameters[1],
+            n_neighbors=self.umap_paras["n_neighbours"],
+            min_dist=self.umap_paras["min_dist"],
             random_state=42,
             n_components=3,
-            metric=umap_parameters[2],
+            metric=self.umap_paras["metric"],
         )  # initialize umap; use random_state=42 for reproducibility
         umap_fit = fit.fit_transform(data)  # fit umap to our embeddings
         df_umap = DataFrame(data=umap_fit, columns=self.AXIS_NAMES)

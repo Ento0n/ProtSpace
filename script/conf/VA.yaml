@@ -1,7 +1,7 @@
 o: data/VA
 hdf: data/VA/VA.h5
 csv: data/VA/VA.csv
-UMAP:
-  - 15
-  - 0.4
-  - manhattan
+UMAP: True
+n_neighbours: 15
+min_dist: 0.4
+metric: manhattan
