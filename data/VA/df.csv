@@ -1,189 +1,189 @@
 Name,Exon count,Source,Assigned group,x,y,z
-APIS_N1833,NA,Proteome,NA,7.749015,3.053261,4.491188
-APIS_N5653,NA,Proteome,NA,7.9594626,2.9175878,4.258493
-APIS_S4748,NA,Proteome,NA,8.335121,3.470831,3.8258348
-Apce208U,2.0,Predicted,NA,1.336181,1.5929123,4.1582494
-Apce566VA3,6.0,Predicted,Venom Allergen 3,9.998555,4.7330494,0.5801137
-Apdo353U,2.0,Predicted,NA,1.4417155,1.3265487,3.5975773
-Apdo372VA3,6.0,Predicted,Venom Allergen 3,10.015374,4.7270036,0.6697098
-Apfl127Un,2.0,Predicted,NA,1.05711,1.4652745,3.6821227
-Apfl393VA3,1.0,Predicted,Venom Allergen 3,9.376095,3.378332,3.438511
-Apme638V3a,3.0,Predicted,Venom Allergen 3,11.665822,2.2665467,-0.71212363
-Apme638V3b,3.0,Predicted,Venom Allergen 3,9.558768,4.7172203,0.9602025
-Apme643,NA,Predicted,NA,7.800342,3.281611,4.645575
-Apme647,NA,Predicted,NA,8.50094,3.3024411,3.7112486
-Apme652Un,2.0,Predicted,NA,1.0988013,1.5836892,3.7499151
-Atro370aC2,5.0,Predicted,CRiSP,10.620464,3.5930579,3.7997694
-Atro373aV3,5.0,Predicted,Venom Allergen 3,12.394113,4.095288,0.85948277
-Atro966V3b,5.0,Predicted,Venom Allergen 3,14.197921,4.3028774,1.0863043
-Atro966V5a,6.0,Predicted,Venom Allergen 5,11.756484,3.8479228,1.2478298
-Atro966dU,3.0,Predicted,NA,2.6820412,1.688759,4.426815
-Bote767a,3.0,Predicted,Venom Allergen 5,11.01428,2.8691072,-0.9257887
-Bote767b,2.0,Predicted,NA,9.093947,3.748637,2.3586175
-Bote776Un,2.0,Predicted,NA,2.1673112,1.8433583,3.9785013
-Bote777V52,7.0,Predicted,Venom Allergen 5.02,11.935911,2.9942195,5.048009
-Bovo131U,2.0,Predicted,NA,2.0475934,1.4362744,4.3914185
-Bovo953a,3.0,Predicted,Venom Allergen 5,11.998728,2.4909883,-0.5453925
-Bovo953b,3.0,Predicted,NA,9.505783,4.80887,0.30554193
-Bovo985V52,7.0,Predicted,Venom Allergen 5.02,11.769582,2.9615233,4.853287
-Cafl236U,2.0,Predicted,NA,3.4779317,1.6734711,3.6408675
-Cafl287a,7.0,Predicted,Venom Allergen 5,11.977783,3.4774423,4.59826
-Cafl287b,7.0,Predicted,Venom Allergen 5.02,10.216575,4.0609775,1.6248692
-Cafl547V3,5.0,Predicted,Venom Allergen 3,10.535905,4.0980973,0.41073614
-Ceca227Gol,3.0,Predicted,Golgi-associated plant pathogenesis-related protein,9.586439,3.1911082,4.876491
-Ceca342V3,5.0,Predicted,Venom Allergen 3,14.55123,5.1879125,0.8274784
-Ceca358V3,6.0,Predicted,Venom Allergen 3,11.616061,4.2181616,4.4558964
-Ceca565Ub,2.0,Predicted,NA,2.6588173,1.1968141,4.185343
-Ceca565V3a,5.0,Predicted,Venom Allergen 3,12.817059,5.205385,0.7616458
-Ceca565V3e,5.0,Predicted,Venom Allergen 3,11.054899,5.3296742,-0.12469431
-Ceca565V5c,2.0,Predicted,Venom Allergen 5,10.725508,5.5100656,0.12973645
-Ceca565V5f,5.0,Predicted,Venom Allergen 5,11.245499,4.701639,-0.14070882
-Ceca565d,3.0,Predicted,Venom Allergen 5.02,11.854617,3.3804808,0.18069272
-Ceca567a,4.0,Predicted,NA,9.124799,4.4741573,0.5123525
-Ceca567b,3.0,Predicted,Venom Allergen 5,11.88686,2.323113,-0.7888203
-Ceci403aV5,6.0,Predicted,Venom Allergen 5,10.170214,4.2474246,0.5195153
-Ceci832aC2,5.0,Predicted,CRiSP,10.765024,3.2794976,3.9178207
-Ceci865aV3,5.0,Predicted,Venom Allergen 3,12.917541,4.7140164,1.2721031
-Ceci865bU,3.0,Predicted,NA,3.4904363,1.325711,4.236393
-Cogi004aU,2.0,Predicted,NA,2.345635,1.1358876,4.4997334
-Cogi004bU,6.0,Predicted,NA,12.776973,3.7788787,1.2634069
-Cogi014,3.0,Predicted,NA,10.619999,2.7860742,0.790883
-Duno895b,3.0,Predicted,Venom Allergen 5,11.52929,3.52536,-0.725028
-Duno917U,2.0,Predicted,NA,1.6660271,1.9214054,3.8312826
-Duno986V3,7.0,Predicted,Venom Allergen 3,11.466133,2.7995622,5.138458
-EAT39749_1_AAEL008479_PA_Aedes_aegypti,,,,7.8767743,3.1383905,5.063169
-Eudi193aU,2.0,Predicted,NA,1.7197715,1.1827029,3.2728791
-Eudi508aU,3.0,Predicted,NA,11.073363,2.8153257,-0.7795163
-Eudi940aU,2.0,Predicted,NA,12.393466,4.798123,2.8958097
-Eume048,2.0,Predicted,NA,8.900294,3.2428946,2.799554
-Eume479V5,7.0,Predicted,Venom Allergen 5,11.56283,3.089561,5.4564643
-Eume639U,2.0,Predicted,NA,1.7764864,1.8116343,3.3494568
-Eume878V5,4.0,Predicted,Venom Allergen 5,10.815835,2.7674222,-0.4210317
-Frva326a,3.0,Predicted,NA,10.702073,2.5151126,0.56162816
-Frva326b,2.0,Predicted,NA,8.4557,2.970056,2.5445855
-Frva326c,1.0,Predicted,NA,8.95518,3.0013862,2.3122308
-Frva454,3.0,Predicted,NA,12.110426,4.345069,3.7258575
-Frva558,2.0,Predicted,NA,1.6141493,1.053966,3.953746
-Hala137b,3.0,Predicted,Venom Allergen 5.02,11.646736,2.5646412,0.0151033085
-Hala140aU,2.0,Predicted,NA,1.370289,1.6533672,3.416733
-Hala140bV3,5.0,Predicted,Venom Allergen 3,14.640577,4.7541366,0.6599869
-Hala429V51,7.0,Predicted,Venom Allergen 5.01,11.331382,3.5913005,5.2393513
-Halictus_D1973,NA,Proteome,NA,8.742546,3.0797627,4.827998
-Hasa183a,4.0,Predicted,Venom Allergen 5,10.699333,4.663589,0.8885556
-Hasa183b,2.0,Predicted,NA,2.953219,1.257182,3.6043742
-Hasa183c,2.0,Predicted,NA,4.073252,1.4654696,3.559309
-Hasa425V3,4.0,Predicted,Venom Allergen 3,10.87443,4.7432346,1.1685019
-Hasa700aV3,7.0,Predicted,Venom Allergen 3,10.339153,4.3037624,1.9116831
-Hasa700bV5,7.0,Predicted,Venom Allergen 5,11.324455,3.3513286,4.7739115
-KDR20657_1_Golgi_associated_plant_pathogenesis_related_protein_1_Zootermopsis_nevadensis,,,,8.329656,3.262693,4.8752546
-Lihu620,6.0,Predicted,Venom Allergen 3,10.75103,4.4246554,0.048200425
-Lihu699a,5.0,Predicted,Venom Allergen 3,12.391168,5.1403337,1.2907131
-Lihu699b,6.0,Predicted,Venom Allergen 3,13.421521,4.9197145,0.5543175
-Lihu699c,2.0,Predicted,NA,3.7758417,1.7943988,3.6403677
-Lihu777a,8.0,Predicted,Venom Allergen 5,9.851764,3.9954286,1.6900547
-Lihu777b,7.0,Predicted,Venom Allergen 5,11.36334,3.848485,4.5176973
-Mebec23aU,3.0,Predicted,NA,10.966572,2.4958425,0.34139678
-Mebec60aU,2.0,Predicted,NA,1.7598505,0.84419495,3.781122
-Mege668U,2.0,Predicted,NA,1.6306739,1.6287924,3.8110104
-Mege824V52,7.0,Predicted,Venom Allergen 5.02,11.11427,3.7730448,5.0182266
-Mequ243V5,3.0,Predicted,Venom Allergen 5,11.101893,2.4346037,0.2845164
-Mequ706U,2.0,Predicted,NA,2.0872917,0.9631096,3.9726856
-Mequ746aV5,2.0,Predicted,Venom Allergen 5.02,11.427193,3.1264155,-1.0350354
-Mequ746b,3.0,Predicted,NA,9.446991,3.0352046,1.9015051
-Mero109V5,7.0,Predicted,Venom Allergen 5,10.961551,3.0607114,5.2544208
-Mero210aU,3.0,Predicted,NA,9.15978,4.8849864,0.7119917
-Mero210bV52,3.0,Predicted,Venom Allergen 5.02,11.004549,2.465063,-0.50329036
-Mero436a,2.0,Predicted,NA,2.3784344,1.05189,3.3869421
-Mero436bV3,5.0,Predicted,Venom Allergen 3,14.348538,4.9677095,0.82598656
-Navi758CR_out,5.0,Predicted,CRiSP,10.3347435,3.5699782,3.7211583
-Navi758V3a,6.0,Predicted,Venom Allergen 3,9.836082,3.8839674,1.0567735
-Navi758V3b,4.0,Predicted,Venom Allergen 3,12.65493,5.1240816,2.3137577
-Navi759bV5,7.0,Predicted,Venom Allergen 5,10.60073,4.107244,1.6566625
-Navi759cV51,7.0,Predicted,Venom Allergen 5.01,11.424059,3.9025497,4.9827538
-Navi760Ud,4.0,Predicted,NA,13.663866,5.576178,3.0558126
-Navi760Ue,5.0,Predicted,NA,14.498388,5.10571,1.2609302
-Navi760Ug,2.0,Predicted,NA,3.4652421,1.3674777,3.9654515
-Navi760V3c,5.0,Predicted,Venom Allergen 3,14.811624,4.7687397,0.82485014
-Navi760V5a,5.0,Predicted,Venom Allergen 5,12.125745,5.440538,0.06644262
-Navi760V5b,5.0,Predicted,Venom Allergen 5,13.280002,5.244793,1.056386
-Navi760V5f,5.0,Predicted,Venom Allergen 5,14.161243,4.709669,1.451997
-Nome504V5,7.0,Predicted,Venom Allergen 5,11.065694,3.294242,4.9013853
-Nome633V3,5.0,Predicted,Venom Allergen 3,14.412606,4.588244,1.0975648
-Nome640U,2.0,Predicted,NA,2.2267036,1.6430724,4.418675
-Nome755Ub,4.0,Predicted,NA,9.174469,4.5790734,0.59720886
-Nome755V3a,3.0,Predicted,Venom Allergen 3,11.588803,2.0568464,-0.31929272
-Odbr457Ub,3.0,Predicted,NA,2.822306,1.9343786,3.7411904
-Odbr457V3a,5.0,Predicted,Venom Allergen 3,12.754153,5.4818153,0.4792414
-Odbr457V5c,4.0,Predicted,Venom Allergen 5,11.048108,2.9105268,-0.040095493
-Odbr534V5a,7.0,Predicted,Venom Allergen 5,11.418753,3.5159898,4.599235
-Odbr534V5b,7.0,Predicted,Venom Allergen 5,9.992411,3.7345726,1.7970663
-Oobi507Ud,2.0,Predicted,NA,4.036296,1.6264232,3.7522612
-Oobi507V3b,5.0,Predicted,Venom Allergen 3,14.088952,5.0658164,1.1454209
-Oobi507V3c,5.0,Predicted,Venom Allergen 3,13.950682,4.8852158,0.6215547
-Oobi515CRa,5.0,Predicted,CRiSP,10.661445,3.8670044,3.3388305
-Oobi515CRb,6.0,Predicted,CRiSP,10.186817,3.402576,1.3517008
-Oobi515V5c,7.0,Predicted,Venom Allergen 5,11.745007,3.2168376,4.4324675
-Osbi662,7.0,Predicted,repressed by EFG1 protein,7.9496913,2.759939,4.6904454
-Osbi697Ua,3.0,Predicted,NA,9.121109,4.5774117,0.93662846
-Osbi697V3b,3.0,Predicted,Venom Allergen 3,11.606491,2.4247527,-0.29006836
-Osbi753Ua,2.0,Predicted,NA,2.2467449,1.2836185,3.7963383
-Osbi753V3b,5.0,Predicted,Venom Allergen 3,13.269492,4.038231,1.1578423
-Osbi753V3d,5.0,Predicted,Venom Allergen 3,12.245938,4.432866,0.35159084
-Osbi753V3f,5.0,Predicted,Venom Allergen 3,11.897398,4.7056804,-0.092549235
-Osbi753V3g,5.0,Predicted,Venom Allergen 3,11.55469,4.4826665,0.42584223
-Osbi753V3h,5.0,Predicted,Venom Allergen 3,11.793217,5.3293543,0.6412331
-Osbi753V3i,5.0,Predicted,Venom Allergen 3,12.348044,4.9146476,0.22502296
-Osbi753V5c,5.0,Predicted,Venom Allergen 5,11.175712,5.0541525,0.14430507
-Osbi753V5e,6.0,Predicted,Venom Allergen 5,12.058942,4.3872957,-0.15595762
-Osbi788V5,7.0,Predicted,Venom Allergen 5,11.086719,3.0463881,5.1756835
-Osli250,8.0,Predicted,NA,8.112941,2.866177,4.433835
-Osli257Ub,5.0,Predicted,NA,12.006383,4.9503074,0.6868301
-Osli257Uc,5.0,Predicted,NA,11.706102,4.5415564,0.6182025
-Osli257Ud,5.0,Predicted,NA,11.5542755,4.628231,-0.0022037537
-Osli257Uf,5.0,Predicted,NA,13.897619,4.7367053,1.0702896
-Osli257Ug,2.0,Predicted,NA,2.1787546,1.3217885,3.594567
-Osli257V3a,5.0,Predicted,Venom Allergen 3,11.909646,5.0370317,0.3269447
-Osli257V5e,5.0,Predicted,Venom Allergen 5,11.329139,5.019166,0.44233832
-Osli271V3,6.0,Predicted,Venom Allergen 3,9.761945,4.3547163,0.16108294
-PNF42604_1_Golgi_associated_plant_pathogenesis_related_protein_1_Cryptotermes_secundus,,,,8.050757,3.5170894,4.78639
-Poca602V5,7.0,Predicted,Venom Allergen 5,11.569702,2.962155,4.06203
-Poca736,8.0,Predicted,NA,8.058674,2.578711,4.9248395
-Podo111V5,7.0,Predicted,Venom Allergen 5,11.425522,3.2152529,4.0594816
-Podo995Ua,4.0,Predicted,NA,2.545543,0.90209144,4.469824
-Podo995V5b,5.0,Predicted,Venom Allergen 5,13.629372,5.6126924,1.7470946
-Soin529,3.0,Predicted,Venom Allergen 5,10.419782,3.0102484,1.2980961
-Soin570Ua,3.0,Predicted,NA,3.9003313,1.4917684,3.91693
-Soin570V3b,5.0,Predicted,Venom Allergen 3,14.280593,5.3407927,0.6360546
-Soin570V3c,5.0,Predicted,Venom Allergen 3,13.734538,5.5617304,0.71071476
-Soin570V3d,5.0,Predicted,Venom Allergen 3,12.674797,5.3193536,1.1297618
-Soin821U,3.0,Predicted,NA,11.8271475,3.2304475,3.7129114
-Tetac60aU,2.0,Predicted,NA,1.5925239,0.86689776,4.129847
-Tetac70aUx,3.0,Predicted,NA,11.956961,2.1810122,-0.033914994
-Tetar14aO,7.0,Predicted,NA,10.808569,3.4005616,1.6570672
-Waau459V3b,5.0,Predicted,Venom Allergen 3,11.171816,5.6415358,0.48100507
-Waau605V3b,5.0,Predicted,Venom Allergen 3,13.483744,5.202707,1.2370956
-Waau605c,3.0,Predicted,NA,3.6029317,1.539932,3.9564416
-Waau715V5,7.0,Predicted,Venom Allergen 5,11.982314,3.3051465,4.491255
-Waau832V3,2.0,Predicted,Venom Allergen 3,10.5519495,2.3752496,-0.6410428
-Waau855a,6.0,Predicted,NA,11.359498,5.581413,0.20987847
-Waau855b,4.0,Predicted,NA,11.209979,5.3599467,-0.055566013
-Waau863b,2.0,Predicted,NA,12.870489,5.203873,2.7099853
-Waau894V3,4.0,Predicted,Venom Allergen 3,11.44016,3.5502968,-0.17211609
-XP_035911918_1_uncharacterized_protein_LOC118512080_isoform_X1_Anopheles_stephensi,5.0,Predicted,NA,8.429889,2.9560723,4.7264786
-Xylocopa_D1360,NA,Proteome,NA,8.679967,3.2044694,3.7170765
-Xylocopa_D53,NA,Proteome,NA,13.481889,4.121829,0.8649203
-Xylocopa_N5000,NA,Proteome,NA,8.811292,3.1191638,3.8145018
-Xylocopa_N6624,NA,Proteome,NA,13.182911,3.6145177,0.7627813
-Xylocopa_R2735,NA,Proteome,NA,8.121831,3.2434556,5.1625023
-sp_D4P2Y4_VA52_POLPI_Venom_allergen_5_2_Polybia_paulista,NA,Predicted,Venom Allergen 5.02,14.018501,5.8789034,2.2576067
-sp_P0DMB9_VA5_VESVE_Venom_allergen_5_Vespa_velutina,NA,Predicted,Venom Allergen 5,13.584778,5.6066875,2.7292428
-sp_P10736_VA52_DOLMA_Venom_allergen_5_01_Dolichovespula_maculata,NA,Predicted,Venom Allergen 5.01,12.907399,5.7596126,1.5081805
-sp_P35759_VA5_POLEX_Venom_allergen_5_Polistes_exclamans,NA,Predicted,Venom Allergen 5,13.2715645,5.475952,1.4090652
-sp_P35783_VA5_VESFL_Venom_allergen_5_Vespula_flavopilosa,NA,Predicted,Venom Allergen 5,13.341445,5.775649,2.3182187
-sp_P35784_VA5_VESGE_Venom_allergen_5_Vespula_germanica,NA,Predicted,Venom Allergen 5,13.4654455,5.404866,2.405466
-sp_P35787_VA5_VESVI_Venom_allergen_5_Vespula_vidua,NA,Predicted,Venom Allergen 5,13.968895,5.937709,2.6891737
-sp_P86686_VA5_POLPI_Venom_allergen_5_Polybia_paulista,NA,Predicted,Venom Allergen 5,13.723935,6.0271473,2.2850938
-sp_P86870_VA5_VESMG_Venom_allergen_5_Vespa_magnifica,NA,Predicted,Venom Allergen 5,13.35337,5.585606,1.7196989
-sp_Q05108_VA5_DOLAR_Venom_allergen_5_Dolichovespula_arenaria,NA,Predicted,Venom Allergen 5,13.974545,5.3733335,2.630583
-sp_Q05110_VA5_VESVU_Venom_allergen_5_Vespula_vulgaris,NA,Predicted,Venom Allergen 5,13.021762,5.2972174,1.7470727
-sp_Q7Z156_VA5_POLSR_Venom_allergen_5_Polybia_scutellaris_rioplatensis,NA,Predicted,Venom Allergen 5,13.8641405,5.5305486,2.5828128
+APIS_N1833,NA,Proteome,NA,3.4964652,7.8761353,4.3958397
+APIS_N5653,NA,Proteome,NA,3.685904,8.128527,4.9085693
+APIS_S4748,NA,Proteome,NA,3.1111012,7.9341025,5.125606
+Apce208U,2.0,Predicted,NA,9.842197,7.7453136,7.970089
+Apce566VA3,6.0,Predicted,Venom Allergen 3,-0.61646855,8.359615,7.124872
+Apdo353U,2.0,Predicted,NA,9.7343445,7.4115562,8.136269
+Apdo372VA3,6.0,Predicted,Venom Allergen 3,-0.91618085,8.512129,7.2791004
+Apfl127Un,2.0,Predicted,NA,9.573638,7.7298555,7.659954
+Apfl393VA3,1.0,Predicted,Venom Allergen 3,2.7999144,8.17641,5.5357113
+Apme638V3a,3.0,Predicted,Venom Allergen 3,1.6161542,10.443511,10.368995
+Apme638V3b,3.0,Predicted,Venom Allergen 3,-0.42920482,7.91744,7.3995805
+Apme643,NA,Predicted,NA,3.64892,7.600048,4.7117057
+Apme647,NA,Predicted,NA,3.3100529,8.113109,5.227457
+Apme652Un,2.0,Predicted,NA,9.727369,7.7559175,7.813832
+Atro370aC2,5.0,Predicted,CRiSP,-1.8795364,6.089689,6.945842
+Atro373aV3,5.0,Predicted,Venom Allergen 3,-1.4436759,10.664353,7.1477575
+Atro966V3b,5.0,Predicted,Venom Allergen 3,-1.2430949,11.948745,6.582651
+Atro966V5a,6.0,Predicted,Venom Allergen 5,-1.0823082,10.29119,7.2933874
+Atro966dU,3.0,Predicted,NA,8.285064,8.366538,8.072914
+Bote767a,3.0,Predicted,Venom Allergen 5,1.3492448,10.748571,9.185793
+Bote767b,2.0,Predicted,NA,2.1295679,8.614036,6.135579
+Bote776Un,2.0,Predicted,NA,8.862252,8.348211,8.090779
+Bote777V52,7.0,Predicted,Venom Allergen 5.02,-1.6983111,4.528378,7.3499255
+Bovo131U,2.0,Predicted,NA,8.74051,7.9290814,7.8771963
+Bovo953a,3.0,Predicted,Venom Allergen 5,1.5523492,10.133535,9.995646
+Bovo953b,3.0,Predicted,NA,-0.24792357,8.211361,7.600428
+Bovo985V52,7.0,Predicted,Venom Allergen 5.02,-1.670581,4.393142,7.4723687
+Cafl236U,2.0,Predicted,NA,7.442857,8.13694,7.508331
+Cafl287a,7.0,Predicted,Venom Allergen 5,-1.0499111,4.969988,7.3638873
+Cafl287b,7.0,Predicted,Venom Allergen 5.02,0.39419764,9.282828,6.6843653
+Cafl547V3,5.0,Predicted,Venom Allergen 3,-0.74237794,8.883444,7.2845488
+Ceca227Gol,3.0,Predicted,Golgi-associated plant pathogenesis-related protein,3.191979,7.740788,4.106988
+Ceca342V3,5.0,Predicted,Venom Allergen 3,-1.8812455,11.795284,6.2272763
+Ceca358V3,6.0,Predicted,Venom Allergen 3,-1.811068,5.1613603,7.5574117
+Ceca565Ub,2.0,Predicted,NA,8.276261,8.61782,7.807549
+Ceca565V3a,5.0,Predicted,Venom Allergen 3,-1.9026865,10.716019,7.7464757
+Ceca565V3e,5.0,Predicted,Venom Allergen 3,-2.3315985,8.676618,7.875299
+Ceca565V5c,2.0,Predicted,Venom Allergen 5,-1.5214014,8.762908,8.037748
+Ceca565V5f,5.0,Predicted,Venom Allergen 5,-1.6823498,8.92753,7.329834
+Ceca565d,3.0,Predicted,Venom Allergen 5.02,-0.79397005,10.550553,7.833321
+Ceca567a,4.0,Predicted,NA,0.14900373,8.10539,7.362694
+Ceca567b,3.0,Predicted,Venom Allergen 5,1.5742174,10.362088,10.391421
+Ceci403aV5,6.0,Predicted,Venom Allergen 5,-0.5548665,8.750158,6.9874263
+Ceci832aC2,5.0,Predicted,CRiSP,-1.626083,6.067832,6.75744
+Ceci865aV3,5.0,Predicted,Venom Allergen 3,-1.9787339,11.269934,7.3946576
+Ceci865bU,3.0,Predicted,NA,7.431068,7.7909656,7.9271894
+Cogi004aU,2.0,Predicted,NA,8.71186,8.528009,7.7215066
+Cogi004bU,6.0,Predicted,NA,-0.63983506,11.210181,6.8875523
+Cogi014,3.0,Predicted,NA,1.1277074,9.833432,8.182298
+Duno895b,3.0,Predicted,Venom Allergen 5,0.64251816,10.60097,9.308847
+Duno917U,2.0,Predicted,NA,9.051175,7.5063844,7.6273365
+Duno986V3,7.0,Predicted,Venom Allergen 3,-2.0275168,4.582408,7.02706
+EAT39749_1_AAEL008479_PA_Aedes_aegypti,NA,Predicted,NA,3.661272,7.720995,4.5485997
+Eudi193aU,2.0,Predicted,NA,9.211762,7.484681,8.496846
+Eudi508aU,3.0,Predicted,NA,1.4161267,10.576124,9.309197
+Eudi940aU,2.0,Predicted,NA,-1.7422433,10.316108,8.807626
+Eume048,2.0,Predicted,NA,2.7100358,8.485967,5.9939094
+Eume479V5,7.0,Predicted,Venom Allergen 5,-1.7485076,4.165298,6.9644656
+Eume639U,2.0,Predicted,NA,9.054309,7.362259,8.011426
+Eume878V5,4.0,Predicted,Venom Allergen 5,1.367575,10.341164,9.132
+Frva326a,3.0,Predicted,NA,1.197563,9.883491,8.376765
+Frva326b,2.0,Predicted,NA,3.0548534,8.635114,6.567631
+Frva326c,1.0,Predicted,NA,2.3439918,8.873295,6.6121683
+Frva454,3.0,Predicted,NA,-1.8196354,5.512435,7.8349743
+Frva558,2.0,Predicted,NA,9.528295,8.003952,8.06169
+Hala137b,3.0,Predicted,Venom Allergen 5.02,1.3513569,10.085838,9.770749
+Hala140aU,2.0,Predicted,NA,9.880928,7.5461955,7.787123
+Hala140bV3,5.0,Predicted,Venom Allergen 3,-1.6867508,12.187488,6.2071114
+Hala429V51,7.0,Predicted,Venom Allergen 5.01,-1.6703671,4.7256947,6.7750635
+Halictus_D1973,NA,Proteome,NA,3.627477,7.943625,4.1604147
+Hasa183a,4.0,Predicted,Venom Allergen 5,-0.78036,9.395408,8.165092
+Hasa183b,2.0,Predicted,NA,8.150267,7.9425755,7.9775567
+Hasa183c,2.0,Predicted,NA,7.038195,7.754638,7.3395205
+Hasa425V3,4.0,Predicted,Venom Allergen 3,-0.5935482,9.370459,7.756703
+Hasa700aV3,7.0,Predicted,Venom Allergen 3,-0.11689063,9.273614,6.611499
+Hasa700bV5,7.0,Predicted,Venom Allergen 5,-1.4664005,5.318745,7.112472
+KDR20657_1_Golgi_associated_plant_pathogenesis_related_protein_1_Zootermopsis_nevadensis,NA,Predicted,Golgi-associated plant pathogenesis-related protein,3.9148726,8.194762,4.2267065
+Lihu620,6.0,Predicted,Venom Allergen 3,-1.1404924,8.761235,7.583623
+Lihu699a,5.0,Predicted,Venom Allergen 3,-2.4835603,10.541303,7.5524297
+Lihu699b,6.0,Predicted,Venom Allergen 3,-1.8371468,11.376423,6.9430895
+Lihu699c,2.0,Predicted,NA,7.1114583,8.0735,7.5101047
+Lihu777a,8.0,Predicted,Venom Allergen 5,0.46061018,9.200818,6.678671
+Lihu777b,7.0,Predicted,Venom Allergen 5,-1.3323065,4.780261,7.2622895
+Mebec23aU,3.0,Predicted,NA,1.3261197,9.761682,8.884948
+Mebec60aU,2.0,Predicted,NA,9.16968,8.166957,8.344938
+Mege668U,2.0,Predicted,NA,9.34077,7.848218,7.9872823
+Mege824V52,7.0,Predicted,Venom Allergen 5.02,-1.1655183,4.4334526,7.1415186
+Mequ243V5,3.0,Predicted,Venom Allergen 5,1.4574775,10.093135,8.72429
+Mequ706U,2.0,Predicted,NA,9.0915575,8.293759,8.133255
+Mequ746aV5,2.0,Predicted,Venom Allergen 5.02,1.1919335,10.736457,9.508197
+Mequ746b,3.0,Predicted,NA,1.6749338,9.231611,6.963286
+Mero109V5,7.0,Predicted,Venom Allergen 5,-2.021573,4.363388,7.0958247
+Mero210aU,3.0,Predicted,NA,0.030079152,7.9790106,7.3857465
+Mero210bV52,3.0,Predicted,Venom Allergen 5.02,1.4839374,10.462061,9.031602
+Mero436a,2.0,Predicted,NA,8.639654,7.6522465,8.44318
+Mero436bV3,5.0,Predicted,Venom Allergen 3,-1.7797301,12.265981,6.762567
+Navi758CR_out,5.0,Predicted,CRiSP,-1.672807,6.1125546,6.7341566
+Navi758V3a,6.0,Predicted,Venom Allergen 3,0.13691525,9.080065,6.998964
+Navi758V3b,4.0,Predicted,Venom Allergen 3,-1.7293506,10.878073,8.682642
+Navi759bV5,7.0,Predicted,Venom Allergen 5,-0.12602986,9.5174,6.702303
+Navi759cV51,7.0,Predicted,Venom Allergen 5.01,-1.613137,5.1752834,6.8051767
+Navi760Ud,4.0,Predicted,NA,-2.300905,11.830934,9.40302
+Navi760Ue,5.0,Predicted,NA,-1.6788301,12.598579,6.36423
+Navi760Ug,2.0,Predicted,NA,7.547881,8.11429,7.891971
+Navi760V3c,5.0,Predicted,Venom Allergen 3,-1.6227069,12.171698,6.0248175
+Navi760V5a,5.0,Predicted,Venom Allergen 5,-2.0842452,10.055131,7.9407835
+Navi760V5b,5.0,Predicted,Venom Allergen 5,-1.871416,11.409743,7.694653
+Navi760V5f,5.0,Predicted,Venom Allergen 5,-1.9892985,12.016764,6.4589505
+Nome504V5,7.0,Predicted,Venom Allergen 5,-1.680689,4.601322,6.788856
+Nome633V3,5.0,Predicted,Venom Allergen 3,-1.5347012,11.94267,6.290198
+Nome640U,2.0,Predicted,NA,8.522362,8.233613,7.9411006
+Nome755Ub,4.0,Predicted,NA,-0.28793412,8.087464,7.2580314
+Nome755V3a,3.0,Predicted,Venom Allergen 3,1.279041,10.3957205,10.1443205
+Odbr457Ub,3.0,Predicted,NA,8.095842,7.6991825,7.540604
+Odbr457V3a,5.0,Predicted,Venom Allergen 3,-2.2049441,10.858303,7.8097568
+Odbr457V5c,4.0,Predicted,Venom Allergen 5,1.0518817,10.191424,8.990583
+Odbr534V5a,7.0,Predicted,Venom Allergen 5,-1.730799,5.0261865,7.2556887
+Odbr534V5b,7.0,Predicted,Venom Allergen 5,0.4574754,9.481959,6.949492
+Oobi507Ud,2.0,Predicted,NA,7.113183,8.306494,7.678162
+Oobi507V3b,5.0,Predicted,Venom Allergen 3,-1.8399043,11.701063,6.807693
+Oobi507V3c,5.0,Predicted,Venom Allergen 3,-1.7579129,12.0981655,6.834144
+Oobi515CRa,5.0,Predicted,CRiSP,-1.624769,6.4376245,6.7445393
+Oobi515CRb,6.0,Predicted,CRiSP,0.46761513,9.350483,7.0599675
+Oobi515V5c,7.0,Predicted,Venom Allergen 5,-1.1714159,5.2283726,7.022067
+Osbi662,7.0,Predicted,repressed by EFG1 protein,3.7847254,7.8218694,4.8625765
+Osbi697Ua,3.0,Predicted,NA,0.031617794,7.984173,7.6422324
+Osbi697V3b,3.0,Predicted,Venom Allergen 3,1.6685146,10.574668,10.029341
+Osbi753Ua,2.0,Predicted,NA,8.71091,7.577225,8.649231
+Osbi753V3b,5.0,Predicted,Venom Allergen 3,-1.1052744,11.604489,7.000114
+Osbi753V3d,5.0,Predicted,Venom Allergen 3,-2.2018878,9.748486,6.9352155
+Osbi753V3f,5.0,Predicted,Venom Allergen 3,-2.2619185,9.344754,7.3259745
+Osbi753V3g,5.0,Predicted,Venom Allergen 3,-1.8331656,9.340134,7.1126842
+Osbi753V3h,5.0,Predicted,Venom Allergen 3,-2.033654,9.703019,7.612541
+Osbi753V3i,5.0,Predicted,Venom Allergen 3,-2.610505,9.516099,7.535143
+Osbi753V5c,5.0,Predicted,Venom Allergen 5,-2.3088174,8.889289,7.474142
+Osbi753V5e,6.0,Predicted,Venom Allergen 5,-2.0369687,9.638041,7.2713737
+Osbi788V5,7.0,Predicted,Venom Allergen 5,-1.6004082,4.365061,7.0126643
+Osli250,8.0,Predicted,NA,3.8909593,7.853872,4.5515695
+Osli257Ub,5.0,Predicted,NA,-2.4847176,9.866477,7.4391403
+Osli257Uc,5.0,Predicted,NA,-2.240049,9.193503,7.1033406
+Osli257Ud,5.0,Predicted,NA,-1.7753782,9.426616,7.783741
+Osli257Uf,5.0,Predicted,NA,-1.5975348,12.252606,6.5295367
+Osli257Ug,2.0,Predicted,NA,8.722283,7.8478823,8.517558
+Osli257V3a,5.0,Predicted,Venom Allergen 3,-2.3952124,9.289249,7.7748704
+Osli257V5e,5.0,Predicted,Venom Allergen 5,-1.9419291,8.942998,7.537535
+Osli271V3,6.0,Predicted,Venom Allergen 3,-0.45087278,8.438576,7.2290254
+PNF42604_1_Golgi_associated_plant_pathogenesis_related_protein_1_Cryptotermes_secundus,NA,Predicted,Golgi-associated plant pathogenesis-related protein,4.0039787,7.704883,4.29169
+Poca602V5,7.0,Predicted,Venom Allergen 5,-1.1702054,5.4324355,7.22601
+Poca736,8.0,Predicted,NA,3.8112178,8.321138,4.57253
+Podo111V5,7.0,Predicted,Venom Allergen 5,-1.3197526,5.2410736,7.6678834
+Podo995Ua,4.0,Predicted,NA,8.5162945,8.3021755,7.5030684
+Podo995V5b,5.0,Predicted,Venom Allergen 5,-2.2594225,12.207613,8.439953
+Soin529,3.0,Predicted,Venom Allergen 5,1.0059601,9.718292,7.6891603
+Soin570Ua,3.0,Predicted,NA,7.3168917,8.09836,7.5939984
+Soin570V3b,5.0,Predicted,Venom Allergen 3,-1.9506835,11.840424,6.533601
+Soin570V3c,5.0,Predicted,Venom Allergen 3,-2.1443808,11.783597,6.869294
+Soin570V3d,5.0,Predicted,Venom Allergen 3,-2.2405064,11.041951,7.5761175
+Soin821U,3.0,Predicted,NA,-0.9799014,5.452244,7.4326224
+Tetac60aU,2.0,Predicted,NA,9.273796,7.946098,8.4848
+Tetac70aUx,3.0,Predicted,NA,1.3197323,10.114249,10.235845
+Tetar14aO,7.0,Predicted,NA,0.4132435,9.882102,7.2516747
+Waau459V3b,5.0,Predicted,Venom Allergen 3,-2.057223,8.701654,8.091311
+Waau605V3b,5.0,Predicted,Venom Allergen 3,-2.2250335,11.822194,7.666442
+Waau605c,3.0,Predicted,NA,7.268979,7.864132,7.7474446
+Waau715V5,7.0,Predicted,Venom Allergen 5,-1.1570224,4.8576336,7.5647855
+Waau832V3,2.0,Predicted,Venom Allergen 3,1.4594479,10.337187,9.133755
+Waau855a,6.0,Predicted,NA,-2.213084,9.031792,8.270136
+Waau855b,4.0,Predicted,NA,-1.8435632,8.961141,8.208472
+Waau863b,2.0,Predicted,NA,-1.9311235,11.077968,8.994659
+Waau894V3,4.0,Predicted,Venom Allergen 3,0.055433005,10.339964,8.720325
+XP_035911918_1_uncharacterized_protein_LOC118512080_isoform_X1_Anopheles_stephensi,5.0,Predicted,NA,4.0480356,7.9937663,4.571236
+Xylocopa_D1360,NA,Proteome,NA,3.397118,8.303636,5.3302135
+Xylocopa_D53,NA,Proteome,NA,-1.0349047,11.831584,7.0294485
+Xylocopa_N5000,NA,Proteome,NA,3.0860076,8.118925,5.2599506
+Xylocopa_N6624,NA,Proteome,NA,-0.8490566,11.4354515,7.165095
+Xylocopa_R2735,NA,Proteome,NA,4.0721097,7.9477663,4.5414977
+sp_D4P2Y4_VA52_POLPI_Venom_allergen_5_2_Polybia_paulista,NA,Predicted,Venom Allergen 5.02,-2.0419188,12.0214,8.936981
+sp_P0DMB9_VA5_VESVE_Venom_allergen_5_Vespa_velutina,NA,Predicted,Venom Allergen 5,-2.0701795,11.964143,9.352145
+sp_P10736_VA52_DOLMA_Venom_allergen_5_01_Dolichovespula_maculata,NA,Predicted,Venom Allergen 5.01,-2.4896712,11.704739,8.2833395
+sp_P35759_VA5_POLEX_Venom_allergen_5_Polistes_exclamans,NA,Predicted,Venom Allergen 5,-1.9130131,11.983126,8.217448
+sp_P35783_VA5_VESFL_Venom_allergen_5_Vespula_flavopilosa,NA,Predicted,Venom Allergen 5,-1.7610111,11.923506,8.901192
+sp_P35784_VA5_VESGE_Venom_allergen_5_Vespula_germanica,NA,Predicted,Venom Allergen 5,-1.965283,11.708399,9.096459
+sp_P35787_VA5_VESVI_Venom_allergen_5_Vespula_vidua,NA,Predicted,Venom Allergen 5,-1.7319686,12.1498575,9.197301
+sp_P86686_VA5_POLPI_Venom_allergen_5_Polybia_paulista,NA,Predicted,Venom Allergen 5,-2.2326066,12.429412,8.853726
+sp_P86870_VA5_VESMG_Venom_allergen_5_Vespa_magnifica,NA,Predicted,Venom Allergen 5,-2.3447638,11.898369,8.357742
+sp_Q05108_VA5_DOLAR_Venom_allergen_5_Dolichovespula_arenaria,NA,Predicted,Venom Allergen 5,-2.1435194,12.214004,9.411518
+sp_Q05110_VA5_VESVU_Venom_allergen_5_Vespula_vulgaris,NA,Predicted,Venom Allergen 5,-2.2694714,11.635487,8.207197
+sp_Q7Z156_VA5_POLSR_Venom_allergen_5_Polybia_scutellaris_rioplatensis,NA,Predicted,Venom Allergen 5,-2.1261725,12.332349,9.121886

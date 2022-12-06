@@ -57,8 +57,17 @@ class LoadConfFile(argparse.Action):
             if dictionary["reset"]:
                 arguments.append("--reset")
         if "UMAP" in dictionary.keys():
-            arguments.append("--UMAP")
-            arguments.append(str(dictionary["UMAP"]))
+            if dictionary["UMAP"]:
+                arguments.append("--UMAP")
+        if "n_neighbours" in dictionary.keys():
+            arguments.append("--n_neighbours")
+            arguments.append(str(dictionary["n_neighbours"]))
+        if "min_dist" in dictionary.keys():
+            arguments.append("--min_dist")
+            arguments.append(str(dictionary["min_dist"]))
+        if "metric" in dictionary.keys():
+            arguments.append("--metric")
+            arguments.append(str(dictionary["metric"]))
 
         return arguments
 
@@ -75,7 +84,10 @@ class Parser:
             self.pdb_flag,
             self.reset,
             self.conf,
-            self.umap_parameters,
+            self.umap_flag,
+            self.n_neighbours,
+            self.min_dist,
+            self.metric,
         ) = self._parse_args()
 
     def get_params(self):
@@ -92,7 +104,10 @@ class Parser:
             self.pdb_flag,
             self.reset,
             self.conf,
-            self.umap_parameters,
+            self.umap_flag,
+            self.n_neighbours,
+            self.min_dist,
+            self.metric,
         )
 
     @staticmethod
@@ -183,10 +198,31 @@ class Parser:
         )
         # Optional argument
         parser.add_argument(
+            "--n_neighbours",
+            required=False,
+            default=25,
+            type=int,
+            help="UMAP parameter n_neighbours, default: 25",
+        )
+        parser.add_argument(
+            "--min_dist",
+            required=False,
+            default=0.5,
+            type=float,
+            help="UMAP parameter min_dist, default: 0.5",
+        )
+        parser.add_argument(
+            "--metric",
+            required=False,
+            default="euclidean",
+            help="Metric used for UMAP calculation, default: euclidean",
+        )
+        # Optional argument
+        parser.add_argument(
             "--UMAP",
             required=False,
-            default=[25, 0.5, "euclidean"],
-            help="Parameters for UMAP calculation.",
+            action="store_true",
+            help="By default PCA is used for dimensionality reduction. But if UMAP_flag is set, UMAP is used.",
         )
 
         args = parser.parse_args()
@@ -199,7 +235,10 @@ class Parser:
         pdb_d = Path(args.pdb) if args.pdb is not None else None
         reset = args.reset
         conf_file = args.configuration
-        umap_parameters = args.UMAP
+        umap_flag = args.UMAP
+        n_neighbours = args.n_neighbours
+        min_dist = args.min_dist
+        metric = args.metric
 
         return (
             output_d,
@@ -211,7 +250,10 @@ class Parser:
             pdb_d,
             reset,
             conf_file,
-            umap_parameters,
+            umap_flag,
+            n_neighbours,
+            min_dist,
+            metric,
         )
 
 
@@ -234,7 +276,10 @@ def setup():
         pdb_d,
         reset,
         conf,
-        umap_parameters,
+        umap_flag,
+        n_neighbours,
+        min_dist,
+        metric,
     ) = parser.get_params()
 
     # Check if h5 file is present
@@ -255,6 +300,12 @@ def setup():
     # pdb directory given or not
     pdb_flag = True if pdb_d is not None else False
 
+    # put UMAP parameters in dictionary
+    umap_paras = dict()
+    umap_paras["n_neighbours"] = n_neighbours
+    umap_paras["min_dist"] = min_dist
+    umap_paras["metric"] = metric
+
     # Create data preprocessor object
     data_preprocessor = DataPreprocessor(
         output_d,
@@ -264,7 +315,8 @@ def setup():
         uid_col,
         html_cols,
         reset,
-        umap_parameters,
+        umap_flag,
+        umap_paras,
     )
 
     # Preprocessing
@@ -306,20 +358,21 @@ def setup():
         structure_container,
         pdb_flag,
         original_id_col,
+        umap_flag,
     )
 
 
 def main():
-    app, html, df, struct_container, pdb, orig_id_col = setup()
+    app, html, df, struct_container, pdb, orig_id_col, umap_flag = setup()
 
     # don't start server if html is needed
     if not html:
         # different callbacks for different layout
         if pdb:
-            get_callbacks(app, df, orig_id_col)
+            get_callbacks(app, df, orig_id_col, umap_flag)
             get_callbacks_pdb(app, df, struct_container, orig_id_col)
         else:
-            get_callbacks(app, df, orig_id_col)
+            get_callbacks(app, df, orig_id_col, umap_flag)
 
         app.run_server(debug=True)
 

@@ -4,6 +4,7 @@
 import os
 from pathlib import Path
 import h5py
+import pandas
 from scipy.spatial.distance import pdist, squareform
 import numpy as np
 import pandas as pd
@@ -46,7 +47,7 @@ class StructureContainer(object):
         # add .pdb file type to ID
         uid = uid + ".pdb"
 
-        range = set()
+        mol_range = set()
         strand = None
         with open(self.pdb_d / uid, "r") as f:
             lines = f.readlines()
@@ -55,10 +56,10 @@ class StructureContainer(object):
                 if line.startswith("ATOM"):
                     pieces = re.split("\\s+", line)
 
-                    range.add(int(pieces[5]))
+                    mol_range.add(int(pieces[5]))
                     strand = pieces[4]
 
-        return sorted(list(range)), strand
+        return sorted(list(mol_range)), strand
 
 
 class DataPreprocessor:
@@ -73,7 +74,8 @@ class DataPreprocessor:
         uid_col: int,
         html_cols: list[int],
         reset: bool,
-        umap_parameters: list,
+        umap_flag: bool,
+        umap_paras: dict,
     ):
         self.output_d = output_d
         self.hdf_path = hdf_path
@@ -82,7 +84,8 @@ class DataPreprocessor:
         self.uid_col = uid_col
         self.html_cols = html_cols
         self.reset = reset
-        self.umap_parameters = umap_parameters
+        self.umap_flag = umap_flag
+        self.umap_paras = umap_paras
 
     def data_preprocessing(self):
         """
@@ -132,17 +135,12 @@ class DataPreprocessor:
         # get UIDs
         csv_uids = df_csv.index.to_list()
 
-        # Unify UIDs
-        for idx, uid in enumerate(csv_uids):
-            csv_uids[idx] = uid.replace("-", "_")
-
         df_embeddings, csv_header = self._read_df_csv(
             self.output_d,
             df_csv,
             emb_h5file,
             csv_uids,
             index_name,
-            self.umap_parameters,
         )
 
         # sort csv header alphabetically
@@ -150,11 +148,12 @@ class DataPreprocessor:
 
         # handle html saving
         DataPreprocessor._handle_html(
+            self,
             self.html_cols,
             csv_header,
             self.output_d,
-            df=df_embeddings,
             original_id_col=original_id_col,
+            df=df_embeddings,
         )
 
         # generate initial figure
@@ -162,6 +161,7 @@ class DataPreprocessor:
             df_embeddings,
             selected_column=csv_header[0],
             original_id_col=original_id_col,
+            umap_flag=self.umap_flag,
         )
 
         return df_embeddings, fig, csv_header, original_id_col
@@ -261,8 +261,8 @@ class DataPreprocessor:
 
         return df, original_id_col
 
-    @staticmethod
     def _handle_html(
+        self,
         html_cols: list[int],
         csv_header: list[str],
         output_d: Path,
@@ -281,7 +281,10 @@ class DataPreprocessor:
             if html_cols == [-1]:
                 for col in csv_header:
                     fig = Visualizator.render(
-                        df, selected_column=col, original_id_col=original_id_col
+                        df,
+                        selected_column=col,
+                        original_id_col=original_id_col,
+                        umap_flag=self.umap_flag,
                     )
                     fig.write_html(output_d / f"3Dspace_{col}.html")
 
@@ -302,6 +305,7 @@ class DataPreprocessor:
                         df,
                         selected_column=csv_header[col],
                         original_id_col=original_id_col,
+                        umap_flag=self.umap_flag,
                     )
                     fig.write_html(output_d / f"3Dspace_{csv_header[col]}.html")
 
@@ -312,7 +316,6 @@ class DataPreprocessor:
         hdf_path: Path,
         csv_uids: list[str],
         index_name: str,
-        umap_parameters: list,
     ):
         """
         If present, read df.csv and check for completion
@@ -329,52 +332,83 @@ class DataPreprocessor:
             print("Pre computed dataframe file df.csv is loaded.")
             pres_df_csv = pd.read_csv(pres_df, index_col=0, na_filter=False)
 
-            # Check whether no. of rows equals data
-            if len(pres_df_csv) != len(df_csv):
-                print("# of rows doesn't match data!\nStart recalculation!")
-                df_embeddings, csv_header = self._create_df(
-                    output_d, hdf_path, csv_uids, df_csv, index_name, umap_parameters
+            # Check whether df.csv holds false x,y & z coordinates for selected dimensionality reduction!
+            if (
+                "variance" in pres_df_csv.columns.to_list()
+                and self.umap_flag
+                or "variance" not in pres_df_csv.columns.to_list()
+                and not self.umap_flag
+            ):
+                print(
+                    "df.csv holds false dimensionality reduction calculation,\nstart recalculating!"
                 )
+                df_embeddings, csv_header = self._create_df(
+                    output_d,
+                    hdf_path,
+                    csv_uids,
+                    df_csv,
+                    index_name,
+                )
+
             else:
-                # Check each column x, y & z for incompleteness
-                if not self._check_coordinates(pres_df_csv):
-                    print("Start recalculation!")
+
+                # Check whether no. of rows equals data
+                if len(pres_df_csv) != len(df_csv):
+                    print("# of rows doesn't match data!\nStart recalculation!")
                     df_embeddings, csv_header = self._create_df(
                         output_d,
                         hdf_path,
                         csv_uids,
                         df_csv,
                         index_name,
-                        umap_parameters,
                     )
-                # columns x, y & z are fine
                 else:
-                    # Update df in case new columns were added to the csv
-                    if (
-                        len(df_csv.columns)
-                        - (len(pres_df_csv.columns) - len(self.AXIS_NAMES))
-                        > 0
-                    ):
-                        print("New column(s) were found and will be added.")
-                        pres_df_csv = self._update_df(df_csv, pres_df_csv)
+                    # Check each column x, y & z for incompleteness
+                    if not self._check_coordinates(pres_df_csv):
+                        print("Start recalculation!")
+                        df_embeddings, csv_header = self._create_df(
+                            output_d,
+                            hdf_path,
+                            csv_uids,
+                            df_csv,
+                            index_name,
+                        )
+                    # columns x, y & z are fine
+                    else:
+                        # Update df in case new columns were added to the csv
+                        if (
+                            len(df_csv.columns)
+                            - (len(pres_df_csv.columns) - len(self.AXIS_NAMES))
+                            > 0
+                        ):
+                            print("New column(s) were found and will be added.")
+                            pres_df_csv = self._update_df(df_csv, pres_df_csv)
 
-                        # save the new obtained df
-                        pres_df_csv.to_csv(output_d / "df.csv", index_label=index_name)
+                            # save the new obtained df
+                            pres_df_csv.to_csv(
+                                output_d / "df.csv", index_label=index_name
+                            )
 
-                    # save final column names
-                    csv_header = [
-                        header
-                        for header in pres_df_csv.columns
-                        if header not in self.AXIS_NAMES or header is index_name
-                    ]
+                        # save final column names
+                        csv_header = [
+                            header
+                            for header in pres_df_csv.columns
+                            if header not in self.AXIS_NAMES
+                            and header != index_name
+                            and header != "variance"
+                        ]
 
-                    # Unify df name
-                    df_embeddings = pres_df_csv
+                        # Unify df name
+                        df_embeddings = pres_df_csv
 
         # create dataframe from files
         else:
             df_embeddings, csv_header = self._create_df(
-                output_d, hdf_path, csv_uids, df_csv, index_name, umap_parameters
+                output_d,
+                hdf_path,
+                csv_uids,
+                df_csv,
+                index_name,
             )
 
         return df_embeddings, csv_header
@@ -386,7 +420,6 @@ class DataPreprocessor:
         csv_uids: list[str],
         df_csv: DataFrame,
         index_name: str,
-        umap_parameters: list,
     ):
         """
         Use data and create corresponding dataframe
@@ -417,13 +450,19 @@ class DataPreprocessor:
             f" {pairwise_dist.shape}"
         )
 
-        # generate umap components and merge it to CSV DataFrame
-        df_umap = self._generate_umap(embs, umap_parameters)
-        df_umap.index = uids
+        # generate dimensionality reduction components and merge it to CSV DataFrame
+        if self.umap_flag:
+            df_dim_red = self._generate_umap(embs)
+            df_dim_red.index = uids
+        else:
+            df_dim_red = self._generate_pca(embs)
+            df_dim_red.index = uids
 
-        df_embeddings = df_csv.join(df_umap, how="right")
+        df_embeddings = df_csv.join(df_dim_red, how="right")
         csv_header = [
-            header for header in df_embeddings.columns if header not in self.AXIS_NAMES
+            header
+            for header in df_embeddings.columns
+            if header not in self.AXIS_NAMES and header != "variance"
         ]
 
         # save dataframe
@@ -480,7 +519,7 @@ class DataPreprocessor:
         # usually euclidean or cosine distance worked best
         return pdist(data, metric=metric)
 
-    def _generate_umap(self, data: np.ndarray, umap_parameters: list) -> pd.DataFrame:
+    def _generate_umap(self, data: np.ndarray) -> pd.DataFrame:
         """
         generated umap for given data
         :param data: embeddings data
@@ -492,15 +531,32 @@ class DataPreprocessor:
         import umap
 
         fit = umap.UMAP(
-            n_neighbors=umap_parameters[0],
-            min_dist=umap_parameters[1],
+            n_neighbors=self.umap_paras["n_neighbours"],
+            min_dist=self.umap_paras["min_dist"],
             random_state=42,
             n_components=3,
-            metric=umap_parameters[2],
+            metric=self.umap_paras["metric"],
         )  # initialize umap; use random_state=42 for reproducibility
         umap_fit = fit.fit_transform(data)  # fit umap to our embeddings
         df_umap = DataFrame(data=umap_fit, columns=self.AXIS_NAMES)
         return df_umap
+
+    def _generate_pca(self, data: np.ndarray):
+        from sklearn.decomposition import PCA
+
+        fit = PCA(n_components=3, random_state=42)
+        pca_fit = fit.fit_transform(data)
+        df_pca = DataFrame(data=pca_fit, columns=self.AXIS_NAMES)
+
+        # extract variance information from pca
+        pca_variance = list()
+        for variance in fit.explained_variance_ratio_:
+            pca_variance.append(variance * 100)
+
+        variance_df = DataFrame({"variance": pca_variance})
+        df_pca = pandas.concat([df_pca, variance_df], axis=1)
+
+        return df_pca
 
     def _check_coordinates(self, data_frame: DataFrame) -> bool:
         """
@@ -569,7 +625,8 @@ class DataPreprocessor:
             print(f"{nr_missed} protein(s) in csv but not in h5 file:")
             print(", ".join(missing))
 
-    def init_structure_container(self, pdb_d: Path):
+    @staticmethod
+    def init_structure_container(pdb_d: Path):
         structure_container = StructureContainer(pdb_d)
 
         return structure_container
