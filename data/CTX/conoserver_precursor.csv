@@ -1,0 +1,1103 @@
+mapped_id,original_id,organism,prot_type,toxin_class,gene_superfamily,cystein_framework,pharmacological_family,evidence
+P00011,P00011|Ca1.1 precursor|Conus caracteristicus|Precursor|conotoxin|A superfamily|||nucleic acid level,Conus caracteristicus,Precursor,conotoxin,A superfamily,,,nucleic acid level
+P00013,P00013|Ca1.2 precursor|Conus caracteristicus|Precursor|conotoxin|A superfamily|||nucleic acid level,Conus caracteristicus,Precursor,conotoxin,A superfamily,,,nucleic acid level
+P00027,P00027|LtXIVA precursor|Conus litteratus|Precursor|conotoxin|L superfamily|||nucleic acid level,Conus litteratus,Precursor,conotoxin,L superfamily,,,nucleic acid level
+P00093,P00093|ImI precursor|Conus imperialis|Precursor|conotoxin|A superfamily|||nucleic acid level,Conus imperialis,Precursor,conotoxin,A superfamily,,,nucleic acid level
+P01077,P01077|Im6.8 precursor|Conus imperialis|Precursor|conotoxin|O1 superfamily||VI/VII|nucleic acid level,Conus imperialis,Precursor,conotoxin,O1 superfamily,,VI/VII,nucleic acid level
+P01156,P01156|LtVIC precursor|Conus litteratus|Precursor|conotoxin|O1 superfamily|||nucleic acid level,Conus litteratus,Precursor,conotoxin,O1 superfamily,,,nucleic acid level
+P01163,P01163|LtIIIA precursor|Conus litteratus|Precursor|conotoxin|M superfamily|||nucleic acid level,Conus litteratus,Precursor,conotoxin,M superfamily,,,nucleic acid level
+P01164,P01164|LtIIIB precursor|Conus litteratus|Precursor|conotoxin|M superfamily|||nucleic acid level,Conus litteratus,Precursor,conotoxin,M superfamily,,,nucleic acid level
+P01175,P01175|Contryphan-Lt1 precursor|Conus litteratus|Precursor|contryphan|O2 superfamily|||nucleic acid level,Conus litteratus,Precursor,contryphan,O2 superfamily,,,nucleic acid level
+P02815,P02815|Ca5.1 precursor|Conus caracteristicus|Precursor|conotoxin|T superfamily|||nucleic acid level,Conus caracteristicus,Precursor,conotoxin,T superfamily,,,nucleic acid level
+P02872,P02872|CVID precursor|Conus catus|Precursor|conotoxin|O1 superfamily|||nucleic acid level,Conus catus,Precursor,conotoxin,O1 superfamily,,,nucleic acid level
+P02878,P02878|AuIA precursor|Conus aulicus|Precursor|conotoxin|A superfamily|||nucleic acid level,Conus aulicus,Precursor,conotoxin,A superfamily,,,nucleic acid level
+P02879,P02879|AuIB precursor|Conus aulicus|Precursor|conotoxin|A superfamily|||nucleic acid level,Conus aulicus,Precursor,conotoxin,A superfamily,,,nucleic acid level
+P02880,P02880|Tx1 precursor|Conus textile|Precursor|conotoxin|A superfamily|||nucleic acid level,Conus textile,Precursor,conotoxin,A superfamily,,,nucleic acid level
+P02882,P02882|TxIA precursor|Conus textile|Precursor|conotoxin|A superfamily|||nucleic acid level,Conus textile,Precursor,conotoxin,A superfamily,,,nucleic acid level
+P02884,P02884|Tx1.2 precursor|Conus textile|Precursor|conotoxin|A superfamily|||nucleic acid level,Conus textile,Precursor,conotoxin,A superfamily,,,nucleic acid level
+P02886,P02886|R1.4 precursor|Conus radiatus|Precursor|conotoxin|A superfamily|||nucleic acid level,Conus radiatus,Precursor,conotoxin,A superfamily,,,nucleic acid level
+P02888,P02888|T1.1 precursor|Conus tulipa|Precursor|conotoxin|A superfamily||I|nucleic acid level,Conus tulipa,Precursor,conotoxin,A superfamily,,I,nucleic acid level
+P02890,P02890|T1.2 precursor|Conus tulipa|Precursor|conotoxin|A superfamily|||nucleic acid level,Conus tulipa,Precursor,conotoxin,A superfamily,,,nucleic acid level
+P02892,P02892|Su1.1 precursor|Conus sulcatus|Precursor|conotoxin|A superfamily|||nucleic acid level,Conus sulcatus,Precursor,conotoxin,A superfamily,,,nucleic acid level
+P02894,P02894|Su1.2 precursor|Conus sulcatus|Precursor|conotoxin|A superfamily|||nucleic acid level,Conus sulcatus,Precursor,conotoxin,A superfamily,,,nucleic acid level
+P02896,P02896|Su1.3 precursor|Conus sulcatus|Precursor|conotoxin|A superfamily|||nucleic acid level,Conus sulcatus,Precursor,conotoxin,A superfamily,,,nucleic acid level
+P02898,P02898|Su1.4 precursor|Conus sulcatus|Precursor|conotoxin|A superfamily|||nucleic acid level,Conus sulcatus,Precursor,conotoxin,A superfamily,,,nucleic acid level
+P02900,P02900|Su1.5 precursor|Conus sulcatus|Precursor|conotoxin|A superfamily|||nucleic acid level,Conus sulcatus,Precursor,conotoxin,A superfamily,,,nucleic acid level
+P02902,P02902|CnIH precursor|Conus consors|Precursor|conotoxin|A superfamily|||nucleic acid level,Conus consors,Precursor,conotoxin,A superfamily,,,nucleic acid level
+P02904,P02904|Sm1.3 precursor|Conus stercusmuscarum|Precursor|conotoxin|A superfamily|||nucleic acid level,Conus stercusmuscarum,Precursor,conotoxin,A superfamily,,,nucleic acid level
+P02906,P02906|Bt1.1 precursor|Conus betulinus|Precursor|conotoxin|A superfamily|||nucleic acid level,Conus betulinus,Precursor,conotoxin,A superfamily,,,nucleic acid level
+P02908,P02908|Bt1.2 precursor|Conus betulinus|Precursor|conotoxin|A superfamily|||nucleic acid level,Conus betulinus,Precursor,conotoxin,A superfamily,,,nucleic acid level
+P02910,P02910|Bt1.3 precursor|Conus betulinus|Precursor|conotoxin|A superfamily|||nucleic acid level,Conus betulinus,Precursor,conotoxin,A superfamily,,,nucleic acid level
+P02912,P02912|Bt1.4 precursor|Conus betulinus|Precursor|conotoxin|A superfamily|||nucleic acid level,Conus betulinus,Precursor,conotoxin,A superfamily,,,nucleic acid level
+P02914,P02914|Bt1.5 precursor|Conus betulinus|Precursor|conotoxin|A superfamily|||nucleic acid level,Conus betulinus,Precursor,conotoxin,A superfamily,,,nucleic acid level
+P02916,P02916|Pn1.1 precursor|Conus pennaceus|Precursor|conotoxin|A superfamily|||nucleic acid level,Conus pennaceus,Precursor,conotoxin,A superfamily,,,nucleic acid level
+P02918,P02918|Pn1.2 precursor|Conus pennaceus|Precursor|conotoxin|A superfamily|||nucleic acid level,Conus pennaceus,Precursor,conotoxin,A superfamily,,,nucleic acid level
+P02920,P02920|Sm1.2 precursor|Conus stercusmuscarum|Precursor|conotoxin|A superfamily|||nucleic acid level,Conus stercusmuscarum,Precursor,conotoxin,A superfamily,,,nucleic acid level
+P02922,P02922|Ci1.1 precursor|Conus circumcisus|Precursor|conotoxin|A superfamily|||nucleic acid level,Conus circumcisus,Precursor,conotoxin,A superfamily,,,nucleic acid level
+P02924,P02924|Ci1.2 precursor|Conus circumcisus|Precursor|conotoxin|A superfamily|||nucleic acid level,Conus circumcisus,Precursor,conotoxin,A superfamily,,,nucleic acid level
+P02925,P02925|EpI precursor|Conus episcopatus|Precursor|conotoxin|A superfamily|||nucleic acid level,Conus episcopatus,Precursor,conotoxin,A superfamily,,,nucleic acid level
+P02927,P02927|Sp1.1 precursor|Conus sponsalis|Precursor|conotoxin|A superfamily|||nucleic acid level,Conus sponsalis,Precursor,conotoxin,A superfamily,,,nucleic acid level
+P02929,P02929|Sp1.2 precursor|Conus sponsalis|Precursor|conotoxin|A superfamily|||nucleic acid level,Conus sponsalis,Precursor,conotoxin,A superfamily,,,nucleic acid level
+P02931,P02931|Bu1.1 precursor|Conus bullatus|Precursor|conotoxin|A superfamily|||nucleic acid level,Conus bullatus,Precursor,conotoxin,A superfamily,,,nucleic acid level
+P02933,P02933|Bu1.2 precursor|Conus bullatus|Precursor|conotoxin|A superfamily|||nucleic acid level,Conus bullatus,Precursor,conotoxin,A superfamily,,,nucleic acid level
+P02935,P02935|Bu1.3 precursor|Conus bullatus|Precursor|conotoxin|A superfamily|||nucleic acid level,Conus bullatus,Precursor,conotoxin,A superfamily,,,nucleic acid level
+P02937,P02937|Di1.3 precursor|Conus distans|Precursor|conotoxin|A superfamily|||nucleic acid level,Conus distans,Precursor,conotoxin,A superfamily,,,nucleic acid level
+P02939,P02939|Cn1.2 precursor|Conus consors|Precursor|conotoxin|A superfamily|||nucleic acid level,Conus consors,Precursor,conotoxin,A superfamily,,,nucleic acid level
+P02941,P02941|P1.9 precursor|Conus purpurascens|Precursor|conotoxin||||nucleic acid level,Conus purpurascens,Precursor,conotoxin,,,,nucleic acid level
+P02943,P02943|Ai1.1 precursor|Conus ammiralis|Precursor|conotoxin|A superfamily|||nucleic acid level,Conus ammiralis,Precursor,conotoxin,A superfamily,,,nucleic acid level
+P02945,P02945|Ai1.2 precursor|Conus ammiralis|Precursor|conotoxin|A superfamily|||nucleic acid level,Conus ammiralis,Precursor,conotoxin,A superfamily,,,nucleic acid level
+P02947,P02947|O1.1 precursor|Conus obscurus|Precursor|conotoxin|A superfamily|||nucleic acid level,Conus obscurus,Precursor,conotoxin,A superfamily,,,nucleic acid level
+P02949,P02949|O1.2 precursor|Conus obscurus|Precursor|conotoxin|A superfamily|||nucleic acid level,Conus obscurus,Precursor,conotoxin,A superfamily,,,nucleic acid level
+P02951,P02951|O1.3 precursor|Conus obscurus|Precursor|conotoxin|A superfamily|||nucleic acid level,Conus obscurus,Precursor,conotoxin,A superfamily,,,nucleic acid level
+P02953,P02953|G5.2 precursor|Conus geographus|Precursor|conotoxin|T superfamily|||nucleic acid level,Conus geographus,Precursor,conotoxin,T superfamily,,,nucleic acid level
+P02955,P02955|Qc5.1 precursor|Conus quercinus|Precursor|conotoxin|T superfamily|||nucleic acid level,Conus quercinus,Precursor,conotoxin,T superfamily,,,nucleic acid level
+P02957,P02957|G5.1 precursor|Conus geographus|Precursor|conotoxin|T superfamily|||nucleic acid level,Conus geographus,Precursor,conotoxin,T superfamily,,,nucleic acid level
+P02961,P02961|Mr5.5 precursor|Conus marmoreus|Precursor|conotoxin|T superfamily|||nucleic acid level,Conus marmoreus,Precursor,conotoxin,T superfamily,,,nucleic acid level
+P02959,P02959|TxVA precursor|Conus textile|Precursor|conotoxin|T superfamily|||nucleic acid level,Conus textile,Precursor,conotoxin,T superfamily,,,nucleic acid level
+P02963,P02963|Mr5.6 precursor|Conus marmoreus|Precursor|conotoxin|T superfamily|||nucleic acid level,Conus marmoreus,Precursor,conotoxin,T superfamily,,,nucleic acid level
+P02964,P02964|Ca5.3 precursor|Conus caracteristicus|Precursor|conotoxin|T superfamily|||nucleic acid level,Conus caracteristicus,Precursor,conotoxin,T superfamily,,,nucleic acid level
+P02966,P02966|Ca5.4 precursor|Conus caracteristicus|Precursor|conotoxin|T superfamily|||nucleic acid level,Conus caracteristicus,Precursor,conotoxin,T superfamily,,,nucleic acid level
+P02968,P02968|Qc5.2 precursor|Conus quercinus|Precursor|conotoxin|T superfamily|||nucleic acid level,Conus quercinus,Precursor,conotoxin,T superfamily,,,nucleic acid level
+P02969,P02969|SVIE precursor|Conus striatus|Precursor|conotoxin|O1 superfamily|||nucleic acid level,Conus striatus,Precursor,conotoxin,O1 superfamily,,,nucleic acid level
+P02975,P02975|GI precursor|Conus geographus|Precursor|conotoxin|A superfamily|||nucleic acid level,Conus geographus,Precursor,conotoxin,A superfamily,,,nucleic acid level
+P02977,P02977|R1.1 precursor|Conus radiatus|Precursor|conotoxin|A superfamily|||nucleic acid level,Conus radiatus,Precursor,conotoxin,A superfamily,,,nucleic acid level
+P02979,P02979|R1.2 precursor|Conus radiatus|Precursor|conotoxin|A superfamily|||nucleic acid level,Conus radiatus,Precursor,conotoxin,A superfamily,,,nucleic acid level
+P02981,P02981|Sm1.1 precursor|Conus stercusmuscarum|Precursor|conotoxin|A superfamily|||nucleic acid level,Conus stercusmuscarum,Precursor,conotoxin,A superfamily,,,nucleic acid level
+P02983,P02983|GIB precursor|Conus geographus|Precursor|conotoxin|A superfamily|||nucleic acid level,Conus geographus,Precursor,conotoxin,A superfamily,,,nucleic acid level
+P02985,P02985|Mn1.1 precursor|Conus monachus|Precursor|conotoxin|A superfamily|||nucleic acid level,Conus monachus,Precursor,conotoxin,A superfamily,,,nucleic acid level
+P02987,P02987|Ac1.2 precursor|Conus achatinus|Precursor|conotoxin|A superfamily|||nucleic acid level,Conus achatinus,Precursor,conotoxin,A superfamily,,,nucleic acid level
+P02991,P02991|Bt1.6 precursor|Conus betulinus|Precursor|conotoxin|A superfamily|||nucleic acid level,Conus betulinus,Precursor,conotoxin,A superfamily,,,nucleic acid level
+P02989,P02989|Ac1.1b precursor|Conus achatinus|Precursor|conotoxin|A superfamily|||nucleic acid level,Conus achatinus,Precursor,conotoxin,A superfamily,,,nucleic acid level
+P02993,P02993|Mn1.2 precursor|Conus monachus|Precursor|conotoxin|A superfamily|||nucleic acid level,Conus monachus,Precursor,conotoxin,A superfamily,,,nucleic acid level
+P02995,P02995|Ci1.3 precursor|Conus circumcisus|Precursor|conotoxin|A superfamily|||nucleic acid level,Conus circumcisus,Precursor,conotoxin,A superfamily,,,nucleic acid level
+P02997,P02997|R1.3 precursor|Conus radiatus|Precursor|conotoxin|A superfamily|||nucleic acid level,Conus radiatus,Precursor,conotoxin,A superfamily,,,nucleic acid level
+P02999,P02999|M1.1 precursor|Conus magus|Precursor|conotoxin|A superfamily|||nucleic acid level,Conus magus,Precursor,conotoxin,A superfamily,,,nucleic acid level
+P03000,P03000|EI precursor|Conus ermineus|Precursor|conotoxin|A superfamily|||nucleic acid level,Conus ermineus,Precursor,conotoxin,A superfamily,,,nucleic acid level
+P03002,P03002|E1.1 precursor|Conus ermineus|Precursor|conotoxin|A superfamily|||nucleic acid level,Conus ermineus,Precursor,conotoxin,A superfamily,,,nucleic acid level
+P03004,P03004|P1.10 precursor|Conus purpurascens|Precursor|conotoxin|A superfamily|||nucleic acid level,Conus purpurascens,Precursor,conotoxin,A superfamily,,,nucleic acid level
+P03006,P03006|Su1.6 precursor|Conus sulcatus|Precursor|conotoxin|A superfamily|||nucleic acid level,Conus sulcatus,Precursor,conotoxin,A superfamily,,,nucleic acid level
+P03008,P03008|Su1.7 precursor|Conus sulcatus|Precursor|conotoxin|A superfamily|||nucleic acid level,Conus sulcatus,Precursor,conotoxin,A superfamily,,,nucleic acid level
+P03010,P03010|Su1.8 precursor|Conus sulcatus|Precursor|conotoxin|A superfamily|||nucleic acid level,Conus sulcatus,Precursor,conotoxin,A superfamily,,,nucleic acid level
+P03011,P03011|PIA precursor|Conus purpurascens|Precursor|conotoxin|A superfamily|||nucleic acid level,Conus purpurascens,Precursor,conotoxin,A superfamily,,,nucleic acid level
+P03013,P03013|Lp5.3 precursor|Conus leopardus|Precursor|conotoxin|T superfamily|||nucleic acid level,Conus leopardus,Precursor,conotoxin,T superfamily,,,nucleic acid level
+P03015,P03015|Lp5.4 precursor|Conus leopardus|Precursor|conotoxin|T superfamily|||nucleic acid level,Conus leopardus,Precursor,conotoxin,T superfamily,,,nucleic acid level
+P03016,P03016|GmVIA precursor|Conus gloriamaris|Precursor|conotoxin|O1 superfamily|||nucleic acid level,Conus gloriamaris,Precursor,conotoxin,O1 superfamily,,,nucleic acid level
+P03018,P03018|Tx6.1 precursor|Conus textile|Precursor|conotoxin|O1 superfamily|||nucleic acid level,Conus textile,Precursor,conotoxin,O1 superfamily,,,nucleic acid level
+P03020,P03020|Om6.1 precursor|Conus omaria|Precursor|conotoxin|O1 superfamily|||nucleic acid level,Conus omaria,Precursor,conotoxin,O1 superfamily,,,nucleic acid level
+P03022,P03022|Da6.1 precursor|Conus dalli|Precursor|conotoxin|O1 superfamily|||nucleic acid level,Conus dalli,Precursor,conotoxin,O1 superfamily,,,nucleic acid level
+P03024,P03024|Da6.2 precursor|Conus dalli|Precursor|conotoxin|O1 superfamily|||nucleic acid level,Conus dalli,Precursor,conotoxin,O1 superfamily,,,nucleic acid level
+P03025,P03025|TxVIA precursor|Conus textile|Precursor|conotoxin|O1 superfamily|||nucleic acid level,Conus textile,Precursor,conotoxin,O1 superfamily,,,nucleic acid level
+P03026,P03026|TxVIA precursor|Conus textile|Precursor|conotoxin|O1 superfamily|||nucleic acid level,Conus textile,Precursor,conotoxin,O1 superfamily,,,nucleic acid level
+P03028,P03028|Ai6.1 precursor|Conus ammiralis|Precursor|conotoxin|O1 superfamily|||nucleic acid level,Conus ammiralis,Precursor,conotoxin,O1 superfamily,,,nucleic acid level
+P03030,P03030|Da6.3 precursor|Conus dalli|Precursor|conotoxin|O1 superfamily|||nucleic acid level,Conus dalli,Precursor,conotoxin,O1 superfamily,,,nucleic acid level
+P03032,P03032|Gm6.1 precursor|Conus gloriamaris|Precursor|conotoxin|O1 superfamily|||nucleic acid level,Conus gloriamaris,Precursor,conotoxin,O1 superfamily,,,nucleic acid level
+P03034,P03034|Gm6.2 precursor|Conus gloriamaris|Precursor|conotoxin|O1 superfamily|||nucleic acid level,Conus gloriamaris,Precursor,conotoxin,O1 superfamily,,,nucleic acid level
+P03036,P03036|Gm6.3 precursor|Conus gloriamaris|Precursor|conotoxin|O1 superfamily|||nucleic acid level,Conus gloriamaris,Precursor,conotoxin,O1 superfamily,,,nucleic acid level
+P03038,P03038|M6.1 precursor|Conus magus|Precursor|conotoxin|O1 superfamily|||nucleic acid level,Conus magus,Precursor,conotoxin,O1 superfamily,,,nucleic acid level
+P03039,P03039|TxO1 precursor|Conus textile|Precursor|conotoxin|O1 superfamily|||nucleic acid level,Conus textile,Precursor,conotoxin,O1 superfamily,,,nucleic acid level
+P03041,P03041|Om6.2 precursor|Conus omaria|Precursor|conotoxin|O1 superfamily|||nucleic acid level,Conus omaria,Precursor,conotoxin,O1 superfamily,,,nucleic acid level
+P03043,P03043|Om6.3 precursor|Conus omaria|Precursor|conotoxin|O1 superfamily|||nucleic acid level,Conus omaria,Precursor,conotoxin,O1 superfamily,,,nucleic acid level
+P03045,P03045|Om6.4 precursor|Conus omaria|Precursor|conotoxin|O1 superfamily|||nucleic acid level,Conus omaria,Precursor,conotoxin,O1 superfamily,,,nucleic acid level
+P03047,P03047|Au6.1 precursor|Conus aulicus|Precursor|conotoxin|O1 superfamily|||nucleic acid level,Conus aulicus,Precursor,conotoxin,O1 superfamily,,,nucleic acid level
+P03049,P03049|Au6.2 precursor|Conus aulicus|Precursor|conotoxin|O1 superfamily|||nucleic acid level,Conus aulicus,Precursor,conotoxin,O1 superfamily,,,nucleic acid level
+P03051,P03051|Da6.4 precursor|Conus dalli|Precursor|conotoxin|O1 superfamily|||nucleic acid level,Conus dalli,Precursor,conotoxin,O1 superfamily,,,nucleic acid level
+P03053,P03053|Di6.14 precursor|Conus distans|Precursor|conotoxin|O1 superfamily|||nucleic acid level,Conus distans,Precursor,conotoxin,O1 superfamily,,,nucleic acid level
+P03055,P03055|Pn6.1 precursor|Conus pennaceus|Precursor|conotoxin|O1 superfamily|||nucleic acid level,Conus pennaceus,Precursor,conotoxin,O1 superfamily,,,nucleic acid level
+P03057,P03057|Pn6.2 precursor|Conus pennaceus|Precursor|conotoxin|O1 superfamily|||nucleic acid level,Conus pennaceus,Precursor,conotoxin,O1 superfamily,,,nucleic acid level
+P03059,P03059|Pn6.3 precursor|Conus pennaceus|Precursor|conotoxin|O1 superfamily|||nucleic acid level,Conus pennaceus,Precursor,conotoxin,O1 superfamily,,,nucleic acid level
+P03061,P03061|Pn6.5 precursor|Conus pennaceus|Precursor|conotoxin|O1 superfamily|||nucleic acid level,Conus pennaceus,Precursor,conotoxin,O1 superfamily,,,nucleic acid level
+P03063,P03063|Ai6.2 precursor|Conus ammiralis|Precursor|conotoxin|O1 superfamily|||nucleic acid level,Conus ammiralis,Precursor,conotoxin,O1 superfamily,,,nucleic acid level
+P03065,P03065|Tx6.2 precursor|Conus textile|Precursor|conotoxin|O1 superfamily|||nucleic acid level,Conus textile,Precursor,conotoxin,O1 superfamily,,,nucleic acid level
+P03067,P03067|Mr6.1 precursor|Conus marmoreus|Precursor|conotoxin|O1 superfamily|||nucleic acid level,Conus marmoreus,Precursor,conotoxin,O1 superfamily,,,nucleic acid level
+P03068,P03068|MaIr332 precursor|Conus marmoreus|Precursor|conotoxin|O1 superfamily|||nucleic acid level,Conus marmoreus,Precursor,conotoxin,O1 superfamily,,,nucleic acid level
+P03070,P03070|Mr6.2 precursor|Conus marmoreus|Precursor|conotoxin|O1 superfamily|||nucleic acid level,Conus marmoreus,Precursor,conotoxin,O1 superfamily,,,nucleic acid level
+P03071,P03071|MaIr137 precursor|Conus marmoreus|Precursor|conotoxin|O1 superfamily|||nucleic acid level,Conus marmoreus,Precursor,conotoxin,O1 superfamily,,,nucleic acid level
+P03073,P03073|Om6.5 precursor|Conus omaria|Precursor|conotoxin|O1 superfamily|||nucleic acid level,Conus omaria,Precursor,conotoxin,O1 superfamily,,,nucleic acid level
+P03075,P03075|Au6.3 precursor|Conus aulicus|Precursor|conotoxin|O1 superfamily|||nucleic acid level,Conus aulicus,Precursor,conotoxin,O1 superfamily,,,nucleic acid level
+P03076,P03076|AVIA precursor|Conus aurisiacus|Precursor|conotoxin|O1 superfamily|||nucleic acid level,Conus aurisiacus,Precursor,conotoxin,O1 superfamily,,,nucleic acid level
+P03077,P03077|MVIA precursor|Conus magus|Precursor|conotoxin|O1 superfamily|||nucleic acid level,Conus magus,Precursor,conotoxin,O1 superfamily,,,nucleic acid level
+P03078,P03078|MVIC precursor|Conus magus|Precursor|conotoxin|O1 superfamily|||nucleic acid level,Conus magus,Precursor,conotoxin,O1 superfamily,,,nucleic acid level
+P03079,P03079|MVIB precursor|Conus magus|Precursor|conotoxin|O1 superfamily|||nucleic acid level,Conus magus,Precursor,conotoxin,O1 superfamily,,,nucleic acid level
+P03081,P03081|M6.2 precursor|Conus magus|Precursor|conotoxin|O1 superfamily|||nucleic acid level,Conus magus,Precursor,conotoxin,O1 superfamily,,,nucleic acid level
+P03082,P03082|EVIB precursor|Conus ermineus|Precursor|conotoxin|O1 superfamily|||nucleic acid level,Conus ermineus,Precursor,conotoxin,O1 superfamily,,,nucleic acid level
+P03084,P03084|P6.1 precursor|Conus purpurascens|Precursor|conotoxin|O1 superfamily|||nucleic acid level,Conus purpurascens,Precursor,conotoxin,O1 superfamily,,,nucleic acid level
+P03085,P03085|Conotoxin-9 precursor|Conus striatus|Precursor|conotoxin|O1 superfamily|||nucleic acid level,Conus striatus,Precursor,conotoxin,O1 superfamily,,,nucleic acid level
+P03086,P03086|CVIE-2 precursor|Conus catus|Precursor|conotoxin|O1 superfamily|||nucleic acid level,Conus catus,Precursor,conotoxin,O1 superfamily,,,nucleic acid level
+P03088,P03088|C6.1 precursor|Conus catus|Precursor|conotoxin|O1 superfamily|||nucleic acid level,Conus catus,Precursor,conotoxin,O1 superfamily,,,nucleic acid level
+P03090,P03090|Di6.15 precursor|Conus distans|Precursor|conotoxin|O1 superfamily|||nucleic acid level,Conus distans,Precursor,conotoxin,O1 superfamily,,,nucleic acid level
+P03092,P03092|Gm6.4 precursor|Conus gloriamaris|Precursor|conotoxin|O1 superfamily|||nucleic acid level,Conus gloriamaris,Precursor,conotoxin,O1 superfamily,,,nucleic acid level
+P03094,P03094|Da6.5 precursor|Conus dalli|Precursor|conotoxin|O1 superfamily|||nucleic acid level,Conus dalli,Precursor,conotoxin,O1 superfamily,,,nucleic acid level
+P03096,P03096|Pn6.6 precursor|Conus pennaceus|Precursor|conotoxin|O1 superfamily|||nucleic acid level,Conus pennaceus,Precursor,conotoxin,O1 superfamily,,,nucleic acid level
+P03098,P03098|Di6.16 precursor|Conus distans|Precursor|conotoxin|O1 superfamily|||nucleic acid level,Conus distans,Precursor,conotoxin,O1 superfamily,,,nucleic acid level
+P03100,P03100|Ai6.3 precursor|Conus ammiralis|Precursor|conotoxin|O1 superfamily|||nucleic acid level,Conus ammiralis,Precursor,conotoxin,O1 superfamily,,,nucleic acid level
+P03102,P03102|Tx6.3 precursor|Conus textile|Precursor|conotoxin|O1 superfamily|||nucleic acid level,Conus textile,Precursor,conotoxin,O1 superfamily,,,nucleic acid level
+P03104,P03104|Gm6.5 precursor|Conus gloriamaris|Precursor|conotoxin|O1 superfamily|||nucleic acid level,Conus gloriamaris,Precursor,conotoxin,O1 superfamily,,,nucleic acid level
+P03106,P03106|Om6.6 precursor|Conus omaria|Precursor|conotoxin|O1 superfamily|||nucleic acid level,Conus omaria,Precursor,conotoxin,O1 superfamily,,,nucleic acid level
+P03108,P03108|Da6.6 precursor|Conus dalli|Precursor|conotoxin|O1 superfamily|||nucleic acid level,Conus dalli,Precursor,conotoxin,O1 superfamily,,,nucleic acid level
+P03110,P03110|Da6.7 precursor|Conus dalli|Precursor|conotoxin|O1 superfamily|||nucleic acid level,Conus dalli,Precursor,conotoxin,O1 superfamily,,,nucleic acid level
+P03112,P03112|Pn6.7 precursor|Conus pennaceus|Precursor|conotoxin|O1 superfamily|||nucleic acid level,Conus pennaceus,Precursor,conotoxin,O1 superfamily,,,nucleic acid level
+P03114,P03114|G6.2 precursor|Conus geographus|Precursor|conotoxin|O1 superfamily|||nucleic acid level,Conus geographus,Precursor,conotoxin,O1 superfamily,,,nucleic acid level
+P03116,P03116|Qc6.1 precursor|Conus quercinus|Precursor|conotoxin|O1 superfamily|||nucleic acid level,Conus quercinus,Precursor,conotoxin,O1 superfamily,,,nucleic acid level
+P03118,P03118|Lp6.1 precursor|Conus leopardus|Precursor|conotoxin|O1 superfamily|||nucleic acid level,Conus leopardus,Precursor,conotoxin,O1 superfamily,,,nucleic acid level
+P03120,P03120|Mr6.3 precursor|Conus marmoreus|Precursor|conotoxin|O1 superfamily|||nucleic acid level,Conus marmoreus,Precursor,conotoxin,O1 superfamily,,,nucleic acid level
+P03122,P03122|Qc6.2 precursor|Conus quercinus|Precursor|conotoxin|O1 superfamily|||nucleic acid level,Conus quercinus,Precursor,conotoxin,O1 superfamily,,,nucleic acid level
+P03124,P03124|Ar6.1 precursor|Conus arenatus|Precursor|conotoxin|O1 superfamily|||nucleic acid level,Conus arenatus,Precursor,conotoxin,O1 superfamily,,,nucleic acid level
+P03126,P03126|Ts6.1 precursor|Conus tessulatus|Precursor|conotoxin|O1 superfamily|||nucleic acid level,Conus tessulatus,Precursor,conotoxin,O1 superfamily,,,nucleic acid level
+P03127,P03127|Conotoxin-1 precursor|Conus imperialis|Precursor|conotoxin|O1 superfamily|||nucleic acid level,Conus imperialis,Precursor,conotoxin,O1 superfamily,,,nucleic acid level
+P03129,P03129|Ca6.1 precursor|Conus caracteristicus|Precursor|conotoxin|O1 superfamily|||nucleic acid level,Conus caracteristicus,Precursor,conotoxin,O1 superfamily,,,nucleic acid level
+P03131,P03131|Lv6.1 precursor|Conus lividus|Precursor|conotoxin|O1 superfamily|||nucleic acid level,Conus lividus,Precursor,conotoxin,O1 superfamily,,,nucleic acid level
+P03133,P03133|Pu6.2 precursor|Conus pulicarius|Precursor|conotoxin|O1 superfamily|||nucleic acid level,Conus pulicarius,Precursor,conotoxin,O1 superfamily,,,nucleic acid level
+P03135,P03135|Ge6.1 precursor|Conus generalis|Precursor|conotoxin|O1 superfamily|||nucleic acid level,Conus generalis,Precursor,conotoxin,O1 superfamily,,,nucleic acid level
+P03137,P03137|Ep6.1 precursor|Conus episcopatus|Precursor|conotoxin|O1 superfamily|||nucleic acid level,Conus episcopatus,Precursor,conotoxin,O1 superfamily,,,nucleic acid level
+P03138,P03138|BVIA precursor|Conus bullatus|Precursor|conotoxin|O1 superfamily|||nucleic acid level,Conus bullatus,Precursor,conotoxin,O1 superfamily,,,nucleic acid level
+P03139,P03139|CnVIA precursor|Conus consors|Precursor|conotoxin|O1 superfamily|||nucleic acid level,Conus consors,Precursor,conotoxin,O1 superfamily,,,nucleic acid level
+P03141,P03141|Cn6.1 precursor|Conus consors|Precursor|conotoxin|O1 superfamily|||nucleic acid level,Conus consors,Precursor,conotoxin,O1 superfamily,,,nucleic acid level
+P03142,P03142|SmVIA precursor|Conus stercusmuscarum|Precursor|conotoxin|O1 superfamily|||nucleic acid level,Conus stercusmuscarum,Precursor,conotoxin,O1 superfamily,,,nucleic acid level
+P03144,P03144|St6.1 precursor|Conus striolatus|Precursor|conotoxin|O1 superfamily|||nucleic acid level,Conus striolatus,Precursor,conotoxin,O1 superfamily,,,nucleic acid level
+P03146,P03146|St6.2 precursor|Conus striolatus|Precursor|conotoxin|O1 superfamily|||nucleic acid level,Conus striolatus,Precursor,conotoxin,O1 superfamily,,,nucleic acid level
+P03148,P03148|St6.3 precursor|Conus striolatus|Precursor|conotoxin|O1 superfamily|||nucleic acid level,Conus striolatus,Precursor,conotoxin,O1 superfamily,,,nucleic acid level
+P03586,P03586|Cp20.1 precursor|Conus capitaneus|Precursor|conotoxin|D superfamily|||nucleic acid level,Conus capitaneus,Precursor,conotoxin,D superfamily,,,nucleic acid level
+P03588,P03588|Cp20.2 precursor|Conus capitaneus|Precursor|conotoxin|D superfamily|||nucleic acid level,Conus capitaneus,Precursor,conotoxin,D superfamily,,,nucleic acid level
+P03590,P03590|Cp20.3 precursor|Conus capitaneus|Precursor|conotoxin|D superfamily|||nucleic acid level,Conus capitaneus,Precursor,conotoxin,D superfamily,,,nucleic acid level
+P03592,P03592|Cp20.4 precursor|Conus capitaneus|Precursor|conotoxin|D superfamily|||nucleic acid level,Conus capitaneus,Precursor,conotoxin,D superfamily,,,nucleic acid level
+P03594,P03594|Cp20.5 precursor|Conus capitaneus|Precursor|conotoxin|D superfamily|||nucleic acid level,Conus capitaneus,Precursor,conotoxin,D superfamily,,,nucleic acid level
+P03596,P03596|Ms20.1 precursor|Conus mustelinus|Precursor|conotoxin|D superfamily|||nucleic acid level,Conus mustelinus,Precursor,conotoxin,D superfamily,,,nucleic acid level
+P03598,P03598|Ms20.2 precursor|Conus mustelinus|Precursor|conotoxin|D superfamily|||nucleic acid level,Conus mustelinus,Precursor,conotoxin,D superfamily,,,nucleic acid level
+P03600,P03600|Ms20.3 precursor|Conus mustelinus|Precursor|conotoxin|D superfamily|||nucleic acid level,Conus mustelinus,Precursor,conotoxin,D superfamily,,,nucleic acid level
+P03602,P03602|Ms20.4 precursor|Conus mustelinus|Precursor|conotoxin|D superfamily|||nucleic acid level,Conus mustelinus,Precursor,conotoxin,D superfamily,,,nucleic acid level
+P03604,P03604|Ms20.5 precursor|Conus mustelinus|Precursor|conotoxin|D superfamily|||nucleic acid level,Conus mustelinus,Precursor,conotoxin,D superfamily,,,nucleic acid level
+P03606,P03606|Mi20.1 precursor|Conus miles|Precursor|conotoxin|D superfamily|||nucleic acid level,Conus miles,Precursor,conotoxin,D superfamily,,,nucleic acid level
+P03608,P03608|Mi20.2 precursor|Conus miles|Precursor|conotoxin|D superfamily|||nucleic acid level,Conus miles,Precursor,conotoxin,D superfamily,,,nucleic acid level
+P03610,P03610|Mi20.3 precursor|Conus miles|Precursor|conotoxin|D superfamily|||nucleic acid level,Conus miles,Precursor,conotoxin,D superfamily,,,nucleic acid level
+P03612,P03612|Mi20.4 precursor|Conus miles|Precursor|conotoxin|D superfamily|||nucleic acid level,Conus miles,Precursor,conotoxin,D superfamily,,,nucleic acid level
+P03614,P03614|Rt20.1 precursor|Conus rattus|Precursor|conotoxin|D superfamily|||nucleic acid level,Conus rattus,Precursor,conotoxin,D superfamily,,,nucleic acid level
+P03616,P03616|Rt20.2 precursor|Conus rattus|Precursor|conotoxin|D superfamily|||nucleic acid level,Conus rattus,Precursor,conotoxin,D superfamily,,,nucleic acid level
+P03618,P03618|Vt20.1 precursor|Conus vitulinus|Precursor|conotoxin|D superfamily|||nucleic acid level,Conus vitulinus,Precursor,conotoxin,D superfamily,,,nucleic acid level
+P03630,P03630|VxXXA precursor|Conus vexillum|Precursor|conotoxin|D superfamily|||nucleic acid level,Conus vexillum,Precursor,conotoxin,D superfamily,,,nucleic acid level
+P03686,P03686|Conantokin-Su precursor|Conus sulcatus|Precursor|conantokin|B1 superfamily|||nucleic acid level,Conus sulcatus,Precursor,conantokin,B1 superfamily,,,nucleic acid level
+P03795,P03795|Ca11B precursor|Conus caracteristicus|Precursor|conotoxin|I3 superfamily|||nucleic acid level,Conus caracteristicus,Precursor,conotoxin,I3 superfamily,,,nucleic acid level
+P03797,P03797|Ca11.3 precursor|Conus caracteristicus|Precursor|conotoxin|I3 superfamily|||nucleic acid level,Conus caracteristicus,Precursor,conotoxin,I3 superfamily,,,nucleic acid level
+P03854,P03854|Lt10 precursor|Conus litteratus|Precursor|conotoxin|M superfamily|||nucleic acid level,Conus litteratus,Precursor,conotoxin,M superfamily,,,nucleic acid level
+P03856,P03856|Eu5 precursor|Conus eburneus|Precursor|conotoxin|M superfamily|||nucleic acid level,Conus eburneus,Precursor,conotoxin,M superfamily,,,nucleic acid level
+P03895,P03895|SrXIA precursor|Conus spurius|Precursor|conotoxin|I2 superfamily|||nucleic acid level,Conus spurius,Precursor,conotoxin,I2 superfamily,,,nucleic acid level
+P03896,P03896|Sr11B precursor|Conus spurius|Precursor|conotoxin|I2 superfamily|||nucleic acid level,Conus spurius,Precursor,conotoxin,I2 superfamily,,,nucleic acid level
+P03962,P03962|Conkunitzin-Cal9.1a precursor|Conus californicus|Precursor|conkunitzin|Divergent MTFLLLLVSV|||nucleic acid level,Conus californicus,Precursor,conkunitzin,Divergent MTFLLLLVSV,,,nucleic acid level
+P04204,P04204|Pu3.4 precursor|Conus pulicarius|Precursor|conotoxin|M superfamily||III|nucleic acid level,Conus pulicarius,Precursor,conotoxin,M superfamily,,III,nucleic acid level
+P04206,P04206|Pu3.5 precursor|Conus pulicarius|Precursor|conotoxin|M superfamily||III|nucleic acid level,Conus pulicarius,Precursor,conotoxin,M superfamily,,III,nucleic acid level
+P04219,P04219|Vt3.1 precursor|Conus vitulinus|Precursor|unclassified|M superfamily|||nucleic acid level,Conus vitulinus,Precursor,unclassified,M superfamily,,,nucleic acid level
+P04221,P04221|GII precursor|Conus geographus|Precursor|conotoxin|A superfamily|||nucleic acid level,Conus geographus,Precursor,conotoxin,A superfamily,,,nucleic acid level
+P04242,P04242|FVIA precursor|Conus fulmen|Precursor|conotoxin||||nucleic acid level,Conus fulmen,Precursor,conotoxin,,,,nucleic acid level
+P04504,P04504|Eu14.7 precursor|Conus eburneus|Precursor|conotoxin|L superfamily|||nucleic acid level,Conus eburneus,Precursor,conotoxin,L superfamily,,,nucleic acid level
+P04506,P04506|Eu1.3 precursor|Conus eburneus|Precursor|conotoxin|A superfamily|||nucleic acid level,Conus eburneus,Precursor,conotoxin,A superfamily,,,nucleic acid level
+P04508,P04508|Eu6.5 precursor|Conus eburneus|Precursor|conotoxin|O1 superfamily|||nucleic acid level,Conus eburneus,Precursor,conotoxin,O1 superfamily,,,nucleic acid level
+P04510,P04510|Vi11.2 precursor|Conus virgo|Precursor|conotoxin|I2 superfamily|||nucleic acid level,Conus virgo,Precursor,conotoxin,I2 superfamily,,,nucleic acid level
+P04522,P04522|Im11.7 precursor|Conus imperialis|Precursor|conotoxin|I2 superfamily|||nucleic acid level,Conus imperialis,Precursor,conotoxin,I2 superfamily,,,nucleic acid level
+P04541,P04541|Lt28.2 precursor|Conus litteratus|Precursor|conotoxin|D superfamily||XXVIII|nucleic acid level,Conus litteratus,Precursor,conotoxin,D superfamily,,XXVIII,nucleic acid level
+P04542,P04542|Lt28.3 precursor|Conus litteratus|Precursor|conotoxin|D superfamily||XXVIII|nucleic acid level,Conus litteratus,Precursor,conotoxin,D superfamily,,XXVIII,nucleic acid level
+P04543,P04543|Lt28.4 precursor|Conus litteratus|Precursor|conotoxin|D superfamily||XXVIII|nucleic acid level,Conus litteratus,Precursor,conotoxin,D superfamily,,XXVIII,nucleic acid level
+P04545,P04545|Lt28.6 precursor|Conus litteratus|Precursor|conotoxin|D superfamily||XXVIII|nucleic acid level,Conus litteratus,Precursor,conotoxin,D superfamily,,XXVIII,nucleic acid level
+P04546,P04546|Lt28.7 precursor|Conus litteratus|Precursor|conotoxin|D superfamily||XXVIII|nucleic acid level,Conus litteratus,Precursor,conotoxin,D superfamily,,XXVIII,nucleic acid level
+P04717,P04717|Bt3-D02 precursor|Conus betulinus|Precursor|conotoxin|M superfamily|||nucleic acid level,Conus betulinus,Precursor,conotoxin,M superfamily,,,nucleic acid level
+P04796,P04796|Vr3-NPP01 precursor|Conus varius|Precursor|conotoxin|M superfamily|||nucleic acid level,Conus varius,Precursor,conotoxin,M superfamily,,,nucleic acid level
+P04894,P04894|Vt3-EP01 precursor|Conus vitulinus|Precursor|conotoxin|M superfamily|||nucleic acid level,Conus vitulinus,Precursor,conotoxin,M superfamily,,,nucleic acid level
+P04900,P04900|Vr3-VP06 precursor|Conus varius|Precursor|conotoxin|M superfamily|||nucleic acid level,Conus varius,Precursor,conotoxin,M superfamily,,,nucleic acid level
+P05221,P05221|Im23a precursor|Conus imperialis|Precursor|conotoxin|K superfamily||XXIII|nucleic acid level,Conus imperialis,Precursor,conotoxin,K superfamily,,XXIII,nucleic acid level
+P05222,P05222|Im23b precursor|Conus imperialis|Precursor|conotoxin|K superfamily||XXIII|nucleic acid level,Conus imperialis,Precursor,conotoxin,K superfamily,,XXIII,nucleic acid level
+P05534,P05534|Conoporin-Cn1 precursor|Conus consors|Precursor|conoporin||||protein level,Conus consors,Precursor,conoporin,,,,protein level
+P05678,P05678|conantokin-Pu3 precursor|Conus pulicarius|Precursor|conantokin||||nucleic acid level,Conus pulicarius,Precursor,conantokin,,,,nucleic acid level
+P06035,P06035|Lv1d precursor|Conus lividus|Precursor|conotoxin|A superfamily|||nucleic acid level,Conus lividus,Precursor,conotoxin,A superfamily,,,nucleic acid level
+P06114,P06114|Ca5.6 precursor|Conus caracteristicus|Precursor|conotoxin|T superfamily||V|nucleic acid level,Conus caracteristicus,Precursor,conotoxin,T superfamily,,V,nucleic acid level
+P06722,P06722|Mi27.2 precursor|Conus miles|Precursor|conotoxin|G2 superfamily||XXVII|nucleic acid level,Conus miles,Precursor,conotoxin,G2 superfamily,,XXVII,nucleic acid level
+P06725,P06725|ErVIA precursor|Conus eburneus|Precursor|conotoxin||||nucleic acid level,Conus eburneus,Precursor,conotoxin,,,,nucleic acid level
+P06727,P06727|elevenin-Vc1 precursor|Conus victoriae|Precursor|elvenin||||protein level,Conus victoriae,Precursor,elvenin,,,,protein level
+P06730,P06730|prohormone-4-Vc1 precursor|Conus victoriae|Precursor|prohormone-4||||protein level,Conus victoriae,Precursor,prohormone-4,,,,protein level
+P06807,P06807|FrVIA precursor|Conus frigidus|Precursor|conotoxin|O1 superfamily||VI/VII|nucleic acid level,Conus frigidus,Precursor,conotoxin,O1 superfamily,,VI/VII,nucleic acid level
+P06812,P06812|conorfamide-Vc1 precursor|Conus victoriae|Precursor|conorfamide||||nucleic acid level,Conus victoriae,Precursor,conorfamide,,,,nucleic acid level
+P06868,P06868|thyrostimulin-alpha 2 precursor|Conus victoriae|Precursor|thyrostimulin||||nucleic acid level,Conus victoriae,Precursor,thyrostimulin,,,,nucleic acid level
+P06869,P06869|thyrostimulin-beta 5 precursor|Conus victoriae|Precursor|thyrostimulin||||nucleic acid level,Conus victoriae,Precursor,thyrostimulin,,,,nucleic acid level
+P06870,P06870|Con-ins G1 precursor|Conus geographus|Precursor|coninsulin|Insulin superfamily|||nucleic acid level,Conus geographus,Precursor,coninsulin,Insulin superfamily,,,nucleic acid level
+P06871,P06871|Con-ins G1b precursor|Conus geographus|Precursor|coninsulin|Insulin superfamily|||nucleic acid level,Conus geographus,Precursor,coninsulin,Insulin superfamily,,,nucleic acid level
+P06872,P06872|Con-ins G1c precursor|Conus geographus|Precursor|coninsulin|Insulin superfamily|||nucleic acid level,Conus geographus,Precursor,coninsulin,Insulin superfamily,,,nucleic acid level
+P06892,P06892|Con-ins G2 precursor|Conus geographus|Precursor|coninsulin|Insulin superfamily|||nucleic acid level,Conus geographus,Precursor,coninsulin,Insulin superfamily,,,nucleic acid level
+P06893,P06893|Con-ins G2b precursor|Conus geographus|Precursor|coninsulin|Insulin superfamily|||nucleic acid level,Conus geographus,Precursor,coninsulin,Insulin superfamily,,,nucleic acid level
+P06894,P06894|Con-ins G3 precursor|Conus geographus|Precursor|coninsulin|Insulin superfamily|||nucleic acid level,Conus geographus,Precursor,coninsulin,Insulin superfamily,,,nucleic acid level
+P06895,P06895|Con-ins G3b precursor|Conus geographus|Precursor|coninsulin|Insulin superfamily|||nucleic acid level,Conus geographus,Precursor,coninsulin,Insulin superfamily,,,nucleic acid level
+P06896,P06896|Con-ins T1 precursor|Conus tulipa|Precursor|coninsulin|Insulin superfamily|||nucleic acid level,Conus tulipa,Precursor,coninsulin,Insulin superfamily,,,nucleic acid level
+P06930,P06930|Con-ins T2 precursor|Conus tulipa|Precursor|coninsulin|Insulin superfamily|||nucleic acid level,Conus tulipa,Precursor,coninsulin,Insulin superfamily,,,nucleic acid level
+P06931,P06931|Con-ins T3 precursor|Conus tulipa|Precursor|coninsulin|Insulin superfamily|||nucleic acid level,Conus tulipa,Precursor,coninsulin,Insulin superfamily,,,nucleic acid level
+P06940,P06940|Con-ins Tx1 precursor|Conus textile|Precursor|coninsulin|Insulin superfamily|||nucleic acid level,Conus textile,Precursor,coninsulin,Insulin superfamily,,,nucleic acid level
+P06941,P06941|Con-ins Mr1 precursor|Conus marmoreus|Precursor|coninsulin|Insulin superfamily|||nucleic acid level,Conus marmoreus,Precursor,coninsulin,Insulin superfamily,,,nucleic acid level
+P06942,P06942|Con-ins Im1 precursor|Conus imperialis|Precursor|coninsulin|Insulin superfamily|||nucleic acid level,Conus imperialis,Precursor,coninsulin,Insulin superfamily,,,nucleic acid level
+P06943,P06943|Con-ins Im2 precursor|Conus imperialis|Precursor|coninsulin|Insulin superfamily|||nucleic acid level,Conus imperialis,Precursor,coninsulin,Insulin superfamily,,,nucleic acid level
+P06944,P06944|Con-ins Q1 precursor|Conus quercinus|Precursor|coninsulin|Insulin superfamily|||nucleic acid level,Conus quercinus,Precursor,coninsulin,Insulin superfamily,,,nucleic acid level
+P06945,P06945|Con-ins Q1b precursor	|Conus quercinus|Precursor|coninsulin|Insulin superfamily|||nucleic acid level,Conus quercinus,Precursor,coninsulin,Insulin superfamily,,,nucleic acid level
+P06946,P06946|Con-ins F1 precursor|Conus floridulus|Precursor|coninsulin|Insulin superfamily|||nucleic acid level,Conus floridulus,Precursor,coninsulin,Insulin superfamily,,,nucleic acid level
+P06947,P06947|Con-ins F2 precursor|Conus floridulus|Precursor|coninsulin|Insulin superfamily|||nucleic acid level,Conus floridulus,Precursor,coninsulin,Insulin superfamily,,,nucleic acid level
+P06948,P06948|Con-ins F2b precursor|Conus floridulus|Precursor|coninsulin|Insulin superfamily|||nucleic acid level,Conus floridulus,Precursor,coninsulin,Insulin superfamily,,,nucleic acid level
+P06949,P06949|Con-ins F2c precursor|Conus floridulus|Precursor|coninsulin|Insulin superfamily|||nucleic acid level,Conus floridulus,Precursor,coninsulin,Insulin superfamily,,,nucleic acid level
+P06950,P06950|Con-ins Me1 precursor|Conus memiae|Precursor|coninsulin|Insulin superfamily|||nucleic acid level,Conus memiae,Precursor,coninsulin,Insulin superfamily,,,nucleic acid level
+P07010,P07010|VxXXD precursor|Conus vexillum|Precursor|conotoxin|D superfamily||XX|nucleic acid level,Conus vexillum,Precursor,conotoxin,D superfamily,,XX,nucleic acid level
+P07012,P07012|Vx217 precursor|Conus vexillum|Precursor|conantokin|O2 superfamily||VI/VII|nucleic acid level,Conus vexillum,Precursor,conantokin,O2 superfamily,,VI/VII,nucleic acid level
+P07014,P07014|Vx30 precursor|Conus vexillum|Precursor|con-ikot-ikot||||nucleic acid level,Conus vexillum,Precursor,con-ikot-ikot,,,,nucleic acid level
+P07016,P07016|Vx28 precursor|Conus vexillum|Precursor|con-ikot-ikot||||nucleic acid level,Conus vexillum,Precursor,con-ikot-ikot,,,,nucleic acid level
+P07017,P07017|Vx44 precursor|Conus vexillum|Precursor|con-ikot-ikot||||nucleic acid level,Conus vexillum,Precursor,con-ikot-ikot,,,,nucleic acid level
+P07019,P07019|Vx23 precursor|Conus vexillum|Precursor|con-ikot-ikot||||nucleic acid level,Conus vexillum,Precursor,con-ikot-ikot,,,,nucleic acid level
+P07020,P07020|Vx45 precursor|Conus vexillum|Precursor|con-ikot-ikot||||nucleic acid level,Conus vexillum,Precursor,con-ikot-ikot,,,,nucleic acid level
+P07022,P07022|Vx22 precursor|Conus vexillum|Precursor|con-ikot-ikot||||nucleic acid level,Conus vexillum,Precursor,con-ikot-ikot,,,,nucleic acid level
+P07023,P07023|Vx24 precursor|Conus vexillum|Precursor|con-ikot-ikot||||nucleic acid level,Conus vexillum,Precursor,con-ikot-ikot,,,,nucleic acid level
+P07025,P07025|Vx31 precursor|Conus vexillum|Precursor|con-ikot-ikot||||nucleic acid level,Conus vexillum,Precursor,con-ikot-ikot,,,,nucleic acid level
+P07026,P07026|Vx215 precursor|Conus vexillum|Precursor|conotoxin|O1 superfamily|||nucleic acid level,Conus vexillum,Precursor,conotoxin,O1 superfamily,,,nucleic acid level
+P07027,P07027|Vx220 precursor|Conus vexillum|Precursor|conotoxin|T superfamily|||nucleic acid level,Conus vexillum,Precursor,conotoxin,T superfamily,,,nucleic acid level
+P07029,P07029|Vx196 precursor|Conus vexillum|Precursor|conotoxin|M superfamily||IX|nucleic acid level,Conus vexillum,Precursor,conotoxin,M superfamily,,IX,nucleic acid level
+P07031,P07031|Vx16 precursor|Conus vexillum|Precursor|conantokin|B2 superfamily|||nucleic acid level,Conus vexillum,Precursor,conantokin,B2 superfamily,,,nucleic acid level
+P07033,P07033|Vx186 precursor|Conus vexillum|Precursor|conotoxin|I2 superfamily|||nucleic acid level,Conus vexillum,Precursor,conotoxin,I2 superfamily,,,nucleic acid level
+P07034,P07034|Vx198 precursor|Conus vexillum|Precursor|conotoxin|M superfamily|||nucleic acid level,Conus vexillum,Precursor,conotoxin,M superfamily,,,nucleic acid level
+P07035,P07035|Vx197 precursor|Conus vexillum|Precursor|conotoxin|M superfamily|||nucleic acid level,Conus vexillum,Precursor,conotoxin,M superfamily,,,nucleic acid level
+P07036,P07036|Vx116 precursor|Conus vexillum|Precursor|conotoxin|D superfamily|||nucleic acid level,Conus vexillum,Precursor,conotoxin,D superfamily,,,nucleic acid level
+P07037,P07037|Vx99 precursor|Conus vexillum|Precursor|conotoxin|D superfamily|||nucleic acid level,Conus vexillum,Precursor,conotoxin,D superfamily,,,nucleic acid level
+P07038,P07038|Vx101 precursor|Conus vexillum|Precursor|conotoxin|D superfamily|||nucleic acid level,Conus vexillum,Precursor,conotoxin,D superfamily,,,nucleic acid level
+P07039,P07039|Vx102 precursor|Conus vexillum|Precursor|conotoxin|D superfamily|||nucleic acid level,Conus vexillum,Precursor,conotoxin,D superfamily,,,nucleic acid level
+P07040,P07040|Vx109 precursor|Conus vexillum|Precursor|conotoxin|D superfamily|||nucleic acid level,Conus vexillum,Precursor,conotoxin,D superfamily,,,nucleic acid level
+P07041,P07041|Vx130 precursor|Conus vexillum|Precursor|conotoxin|D superfamily|||nucleic acid level,Conus vexillum,Precursor,conotoxin,D superfamily,,,nucleic acid level
+P07042,P07042|Vx132 precursor|Conus vexillum|Precursor|conotoxin|D superfamily|||nucleic acid level,Conus vexillum,Precursor,conotoxin,D superfamily,,,nucleic acid level
+P07043,P07043|Vx135 precursor|Conus vexillum|Precursor|conotoxin|D superfamily|||nucleic acid level,Conus vexillum,Precursor,conotoxin,D superfamily,,,nucleic acid level
+P07044,P07044|Vx141 precursor|Conus vexillum|Precursor|conotoxin|D superfamily|||nucleic acid level,Conus vexillum,Precursor,conotoxin,D superfamily,,,nucleic acid level
+P07045,P07045|Vx142 precursor|Conus vexillum|Precursor|conotoxin|D superfamily|||nucleic acid level,Conus vexillum,Precursor,conotoxin,D superfamily,,,nucleic acid level
+P07046,P07046|Vx154 precursor|Conus vexillum|Precursor|conotoxin|D superfamily|||nucleic acid level,Conus vexillum,Precursor,conotoxin,D superfamily,,,nucleic acid level
+P07047,P07047|Vx163 precursor|Conus vexillum|Precursor|conotoxin|D superfamily|||nucleic acid level,Conus vexillum,Precursor,conotoxin,D superfamily,,,nucleic acid level
+P07048,P07048|Vx164 precursor|Conus vexillum|Precursor|conotoxin|D superfamily|||nucleic acid level,Conus vexillum,Precursor,conotoxin,D superfamily,,,nucleic acid level
+P07049,P07049|Vx184 precursor|Conus vexillum|Precursor|conotoxin|D superfamily|||nucleic acid level,Conus vexillum,Precursor,conotoxin,D superfamily,,,nucleic acid level
+P07050,P07050|Vx105 precursor|Conus vexillum|Precursor|conotoxin|D superfamily||XX|nucleic acid level,Conus vexillum,Precursor,conotoxin,D superfamily,,XX,nucleic acid level
+P07052,P07052|Vx185 precursor|Conus vexillum|Precursor|conotoxin|F superfamily|||nucleic acid level,Conus vexillum,Precursor,conotoxin,F superfamily,,,nucleic acid level
+P07054,P07054|Vx65 precursor|Conus vexillum|Precursor|con-ikot-ikot||||nucleic acid level,Conus vexillum,Precursor,con-ikot-ikot,,,,nucleic acid level
+P07056,P07056|Vx78 precursor|Conus vexillum|Precursor|con-ikot-ikot||||nucleic acid level,Conus vexillum,Precursor,con-ikot-ikot,,,,nucleic acid level
+P07058,P07058|Vx79 precursor|Conus vexillum|Precursor|con-ikot-ikot||||nucleic acid level,Conus vexillum,Precursor,con-ikot-ikot,,,,nucleic acid level
+P07060,P07060|Vx221 precursor|Conus vexillum|Precursor|conantokin|B2 superfamily|||nucleic acid level,Conus vexillum,Precursor,conantokin,B2 superfamily,,,nucleic acid level
+P07062,P07062|Vx3 precursor|Conus vexillum|Precursor|conantokin|B2 superfamily|||nucleic acid level,Conus vexillum,Precursor,conantokin,B2 superfamily,,,nucleic acid level
+P07065,P07065|Vx4 precursor|Conus vexillum|Precursor|conantokin|B2 superfamily|||nucleic acid level,Conus vexillum,Precursor,conantokin,B2 superfamily,,,nucleic acid level
+P07067,P07067|Vx5 precursor|Conus vexillum|Precursor|conantokin|B2 superfamily|||nucleic acid level,Conus vexillum,Precursor,conantokin,B2 superfamily,,,nucleic acid level
+P07069,P07069|Vx6 precursor|Conus vexillum|Precursor|conantokin|B2 superfamily|||nucleic acid level,Conus vexillum,Precursor,conantokin,B2 superfamily,,,nucleic acid level
+P07071,P07071|Vx7 precursor|Conus vexillum|Precursor|conantokin|B2 superfamily|||nucleic acid level,Conus vexillum,Precursor,conantokin,B2 superfamily,,,nucleic acid level
+P07073,P07073|Vx8 precursor|Conus vexillum|Precursor|conantokin|B2 superfamily|||nucleic acid level,Conus vexillum,Precursor,conantokin,B2 superfamily,,,nucleic acid level
+P07075,P07075|Vx9 precursor|Conus vexillum|Precursor|conantokin|B2 superfamily|||nucleic acid level,Conus vexillum,Precursor,conantokin,B2 superfamily,,,nucleic acid level
+P07077,P07077|Vx10 precursor|Conus vexillum|Precursor|conantokin|B2 superfamily|||nucleic acid level,Conus vexillum,Precursor,conantokin,B2 superfamily,,,nucleic acid level
+P07079,P07079|Vx11 precursor|Conus vexillum|Precursor|conantokin|B2 superfamily|||nucleic acid level,Conus vexillum,Precursor,conantokin,B2 superfamily,,,nucleic acid level
+P07081,P07081|Vx12 precursor|Conus vexillum|Precursor|conantokin|B2 superfamily|||nucleic acid level,Conus vexillum,Precursor,conantokin,B2 superfamily,,,nucleic acid level
+P07083,P07083|Vx13 precursor|Conus vexillum|Precursor|conantokin|B2 superfamily|||nucleic acid level,Conus vexillum,Precursor,conantokin,B2 superfamily,,,nucleic acid level
+P07085,P07085|Vx14 precursor|Conus vexillum|Precursor|conantokin|B2 superfamily|||nucleic acid level,Conus vexillum,Precursor,conantokin,B2 superfamily,,,nucleic acid level
+P07087,P07087|Vx15 precursor|Conus vexillum|Precursor|conantokin|B2 superfamily|||nucleic acid level,Conus vexillum,Precursor,conantokin,B2 superfamily,,,nucleic acid level
+P07089,P07089|Vx17 precursor|Conus vexillum|Precursor|conantokin|B2 superfamily|||nucleic acid level,Conus vexillum,Precursor,conantokin,B2 superfamily,,,nucleic acid level
+P07091,P07091|Vx18 precursor|Conus vexillum|Precursor|conantokin|B2 superfamily|||nucleic acid level,Conus vexillum,Precursor,conantokin,B2 superfamily,,,nucleic acid level
+P07093,P07093|Vx19 precursor|Conus vexillum|Precursor|conantokin|B2 superfamily|||nucleic acid level,Conus vexillum,Precursor,conantokin,B2 superfamily,,,nucleic acid level
+P07095,P07095|Vx20 precursor|Conus vexillum|Precursor|conantokin|B2 superfamily|||nucleic acid level,Conus vexillum,Precursor,conantokin,B2 superfamily,,,nucleic acid level
+P07097,P07097|Vx21 precursor|Conus vexillum|Precursor|conotoxin|C superfamily|||nucleic acid level,Conus vexillum,Precursor,conotoxin,C superfamily,,,nucleic acid level
+P07098,P07098|Vx25|Conus vexillum|Precursor|con-ikot-ikot|||XXI|nucleic acid level,Conus vexillum,Precursor,con-ikot-ikot,,,XXI,nucleic acid level
+P07099,P07099|Vx25 precursor|Conus vexillum|Precursor|con-ikot-ikot||||nucleic acid level,Conus vexillum,Precursor,con-ikot-ikot,,,,nucleic acid level
+P07102,P07102|Vx26 precursor|Conus vexillum|Precursor|con-ikot-ikot||||nucleic acid level,Conus vexillum,Precursor,con-ikot-ikot,,,,nucleic acid level
+P07103,P07103|Vx27 precursor|Conus vexillum|Precursor|con-ikot-ikot||||nucleic acid level,Conus vexillum,Precursor,con-ikot-ikot,,,,nucleic acid level
+P07105,P07105|Vx29 precursor|Conus vexillum|Precursor|con-ikot-ikot||||nucleic acid level,Conus vexillum,Precursor,con-ikot-ikot,,,,nucleic acid level
+P07107,P07107|Vx32 precursor|Conus vexillum|Precursor|con-ikot-ikot||||nucleic acid level,Conus vexillum,Precursor,con-ikot-ikot,,,,nucleic acid level
+P07108,P07108|Vx33 precursor|Conus vexillum|Precursor|con-ikot-ikot||||nucleic acid level,Conus vexillum,Precursor,con-ikot-ikot,,,,nucleic acid level
+P07110,P07110|Vx34 precursor|Conus vexillum|Precursor|con-ikot-ikot||||nucleic acid level,Conus vexillum,Precursor,con-ikot-ikot,,,,nucleic acid level
+P07111,P07111|Vx63 precursor|Conus vexillum|Precursor|con-ikot-ikot||||nucleic acid level,Conus vexillum,Precursor,con-ikot-ikot,,,,nucleic acid level
+P07113,P07113|Vx35 precursor|Conus vexillum|Precursor|con-ikot-ikot||||nucleic acid level,Conus vexillum,Precursor,con-ikot-ikot,,,,nucleic acid level
+P07114,P07114|Vx50 precursor|Conus vexillum|Precursor|con-ikot-ikot||||nucleic acid level,Conus vexillum,Precursor,con-ikot-ikot,,,,nucleic acid level
+P07116,P07116|Vx36 precursor|Conus vexillum|Precursor|con-ikot-ikot||||nucleic acid level,Conus vexillum,Precursor,con-ikot-ikot,,,,nucleic acid level
+P07117,P07117|Vx57 precursor|Conus vexillum|Precursor|con-ikot-ikot||||nucleic acid level,Conus vexillum,Precursor,con-ikot-ikot,,,,nucleic acid level
+P07119,P07119|Vx37 precursor|Conus vexillum|Precursor|con-ikot-ikot||||nucleic acid level,Conus vexillum,Precursor,con-ikot-ikot,,,,nucleic acid level
+P07120,P07120|Vx46 precursor|Conus vexillum|Precursor|con-ikot-ikot||||nucleic acid level,Conus vexillum,Precursor,con-ikot-ikot,,,,nucleic acid level
+P07122,P07122|Vx38 precursor|Conus vexillum|Precursor|con-ikot-ikot||||nucleic acid level,Conus vexillum,Precursor,con-ikot-ikot,,,,nucleic acid level
+P07123,P07123|Con-ikot-ikot-Vx40 precursor|Conus vexillum|Precursor|con-ikot-ikot||||nucleic acid level,Conus vexillum,Precursor,con-ikot-ikot,,,,nucleic acid level
+P07125,P07125|Vx39 precursor|Conus vexillum|Precursor|con-ikot-ikot||||nucleic acid level,Conus vexillum,Precursor,con-ikot-ikot,,,,nucleic acid level
+P07127,P07127|Vx42 precursor|Conus vexillum|Precursor|con-ikot-ikot||||nucleic acid level,Conus vexillum,Precursor,con-ikot-ikot,,,,nucleic acid level
+P07128,P07128|Vx64 precursor|Conus vexillum|Precursor|con-ikot-ikot||||nucleic acid level,Conus vexillum,Precursor,con-ikot-ikot,,,,nucleic acid level
+P07130,P07130|Vx43 precursor|Conus vexillum|Precursor|con-ikot-ikot||||nucleic acid level,Conus vexillum,Precursor,con-ikot-ikot,,,,nucleic acid level
+P07132,P07132|Vx47 precursor|Conus vexillum|Precursor|con-ikot-ikot||||nucleic acid level,Conus vexillum,Precursor,con-ikot-ikot,,,,nucleic acid level
+P07134,P07134|Con-ikot-ikot-Vx48 precursor|Conus vexillum|Precursor|con-ikot-ikot||||nucleic acid level,Conus vexillum,Precursor,con-ikot-ikot,,,,nucleic acid level
+P07136,P07136|Con-ikot-ikot-Vx49 precursor|Conus vexillum|Precursor|con-ikot-ikot||||nucleic acid level,Conus vexillum,Precursor,con-ikot-ikot,,,,nucleic acid level
+P07138,P07138|Vx51 precursor|Conus vexillum|Precursor|con-ikot-ikot||||nucleic acid level,Conus vexillum,Precursor,con-ikot-ikot,,,,nucleic acid level
+P07140,P07140|Vx52 precursor|Conus vexillum|Precursor|con-ikot-ikot||||nucleic acid level,Conus vexillum,Precursor,con-ikot-ikot,,,,nucleic acid level
+P07142,P07142|Vx53 precursor|Conus vexillum|Precursor|con-ikot-ikot||||nucleic acid level,Conus vexillum,Precursor,con-ikot-ikot,,,,nucleic acid level
+P07143,P07143|Vx62 precursor|Conus vexillum|Precursor|con-ikot-ikot||||nucleic acid level,Conus vexillum,Precursor,con-ikot-ikot,,,,nucleic acid level
+P07145,P07145|Vx54 precursor|Conus vexillum|Precursor|con-ikot-ikot||||nucleic acid level,Conus vexillum,Precursor,con-ikot-ikot,,,,nucleic acid level
+P07147,P07147|Vx55 precursor|Conus vexillum|Precursor|con-ikot-ikot||||nucleic acid level,Conus vexillum,Precursor,con-ikot-ikot,,,,nucleic acid level
+P07149,P07149|Vx56 precursor|Conus vexillum|Precursor|con-ikot-ikot||||nucleic acid level,Conus vexillum,Precursor,con-ikot-ikot,,,,nucleic acid level
+P07151,P07151|Vx58 precursor|Conus vexillum|Precursor|con-ikot-ikot||||nucleic acid level,Conus vexillum,Precursor,con-ikot-ikot,,,,nucleic acid level
+P07153,P07153|Vx59 precursor|Conus vexillum|Precursor|con-ikot-ikot||||nucleic acid level,Conus vexillum,Precursor,con-ikot-ikot,,,,nucleic acid level
+P07155,P07155|Vx60 precursor|Conus vexillum|Precursor|con-ikot-ikot||||nucleic acid level,Conus vexillum,Precursor,con-ikot-ikot,,,,nucleic acid level
+P07157,P07157|Vx61 precursor|Conus vexillum|Precursor|con-ikot-ikot||||nucleic acid level,Conus vexillum,Precursor,con-ikot-ikot,,,,nucleic acid level
+P07159,P07159|Vx66 precursor|Conus vexillum|Precursor|con-ikot-ikot||||nucleic acid level,Conus vexillum,Precursor,con-ikot-ikot,,,,nucleic acid level
+P07161,P07161|Vx67 precursor|Conus vexillum|Precursor|con-ikot-ikot||||nucleic acid level,Conus vexillum,Precursor,con-ikot-ikot,,,,nucleic acid level
+P07163,P07163|Vx68 prescursor|Conus vexillum|Precursor|con-ikot-ikot||||nucleic acid level,Conus vexillum,Precursor,con-ikot-ikot,,,,nucleic acid level
+P07165,P07165|Vx69 precursor|Conus vexillum|Precursor|con-ikot-ikot||||nucleic acid level,Conus vexillum,Precursor,con-ikot-ikot,,,,nucleic acid level
+P07167,P07167|Vx70 precursor|Conus vexillum|Precursor|con-ikot-ikot||||nucleic acid level,Conus vexillum,Precursor,con-ikot-ikot,,,,nucleic acid level
+P07169,P07169|Vx71 precursor|Conus vexillum|Precursor|con-ikot-ikot||||nucleic acid level,Conus vexillum,Precursor,con-ikot-ikot,,,,nucleic acid level
+P07171,P07171|Vx72 precursor|Conus vexillum|Precursor|con-ikot-ikot||||nucleic acid level,Conus vexillum,Precursor,con-ikot-ikot,,,,nucleic acid level
+P07173,P07173|Vx73 precursor|Conus vexillum|Precursor|con-ikot-ikot||||nucleic acid level,Conus vexillum,Precursor,con-ikot-ikot,,,,nucleic acid level
+P07175,P07175|Vx74 precursor|Conus vexillum|Precursor|con-ikot-ikot||||nucleic acid level,Conus vexillum,Precursor,con-ikot-ikot,,,,nucleic acid level
+P07177,P07177|Vx75 precursor|Conus vexillum|Precursor|con-ikot-ikot||||nucleic acid level,Conus vexillum,Precursor,con-ikot-ikot,,,,nucleic acid level
+P07179,P07179|Vx76 precursor|Conus vexillum|Precursor|con-ikot-ikot||||nucleic acid level,Conus vexillum,Precursor,con-ikot-ikot,,,,nucleic acid level
+P07181,P07181|Vx77 precursor|Conus vexillum|Precursor|con-ikot-ikot||||nucleic acid level,Conus vexillum,Precursor,con-ikot-ikot,,,,nucleic acid level
+P07183,P07183|Vx80 precursor|Conus vexillum|Precursor|conantokin||||nucleic acid level,Conus vexillum,Precursor,conantokin,,,,nucleic acid level
+P07187,P07187|Vx82 precursor|Conus vexillum|Precursor|conantokin||||nucleic acid level,Conus vexillum,Precursor,conantokin,,,,nucleic acid level
+P07189,P07189|Vx83 precursor|Conus vexillum|Precursor|conantokin||||nucleic acid level,Conus vexillum,Precursor,conantokin,,,,nucleic acid level
+P07191,P07191|Vx84 precursor|Conus vexillum|Precursor|conantokin||||nucleic acid level,Conus vexillum,Precursor,conantokin,,,,nucleic acid level
+P07193,P07193|Vx85 precursor|Conus vexillum|Precursor|conantokin||||nucleic acid level,Conus vexillum,Precursor,conantokin,,,,nucleic acid level
+P07195,P07195|Vx86 precursor|Conus vexillum|Precursor|conantokin||||nucleic acid level,Conus vexillum,Precursor,conantokin,,,,nucleic acid level
+P07197,P07197|Vx87 precursor|Conus vexillum|Precursor|conantokin||||nucleic acid level,Conus vexillum,Precursor,conantokin,,,,nucleic acid level
+P07199,P07199|Vx88 precursor|Conus vexillum|Precursor|conantokin||||nucleic acid level,Conus vexillum,Precursor,conantokin,,,,nucleic acid level
+P07201,P07201|Vx89 precursor|Conus vexillum|Precursor|con-ikot-ikot||||nucleic acid level,Conus vexillum,Precursor,con-ikot-ikot,,,,nucleic acid level
+P07203,P07203|Vx90 precursor|Conus vexillum|Precursor|conantokin||||nucleic acid level,Conus vexillum,Precursor,conantokin,,,,nucleic acid level
+P07205,P07205|Vx91 precursor|Conus vexillum|Precursor|conantokin||||nucleic acid level,Conus vexillum,Precursor,conantokin,,,,nucleic acid level
+P07207,P07207|Vx92 precursor|Conus vexillum|Precursor|conantokin||||nucleic acid level,Conus vexillum,Precursor,conantokin,,,,nucleic acid level
+P07209,P07209|Vx93 precursor|Conus vexillum|Precursor|conantokin||||nucleic acid level,Conus vexillum,Precursor,conantokin,,,,nucleic acid level
+P07211,P07211|Vx94 precursor|Conus vexillum|Precursor|conantokin||||nucleic acid level,Conus vexillum,Precursor,conantokin,,,,nucleic acid level
+P07212,P07212|Vx95|Conus vexillum|Precursor|conantokin||||nucleic acid level,Conus vexillum,Precursor,conantokin,,,,nucleic acid level
+P07213,P07213|Vx95 precursor|Conus vexillum|Precursor|conantokin||||nucleic acid level,Conus vexillum,Precursor,conantokin,,,,nucleic acid level
+P07215,P07215|Vx96 precursor|Conus vexillum|Precursor|conantokin||||nucleic acid level,Conus vexillum,Precursor,conantokin,,,,nucleic acid level
+P07217,P07217|Vx103 precursor|Conus vexillum|Precursor|conotoxin|D superfamily|||nucleic acid level,Conus vexillum,Precursor,conotoxin,D superfamily,,,nucleic acid level
+P07219,P07219|Vx104 precursor|Conus vexillum|Precursor|conotoxin|D superfamily|||nucleic acid level,Conus vexillum,Precursor,conotoxin,D superfamily,,,nucleic acid level
+P07221,P07221|Vx106 precursor|Conus vexillum|Precursor|conotoxin|D superfamily||XIV|nucleic acid level,Conus vexillum,Precursor,conotoxin,D superfamily,,XIV,nucleic acid level
+P07222,P07222|Vx136 precursor|Conus vexillum|Precursor|conotoxin|D superfamily|||nucleic acid level,Conus vexillum,Precursor,conotoxin,D superfamily,,,nucleic acid level
+P07224,P07224|Vx107 precursor|Conus vexillum|Precursor|conotoxin|D superfamily|||nucleic acid level,Conus vexillum,Precursor,conotoxin,D superfamily,,,nucleic acid level
+P07226,P07226|Vx108 precursor|Conus vexillum|Precursor|conotoxin|D superfamily|||nucleic acid level,Conus vexillum,Precursor,conotoxin,D superfamily,,,nucleic acid level
+P07228,P07228|Vx110 precursor|Conus vexillum|Precursor|conotoxin|D superfamily|||nucleic acid level,Conus vexillum,Precursor,conotoxin,D superfamily,,,nucleic acid level
+P07230,P07230|Vx111 precursor|Conus vexillum|Precursor|conotoxin|D superfamily|||nucleic acid level,Conus vexillum,Precursor,conotoxin,D superfamily,,,nucleic acid level
+P07231,P07231|Vx118 precursor|Conus vexillum|Precursor|conotoxin|D superfamily|||nucleic acid level,Conus vexillum,Precursor,conotoxin,D superfamily,,,nucleic acid level
+P07233,P07233|Vx112 precursor|Conus vexillum|Precursor|conotoxin|D superfamily|||nucleic acid level,Conus vexillum,Precursor,conotoxin,D superfamily,,,nucleic acid level
+P07235,P07235|Vx113 precursor|Conus vexillum|Precursor|conotoxin|D superfamily|||nucleic acid level,Conus vexillum,Precursor,conotoxin,D superfamily,,,nucleic acid level
+P07237,P07237|Vx114 precursor|Conus vexillum|Precursor|conotoxin|D superfamily|||nucleic acid level,Conus vexillum,Precursor,conotoxin,D superfamily,,,nucleic acid level
+P07238,P07238|Vx115 precursor|Conus vexillum|Precursor|conotoxin|D superfamily|||nucleic acid level,Conus vexillum,Precursor,conotoxin,D superfamily,,,nucleic acid level
+P07239,P07239|Vx120 precursor|Conus vexillum|Precursor|conotoxin|D superfamily|||nucleic acid level,Conus vexillum,Precursor,conotoxin,D superfamily,,,nucleic acid level
+P07240,P07240|Vx134 precursor|Conus vexillum|Precursor|conotoxin|D superfamily|||nucleic acid level,Conus vexillum,Precursor,conotoxin,D superfamily,,,nucleic acid level
+P07241,P07241|Vx147 precursor|Conus vexillum|Precursor|conotoxin|D superfamily|||nucleic acid level,Conus vexillum,Precursor,conotoxin,D superfamily,,,nucleic acid level
+P07242,P07242|Vx149 precursor|Conus vexillum|Precursor|conotoxin|D superfamily|||nucleic acid level,Conus vexillum,Precursor,conotoxin,D superfamily,,,nucleic acid level
+P07243,P07243|Vx158 precursor|Conus vexillum|Precursor|conotoxin|D superfamily|||nucleic acid level,Conus vexillum,Precursor,conotoxin,D superfamily,,,nucleic acid level
+P07244,P07244|Vx159 precursor|Conus vexillum|Precursor|conotoxin|D superfamily|||nucleic acid level,Conus vexillum,Precursor,conotoxin,D superfamily,,,nucleic acid level
+P07246,P07246|Vx117 precursor|Conus vexillum|Precursor|conotoxin|D superfamily|||nucleic acid level,Conus vexillum,Precursor,conotoxin,D superfamily,,,nucleic acid level
+P07247,P07247|Vx162 precursor|Conus vexillum|Precursor|conotoxin|D superfamily|||nucleic acid level,Conus vexillum,Precursor,conotoxin,D superfamily,,,nucleic acid level
+P07249,P07249|Vx119 precursor|Conus vexillum|Precursor|conotoxin|D superfamily|||nucleic acid level,Conus vexillum,Precursor,conotoxin,D superfamily,,,nucleic acid level
+P07251,P07251|Vx121 precursor|Conus vexillum|Precursor|conotoxin|D superfamily|||nucleic acid level,Conus vexillum,Precursor,conotoxin,D superfamily,,,nucleic acid level
+P07253,P07253|Vx122 precursor|Conus vexillum|Precursor|conotoxin|D superfamily|||nucleic acid level,Conus vexillum,Precursor,conotoxin,D superfamily,,,nucleic acid level
+P07255,P07255|Vx123 precursor|Conus vexillum|Precursor|conotoxin|D superfamily|||nucleic acid level,Conus vexillum,Precursor,conotoxin,D superfamily,,,nucleic acid level
+P07257,P07257|Vx124 precursor|Conus vexillum|Precursor|conotoxin|D superfamily|||nucleic acid level,Conus vexillum,Precursor,conotoxin,D superfamily,,,nucleic acid level
+P07258,P07258|Vx182 precursor|Conus vexillum|Precursor|conotoxin|D superfamily|||nucleic acid level,Conus vexillum,Precursor,conotoxin,D superfamily,,,nucleic acid level
+P07260,P07260|Vx125 precursor|Conus vexillum|Precursor|conotoxin|D superfamily|||nucleic acid level,Conus vexillum,Precursor,conotoxin,D superfamily,,,nucleic acid level
+P07262,P07262|Vx126 precursor|Conus vexillum|Precursor|conotoxin|D superfamily|||nucleic acid level,Conus vexillum,Precursor,conotoxin,D superfamily,,,nucleic acid level
+P07264,P07264|Vx127 precursor|Conus vexillum|Precursor|conotoxin|D superfamily|||nucleic acid level,Conus vexillum,Precursor,conotoxin,D superfamily,,,nucleic acid level
+P07266,P07266|Vx128 precursor|Conus vexillum|Precursor|conotoxin|D superfamily|||nucleic acid level,Conus vexillum,Precursor,conotoxin,D superfamily,,,nucleic acid level
+P07268,P07268|Vx129 precursor|Conus vexillum|Precursor|conotoxin|D superfamily|||nucleic acid level,Conus vexillum,Precursor,conotoxin,D superfamily,,,nucleic acid level
+P07272,P07272|Vx133 precursor|Conus vexillum|Precursor|conotoxin|D superfamily|||nucleic acid level,Conus vexillum,Precursor,conotoxin,D superfamily,,,nucleic acid level
+P07274,P07274|Vx137 precursor|Conus vexillum|Precursor|conotoxin|D superfamily|||nucleic acid level,Conus vexillum,Precursor,conotoxin,D superfamily,,,nucleic acid level
+P07276,P07276|Vx138 precursor|Conus vexillum|Precursor|conotoxin|D superfamily|||nucleic acid level,Conus vexillum,Precursor,conotoxin,D superfamily,,,nucleic acid level
+P07278,P07278|Vx139 precursor|Conus vexillum|Precursor|conotoxin|D superfamily|||nucleic acid level,Conus vexillum,Precursor,conotoxin,D superfamily,,,nucleic acid level
+P07280,P07280|Vx140 precursor|Conus vexillum|Precursor|conotoxin|D superfamily|||nucleic acid level,Conus vexillum,Precursor,conotoxin,D superfamily,,,nucleic acid level
+P07282,P07282|Vx143 precursor|Conus vexillum|Precursor|conotoxin|D superfamily|||nucleic acid level,Conus vexillum,Precursor,conotoxin,D superfamily,,,nucleic acid level
+P07284,P07284|Vx144 precursor|Conus vexillum|Precursor|conotoxin|D superfamily|||nucleic acid level,Conus vexillum,Precursor,conotoxin,D superfamily,,,nucleic acid level
+P07286,P07286|Vx145 precursor|Conus vexillum|Precursor|conotoxin|D superfamily|||nucleic acid level,Conus vexillum,Precursor,conotoxin,D superfamily,,,nucleic acid level
+P07288,P07288|Vx146 precursor|Conus vexillum|Precursor|conotoxin|D superfamily|||nucleic acid level,Conus vexillum,Precursor,conotoxin,D superfamily,,,nucleic acid level
+P07290,P07290|Vx148 precursor|Conus vexillum|Precursor|conotoxin|D superfamily|||nucleic acid level,Conus vexillum,Precursor,conotoxin,D superfamily,,,nucleic acid level
+P07292,P07292|Vx150 precursor|Conus vexillum|Precursor|conotoxin|D superfamily|||nucleic acid level,Conus vexillum,Precursor,conotoxin,D superfamily,,,nucleic acid level
+P07294,P07294|Vx151 precursor|Conus vexillum|Precursor|conotoxin|D superfamily|||nucleic acid level,Conus vexillum,Precursor,conotoxin,D superfamily,,,nucleic acid level
+P07296,P07296|Vx152 precursor|Conus vexillum|Precursor|conotoxin|D superfamily|||nucleic acid level,Conus vexillum,Precursor,conotoxin,D superfamily,,,nucleic acid level
+P07298,P07298|Vx153 precursor|Conus vexillum|Precursor|conotoxin|D superfamily|||nucleic acid level,Conus vexillum,Precursor,conotoxin,D superfamily,,,nucleic acid level
+P07300,P07300|Vx155 precursor|Conus vexillum|Precursor|conotoxin|D superfamily|||nucleic acid level,Conus vexillum,Precursor,conotoxin,D superfamily,,,nucleic acid level
+P07302,P07302|Vx156 precursor|Conus vexillum|Precursor|conotoxin|D superfamily|||nucleic acid level,Conus vexillum,Precursor,conotoxin,D superfamily,,,nucleic acid level
+P07304,P07304|Vx157 precursor|Conus vexillum|Precursor|conotoxin|D superfamily|||nucleic acid level,Conus vexillum,Precursor,conotoxin,D superfamily,,,nucleic acid level
+P07306,P07306|Vx160 precursor|Conus vexillum|Precursor|conotoxin|D superfamily|||nucleic acid level,Conus vexillum,Precursor,conotoxin,D superfamily,,,nucleic acid level
+P07308,P07308|Vx161 precursor|Conus vexillum|Precursor|conotoxin|D superfamily|||nucleic acid level,Conus vexillum,Precursor,conotoxin,D superfamily,,,nucleic acid level
+P07310,P07310|Vx165 precursor|Conus vexillum|Precursor|conotoxin|D superfamily|||nucleic acid level,Conus vexillum,Precursor,conotoxin,D superfamily,,,nucleic acid level
+P07312,P07312|Vx166 precursor|Conus vexillum|Precursor|conotoxin|D superfamily|||nucleic acid level,Conus vexillum,Precursor,conotoxin,D superfamily,,,nucleic acid level
+P07314,P07314|Vx167 precursor|Conus vexillum|Precursor|conotoxin|D superfamily|||nucleic acid level,Conus vexillum,Precursor,conotoxin,D superfamily,,,nucleic acid level
+P07316,P07316|Vx168 precursor|Conus vexillum|Precursor|conotoxin|D superfamily|||nucleic acid level,Conus vexillum,Precursor,conotoxin,D superfamily,,,nucleic acid level
+P07318,P07318|Vx169 precursor|Conus vexillum|Precursor|conotoxin|D superfamily|||nucleic acid level,Conus vexillum,Precursor,conotoxin,D superfamily,,,nucleic acid level
+P07320,P07320|Vx170 precursor|Conus vexillum|Precursor|conotoxin|D superfamily|||nucleic acid level,Conus vexillum,Precursor,conotoxin,D superfamily,,,nucleic acid level
+P07322,P07322|Vx171 precursor|Conus vexillum|Precursor|conotoxin|D superfamily|||nucleic acid level,Conus vexillum,Precursor,conotoxin,D superfamily,,,nucleic acid level
+P07324,P07324|Vx172 precursor|Conus vexillum|Precursor|conotoxin|D superfamily|||nucleic acid level,Conus vexillum,Precursor,conotoxin,D superfamily,,,nucleic acid level
+P07326,P07326|Vx173 precursor|Conus vexillum|Precursor|conotoxin|D superfamily|||nucleic acid level,Conus vexillum,Precursor,conotoxin,D superfamily,,,nucleic acid level
+P07328,P07328|Vx174 precursor|Conus vexillum|Precursor|conotoxin|D superfamily|||nucleic acid level,Conus vexillum,Precursor,conotoxin,D superfamily,,,nucleic acid level
+P07330,P07330|Vx175 precursor|Conus vexillum|Precursor|conotoxin|D superfamily|||nucleic acid level,Conus vexillum,Precursor,conotoxin,D superfamily,,,nucleic acid level
+P07332,P07332|Vx176 precursor|Conus vexillum|Precursor|conotoxin|D superfamily|||nucleic acid level,Conus vexillum,Precursor,conotoxin,D superfamily,,,nucleic acid level
+P07334,P07334|Vx177 precursor|Conus vexillum|Precursor|conotoxin|D superfamily|||nucleic acid level,Conus vexillum,Precursor,conotoxin,D superfamily,,,nucleic acid level
+P07336,P07336|Vx178 precursor|Conus vexillum|Precursor|conotoxin|D superfamily|||nucleic acid level,Conus vexillum,Precursor,conotoxin,D superfamily,,,nucleic acid level
+P07338,P07338|Vx187 precursor|Conus vexillum|Precursor|conotoxin|I2 superfamily||XIII|nucleic acid level,Conus vexillum,Precursor,conotoxin,I2 superfamily,,XIII,nucleic acid level
+P07340,P07340|Vx188 precursor|Conus vexillum|Precursor|conotoxin|I2 superfamily|||nucleic acid level,Conus vexillum,Precursor,conotoxin,I2 superfamily,,,nucleic acid level
+P07342,P07342|Vx179 precursor|Conus vexillum|Precursor|conotoxin|D superfamily|||nucleic acid level,Conus vexillum,Precursor,conotoxin,D superfamily,,,nucleic acid level
+P07344,P07344|Vx180 precursor|Conus vexillum|Precursor|conotoxin|D superfamily|||nucleic acid level,Conus vexillum,Precursor,conotoxin,D superfamily,,,nucleic acid level
+P07346,P07346|Vx181 precursor|Conus vexillum|Precursor|conotoxin|D superfamily|||nucleic acid level,Conus vexillum,Precursor,conotoxin,D superfamily,,,nucleic acid level
+P07348,P07348|Vx183 precursor|Conus vexillum|Precursor|conotoxin|D superfamily|||nucleic acid level,Conus vexillum,Precursor,conotoxin,D superfamily,,,nucleic acid level
+P07350,P07350|Vx189 precursor|Conus vexillum|Precursor|conotoxin|I2 superfamily||XI|nucleic acid level,Conus vexillum,Precursor,conotoxin,I2 superfamily,,XI,nucleic acid level
+P07352,P07352|Vx190 precursor|Conus vexillum|Precursor|conotoxin|I3 superfamily||XI|nucleic acid level,Conus vexillum,Precursor,conotoxin,I3 superfamily,,XI,nucleic acid level
+P07354,P07354|Vx191 precursor|Conus vexillum|Precursor|conotoxin|J superfamily|||nucleic acid level,Conus vexillum,Precursor,conotoxin,J superfamily,,,nucleic acid level
+P07356,P07356|Vx192 precursor|Conus vexillum|Precursor|conotoxin|J superfamily|||nucleic acid level,Conus vexillum,Precursor,conotoxin,J superfamily,,,nucleic acid level
+P07359,P07359|Vx193 precursor|Conus vexillum|Precursor|conotoxin|J superfamily||XIV|nucleic acid level,Conus vexillum,Precursor,conotoxin,J superfamily,,XIV,nucleic acid level
+P07361,P07361|Vx194 precursor|Conus vexillum|Precursor|conotoxin|J superfamily||XIV|nucleic acid level,Conus vexillum,Precursor,conotoxin,J superfamily,,XIV,nucleic acid level
+P07363,P07363|Vx195 precursor|Conus vexillum|Precursor|conotoxin|J superfamily||XIV|nucleic acid level,Conus vexillum,Precursor,conotoxin,J superfamily,,XIV,nucleic acid level
+P07365,P07365|Vx1 precrusor|Conus vexillum|Precursor|conotoxin||||nucleic acid level,Conus vexillum,Precursor,conotoxin,,,,nucleic acid level
+P07367,P07367|Vx199 precursor|Conus vexillum|Precursor|conotoxin|M superfamily|||nucleic acid level,Conus vexillum,Precursor,conotoxin,M superfamily,,,nucleic acid level
+P07369,P07369|Vx200 precursor|Conus vexillum|Precursor|conotoxin||||nucleic acid level,Conus vexillum,Precursor,conotoxin,,,,nucleic acid level
+P07371,P07371|Vx201 precursor|Conus vexillum|Precursor|conotoxin||||nucleic acid level,Conus vexillum,Precursor,conotoxin,,,,nucleic acid level
+P07372,P07372|Vx205 precursor|Conus vexillum|Precursor|conotoxin||||nucleic acid level,Conus vexillum,Precursor,conotoxin,,,,nucleic acid level
+P07373,P07373|Vx207 precursor|Conus vexillum|Precursor|conotoxin||||nucleic acid level,Conus vexillum,Precursor,conotoxin,,,,nucleic acid level
+P07375,P07375|Vx202 precursor|Conus vexillum|Precursor|conotoxin||||nucleic acid level,Conus vexillum,Precursor,conotoxin,,,,nucleic acid level
+P07377,P07377|Vx203 precursor|Conus vexillum|Precursor|conotoxin||||nucleic acid level,Conus vexillum,Precursor,conotoxin,,,,nucleic acid level
+P07379,P07379|Vx204 precursor|Conus vexillum|Precursor|conotoxin||||nucleic acid level,Conus vexillum,Precursor,conotoxin,,,,nucleic acid level
+P07381,P07381|Vx206 precursor|Conus vexillum|Precursor|conotoxin||||nucleic acid level,Conus vexillum,Precursor,conotoxin,,,,nucleic acid level
+P07383,P07383|Vx208 precursor|Conus vexillum|Precursor|conotoxin||||nucleic acid level,Conus vexillum,Precursor,conotoxin,,,,nucleic acid level
+P07385,P07385|Vx209 precursor|Conus vexillum|Precursor|conotoxin||||nucleic acid level,Conus vexillum,Precursor,conotoxin,,,,nucleic acid level
+P07387,P07387|Vx210 precursor|Conus vexillum|Precursor|conotoxin||||nucleic acid level,Conus vexillum,Precursor,conotoxin,,,,nucleic acid level
+P07389,P07389|Vx211 precursor|Conus vexillum|Precursor|conotoxin||||nucleic acid level,Conus vexillum,Precursor,conotoxin,,,,nucleic acid level
+P07391,P07391|Vx212 precursor|Conus vexillum|Precursor|conotoxin||||nucleic acid level,Conus vexillum,Precursor,conotoxin,,,,nucleic acid level
+P07393,P07393|Vx213 precursor|Conus vexillum|Precursor|conotoxin||||nucleic acid level,Conus vexillum,Precursor,conotoxin,,,,nucleic acid level
+P07395,P07395|Vx216 precursor|Conus vexillum|Precursor|conotoxin|O2 superfamily|||nucleic acid level,Conus vexillum,Precursor,conotoxin,O2 superfamily,,,nucleic acid level
+P07396,P07396|Vx218 precursor|Conus vexillum|Precursor|conotoxin|O2 superfamily|||nucleic acid level,Conus vexillum,Precursor,conotoxin,O2 superfamily,,,nucleic acid level
+P07398,P07398|Vx219 precursor|Conus vexillum|Precursor|conotoxin||||nucleic acid level,Conus vexillum,Precursor,conotoxin,,,,nucleic acid level
+P07400,P07400|Conantokin-SuA precursor incomplete|Conus sulcatus|Precursor|conantokin||||nucleic acid level,Conus sulcatus,Precursor,conantokin,,,,nucleic acid level
+P07402,P07402|Conantokin-SuB precursor incomplete|Conus sulcatus|Precursor|conantokin||||nucleic acid level,Conus sulcatus,Precursor,conantokin,,,,nucleic acid level
+P07404,P07404|Conantokin-SuC precursor incomplete|Conus sulcatus|Precursor|conantokin||||nucleic acid level,Conus sulcatus,Precursor,conantokin,,,,nucleic acid level
+P07406,P07406|Conantokin-SuD precursor incomplete|Conus sulcatus|Precursor|conantokin||||nucleic acid level,Conus sulcatus,Precursor,conantokin,,,,nucleic acid level
+P07408,P07408|Conantokin-SuE precursor incomplete|Conus sulcatus|Precursor|conantokin||||nucleic acid level,Conus sulcatus,Precursor,conantokin,,,,nucleic acid level
+P07428,P07428|Vi6.2 precursor|Conus virgo|Precursor|conotoxin|O1 superfamily|||nucleic acid level,Conus virgo,Precursor,conotoxin,O1 superfamily,,,nucleic acid level
+P07429,P07429|Vi6.4 precursor|Conus virgo|Precursor|conotoxin|O1 superfamily|||nucleic acid level,Conus virgo,Precursor,conotoxin,O1 superfamily,,,nucleic acid level
+P07430,P07430|Tr6.2 precursor|Conus terebra|Precursor|conotoxin|O1 superfamily|||nucleic acid level,Conus terebra,Precursor,conotoxin,O1 superfamily,,,nucleic acid level
+P07431,P07431|Tr6.3 precursor|Conus terebra|Precursor|conotoxin|O1 superfamily|||nucleic acid level,Conus terebra,Precursor,conotoxin,O1 superfamily,,,nucleic acid level
+P07432,P07432|Kt6.1 precursor|Conus kintoki|Precursor|conotoxin|O1 superfamily|||nucleic acid level,Conus kintoki,Precursor,conotoxin,O1 superfamily,,,nucleic acid level
+P07476,P07476|Amz1.10 precursor|Conus andremenezi|Precursor|conotoxin|||I|nucleic acid level,Conus andremenezi,Precursor,conotoxin,,,I,nucleic acid level
+P07478,P07478|Amz1.2 precursor|Conus andremenezi|Precursor|conotoxin|||I|nucleic acid level,Conus andremenezi,Precursor,conotoxin,,,I,nucleic acid level
+P07481,P07481|Lt1.3 precursor|Conus litteratus|Precursor|conotoxin|||I|nucleic acid level,Conus litteratus,Precursor,conotoxin,,,I,nucleic acid level
+P07526,P07526|TsIIIA precursor|Conus tessulatus|Precursor|conotoxin|M superfamily||III|nucleic acid level,Conus tessulatus,Precursor,conotoxin,M superfamily,,III,nucleic acid level
+P07669,P07669|Ca1.8 precursor|Conus caracteristicus|Precursor|conotoxin|A superfamily||I|nucleic acid level,Conus caracteristicus,Precursor,conotoxin,A superfamily,,I,nucleic acid level
+P07670,P07670|Ca1.9 precursor|Conus caracteristicus|Precursor|conotoxin|A superfamily||I|nucleic acid level,Conus caracteristicus,Precursor,conotoxin,A superfamily,,I,nucleic acid level
+P07671,P07671|Ca1.10 precursor|Conus caracteristicus|Precursor|conotoxin|A superfamily||I|nucleic acid level,Conus caracteristicus,Precursor,conotoxin,A superfamily,,I,nucleic acid level
+P07672,P07672|Ca1.11 precursor|Conus caracteristicus|Precursor|conotoxin|A superfamily||I|nucleic acid level,Conus caracteristicus,Precursor,conotoxin,A superfamily,,I,nucleic acid level
+P07673,P07673|Ca1.12 precursor|Conus caracteristicus|Precursor|conotoxin|A superfamily||I|nucleic acid level,Conus caracteristicus,Precursor,conotoxin,A superfamily,,I,nucleic acid level
+P07674,P07674|Ca-9 precursor|Conus caracteristicus|Precursor|conotoxin|A superfamily|||nucleic acid level,Conus caracteristicus,Precursor,conotoxin,A superfamily,,,nucleic acid level
+P07675,P07675|Ca-10 precursor|Conus caracteristicus|Precursor|conotoxin|A superfamily|||nucleic acid level,Conus caracteristicus,Precursor,conotoxin,A superfamily,,,nucleic acid level
+P07676,P07676|Ca-11 precursor|Conus caracteristicus|Precursor|conotoxin|A superfamily|||nucleic acid level,Conus caracteristicus,Precursor,conotoxin,A superfamily,,,nucleic acid level
+P07677,P07677|Conantokin-Ca1 precursor|Conus caracteristicus|Precursor|conantokin|B1 superfamily|||nucleic acid level,Conus caracteristicus,Precursor,conantokin,B1 superfamily,,,nucleic acid level
+P07678,P07678|Conantokin-Ca2 precursor|Conus caracteristicus|Precursor|conantokin|B1 superfamily|||nucleic acid level,Conus caracteristicus,Precursor,conantokin,B1 superfamily,,,nucleic acid level
+P07680,P07680|Ca20.1 precursor|Conus caracteristicus|Precursor|conotoxin|D superfamily||XX|nucleic acid level,Conus caracteristicus,Precursor,conotoxin,D superfamily,,XX,nucleic acid level
+P07681,P07681|Ca15.1 precursor|Conus caracteristicus|Precursor|conotoxin|D superfamily||XV|nucleic acid level,Conus caracteristicus,Precursor,conotoxin,D superfamily,,XV,nucleic acid level
+P07682,P07682|Ca11.1 precursor|Conus caracteristicus|Precursor|conotoxin|I1 superfamily||XI|nucleic acid level,Conus caracteristicus,Precursor,conotoxin,I1 superfamily,,XI,nucleic acid level
+P07683,P07683|Ca12.1 precursor|Conus caracteristicus|Precursor|conotoxin|I2 superfamily||XII|nucleic acid level,Conus caracteristicus,Precursor,conotoxin,I2 superfamily,,XII,nucleic acid level
+P07684,P07684|Ca12.2 precursor|Conus caracteristicus|Precursor|conotoxin|I2 superfamily||XII|nucleic acid level,Conus caracteristicus,Precursor,conotoxin,I2 superfamily,,XII,nucleic acid level
+P07685,P07685|Ca12.3 precursor|Conus caracteristicus|Precursor|conotoxin|I2 superfamily||XII|nucleic acid level,Conus caracteristicus,Precursor,conotoxin,I2 superfamily,,XII,nucleic acid level
+P07686,P07686|Ca12.4 precursor|Conus caracteristicus|Precursor|conotoxin|I2 superfamily||XII|nucleic acid level,Conus caracteristicus,Precursor,conotoxin,I2 superfamily,,XII,nucleic acid level
+P07687,P07687|Ca11.2 precursor|Conus caracteristicus|Precursor|conotoxin|I2 superfamily||XI|nucleic acid level,Conus caracteristicus,Precursor,conotoxin,I2 superfamily,,XI,nucleic acid level
+P07688,P07688|Ca6.3 precursor|Conus caracteristicus|Precursor|conotoxin|I2 superfamily||VI/VII|nucleic acid level,Conus caracteristicus,Precursor,conotoxin,I2 superfamily,,VI/VII,nucleic acid level
+P07689,P07689|Ca6.4 precursor|Conus caracteristicus|Precursor|conotoxin|I3 superfamily||VI/VII|nucleic acid level,Conus caracteristicus,Precursor,conotoxin,I3 superfamily,,VI/VII,nucleic acid level
+P07690,P07690|Ca14.1 precursor|Conus caracteristicus|Precursor|conotoxin|J superfamily||XIV|nucleic acid level,Conus caracteristicus,Precursor,conotoxin,J superfamily,,XIV,nucleic acid level
+P07691,P07691|Ca14.2 precursor|Conus caracteristicus|Precursor|conotoxin|J superfamily||XIV|nucleic acid level,Conus caracteristicus,Precursor,conotoxin,J superfamily,,XIV,nucleic acid level
+P07692,P07692|Ca14.3 precursor|Conus caracteristicus|Precursor|conotoxin|J superfamily||XIV|nucleic acid level,Conus caracteristicus,Precursor,conotoxin,J superfamily,,XIV,nucleic acid level
+P07693,P07693|Ca14.1 precursor|Conus caracteristicus|Precursor|conotoxin|J superfamily||XIV|nucleic acid level,Conus caracteristicus,Precursor,conotoxin,J superfamily,,XIV,nucleic acid level
+P07694,P07694|Ca14.4 precursor|Conus caracteristicus|Precursor|conotoxin|J superfamily||XIV|nucleic acid level,Conus caracteristicus,Precursor,conotoxin,J superfamily,,XIV,nucleic acid level
+P07695,P07695|Ca14.5 precursor|Conus caracteristicus|Precursor|conotoxin|J superfamily||XIV|nucleic acid level,Conus caracteristicus,Precursor,conotoxin,J superfamily,,XIV,nucleic acid level
+P07696,P07696|Ca14.6 precursor|Conus caracteristicus|Precursor|conotoxin|J superfamily||XIV|nucleic acid level,Conus caracteristicus,Precursor,conotoxin,J superfamily,,XIV,nucleic acid level
+P07697,P07697|Ca3.3precursor|Conus caracteristicus|Precursor|conotoxin|M superfamily||III|nucleic acid level,Conus caracteristicus,Precursor,conotoxin,M superfamily,,III,nucleic acid level
+P07698,P07698|Ca6.12 precursor|Conus caracteristicus|Precursor|conotoxin|O1 superfamily||VI/VII|nucleic acid level,Conus caracteristicus,Precursor,conotoxin,O1 superfamily,,VI/VII,nucleic acid level
+P07699,P07699|Ca6.13 precursor|Conus caracteristicus|Precursor|conotoxin|O1 superfamily||VI/VII|nucleic acid level,Conus caracteristicus,Precursor,conotoxin,O1 superfamily,,VI/VII,nucleic acid level
+P07700,P07700|Ca6.6 precursor|Conus caracteristicus|Precursor|conotoxin|O1 superfamily||VI/VII|nucleic acid level,Conus caracteristicus,Precursor,conotoxin,O1 superfamily,,VI/VII,nucleic acid level
+P07701,P07701|Ca6.7 precursor|Conus caracteristicus|Precursor|conotoxin|O1 superfamily||VI/VII|nucleic acid level,Conus caracteristicus,Precursor,conotoxin,O1 superfamily,,VI/VII,nucleic acid level
+P07702,P07702|Ca6.8 precursor|Conus caracteristicus|Precursor|conotoxin|O1 superfamily||VI/VII|nucleic acid level,Conus caracteristicus,Precursor,conotoxin,O1 superfamily,,VI/VII,nucleic acid level
+P07703,P07703|Ca6.9 precursor|Conus caracteristicus|Precursor|conotoxin|O1 superfamily||VI/VII|nucleic acid level,Conus caracteristicus,Precursor,conotoxin,O1 superfamily,,VI/VII,nucleic acid level
+P07704,P07704|Ca6.10 precursor|Conus caracteristicus|Precursor|conotoxin|O1 superfamily||VI/VII|nucleic acid level,Conus caracteristicus,Precursor,conotoxin,O1 superfamily,,VI/VII,nucleic acid level
+P07705,P07705|Ca6.11 precursor|Conus caracteristicus|Precursor|conotoxin|O1 superfamily||VI/VII|nucleic acid level,Conus caracteristicus,Precursor,conotoxin,O1 superfamily,,VI/VII,nucleic acid level
+P07706,P07706|Ca6.11 precursor|Conus caracteristicus|Precursor|conotoxin|O1 superfamily||VI/VII|nucleic acid level,Conus caracteristicus,Precursor,conotoxin,O1 superfamily,,VI/VII,nucleic acid level
+P07707,P07707|Ca6.11 precursor|Conus caracteristicus|Precursor|conotoxin|O1 superfamily||VI/VII|nucleic acid level,Conus caracteristicus,Precursor,conotoxin,O1 superfamily,,VI/VII,nucleic acid level
+P07708,P07708|Ca6.10 precursor|Conus caracteristicus|Precursor|conotoxin|O1 superfamily||VI/VII|nucleic acid level,Conus caracteristicus,Precursor,conotoxin,O1 superfamily,,VI/VII,nucleic acid level
+P07709,P07709|Ca6.16 precursor|Conus caracteristicus|Precursor|conotoxin|O1 superfamily||VI/VII|nucleic acid level,Conus caracteristicus,Precursor,conotoxin,O1 superfamily,,VI/VII,nucleic acid level
+P07710,P07710|Ca6.17 precursor|Conus caracteristicus|Precursor|conotoxin|O1 superfamily||VI/VII|nucleic acid level,Conus caracteristicus,Precursor,conotoxin,O1 superfamily,,VI/VII,nucleic acid level
+P07712,P07712|Ca6.19 precursor|Conus caracteristicus|Precursor|conotoxin|O1 superfamily||VI/VII|nucleic acid level,Conus caracteristicus,Precursor,conotoxin,O1 superfamily,,VI/VII,nucleic acid level
+P07713,P07713|Ca6.20 precursor|Conus caracteristicus|Precursor|conotoxin|O1 superfamily||VI/VII|nucleic acid level,Conus caracteristicus,Precursor,conotoxin,O1 superfamily,,VI/VII,nucleic acid level
+P07714,P07714|Ca6.21 precursor|Conus caracteristicus|Precursor|conotoxin|O1 superfamily||VI/VII|nucleic acid level,Conus caracteristicus,Precursor,conotoxin,O1 superfamily,,VI/VII,nucleic acid level
+P07715,P07715|Ca6.22 precursor|Conus caracteristicus|Precursor|conotoxin|||VI/VII|nucleic acid level,Conus caracteristicus,Precursor,conotoxin,,,VI/VII,nucleic acid level
+P07716,P07716|Ca6.23 precursor|Conus caracteristicus|Precursor|conotoxin|||VI/VII|nucleic acid level,Conus caracteristicus,Precursor,conotoxin,,,VI/VII,nucleic acid level
+P07717,P07717|Ca6.24 precursor|Conus caracteristicus|Precursor|conotoxin|||VI/VII|nucleic acid level,Conus caracteristicus,Precursor,conotoxin,,,VI/VII,nucleic acid level
+P07719,P07719|Ca6.25 precursor|Conus caracteristicus|Precursor|conotoxin|||VI/VII|nucleic acid level,Conus caracteristicus,Precursor,conotoxin,,,VI/VII,nucleic acid level
+P07720,P07720|Ca6.26 precursor|Conus caracteristicus|Precursor|conotoxin|O2 superfamily||VI/VII|nucleic acid level,Conus caracteristicus,Precursor,conotoxin,O2 superfamily,,VI/VII,nucleic acid level
+P07721,P07721|Ca6.27 precursor|Conus caracteristicus|Precursor|conotoxin|O2 superfamily||VI/VII|nucleic acid level,Conus caracteristicus,Precursor,conotoxin,O2 superfamily,,VI/VII,nucleic acid level
+P07722,P07722|Ca15.2 precursor|Conus caracteristicus|Precursor|conotoxin|O2 superfamily||XV|nucleic acid level,Conus caracteristicus,Precursor,conotoxin,O2 superfamily,,XV,nucleic acid level
+P07724,P07724|Ca-73 precursor|Conus caracteristicus|Precursor|conotoxin|O2 superfamily|||nucleic acid level,Conus caracteristicus,Precursor,conotoxin,O2 superfamily,,,nucleic acid level
+P07725,P07725|Ca6.28 precursor|Conus caracteristicus|Precursor|conotoxin|O3 superfamily||VI/VII|nucleic acid level,Conus caracteristicus,Precursor,conotoxin,O3 superfamily,,VI/VII,nucleic acid level
+P07726,P07726|Ca6.29 precursor|Conus caracteristicus|Precursor|conotoxin|O3 superfamily||VI/VII|nucleic acid level,Conus caracteristicus,Precursor,conotoxin,O3 superfamily,,VI/VII,nucleic acid level
+P07727,P07727|Ca6.30 precursor|Conus caracteristicus|Precursor|conotoxin|O3 superfamily||VI/VII|nucleic acid level,Conus caracteristicus,Precursor,conotoxin,O3 superfamily,,VI/VII,nucleic acid level
+P07728,P07728|Ca6.31 precursor|Conus caracteristicus|Precursor|conotoxin|||VI/VII|nucleic acid level,Conus caracteristicus,Precursor,conotoxin,,,VI/VII,nucleic acid level
+P07729,P07729|Ca6.32 precursor|Conus caracteristicus|Precursor|conotoxin|||VI/VII|nucleic acid level,Conus caracteristicus,Precursor,conotoxin,,,VI/VII,nucleic acid level
+P07730,P07730|Ca6.33 precursor|Conus caracteristicus|Precursor|conotoxin|||VI/VII|nucleic acid level,Conus caracteristicus,Precursor,conotoxin,,,VI/VII,nucleic acid level
+P07731,P07731|Ca8.1 precursor|Conus caracteristicus|Precursor|conotoxin|S superfamily||VIII|nucleic acid level,Conus caracteristicus,Precursor,conotoxin,S superfamily,,VIII,nucleic acid level
+P07732,P07732|Ca8.2 precursor|Conus caracteristicus|Precursor|conotoxin|S superfamily||VIII|nucleic acid level,Conus caracteristicus,Precursor,conotoxin,S superfamily,,VIII,nucleic acid level
+P07733,P07733|Ca5.7 precursor|Conus caracteristicus|Precursor|conotoxin|T superfamily||V|nucleic acid level,Conus caracteristicus,Precursor,conotoxin,T superfamily,,V,nucleic acid level
+P07734,P07734|Ca16.1 precursor|Conus caracteristicus|Precursor|conotoxin|T superfamily||XVI|nucleic acid level,Conus caracteristicus,Precursor,conotoxin,T superfamily,,XVI,nucleic acid level
+P07735,P07735|Ca5.8 precursor|Conus caracteristicus|Precursor|conotoxin|T superfamily||V|nucleic acid level,Conus caracteristicus,Precursor,conotoxin,T superfamily,,V,nucleic acid level
+P07736,P07736|Ca5.9 precursor|Conus caracteristicus|Precursor|conotoxin|T superfamily||V|nucleic acid level,Conus caracteristicus,Precursor,conotoxin,T superfamily,,V,nucleic acid level
+P07737,P07737|Ca5.10 precursor|Conus caracteristicus|Precursor|conotoxin|T superfamily||V|nucleic acid level,Conus caracteristicus,Precursor,conotoxin,T superfamily,,V,nucleic acid level
+P07738,P07738|Ca5.11 precursor|Conus caracteristicus|Precursor|conotoxin|T superfamily||V|nucleic acid level,Conus caracteristicus,Precursor,conotoxin,T superfamily,,V,nucleic acid level
+P07739,P07739|Ca17.1 precursor|Conus caracteristicus|Precursor|conotoxin|Y superfamily||XVII|nucleic acid level,Conus caracteristicus,Precursor,conotoxin,Y superfamily,,XVII,nucleic acid level
+P07740,P07740|Ca9.1 precursor|Conus caracteristicus|Precursor|conotoxin|||IX|nucleic acid level,Conus caracteristicus,Precursor,conotoxin,,,IX,nucleic acid level
+P07741,P07741|Ca9.2 precursor|Conus caracteristicus|Precursor|conotoxin|||IX|nucleic acid level,Conus caracteristicus,Precursor,conotoxin,,,IX,nucleic acid level
+P07742,P07742|Ca9.3 precursor|Conus caracteristicus|Precursor|conotoxin|||IX|nucleic acid level,Conus caracteristicus,Precursor,conotoxin,,,IX,nucleic acid level
+P07743,P07743|Ca9.4 precursor|Conus caracteristicus|Precursor|conotoxin|||IX|nucleic acid level,Conus caracteristicus,Precursor,conotoxin,,,IX,nucleic acid level
+P07744,P07744|Ca9.5 precursor|Conus caracteristicus|Precursor|conotoxin|||IX|nucleic acid level,Conus caracteristicus,Precursor,conotoxin,,,IX,nucleic acid level
+P07745,P07745|Ca9.6 precursor|Conus caracteristicus|Precursor|conotoxin|||IX|nucleic acid level,Conus caracteristicus,Precursor,conotoxin,,,IX,nucleic acid level
+P07761,P07761|Ca14.11 precursor|Conus caracteristicus|Precursor|conotoxin|||XIV|nucleic acid level,Conus caracteristicus,Precursor,conotoxin,,,XIV,nucleic acid level
+P07762,P07762|Ge1.1 precursor|Conus generalis|Precursor|conotoxin|A superfamily||I|nucleic acid level,Conus generalis,Precursor,conotoxin,A superfamily,,I,nucleic acid level
+P07763,P07763|Conantokin-Ge1 precursor|Conus generalis|Precursor|conantokin|B1 superfamily|||nucleic acid level,Conus generalis,Precursor,conantokin,B1 superfamily,,,nucleic acid level
+P07765,P07765|Ge11.1 precursor|Conus generalis|Precursor|conotoxin|I1 superfamily||XI|nucleic acid level,Conus generalis,Precursor,conotoxin,I1 superfamily,,XI,nucleic acid level
+P07766,P07766|Ge12.1 precursor|Conus generalis|Precursor|conotoxin|||XII|nucleic acid level,Conus generalis,Precursor,conotoxin,,,XII,nucleic acid level
+P07767,P07767|Ge6.2 precursor|Conus generalis|Precursor|conotoxin|||VI/VII|nucleic acid level,Conus generalis,Precursor,conotoxin,,,VI/VII,nucleic acid level
+P07768,P07768|Ge11.2 precursor|Conus generalis|Precursor|conotoxin|||XI|nucleic acid level,Conus generalis,Precursor,conotoxin,,,XI,nucleic acid level
+P07769,P07769|Ge11.3 precursor|Conus generalis|Precursor|conotoxin|I2 superfamily||XI|nucleic acid level,Conus generalis,Precursor,conotoxin,I2 superfamily,,XI,nucleic acid level
+P07770,P07770|Ge11.4 precursor|Conus generalis|Precursor|conotoxin|I3 superfamily||XI|nucleic acid level,Conus generalis,Precursor,conotoxin,I3 superfamily,,XI,nucleic acid level
+P07771,P07771|Ge14.1 precursor|Conus generalis|Precursor|conotoxin|L superfamily||XIV|nucleic acid level,Conus generalis,Precursor,conotoxin,L superfamily,,XIV,nucleic acid level
+P07772,P07772|Ge14.2 precursor|Conus generalis|Precursor|conotoxin|L superfamily||XIV|nucleic acid level,Conus generalis,Precursor,conotoxin,L superfamily,,XIV,nucleic acid level
+P07773,P07773|Ge14.3 precursor|Conus generalis|Precursor|conotoxin|L superfamily||XIV|nucleic acid level,Conus generalis,Precursor,conotoxin,L superfamily,,XIV,nucleic acid level
+P07774,P07774|Ge3.1 precursor|Conus generalis|Precursor|conotoxin|||III|nucleic acid level,Conus generalis,Precursor,conotoxin,,,III,nucleic acid level
+P07775,P07775|Ge3.2 precursor|Conus generalis|Precursor|conotoxin|M superfamily||III|nucleic acid level,Conus generalis,Precursor,conotoxin,M superfamily,,III,nucleic acid level
+P07776,P07776|Ge16.1 precursor|Conus generalis|Precursor|conotoxin|||XVI|nucleic acid level,Conus generalis,Precursor,conotoxin,,,XVI,nucleic acid level
+P07777,P07777|Ge6.3 precursor|Conus generalis|Precursor|conotoxin|O1 superfamily||VI/VII|nucleic acid level,Conus generalis,Precursor,conotoxin,O1 superfamily,,VI/VII,nucleic acid level
+P07778,P07778|Ge6.4 precursor|Conus generalis|Precursor|conotoxin|O1 superfamily||VI/VII|nucleic acid level,Conus generalis,Precursor,conotoxin,O1 superfamily,,VI/VII,nucleic acid level
+P07779,P07779|Ge6.10 precursor|Conus generalis|Precursor|conotoxin|O1 superfamily||VI/VII|nucleic acid level,Conus generalis,Precursor,conotoxin,O1 superfamily,,VI/VII,nucleic acid level
+P07780,P07780|Ge6.11 precursor|Conus generalis|Precursor|conotoxin|O1 superfamily||VI/VII|nucleic acid level,Conus generalis,Precursor,conotoxin,O1 superfamily,,VI/VII,nucleic acid level
+P07781,P07781|Ge6.12 precursor|Conus generalis|Precursor|conotoxin|||VI/VII|nucleic acid level,Conus generalis,Precursor,conotoxin,,,VI/VII,nucleic acid level
+P07782,P07782|Ge6.13 precursor|Conus generalis|Precursor|conotoxin|||VI/VII|nucleic acid level,Conus generalis,Precursor,conotoxin,,,VI/VII,nucleic acid level
+P07783,P07783|Ge6.14 precursor|Conus generalis|Precursor|conotoxin|||VI/VII|nucleic acid level,Conus generalis,Precursor,conotoxin,,,VI/VII,nucleic acid level
+P07784,P07784|Ge6.15 precursor|Conus generalis|Precursor|conotoxin|O2 superfamily||VI/VII|nucleic acid level,Conus generalis,Precursor,conotoxin,O2 superfamily,,VI/VII,nucleic acid level
+P07785,P07785|Ge15.1 precursor|Conus generalis|Precursor|conotoxin|O2 superfamily||XV|nucleic acid level,Conus generalis,Precursor,conotoxin,O2 superfamily,,XV,nucleic acid level
+P07786,P07786|Ge6.16 precursor|Conus generalis|Precursor|conotoxin|O2 superfamily||VI/VII|nucleic acid level,Conus generalis,Precursor,conotoxin,O2 superfamily,,VI/VII,nucleic acid level
+P07787,P07787|Ge6.17 precursor|Conus generalis|Precursor|conotoxin|O2 superfamily||VI/VII|nucleic acid level,Conus generalis,Precursor,conotoxin,O2 superfamily,,VI/VII,nucleic acid level
+P07788,P07788|Ge6.18 precursor|Conus generalis|Precursor|conotoxin|O3 superfamily||VI/VII|nucleic acid level,Conus generalis,Precursor,conotoxin,O3 superfamily,,VI/VII,nucleic acid level
+P07789,P07789|Ge6.19 precursor|Conus generalis|Precursor|conotoxin|O3 superfamily||VI/VII|nucleic acid level,Conus generalis,Precursor,conotoxin,O3 superfamily,,VI/VII,nucleic acid level
+P07790,P07790|Ge6.20 precursor|Conus generalis|Precursor|conotoxin|||VI/VII|nucleic acid level,Conus generalis,Precursor,conotoxin,,,VI/VII,nucleic acid level
+P07791,P07791|Ge9.1 precursor|Conus generalis|Precursor|conotoxin|||IX|nucleic acid level,Conus generalis,Precursor,conotoxin,,,IX,nucleic acid level
+P07792,P07792|Ge9.2 precursor|Conus generalis|Precursor|conotoxin|||IX|nucleic acid level,Conus generalis,Precursor,conotoxin,,,IX,nucleic acid level
+P07793,P07793|Ge8.1 precursor|Conus generalis|Precursor|conotoxin|||VIII|nucleic acid level,Conus generalis,Precursor,conotoxin,,,VIII,nucleic acid level
+P07794,P07794|Ge5.1 precursor|Conus generalis|Precursor|conotoxin|T superfamily||V|nucleic acid level,Conus generalis,Precursor,conotoxin,T superfamily,,V,nucleic acid level
+P07795,P07795|Ge5.2 precursor|Conus generalis|Precursor|conotoxin|||V|nucleic acid level,Conus generalis,Precursor,conotoxin,,,V,nucleic acid level
+P07796,P07796|Con-ikot-ikot-Ge1 precursor|Conus generalis|Precursor|con-ikot-ikot|||XXI|nucleic acid level,Conus generalis,Precursor,con-ikot-ikot,,,XXI,nucleic acid level
+P07797,P07797|Ge1.3 precursor|Conus generalis|Precursor|conotoxin|||I|nucleic acid level,Conus generalis,Precursor,conotoxin,,,I,nucleic acid level
+P07798,P07798|Ge19.1 precursor|Conus generalis|Precursor|conotoxin|Divergent MSTLGMTLL-||XIX|nucleic acid level,Conus generalis,Precursor,conotoxin,Divergent MSTLGMTLL-,,XIX,nucleic acid level
+P07812,P07812|Qc1.19 precursor|Conus quercinus|Precursor|conotoxin|A superfamily||I|nucleic acid level,Conus quercinus,Precursor,conotoxin,A superfamily,,I,nucleic acid level
+P07813,P07813|Qc1.20 precursor|Conus quercinus|Precursor|conotoxin|A superfamily||I|nucleic acid level,Conus quercinus,Precursor,conotoxin,A superfamily,,I,nucleic acid level
+P07814,P07814|Conantokin-Qc1 precursor|Conus quercinus|Precursor|conantokin|B1 superfamily|||nucleic acid level,Conus quercinus,Precursor,conantokin,B1 superfamily,,,nucleic acid level
+P07815,P07815|Conantokin-Qc2 precursor|Conus quercinus|Precursor|conantokin|B1 superfamily|||nucleic acid level,Conus quercinus,Precursor,conantokin,B1 superfamily,,,nucleic acid level
+P07816,P07816|Conantokin-Qc3 precursor|Conus quercinus|Precursor|conantokin|B1 superfamily|||nucleic acid level,Conus quercinus,Precursor,conantokin,B1 superfamily,,,nucleic acid level
+P07817,P07817|Qc12.1 precursor|Conus quercinus|Precursor|conotoxin|I2 superfamily||XII|nucleic acid level,Conus quercinus,Precursor,conotoxin,I2 superfamily,,XII,nucleic acid level
+P07818,P07818|Qc11.1 precursor|Conus quercinus|Precursor|conotoxin|I2 superfamily||XI|nucleic acid level,Conus quercinus,Precursor,conotoxin,I2 superfamily,,XI,nucleic acid level
+P07819,P07819|Qc11.2 precursor|Conus quercinus|Precursor|conotoxin|||XI|nucleic acid level,Conus quercinus,Precursor,conotoxin,,,XI,nucleic acid level
+P07820,P07820|Qc3.2 precursor|Conus quercinus|Precursor|conotoxin|M superfamily||III|nucleic acid level,Conus quercinus,Precursor,conotoxin,M superfamily,,III,nucleic acid level
+P07821,P07821|Qc3.4 precursor|Conus quercinus|Precursor|conotoxin|||III|nucleic acid level,Conus quercinus,Precursor,conotoxin,,,III,nucleic acid level
+P07822,P07822|Qc3.3 precursor|Conus quercinus|Precursor|conotoxin|M superfamily||III|nucleic acid level,Conus quercinus,Precursor,conotoxin,M superfamily,,III,nucleic acid level
+P07823,P07823|Qc3.5 precursor|Conus quercinus|Precursor|conotoxin|M superfamily||III|nucleic acid level,Conus quercinus,Precursor,conotoxin,M superfamily,,III,nucleic acid level
+P07824,P07824|Qc3.6 precursor|Conus quercinus|Precursor|conotoxin|M superfamily||III|nucleic acid level,Conus quercinus,Precursor,conotoxin,M superfamily,,III,nucleic acid level
+P07825,P07825|Qc3.8 precursor|Conus quercinus|Precursor|conotoxin|M superfamily||III|nucleic acid level,Conus quercinus,Precursor,conotoxin,M superfamily,,III,nucleic acid level
+P07826,P07826|Qc32.1 precursor|Conus quercinus|Precursor|conotoxin|M superfamily||XXXII|nucleic acid level,Conus quercinus,Precursor,conotoxin,M superfamily,,XXXII,nucleic acid level
+P07827,P07827|Qc6.6 precursor|Conus quercinus|Precursor|conotoxin|O1 superfamily||VI/VII|nucleic acid level,Conus quercinus,Precursor,conotoxin,O1 superfamily,,VI/VII,nucleic acid level
+P07828,P07828|Qc6.7 precursor|Conus quercinus|Precursor|conotoxin|O1 superfamily||VI/VII|nucleic acid level,Conus quercinus,Precursor,conotoxin,O1 superfamily,,VI/VII,nucleic acid level
+P07829,P07829|Qc6.8 precursor|Conus quercinus|Precursor|conotoxin|O1 superfamily||VI/VII|nucleic acid level,Conus quercinus,Precursor,conotoxin,O1 superfamily,,VI/VII,nucleic acid level
+P07830,P07830|Qc6.9 precursor|Conus quercinus|Precursor|conotoxin|O1 superfamily||VI/VII|nucleic acid level,Conus quercinus,Precursor,conotoxin,O1 superfamily,,VI/VII,nucleic acid level
+P07831,P07831|Qc6.10 precursor|Conus quercinus|Precursor|conotoxin|O1 superfamily||VI/VII|nucleic acid level,Conus quercinus,Precursor,conotoxin,O1 superfamily,,VI/VII,nucleic acid level
+P07832,P07832|Qc6.11 precursor|Conus quercinus|Precursor|conotoxin|O1 superfamily||VI/VII|nucleic acid level,Conus quercinus,Precursor,conotoxin,O1 superfamily,,VI/VII,nucleic acid level
+P07833,P07833|Qc6.12 precursor|Conus quercinus|Precursor|conotoxin|O1 superfamily||VI/VII|nucleic acid level,Conus quercinus,Precursor,conotoxin,O1 superfamily,,VI/VII,nucleic acid level
+P07834,P07834|Qc6.13 precursor|Conus quercinus|Precursor|conotoxin|O2 superfamily||VI/VII|nucleic acid level,Conus quercinus,Precursor,conotoxin,O2 superfamily,,VI/VII,nucleic acid level
+P07835,P07835|Qc6.15 precursor|Conus quercinus|Precursor|conotoxin|O2 superfamily||VI/VII|nucleic acid level,Conus quercinus,Precursor,conotoxin,O2 superfamily,,VI/VII,nucleic acid level
+P07836,P07836|Qc6.16 precursor|Conus quercinus|Precursor|conotoxin|O3 superfamily||VI/VII|nucleic acid level,Conus quercinus,Precursor,conotoxin,O3 superfamily,,VI/VII,nucleic acid level
+P07837,P07837|Qc15.1 precursor|Conus quercinus|Precursor|conotoxin|||XV|nucleic acid level,Conus quercinus,Precursor,conotoxin,,,XV,nucleic acid level
+P07838,P07838|Qc15.2 precursor|Conus quercinus|Precursor|conotoxin|||XV|nucleic acid level,Conus quercinus,Precursor,conotoxin,,,XV,nucleic acid level
+P07839,P07839|Qc15.3 precursor|Conus quercinus|Precursor|conotoxin|||XV|nucleic acid level,Conus quercinus,Precursor,conotoxin,,,XV,nucleic acid level
+P07840,P07840|Qc17.1 precursor|Conus quercinus|Precursor|conotoxin|Y superfamily||XVII|nucleic acid level,Conus quercinus,Precursor,conotoxin,Y superfamily,,XVII,nucleic acid level
+P07841,P07841|Con-ikot-ikot-Qc1 precursor|Conus quercinus|Precursor|con-ikot-ikot||||nucleic acid level,Conus quercinus,Precursor,con-ikot-ikot,,,,nucleic acid level
+P07842,P07842|Qc9.1 precursor|Conus quercinus|Precursor|conotoxin|Divergent M---L-LTVA||IX|nucleic acid level,Conus quercinus,Precursor,conotoxin,Divergent M---L-LTVA,,IX,nucleic acid level
+P07843,P07843|Qc9.2 precursor|Conus quercinus|Precursor|conotoxin|Divergent M---L-LTVA|||nucleic acid level,Conus quercinus,Precursor,conotoxin,Divergent M---L-LTVA,,,nucleic acid level
+P07849,P07849|Qc9.8 precursor|Conus quercinus|Precursor|conotoxin|||IX|nucleic acid level,Conus quercinus,Precursor,conotoxin,,,IX,nucleic acid level
+P07850,P07850|Qc14.1 precursor|Conus quercinus|Precursor|conotoxin|||XIV|nucleic acid level,Conus quercinus,Precursor,conotoxin,,,XIV,nucleic acid level
+P07851,P07851|Cal29b precursor|Conus californicus|Precursor|conotoxin|O1 superfamily||XXIX|protein level,Conus californicus,Precursor,conotoxin,O1 superfamily,,XXIX,protein level
+P07852,P07852|Cal6.18 precursor|Conus californicus|Precursor|conotoxin|O1 superfamily||VI/VII|nucleic acid level,Conus californicus,Precursor,conotoxin,O1 superfamily,,VI/VII,nucleic acid level
+P07856,P07856|Cal6.22 precursor	|Conus californicus|Precursor|conotoxin|O1 superfamily||VI/VII|nucleic acid level,Conus californicus,Precursor,conotoxin,O1 superfamily,,VI/VII,nucleic acid level
+P07858,P07858|Cal6.24 precursor	|Conus californicus|Precursor|conotoxin|||VI/VII|nucleic acid level,Conus californicus,Precursor,conotoxin,,,VI/VII,nucleic acid level
+P07859,P07859|Cal6.25 precursor|Conus californicus|Precursor|conotoxin|||VI/VII|nucleic acid level,Conus californicus,Precursor,conotoxin,,,VI/VII,nucleic acid level
+P07875,P07875|Cal12.2e precursor|Conus californicus|Precursor|conotoxin|O1 superfamily||XII|nucleic acid level,Conus californicus,Precursor,conotoxin,O1 superfamily,,XII,nucleic acid level
+P07881,P07881|Cal6.40 precursor|Conus californicus|Precursor|conotoxin|||VI/VII|nucleic acid level,Conus californicus,Precursor,conotoxin,,,VI/VII,nucleic acid level
+P07889,P07889|Con-Ins K1 precursor|Conus kinoshitai|Precursor|coninsulin|Insulin superfamily|||nucleic acid level,Conus kinoshitai,Precursor,coninsulin,Insulin superfamily,,,nucleic acid level
+P07890,P07890|Con-Ins K2 precursor|Conus kinoshitai|Precursor|coninsulin|Insulin superfamily|||nucleic acid level,Conus kinoshitai,Precursor,coninsulin,Insulin superfamily,,,nucleic acid level
+P07891,P07891|Con-Ins T1A precursor|Conus tulipa|Precursor|coninsulin|Insulin superfamily|||nucleic acid level,Conus tulipa,Precursor,coninsulin,Insulin superfamily,,,nucleic acid level
+P07892,P07892|Con-Ins T1B precursor|Conus tulipa|Precursor|coninsulin|Insulin superfamily|||nucleic acid level,Conus tulipa,Precursor,coninsulin,Insulin superfamily,,,nucleic acid level
+P07893,P07893|Con-Ins G1 precursor|Conus geographus|Precursor|coninsulin|Insulin superfamily|||nucleic acid level,Conus geographus,Precursor,coninsulin,Insulin superfamily,,,nucleic acid level
+P07894,P07894|Con-Ins G3 precursor|Conus geographus|Precursor|coninsulin|Insulin superfamily|||nucleic acid level,Conus geographus,Precursor,coninsulin,Insulin superfamily,,,nucleic acid level
+P07895,P07895|Con-Ins T2 precursor|Conus tulipa|Precursor|coninsulin|Insulin superfamily|||nucleic acid level,Conus tulipa,Precursor,coninsulin,Insulin superfamily,,,nucleic acid level
+P07896,P07896|Fr3.1 precursor|Conus frigidus|Precursor|conotoxin|M superfamily||III|protein level,Conus frigidus,Precursor,conotoxin,M superfamily,,III,protein level
+P07901,P07901|Conodipine-P1 precursor|Conus purpurascens|Precursor|conodipine|conodipine superfamily|||protein level,Conus purpurascens,Precursor,conodipine,conodipine superfamily,,,protein level
+P07902,P07902|Conodipine-P2 precursor|Conus purpurascens|Precursor|conodipine|conodipine superfamily|||protein level,Conus purpurascens,Precursor,conodipine,conodipine superfamily,,,protein level
+P07903,P07903|Conodipine-P3 precursor|Conus purpurascens|Precursor|conodipine|conodipine superfamily|||protein level,Conus purpurascens,Precursor,conodipine,conodipine superfamily,,,protein level
+P07904,P07904|Conodipine-P4 precursor|Conus purpurascens|Precursor|conodipine|conodipine superfamily|||nucleic acid level,Conus purpurascens,Precursor,conodipine,conodipine superfamily,,,nucleic acid level
+P07906,P07906|Conodipine-P6 precursor|Conus purpurascens|Precursor|conodipine|conodipine superfamily|||nucleic acid level,Conus purpurascens,Precursor,conodipine,conodipine superfamily,,,nucleic acid level
+P07938,P07938|Conantokin-T2 precursor|Conus tulipa|Precursor|conantokin|B1 superfamily|||nucleic acid level,Conus tulipa,Precursor,conantokin,B1 superfamily,,,nucleic acid level
+P07939,P07939|Conantokin-T3 precursor|Conus tulipa|Precursor|conantokin|B1 superfamily|||nucleic acid level,Conus tulipa,Precursor,conantokin,B1 superfamily,,,nucleic acid level
+P07940,P07940|Conantokin-T4 precursor|Conus tulipa|Precursor|conantokin|B1 superfamily|||nucleic acid level,Conus tulipa,Precursor,conantokin,B1 superfamily,,,nucleic acid level
+P07941,P07941|Conantokin-T5 precursor|Conus tulipa|Precursor|conantokin|B1 superfamily|||nucleic acid level,Conus tulipa,Precursor,conantokin,B1 superfamily,,,nucleic acid level
+P07942,P07942|Conantokin-T6 precursor|Conus tulipa|Precursor|conantokin|B1 superfamily|||nucleic acid level,Conus tulipa,Precursor,conantokin,B1 superfamily,,,nucleic acid level
+P07943,P07943|Conantokin-T7 precursor|Conus tulipa|Precursor|conantokin|B1 superfamily|||nucleic acid level,Conus tulipa,Precursor,conantokin,B1 superfamily,,,nucleic acid level
+P07944,P07944|Conantokin-T8 precursor|Conus tulipa|Precursor|conantokin|B1 superfamily|||nucleic acid level,Conus tulipa,Precursor,conantokin,B1 superfamily,,,nucleic acid level
+P07945,P07945|Conantokin-T9 precursor|Conus tulipa|Precursor|conantokin|B1 superfamily|||nucleic acid level,Conus tulipa,Precursor,conantokin,B1 superfamily,,,nucleic acid level
+P07946,P07946|Conantokin-T10 precursor|Conus tulipa|Precursor|conantokin|B1 superfamily|||nucleic acid level,Conus tulipa,Precursor,conantokin,B1 superfamily,,,nucleic acid level
+P07947,P07947|Conantokin-T11 precursor|Conus tulipa|Precursor|conantokin|B1 superfamily|||nucleic acid level,Conus tulipa,Precursor,conantokin,B1 superfamily,,,nucleic acid level
+P07948,P07948|Conantokin-T12 precursor|Conus tulipa|Precursor|conantokin|B1 superfamily|||nucleic acid level,Conus tulipa,Precursor,conantokin,B1 superfamily,,,nucleic acid level
+P07949,P07949|Conantokin-T13 precursor|Conus tulipa|Precursor|conantokin|B1 superfamily|||nucleic acid level,Conus tulipa,Precursor,conantokin,B1 superfamily,,,nucleic acid level
+P07950,P07950|Conantokin-T14 precursor|Conus tulipa|Precursor|conantokin|B1 superfamily|||nucleic acid level,Conus tulipa,Precursor,conantokin,B1 superfamily,,,nucleic acid level
+P07951,P07951|Conantokin-T15 precursor|Conus tulipa|Precursor|conantokin|B1 superfamily|||nucleic acid level,Conus tulipa,Precursor,conantokin,B1 superfamily,,,nucleic acid level
+P07952,P07952|Conantokin-T16 precursor|Conus tulipa|Precursor|conantokin|B1 superfamily|||nucleic acid level,Conus tulipa,Precursor,conantokin,B1 superfamily,,,nucleic acid level
+P07954,P07954|Conantokin-T17 precursor|Conus tulipa|Precursor|conantokin|B1 superfamily|||nucleic acid level,Conus tulipa,Precursor,conantokin,B1 superfamily,,,nucleic acid level
+P07955,P07955|Conantokin-T18 precursor|Conus tulipa|Precursor|conantokin|B1 superfamily|||nucleic acid level,Conus tulipa,Precursor,conantokin,B1 superfamily,,,nucleic acid level
+P07956,P07956|Conantokin-T19 precursor|Conus tulipa|Precursor|conantokin|B1 superfamily|||nucleic acid level,Conus tulipa,Precursor,conantokin,B1 superfamily,,,nucleic acid level
+P07957,P07957|Conantokin-T20 precursor|Conus tulipa|Precursor|conantokin|B1 superfamily|||nucleic acid level,Conus tulipa,Precursor,conantokin,B1 superfamily,,,nucleic acid level
+P07958,P07958|Conantokin-T21 precursor|Conus tulipa|Precursor|conantokin|B1 superfamily|||nucleic acid level,Conus tulipa,Precursor,conantokin,B1 superfamily,,,nucleic acid level
+P07959,P07959|Conantokin-T22 precursor|Conus tulipa|Precursor|conantokin|B1 superfamily|||nucleic acid level,Conus tulipa,Precursor,conantokin,B1 superfamily,,,nucleic acid level
+P07960,P07960|Conantokin-T23 precursor|Conus tulipa|Precursor|conantokin|B1 superfamily|||nucleic acid level,Conus tulipa,Precursor,conantokin,B1 superfamily,,,nucleic acid level
+P07961,P07961|Conantokin-T24 precursor|Conus tulipa|Precursor|conantokin|B1 superfamily|||nucleic acid level,Conus tulipa,Precursor,conantokin,B1 superfamily,,,nucleic acid level
+P07962,P07962|Conantokin-T25 precursor|Conus tulipa|Precursor|conantokin|B1 superfamily|||nucleic acid level,Conus tulipa,Precursor,conantokin,B1 superfamily,,,nucleic acid level
+P07963,P07963|Conantokin-T26 precursor|Conus tulipa|Precursor|conantokin|B1 superfamily|||nucleic acid level,Conus tulipa,Precursor,conantokin,B1 superfamily,,,nucleic acid level
+P07964,P07964|Conantokin-T27 precursor|Conus tulipa|Precursor|conantokin|B1 superfamily|||nucleic acid level,Conus tulipa,Precursor,conantokin,B1 superfamily,,,nucleic acid level
+P07965,P07965|Conantokin-T28 precursor|Conus tulipa|Precursor|conantokin|B1 superfamily|||nucleic acid level,Conus tulipa,Precursor,conantokin,B1 superfamily,,,nucleic acid level
+P07966,P07966|Conantokin-T29 precursor|Conus tulipa|Precursor|conantokin|B1 superfamily|||nucleic acid level,Conus tulipa,Precursor,conantokin,B1 superfamily,,,nucleic acid level
+P07967,P07967|Conantokin-T30 precursor|Conus tulipa|Precursor|conantokin|B1 superfamily|||nucleic acid level,Conus tulipa,Precursor,conantokin,B1 superfamily,,,nucleic acid level
+P07968,P07968|Conantokin-T31 precursor|Conus tulipa|Precursor|conantokin|B2 superfamily|||nucleic acid level,Conus tulipa,Precursor,conantokin,B2 superfamily,,,nucleic acid level
+P07969,P07969|Conantokin-T32 precursor|Conus tulipa|Precursor|conantokin|B2 superfamily|||nucleic acid level,Conus tulipa,Precursor,conantokin,B2 superfamily,,,nucleic acid level
+P07970,P07970|Tu033 precursor|Conus tulipa|Precursor|unclassified|O1 superfamily|||nucleic acid level,Conus tulipa,Precursor,unclassified,O1 superfamily,,,nucleic acid level
+P07971,P07971|T6.2 precursor|Conus tulipa|Precursor|conotoxin|O1 superfamily||VI/VII|nucleic acid level,Conus tulipa,Precursor,conotoxin,O1 superfamily,,VI/VII,nucleic acid level
+P07972,P07972|T6.3 precursor|Conus tulipa|Precursor|conotoxin|O1 superfamily||VI/VII|nucleic acid level,Conus tulipa,Precursor,conotoxin,O1 superfamily,,VI/VII,nucleic acid level
+P07973,P07973|T6.4 precursor|Conus tulipa|Precursor|conotoxin|O1 superfamily||VI/VII|nucleic acid level,Conus tulipa,Precursor,conotoxin,O1 superfamily,,VI/VII,nucleic acid level
+P07974,P07974|T6.5 precursor|Conus tulipa|Precursor|conotoxin|O1 superfamily||VI/VII|nucleic acid level,Conus tulipa,Precursor,conotoxin,O1 superfamily,,VI/VII,nucleic acid level
+P07975,P07975|T6.6 precursor|Conus tulipa|Precursor|conotoxin|O1 superfamily||VI/VII|nucleic acid level,Conus tulipa,Precursor,conotoxin,O1 superfamily,,VI/VII,nucleic acid level
+P07976,P07976|T6.7 precursor|Conus tulipa|Precursor|conotoxin|O1 superfamily||VI/VII|nucleic acid level,Conus tulipa,Precursor,conotoxin,O1 superfamily,,VI/VII,nucleic acid level
+P07978,P07978|Tu043 precursor|Conus tulipa|Precursor|conotoxin|O3 superfamily|||nucleic acid level,Conus tulipa,Precursor,conotoxin,O3 superfamily,,,nucleic acid level
+P07979,P07979|Tu044 precursor|Conus tulipa|Precursor|conotoxin|O3 superfamily|||nucleic acid level,Conus tulipa,Precursor,conotoxin,O3 superfamily,,,nucleic acid level
+P07980,P07980|Tu045 precursor|Conus tulipa|Precursor|conotoxin|O3 superfamily|||nucleic acid level,Conus tulipa,Precursor,conotoxin,O3 superfamily,,,nucleic acid level
+P07981,P07981|Tu046 precursor|Conus tulipa|Precursor|conotoxin|O3 superfamily|||nucleic acid level,Conus tulipa,Precursor,conotoxin,O3 superfamily,,,nucleic acid level
+P07982,P07982|Tu047 precursor|Conus tulipa|Precursor|conotoxin|O3 superfamily|||nucleic acid level,Conus tulipa,Precursor,conotoxin,O3 superfamily,,,nucleic acid level
+P07983,P07983|T16.1 precursor|Conus tulipa|Precursor|conotoxin|O3 superfamily||XVI|nucleic acid level,Conus tulipa,Precursor,conotoxin,O3 superfamily,,XVI,nucleic acid level
+P07984,P07984|T1.3 precursor|Conus tulipa|Precursor|conotoxin|A superfamily||I|nucleic acid level,Conus tulipa,Precursor,conotoxin,A superfamily,,I,nucleic acid level
+P07985,P07985|T4.1 precursor|Conus tulipa|Precursor|conotoxin|A superfamily||I|nucleic acid level,Conus tulipa,Precursor,conotoxin,A superfamily,,I,nucleic acid level
+P07986,P07986|T1.1 precursor|Conus tulipa|Precursor|conotoxin|A superfamily||I|nucleic acid level,Conus tulipa,Precursor,conotoxin,A superfamily,,I,nucleic acid level
+P07987,P07987|Conopressin-T precursor|Conus tulipa|Precursor|conopressin||||nucleic acid level,Conus tulipa,Precursor,conopressin,,,,nucleic acid level
+P07988,P07988|Conopressin-T precursor|Conus tulipa|Precursor|conopressin||||nucleic acid level,Conus tulipa,Precursor,conopressin,,,,nucleic acid level
+P07989,P07989|Conopressin-T precursor|Conus tulipa|Precursor|conopressin||||nucleic acid level,Conus tulipa,Precursor,conopressin,,,,nucleic acid level
+P07990,P07990|Conopressin-T precursor|Conus tulipa|Precursor|conopressin||||nucleic acid level,Conus tulipa,Precursor,conopressin,,,,nucleic acid level
+P07991,P07991|Con-ikot-ikot-T1 precursor|Conus tulipa|Precursor|con-ikot-ikot||||nucleic acid level,Conus tulipa,Precursor,con-ikot-ikot,,,,nucleic acid level
+P07992,P07992|Con-ikot-ikot-T2 precursor|Conus tulipa|Precursor|con-ikot-ikot||||nucleic acid level,Conus tulipa,Precursor,con-ikot-ikot,,,,nucleic acid level
+P07993,P07993|Con-ikot-ikot-T3 precursor|Conus tulipa|Precursor|con-ikot-ikot||||nucleic acid level,Conus tulipa,Precursor,con-ikot-ikot,,,,nucleic acid level
+P07994,P07994|Con-ikot-ikot-T4 precursor|Conus tulipa|Precursor|con-ikot-ikot||||nucleic acid level,Conus tulipa,Precursor,con-ikot-ikot,,,,nucleic acid level
+P07995,P07995|Con-ikot-ikot-T5 precursor|Conus tulipa|Precursor|con-ikot-ikot||||nucleic acid level,Conus tulipa,Precursor,con-ikot-ikot,,,,nucleic acid level
+P07996,P07996|Con-ikot-ikot-T6 precursor|Conus tulipa|Precursor|con-ikot-ikot||||nucleic acid level,Conus tulipa,Precursor,con-ikot-ikot,,,,nucleic acid level
+P07997,P07997|Con-ikot-ikot-T7 precursor|Conus tulipa|Precursor|con-ikot-ikot||||nucleic acid level,Conus tulipa,Precursor,con-ikot-ikot,,,,nucleic acid level
+P07998,P07998|Con-ikot-ikot-T8 precursor|Conus tulipa|Precursor|con-ikot-ikot||||nucleic acid level,Conus tulipa,Precursor,con-ikot-ikot,,,,nucleic acid level
+P07999,P07999|Conoporin-T1 precursor|Conus tulipa|Precursor|conoporin||||nucleic acid level,Conus tulipa,Precursor,conoporin,,,,nucleic acid level
+P08000,P08000|Conoporin-T2 precursor|Conus tulipa|Precursor|conoporin||||nucleic acid level,Conus tulipa,Precursor,conoporin,,,,nucleic acid level
+P08001,P08001|Conoporin-T3 precursor|Conus tulipa|Precursor|conoporin||||nucleic acid level,Conus tulipa,Precursor,conoporin,,,,nucleic acid level
+P08002,P08002|Con-ins T4 precursor|Conus tulipa|Precursor|coninsulin|Insulin superfamily|||nucleic acid level,Conus tulipa,Precursor,coninsulin,Insulin superfamily,,,nucleic acid level
+P08003,P08003|Tu074 precursor|Conus tulipa|Precursor|unclassified||||nucleic acid level,Conus tulipa,Precursor,unclassified,,,,nucleic acid level
+P08004,P08004|Conkunitzin-T2 precursor|Conus tulipa|Precursor|conkunitzin|||IX|nucleic acid level,Conus tulipa,Precursor,conkunitzin,,,IX,nucleic acid level
+P08005,P08005|T6.9|Conus tulipa|Precursor|conotoxin|H superfamily||VI/VII|nucleic acid level,Conus tulipa,Precursor,conotoxin,H superfamily,,VI/VII,nucleic acid level
+P08006,P08006|T8.1 precursor|Conus tulipa|Precursor|conotoxin|S superfamily||VIII|nucleic acid level,Conus tulipa,Precursor,conotoxin,S superfamily,,VIII,nucleic acid level
+P08007,P08007|T9.1 precursor|Conus tulipa|Precursor|conotoxin|||IX|nucleic acid level,Conus tulipa,Precursor,conotoxin,,,IX,nucleic acid level
+P08008,P08008|T9.2 precursor|Conus tulipa|Precursor|conotoxin|||IX|nucleic acid level,Conus tulipa,Precursor,conotoxin,,,IX,nucleic acid level
+P08009,P08009|T22.1 precursor|Conus tulipa|Precursor|conotoxin|||XXII|nucleic acid level,Conus tulipa,Precursor,conotoxin,,,XXII,nucleic acid level
+P08010,P08010|Tu081 precursor|Conus tulipa|Precursor|unclassified||||nucleic acid level,Conus tulipa,Precursor,unclassified,,,,nucleic acid level
+P08011,P08011|Tu082 precursor|Conus tulipa|Precursor|unclassified||||nucleic acid level,Conus tulipa,Precursor,unclassified,,,,nucleic acid level
+P08012,P08012|Tu083 precursor|Conus tulipa|Precursor|unclassified||||nucleic acid level,Conus tulipa,Precursor,unclassified,,,,nucleic acid level
+P08013,P08013|Tu084 precursor|Conus tulipa|Precursor|unclassified||||nucleic acid level,Conus tulipa,Precursor,unclassified,,,,nucleic acid level
+P08014,P08014|Tu085 precursor|Conus tulipa|Precursor|unclassified||||nucleic acid level,Conus tulipa,Precursor,unclassified,,,,nucleic acid level
+P08015,P08015|Tu086 precursor|Conus tulipa|Precursor|unclassified||||nucleic acid level,Conus tulipa,Precursor,unclassified,,,,nucleic acid level
+P08057,P08057|Tu032 precursor|Conus tulipa|Precursor|unclassified|O1 superfamily|||nucleic acid level,Conus tulipa,Precursor,unclassified,O1 superfamily,,,nucleic acid level
+P08059,P08059|TVIA precursor|Conus tulipa|Precursor|conotoxin|O1 superfamily||VI/VII|nucleic acid level,Conus tulipa,Precursor,conotoxin,O1 superfamily,,VI/VII,nucleic acid level
+P08067,P08067|T6.8 precursor|Conus tulipa|Precursor|conotoxin|O1 superfamily||VI/VII|nucleic acid level,Conus tulipa,Precursor,conotoxin,O1 superfamily,,VI/VII,nucleic acid level
+P08073,P08073|T1.2 precursor|Conus tulipa|Precursor|conotoxin|A superfamily||I|nucleic acid level,Conus tulipa,Precursor,conotoxin,A superfamily,,I,nucleic acid level
+P08114,P08114|Ca6.5 precursor|Conus caracteristicus|Precursor|conotoxin|I3 superfamily||VI/VII|nucleic acid level,Conus caracteristicus,Precursor,conotoxin,I3 superfamily,,VI/VII,nucleic acid level
+P08122,P08122|Ca14.8 precursor|Conus caracteristicus|Precursor|conotoxin|L superfamily||XIV|nucleic acid level,Conus caracteristicus,Precursor,conotoxin,L superfamily,,XIV,nucleic acid level
+P08124,P08124|Ca14.9 precursor|Conus caracteristicus|Precursor|conotoxin|L superfamily||XIV|nucleic acid level,Conus caracteristicus,Precursor,conotoxin,L superfamily,,XIV,nucleic acid level
+P08126,P08126|Ca14.10 precursor|Conus caracteristicus|Precursor|conotoxin|L superfamily||XIV|nucleic acid level,Conus caracteristicus,Precursor,conotoxin,L superfamily,,XIV,nucleic acid level
+P08129,P08129|Ca14.7 precursor|Conus caracteristicus|Precursor|conotoxin|L superfamily||XIV|nucleic acid level,Conus caracteristicus,Precursor,conotoxin,L superfamily,,XIV,nucleic acid level
+P08132,P08132|Ca4.1 precursor|Conus caracteristicus|Precursor|conotoxin|M superfamily||IV|nucleic acid level,Conus caracteristicus,Precursor,conotoxin,M superfamily,,IV,nucleic acid level
+P08134,P08134|Ca3.2 precursor|Conus caracteristicus|Precursor|conotoxin|M superfamily||III|nucleic acid level,Conus caracteristicus,Precursor,conotoxin,M superfamily,,III,nucleic acid level
+P08145,P08145|Ca6.14 precursor|Conus caracteristicus|Precursor|conotoxin|O1 superfamily||VI/VII|nucleic acid level,Conus caracteristicus,Precursor,conotoxin,O1 superfamily,,VI/VII,nucleic acid level
+P08160,P08160|Contryphan-Ca1 precursor|Conus caracteristicus|Precursor|contryphan||||nucleic acid level,Conus caracteristicus,Precursor,contryphan,,,,nucleic acid level
+P08184,P08184|Ca3.1 precursor|Conus caracteristicus|Precursor|conotoxin|M superfamily||III|nucleic acid level,Conus caracteristicus,Precursor,conotoxin,M superfamily,,III,nucleic acid level
+P08187,P08187|Ca6.15 precursor|Conus caracteristicus|Precursor|conotoxin|O2 superfamily||VI/VII|nucleic acid level,Conus caracteristicus,Precursor,conotoxin,O2 superfamily,,VI/VII,nucleic acid level
+P08189,P08189|Ca15.4 precursor|Conus caracteristicus|Precursor|conotoxin|O2 superfamily||XV|nucleic acid level,Conus caracteristicus,Precursor,conotoxin,O2 superfamily,,XV,nucleic acid level
+P08192,P08192|Contryphan-Ca2 precursor|Conus caracteristicus|Precursor|contryphan||||nucleic acid level,Conus caracteristicus,Precursor,contryphan,,,,nucleic acid level
+P08194,P08194|Contryphan-Ca3 precursor|Conus caracteristicus|Precursor|contryphan||||nucleic acid level,Conus caracteristicus,Precursor,contryphan,,,,nucleic acid level
+P08208,P08208|Ge1.2 precursor|Conus generalis|Precursor|conotoxin|A superfamily||I|nucleic acid level,Conus generalis,Precursor,conotoxin,A superfamily,,I,nucleic acid level
+P08210,P08210|GeXXA precursor|Conus generalis|Precursor|conotoxin|D superfamily||XX|nucleic acid level,Conus generalis,Precursor,conotoxin,D superfamily,,XX,nucleic acid level
+P08223,P08223|Ge3.3 precursor|Conus generalis|Precursor|conotoxin|||III|nucleic acid level,Conus generalis,Precursor,conotoxin,,,III,nucleic acid level
+P08227,P08227|Ge6.5 precursor|Conus generalis|Precursor|conotoxin|O1 superfamily||VI/VII|nucleic acid level,Conus generalis,Precursor,conotoxin,O1 superfamily,,VI/VII,nucleic acid level
+P08229,P08229|Ge6.6 precursor|Conus generalis|Precursor|conotoxin|O1 superfamily||VI/VII|nucleic acid level,Conus generalis,Precursor,conotoxin,O1 superfamily,,VI/VII,nucleic acid level
+P08233,P08233|Ge6.8 precursor|Conus generalis|Precursor|conotoxin|O1 superfamily||VI/VII|nucleic acid level,Conus generalis,Precursor,conotoxin,O1 superfamily,,VI/VII,nucleic acid level
+P08235,P08235|Ge6.9 precursor|Conus generalis|Precursor|conotoxin|O1 superfamily||VI/VII|nucleic acid level,Conus generalis,Precursor,conotoxin,O1 superfamily,,VI/VII,nucleic acid level
+P08256,P08256|Ge5.4 precursor|Conus generalis|Precursor|conotoxin|||V|nucleic acid level,Conus generalis,Precursor,conotoxin,,,V,nucleic acid level
+P08272,P08272|Qc3.7 precursor|Conus quercinus|Precursor|conotoxin|M superfamily||III|nucleic acid level,Conus quercinus,Precursor,conotoxin,M superfamily,,III,nucleic acid level
+P08284,P08284|Qc6.14 precursor|Conus quercinus|Precursor|conotoxin|O2 superfamily||VI/VII|nucleic acid level,Conus quercinus,Precursor,conotoxin,O2 superfamily,,VI/VII,nucleic acid level
+P08366,P08366|Conorfamide-Tx1 precursor|Conus textile|Precursor|conorfamide||||nucleic acid level,Conus textile,Precursor,conorfamide,,,,nucleic acid level
+P08368,P08368|Conorfamide-Tx2 precursor|Conus textile|Precursor|conorfamide||||nucleic acid level,Conus textile,Precursor,conorfamide,,,,nucleic acid level
+P08373,P08373|Contryphan-Am precursor|Conus amadis|Precursor|contryphan|O2 superfamily|||nucleic acid level,Conus amadis,Precursor,contryphan,O2 superfamily,,,nucleic acid level
+P08375,P08375|Am5.1 precursor|Conus amadis|Precursor|conotoxin|T superfamily||V|nucleic acid level,Conus amadis,Precursor,conotoxin,T superfamily,,V,nucleic acid level
+P08376,P08376|Am3.2 precursor|Conus amadis|Precursor|conotoxin|M superfamily||III|nucleic acid level,Conus amadis,Precursor,conotoxin,M superfamily,,III,nucleic acid level
+P08377,P08377|Am1.1 precursor|Conus amadis|Precursor|conotoxin|T superfamily||I|nucleic acid level,Conus amadis,Precursor,conotoxin,T superfamily,,I,nucleic acid level
+P08379,P08379|Am3.1 precursor|Conus amadis|Precursor|conotoxin|M superfamily||III|nucleic acid level,Conus amadis,Precursor,conotoxin,M superfamily,,III,nucleic acid level
+P08382,P08382|Am1.2 precursor|Conus amadis|Precursor|conotoxin|A superfamily||I|nucleic acid level,Conus amadis,Precursor,conotoxin,A superfamily,,I,nucleic acid level
+P08386,P08386|Am3.3 precursor|Conus amadis|Precursor|conotoxin|M superfamily||III|nucleic acid level,Conus amadis,Precursor,conotoxin,M superfamily,,III,nucleic acid level
+P08388,P08388|Am1.4 precursor|Conus amadis|Precursor|conotoxin|A superfamily||I|nucleic acid level,Conus amadis,Precursor,conotoxin,A superfamily,,I,nucleic acid level
+P08392,P08392|Am3.4 precursor|Conus amadis|Precursor|conotoxin|M superfamily||III|nucleic acid level,Conus amadis,Precursor,conotoxin,M superfamily,,III,nucleic acid level
+P08394,P08394|Am1.6 precursor|Conus amadis|Precursor|conotoxin|A superfamily||I|nucleic acid level,Conus amadis,Precursor,conotoxin,A superfamily,,I,nucleic acid level
+P08396,P08396|Am1.5 precursor|Conus amadis|Precursor|conotoxin|A superfamily||I|nucleic acid level,Conus amadis,Precursor,conotoxin,A superfamily,,I,nucleic acid level
+P08398,P08398|Am6.3 precursor|Conus amadis|Precursor|conotoxin|O1 superfamily||VI/VII|nucleic acid level,Conus amadis,Precursor,conotoxin,O1 superfamily,,VI/VII,nucleic acid level
+P08400,P08400|Am6.4 precursor|Conus amadis|Precursor|conotoxin|||VI/VII|nucleic acid level,Conus amadis,Precursor,conotoxin,,,VI/VII,nucleic acid level
+P08402,P08402|Am6.5 precursor|Conus amadis|Precursor|conotoxin|O1 superfamily||VI/VII|nucleic acid level,Conus amadis,Precursor,conotoxin,O1 superfamily,,VI/VII,nucleic acid level
+P08404,P08404|Am14.1 precursor|Conus amadis|Precursor|conotoxin|||XIV|nucleic acid level,Conus amadis,Precursor,conotoxin,,,XIV,nucleic acid level
+P08406,P08406|Am6.6 precursor|Conus amadis|Precursor|conotoxin|O2 superfamily||VI/VII|nucleic acid level,Conus amadis,Precursor,conotoxin,O2 superfamily,,VI/VII,nucleic acid level
+P08408,P08408|Am6.7 precursor|Conus amadis|Precursor|conotoxin|||VI/VII|nucleic acid level,Conus amadis,Precursor,conotoxin,,,VI/VII,nucleic acid level
+P08430,P08430|Conkunitzin-Lt1 precursor|Conus litteratus|Precursor|conkunitzin||||nucleic acid level,Conus litteratus,Precursor,conkunitzin,,,,nucleic acid level
+P08432,P08432|Con-ikot-ikot-Lt1 precursor|Conus litteratus|Precursor|con-ikot-ikot||||nucleic acid level,Conus litteratus,Precursor,con-ikot-ikot,,,,nucleic acid level
+P08454,P08454|E1.2 precursor|Conus ermineus|Precursor|conotoxin|A superfamily||I|nucleic acid level,Conus ermineus,Precursor,conotoxin,A superfamily,,I,nucleic acid level
+P08459,P08459|EIVB precursor|Conus ermineus|Precursor|conotoxin|A superfamily|||nucleic acid level,Conus ermineus,Precursor,conotoxin,A superfamily,,,nucleic acid level
+P08460,P08460|E5.2 precursor|Conus ermineus|Precursor|conotoxin|T superfamily||V|nucleic acid level,Conus ermineus,Precursor,conotoxin,T superfamily,,V,nucleic acid level
+P08462,P08462|E5.3 precursor|Conus ermineus|Precursor|conotoxin|T superfamily||V|nucleic acid level,Conus ermineus,Precursor,conotoxin,T superfamily,,V,nucleic acid level
+P08464,P08464|Conantokin-E1 precursor|Conus ermineus|Precursor|conantokin|B1 superfamily|||nucleic acid level,Conus ermineus,Precursor,conantokin,B1 superfamily,,,nucleic acid level
+P08465,P08465|E6.2 precursor|Conus ermineus|Precursor|conotoxin|O1 superfamily|||nucleic acid level,Conus ermineus,Precursor,conotoxin,O1 superfamily,,,nucleic acid level
+P08466,P08466|E6.1 precursor|Conus ermineus|Precursor|conotoxin|O1 superfamily|||nucleic acid level,Conus ermineus,Precursor,conotoxin,O1 superfamily,,,nucleic acid level
+P08467,P08467|EVIA precursor|Conus ermineus|Precursor|conotoxin|O1 superfamily|||nucleic acid level,Conus ermineus,Precursor,conotoxin,O1 superfamily,,,nucleic acid level
+P08468,P08468|E4.1 precursor|Conus ermineus|Precursor|conotoxin|A superfamily||IV|nucleic acid level,Conus ermineus,Precursor,conotoxin,A superfamily,,IV,nucleic acid level
+P08470,P08470|E1.3 precursor|Conus ermineus|Precursor|conotoxin|||I|nucleic acid level,Conus ermineus,Precursor,conotoxin,,,I,nucleic acid level
+P08472,P08472|Conantokin-E2 precursor|Conus ermineus|Precursor|conantokin|B1 superfamily|||nucleic acid level,Conus ermineus,Precursor,conantokin,B1 superfamily,,,nucleic acid level
+P08473,P08473|Con-ikot-ikot-E1 precursor|Conus ermineus|Precursor|con-ikot-ikot||||nucleic acid level,Conus ermineus,Precursor,con-ikot-ikot,,,,nucleic acid level
+P08475,P08475|Conkunitzin-E1 precursor|Conus ermineus|Precursor|conkunitzin||||nucleic acid level,Conus ermineus,Precursor,conkunitzin,,,,nucleic acid level
+P08476,P08476|Conkunitzin-E3 precursor|Conus ermineus|Precursor|conkunitzin||||nucleic acid level,Conus ermineus,Precursor,conkunitzin,,,,nucleic acid level
+P08478,P08478|Conkunitzin-E4 precursor|Conus ermineus|Precursor|conkunitzin||||nucleic acid level,Conus ermineus,Precursor,conkunitzin,,,,nucleic acid level
+P08480,P08480|Conkunitzin-E5 precursor|Conus ermineus|Precursor|conkunitzin||||nucleic acid level,Conus ermineus,Precursor,conkunitzin,,,,nucleic acid level
+P08482,P08482|E20.1 precursor|Conus ermineus|Precursor|conotoxin|D superfamily||XX|nucleic acid level,Conus ermineus,Precursor,conotoxin,D superfamily,,XX,nucleic acid level
+P08484,P08484|E22.1 precursor|Conus ermineus|Precursor|conotoxin|E superfamily||XXII|nucleic acid level,Conus ermineus,Precursor,conotoxin,E superfamily,,XXII,nucleic acid level
+P08489,P08489|FlfXIVB precursor|Conus anabathrum|Precursor|conotoxin|R superfamily||XIV|nucleic acid level,Conus anabathrum,Precursor,conotoxin,R superfamily,,XIV,nucleic acid level
+P08490,P08490|VilXIVA precursor|Conus villepinii|Precursor|conotoxin|R superfamily||XIV|nucleic acid level,Conus villepinii,Precursor,conotoxin,R superfamily,,XIV,nucleic acid level
+P08491,P08491|VilXIVB precursor|Conus villepinii|Precursor|conotoxin|R superfamily||XIV|nucleic acid level,Conus villepinii,Precursor,conotoxin,R superfamily,,XIV,nucleic acid level
+P08493,P08493|VilXIVB precursor|Conus villepinii|Precursor|conotoxin|R superfamily||XIV|nucleic acid level,Conus villepinii,Precursor,conotoxin,R superfamily,,XIV,nucleic acid level
+P08494,P08494|VilXIVC precursor|Conus villepinii|Precursor|conotoxin|R superfamily||XIV|nucleic acid level,Conus villepinii,Precursor,conotoxin,R superfamily,,XIV,nucleic acid level
+P08496,P08496|VilXIVC precursor|Conus villepinii|Precursor|conotoxin|R superfamily||XIV|nucleic acid level,Conus villepinii,Precursor,conotoxin,R superfamily,,XIV,nucleic acid level
+P08532,P08532|reg3b precursor|Conus regius|Precursor|conotoxin|||III|nucleic acid level,Conus regius,Precursor,conotoxin,,,III,nucleic acid level
+P08535,P08535|reg3k precursor|Conus regius|Precursor|conotoxin|M superfamily||III|nucleic acid level,Conus regius,Precursor,conotoxin,M superfamily,,III,nucleic acid level
+P08537,P08537|reg3f precursor|Conus regius|Precursor|conotoxin|M superfamily||III|nucleic acid level,Conus regius,Precursor,conotoxin,M superfamily,,III,nucleic acid level
+P08539,P08539|reg3h precursor|Conus regius|Precursor|conotoxin|||III|nucleic acid level,Conus regius,Precursor,conotoxin,,,III,nucleic acid level
+P08542,P08542|reg12l precursor|Conus regius|Precursor|conotoxin|||III|nucleic acid level,Conus regius,Precursor,conotoxin,,,III,nucleic acid level
+P08545,P08545|reg3.5 precursor|Conus regius|Precursor|conotoxin|M superfamily||III|nucleic acid level,Conus regius,Precursor,conotoxin,M superfamily,,III,nucleic acid level
+P08547,P08547|reg3.6 precursor|Conus regius|Precursor|conotoxin|M superfamily||III|nucleic acid level,Conus regius,Precursor,conotoxin,M superfamily,,III,nucleic acid level
+P08549,P08549|reg3.7 precursor|Conus regius|Precursor|conotoxin|M superfamily||III|nucleic acid level,Conus regius,Precursor,conotoxin,M superfamily,,III,nucleic acid level
+P08551,P08551|reg3.8 precursor|Conus regius|Precursor|conotoxin|M superfamily||III|nucleic acid level,Conus regius,Precursor,conotoxin,M superfamily,,III,nucleic acid level
+P08553,P08553|reg3.9 precursor|Conus regius|Precursor|conotoxin|||III|nucleic acid level,Conus regius,Precursor,conotoxin,,,III,nucleic acid level
+P08555,P08555|reg3.10 precursor|Conus regius|Precursor|conotoxin|M superfamily||III|nucleic acid level,Conus regius,Precursor,conotoxin,M superfamily,,III,nucleic acid level
+P08557,P08557|reg3.11 precursor|Conus regius|Precursor|conotoxin|||III|nucleic acid level,Conus regius,Precursor,conotoxin,,,III,nucleic acid level
+P08559,P08559|reg3.12 precursor|Conus regius|Precursor|conotoxin|||III|nucleic acid level,Conus regius,Precursor,conotoxin,,,III,nucleic acid level
+P08563,P08563|reg3.14 precursor|Conus regius|Precursor|conotoxin|M superfamily||III|nucleic acid level,Conus regius,Precursor,conotoxin,M superfamily,,III,nucleic acid level
+P08565,P08565|reg3.15 precursor|Conus regius|Precursor|conotoxin|M superfamily||III|nucleic acid level,Conus regius,Precursor,conotoxin,M superfamily,,III,nucleic acid level
+P08569,P08569|reg3.17 precursor|Conus regius|Precursor|conotoxin|M superfamily||III|nucleic acid level,Conus regius,Precursor,conotoxin,M superfamily,,III,nucleic acid level
+P08571,P08571|reg3a precursor|Conus regius|Precursor|conotoxin|M superfamily||III|nucleic acid level,Conus regius,Precursor,conotoxin,M superfamily,,III,nucleic acid level
+P08575,P08575|Vx27.1 precursor|Conus vexillum|Precursor|conotoxin|G2 superfamily||XXVII|nucleic acid level,Conus vexillum,Precursor,conotoxin,G2 superfamily,,XXVII,nucleic acid level
+P08577,P08577|Vr27.1 precursor|Conus varius|Precursor|conotoxin|G2 superfamily||XXVII|nucleic acid level,Conus varius,Precursor,conotoxin,G2 superfamily,,XXVII,nucleic acid level
+P08581,P08581|Ml27.1 precursor|Conus miliaris|Precursor|conotoxin|G2 superfamily||XXVII|nucleic acid level,Conus miliaris,Precursor,conotoxin,G2 superfamily,,XXVII,nucleic acid level
+P08582,P08582|Eb27.1 precursor|Conus ebraeus|Precursor|conotoxin|G2 superfamily||XXVII|nucleic acid level,Conus ebraeus,Precursor,conotoxin,G2 superfamily,,XXVII,nucleic acid level
+P08584,P08584|Eb27.2 precursor|Conus ebraeus|Precursor|conotoxin|G2 superfamily||XXVII|nucleic acid level,Conus ebraeus,Precursor,conotoxin,G2 superfamily,,XXVII,nucleic acid level
+P08586,P08586|Eb27.3 precursor|Conus ebraeus|Precursor|conotoxin|G2 superfamily||XXVII|nucleic acid level,Conus ebraeus,Precursor,conotoxin,G2 superfamily,,XXVII,nucleic acid level
+P08588,P08588|Eb27.4 precursor|Conus ebraeus|Precursor|conotoxin|G2 superfamily||XXVII|nucleic acid level,Conus ebraeus,Precursor,conotoxin,G2 superfamily,,XXVII,nucleic acid level
+P08590,P08590|Ml27.2 precursor|Conus miliaris|Precursor|conotoxin|G2 superfamily||XXVII|nucleic acid level,Conus miliaris,Precursor,conotoxin,G2 superfamily,,XXVII,nucleic acid level
+P08592,P08592|Di27.1 precursor|Conus distans|Precursor|conotoxin|G2 superfamily||XXVII|nucleic acid level,Conus distans,Precursor,conotoxin,G2 superfamily,,XXVII,nucleic acid level
+P08594,P08594|Di27.2 precursor|Conus distans|Precursor|conotoxin|G2 superfamily||XXVII|nucleic acid level,Conus distans,Precursor,conotoxin,G2 superfamily,,XXVII,nucleic acid level
+P08596,P08596|Pl27.1 precursor|Conus planorbis|Precursor|conotoxin|G2 superfamily||XXVII|nucleic acid level,Conus planorbis,Precursor,conotoxin,G2 superfamily,,XXVII,nucleic acid level
+P08598,P08598|Fla27.1 precursor|Conus flavidus|Precursor|conotoxin|G2 superfamily||XXVII|nucleic acid level,Conus flavidus,Precursor,conotoxin,G2 superfamily,,XXVII,nucleic acid level
+P08600,P08600|Fla27.2 precursor|Conus flavidus|Precursor|conotoxin|G2 superfamily||XXVII|nucleic acid level,Conus flavidus,Precursor,conotoxin,G2 superfamily,,XXVII,nucleic acid level
+P08602,P08602|Sa27.1 precursor|Conus sanguinolentus|Precursor|conotoxin|G2 superfamily||XXVII|nucleic acid level,Conus sanguinolentus,Precursor,conotoxin,G2 superfamily,,XXVII,nucleic acid level
+P08604,P08604|Rt27.1 precursor|Conus rattus|Precursor|conotoxin|G2 superfamily||XXVII|nucleic acid level,Conus rattus,Precursor,conotoxin,G2 superfamily,,XXVII,nucleic acid level
+P08679,P08679|FlfXIVC precursor|Conus anabathrum|Precursor|conotoxin|R superfamily||XIV|nucleic acid level,Conus anabathrum,Precursor,conotoxin,R superfamily,,XIV,nucleic acid level
+P08682,P08682|Vu9.1 precursor|Profundiconus cf. vaubani|Precursor|conotoxin|||IX|nucleic acid level,Profundiconus cf. vaubani,Precursor,conotoxin,,,IX,nucleic acid level
+P08684,P08684|Ne6.1 precursor|Profundiconus neocaledonicus|Precursor|conotoxin|||VI/VII|nucleic acid level,Profundiconus neocaledonicus,Precursor,conotoxin,,,VI/VII,nucleic acid level
+P08721,P08721|Im001 precursor (partial)|Conus imperialis|Precursor|conotoxin|A superfamily|||nucleic acid level,Conus imperialis,Precursor,conotoxin,A superfamily,,,nucleic acid level
+P08722,P08722|Im002 precursor (partial)|Conus imperialis|Precursor|conotoxin|A superfamily|||nucleic acid level,Conus imperialis,Precursor,conotoxin,A superfamily,,,nucleic acid level
+P08723,P08723|Im1.1 precursor|Conus imperialis|Precursor|conotoxin|A superfamily||I|nucleic acid level,Conus imperialis,Precursor,conotoxin,A superfamily,,I,nucleic acid level
+P08725,P08725|Im28.1 precursor|Conus imperialis|Precursor|conotoxin|D superfamily||XXVIII|nucleic acid level,Conus imperialis,Precursor,conotoxin,D superfamily,,XXVIII,nucleic acid level
+P08727,P08727|Im22.1 precursor|Conus imperialis|Precursor|conotoxin|E superfamily||XXII|nucleic acid level,Conus imperialis,Precursor,conotoxin,E superfamily,,XXII,nucleic acid level
+P08729,P08729|Im11.8 precursor|Conus imperialis|Precursor|conotoxin|I1 superfamily||XI|nucleic acid level,Conus imperialis,Precursor,conotoxin,I1 superfamily,,XI,nucleic acid level
+P08731,P08731|Im11.9 precursor|Conus imperialis|Precursor|conotoxin|I2 superfamily||XI|nucleic acid level,Conus imperialis,Precursor,conotoxin,I2 superfamily,,XI,nucleic acid level
+P08733,P08733|Im11.11 precursor|Conus imperialis|Precursor|conotoxin|I2 superfamily||XI|nucleic acid level,Conus imperialis,Precursor,conotoxin,I2 superfamily,,XI,nucleic acid level
+P08735,P08735|Im23.4 precursor|Conus imperialis|Precursor|conotoxin|K superfamily||XXIII|nucleic acid level,Conus imperialis,Precursor,conotoxin,K superfamily,,XXIII,nucleic acid level
+P08737,P08737|Im3.1 precursor|Conus imperialis|Precursor|conotoxin|M superfamily||III|nucleic acid level,Conus imperialis,Precursor,conotoxin,M superfamily,,III,nucleic acid level
+P08739,P08739|Im3.2 precursor|Conus imperialis|Precursor|conotoxin|M superfamily||III|nucleic acid level,Conus imperialis,Precursor,conotoxin,M superfamily,,III,nucleic acid level
+P08741,P08741|Im3.3 precursor|Conus imperialis|Precursor|conotoxin|M superfamily||III|nucleic acid level,Conus imperialis,Precursor,conotoxin,M superfamily,,III,nucleic acid level
+P08743,P08743|Im9.1 precursor|Conus imperialis|Precursor|conotoxin|M superfamily||IX|nucleic acid level,Conus imperialis,Precursor,conotoxin,M superfamily,,IX,nucleic acid level
+P08745,P08745|Im016 precursor|Conus imperialis|Precursor|conotoxin|N superfamily|||nucleic acid level,Conus imperialis,Precursor,conotoxin,N superfamily,,,nucleic acid level
+P08748,P08748|Im6.2 precursor|Conus imperialis|Precursor|conotoxin|O2 superfamily||VI/VII|nucleic acid level,Conus imperialis,Precursor,conotoxin,O2 superfamily,,VI/VII,nucleic acid level
+P08749,P08749|Im6.9 precursor|Conus imperialis|Precursor|conotoxin|O2 superfamily||VI/VII|nucleic acid level,Conus imperialis,Precursor,conotoxin,O2 superfamily,,VI/VII,nucleic acid level
+P08751,P08751|Im9.2 precursor|Conus imperialis|Precursor|conotoxin|P superfamily||IX|nucleic acid level,Conus imperialis,Precursor,conotoxin,P superfamily,,IX,nucleic acid level
+P08753,P08753|Im9.3 precursor|Conus imperialis|Precursor|conotoxin|P superfamily||IX|nucleic acid level,Conus imperialis,Precursor,conotoxin,P superfamily,,IX,nucleic acid level
+P08755,P08755|Im9.4 precursor|Conus imperialis|Precursor|conotoxin|P superfamily||IX|nucleic acid level,Conus imperialis,Precursor,conotoxin,P superfamily,,IX,nucleic acid level
+P08757,P08757|Im5.11b precursor|Conus imperialis|Precursor|conotoxin|T superfamily||V|nucleic acid level,Conus imperialis,Precursor,conotoxin,T superfamily,,V,nucleic acid level
+P08759,P08759|Im14.2 precursor|Conus imperialis|Precursor|conotoxin|||XIV|nucleic acid level,Conus imperialis,Precursor,conotoxin,,,XIV,nucleic acid level
+P08761,P08761|Im026 precursor|Conus imperialis|Precursor|conotoxin||||nucleic acid level,Conus imperialis,Precursor,conotoxin,,,,nucleic acid level
+P08763,P08763|Im20.1 precursor|Conus imperialis|Precursor|conotoxin|||XX|nucleic acid level,Conus imperialis,Precursor,conotoxin,,,XX,nucleic acid level
+P08765,P08765|Im23.5 precursor|Conus imperialis|Precursor|conotoxin|||XXIII|nucleic acid level,Conus imperialis,Precursor,conotoxin,,,XXIII,nucleic acid level
+P08767,P08767|Im6.10 precursor|Conus imperialis|Precursor|conotoxin|||VI/VII|nucleic acid level,Conus imperialis,Precursor,conotoxin,,,VI/VII,nucleic acid level
+P08770,P08770|Im8.1 precursor|Conus imperialis|Precursor|conotoxin|S superfamily||VIII|nucleic acid level,Conus imperialis,Precursor,conotoxin,S superfamily,,VIII,nucleic acid level
+P08772,P08772|Im14.3 precursor|Conus imperialis|Precursor|conotoxin|||XIV|nucleic acid level,Conus imperialis,Precursor,conotoxin,,,XIV,nucleic acid level
+P08929,P08929|conophysin-conopressin-M1 precursor|Conus monile|Precursor|unclassified||||nucleic acid level,Conus monile,Precursor,unclassified,,,,nucleic acid level
+P08932,P08932|conophysin-conopressin Mi precursor|Conus miles|Precursor|unclassified||||nucleic acid level,Conus miles,Precursor,unclassified,,,,nucleic acid level
+P08933,P08933|conophysin-conopressin Lo2 precursor|Conus loroisii|Precursor|unclassified||||nucleic acid level,Conus loroisii,Precursor,unclassified,,,,nucleic acid level
+P08934,P08934|conophysin-conopressin Lo1 precursor|Conus loroisii|Precursor|unclassified||||nucleic acid level,Conus loroisii,Precursor,unclassified,,,,nucleic acid level
+P08935,P08935|conophysin-conopressin Li2 precursor|Conus lividus|Precursor|unclassified||||nucleic acid level,Conus lividus,Precursor,unclassified,,,,nucleic acid level
+P08936,P08936|conophysin-conopressin Li1 precursor|Conus lividus|Precursor|unclassified||||nucleic acid level,Conus lividus,Precursor,unclassified,,,,nucleic acid level
+P08937,P08937|conophysin-conopressin Fr precursor|Conus frigidus|Precursor|unclassified||||nucleic acid level,Conus frigidus,Precursor,unclassified,,,,nucleic acid level
+P08938,P08938|conophysin-conopressin Eb precursor|Conus ebraeus|Precursor|unclassified||||nucleic acid level,Conus ebraeus,Precursor,unclassified,,,,nucleic acid level
+P08939,P08939|conophysin-conopressin Ar precursor|Conus araneosus|Precursor|unclassified||||nucleic acid level,Conus araneosus,Precursor,unclassified,,,,nucleic acid level
+P08942,P08942|GVIIIB precursor|Conus geographus|Precursor|conotoxin|S superfamily||VIII|nucleic acid level,Conus geographus,Precursor,conotoxin,S superfamily,,VIII,nucleic acid level
+P08955,P08955|conophysin-conopressin-M3 precursor|Conus monile|Precursor|unclassified||||nucleic acid level,Conus monile,Precursor,unclassified,,,,nucleic acid level
+P08956,P08956|conophysin-conopressin-M2 precursor|Conus monile|Precursor|unclassified||||nucleic acid level,Conus monile,Precursor,unclassified,,,,nucleic acid level
+P08999,P08999|PiXXA precursor|Conus princeps|Precursor|conotoxin|D superfamily|||nucleic acid level,Conus princeps,Precursor,conotoxin,D superfamily,,,nucleic acid level
+P09039,P09039|Am6.1 precursor|Conus amadis|Precursor|conotoxin|O2 superfamily||VI/VII|nucleic acid level,Conus amadis,Precursor,conotoxin,O2 superfamily,,VI/VII,nucleic acid level
+P09040,P09040|Am6.2 precursor|Conus amadis|Precursor|conotoxin|O1 superfamily||VI/VII|nucleic acid level,Conus amadis,Precursor,conotoxin,O1 superfamily,,VI/VII,nucleic acid level
+P09058,P09058|Ch1.1 precursor|Conus chiangi |Precursor|conotoxin|A superfamily|||nucleic acid level,Conus chiangi ,Precursor,conotoxin,A superfamily,,,nucleic acid level
+P09060,P09060|Bt5.5 precursor|Conus betulinus|Precursor|conotoxin|T superfamily||V|nucleic acid level,Conus betulinus,Precursor,conotoxin,T superfamily,,V,nucleic acid level
+P09061,P09061|Bt5.6 precursor|Conus betulinus|Precursor|conotoxin|T superfamily||V|nucleic acid level,Conus betulinus,Precursor,conotoxin,T superfamily,,V,nucleic acid level
+P09063,P09063|Bt5.7 precursor|Conus betulinus|Precursor|conotoxin|T superfamily||V|nucleic acid level,Conus betulinus,Precursor,conotoxin,T superfamily,,V,nucleic acid level
+P09065,P09065|Bt1.10 precursor|Conus betulinus|Precursor|conotoxin|A superfamily|||nucleic acid level,Conus betulinus,Precursor,conotoxin,A superfamily,,,nucleic acid level
+P09067,P09067|Bt1.11 precursor|Conus betulinus|Precursor|conotoxin|A superfamily|||nucleic acid level,Conus betulinus,Precursor,conotoxin,A superfamily,,,nucleic acid level
+P09069,P09069|Bt1.12 precursor|Conus betulinus|Precursor|conotoxin|A superfamily|||nucleic acid level,Conus betulinus,Precursor,conotoxin,A superfamily,,,nucleic acid level
+P09102,P09102|Qc14.1 partial precursor|Conus quercinus|Precursor|conotoxin||||nucleic acid level,Conus quercinus,Precursor,conotoxin,,,,nucleic acid level
+P09103,P09103|Qc002 precursor|Conus quercinus|Precursor|conotoxin||||nucleic acid level,Conus quercinus,Precursor,conotoxin,,,,nucleic acid level
+P09104,P09104|elevenin-Qc1 precursor|Conus quercinus|Precursor|elvenin||||nucleic acid level,Conus quercinus,Precursor,elvenin,,,,nucleic acid level
+P09106,P09106|Qc9.9 precursor|Conus quercinus|Precursor|conotoxin||||nucleic acid level,Conus quercinus,Precursor,conotoxin,,,,nucleic acid level
+P09108,P09108|Qc6.17 precursor|Conus quercinus|Precursor|conotoxin|O2 superfamily|||nucleic acid level,Conus quercinus,Precursor,conotoxin,O2 superfamily,,,nucleic acid level
+P09110,P09110|Qc6.18 precursor|Conus quercinus|Precursor|conotoxin|O2 superfamily|||nucleic acid level,Conus quercinus,Precursor,conotoxin,O2 superfamily,,,nucleic acid level
+P09112,P09112|Qc007 precursor|Conus quercinus|Precursor|conotoxin||||nucleic acid level,Conus quercinus,Precursor,conotoxin,,,,nucleic acid level
+P09114,P09114|Qc1.21 precursor|Conus quercinus|Precursor|conotoxin|A superfamily|||nucleic acid level,Conus quercinus,Precursor,conotoxin,A superfamily,,,nucleic acid level
+P09116,P09116|Qc1.22 precursor|Conus quercinus|Precursor|conotoxin|A superfamily|||nucleic acid level,Conus quercinus,Precursor,conotoxin,A superfamily,,,nucleic acid level
+P09118,P09118|elevenin-Qc2 precursor|Conus quercinus|Precursor|elvenin||||nucleic acid level,Conus quercinus,Precursor,elvenin,,,,nucleic acid level
+P09120,P09120|Qc14.2 precursor|Conus quercinus|Precursor|conotoxin|L superfamily|||nucleic acid level,Conus quercinus,Precursor,conotoxin,L superfamily,,,nucleic acid level
+P09122,P09122|Qc6.19 precursor|Conus quercinus|Precursor|conotoxin|O1 superfamily|||nucleic acid level,Conus quercinus,Precursor,conotoxin,O1 superfamily,,,nucleic acid level
+P09124,P09124|Qc16.2 precursor|Conus quercinus|Precursor|conotoxin|T superfamily|||nucleic acid level,Conus quercinus,Precursor,conotoxin,T superfamily,,,nucleic acid level
+P09126,P09126|Qc3.9 precursor|Conus quercinus|Precursor|conotoxin|M superfamily|||nucleic acid level,Conus quercinus,Precursor,conotoxin,M superfamily,,,nucleic acid level
+P09128,P09128|Qc22.1 precursor|Conus quercinus|Precursor|conotoxin|E superfamily|||nucleic acid level,Conus quercinus,Precursor,conotoxin,E superfamily,,,nucleic acid level
+P09130,P09130|Qc1.23 precursor|Conus quercinus|Precursor|conotoxin||||nucleic acid level,Conus quercinus,Precursor,conotoxin,,,,nucleic acid level
+P09132,P09132|Qc1.24 precursor|Conus quercinus|Precursor|conotoxin|A superfamily|||nucleic acid level,Conus quercinus,Precursor,conotoxin,A superfamily,,,nucleic acid level
+P09134,P09134|Qc5.5 precursor|Conus quercinus|Precursor|conotoxin|T superfamily|||nucleic acid level,Conus quercinus,Precursor,conotoxin,T superfamily,,,nucleic acid level
+P09136,P09136|Qc16.3 precursor|Conus quercinus|Precursor|conotoxin|T superfamily|||nucleic acid level,Conus quercinus,Precursor,conotoxin,T superfamily,,,nucleic acid level
+P09138,P09138|Qc3.10 precursor|Conus quercinus|Precursor|conotoxin|M superfamily|||nucleic acid level,Conus quercinus,Precursor,conotoxin,M superfamily,,,nucleic acid level
+P09140,P09140|Qc6.20 precursor|Conus quercinus|Precursor|conotoxin|O2 superfamily|||nucleic acid level,Conus quercinus,Precursor,conotoxin,O2 superfamily,,,nucleic acid level
+P09142,P09142|Qc6.21 precursor|Conus quercinus|Precursor|conotoxin|O1 superfamily|||nucleic acid level,Conus quercinus,Precursor,conotoxin,O1 superfamily,,,nucleic acid level
+P09144,P09144|Qc12.2 precursor|Conus quercinus|Precursor|conotoxin|U superfamily|||nucleic acid level,Conus quercinus,Precursor,conotoxin,U superfamily,,,nucleic acid level
+P09146,P09146|Con-ikot-ikot-Qc2 precursor|Conus quercinus|Precursor|con-ikot-ikot||||nucleic acid level,Conus quercinus,Precursor,con-ikot-ikot,,,,nucleic acid level
+P09148,P09148|Qc22.2 precursor|Conus quercinus|Precursor|conotoxin||||nucleic acid level,Conus quercinus,Precursor,conotoxin,,,,nucleic acid level
+P09150,P09150|Qc1.25 precursor|Conus quercinus|Precursor|conotoxin|A superfamily|||nucleic acid level,Conus quercinus,Precursor,conotoxin,A superfamily,,,nucleic acid level
+P09153,P09153|Qc11.3 precursor|Conus quercinus|Precursor|conotoxin|I2 superfamily|||nucleic acid level,Conus quercinus,Precursor,conotoxin,I2 superfamily,,,nucleic acid level
+P09155,P09155|Qc3.11 precursor|Conus quercinus|Precursor|conotoxin|M superfamily|||nucleic acid level,Conus quercinus,Precursor,conotoxin,M superfamily,,,nucleic acid level
+P09157,P09157|Qc6.22 precursor|Conus quercinus|Precursor|conotoxin|O2 superfamily|||nucleic acid level,Conus quercinus,Precursor,conotoxin,O2 superfamily,,,nucleic acid level
+P09159,P09159|Qc066 precursor|Conus quercinus|Precursor|conotoxin|O1 superfamily|||nucleic acid level,Conus quercinus,Precursor,conotoxin,O1 superfamily,,,nucleic acid level
+P09161,P09161|con-ikot-ikot-Qc3 precursor|Conus quercinus|Precursor|con-ikot-ikot||||nucleic acid level,Conus quercinus,Precursor,con-ikot-ikot,,,,nucleic acid level
+P09180,P09180|con-ikot-ikot-Qc4 precursor|Conus quercinus|Precursor|con-ikot-ikot||||nucleic acid level,Conus quercinus,Precursor,con-ikot-ikot,,,,nucleic acid level
+P09686,P09686|Qc1.2 precursor|Conus quercinus|Precursor|conotoxin|A superfamily|||nucleic acid level,Conus quercinus,Precursor,conotoxin,A superfamily,,,nucleic acid level
+P09687,P09687|Qc1.26 precursor|Conus quercinus|Precursor|conotoxin|A superfamily|||nucleic acid level,Conus quercinus,Precursor,conotoxin,A superfamily,,,nucleic acid level
+P09689,P09689|Qc22.3 precursor|Conus quercinus|Precursor|conotoxin|E superfamily|||nucleic acid level,Conus quercinus,Precursor,conotoxin,E superfamily,,,nucleic acid level
+P09691,P09691|Qc22.4 precursor|Conus quercinus|Precursor|conotoxin|E superfamily|||nucleic acid level,Conus quercinus,Precursor,conotoxin,E superfamily,,,nucleic acid level
+P09692,P09692|Qc22.4|Conus quercinus|Precursor|conotoxin|E superfamily||XXII|nucleic acid level,Conus quercinus,Precursor,conotoxin,E superfamily,,XXII,nucleic acid level
+P09693,P09693|Qc3.1 precursor|Conus quercinus|Precursor|conotoxin|M superfamily|||nucleic acid level,Conus quercinus,Precursor,conotoxin,M superfamily,,,nucleic acid level
+P09694,P09694|Qc6.23 precursor|Conus quercinus|Precursor|conotoxin||||nucleic acid level,Conus quercinus,Precursor,conotoxin,,,,nucleic acid level
+P09696,P09696|Qc11.4 precursor|Conus quercinus|Precursor|conotoxin|I2 superfamily|||nucleic acid level,Conus quercinus,Precursor,conotoxin,I2 superfamily,,,nucleic acid level
+P09698,P09698|Qc11.5 precursor|Conus quercinus|Precursor|conotoxin|I2 superfamily|||nucleic acid level,Conus quercinus,Precursor,conotoxin,I2 superfamily,,,nucleic acid level
+P09700,P09700|Qc8.1 precursor|Conus quercinus|Precursor|conotoxin||||nucleic acid level,Conus quercinus,Precursor,conotoxin,,,,nucleic acid level
+P09703,P09703|Qc8.2 precursor|Conus quercinus|Precursor|conotoxin||||nucleic acid level,Conus quercinus,Precursor,conotoxin,,,,nucleic acid level
+P09704,P09704|Qc12.3 precursor|Conus quercinus|Precursor|conotoxin|U superfamily|||nucleic acid level,Conus quercinus,Precursor,conotoxin,U superfamily,,,nucleic acid level
+P09706,P09706|Qc12.4 precursor|Conus quercinus|Precursor|conotoxin|U superfamily|||nucleic acid level,Conus quercinus,Precursor,conotoxin,U superfamily,,,nucleic acid level
+P09710,P09710|Qc6.24 precursor|Conus quercinus|Precursor|conotoxin|O1 superfamily|||nucleic acid level,Conus quercinus,Precursor,conotoxin,O1 superfamily,,,nucleic acid level
+P09712,P09712|Qc6.25 precursor|Conus quercinus|Precursor|conotoxin|O1 superfamily|||nucleic acid level,Conus quercinus,Precursor,conotoxin,O1 superfamily,,,nucleic acid level
+P09714,P09714|Qc3.12 precursor|Conus quercinus|Precursor|conotoxin|M superfamily|||nucleic acid level,Conus quercinus,Precursor,conotoxin,M superfamily,,,nucleic acid level
+P09716,P09716|Qc3.7 precursor|Conus quercinus|Precursor|conotoxin|M superfamily|||nucleic acid level,Conus quercinus,Precursor,conotoxin,M superfamily,,,nucleic acid level
+P09718,P09718|Conkunitzin-Qc1 precursor|Conus quercinus|Precursor|conkunitzin||||nucleic acid level,Conus quercinus,Precursor,conkunitzin,,,,nucleic acid level
+P09752,P09752|Contryphan-Ar2 precursor|Conus araneosus|Precursor|contryphan|O2 superfamily|||nucleic acid level,Conus araneosus,Precursor,contryphan,O2 superfamily,,,nucleic acid level
+P09755,P09755|Contryphan-Eb precursor|Conus ebraeus|Precursor|contryphan|O2 superfamily|||nucleic acid level,Conus ebraeus,Precursor,contryphan,O2 superfamily,,,nucleic acid level
+P09756,P09756|Contryphan-Fr1 precursor|Conus frigidus|Precursor|contryphan|O2 superfamily|||nucleic acid level,Conus frigidus,Precursor,contryphan,O2 superfamily,,,nucleic acid level
+P09758,P09758|Contryphan-Li1 precursor|Conus lividus|Precursor|contryphan|O2 superfamily|||nucleic acid level,Conus lividus,Precursor,contryphan,O2 superfamily,,,nucleic acid level
+P09759,P09759|Contryphan-Li2 precursor|Conus lividus|Precursor|contryphan|O2 superfamily|||nucleic acid level,Conus lividus,Precursor,contryphan,O2 superfamily,,,nucleic acid level
+P09760,P09760|Contryphan-Mi precursor|Conus miles|Precursor|contryphan|O2 superfamily|||nucleic acid level,Conus miles,Precursor,contryphan,O2 superfamily,,,nucleic acid level
+P09761,P09761|Contryphan-Lt2 precursor|Conus litteratus|Precursor|contryphan|O2 superfamily|||nucleic acid level,Conus litteratus,Precursor,contryphan,O2 superfamily,,,nucleic acid level
+P09763,P09763|Contryphan-Mo precursor|Conus monile|Precursor|contryphan||||nucleic acid level,Conus monile,Precursor,contryphan,,,,nucleic acid level
+P09764,P09764|Contryphan-Lo2 precursor|Conus loroisii|Precursor|contryphan|O2 superfamily|||nucleic acid level,Conus loroisii,Precursor,contryphan,O2 superfamily,,,nucleic acid level
+P09848,P09848|Lt14.8 precursor|Conus litteratus|Precursor|conotoxin||||nucleic acid level,Conus litteratus,Precursor,conotoxin,,,,nucleic acid level
+P09887,P09887|Lt22.4 precursor|Conus litteratus|Precursor|conotoxin||||nucleic acid level,Conus litteratus,Precursor,conotoxin,,,,nucleic acid level
+P10036,P10036|Conopressin-Conophysin Ba1 precursor|Conus bayani|Precursor|unclassified||||nucleic acid level,Conus bayani,Precursor,unclassified,,,,nucleic acid level
+P10038,P10038|Ba5.1 precursor|Conus bayani|Precursor|conotoxin|T superfamily|||nucleic acid level,Conus bayani,Precursor,conotoxin,T superfamily,,,nucleic acid level
+P10040,P10040|Ba14.1 precursor|Conus bayani|Precursor|conotoxin|L superfamily|||nucleic acid level,Conus bayani,Precursor,conotoxin,L superfamily,,,nucleic acid level
+P10042,P10042|Ba9.1 precursor|Conus bayani|Precursor|conotoxin|P superfamily|||nucleic acid level,Conus bayani,Precursor,conotoxin,P superfamily,,,nucleic acid level
+P10044,P10044|Ba3.1 precursor [partial]|Conus bayani|Precursor|conotoxin|M superfamily|||nucleic acid level,Conus bayani,Precursor,conotoxin,M superfamily,,,nucleic acid level
+P10046,P10046|Ba6.1 precursor|Conus bayani|Precursor|conotoxin|U superfamily|||nucleic acid level,Conus bayani,Precursor,conotoxin,U superfamily,,,nucleic acid level
+P10048,P10048|Ba6.2 precursor|Conus bayani|Precursor|conotoxin|O1 superfamily|||nucleic acid level,Conus bayani,Precursor,conotoxin,O1 superfamily,,,nucleic acid level
+P10050,P10050|Ba6.3 precursor [partial]|Conus bayani|Precursor|conotoxin||||nucleic acid level,Conus bayani,Precursor,conotoxin,,,,nucleic acid level
+P10052,P10052|Ba6.4 precursor|Conus bayani|Precursor|conotoxin|O1 superfamily|||nucleic acid level,Conus bayani,Precursor,conotoxin,O1 superfamily,,,nucleic acid level
+P10054,P10054|Ba6.5 precursor|Conus bayani|Precursor|conotoxin|O1 superfamily|||nucleic acid level,Conus bayani,Precursor,conotoxin,O1 superfamily,,,nucleic acid level
+P10056,P10056|Ba6.6 precursor|Conus bayani|Precursor|conotoxin|O1 superfamily|||nucleic acid level,Conus bayani,Precursor,conotoxin,O1 superfamily,,,nucleic acid level
+P10057,P10057|unclassified-Ba0.7 precursor|Conus bayani|Precursor|conotoxin||||nucleic acid level,Conus bayani,Precursor,conotoxin,,,,nucleic acid level
+P10059,P10059|Ba15.1 precursor [partial]|Conus bayani|Precursor|conotoxin||||nucleic acid level,Conus bayani,Precursor,conotoxin,,,,nucleic acid level
+P10061,P10061|Ba15.2 precursor|Conus bayani|Precursor|conotoxin|O2 superfamily|||nucleic acid level,Conus bayani,Precursor,conotoxin,O2 superfamily,,,nucleic acid level
+P10063,P10063|Ba12.1 precursor|Conus bayani|Precursor|conotoxin|O2 superfamily|||nucleic acid level,Conus bayani,Precursor,conotoxin,O2 superfamily,,,nucleic acid level
+P10065,P10065|Ba6.7 precursor|Conus bayani|Precursor|conotoxin|O2 superfamily|||nucleic acid level,Conus bayani,Precursor,conotoxin,O2 superfamily,,,nucleic acid level
+P10067,P10067|Ba1.1 precursor|Conus bayani|Precursor|conotoxin|O2 superfamily|||nucleic acid level,Conus bayani,Precursor,conotoxin,O2 superfamily,,,nucleic acid level
+P10069,P10069|Ba6.8 precursor|Conus bayani|Precursor|conotoxin||||nucleic acid level,Conus bayani,Precursor,conotoxin,,,,nucleic acid level
+P10070,P10070|Ba3.2 precursor|Conus bayani|Precursor|conotoxin|M superfamily|||nucleic acid level,Conus bayani,Precursor,conotoxin,M superfamily,,,nucleic acid level
+P10073,P10073|Ba3.3 precursor|Conus bayani|Precursor|conotoxin||||nucleic acid level,Conus bayani,Precursor,conotoxin,,,,nucleic acid level
+P10075,P10075|Ba3.4 precursor|Conus bayani|Precursor|conotoxin|M superfamily|||nucleic acid level,Conus bayani,Precursor,conotoxin,M superfamily,,,nucleic acid level
+P10077,P10077|Ba16.1 precursor|Conus bayani|Precursor|conotoxin|M superfamily|||nucleic acid level,Conus bayani,Precursor,conotoxin,M superfamily,,,nucleic acid level
+P10079,P10079|Ba32.1 precursor|Conus bayani|Precursor|conotoxin|M superfamily|||nucleic acid level,Conus bayani,Precursor,conotoxin,M superfamily,,,nucleic acid level
+P10081,P10081|Ba6.9 precursor|Conus bayani|Precursor|conotoxin|H superfamily|||nucleic acid level,Conus bayani,Precursor,conotoxin,H superfamily,,,nucleic acid level
+P10083,P10083|Ba8.1 precursor|Conus bayani|Precursor|conotoxin||||nucleic acid level,Conus bayani,Precursor,conotoxin,,,,nucleic acid level
+P10085,P10085|Ba8.2 precursor|Conus bayani|Precursor|conotoxin||||nucleic acid level,Conus bayani,Precursor,conotoxin,,,,nucleic acid level
+P10087,P10087|Ba11.1 precursor|Conus bayani|Precursor|conotoxin|I1 superfamily|||nucleic acid level,Conus bayani,Precursor,conotoxin,I1 superfamily,,,nucleic acid level
+P10089,P10089|Ba6.10 precursor|Conus bayani|Precursor|conotoxin||||nucleic acid level,Conus bayani,Precursor,conotoxin,,,,nucleic acid level
+P10091,P10091|Ba6.11 precursor|Conus bayani|Precursor|conotoxin|I1 superfamily|||nucleic acid level,Conus bayani,Precursor,conotoxin,I1 superfamily,,,nucleic acid level
+P10093,P10093|Ba22.1 precursor|Conus bayani|Precursor|conotoxin||||nucleic acid level,Conus bayani,Precursor,conotoxin,,,,nucleic acid level
+P10095,P10095|Ba11.2 precursor|Conus bayani|Precursor|conotoxin|I2 superfamily|||nucleic acid level,Conus bayani,Precursor,conotoxin,I2 superfamily,,,nucleic acid level
+P10097,P10097|Ba11.3 precursor|Conus bayani|Precursor|conotoxin|I2 superfamily|||nucleic acid level,Conus bayani,Precursor,conotoxin,I2 superfamily,,,nucleic acid level
+P10099,P10099|Ba11.4 precursor|Conus bayani|Precursor|conotoxin|I3 superfamily|||nucleic acid level,Conus bayani,Precursor,conotoxin,I3 superfamily,,,nucleic acid level
+P10101,P10101|Ba17.1 precursor|Conus bayani|Precursor|conotoxin|Y superfamily|||nucleic acid level,Conus bayani,Precursor,conotoxin,Y superfamily,,,nucleic acid level
+P10103,P10103|Ba1.2 precursor|Conus bayani|Precursor|conotoxin|||I|nucleic acid level,Conus bayani,Precursor,conotoxin,,,I,nucleic acid level
+P10104,P10104|Ba6.12 precursor|Conus bayani|Precursor|conotoxin|U superfamily|||nucleic acid level,Conus bayani,Precursor,conotoxin,U superfamily,,,nucleic acid level
+P10105,P10105|Contulakin Ba1 precursor|Conus bayani|Precursor|contulakin||||nucleic acid level,Conus bayani,Precursor,contulakin,,,,nucleic acid level
+P10106,P10106|Conkunitzin Ba1 precursor|Conus bayani|Precursor|conkunitzin||||nucleic acid level,Conus bayani,Precursor,conkunitzin,,,,nucleic acid level
+P10107,P10107|Conodipine Ba1 precursor|Conus bayani|Precursor|conodipine||||nucleic acid level,Conus bayani,Precursor,conodipine,,,,nucleic acid level
+P10108,P10108|Conodipine Ba2 precursor|Conus bayani|Precursor|conodipine||||nucleic acid level,Conus bayani,Precursor,conodipine,,,,nucleic acid level
+P10109,P10109|Conodipine Ba3 precursor [partial]|Conus bayani|Precursor|conodipine||||nucleic acid level,Conus bayani,Precursor,conodipine,,,,nucleic acid level
+P10110,P10110|Conopressin-Conophysin Ba2 precursor|Conus bayani|Precursor|unclassified||||nucleic acid level,Conus bayani,Precursor,unclassified,,,,nucleic acid level
+P10111,P10111|Conopressin-Conophysin Ba3 precursor|Conus bayani|Precursor|unclassified||||nucleic acid level,Conus bayani,Precursor,unclassified,,,,nucleic acid level
+P10112,P10112|Con-ikot-ikot Ba1 precursor|Conus bayani|Precursor|con-ikot-ikot||||nucleic acid level,Conus bayani,Precursor,con-ikot-ikot,,,,nucleic acid level
+P10113,P10113|Con-ikot-ikot Ba2 precursor|Conus bayani|Precursor|con-ikot-ikot||||nucleic acid level,Conus bayani,Precursor,con-ikot-ikot,,,,nucleic acid level
+P10114,P10114|Con-ikot-ikot Ba3 precursor|Conus bayani|Precursor|con-ikot-ikot||||nucleic acid level,Conus bayani,Precursor,con-ikot-ikot,,,,nucleic acid level
+P10115,P10115|Con-ikot-ikot Ba4 precursor|Conus bayani|Precursor|con-ikot-ikot||||nucleic acid level,Conus bayani,Precursor,con-ikot-ikot,,,,nucleic acid level
+P10116,P10116|Con-ikot-ikot Ba5 precursor|Conus bayani|Precursor|con-ikot-ikot||||nucleic acid level,Conus bayani,Precursor,con-ikot-ikot,,,,nucleic acid level
+P10117,P10117|Con-ikot-ikot Ba6 precursor|Conus bayani|Precursor|con-ikot-ikot||||nucleic acid level,Conus bayani,Precursor,con-ikot-ikot,,,,nucleic acid level
+P10118,P10118|Conoporin Ba1 precursor|Conus bayani|Precursor|conoporin||||nucleic acid level,Conus bayani,Precursor,conoporin,,,,nucleic acid level
+P10129,P10129|unclassified-Ba0.1 precurso|Conus bayani|Precursor|unclassified|H superfamily|||nucleic acid level,Conus bayani,Precursor,unclassified,H superfamily,,,nucleic acid level
+P10135,P10135|Conantokin Ba1 precursor|Conus bayani|Precursor|conantokin||||nucleic acid level,Conus bayani,Precursor,conantokin,,,,nucleic acid level
+P10137,P10137|Conantokin Ba2 precursor|Conus bayani|Precursor|conantokin||||nucleic acid level,Conus bayani,Precursor,conantokin,,,,nucleic acid level
+P10148,P10148|unclassified-Ba0.4 precursor|Conus bayani|Precursor|unclassified|H superfamily|||nucleic acid level,Conus bayani,Precursor,unclassified,H superfamily,,,nucleic acid level
+P10149,P10149|unclassified-Ba0.5 precursor|Conus bayani|Precursor|unclassified|H superfamily|||nucleic acid level,Conus bayani,Precursor,unclassified,H superfamily,,,nucleic acid level
+P10150,P10150|unclassified-Ba0.6 precursor|Conus bayani|Precursor|unclassified|M superfamily|||nucleic acid level,Conus bayani,Precursor,unclassified,M superfamily,,,nucleic acid level
+P10153,P10153|Rt2-VD02 precursor|Conus rattus|Precursor|conotoxin|M superfamily|||nucleic acid level,Conus rattus,Precursor,conotoxin,M superfamily,,,nucleic acid level
+P10158,P10158|Vr3-DPP01 precursor|Conus varius|Precursor|conotoxin|M superfamily|||nucleic acid level,Conus varius,Precursor,conotoxin,M superfamily,,,nucleic acid level
+P10159,P10159|SIIIB precursor|Conus striatus|Precursor|conotoxin|M superfamily|||nucleic acid level,Conus striatus,Precursor,conotoxin,M superfamily,,,nucleic acid level
+P10160,P10160|SIIIB precursor|Conus striatus|Precursor|conotoxin|M superfamily|||nucleic acid level,Conus striatus,Precursor,conotoxin,M superfamily,,,nucleic acid level
+P10163,P10163|Ec3-YT01 precursor|Conus emaciatus|Precursor|conotoxin|M superfamily|||nucleic acid level,Conus emaciatus,Precursor,conotoxin,M superfamily,,,nucleic acid level
+P10164,P10164|Vt3-YT01 precursor|Conus vitulinus|Precursor|conotoxin|M superfamily|||nucleic acid level,Conus vitulinus,Precursor,conotoxin,M superfamily,,,nucleic acid level
+P10167,P10167|Rt3-DA01 precursor|Conus rattus|Precursor|conotoxin|M superfamily||III|nucleic acid level,Conus rattus,Precursor,conotoxin,M superfamily,,III,nucleic acid level
+P10168,P10168|Ec3-DA01 precursor|Conus emaciatus|Precursor|conotoxin|M superfamily||III|nucleic acid level,Conus emaciatus,Precursor,conotoxin,M superfamily,,III,nucleic acid level
+P10171,P10171|Lp3-D01 precursor|Conus leopardus|Precursor|conotoxin|M superfamily|||nucleic acid level,Conus leopardus,Precursor,conotoxin,M superfamily,,,nucleic acid level
+P10172,P10172|S3D01 precursor|Conus striatus|Precursor|conotoxin|M superfamily|||nucleic acid level,Conus striatus,Precursor,conotoxin,M superfamily,,,nucleic acid level
+P10174,P10174|LtIIIA precursor|Conus litteratus|Precursor|conotoxin|M superfamily|||nucleic acid level,Conus litteratus,Precursor,conotoxin,M superfamily,,,nucleic acid level
+P10176,P10176|M3-G01 precursor|Conus magus|Precursor|conotoxin|M superfamily|||nucleic acid level,Conus magus,Precursor,conotoxin,M superfamily,,,nucleic acid level
+P10178,P10178|Ca3-G01 precursor|Conus caracteristicus|Precursor|conotoxin|M superfamily|||nucleic acid level,Conus caracteristicus,Precursor,conotoxin,M superfamily,,,nucleic acid level
+P10185,P10185|Lv3-HYQ01 precursor|Conus lividus|Precursor|conotoxin|M superfamily|||nucleic acid level,Conus lividus,Precursor,conotoxin,M superfamily,,,nucleic acid level
+P10186,P10186|Ca3-HYQ01 precursor|Conus caracteristicus|Precursor|conotoxin|M superfamily|||nucleic acid level,Conus caracteristicus,Precursor,conotoxin,M superfamily,,,nucleic acid level
+P10187,P10187|Qc3.7 precursor|Conus quercinus|Precursor|conotoxin|M superfamily|||nucleic acid level,Conus quercinus,Precursor,conotoxin,M superfamily,,,nucleic acid level
+P10189,P10189|Ec3-HGS01 precursor|Conus emaciatus|Precursor|conotoxin|M superfamily|||nucleic acid level,Conus emaciatus,Precursor,conotoxin,M superfamily,,,nucleic acid level
+P10191,P10191|Da3-EP01 precursor|Conus dalli|Precursor|conotoxin|M superfamily|||nucleic acid level,Conus dalli,Precursor,conotoxin,M superfamily,,,nucleic acid level
+P10198,P10198|Mi3-IP01 precursor|Conus miles|Precursor|conotoxin|M superfamily|||nucleic acid level,Conus miles,Precursor,conotoxin,M superfamily,,,nucleic acid level
+P10199,P10199|Vr3IP01 precursor|Conus varius|Precursor|conotoxin|M superfamily|||nucleic acid level,Conus varius,Precursor,conotoxin,M superfamily,,,nucleic acid level
+P10203,P10203|Vt3-VP01 precursor|Conus vitulinus|Precursor|conotoxin|M superfamily|||nucleic acid level,Conus vitulinus,Precursor,conotoxin,M superfamily,,,nucleic acid level
+P10204,P10204|Bt3-VP01 precursor|Conus betulinus|Precursor|conotoxin|M superfamily|||nucleic acid level,Conus betulinus,Precursor,conotoxin,M superfamily,,,nucleic acid level
+P10207,P10207|Mi3-MGK01 precursor|Conus miles|Precursor|conotoxin|M superfamily|||nucleic acid level,Conus miles,Precursor,conotoxin,M superfamily,,,nucleic acid level
+P10208,P10208|Co3-MGK01 precursor|Conus coronatus|Precursor|conotoxin|M superfamily|||nucleic acid level,Conus coronatus,Precursor,conotoxin,M superfamily,,,nucleic acid level
+P10210,P10210|Ec3-VP01 precursor|Conus emaciatus|Precursor|conotoxin|M superfamily|||nucleic acid level,Conus emaciatus,Precursor,conotoxin,M superfamily,,,nucleic acid level
+P10211,P10211|TsMMSK-021 precursor|Conus tessulatus|Precursor|conotoxin|M superfamily|||nucleic acid level,Conus tessulatus,Precursor,conotoxin,M superfamily,,,nucleic acid level
+P10215,P10215|Cp3-TP06 precursor|Conus capitaneus|Precursor|conotoxin|M superfamily|||nucleic acid level,Conus capitaneus,Precursor,conotoxin,M superfamily,,,nucleic acid level
+P10216,P10216|Rt3-TP06 precursor|Conus rattus|Precursor|conotoxin|M superfamily|||nucleic acid level,Conus rattus,Precursor,conotoxin,M superfamily,,,nucleic acid level
+P10217,P10217|Vt3-TP06 precursor|Conus vitulinus|Precursor|conotoxin|M superfamily|||nucleic acid level,Conus vitulinus,Precursor,conotoxin,M superfamily,,,nucleic acid level
+P10220,P10220|Rt3-MGK01 precursor|Conus rattus|Precursor|conotoxin|M superfamily|||nucleic acid level,Conus rattus,Precursor,conotoxin,M superfamily,,,nucleic acid level
+P10221,P10221|Vr3-MGK01 precursor|Conus rattus|Precursor|conotoxin|M superfamily|||nucleic acid level,Conus rattus,Precursor,conotoxin,M superfamily,,,nucleic acid level
+P10222,P10222|Co3-MGK01 precursor|Conus rattus|Precursor|conotoxin|M superfamily|||nucleic acid level,Conus rattus,Precursor,conotoxin,M superfamily,,,nucleic acid level
+P10223,P10223|Mi3-MGK01 precursor|Conus rattus|Precursor|conotoxin|M superfamily|||nucleic acid level,Conus rattus,Precursor,conotoxin,M superfamily,,,nucleic acid level
+P10228,P10228|Vr3-VP03 precursor|Conus varius|Precursor|conotoxin|M superfamily|||nucleic acid level,Conus varius,Precursor,conotoxin,M superfamily,,,nucleic acid level
+P10229,P10229|Cp3-VP03 precursor|Conus capitaneus|Precursor|conotoxin|M superfamily|||nucleic acid level,Conus capitaneus,Precursor,conotoxin,M superfamily,,,nucleic acid level
+P10230,P10230|Rt3-VP03 precursor|Conus rattus|Precursor|conotoxin|M superfamily|||nucleic acid level,Conus rattus,Precursor,conotoxin,M superfamily,,,nucleic acid level
+P10231,P10231|S3-VP03 precursor|Conus striatus|Precursor|conotoxin|M superfamily|||nucleic acid level,Conus striatus,Precursor,conotoxin,M superfamily,,,nucleic acid level
+P10232,P10232|BeTXIb precursor|Conus betulinus|Precursor|conotoxin|M superfamily|||nucleic acid level,Conus betulinus,Precursor,conotoxin,M superfamily,,,nucleic acid level
+P10239,P10239|Rt3-IP06 precursor|Conus rattus|Precursor|conotoxin|M superfamily|||nucleic acid level,Conus rattus,Precursor,conotoxin,M superfamily,,,nucleic acid level
+P10240,P10240|Bt3-IP06 precursor|Conus betulinus|Precursor|conotoxin|M superfamily|||nucleic acid level,Conus betulinus,Precursor,conotoxin,M superfamily,,,nucleic acid level
+P10241,P10241|Eb3-IP06 precursor|Conus eburneus|Precursor|conotoxin|M superfamily|||nucleic acid level,Conus eburneus,Precursor,conotoxin,M superfamily,,,nucleic acid level
+P10242,P10242|Vt3-IP06 precursor|Conus vitulinus|Precursor|conotoxin|M superfamily|||nucleic acid level,Conus vitulinus,Precursor,conotoxin,M superfamily,,,nucleic acid level
+P10243,P10243|S3-IP06 precursor|Conus striatus|Precursor|conotoxin|M superfamily|||nucleic acid level,Conus striatus,Precursor,conotoxin,M superfamily,,,nucleic acid level
+P10244,P10244|Vr3-IP06 precursor|Conus varius|Precursor|conotoxin|M superfamily|||nucleic acid level,Conus varius,Precursor,conotoxin,M superfamily,,,nucleic acid level
+P10247,P10247|Ca3-MGK01 precursor|Conus caracteristicus|Precursor|conotoxin|M superfamily|||nucleic acid level,Conus caracteristicus,Precursor,conotoxin,M superfamily,,,nucleic acid level
+P10248,P10248|Ec3-MGK01 precursor|Conus emaciatus|Precursor|conotoxin|M superfamily|||nucleic acid level,Conus emaciatus,Precursor,conotoxin,M superfamily,,,nucleic acid level
+P10249,P10249|Mi3-MGK01 precursor|Conus miles|Precursor|conotoxin|M superfamily|||nucleic acid level,Conus miles,Precursor,conotoxin,M superfamily,,,nucleic acid level
+P10250,P10250|Rt3-MGK01 precursor|Conus rattus|Precursor|conotoxin|M superfamily|||nucleic acid level,Conus rattus,Precursor,conotoxin,M superfamily,,,nucleic acid level
+P10251,P10251|Vr3-MGK01 precursor|Conus varius|Precursor|conotoxin|M superfamily|||nucleic acid level,Conus varius,Precursor,conotoxin,M superfamily,,,nucleic acid level
+P10252,P10252|Co3-MGK01 precursor|Conus coronatus|Precursor|conotoxin|M superfamily|||nucleic acid level,Conus coronatus,Precursor,conotoxin,M superfamily,,,nucleic acid level
+P10254,P10254|Vr3-Y01 precursor|Conus varius|Precursor|conotoxin|M superfamily|||nucleic acid level,Conus varius,Precursor,conotoxin,M superfamily,,,nucleic acid level
+P10256,P10256|Vr3-Q02 precursor|Conus varius|Precursor|conotoxin|M superfamily|||nucleic acid level,Conus varius,Precursor,conotoxin,M superfamily,,,nucleic acid level
+P10257,P10257|Vr3-Q02 precursor|Conus varius|Precursor|conotoxin|M superfamily|||nucleic acid level,Conus varius,Precursor,conotoxin,M superfamily,,,nucleic acid level
+P10259,P10259|Vr3-E02 precursor|Conus varius|Precursor|conotoxin|M superfamily|||nucleic acid level,Conus varius,Precursor,conotoxin,M superfamily,,,nucleic acid level
+P10261,P10261|Vr3-DPP02 precursor|Conus varius|Precursor|conotoxin|M superfamily|||nucleic acid level,Conus varius,Precursor,conotoxin,M superfamily,,,nucleic acid level
+P10262,P10262|Vr3-DPP02 precursor|Conus varius|Precursor|conotoxin|M superfamily|||nucleic acid level,Conus varius,Precursor,conotoxin,M superfamily,,,nucleic acid level
+P10263,P10263|Vr3-SP01 precursor|Conus varius|Precursor|conotoxin|M superfamily|||nucleic acid level,Conus varius,Precursor,conotoxin,M superfamily,,,nucleic acid level
+P10265,P10265|Bt3-I01 precursor|Conus betulinus|Precursor|conotoxin|M superfamily|||nucleic acid level,Conus betulinus,Precursor,conotoxin,M superfamily,,,nucleic acid level
+P10266,P10266|Ba6.12|Conus bayani|Precursor|conotoxin|U superfamily||VI/VII|nucleic acid level,Conus bayani,Precursor,conotoxin,U superfamily,,VI/VII,nucleic acid level
+P10274,P10274|Bt3-MP03 precursor|Conus betulinus|Precursor|conotoxin|M superfamily|||nucleic acid level,Conus betulinus,Precursor,conotoxin,M superfamily,,,nucleic acid level
+P10276,P10276|Cp3-H01 precursor|Conus capitaneus|Precursor|conotoxin|M superfamily||III|nucleic acid level,Conus capitaneus,Precursor,conotoxin,M superfamily,,III,nucleic acid level
+P10278,P10278|Cp3-Y01 precursor|Conus capitaneus|Precursor|conotoxin|M superfamily||III|nucleic acid level,Conus capitaneus,Precursor,conotoxin,M superfamily,,III,nucleic acid level
+P10280,P10280|Ts3-Y01 precursor|Conus tessulatus|Precursor|conotoxin|M superfamily|||nucleic acid level,Conus tessulatus,Precursor,conotoxin,M superfamily,,,nucleic acid level
+P10282,P10282|Cp3-Y02 precursor|Conus capitaneus|Precursor|conotoxin|M superfamily|||nucleic acid level,Conus capitaneus,Precursor,conotoxin,M superfamily,,,nucleic acid level
+P10283,P10283|Ts3-Y01 precursor|Conus tessulatus|Precursor|conotoxin|M superfamily|||nucleic acid level,Conus tessulatus,Precursor,conotoxin,M superfamily,,,nucleic acid level
+P10285,P10285|Ts3-5-Y01 precursor|Conus tessulatus|Precursor|conotoxin|M superfamily|||nucleic acid level,Conus tessulatus,Precursor,conotoxin,M superfamily,,,nucleic acid level
+P10287,P10287|Eb3-Y01 precursor|Conus eburneus|Precursor|conotoxin|M superfamily|||nucleic acid level,Conus eburneus,Precursor,conotoxin,M superfamily,,,nucleic acid level
+P10289,P10289|Eb3-S01 precursor|Conus eburneus|Precursor|conotoxin|M superfamily|||nucleic acid level,Conus eburneus,Precursor,conotoxin,M superfamily,,,nucleic acid level
+P10290,P10290|Eb3-S01 precursor|Conus eburneus|Precursor|conotoxin|M superfamily|||nucleic acid level,Conus eburneus,Precursor,conotoxin,M superfamily,,,nucleic acid level
+P10291,P10291|Eb3-S01 precursor|Conus eburneus|Precursor|conotoxin|M superfamily|||nucleic acid level,Conus eburneus,Precursor,conotoxin,M superfamily,,,nucleic acid level
+P10292,P10292|Eb3-S01 precursor|Conus eburneus|Precursor|conotoxin|M superfamily|||nucleic acid level,Conus eburneus,Precursor,conotoxin,M superfamily,,,nucleic acid level
+P10294,P10294|Cp3-S01 precursor|Conus capitaneus|Precursor|conotoxin|M superfamily|||nucleic acid level,Conus capitaneus,Precursor,conotoxin,M superfamily,,,nucleic acid level
+P10296,P10296|Co3-M01 precursor|Conus coronatus|Precursor|conotoxin|M superfamily|||nucleic acid level,Conus coronatus,Precursor,conotoxin,M superfamily,,,nucleic acid level
+P10297,P10297| Ec3-DA05|Conus emaciatus|Precursor|conotoxin|M superfamily||III|nucleic acid level,Conus emaciatus,Precursor,conotoxin,M superfamily,,III,nucleic acid level
+P10298,P10298|Ec3-DA05 precursor|Conus emaciatus|Precursor|conotoxin|M superfamily||III|nucleic acid level,Conus emaciatus,Precursor,conotoxin,M superfamily,,III,nucleic acid level
+P10300,P10300|Tr3-YH01 precursor|Conus terebra|Precursor|conotoxin|M superfamily||III|nucleic acid level,Conus terebra,Precursor,conotoxin,M superfamily,,III,nucleic acid level
+P10302,P10302|Tr3-YH03 precursor|Conus terebra|Precursor|conotoxin|M superfamily|||nucleic acid level,Conus terebra,Precursor,conotoxin,M superfamily,,,nucleic acid level
+P10303,P10303|S3-L01 precursor|Conus striatus|Precursor|conotoxin|M superfamily|||nucleic acid level,Conus striatus,Precursor,conotoxin,M superfamily,,,nucleic acid level
+P10304,P10304|Tx3-L02 precursor|Conus textile|Precursor|conotoxin|M superfamily|||nucleic acid level,Conus textile,Precursor,conotoxin,M superfamily,,,nucleic acid level
+P10305,P10305|Tx3-L03 precursor|Conus textile|Precursor|conotoxin|M superfamily|||nucleic acid level,Conus textile,Precursor,conotoxin,M superfamily,,,nucleic acid level
+P10307,P10307|Lv3-V01 precursor|Conus lividus|Precursor|conotoxin|M superfamily|||nucleic acid level,Conus lividus,Precursor,conotoxin,M superfamily,,,nucleic acid level
+P10309,P10309|Bt3-F02 precursor|Conus betulinus|Precursor|conotoxin|M superfamily|||nucleic acid level,Conus betulinus,Precursor,conotoxin,M superfamily,,,nucleic acid level
+P10310,P10310|Tr3-YH01 precursor|Conus terebra|Precursor|conotoxin|M superfamily|||nucleic acid level,Conus terebra,Precursor,conotoxin,M superfamily,,,nucleic acid level
+P10312,P10312|Ts3-T01 precursor|Conus tessulatus|Precursor|conotoxin|M superfamily|||nucleic acid level,Conus tessulatus,Precursor,conotoxin,M superfamily,,,nucleic acid level
+P10314,P10314|Bt3-E01 precursor|Conus betulinus|Precursor|conotoxin|M superfamily|||nucleic acid level,Conus betulinus,Precursor,conotoxin,M superfamily,,,nucleic acid level
+P10315,P10315|Bt3-T01 precursor|Conus betulinus|Precursor|conotoxin|M superfamily|||nucleic acid level,Conus betulinus,Precursor,conotoxin,M superfamily,,,nucleic acid level
+P10317,P10317|Mi3-I01 precursor|Conus miles|Precursor|conotoxin|M superfamily|||nucleic acid level,Conus miles,Precursor,conotoxin,M superfamily,,,nucleic acid level
+P10319,P10319|Cp3-4-K01 precursor|Conus capitaneus|Precursor|conotoxin|M superfamily|||nucleic acid level,Conus capitaneus,Precursor,conotoxin,M superfamily,,,nucleic acid level
+P10320,P10320|Lv3-YH01 precursor|Conus lividus|Precursor|conotoxin|M superfamily|||nucleic acid level,Conus lividus,Precursor,conotoxin,M superfamily,,,nucleic acid level
+P10322,P10322|Ec3-YDG01 precursor|Conus emaciatus|Precursor|conotoxin|M superfamily|||nucleic acid level,Conus emaciatus,Precursor,conotoxin,M superfamily,,,nucleic acid level
+P10324,P10324|Ts3-G01 precursor|Conus tessulatus|Precursor|conotoxin|M superfamily|||nucleic acid level,Conus tessulatus,Precursor,conotoxin,M superfamily,,,nucleic acid level
+P10325,P10325|Ca4.1 precursor|Conus caracteristicus|Precursor|conotoxin|M superfamily|||nucleic acid level,Conus caracteristicus,Precursor,conotoxin,M superfamily,,,nucleic acid level
+P10326,P10326|Ca4.1 precursor|Conus caracteristicus|Precursor|conotoxin|M superfamily|||nucleic acid level,Conus caracteristicus,Precursor,conotoxin,M superfamily,,,nucleic acid level
+P10327,P10327|Ca4.1 precursor|Conus caracteristicus|Precursor|conotoxin|M superfamily|||nucleic acid level,Conus caracteristicus,Precursor,conotoxin,M superfamily,,,nucleic acid level
+P10328,P10328|Ca4.1 precursor|Conus caracteristicus|Precursor|conotoxin|M superfamily|||nucleic acid level,Conus caracteristicus,Precursor,conotoxin,M superfamily,,,nucleic acid level
+P10329,P10329|Ca4.1 precursor|Conus caracteristicus|Precursor|conotoxin|M superfamily|||nucleic acid level,Conus caracteristicus,Precursor,conotoxin,M superfamily,,,nucleic acid level
+P10330,P10330|Ca4.1 precursor|Conus caracteristicus|Precursor|conotoxin|M superfamily|||nucleic acid level,Conus caracteristicus,Precursor,conotoxin,M superfamily,,,nucleic acid level
+P10331,P10331|Ca4.1 precursor|Conus caracteristicus|Precursor|conotoxin|M superfamily|||nucleic acid level,Conus caracteristicus,Precursor,conotoxin,M superfamily,,,nucleic acid level
+P10333,P10333|Mi4-VRS01 precursor|Conus miles|Precursor|conotoxin|M superfamily|||nucleic acid level,Conus miles,Precursor,conotoxin,M superfamily,,,nucleic acid level
+P10335,P10335|Rt3-T04 precursor|Conus rattus|Precursor|conotoxin|M superfamily|||nucleic acid level,Conus rattus,Precursor,conotoxin,M superfamily,,,nucleic acid level
+P10337,P10337|Rt3-E04 precursor|Conus rattus|Precursor|conotoxin|M superfamily|||nucleic acid level,Conus rattus,Precursor,conotoxin,M superfamily,,,nucleic acid level
+P10339,P10339|Ts3-VP01 precursor|Conus tessulatus|Precursor|conotoxin|M superfamily|||nucleic acid level,Conus tessulatus,Precursor,conotoxin,M superfamily,,,nucleic acid level
+P10341,P10341|Ts3-IP01 precursor|Conus tessulatus|Precursor|conotoxin|M superfamily|||nucleic acid level,Conus tessulatus,Precursor,conotoxin,M superfamily,,,nucleic acid level
+P10342,P10342|Co3-MGK01 precursor|Conus coronatus|Precursor|conotoxin|M superfamily|||nucleic acid level,Conus coronatus,Precursor,conotoxin,M superfamily,,,nucleic acid level
+P10345,P10345|Ts3-VP01 precursor|Conus tessulatus|Precursor|conotoxin|M superfamily|||nucleic acid level,Conus tessulatus,Precursor,conotoxin,M superfamily,,,nucleic acid level
+P10347,P10347|Ca3-IP04 precursor|Conus caracteristicus|Precursor|conotoxin|M superfamily||III|nucleic acid level,Conus caracteristicus,Precursor,conotoxin,M superfamily,,III,nucleic acid level
+P10349,P10349|Mi2-DD03 precursor|Conus miles|Precursor|conotoxin|M superfamily|||nucleic acid level,Conus miles,Precursor,conotoxin,M superfamily,,,nucleic acid level
+P10350,P10350|Vr3-VP06 precursor|Conus varius|Precursor|conotoxin|M superfamily|||nucleic acid level,Conus varius,Precursor,conotoxin,M superfamily,,,nucleic acid level
+P10352,P10352|Lt3-VP01 precursor|Conus litteratus|Precursor|conotoxin|M superfamily|||nucleic acid level,Conus litteratus,Precursor,conotoxin,M superfamily,,,nucleic acid level
+P10353,P10353|Bt3-VP03 precursor|Conus betulinus|Precursor|conotoxin|M superfamily|||nucleic acid level,Conus betulinus,Precursor,conotoxin,M superfamily,,,nucleic acid level
+P10356,P10356|Ts3-GMAR03 precursor|Conus tessulatus|Precursor|conotoxin|M superfamily|||nucleic acid level,Conus tessulatus,Precursor,conotoxin,M superfamily,,,nucleic acid level
+P10357,P10357|S3-G02 precursor|Conus striatus|Precursor|conotoxin|M superfamily|||nucleic acid level,Conus striatus,Precursor,conotoxin,M superfamily,,,nucleic acid level
+P10358,P10358|SIIIB precursor|Conus striatus|Precursor|conotoxin|M superfamily|||nucleic acid level,Conus striatus,Precursor,conotoxin,M superfamily,,,nucleic acid level
+P10360,P10360|Ec3-VP04 precursor|Conus emaciatus|Precursor|conotoxin|M superfamily|||nucleic acid level,Conus emaciatus,Precursor,conotoxin,M superfamily,,,nucleic acid level
+P10361,P10361|Tx3f precursor|Conus textile|Precursor|conotoxin|M superfamily|||nucleic acid level,Conus textile,Precursor,conotoxin,M superfamily,,,nucleic acid level
+P10363,P10363|Lt3-R01 precursor|Conus litteratus|Precursor|conotoxin|M superfamily|||nucleic acid level,Conus litteratus,Precursor,conotoxin,M superfamily,,,nucleic acid level
+P10365,P10365|Ts3-IP04  precursor|Conus tessulatus|Precursor|conotoxin|M superfamily|||nucleic acid level,Conus tessulatus,Precursor,conotoxin,M superfamily,,,nucleic acid level
+P10367,P10367|Bt3-MP02 precursor|Conus betulinus|Precursor|conotoxin|M superfamily|||nucleic acid level,Conus betulinus,Precursor,conotoxin,M superfamily,,,nucleic acid level
+P10369,P10369|Rt2-VK01 precursor|Conus rattus|Precursor|conotoxin|M superfamily|||nucleic acid level,Conus rattus,Precursor,conotoxin,M superfamily,,,nucleic acid level
+P10371,P10371|Mi3-HGS01 precursor|Conus miles|Precursor|conotoxin|M superfamily|||nucleic acid level,Conus miles,Precursor,conotoxin,M superfamily,,,nucleic acid level
+P10372,P10372|S3-G02 precursor|Conus striatus|Precursor|conotoxin|M superfamily|||nucleic acid level,Conus striatus,Precursor,conotoxin,M superfamily,,,nucleic acid level
