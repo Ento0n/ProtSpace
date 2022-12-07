@@ -31,13 +31,10 @@ class Visualizator:
         "square",
         "diamond",
         "circle",
-        "circle-open",
         "cross",
-        "diamond",
+        "circle-open",
         "diamond-open",
-        "square",
         "square-open",
-        # "x"
     ]
 
     representation_options = [
