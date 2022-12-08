@@ -492,13 +492,6 @@ class Visualizator:
             else:
                 return 2, val
 
-        def is_float(num):
-            try:
-                float(num)
-                return True
-            except ValueError:
-                return False
-
         mapped_index = None
         if original_id_col is not None:
             # swap index
@@ -511,55 +504,70 @@ class Visualizator:
 
         color_list = gen_distinct_colors(n=len(col_groups))
 
-        na_numeric = None
+        fig = go.Figure()
+
         numeric_flag = False
-        colorscale = None
-        colorbar = None
-        ticks = None
         if all(
             [
                 isinstance(item, int) or isinstance(item, float) or item == "NA"
                 for item in col_groups
             ]
         ):
+            # Only numeric values and "NA" in the group
             numeric_flag = True
             colorscale = list()
-            ticks = list()
 
-            # min_val = sys.float_info.max
-            # for item in col_groups:
-            #     if isinstance(item, int) or isinstance(item, float):
-            #         if min_val > item:
-            #             min_val = item
+            # Find min and max value of the group, excluding "NA"
+            min_val = sys.float_info.max
+            max_val = sys.float_info.min
+            for item in col_groups:
+                if isinstance(item, int) or isinstance(item, float):
+                    if min_val > item:
+                        min_val = item
+                    if max_val < item:
+                        max_val = item
 
-            # na_numeric = min_val * 0.99
-
+            # Fill the colorscale with the used colors for the groups
             for idx, item in enumerate(col_groups):
-                # if item == "NA":
-                #     col_groups[idx] = na_numeric
-                # else:
-                #     colorscale.append(f"rgb{color_list[idx]}")
                 if item != "NA":
                     colorscale.append(f"rgb{color_list[idx]}")
-                    ticks.append(item)
 
-            # df[selected_column].replace("NA", na_numeric, inplace=True)
+            # create colorbar
+            colorbar = dict(
+                title="Colorbar",
+                lenmode="fraction",
+                len=0.5,
+                yanchor="bottom",
+                ypad=50,
+            )
+
+            # create and add a dummy trace that holds the colorbar
+            color_trace = go.Scatter3d(
+                x=[None],
+                y=[None],
+                z=[None],
+                mode="markers",
+                marker=dict(
+                    colorscale=colorscale,
+                    showscale=True,
+                    colorbar=colorbar,
+                    cmin=min_val,
+                    cmax=max_val,
+                ),
+                showlegend=False,
+            )
+
+            fig.add_trace(color_trace)
 
         df["class_index"] = np.ones(len(df)) * -100
 
-        data = []
         # iterate over different values of the selected column
         for group_idx, group_value in enumerate(col_groups):
-            # set up NA values, so these can bbe shown as "NA" in hoverinfo
-            if group_value == na_numeric:
-                name = "NA"
-            else:
-                name = group_value
-
-            # set up colorbar
-            if numeric_flag and group_idx == len(col_groups) - 1:
-                colorscale = colorscale
-                colorbar = dict(title="Colorbar", tickvals=ticks, ticktext=ticks)
+            # Only show NA in legend if colorbar is shown
+            show_legend = True
+            if numeric_flag:
+                if group_value != "NA":
+                    show_legend = False
 
             # extract df with only group value
             df_group = df[df[selected_column] == group_value]
@@ -568,23 +576,18 @@ class Visualizator:
                 y=df_group["y"],
                 z=df_group["z"],
                 mode="markers",
-                name=name,
-                # 10 colors are available; once those are used, pick different symbol
-                # marker=dict(symbol=Visualizator.SYMBOLS[group_idx % 8]),
+                name=group_value,
                 marker=dict(
                     color=f"rgb{color_list[group_idx]}",
                     symbol=Visualizator.SYMBOLS[group_idx % len(Visualizator.SYMBOLS)],
                     line=dict(color="black", width=1),
-                    colorbar=colorbar,
-                    colorscale=colorscale,
                 ),
                 text=df_group.index.to_list(),
+                showlegend=show_legend,
             )
-            data.append(trace)
+            fig.add_trace(trace)
             # Give the different group values a number
             df.loc[df[selected_column] == group_value, "class_index"] = group_idx
-
-        fig = go.Figure(data=data)
 
         if umap_flag:
             fig.update_layout(
