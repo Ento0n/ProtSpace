@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
-
+import sys
 from colorsys import hls_to_rgb
 
 import dash_bio as dashbio
@@ -481,16 +481,23 @@ class Visualizator:
 
         # custom separator to sort str, int and float (str case-insensitive)
         # order: 1. int and float 2. str 3. rest 4. NA
-        def my_comparator(item):
-            if isinstance(item, float) or isinstance(item, int):
-                return 0, item
-            elif item == "NA":
-                return 3, item
-            elif isinstance(item, str):
-                item = item.lower()
-                return 1, item
+        def my_comparator(val):
+            if isinstance(val, float) or isinstance(val, int):
+                return 0, val
+            elif val == "NA":
+                return 3, val
+            elif isinstance(val, str):
+                val = val.lower()
+                return 1, val
             else:
-                return 2, item
+                return 2, val
+
+        def is_float(num):
+            try:
+                float(num)
+                return True
+            except ValueError:
+                return False
 
         mapped_index = None
         if original_id_col is not None:
@@ -502,21 +509,58 @@ class Visualizator:
 
         col_groups.sort(key=my_comparator)
 
+        color_list = gen_distinct_colors(n=len(col_groups))
+
+        na_numeric = None
         numeric_flag = False
+        colorscale = None
+        colorbar = None
+        ticks = None
         if all(
-            [isinstance(item, int) or isinstance(item, float) for item in col_groups]
+            [
+                isinstance(item, int) or isinstance(item, float) or item == "NA"
+                for item in col_groups
+            ]
         ):
             numeric_flag = True
+            colorscale = list()
+            ticks = list()
 
-        print(f"Numeric flag: {numeric_flag}")
+            # min_val = sys.float_info.max
+            # for item in col_groups:
+            #     if isinstance(item, int) or isinstance(item, float):
+            #         if min_val > item:
+            #             min_val = item
+
+            # na_numeric = min_val * 0.99
+
+            for idx, item in enumerate(col_groups):
+                # if item == "NA":
+                #     col_groups[idx] = na_numeric
+                # else:
+                #     colorscale.append(f"rgb{color_list[idx]}")
+                if item != "NA":
+                    colorscale.append(f"rgb{color_list[idx]}")
+                    ticks.append(item)
+
+            # df[selected_column].replace("NA", na_numeric, inplace=True)
 
         df["class_index"] = np.ones(len(df)) * -100
-
-        color_list = gen_distinct_colors(n=len(col_groups))
 
         data = []
         # iterate over different values of the selected column
         for group_idx, group_value in enumerate(col_groups):
+            # set up NA values, so these can bbe shown as "NA" in hoverinfo
+            if group_value == na_numeric:
+                name = "NA"
+            else:
+                name = group_value
+
+            # set up colorbar
+            if numeric_flag and group_idx == len(col_groups) - 1:
+                colorscale = colorscale
+                colorbar = dict(title="Colorbar", tickvals=ticks, ticktext=ticks)
+
             # extract df with only group value
             df_group = df[df[selected_column] == group_value]
             trace = go.Scatter3d(
@@ -524,13 +568,15 @@ class Visualizator:
                 y=df_group["y"],
                 z=df_group["z"],
                 mode="markers",
-                name=group_value,
+                name=name,
                 # 10 colors are available; once those are used, pick different symbol
                 # marker=dict(symbol=Visualizator.SYMBOLS[group_idx % 8]),
                 marker=dict(
                     color=f"rgb{color_list[group_idx]}",
                     symbol=Visualizator.SYMBOLS[group_idx % len(Visualizator.SYMBOLS)],
                     line=dict(color="black", width=1),
+                    colorbar=colorbar,
+                    colorscale=colorscale,
                 ),
                 text=df_group.index.to_list(),
             )

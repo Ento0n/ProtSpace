@@ -330,7 +330,8 @@ class DataPreprocessor:
         pres_df = output_d / "df.csv"
         if pres_df.is_file():
             print("Pre computed dataframe file df.csv is loaded.")
-            pres_df_csv = pd.read_csv(pres_df, index_col=0, na_filter=False)
+            pres_df_csv = pd.read_csv(pres_df, index_col=0)
+            pres_df_csv.fillna("NA", inplace=True)
 
             # Check whether df.csv holds false x,y & z coordinates for selected dimensionality reduction!
             if (
