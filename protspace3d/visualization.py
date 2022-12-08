@@ -557,18 +557,18 @@ class Visualizator:
                 # Remove axes ticks and labels as they are usually not informative
                 scene=dict(
                     xaxis=dict(
-                        showticklabels=True,
-                        showspikes=True,
+                        showticklabels=False,
+                        showspikes=False,
                         title=f"PC1 ({float(pca_variance[0]):.1f}%)",
                     ),
                     yaxis=dict(
-                        showticklabels=True,
-                        showspikes=True,
+                        showticklabels=False,
+                        showspikes=False,
                         title=f"PC2 ({float(pca_variance[1]):.1f}%)",
                     ),
                     zaxis=dict(
-                        showticklabels=True,
-                        showspikes=True,
+                        showticklabels=False,
+                        showspikes=False,
                         title=f"PC3 ({float(pca_variance[2]):.1f}%)",
                     ),
                 ),
