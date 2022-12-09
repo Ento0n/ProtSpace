@@ -11,20 +11,6 @@ from dash import Dash, dcc, html
 from pandas import DataFrame
 
 
-def gen_distinct_colors(n, sort: bool = True):
-    color_list = list()
-    np.random.seed(42)
-    hues = np.arange(0, 360, 360 / n)
-    hues = hues[np.random.permutation(hues.size)]
-    for hue in hues:
-        saturation = 30 + np.random.ranf() * 70
-        luminosity = 40 + np.random.ranf() * 60
-        color_list.append(tuple([hue / 360, luminosity / 100, saturation / 100]))
-    if sort:
-        color_list.sort()
-    return [hls_to_rgb(*color) for color in color_list]
-
-
 class Visualizator:
     SYMBOLS = [
         "circle",
@@ -463,6 +449,43 @@ class Visualizator:
         return app
 
     @staticmethod
+    def n_samples_equation(n, max_out, min_val, reverse: bool = False) -> float:
+        # the underlying equation is (x-1)/(x+10)
+        numerator = n - 1
+        denominator = n + 10
+        res = numerator / denominator
+
+        if reverse:
+            res = 1 - res
+
+        print(f"res: {res}")
+
+        # out is the min value that can be picked
+        out = min_val + max_out * res
+        print(f"out: {out}")
+
+        return out
+
+    @staticmethod
+    def gen_distinct_colors(n, sort: bool = True):
+        color_list = list()
+        np.random.seed(42)
+        hues = np.arange(0, 360, 360 / n)
+        print(f"n: {n}")
+        hues = hues[np.random.permutation(hues.size)]
+        for hue in hues:
+            min_sat = Visualizator.n_samples_equation(n, 70, 30, reverse=True)
+            saturation = min_sat + np.random.ranf() * (100 - min_sat)
+            print(f"sat: {saturation}")
+            min_lum = Visualizator.n_samples_equation(n, 60, 40, reverse=True)
+            luminosity = min_lum + np.random.ranf() * (100 - min_lum)
+            print(f"lum: {luminosity}")
+            color_list.append(tuple([hue / 360, luminosity / 100, saturation / 100]))
+        if sort:
+            color_list.sort()
+        return [hls_to_rgb(*color) for color in color_list]
+
+    @staticmethod
     # https://github.com/sacdallago/bio_embeddings/blob/develop/bio_embeddings/visualize/plotly_plots.py
     def render(
         df: DataFrame,
@@ -502,7 +525,7 @@ class Visualizator:
 
         col_groups.sort(key=my_comparator)
 
-        color_list = gen_distinct_colors(n=len(col_groups))
+        color_list = Visualizator.gen_distinct_colors(n=len(col_groups))
 
         fig = go.Figure()
 
@@ -559,6 +582,13 @@ class Visualizator:
 
             fig.add_trace(color_trace)
 
+        # Figure out how many symbols to use depending on number of column groups
+        n_symbols = int(
+            Visualizator.n_samples_equation(
+                n=len(col_groups), max_out=len(Visualizator.SYMBOLS) - 3, min_val=3
+            )
+        )
+
         df["class_index"] = np.ones(len(df)) * -100
 
         # iterate over different values of the selected column
@@ -579,7 +609,7 @@ class Visualizator:
                 name=group_value,
                 marker=dict(
                     color=f"rgb{color_list[group_idx]}",
-                    symbol=Visualizator.SYMBOLS[group_idx % len(Visualizator.SYMBOLS)],
+                    symbol=Visualizator.SYMBOLS[group_idx % n_symbols],
                     line=dict(color="black", width=1),
                 ),
                 text=df_group.index.to_list(),
