@@ -365,6 +365,28 @@ class Visualizator:
 
         return fig
 
+    def get_graph_container(self):
+        graph_container = (
+            dcc.Dropdown(
+                self.csv_header,
+                self.csv_header[0],
+                id="dd_menu",
+                style={"margin-top": "5px"},
+            ),
+            dcc.Graph(
+                id="graph",
+                figure=self.fig,
+                clear_on_unhover=True,
+                style={
+                    "width": "100%",
+                    "height": "80vh",
+                },
+                responsive=True,
+            ),
+        )
+
+        return graph_container
+
     def init_app_pdb(self, original_id_col: list):
         """
         Initializes app & Builds html layout for Dash
@@ -386,24 +408,7 @@ class Visualizator:
                 dbc.Row(
                     [
                         dbc.Col(
-                            [
-                                dcc.Dropdown(
-                                    self.csv_header,
-                                    self.csv_header[0],
-                                    id="dd_menu",
-                                    style={"margin-top": "5px"},
-                                ),
-                                dcc.Graph(
-                                    id="graph",
-                                    figure=self.fig,
-                                    clear_on_unhover=True,
-                                    style={
-                                        "width": "100%",
-                                        "height": "80vh",
-                                    },
-                                    responsive=True,
-                                ),
-                            ],
+                            self.get_graph_container(),
                             id="left_col",
                             width=6,
                             style={"border-right": "solid black 1px"},
@@ -447,8 +452,9 @@ class Visualizator:
                                                     },
                                                 ),
                                                 dbc.Button(
-                                                    "Settings",
+                                                    "",
                                                     id="settings_button",
+                                                    class_name="bi bi-gear-wide-connected",
                                                     outline=True,
                                                     color="dark",
                                                     style={
@@ -649,22 +655,7 @@ class Visualizator:
                 dbc.Row(
                     [
                         dbc.Col(
-                            [
-                                dcc.Dropdown(
-                                    self.csv_header,
-                                    self.csv_header[0],
-                                    id="dd_menu",
-                                ),
-                                dcc.Graph(
-                                    id="graph",
-                                    figure=self.fig,
-                                    clear_on_unhover=True,
-                                    style={
-                                        "width": "100%",
-                                        "height": "90vh",
-                                    },
-                                ),
-                            ],
+                            self.get_graph_container(),
                             width=12,
                         ),
                     ]
