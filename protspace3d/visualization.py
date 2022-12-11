@@ -66,7 +66,13 @@ class Visualizator:
             color_list.append(tuple([hue / 360, luminosity / 100, saturation / 100]))
         if sort:
             color_list.sort()
-        return [hls_to_rgb(*color) for color in color_list]
+
+        # round small values, otherwise dash has difficulties to display
+        rgb_list = []
+        for h, l, s in color_list:
+            rgb = hls_to_rgb(round(h, 2), round(l, 2), round(s, 2))
+            rgb_list.append(rgb)
+        return rgb_list
 
     @staticmethod
     # https://github.com/sacdallago/bio_embeddings/blob/develop/bio_embeddings/visualize/plotly_plots.py
