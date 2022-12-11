@@ -37,107 +37,6 @@ class Visualizator:
         self.fig = fig
         self.csv_header = csv_header
 
-    def get_header(self, app: Dash):
-        header = dbc.Row(
-            [
-                dbc.Col(
-                    html.H1("ProtSpace3D", style={"color": "white"}),
-                    style={"background-color": "black"},
-                    xxl=10,
-                    xl=10,
-                    lg=9,
-                    md=9,
-                    sm=7,
-                    xs=7,
-                ),
-                dbc.Col(
-                    [
-                        dbc.Button(
-                            "",
-                            id="help_button",
-                            class_name="bi bi-question-lg",
-                            color="dark",
-                            style={
-                                "margin-top": "10px",
-                                "margin-bottom": "5px",
-                                "margin-right": "20px",
-                                "background-color": "black",
-                            },
-                        ),
-                        self.get_help_modal(),
-                    ],
-                    xxl=1,
-                    xl=1,
-                    lg=2,
-                    md=2,
-                    sm=3,
-                    xs=3,
-                    style={"background-color": "black"},
-                ),
-                dbc.Col(
-                    html.A(
-                        [
-                            html.Img(
-                                src=app.get_asset_url("logo.png"),
-                                alt="Rostlab-logo",
-                                style={"height": "60px", "width": "60px"},
-                            ),
-                        ],
-                        href="https://rostlab.org/",
-                        target="_blank",
-                    ),
-                    style={"background-color": "black"},
-                    xxl=1,
-                    xl=1,
-                    lg=1,
-                    md=1,
-                    sm=2,
-                    xs=2,
-                ),
-            ]
-        )
-
-        return header
-
-    @staticmethod
-    def get_disclaimer_modal():
-        modal = dbc.Modal(
-            [
-                dbc.ModalHeader(dbc.ModalTitle("Disclaimer"), close_button=False),
-                dbc.ModalBody("Here the disclaimer text is shown!"),
-                dbc.ModalFooter(dbc.Button("Agree", id="disclaimer_modal_button")),
-            ],
-            id="disclaimer_modal",
-            size="xl",
-            is_open=True,
-            backdrop="static",
-        )
-
-        return modal
-
-    @staticmethod
-    def get_help_modal():
-        modal = dbc.Modal(
-            [
-                dbc.ModalHeader(dbc.ModalTitle("Help"), close_button=True),
-                dbc.ModalBody("Here the help text is shown!"),
-            ],
-            id="help_modal",
-            size="xl",
-            is_open=False,
-            backdrop=True,
-        )
-
-        return modal
-
-    @staticmethod
-    def get_app():
-        app = Dash(
-            __name__, external_stylesheets=[dbc.themes.BOOTSTRAP, dbc.icons.BOOTSTRAP]
-        )
-
-        return app
-
     @staticmethod
     def n_samples_equation(n, max_out, min_val, reverse: bool = False) -> float:
         # the underlying equation is (x-1)/(x+10)
@@ -365,13 +264,147 @@ class Visualizator:
 
         return fig
 
+    @staticmethod
+    def get_app():
+        app = Dash(
+            __name__, external_stylesheets=[dbc.themes.BOOTSTRAP, dbc.icons.BOOTSTRAP]
+        )
+
+        return app
+
+    def get_header(self, app: Dash):
+        header = dbc.Row(
+            [
+                dbc.Col(
+                    html.H1("ProtSpace3D", style={"color": "white"}),
+                    style={"background-color": "black"},
+                    xxl=10,
+                    xl=10,
+                    lg=9,
+                    md=9,
+                    sm=7,
+                    xs=7,
+                ),
+                dbc.Col(
+                    [
+                        dbc.Button(
+                            "",
+                            id="help_button",
+                            class_name="bi bi-question-lg",
+                            color="dark",
+                            style={
+                                "margin-top": "10px",
+                                "margin-bottom": "5px",
+                                "margin-right": "20px",
+                                "background-color": "black",
+                            },
+                        ),
+                        self.get_help_modal(),
+                    ],
+                    xxl=1,
+                    xl=1,
+                    lg=2,
+                    md=2,
+                    sm=3,
+                    xs=3,
+                    style={"background-color": "black"},
+                ),
+                dbc.Col(
+                    html.A(
+                        [
+                            html.Img(
+                                src=app.get_asset_url("logo.png"),
+                                alt="Rostlab-logo",
+                                style={"height": "60px", "width": "60px"},
+                            ),
+                        ],
+                        href="https://rostlab.org/",
+                        target="_blank",
+                    ),
+                    style={"background-color": "black"},
+                    xxl=1,
+                    xl=1,
+                    lg=1,
+                    md=1,
+                    sm=2,
+                    xs=2,
+                ),
+            ]
+        )
+
+        return header
+
+    @staticmethod
+    def get_disclaimer_modal():
+        modal = dbc.Modal(
+            [
+                dbc.ModalHeader(dbc.ModalTitle("Disclaimer"), close_button=False),
+                dbc.ModalBody("Here the disclaimer text is shown!"),
+                dbc.ModalFooter(dbc.Button("Agree", id="disclaimer_modal_button")),
+            ],
+            id="disclaimer_modal",
+            size="xl",
+            is_open=True,
+            backdrop="static",
+        )
+
+        return modal
+
+    @staticmethod
+    def get_help_modal():
+        modal = dbc.Modal(
+            [
+                dbc.ModalHeader(dbc.ModalTitle("Help"), close_button=True),
+                dbc.ModalBody("Here the help text is shown!"),
+            ],
+            id="help_modal",
+            size="xl",
+            is_open=False,
+            backdrop=True,
+        )
+
+        return modal
+
     def get_graph_container(self):
         graph_container = (
-            dcc.Dropdown(
-                self.csv_header,
-                self.csv_header[0],
-                id="dd_menu",
-                style={"margin-top": "5px"},
+            dbc.Offcanvas(
+                id="graph_offcanvas",
+                is_open=False,
+                title="Settings",
+                children=[],
+                style={"width": "50%"},
+            ),
+            dbc.Row(
+                [
+                    dbc.Col(
+                        [
+                            dcc.Dropdown(
+                                self.csv_header,
+                                self.csv_header[0],
+                                id="dd_menu",
+                                style={"margin-top": "5px"},
+                            ),
+                        ],
+                        width=10,
+                    ),
+                    dbc.Col(
+                        [
+                            dbc.Button(
+                                "",
+                                id="graph_settings_button",
+                                class_name="bi bi-gear-wide-connected",
+                                outline=True,
+                                color="dark",
+                                style={
+                                    "margin-top": "5px",
+                                    "margin-bottom": "5px",
+                                    "margin-right": "15px",
+                                },
+                            ),
+                        ],
+                        width=2,
+                    ),
+                ]
             ),
             dcc.Graph(
                 id="graph",
@@ -453,7 +486,7 @@ class Visualizator:
                                                 ),
                                                 dbc.Button(
                                                     "",
-                                                    id="settings_button",
+                                                    id="molecules_settings_button",
                                                     class_name="bi bi-gear-wide-connected",
                                                     outline=True,
                                                     color="dark",
@@ -492,7 +525,7 @@ class Visualizator:
                                     },
                                 ),
                                 dbc.Offcanvas(
-                                    id="offcanvas",
+                                    id="molecules_offcanvas",
                                     title="Settings",
                                     is_open=False,
                                     children=[

@@ -301,8 +301,11 @@ def get_callbacks_pdb(app, df, struct_container, original_id_col):
 
         return molstyles_dict
 
-    @app.callback(Output("offcanvas", "is_open"), Input("settings_button", "n_clicks"))
-    def handle_canvas(button_click):
+    @app.callback(
+        Output("molecules_offcanvas", "is_open"),
+        Input("molecules_settings_button", "n_clicks"),
+    )
+    def handle_molecules_canvas(button_click):
         if button_click:
             return True
 
@@ -476,3 +479,10 @@ def get_callbacks(app, df: DataFrame, original_id_col: list, umap_flag: bool):
             return True
 
         return False
+
+    @app.callback(
+        Output("graph_offcanvas", "is_open"), Input("graph_settings_button", "n_clicks")
+    )
+    def handle_graph_canvas(button_click):
+        if button_click:
+            return True
