@@ -63,7 +63,9 @@ class StructureContainer(object):
 
 
 class DataPreprocessor:
-    AXIS_NAMES = ["x", "y", "z"]
+    UMAP_AXIS_NAMES = ["x_umap", "y_umap", "z_umap"]
+    PCA_AXIS_NAMES = ["x_pca", "y_pca", "z_pca"]
+    AXIS_NAMES = ["x_umap", "y_umap", "z_umap", "x_pca", "y_pca", "z_pca"]
 
     def __init__(
         self,
@@ -333,16 +335,9 @@ class DataPreprocessor:
             pres_df_csv = pd.read_csv(pres_df, index_col=0)
             pres_df_csv.fillna("NA", inplace=True)
 
-            # Check whether df.csv holds false x,y & z coordinates for selected dimensionality reduction!
-            if (
-                "variance" in pres_df_csv.columns.to_list()
-                and self.umap_flag
-                or "variance" not in pres_df_csv.columns.to_list()
-                and not self.umap_flag
-            ):
-                print(
-                    "df.csv holds false dimensionality reduction calculation,\nstart recalculating!"
-                )
+            # Check whether no. of rows equals data
+            if len(pres_df_csv) != len(df_csv):
+                print("# of rows doesn't match data!\nStart recalculation!")
                 df_embeddings, csv_header = self._create_df(
                     output_d,
                     hdf_path,
@@ -350,12 +345,10 @@ class DataPreprocessor:
                     df_csv,
                     index_name,
                 )
-
             else:
-
-                # Check whether no. of rows equals data
-                if len(pres_df_csv) != len(df_csv):
-                    print("# of rows doesn't match data!\nStart recalculation!")
+                # Check each column x, y & z for incompleteness
+                if not self._check_coordinates(pres_df_csv):
+                    print("Start recalculation!")
                     df_embeddings, csv_header = self._create_df(
                         output_d,
                         hdf_path,
@@ -363,44 +356,31 @@ class DataPreprocessor:
                         df_csv,
                         index_name,
                     )
+                # columns x, y & z are fine
                 else:
-                    # Check each column x, y & z for incompleteness
-                    if not self._check_coordinates(pres_df_csv):
-                        print("Start recalculation!")
-                        df_embeddings, csv_header = self._create_df(
-                            output_d,
-                            hdf_path,
-                            csv_uids,
-                            df_csv,
-                            index_name,
-                        )
-                    # columns x, y & z are fine
-                    else:
-                        # Update df in case new columns were added to the csv
-                        if (
-                            len(df_csv.columns)
-                            - (len(pres_df_csv.columns) - len(self.AXIS_NAMES))
-                            > 0
-                        ):
-                            print("New column(s) were found and will be added.")
-                            pres_df_csv = self._update_df(df_csv, pres_df_csv)
+                    # Update df in case new columns were added to the csv
+                    if (
+                        len(df_csv.columns)
+                        - (len(pres_df_csv.columns) - len(self.AXIS_NAMES))
+                        > 0
+                    ):
+                        print("New column(s) were found and will be added.")
+                        pres_df_csv = self._update_df(df_csv, pres_df_csv)
 
-                            # save the new obtained df
-                            pres_df_csv.to_csv(
-                                output_d / "df.csv", index_label=index_name
-                            )
+                        # save the new obtained df
+                        pres_df_csv.to_csv(output_d / "df.csv", index_label=index_name)
 
-                        # save final column names
-                        csv_header = [
-                            header
-                            for header in pres_df_csv.columns
-                            if header not in self.AXIS_NAMES
-                            and header != index_name
-                            and header != "variance"
-                        ]
+                    # save final column names
+                    csv_header = [
+                        header
+                        for header in pres_df_csv.columns
+                        if header not in self.AXIS_NAMES
+                        and header != index_name
+                        and header != "variance"
+                    ]
 
-                        # Unify df name
-                        df_embeddings = pres_df_csv
+                    # Unify df name
+                    df_embeddings = pres_df_csv
 
         # create dataframe from files
         else:
@@ -452,14 +432,13 @@ class DataPreprocessor:
         )
 
         # generate dimensionality reduction components and merge it to CSV DataFrame
-        if self.umap_flag:
-            df_dim_red = self._generate_umap(embs)
-            df_dim_red.index = uids
-        else:
-            df_dim_red = self._generate_pca(embs)
-            df_dim_red.index = uids
+        df_dim_red_umap = self._generate_umap(embs)
+        df_dim_red_umap.index = uids
+        df_dim_red_pca = self._generate_pca(embs)
+        df_dim_red_pca.index = uids
 
-        df_embeddings = df_csv.join(df_dim_red, how="right")
+        df_embeddings = df_csv.join(df_dim_red_umap, how="right")
+        df_embeddings = df_embeddings.join(df_dim_red_pca, how="right")
         csv_header = [
             header
             for header in df_embeddings.columns
@@ -539,7 +518,7 @@ class DataPreprocessor:
             metric=self.umap_paras["metric"],
         )  # initialize umap; use random_state=42 for reproducibility
         umap_fit = fit.fit_transform(data)  # fit umap to our embeddings
-        df_umap = DataFrame(data=umap_fit, columns=self.AXIS_NAMES)
+        df_umap = DataFrame(data=umap_fit, columns=self.UMAP_AXIS_NAMES)
         return df_umap
 
     def _generate_pca(self, data: np.ndarray):
@@ -547,7 +526,7 @@ class DataPreprocessor:
 
         fit = PCA(n_components=3, random_state=42)
         pca_fit = fit.fit_transform(data)
-        df_pca = DataFrame(data=pca_fit, columns=self.AXIS_NAMES)
+        df_pca = DataFrame(data=pca_fit, columns=self.PCA_AXIS_NAMES)
 
         # extract variance information from pca
         pca_variance = list()
@@ -567,7 +546,7 @@ class DataPreprocessor:
         """
         # Do the columns x, y and z exist?
         if not all(x in list(data_frame.columns) for x in self.AXIS_NAMES):
-            print("Df corrupted as not x,y & z columns are present!")
+            print("Df corrupted as not all x,y & z columns are present!")
             return False
 
         # Is the corresponding data complete ?

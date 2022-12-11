@@ -138,6 +138,233 @@ class Visualizator:
 
         return app
 
+    @staticmethod
+    def n_samples_equation(n, max_out, min_val, reverse: bool = False) -> float:
+        # the underlying equation is (x-1)/(x+10)
+        numerator = n - 1
+        denominator = n + 10
+        res = numerator / denominator
+
+        if reverse:
+            res = 1 - res
+
+        # out is the min value that can be picked
+        out = min_val + max_out * res
+
+        return out
+
+    @staticmethod
+    def gen_distinct_colors(n, sort: bool = True):
+        color_list = list()
+        np.random.seed(42)
+        hues = np.arange(0, 360, 360 / n)
+        hues = hues[np.random.permutation(hues.size)]
+        for hue in hues:
+            min_sat = Visualizator.n_samples_equation(n, 70, 30, reverse=True)
+            saturation = min_sat + np.random.ranf() * (100 - min_sat)
+            min_lum = Visualizator.n_samples_equation(n, 60, 40, reverse=True)
+            luminosity = min_lum + np.random.ranf() * (100 - min_lum)
+            color_list.append(tuple([hue / 360, luminosity / 100, saturation / 100]))
+        if sort:
+            color_list.sort()
+        return [hls_to_rgb(*color) for color in color_list]
+
+    @staticmethod
+    # https://github.com/sacdallago/bio_embeddings/blob/develop/bio_embeddings/visualize/plotly_plots.py
+    def render(
+        df: DataFrame,
+        selected_column: str,
+        original_id_col: object,
+        umap_flag: bool,
+    ):
+        """
+        Renders the plotly graph with the selected column in the dataframe df
+        :param df: dataframe
+        :param selected_column: column of the dataframe
+        :param original_id_col: the colum "original id" of the mapped csv file
+        :param umap_flag: flag is set if umap calculations are used.
+        :return: plotly graphical object
+        """
+
+        # custom separator to sort str, int and float (str case-insensitive)
+        # order: 1. int and float 2. str 3. rest 4. NA
+        def my_comparator(val):
+            if isinstance(val, float) or isinstance(val, int):
+                return 0, val
+            elif val == "NA":
+                return 3, val
+            elif isinstance(val, str):
+                val = val.lower()
+                return 1, val
+            else:
+                return 2, val
+
+        mapped_index = None
+        if original_id_col is not None:
+            # swap index
+            mapped_index = df.index
+            df.index = original_id_col
+
+        col_groups = df[selected_column].unique().tolist()
+
+        col_groups.sort(key=my_comparator)
+
+        color_list = Visualizator.gen_distinct_colors(n=len(col_groups))
+
+        fig = go.Figure()
+
+        numeric_flag = False
+        if all(
+            [
+                isinstance(item, int) or isinstance(item, float) or item == "NA"
+                for item in col_groups
+            ]
+        ):
+            # Only numeric values and "NA" in the group
+            numeric_flag = True
+            colorscale = list()
+
+            # Find min and max value of the group, excluding "NA"
+            min_val = sys.float_info.max
+            max_val = sys.float_info.min
+            for item in col_groups:
+                if isinstance(item, int) or isinstance(item, float):
+                    if min_val > item:
+                        min_val = item
+                    if max_val < item:
+                        max_val = item
+
+            # Fill the colorscale with the used colors for the groups
+            for idx, item in enumerate(col_groups):
+                if item != "NA":
+                    colorscale.append(f"rgb{color_list[idx]}")
+
+            # create colorbar
+            colorbar = dict(
+                title="Colorbar",
+                lenmode="fraction",
+                len=0.5,
+                yanchor="bottom",
+                ypad=50,
+            )
+
+            # create and add a dummy trace that holds the colorbar
+            color_trace = go.Scatter3d(
+                x=[None],
+                y=[None],
+                z=[None],
+                mode="markers",
+                marker=dict(
+                    colorscale=colorscale,
+                    showscale=True,
+                    colorbar=colorbar,
+                    cmin=min_val,
+                    cmax=max_val,
+                ),
+                showlegend=False,
+            )
+
+            fig.add_trace(color_trace)
+
+        # Figure out how many symbols to use depending on number of column groups
+        n_symbols = int(
+            Visualizator.n_samples_equation(
+                n=len(col_groups), max_out=len(Visualizator.SYMBOLS) - 3, min_val=3
+            )
+        )
+
+        df["class_index"] = np.ones(len(df)) * -100
+
+        if umap_flag:
+            x = "x_umap"
+            y = "y_umap"
+            z = "z_umap"
+        else:
+            x = "x_pca"
+            y = "y_pca"
+            z = "z_pca"
+
+        # iterate over different values of the selected column
+        for group_idx, group_value in enumerate(col_groups):
+            # Only show NA in legend if colorbar is shown
+            show_legend = True
+            if numeric_flag:
+                if group_value != "NA":
+                    show_legend = False
+
+            # extract df with only group value
+            df_group = df[df[selected_column] == group_value]
+            trace = go.Scatter3d(
+                x=df_group[x],
+                y=df_group[y],
+                z=df_group[z],
+                mode="markers",
+                name=group_value,
+                marker=dict(
+                    color=f"rgb{color_list[group_idx]}",
+                    symbol=Visualizator.SYMBOLS[group_idx % n_symbols],
+                    line=dict(color="black", width=1),
+                ),
+                text=df_group.index.to_list(),
+                showlegend=show_legend,
+            )
+            fig.add_trace(trace)
+            # Give the different group values a number
+            df.loc[df[selected_column] == group_value, "class_index"] = group_idx
+
+        if umap_flag:
+            fig.update_layout(
+                # Remove axes ticks and labels as they are usually not informative
+                scene=dict(
+                    xaxis=dict(showticklabels=False, showspikes=False, title=""),
+                    yaxis=dict(showticklabels=False, showspikes=False, title=""),
+                    zaxis=dict(showticklabels=False, showspikes=False, title=""),
+                ),
+            )
+        else:
+            # extract variance column
+            pca_variance = df["variance"].to_list()
+
+            fig.update_layout(
+                # Remove axes ticks and labels as they are usually not informative
+                scene=dict(
+                    xaxis=dict(
+                        showticklabels=False,
+                        showspikes=False,
+                        title=f"PC1 ({float(pca_variance[0]):.1f}%)",
+                    ),
+                    yaxis=dict(
+                        showticklabels=False,
+                        showspikes=False,
+                        title=f"PC2 ({float(pca_variance[1]):.1f}%)",
+                    ),
+                    zaxis=dict(
+                        showticklabels=False,
+                        showspikes=False,
+                        title=f"PC3 ({float(pca_variance[2]):.1f}%)",
+                    ),
+                ),
+            )
+
+        # Set hoverinfo
+        fig.update_traces(
+            hoverinfo=["name", "text"],
+            hoverlabel=dict(namelength=-1),
+            hovertemplate="%{text}",
+        )
+
+        # Set legend in right upper corner of the plot
+        fig.update_layout(legend=dict(yanchor="top", y=0.97, xanchor="right", x=0.99))
+
+        # change margins of the graph
+        fig.update_layout(margin=dict(l=1, r=1, t=1, b=1))
+
+        # swap index again
+        if original_id_col is not None:
+            df.index = mapped_index
+
+        return fig
+
     def init_app_pdb(self, original_id_col: list):
         """
         Initializes app & Builds html layout for Dash
@@ -447,227 +674,3 @@ class Visualizator:
         )
 
         return app
-
-    @staticmethod
-    def n_samples_equation(n, max_out, min_val, reverse: bool = False) -> float:
-        # the underlying equation is (x-1)/(x+10)
-        numerator = n - 1
-        denominator = n + 10
-        res = numerator / denominator
-
-        if reverse:
-            res = 1 - res
-
-        print(f"res: {res}")
-
-        # out is the min value that can be picked
-        out = min_val + max_out * res
-        print(f"out: {out}")
-
-        return out
-
-    @staticmethod
-    def gen_distinct_colors(n, sort: bool = True):
-        color_list = list()
-        np.random.seed(42)
-        hues = np.arange(0, 360, 360 / n)
-        print(f"n: {n}")
-        hues = hues[np.random.permutation(hues.size)]
-        for hue in hues:
-            min_sat = Visualizator.n_samples_equation(n, 70, 30, reverse=True)
-            saturation = min_sat + np.random.ranf() * (100 - min_sat)
-            print(f"sat: {saturation}")
-            min_lum = Visualizator.n_samples_equation(n, 60, 40, reverse=True)
-            luminosity = min_lum + np.random.ranf() * (100 - min_lum)
-            print(f"lum: {luminosity}")
-            color_list.append(tuple([hue / 360, luminosity / 100, saturation / 100]))
-        if sort:
-            color_list.sort()
-        return [hls_to_rgb(*color) for color in color_list]
-
-    @staticmethod
-    # https://github.com/sacdallago/bio_embeddings/blob/develop/bio_embeddings/visualize/plotly_plots.py
-    def render(
-        df: DataFrame,
-        selected_column: str,
-        original_id_col: object,
-        umap_flag: bool,
-    ):
-        """
-        Renders the plotly graph with the selected column in the dataframe df
-        :param df: dataframe
-        :param selected_column: column of the dataframe
-        :param original_id_col: the colum "original id" of the mapped csv file
-        :param umap_flag: flag is set if umap calculations are used.
-        :return: plotly graphical object
-        """
-
-        # custom separator to sort str, int and float (str case-insensitive)
-        # order: 1. int and float 2. str 3. rest 4. NA
-        def my_comparator(val):
-            if isinstance(val, float) or isinstance(val, int):
-                return 0, val
-            elif val == "NA":
-                return 3, val
-            elif isinstance(val, str):
-                val = val.lower()
-                return 1, val
-            else:
-                return 2, val
-
-        mapped_index = None
-        if original_id_col is not None:
-            # swap index
-            mapped_index = df.index
-            df.index = original_id_col
-
-        col_groups = df[selected_column].unique().tolist()
-
-        col_groups.sort(key=my_comparator)
-
-        color_list = Visualizator.gen_distinct_colors(n=len(col_groups))
-
-        fig = go.Figure()
-
-        numeric_flag = False
-        if all(
-            [
-                isinstance(item, int) or isinstance(item, float) or item == "NA"
-                for item in col_groups
-            ]
-        ):
-            # Only numeric values and "NA" in the group
-            numeric_flag = True
-            colorscale = list()
-
-            # Find min and max value of the group, excluding "NA"
-            min_val = sys.float_info.max
-            max_val = sys.float_info.min
-            for item in col_groups:
-                if isinstance(item, int) or isinstance(item, float):
-                    if min_val > item:
-                        min_val = item
-                    if max_val < item:
-                        max_val = item
-
-            # Fill the colorscale with the used colors for the groups
-            for idx, item in enumerate(col_groups):
-                if item != "NA":
-                    colorscale.append(f"rgb{color_list[idx]}")
-
-            # create colorbar
-            colorbar = dict(
-                title="Colorbar",
-                lenmode="fraction",
-                len=0.5,
-                yanchor="bottom",
-                ypad=50,
-            )
-
-            # create and add a dummy trace that holds the colorbar
-            color_trace = go.Scatter3d(
-                x=[None],
-                y=[None],
-                z=[None],
-                mode="markers",
-                marker=dict(
-                    colorscale=colorscale,
-                    showscale=True,
-                    colorbar=colorbar,
-                    cmin=min_val,
-                    cmax=max_val,
-                ),
-                showlegend=False,
-            )
-
-            fig.add_trace(color_trace)
-
-        # Figure out how many symbols to use depending on number of column groups
-        n_symbols = int(
-            Visualizator.n_samples_equation(
-                n=len(col_groups), max_out=len(Visualizator.SYMBOLS) - 3, min_val=3
-            )
-        )
-
-        df["class_index"] = np.ones(len(df)) * -100
-
-        # iterate over different values of the selected column
-        for group_idx, group_value in enumerate(col_groups):
-            # Only show NA in legend if colorbar is shown
-            show_legend = True
-            if numeric_flag:
-                if group_value != "NA":
-                    show_legend = False
-
-            # extract df with only group value
-            df_group = df[df[selected_column] == group_value]
-            trace = go.Scatter3d(
-                x=df_group["x"],
-                y=df_group["y"],
-                z=df_group["z"],
-                mode="markers",
-                name=group_value,
-                marker=dict(
-                    color=f"rgb{color_list[group_idx]}",
-                    symbol=Visualizator.SYMBOLS[group_idx % n_symbols],
-                    line=dict(color="black", width=1),
-                ),
-                text=df_group.index.to_list(),
-                showlegend=show_legend,
-            )
-            fig.add_trace(trace)
-            # Give the different group values a number
-            df.loc[df[selected_column] == group_value, "class_index"] = group_idx
-
-        if umap_flag:
-            fig.update_layout(
-                # Remove axes ticks and labels as they are usually not informative
-                scene=dict(
-                    xaxis=dict(showticklabels=False, showspikes=False, title=""),
-                    yaxis=dict(showticklabels=False, showspikes=False, title=""),
-                    zaxis=dict(showticklabels=False, showspikes=False, title=""),
-                ),
-            )
-        else:
-            # extract variance column
-            pca_variance = df["variance"].to_list()
-
-            fig.update_layout(
-                # Remove axes ticks and labels as they are usually not informative
-                scene=dict(
-                    xaxis=dict(
-                        showticklabels=False,
-                        showspikes=False,
-                        title=f"PC1 ({float(pca_variance[0]):.1f}%)",
-                    ),
-                    yaxis=dict(
-                        showticklabels=False,
-                        showspikes=False,
-                        title=f"PC2 ({float(pca_variance[1]):.1f}%)",
-                    ),
-                    zaxis=dict(
-                        showticklabels=False,
-                        showspikes=False,
-                        title=f"PC3 ({float(pca_variance[2]):.1f}%)",
-                    ),
-                ),
-            )
-
-        # Set hoverinfo
-        fig.update_traces(
-            hoverinfo=["name", "text"],
-            hoverlabel=dict(namelength=-1),
-            hovertemplate="%{text}",
-        )
-
-        # Set legend in right upper corner of the plot
-        fig.update_layout(legend=dict(yanchor="top", y=0.97, xanchor="right", x=0.99))
-
-        # change margins of the graph
-        fig.update_layout(margin=dict(l=1, r=1, t=1, b=1))
-
-        # swap index again
-        if original_id_col is not None:
-            df.index = mapped_index
-
-        return fig
