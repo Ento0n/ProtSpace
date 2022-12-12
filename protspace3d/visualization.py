@@ -264,6 +264,9 @@ class Visualizator:
         # change margins of the graph
         fig.update_layout(margin=dict(l=1, r=1, t=1, b=1))
 
+        # Update title
+        fig.update_layout(title={"text": "PCA", "y": 0.98, "x": 0.4})
+
         # swap index again
         if original_id_col is not None:
             df.index = mapped_index

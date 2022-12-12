@@ -432,7 +432,12 @@ def get_callbacks_pdb(app, df, struct_container, original_id_col):
         return left_width, right_width
 
 
-def get_callbacks(app, df: DataFrame, original_id_col: list):
+def get_callbacks(
+    app,
+    df: DataFrame,
+    original_id_col: list,
+    umap_paras: dict,
+):
     @app.callback(
         Output("graph", "figure"),
         Input("dd_menu", "value"),
@@ -462,6 +467,19 @@ def get_callbacks(app, df: DataFrame, original_id_col: list):
             original_id_col=original_id_col,
             umap_flag=umap_flag,
         )
+
+        # Set up title of graph
+        title = ""
+        if dim_red == "PCA":
+            title = dim_red
+        elif dim_red == "UMAP":
+            title = (
+                dim_red
+                + f"<br>n_neighbours: {umap_paras['n_neighbours']},"
+                + f" min_dist: {umap_paras['min_dist']}, metric: {umap_paras['metric']}"
+            )
+        fig.update_layout(title={"text": title, "y": 0.98, "x": 0.4})
+
         return fig
 
     @app.callback(

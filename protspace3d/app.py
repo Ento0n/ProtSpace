@@ -342,20 +342,21 @@ def setup():
         structure_container,
         pdb_flag,
         original_id_col,
+        umap_paras,
     )
 
 
 def main():
-    app, html, df, struct_container, pdb, orig_id_col = setup()
+    app, html, df, struct_container, pdb, orig_id_col, umap_paras = setup()
 
     # don't start server if html is needed
     if not html:
         # different callbacks for different layout
         if pdb:
-            get_callbacks(app, df, orig_id_col)
+            get_callbacks(app, df, orig_id_col, umap_paras)
             get_callbacks_pdb(app, df, struct_container, orig_id_col)
         else:
-            get_callbacks(app, df, orig_id_col)
+            get_callbacks(app, df, orig_id_col, umap_paras)
 
         app.run_server(debug=True)
 
