@@ -472,13 +472,14 @@ class DataPreprocessor:
         df_dim_red_pca = self._generate_pca(embs)
         df_dim_red_pca.index = uids
 
-        df_embeddings = df_csv.join(df_dim_red_umap, how="right", sort=False)
-        df_embeddings = df_embeddings.join(df_dim_red_pca, how="right", sort=False)
+        df_embeddings = df_csv.join([df_dim_red_umap, df_dim_red_pca])
         csv_header = [
             header
             for header in df_embeddings.columns
             if header not in self.AXIS_NAMES and header != "variance"
         ]
+
+        print(f"df embeddings ids: {df_embeddings.index.to_list()[27:32]}")
 
         # save dataframe
         df_embeddings.to_csv(
