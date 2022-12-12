@@ -16,7 +16,6 @@ class Visualizator:
         "circle",
         "square",
         "diamond",
-        "circle",
         "cross",
         "circle-open",
         "diamond-open",
@@ -84,7 +83,7 @@ class Visualizator:
         df: DataFrame,
         selected_column: str,
         original_id_col: object,
-        umap_flag: bool = False,
+        umap_flag: bool = True,
     ):
         """
         Renders the plotly graph with the selected column in the dataframe df
@@ -409,7 +408,7 @@ class Visualizator:
                             {"label": "PCA", "value": "PCA"},
                             {"label": "UMAP", "value": "UMAP"},
                         ],
-                        value="PCA",
+                        value="UMAP",
                         id="dim_red_radio",
                         inline="True",
                     ),
