@@ -432,12 +432,13 @@ def get_callbacks_pdb(app, df, struct_container, original_id_col):
         return left_width, right_width
 
 
-def get_callbacks(app, df: DataFrame, original_id_col: list, umap_flag: bool):
+def get_callbacks(app, df: DataFrame, original_id_col: list):
     @app.callback(
         Output("graph", "figure"),
         Input("dd_menu", "value"),
+        Input("dim_red_radio", "value"),
     )
-    def update_graph(selected_value: str):
+    def update_graph(selected_value: str, dim_red: "str"):
         """
         Renders new graph for selected drop down menu value
         :param selected_value: selected column of dropdown menu
@@ -451,6 +452,9 @@ def get_callbacks(app, df: DataFrame, original_id_col: list, umap_flag: bool):
         # In case dropdown menu is being cleared
         if selected_value is None:
             raise PreventUpdate
+
+        # Set up umap flag
+        umap_flag = True if dim_red == "UMAP" else False
 
         fig = Visualizator.render(
             df,

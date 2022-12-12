@@ -56,9 +56,6 @@ class LoadConfFile(argparse.Action):
         if "reset" in dictionary.keys():
             if dictionary["reset"]:
                 arguments.append("--reset")
-        if "UMAP" in dictionary.keys():
-            if dictionary["UMAP"]:
-                arguments.append("--UMAP")
         if "n_neighbours" in dictionary.keys():
             arguments.append("--n_neighbours")
             arguments.append(str(dictionary["n_neighbours"]))
@@ -84,7 +81,6 @@ class Parser:
             self.pdb_flag,
             self.reset,
             self.conf,
-            self.umap_flag,
             self.n_neighbours,
             self.min_dist,
             self.metric,
@@ -104,7 +100,6 @@ class Parser:
             self.pdb_flag,
             self.reset,
             self.conf,
-            self.umap_flag,
             self.n_neighbours,
             self.min_dist,
             self.metric,
@@ -217,13 +212,6 @@ class Parser:
             default="euclidean",
             help="Metric used for UMAP calculation, default: euclidean",
         )
-        # Optional argument
-        parser.add_argument(
-            "--UMAP",
-            required=False,
-            action="store_true",
-            help="By default PCA is used for dimensionality reduction. But if UMAP_flag is set, UMAP is used.",
-        )
 
         args = parser.parse_args()
         output_d = Path(args.output) if args.output is not None else None
@@ -235,7 +223,6 @@ class Parser:
         pdb_d = Path(args.pdb) if args.pdb is not None else None
         reset = args.reset
         conf_file = args.configuration
-        umap_flag = args.UMAP
         n_neighbours = args.n_neighbours
         min_dist = args.min_dist
         metric = args.metric
@@ -250,7 +237,6 @@ class Parser:
             pdb_d,
             reset,
             conf_file,
-            umap_flag,
             n_neighbours,
             min_dist,
             metric,
@@ -276,7 +262,6 @@ def setup():
         pdb_d,
         reset,
         conf,
-        umap_flag,
         n_neighbours,
         min_dist,
         metric,
@@ -315,7 +300,6 @@ def setup():
         uid_col,
         html_cols,
         reset,
-        umap_flag,
         umap_paras,
     )
 
@@ -358,21 +342,20 @@ def setup():
         structure_container,
         pdb_flag,
         original_id_col,
-        umap_flag,
     )
 
 
 def main():
-    app, html, df, struct_container, pdb, orig_id_col, umap_flag = setup()
+    app, html, df, struct_container, pdb, orig_id_col = setup()
 
     # don't start server if html is needed
     if not html:
         # different callbacks for different layout
         if pdb:
-            get_callbacks(app, df, orig_id_col, umap_flag)
+            get_callbacks(app, df, orig_id_col)
             get_callbacks_pdb(app, df, struct_container, orig_id_col)
         else:
-            get_callbacks(app, df, orig_id_col, umap_flag)
+            get_callbacks(app, df, orig_id_col)
 
         app.run_server(debug=True)
 

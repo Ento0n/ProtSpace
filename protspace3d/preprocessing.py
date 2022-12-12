@@ -76,7 +76,6 @@ class DataPreprocessor:
         uid_col: int,
         html_cols: list[int],
         reset: bool,
-        umap_flag: bool,
         umap_paras: dict,
     ):
         self.output_d = output_d
@@ -86,7 +85,6 @@ class DataPreprocessor:
         self.uid_col = uid_col
         self.html_cols = html_cols
         self.reset = reset
-        self.umap_flag = umap_flag
         self.umap_paras = umap_paras
 
     def data_preprocessing(self):
@@ -163,7 +161,6 @@ class DataPreprocessor:
             df_embeddings,
             selected_column=csv_header[0],
             original_id_col=original_id_col,
-            umap_flag=self.umap_flag,
         )
 
         return df_embeddings, fig, csv_header, original_id_col
@@ -286,7 +283,6 @@ class DataPreprocessor:
                         df,
                         selected_column=col,
                         original_id_col=original_id_col,
-                        umap_flag=self.umap_flag,
                     )
                     fig.write_html(output_d / f"3Dspace_{col}.html")
 
@@ -307,7 +303,6 @@ class DataPreprocessor:
                         df,
                         selected_column=csv_header[col],
                         original_id_col=original_id_col,
-                        umap_flag=self.umap_flag,
                     )
                     fig.write_html(output_d / f"3Dspace_{csv_header[col]}.html")
 

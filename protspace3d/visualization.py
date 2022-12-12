@@ -80,7 +80,7 @@ class Visualizator:
         df: DataFrame,
         selected_column: str,
         original_id_col: object,
-        umap_flag: bool,
+        umap_flag: bool = False,
     ):
         """
         Renders the plotly graph with the selected column in the dataframe df
