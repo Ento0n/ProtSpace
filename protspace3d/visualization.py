@@ -39,10 +39,14 @@ class Visualizator:
 
     @staticmethod
     def n_samples_equation(n, max_out, min_val, reverse: bool = False) -> float:
-        # the underlying equation is (x-1)/(x+10)
-        numerator = n - 1
+        # the underlying equation is (x-10)/(x+10)
+        numerator = n - 10
         denominator = n + 10
         res = numerator / denominator
+
+        # less than 10 for n should be 0
+        if res < 0:
+            res = 0
 
         if reverse:
             res = 1 - res
@@ -59,10 +63,10 @@ class Visualizator:
         hues = np.arange(0, 360, 360 / n)
         hues = hues[np.random.permutation(hues.size)]
         for hue in hues:
-            min_sat = Visualizator.n_samples_equation(n, 70, 30, reverse=True)
-            saturation = min_sat + np.random.ranf() * (100 - min_sat)
-            min_lum = Visualizator.n_samples_equation(n, 60, 40, reverse=True)
-            luminosity = min_lum + np.random.ranf() * (100 - min_lum)
+            min_sat = Visualizator.n_samples_equation(n, 50, 30, reverse=True)
+            saturation = min_sat + np.random.ranf() * (80 - min_sat)
+            min_lum = Visualizator.n_samples_equation(n, 40, 40, reverse=True)
+            luminosity = min_lum + np.random.ranf() * (80 - min_lum)
             color_list.append(tuple([hue / 360, luminosity / 100, saturation / 100]))
         if sort:
             color_list.sort()
