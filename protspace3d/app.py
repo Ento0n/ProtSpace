@@ -173,7 +173,6 @@ class Parser:
         parser.add_argument(
             "--html_cols",
             required=False,
-            type=int,
             help="CSV columns to be saved as html",
             nargs="+",
         )

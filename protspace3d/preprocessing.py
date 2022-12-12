@@ -74,7 +74,7 @@ class DataPreprocessor:
         csv_path: Path,
         csv_separator: str,
         uid_col: int,
-        html_cols: list[int],
+        html_cols: list[str],
         reset: bool,
         umap_paras: dict,
     ):
@@ -262,7 +262,7 @@ class DataPreprocessor:
 
     def _handle_html(
         self,
-        html_cols: list[int],
+        html_cols: list,
         csv_header: list[str],
         output_d: Path,
         original_id_col: list,
@@ -276,6 +276,11 @@ class DataPreprocessor:
         """
         # save html figures if argument is set
         if html_cols is not None:
+            # parse html_cols array from str to int if all items are numeric
+            for idx, item in enumerate(html_cols):
+                if item.isnumeric():
+                    html_cols[idx] = int(item)
+
             # -1 indicates all columns to be saved
             if html_cols == [-1]:
                 for col in csv_header:
@@ -287,24 +292,50 @@ class DataPreprocessor:
                     fig.write_html(output_d / f"3Dspace_{col}.html")
 
             else:
-                # Sort given column indexes
-                html_cols = sorted(html_cols)
+                # differentiate between given column names and indexes
+                if all([isinstance(item, str) for item in html_cols]):
+                    try:
+                        for item in html_cols:
+                            fig = Visualizator.render(
+                                df,
+                                selected_column=item,
+                                original_id_col=original_id_col,
+                            )
+                            fig.write_html(output_d / f"3Dspace_{item}.html")
+                    except Exception:
+                        raise Exception(
+                            f"Given column name <{item}> for html output don't match column names in csv file!"
+                            + f"\npossible selection: {csv_header}"
+                        )
 
-                # Edit input to required index numbers
-                for i, num in enumerate(html_cols):
-                    html_cols[i] = num - 1
+                elif all([isinstance(item, int) for item in html_cols]):
+                    # Sort given column indexes
+                    html_cols = sorted(html_cols)
 
-                # Given parameters existing columns?
-                for col in html_cols:
-                    if col not in range(len(csv_header)):
-                        raise Exception(f"Column no. {col} is not valid!")
+                    possible_selection = list(range(1, len(csv_header) + 1))
+                    for col in html_cols:
+                        if col not in possible_selection:
+                            raise Exception(
+                                f"Given html column <{col}> is not valid!"
+                                + f"\npossible range: {possible_selection}"
+                            )
 
-                    fig = Visualizator.render(
-                        df,
-                        selected_column=csv_header[col],
-                        original_id_col=original_id_col,
+                    # Edit input to required index numbers
+                    for i, num in enumerate(html_cols):
+                        html_cols[i] = num - 1
+
+                    # Given parameters existing columns?
+                    for col in html_cols:
+                        fig = Visualizator.render(
+                            df,
+                            selected_column=csv_header[col],
+                            original_id_col=original_id_col,
+                        )
+                        fig.write_html(output_d / f"3Dspace_{csv_header[col]}.html")
+                else:
+                    raise Exception(
+                        "Mixed input for html columns!\nEither column name or index is a valid input!"
                     )
-                    fig.write_html(output_d / f"3Dspace_{csv_header[col]}.html")
 
     def _read_df_csv(
         self,
