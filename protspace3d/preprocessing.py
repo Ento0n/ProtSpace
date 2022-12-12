@@ -143,9 +143,6 @@ class DataPreprocessor:
             index_name,
         )
 
-        # sort csv header alphabetically
-        csv_header.sort(key=str.lower)
-
         # handle html saving
         DataPreprocessor._handle_html(
             self,
@@ -155,6 +152,9 @@ class DataPreprocessor:
             original_id_col=original_id_col,
             df=df_embeddings,
         )
+
+        # sort csv header alphabetically
+        csv_header.sort(key=str.lower)
 
         # generate initial figure
         fig = Visualizator.render(
