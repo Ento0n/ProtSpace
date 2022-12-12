@@ -332,6 +332,7 @@ class DataPreprocessor:
                             original_id_col=original_id_col,
                         )
                         fig.write_html(output_d / f"3Dspace_{csv_header[col]}.html")
+                # Mixed types in the html columns list, can't process this
                 else:
                     raise Exception(
                         "Mixed input for html columns!\nEither column name or index is a valid input!"
@@ -449,6 +450,12 @@ class DataPreprocessor:
         uids, embs = zip(*embeddings.items())
         embs = np.vstack(embs)
 
+        print(
+            "This is a print for the labeling problem, uids order of embeddings and csv is different! data: CTX conoserver"
+        )
+        print(f"uids embeddings: {list(uids[27:32])}")
+        print(f"uids csv: {df_csv.index.to_list()[27:32]}")
+
         # data should be n_proteins x 1024 (ProtT5) OR n_proteins x 128 (ProtTucker)
         print(f"Shape of embeddings (num_proteins x embedding dim): {embs.shape}")
 
@@ -465,8 +472,8 @@ class DataPreprocessor:
         df_dim_red_pca = self._generate_pca(embs)
         df_dim_red_pca.index = uids
 
-        df_embeddings = df_csv.join(df_dim_red_umap, how="right")
-        df_embeddings = df_embeddings.join(df_dim_red_pca, how="right")
+        df_embeddings = df_csv.join(df_dim_red_umap, how="right", sort=False)
+        df_embeddings = df_embeddings.join(df_dim_red_pca, how="right", sort=False)
         csv_header = [
             header
             for header in df_embeddings.columns
