@@ -376,9 +376,21 @@ class Visualizator:
             dbc.Offcanvas(
                 id="graph_offcanvas",
                 is_open=False,
-                title="Settings",
-                children=[],
+                title="Graph settings",
+                children=[
+                    dcc.Markdown("Dimensionality reduction"),
+                    dbc.RadioItems(
+                        options=[
+                            {"label": "PCA", "value": "PCA"},
+                            {"label": "UMAP", "value": "UMAP"},
+                        ],
+                        value="PCA",
+                        id="dim_red_radio",
+                        inline="True",
+                    ),
+                ],
                 style={"width": "50%"},
+                placement="end",
             ),
             dbc.Row(
                 [
