@@ -378,6 +378,24 @@ class Visualizator:
 
         return modal
 
+    def get_download_toast(self):
+        toast = dbc.Toast(
+            "Html file successfully saved in output folder!",
+            header="HTML created",
+            id="html_download_toast",
+            is_open=False,
+            dismissable=True,
+            duration=4000,
+            style={
+                "position": "fixed",
+                "top": 66,
+                "left": 10,
+                "width": 350,
+            },
+        )
+
+        return toast
+
     def get_graph_container(self):
         graph_container = (
             dbc.Offcanvas(
@@ -394,6 +412,31 @@ class Visualizator:
                         value="PCA",
                         id="dim_red_radio",
                         inline="True",
+                    ),
+                    dcc.Markdown("HTML"),
+                    dbc.Row(
+                        [
+                            dbc.Col(
+                                [
+                                    dcc.Dropdown(
+                                        self.csv_header,
+                                        self.csv_header[0],
+                                        id="html_dd",
+                                    )
+                                ],
+                                width=9,
+                            ),
+                            dbc.Col(
+                                [
+                                    dbc.Button(
+                                        "Download",
+                                        id="html_download_button",
+                                        outline=True,
+                                        color="dark",
+                                    )
+                                ]
+                            ),
+                        ]
                     ),
                 ],
                 style={"width": "50%"},
@@ -462,6 +505,8 @@ class Visualizator:
                 # storage to save the selected molecules
                 # Needed for image download name
                 dcc.Store(id="mol_name_storage"),
+                # Toast that is displayed if a html file is created
+                self.get_download_toast(),
                 # graph and controls
                 dbc.Row(
                     [
@@ -707,6 +752,8 @@ class Visualizator:
                 self.get_header(app),
                 # model with disclaimer that opens on startup
                 self.get_disclaimer_modal(),
+                # toast that is displayed if a html file is created
+                self.get_download_toast(),
                 # space between header and content below
                 dbc.Row([html.Br()]),
                 # graph and controls

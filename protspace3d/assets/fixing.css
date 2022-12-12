@@ -1,0 +1,4 @@
+/* Setting the toast component in front of everything */
+.toast {
+    z-index: 999 !important;
+}

@@ -4,6 +4,7 @@
 from visualization import Visualizator
 from preprocessing import StructureContainer
 
+from pathlib import Path
 from dash import Input, Output
 from dash.exceptions import PreventUpdate
 import dash
@@ -437,6 +438,7 @@ def get_callbacks(
     df: DataFrame,
     original_id_col: list,
     umap_paras: dict,
+    output_d: Path,
 ):
     @app.callback(
         Output("graph", "figure"),
@@ -507,4 +509,25 @@ def get_callbacks(
     )
     def handle_graph_canvas(button_click):
         if button_click:
+            return True
+
+    @app.callback(
+        Output("html_download_toast", "is_open"),
+        Input("html_dd", "value"),
+        Input("html_download_button", "n_clicks"),
+        Input("dim_red_radio", "value"),
+    )
+    def create_html(dd_value: str, button: int, dim_red: str):
+        # Check whether an input is triggered
+        ctx = dash.callback_context
+        if not ctx.triggered:
+            raise PreventUpdate
+
+        if ctx.triggered_id == "html_download_button":
+            # Set up umap flag
+            umap_flag = True if dim_red == "UMAP" else False
+
+            fig = Visualizator.render(df, dd_value, original_id_col, umap_flag)
+            fig.write_html(output_d / f"3Dspace_{dd_value}.html")
+
             return True
