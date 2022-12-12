@@ -528,6 +528,6 @@ def get_callbacks(
             umap_flag = True if dim_red == "UMAP" else False
 
             fig = Visualizator.render(df, dd_value, original_id_col, umap_flag)
-            fig.write_html(output_d / f"3Dspace_{dd_value}.html")
+            fig.write_html(output_d / f"3Dspace_{dd_value}_{dim_red}.html")
 
             return True
