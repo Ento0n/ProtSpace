@@ -98,7 +98,7 @@ class DataPreprocessor:
 
         # delete df.csv
         if self.reset:
-            df_csv_path = self.output_d / "df.csv"
+            df_csv_path = self.output_d / f"df_{self.hdf_path.stem}.csv"
             if df_csv_path.is_file():
                 os.remove(df_csv_path)
 
@@ -324,9 +324,9 @@ class DataPreprocessor:
         :return: final dataframe and its column headers
         """
         # load & read df.csv if present
-        pres_df = output_d / "df.csv"
+        pres_df = output_d / f"df_{hdf_path.stem}.csv"
         if pres_df.is_file():
-            print("Pre computed dataframe file df.csv is loaded.")
+            print(f"Pre computed dataframe file df_{hdf_path.stem}.csv is loaded.")
             pres_df_csv = pd.read_csv(pres_df, index_col=0)
             pres_df_csv.fillna("NA", inplace=True)
 
@@ -363,7 +363,9 @@ class DataPreprocessor:
                         pres_df_csv = self._update_df(df_csv, pres_df_csv)
 
                         # save the new obtained df
-                        pres_df_csv.to_csv(output_d / "df.csv", index_label=index_name)
+                        pres_df_csv.to_csv(
+                            output_d / f"df_{hdf_path.stem}.csv", index_label=index_name
+                        )
 
                     # save final column names
                     csv_header = [
@@ -441,7 +443,9 @@ class DataPreprocessor:
         ]
 
         # save dataframe
-        df_embeddings.to_csv(output_d / "df.csv", index_label=index_name)
+        df_embeddings.to_csv(
+            output_d / f"df_{hdf_path.stem}.csv", index_label=index_name
+        )
 
         return df_embeddings, csv_header
 
