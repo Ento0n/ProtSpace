@@ -64,8 +64,10 @@ class Visualizator:
         for hue in hues:
             min_sat = Visualizator.n_samples_equation(n, 50, 30, reverse=True)
             saturation = min_sat + np.random.ranf() * (80 - min_sat)
+            saturation = 100
             min_lum = Visualizator.n_samples_equation(n, 40, 40, reverse=True)
             luminosity = min_lum + np.random.ranf() * (80 - min_lum)
+            luminosity = 50
             color_list.append(tuple([hue / 360, luminosity / 100, saturation / 100]))
         if sort:
             color_list.sort()
@@ -74,6 +76,12 @@ class Visualizator:
         rgb_list = []
         for h, l, s in color_list:
             rgb = hls_to_rgb(round(h, 2), round(l, 2), round(s, 2))
+
+            rgb = list(rgb)
+            for idx, value in enumerate(rgb):
+                rgb[idx] = value * 255
+            rgb = tuple(rgb)
+
             rgb_list.append(rgb)
         return rgb_list
 
