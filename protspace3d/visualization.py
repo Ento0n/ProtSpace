@@ -60,6 +60,9 @@ class Visualizator:
         denominator = n + 10
         res = numerator / denominator
 
+        if res < 0:
+            res = 0
+
         res_range = res * val_range
 
         return res_range
@@ -113,6 +116,7 @@ class Visualizator:
         :param df: dataframe
         :param selected_column: column of the dataframe
         :param original_id_col: the colum "original id" of the mapped csv file
+        :param umap_paras: dictionary holding the parameters of UMAP
         :param umap_flag: flag is set if umap calculations are used.
         :return: plotly graphical object
         """
@@ -228,6 +232,7 @@ class Visualizator:
                 mode="markers",
                 name=group_value,
                 marker=dict(
+                    size=10,
                     color=f"rgb{color_list[group_idx]}",
                     symbol=Visualizator.SYMBOLS[group_idx % n_symbols],
                     line=dict(color="black", width=1),
