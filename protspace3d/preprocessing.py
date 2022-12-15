@@ -477,7 +477,7 @@ class DataPreprocessor:
         df_dim_red_pca = self._generate_pca(embs)
         df_dim_red_pca.index = uids
 
-        df_embeddings = df_csv.join([df_dim_red_umap, df_dim_red_pca])
+        df_embeddings = df_csv.join([df_dim_red_umap, df_dim_red_pca], how="outer")
         csv_header = [
             header
             for header in df_embeddings.columns
