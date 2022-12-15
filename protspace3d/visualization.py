@@ -7,6 +7,7 @@ import dash_bio as dashbio
 import dash_bootstrap_components as dbc
 import numpy as np
 import plotly.graph_objects as go
+from matplotlib import cm
 from dash import Dash, dcc, html
 from pandas import DataFrame
 
@@ -146,6 +147,9 @@ class Visualizator:
 
         color_list = Visualizator.gen_distinct_colors(n=len(col_groups))
 
+        # Figure out how many symbols to use depending on number of column groups
+        n_symbols = Visualizator.n_symbols_equation(n=len(col_groups))
+
         fig = go.Figure()
 
         numeric_flag = False
@@ -157,7 +161,9 @@ class Visualizator:
         ):
             # Only numeric values and "NA" in the group
             numeric_flag = True
-            colorscale = list()
+
+            # Only one symbol to be used
+            n_symbols = 1
 
             # Find min and max value of the group, excluding "NA"
             min_val = sys.float_info.max
@@ -169,10 +175,29 @@ class Visualizator:
                     if max_val < item:
                         max_val = item
 
-            # Fill the colorscale with the used colors for the groups
-            for idx, item in enumerate(col_groups):
-                if item != "NA":
-                    colorscale.append(f"rgb{color_list[idx]}")
+            if "NA" in col_groups:
+                no_na_len = len(col_groups) - 1
+            else:
+                no_na_len = len(col_groups)
+
+            viridis = cm.get_cmap("viridis", no_na_len)
+            color_list = list()
+            for i in range(len(col_groups)):
+                # change rgba to rgb and range of values from 0-1 to 0-255
+                rgba_tuple = viridis(i)
+                rgba_list = list(rgba_tuple)
+                red = rgba_list[0] * 255
+                green = rgba_list[1] * 255
+                blue = rgba_list[2] * 255
+                rgb_list = [red, green, blue]
+                rgb_tuple = tuple(rgb_list)
+
+                color_list.append(rgb_tuple)
+
+            # Use plotly Viridis as colorscale
+            colorscale = list()
+            for col in color_list:
+                colorscale.append(f"rgb{col}")
 
             # create colorbar
             colorbar = dict(
@@ -201,9 +226,6 @@ class Visualizator:
 
             fig.add_trace(color_trace)
 
-        # Figure out how many symbols to use depending on number of column groups
-        n_symbols = Visualizator.n_symbols_equation(n=len(col_groups))
-
         df["class_index"] = np.ones(len(df)) * -100
 
         if umap_flag:
@@ -217,14 +239,24 @@ class Visualizator:
 
         # iterate over different values of the selected column
         for group_idx, group_value in enumerate(col_groups):
-            # Only show NA in legend if colorbar is shown
+            # Show only NA in legend if colorbar is shown
             show_legend = True
             if numeric_flag:
                 if group_value != "NA":
                     show_legend = False
 
+            # set up color depending on numeric processing
+            if not numeric_flag:
+                color = f"rgb{color_list[group_idx]}"
+            else:
+                if group_value == "NA":
+                    color = f"rgb(255,0,0)"
+                else:
+                    color = f"rgb{color_list[group_idx]}"
+
             # extract df with only group value
             df_group = df[df[selected_column] == group_value]
+
             trace = go.Scatter3d(
                 x=df_group[x],
                 y=df_group[y],
@@ -233,7 +265,7 @@ class Visualizator:
                 name=group_value,
                 marker=dict(
                     size=10,
-                    color=f"rgb{color_list[group_idx]}",
+                    color=color,
                     symbol=Visualizator.SYMBOLS[group_idx % n_symbols],
                     line=dict(color="black", width=1),
                 ),
