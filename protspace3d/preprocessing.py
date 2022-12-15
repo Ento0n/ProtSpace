@@ -161,6 +161,7 @@ class DataPreprocessor:
             df_embeddings,
             selected_column=csv_header[0],
             original_id_col=original_id_col,
+            umap_paras=self.umap_paras,
         )
 
         return df_embeddings, fig, csv_header, original_id_col
@@ -288,6 +289,7 @@ class DataPreprocessor:
                         df,
                         selected_column=col,
                         original_id_col=original_id_col,
+                        umap_paras=self.umap_paras,
                     )
                     fig.write_html(output_d / f"3Dspace_{col}.html")
 
@@ -300,6 +302,7 @@ class DataPreprocessor:
                                 df,
                                 selected_column=item,
                                 original_id_col=original_id_col,
+                                umap_paras=self.umap_paras,
                             )
                             fig.write_html(output_d / f"3Dspace_{item}.html")
                     except Exception:
@@ -330,6 +333,7 @@ class DataPreprocessor:
                             df,
                             selected_column=csv_header[col],
                             original_id_col=original_id_col,
+                            umap_paras=self.umap_paras,
                         )
                         fig.write_html(output_d / f"3Dspace_{csv_header[col]}.html")
                 # Mixed types in the html columns list, can't process this
@@ -451,7 +455,8 @@ class DataPreprocessor:
         embs = np.vstack(embs)
 
         print(
-            "This is a print for the labeling problem, uids order of embeddings and csv is different! data: CTX conoserver"
+            "This is a print for the labeling problem, "
+            "uids order of embeddings and csv is different! data: CTX conoserver"
         )
         print(f"uids embeddings: {list(uids[27:32])}")
         print(f"uids csv: {df_csv.index.to_list()[27:32]}")

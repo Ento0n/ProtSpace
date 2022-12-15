@@ -91,6 +91,7 @@ class Visualizator:
         df: DataFrame,
         selected_column: str,
         original_id_col: object,
+        umap_paras: dict,
         umap_flag: bool = True,
     ):
         """
@@ -276,7 +277,15 @@ class Visualizator:
         fig.update_layout(margin=dict(l=1, r=1, t=1, b=1))
 
         # Update title
-        fig.update_layout(title={"text": "PCA", "y": 0.98, "x": 0.4})
+        fig.update_layout(
+            title={
+                "text": "UMAP"
+                + f"<br>n_neighbours: {umap_paras['n_neighbours']},"
+                + f" min_dist: {umap_paras['min_dist']}, metric: {umap_paras['metric']}",
+                "y": 0.98,
+                "x": 0.4,
+            }
+        )
 
         # swap index again
         if original_id_col is not None:
@@ -385,7 +394,8 @@ class Visualizator:
 
         return modal
 
-    def get_download_toast(self):
+    @staticmethod
+    def get_download_toast():
         toast = dbc.Toast(
             "Html file successfully saved in output folder!",
             header="HTML created",
