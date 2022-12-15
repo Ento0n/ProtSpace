@@ -324,11 +324,17 @@ class Visualizator:
         fig.update_layout(margin=dict(l=1, r=1, t=1, b=1))
 
         # Update title
+        if umap_flag:
+            title = (
+                "UMAP" + f"<br>n_neighbours: {umap_paras['n_neighbours']},"
+                f" min_dist: {umap_paras['min_dist']}, metric: {umap_paras['metric']}"
+            )
+        else:
+            title = "PCA"
+
         fig.update_layout(
             title={
-                "text": "UMAP"
-                + f"<br>n_neighbours: {umap_paras['n_neighbours']},"
-                + f" min_dist: {umap_paras['min_dist']}, metric: {umap_paras['metric']}",
+                "text": title,
                 "y": 0.98,
                 "x": 0.4,
             }
@@ -445,7 +451,7 @@ class Visualizator:
     def get_download_toast():
         toast = dbc.Toast(
             "Html file(s) successfully saved in output folder!",
-            header="HTML created",
+            header="Download HTML",
             id="html_download_toast",
             is_open=False,
             dismissable=True,

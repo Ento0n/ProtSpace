@@ -446,10 +446,11 @@ def get_callbacks(
         Input("dd_menu", "value"),
         Input("dim_red_radio", "value"),
     )
-    def update_graph(selected_value: str, dim_red: "str"):
+    def update_graph(selected_value: str, dim_red: str):
         """
         Renders new graph for selected drop down menu value
         :param selected_value: selected column of dropdown menu
+        :param dim_red: Chosen dimensionality reduction in str format
         :return: graph to be displayed
         """
         # Check whether an input is triggered
@@ -471,18 +472,6 @@ def get_callbacks(
             umap_flag=umap_flag,
             umap_paras=umap_paras,
         )
-
-        # Set up title of graph
-        title = ""
-        if dim_red == "PCA":
-            title = dim_red
-        elif dim_red == "UMAP":
-            title = (
-                dim_red
-                + f"<br>n_neighbours: {umap_paras['n_neighbours']},"
-                + f" min_dist: {umap_paras['min_dist']}, metric: {umap_paras['metric']}"
-            )
-        fig.update_layout(title={"text": title, "y": 0.98, "x": 0.4})
 
         return fig
 
