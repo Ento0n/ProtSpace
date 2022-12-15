@@ -343,20 +343,31 @@ def setup():
         original_id_col,
         umap_paras,
         output_d,
+        csv_header,
     )
 
 
 def main():
-    app, html, df, struct_container, pdb, orig_id_col, umap_paras, output_d = setup()
+    (
+        app,
+        html,
+        df,
+        struct_container,
+        pdb,
+        orig_id_col,
+        umap_paras,
+        output_d,
+        csv_header,
+    ) = setup()
 
     # don't start server if html is needed
     if not html:
         # different callbacks for different layout
         if pdb:
-            get_callbacks(app, df, orig_id_col, umap_paras, output_d)
+            get_callbacks(app, df, orig_id_col, umap_paras, output_d, csv_header)
             get_callbacks_pdb(app, df, struct_container, orig_id_col)
         else:
-            get_callbacks(app, df, orig_id_col, umap_paras, output_d)
+            get_callbacks(app, df, orig_id_col, umap_paras, output_d, csv_header)
 
         app.run_server(debug=True)
 

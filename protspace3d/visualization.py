@@ -444,7 +444,7 @@ class Visualizator:
     @staticmethod
     def get_download_toast():
         toast = dbc.Toast(
-            "Html file successfully saved in output folder!",
+            "Html file(s) successfully saved in output folder!",
             header="HTML created",
             id="html_download_toast",
             is_open=False,
@@ -470,40 +470,22 @@ class Visualizator:
                     dcc.Markdown("Dimensionality reduction"),
                     dbc.RadioItems(
                         options=[
-                            {"label": "PCA", "value": "PCA"},
                             {"label": "UMAP", "value": "UMAP"},
+                            {"label": "PCA", "value": "PCA"},
                         ],
                         value="UMAP",
                         id="dim_red_radio",
                         inline="True",
                     ),
                     dcc.Markdown("HTML"),
-                    dbc.Row(
-                        [
-                            dbc.Col(
-                                [
-                                    dcc.Dropdown(
-                                        self.csv_header,
-                                        self.csv_header[0],
-                                        id="html_dd",
-                                    )
-                                ],
-                                width=9,
-                            ),
-                            dbc.Col(
-                                [
-                                    dbc.Button(
-                                        "Download",
-                                        id="html_download_button",
-                                        outline=True,
-                                        color="dark",
-                                    )
-                                ]
-                            ),
-                        ]
+                    dbc.Button(
+                        "Download all files",
+                        id="button_html_all",
+                        color="dark",
+                        outline=True,
                     ),
                 ],
-                style={"width": "50%"},
+                style={"width": "30%"},
                 placement="end",
             ),
             dbc.Row(
@@ -517,7 +499,19 @@ class Visualizator:
                                 style={"margin-top": "5px"},
                             ),
                         ],
-                        width=10,
+                        width=8,
+                    ),
+                    dbc.Col(
+                        [
+                            dbc.Button(
+                                "",
+                                class_name="bi bi-download",
+                                id="html_download_button",
+                                outline=True,
+                                color="dark",
+                            )
+                        ],
+                        width=2,
                     ),
                     dbc.Col(
                         [

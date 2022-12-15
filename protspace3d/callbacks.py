@@ -439,6 +439,7 @@ def get_callbacks(
     original_id_col: list,
     umap_paras: dict,
     output_d: Path,
+    csv_header: list[str],
 ):
     @app.callback(
         Output("graph", "figure"),
@@ -514,11 +515,12 @@ def get_callbacks(
 
     @app.callback(
         Output("html_download_toast", "is_open"),
-        Input("html_dd", "value"),
+        Input("dd_menu", "value"),
         Input("html_download_button", "n_clicks"),
+        Input("button_html_all", "n_clicks"),
         Input("dim_red_radio", "value"),
     )
-    def create_html(dd_value: str, button: int, dim_red: str):
+    def create_html(dd_value: str, button: int, all_button: int, dim_red: str):
         # Check whether an input is triggered
         ctx = dash.callback_context
         if not ctx.triggered:
@@ -528,7 +530,21 @@ def get_callbacks(
             # Set up umap flag
             umap_flag = True if dim_red == "UMAP" else False
 
-            fig = Visualizator.render(df, dd_value, original_id_col, umap_flag)
+            fig = Visualizator.render(
+                df, dd_value, original_id_col, umap_paras, umap_flag
+            )
             fig.write_html(output_d / f"3Dspace_{dd_value}_{dim_red}.html")
+
+            return True
+
+        if ctx.triggered_id == "button_html_all":
+            # Set up umap flag
+            umap_flag = True if dim_red == "UMAP" else False
+
+            for header in csv_header:
+                fig = Visualizator.render(
+                    df, header, original_id_col, umap_paras, umap_flag
+                )
+                fig.write_html(output_d / f"3Dspace_{header}_{dim_red}.html")
 
             return True
