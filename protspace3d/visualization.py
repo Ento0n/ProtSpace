@@ -37,23 +37,32 @@ class Visualizator:
         self.csv_header = csv_header
 
     @staticmethod
-    def n_samples_equation(n, max_out, min_val, reverse: bool = False) -> float:
+    def n_symbols_equation(n: int):
+        if n <= 8:
+            return 1
+        elif n <= 11:
+            return 2
+        elif n <= 15:
+            return 3
+        elif n <= 20:
+            return 4
+        elif n <= 26:
+            return 5
+        elif n <= 33:
+            return 6
+        else:
+            return 7
+
+    @staticmethod
+    def n_samples_equation(n: int, val_range: int) -> float:
         # the underlying equation is (x-10)/(x+10)
         numerator = n - 10
         denominator = n + 10
         res = numerator / denominator
 
-        # less than 10 for n should be 0
-        if res < 0:
-            res = 0
+        res_range = res * val_range
 
-        if reverse:
-            res = 1 - res
-
-        # out is the min value that can be picked
-        out = min_val + max_out * res
-
-        return out
+        return res_range
 
     @staticmethod
     def gen_distinct_colors(n, sort: bool = True):
@@ -62,12 +71,15 @@ class Visualizator:
         hues = np.arange(0, 360, 360 / n)
         hues = hues[np.random.permutation(hues.size)]
         for hue in hues:
-            min_sat = Visualizator.n_samples_equation(n, 50, 30, reverse=True)
-            saturation = min_sat + np.random.ranf() * (80 - min_sat)
-            saturation = 100
-            min_lum = Visualizator.n_samples_equation(n, 40, 40, reverse=True)
-            luminosity = min_lum + np.random.ranf() * (80 - min_lum)
-            luminosity = 50
+            # default saturation is 100 and range from 100-50
+            standard_sat = 100
+            sat_range = Visualizator.n_samples_equation(n, val_range=50)
+            saturation = standard_sat - np.random.ranf() * sat_range
+            # default luminosity is 50 and range from 35-65
+            standard_lum = 50
+            lum_range = Visualizator.n_samples_equation(n, val_range=30)
+            luminosity = (standard_lum - lum_range / 2) + np.random.ranf() * lum_range
+            # color list in hls style
             color_list.append(tuple([hue / 360, luminosity / 100, saturation / 100]))
         if sort:
             color_list.sort()
@@ -75,8 +87,10 @@ class Visualizator:
         # round small values, otherwise dash has difficulties to display
         rgb_list = []
         for h, l, s in color_list:
+            # Also convert to rgb values
             rgb = hls_to_rgb(round(h, 2), round(l, 2), round(s, 2))
 
+            # change value range from 0-1 to 0-255, otherwise saturation=100 is black
             rgb = list(rgb)
             for idx, value in enumerate(rgb):
                 rgb[idx] = value * 255
@@ -184,11 +198,7 @@ class Visualizator:
             fig.add_trace(color_trace)
 
         # Figure out how many symbols to use depending on number of column groups
-        n_symbols = int(
-            Visualizator.n_samples_equation(
-                n=len(col_groups), max_out=len(Visualizator.SYMBOLS) - 3, min_val=3
-            )
-        )
+        n_symbols = Visualizator.n_symbols_equation(n=len(col_groups))
 
         df["class_index"] = np.ones(len(df)) * -100
 

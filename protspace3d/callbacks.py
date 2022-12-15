@@ -468,6 +468,7 @@ def get_callbacks(
             selected_column=selected_value,
             original_id_col=original_id_col,
             umap_flag=umap_flag,
+            umap_paras=umap_paras,
         )
 
         # Set up title of graph
