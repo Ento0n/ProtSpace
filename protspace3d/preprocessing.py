@@ -135,7 +135,7 @@ class DataPreprocessor:
         # get UIDs
         csv_uids = df_csv.index.to_list()
 
-        df_embeddings, csv_header = self._read_df_csv(
+        df_embeddings, csv_header, embeddings, embedding_uids = self._read_df_csv(
             self.output_d,
             df_csv,
             emb_h5file,
@@ -164,7 +164,14 @@ class DataPreprocessor:
             umap_paras=self.umap_paras,
         )
 
-        return df_embeddings, fig, csv_header, original_id_col
+        return (
+            df_embeddings,
+            fig,
+            csv_header,
+            original_id_col,
+            embeddings,
+            embedding_uids,
+        )
 
     def _check_files(
         self,
@@ -359,6 +366,11 @@ class DataPreprocessor:
         :param index_name: header of index row
         :return: final dataframe and its column headers
         """
+        # Create embeddings
+        embs = self._get_embeddings(hdf_path, csv_uids)
+        embedding_uids, embs = zip(*embs.items())
+        embeddings = np.vstack(embs)
+
         # load & read df.csv if present
         pres_df = output_d / f"df_{hdf_path.stem}.csv"
         if pres_df.is_file():
@@ -369,7 +381,7 @@ class DataPreprocessor:
             # Check whether no. of rows equals data
             if len(pres_df_csv) != len(df_csv):
                 print("# of rows doesn't match data!\nStart recalculation!")
-                df_embeddings, csv_header = self._create_df(
+                df_embeddings, csv_header, embeddings = self._create_df(
                     output_d,
                     hdf_path,
                     csv_uids,
@@ -380,7 +392,7 @@ class DataPreprocessor:
                 # Check each column x, y & z for incompleteness
                 if not self._check_coordinates(pres_df_csv):
                     print("Start recalculation!")
-                    df_embeddings, csv_header = self._create_df(
+                    df_embeddings, csv_header, embeddings = self._create_df(
                         output_d,
                         hdf_path,
                         csv_uids,
@@ -417,7 +429,7 @@ class DataPreprocessor:
 
         # create dataframe from files
         else:
-            df_embeddings, csv_header = self._create_df(
+            df_embeddings, csv_header, embeddings = self._create_df(
                 output_d,
                 hdf_path,
                 csv_uids,
@@ -425,7 +437,7 @@ class DataPreprocessor:
                 index_name,
             )
 
-        return df_embeddings, csv_header
+        return df_embeddings, csv_header, embeddings, embedding_uids
 
     def _create_df(
         self,
@@ -465,7 +477,7 @@ class DataPreprocessor:
         )
 
         # generate dimensionality reduction components and merge it to CSV DataFrame
-        df_dim_red_umap = self._generate_umap(embs)
+        df_dim_red_umap = self.generate_umap(embs, self.umap_paras)
         df_dim_red_umap.index = uids
         df_dim_red_pca = self._generate_pca(embs)
         df_dim_red_pca.index = uids
@@ -484,7 +496,7 @@ class DataPreprocessor:
             output_d / f"df_{hdf_path.stem}.csv", index_label=index_name
         )
 
-        return df_embeddings, csv_header
+        return df_embeddings, csv_header, embs
 
     @staticmethod
     def _get_embeddings(emb_h5file: Path, csv_uids: list[str]) -> dict[str, np.ndarray]:
@@ -535,7 +547,8 @@ class DataPreprocessor:
         # usually euclidean or cosine distance worked best
         return pdist(data, metric=metric)
 
-    def _generate_umap(self, data: np.ndarray) -> pd.DataFrame:
+    @staticmethod
+    def generate_umap(data: np.ndarray, umap_paras: dict) -> pd.DataFrame:
         """
         generated umap for given data
         :param data: embeddings data
@@ -547,14 +560,14 @@ class DataPreprocessor:
         import umap
 
         fit = umap.UMAP(
-            n_neighbors=self.umap_paras["n_neighbours"],
-            min_dist=self.umap_paras["min_dist"],
+            n_neighbors=umap_paras["n_neighbours"],
+            min_dist=umap_paras["min_dist"],
             random_state=42,
             n_components=3,
-            metric=self.umap_paras["metric"],
+            metric=umap_paras["metric"],
         )  # initialize umap; use random_state=42 for reproducibility
         umap_fit = fit.fit_transform(data)  # fit umap to our embeddings
-        df_umap = DataFrame(data=umap_fit, columns=self.UMAP_AXIS_NAMES)
+        df_umap = DataFrame(data=umap_fit, columns=["x_umap", "y_umap", "z_umap"])
         return df_umap
 
     def _generate_pca(self, data: np.ndarray):

@@ -3,6 +3,7 @@
 
 from visualization import Visualizator
 from preprocessing import StructureContainer
+from preprocessing import DataPreprocessor
 
 from pathlib import Path
 from dash import Input, Output
@@ -440,13 +441,29 @@ def get_callbacks(
     umap_paras: dict,
     output_d: Path,
     csv_header: list[str],
+    embeddings,
+    embedding_uids,
 ):
     @app.callback(
         Output("graph", "figure"),
+        Output("n_neighbours_input", "disabled"),
+        Output("min_dist_input", "disabled"),
+        Output("metric_input", "disabled"),
         Input("dd_menu", "value"),
         Input("dim_red_radio", "value"),
+        Input("n_neighbours_input", "value"),
+        Input("min_dist_input", "value"),
+        Input("metric_input", "value"),
+        Input("umap_recalculation_button", "n_clicks"),
     )
-    def update_graph(selected_value: str, dim_red: str):
+    def update_graph(
+        selected_value: str,
+        dim_red: str,
+        n_neighbours: int,
+        min_dist: float,
+        metric: str,
+        recal_button_clicks: int,
+    ):
         """
         Renders new graph for selected drop down menu value
         :param selected_value: selected column of dropdown menu
@@ -462,6 +479,23 @@ def get_callbacks(
         if selected_value is None:
             raise PreventUpdate
 
+        # load df into inner scope so that it can be modified
+        nonlocal df
+
+        # If UMAP parameters are changed and accepted
+        if ctx.triggered_id == "umap_recalculation_button":
+            umap_paras["n_neighbours"] = n_neighbours
+            umap_paras["min_dist"] = min_dist
+            umap_paras["metric"] = metric
+
+            UMAP_AXIS_NAMES = ["x_umap", "y_umap", "z_umap"]
+            df.drop(labels=UMAP_AXIS_NAMES, axis="columns", inplace=True)
+
+            df_umap = DataPreprocessor.generate_umap(embeddings, umap_paras)
+            df_umap.index = embedding_uids
+
+            df = df.join(df_umap, how="outer")
+
         # Set up umap flag
         umap_flag = True if dim_red == "UMAP" else False
 
@@ -473,7 +507,12 @@ def get_callbacks(
             umap_paras=umap_paras,
         )
 
-        return fig
+        # Disable UMAP parameter input or not?
+        disabled = False
+        if not umap_flag:
+            disabled = True
+
+        return fig, disabled, disabled, disabled
 
     @app.callback(
         Output("disclaimer_modal", "is_open"),

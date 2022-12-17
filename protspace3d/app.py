@@ -317,6 +317,8 @@ def setup():
         fig,
         csv_header,
         original_id_col,
+        embeddings,
+        embedding_uids,
     ) = data_preprocessor.data_preprocessing()
 
     # initialize structure container if flag set
@@ -354,6 +356,8 @@ def setup():
         output_d,
         csv_header,
         port,
+        embeddings,
+        embedding_uids,
     )
 
 
@@ -369,16 +373,36 @@ def main():
         output_d,
         csv_header,
         port,
+        embeddings,
+        embedding_uids,
     ) = setup()
 
     # don't start server if html is needed
     if not html:
         # different callbacks for different layout
         if pdb:
-            get_callbacks(app, df, orig_id_col, umap_paras, output_d, csv_header)
+            get_callbacks(
+                app,
+                df,
+                orig_id_col,
+                umap_paras,
+                output_d,
+                csv_header,
+                embeddings,
+                embedding_uids,
+            )
             get_callbacks_pdb(app, df, struct_container, orig_id_col)
         else:
-            get_callbacks(app, df, orig_id_col, umap_paras, output_d, csv_header)
+            get_callbacks(
+                app,
+                df,
+                orig_id_col,
+                umap_paras,
+                output_d,
+                csv_header,
+                embeddings,
+                embedding_uids,
+            )
 
         app.run_server(debug=True, port=port)
 

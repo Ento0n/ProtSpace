@@ -491,8 +491,56 @@ class Visualizator:
                         color="dark",
                         outline=True,
                     ),
+                    dcc.Markdown("UMAP parameters"),
+                    dbc.Row(
+                        [
+                            dbc.Col(
+                                [
+                                    dcc.Markdown("n_neighbours:"),
+                                    dbc.Input(
+                                        id="n_neighbours_input",
+                                        type="number",
+                                        min=0,
+                                        step=1,
+                                        placeholder=25,
+                                    ),
+                                ],
+                                width=4,
+                            ),
+                            dbc.Col(
+                                [
+                                    dcc.Markdown("min_dist:"),
+                                    dbc.Input(
+                                        id="min_dist_input",
+                                        type="number",
+                                        min=0,
+                                        step=0.1,
+                                        placeholder=0.5,
+                                    ),
+                                ],
+                                width=4,
+                            ),
+                            dbc.Col(
+                                [
+                                    dcc.Markdown("metric:"),
+                                    dbc.Input(
+                                        id="metric_input",
+                                        placeholder="euclidean",
+                                        debounce=True,
+                                    ),
+                                ],
+                                width=4,
+                            ),
+                        ],
+                    ),
+                    dbc.Button(
+                        "Recalculate UMAP",
+                        id="umap_recalculation_button",
+                        color="dark",
+                        outline=True,
+                    ),
                 ],
-                style={"width": "30%"},
+                style={"width": "50%"},
                 placement="end",
             ),
             dbc.Row(
