@@ -454,13 +454,6 @@ class DataPreprocessor:
         uids, embs = zip(*embeddings.items())
         embs = np.vstack(embs)
 
-        print(
-            "This is a print for the labeling problem, "
-            "uids order of embeddings and csv is different! data: CTX conoserver"
-        )
-        print(f"uids embeddings: {list(uids[27:32])}")
-        print(f"uids csv: {df_csv.index.to_list()[27:32]}")
-
         # data should be n_proteins x 1024 (ProtT5) OR n_proteins x 128 (ProtTucker)
         print(f"Shape of embeddings (num_proteins x embedding dim): {embs.shape}")
 
