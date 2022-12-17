@@ -349,7 +349,8 @@ class Visualizator:
     @staticmethod
     def get_app():
         app = Dash(
-            __name__, external_stylesheets=[dbc.themes.BOOTSTRAP, dbc.icons.BOOTSTRAP]
+            __name__,
+            external_stylesheets=[dbc.themes.BOOTSTRAP, dbc.icons.BOOTSTRAP],
         )
 
         return app

@@ -65,6 +65,9 @@ class LoadConfFile(argparse.Action):
         if "metric" in dictionary.keys():
             arguments.append("--metric")
             arguments.append(str(dictionary["metric"]))
+        if "port" in dictionary.keys():
+            arguments.append("--port")
+            arguments.append(str(dictionary["port"]))
 
         return arguments
 
@@ -84,6 +87,7 @@ class Parser:
             self.n_neighbours,
             self.min_dist,
             self.metric,
+            self.port,
         ) = self._parse_args()
 
     def get_params(self):
@@ -103,6 +107,7 @@ class Parser:
             self.n_neighbours,
             self.min_dist,
             self.metric,
+            self.port,
         )
 
     @staticmethod
@@ -211,6 +216,7 @@ class Parser:
             default="euclidean",
             help="Metric used for UMAP calculation, default: euclidean",
         )
+        parser.add_argument("--port", required=False, type=int, default=8050)
 
         args = parser.parse_args()
         output_d = Path(args.output) if args.output is not None else None
@@ -225,6 +231,7 @@ class Parser:
         n_neighbours = args.n_neighbours
         min_dist = args.min_dist
         metric = args.metric
+        port = args.port
 
         return (
             output_d,
@@ -239,6 +246,7 @@ class Parser:
             n_neighbours,
             min_dist,
             metric,
+            port,
         )
 
 
@@ -264,6 +272,7 @@ def setup():
         n_neighbours,
         min_dist,
         metric,
+        port,
     ) = parser.get_params()
 
     # Check if h5 file is present
@@ -344,6 +353,7 @@ def setup():
         umap_paras,
         output_d,
         csv_header,
+        port,
     )
 
 
@@ -358,6 +368,7 @@ def main():
         umap_paras,
         output_d,
         csv_header,
+        port,
     ) = setup()
 
     # don't start server if html is needed
@@ -369,7 +380,7 @@ def main():
         else:
             get_callbacks(app, df, orig_id_col, umap_paras, output_d, csv_header)
 
-        app.run_server(debug=True)
+        app.run_server(debug=True, port=port)
 
 
 if __name__ == "__main__":
