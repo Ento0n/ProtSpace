@@ -1,197 +1,196 @@
-mapped_id,original_id,ctx_type
-AA,SI (Conus striatus (Striated cone)) [P00001],ancestor
-AB,Ac1.1a (Conus achatinus) [P03833],alpha
-AC,Ac1.1b (Conus achatinus) [P02485],alpha
-AD,AnIA (Conus anemone) [P02501],alpha
-AE,AnIB (Conus anemone) [P00015],alpha
-AF,ArchIIIA (Conus archon (magistrate cone)) [P10480],alpha
-AG,ArIA (Conus arenatus) [P02748],alpha
-AH,ArIB (Conus arenatus) [P02752],alpha
-AI,AuIA (Conus aulicus) [P00404],alpha
-AJ,AuIB (Conus aulicus) [P00095],alpha
-AK,AuIC (Conus aulicus) [P00407],alpha
-AL,AusIA (Conus australis) [P06679],alpha
-AM,AusIA (Conus australis) [P10407],alpha
-AN,AusIA[ribbon] (synthetic construct) [P10418],alpha
-AO,BnIA (Conus bandanus) [P02635],alpha
-AP,Bu1.1 (Conus bullatus) [P02930],alpha
-AQ,BuIA (Conus bullatus) [P00026],alpha
-AR,C1.3 (Conus catus) [P09973],alpha
-AS,C4.3 (Conus catus) [P04083],alpha
-AT,CIA (Conus catus) [P08016],alpha
-AU,CIB (Conus catus) [P08017],alpha
-AV,CnIA (Conus consors) [P01558],alpha
-AW,Conorfamide deamidated-As1b (Conus austini) [P08702],alpha
-AX,Conorfamide deamidated-As2b (Conus austini) [P08703],alpha
-AY,Conorfamide-As1a (Conus austini) [P08700],alpha
-AZ,Conorfamide-As2a (Conus austini) [P08701],alpha
-BA,Czon1107 (Conus zonatus (zoned cone)) [P08893],alpha
-BB,EI (Conus ermineus (Atlantic fish-hunting cone)) [P00050],alpha
-BC,EIIA (Conus ermineus (Atlantic fish-hunting cone)) [P04069],alpha
-BD,EIIB (Conus ermineus (Atlantic fish-hunting cone)) [P07538],alpha
-BE,EIVA (Conus ermineus (Atlantic fish-hunting cone)) [P01635],alpha
-BF,EIVB (Conus ermineus (Atlantic fish-hunting cone)) [P01740],alpha
-BG,EpI (Conus episcopatus) [P00405],alpha
-BH,GeXIVA[bead] (Conus generalis) [P08686],alpha
-BI,GeXIVA[globular] (Conus generalis) [P08687],alpha
-BJ,GeXIVA[ribbon] (Conus generalis) [P05344],alpha
-BK,GeXXA (Conus generalis) [P06732],alpha
-BL,GI (Conus geographus (Geography cone)) [P00074],alpha
-BM,GIA (Conus geographus (Geography cone)) [P00022],alpha
-BN,GIC (Conus geographus (Geography cone)) [P00132],alpha
-BO,GID (Conus geographus (Geography cone)) [P00098],alpha
-BP,GII (Conus geographus (Geography cone)) [P00024],alpha
-BQ,GVIIIB (Conus geographus (Geography cone)) [P08941],alpha
-BR,ImI (Conus imperialis) [P00010],alpha
-BS,ImII (Conus imperialis) [P02586],alpha
-BT,Lp1.1 (Conus leopardus) [P02496],alpha
-BU,Lp1.4 (Conus leopardus) [P02497],alpha
-BV,LsIA (Conus limpusi) [P06776],alpha
-BW,LsIA[ribbon] (synthetic construct) [P10430],alpha
-BX,Lt1.3 [globular] (Conus litteratus) [P07480],alpha
-BY,LtIA (Conus litteratus) [P02665],alpha
-BZ,LtXIVA (Conus litteratus) [P02588],alpha
-CA,Lv1d (Conus lividus) [P06424],alpha
-CB,LvIA (Conus lividus) [P05949],alpha
-CC,LvIB (Conus lividus) [P10267],alpha
-CD,MI (Conus magus (Magus cone)) [P00023],alpha
-CE,MIC (Conus magus (Magus cone)) [P05865],alpha
-CF,MII (Conus magus (Magus cone)) [P00039],alpha
-CG,MIIIJ (Conus magus (Magus cone)) [P08892],alpha
-CH,MilIA (Conus milneedwardsi) [P09015],alpha
-CI,Mr1.1 (Conus marmoreus) [P02491],alpha
-CJ,Mr1.7 (Conus marmoreus) [P04661],alpha
-CK,MrIC (Conus marmoreus) [P06003],alpha
-CL,OIVA (Conus obscurus) [P01397],alpha
-CM,OIVB (Conus obscurus) [P01688],alpha
-CN,OmIA (Conus omaria) [P00006],alpha
-CO,PeIA (Conus pergrandis) [P02608],alpha
-CP,PeIVA (Conus pergrandis) [P01689],alpha
-CQ,PeIVB (Conus pergrandis) [P01687],alpha
-CR,PIA (Conus purpurascens) [P00595],alpha
-CS,PIB (Conus purpurascens) [P00038],alpha
-CT,PIC (Conus purpurascens) [P08506],alpha
-CU,PIC[O7P] (Conus purpurascens) [P08505],alpha
-CV,PIIIE (Conus purpurascens) [P01611],alpha
-CW,PIIIF (Conus purpurascens) [P01594],alpha
-CX,PIVA (Conus purpurascens) [P01449],alpha
-CY,PiXXA (Conus princeps (Prince cone)) [P08998],alpha
-CZ,PlXIVA (Conus planorbis) [P01539],alpha
-DA,PnIA (Conus pennaceus) [P00051],alpha
-DB,PnIB (Conus pennaceus) [P00099],alpha
-DC,PrIIIE (Conus parius) [P02832],alpha
-DD,PrXA (Conus parius) [P02859],alpha
-DE,Pu1.2 (Conus pulicarius) [P02520],alpha
-DF,Pu14a (Conus pulicarius) [P03787],alpha
-DG,Qc1.2 (Conus quercinus) [P02511],alpha
-DH,Reg1b/Reg1c (Conus regius) [P00028],alpha
-DI,Reg1d (Conus regius) [P00029],alpha
-DJ,Reg1f (Conus regius) [P00031],alpha
-DK,RegIIA (Conus regius) [P00032],alpha
-DL,RgIA (Conus regius) [P02585],alpha
-DM,"RgIA [P6O,del13] (Conus regius) [P00030]",alpha
-DN,RGIB (Conus regius) [P05941],alpha
-DO,RVIIIA (Conus radiatus) [P01574],alpha
-DP,SIA (Conus striatus (Striated cone)) [P00025],alpha
-DQ,SII (Conus striatus (Striated cone)) [P00090],alpha
-DR,SrIA (Conus spurius) [P03752],alpha
-DS,SrIB (Conus spurius) [P03901],alpha
-DT,TiIA (Conus tinianus) [P04228],alpha
-DU,Tx1.2 (Conus textile (Cloth-of-gold cone)) [P02883],alpha
-DV,TxIA (Conus textile (Cloth-of-gold cone)) [P02881],alpha
-DW,TxIB (Conus textile (Cloth-of-gold cone)) [P05345],alpha
-DX,TxID (Conus textile (Cloth-of-gold cone)) [P06831],alpha
-DY,TxVC (Conus textile (Cloth-of-gold cone)) [P06814],alpha
-DZ,Vc1.2 (Conus victoriae) [P04200],alpha
-EA,VcIA (Conus victoriae) [P02539],alpha
-EB,ViIA (Conus virgo) [P06858],alpha
-EC,VnIB  (Conus ventricosus) [P07652],alpha
-ED,VxXXA (Conus vexillum) [P01686],alpha
-EE,VxXXB (Conus vexillum) [P01685],alpha
-EF,VxXXC (Conus vexillum) [P01684],alpha
-EG,VxXXIVA (Conus vexillum) [P05526],alpha
-EH,Am2766 (Conus amadis) [P01630],delta
-EI,AVIA (Conus aurisiacus) [P01628],delta
-EJ,BVIA (Conus bullatus) [P01627],delta
-EK,C6.2 (Conus catus) [P09974],delta
-EL,CnVIA (Conus consors) [P01626],delta
-EM,CVIE-2 (Conus catus) [P01625],delta
-EN,ErVIA (Conus eburneus) [P06773],delta
-EO,EVIA (Conus ermineus (Atlantic fish-hunting cone)) [P01561],delta
-EP,EVIB (Conus ermineus (Atlantic fish-hunting cone)) [P01575],delta
-EQ,GmVIA (Conus gloriamaris) [P01598],delta
-ER,Mo3964 (Conus monile) [P07063],delta
-ES,MVIA (Conus magus (Magus cone)) [P01624],delta
-ET,MVIB (Conus magus (Magus cone)) [P01623],delta
-EU,MVIC (Conus magus (Magus cone)) [P01622],delta
-EV,MVID (Conus magus (Magus cone)) [P01621],delta
-EW,NgVIA (Conus nigropunctatus) [P01519],delta
-EX,PVIA (Conus purpurascens) [P02595],delta
-EY,SmVIA (Conus stercusmuscarum) [P01620],delta
-EZ,SuVIA (Conus suturatus) [P06805],delta
-FA,SVIE (Conus striatus (Striated cone)) [P02710],delta
-FB,TsVIA (Conus tessulatus) [P06849],delta
-FC,TxVIA (Conus textile (Cloth-of-gold cone)) [P01552],delta
-FD,TxVIB (Conus textile (Cloth-of-gold cone)) [P01553],delta
-FE,BuIIIA (Conus bullatus) [P03623],mu
-FF,BuIIIB (Conus bullatus) [P03625],mu
-FG,CIIIA (Conus catus) [P01692],mu
-FH,CnIIIA (Conus consors) [P01693],mu
-FI,CnIIIB (Conus consors) [P01690],mu
-FJ,CnIIIC (Conus consors) [P03834],mu
-FK,conotoxin-GS (Conus geographus (Geography cone)) [P01268],mu
-FL,GIIIA (Conus geographus (Geography cone)) [P01571],mu
-FM,GIIIB (Conus geographus (Geography cone)) [P01566],mu
-FN,GIIIC (Conus geographus (Geography cone)) [P01744],mu
-FO,GVIIJ (Conus geographus (Geography cone)) [P06822],mu
-FP,KIIIA (Conus kinoshitai) [P02587],mu
-FQ,KIIIB (Conus kinoshitai) [P07434],mu
-FR,Lt5d (Conus litteratus) [P03322],mu
-FS,LtVIC (Conus litteratus) [P02871],mu
-FT,MfVIA (Conus magnificus) [P05840],mu
-FU,MIIIA (Conus magus (Magus cone)) [P01691],mu
-FV,MrVIA (Conus marmoreus) [P01554],mu
-FW,MrVIB (Conus marmoreus) [P01556],mu
-FX,PIIIA (Conus purpurascens) [P02228],mu
-FY,PnIVA (Conus pennaceus) [P01560],mu
-FZ,PnIVB (Conus pennaceus) [P01559],mu
-GA,SIIIA (Conus striatus (Striated cone)) [P02707],mu
-GB,SIIIB (Conus striatus (Striated cone)) [P01615],mu
-GC,SmIIIA (Conus stercusmuscarum) [P01662],mu
-GD,SxIIIA (Conus striolatus) [P03584],mu
-GE,SxIIIB (Conus striolatus) [P03585],mu
-GF,SxIIIC (Conus striolatus) [P09774],mu
-GG,TIIIA (Conus tulipa (tulip cone)) [P01616],mu
-GH,TsIIIA (Conus tessulatus) [P07525],mu
-GI,Bru9a (Conus brunneus) [P07497],omega
-GJ,Cal16.2 (Conus californicus) [P04231],omega
-GK,CnVIIA (Conus consors) [P01632],omega
-GL,Contryphan-Am (Conus amadis) [P01270],omega
-GM,contryphan-M (Conus marmoreus) [P02570],omega
-GN,CVIA (Conus catus) [P02548],omega
-GO,CVIB (Conus catus) [P01726],omega
-GP,CVIC (Conus catus) [P01725],omega
-GQ,CVID (Conus catus) [P02549],omega
-GR,CVIE (Conus catus) [P04243],omega
-GS,CVIF (Conus catus) [P03340],omega
-GT,Eu1.6 (Conus eburneus) [P04644],omega
-GU,FVIA (Conus fulmen) [P04241],omega
-GV,GVIA (Conus geographus (Geography cone)) [P01546],omega
-GW,GVIIA (Conus geographus (Geography cone)) [P01743],omega
-GX,GVIIB (Conus geographus (Geography cone)) [P02581],omega
-GY,MoVIA (Conus moncuri) [P07647],omega
-GZ,MoVIB (Conus moncuri) [P07646],omega
-HA,MVIIA (Conus magus (Magus cone)) [P01386],omega
-HB,MVIIB (Conus magus (Magus cone)) [P01638],omega
-HC,MVIIC (Conus magus (Magus cone)) [P01484],omega
-HD,MVIID (Conus magus (Magus cone)) [P02675],omega
-HE,PnVIA (Conus pennaceus) [P01742],omega
-HF,PnVIB (Conus pennaceus) [P01741],omega
-HG,RsXXVIA (Conus regularis) [P05355],omega
-HH,RVIA (Conus radiatus) [P01728],omega
-HI,SO3 (Conus striatus (Striated cone)) [P01540],omega
-HJ,SVIA (Conus striatus (Striated cone)) [P01794],omega
-HK,SVIA mutant 1 (Conus striatus (Striated cone)) [P03275],omega
-HL,SVIB (Conus striatus (Striated cone)) [P01793],omega
-HM,TVIA (Conus tulipa (tulip cone)) [P01727],omega
-HN,TxVII (Conus textile (Cloth-of-gold cone)) [P01603],omega
+mapped_id,original_id,pharmacologicalFamily
+AA,Ac1.1a (Conus achatinus) [P03833],alpha
+AB,Ac1.1b (Conus achatinus) [P02485],alpha
+AC,AnIA (Conus anemone) [P02501],alpha
+AD,AnIB (Conus anemone) [P00015],alpha
+AE,ArchIIIA (Conus archon (magistrate cone)) [P10480],alpha
+AF,ArIA (Conus arenatus) [P02748],alpha
+AG,ArIB (Conus arenatus) [P02752],alpha
+AH,AuIA (Conus aulicus) [P00404],alpha
+AI,AuIB (Conus aulicus) [P00095],alpha
+AJ,AuIC (Conus aulicus) [P00407],alpha
+AK,AusIA (Conus australis) [P06679],alpha
+AL,AusIA (Conus australis) [P10407],alpha
+AM,AusIA[ribbon] (synthetic construct) [P10418],alpha
+AN,BnIA (Conus bandanus) [P02635],alpha
+AO,Bu1.1 (Conus bullatus) [P02930],alpha
+AP,BuIA (Conus bullatus) [P00026],alpha
+AQ,C1.3 (Conus catus) [P09973],alpha
+AR,C4.3 (Conus catus) [P04083],alpha
+AS,CIA (Conus catus) [P08016],alpha
+AT,CIB (Conus catus) [P08017],alpha
+AU,CnIA (Conus consors) [P01558],alpha
+AV,Conorfamide deamidated-As1b (Conus austini) [P08702],alpha
+AW,Conorfamide deamidated-As2b (Conus austini) [P08703],alpha
+AX,Conorfamide-As1a (Conus austini) [P08700],alpha
+AY,Conorfamide-As2a (Conus austini) [P08701],alpha
+AZ,Czon1107 (Conus zonatus (zoned cone)) [P08893],alpha
+BA,EI (Conus ermineus (Atlantic fish-hunting cone)) [P00050],alpha
+BB,EIIA (Conus ermineus (Atlantic fish-hunting cone)) [P04069],alpha
+BC,EIIB (Conus ermineus (Atlantic fish-hunting cone)) [P07538],alpha
+BD,EIVA (Conus ermineus (Atlantic fish-hunting cone)) [P01635],alpha
+BE,EIVB (Conus ermineus (Atlantic fish-hunting cone)) [P01740],alpha
+BF,EpI (Conus episcopatus) [P00405],alpha
+BG,GeXIVA[bead] (Conus generalis) [P08686],alpha
+BH,GeXIVA[globular] (Conus generalis) [P08687],alpha
+BI,GeXIVA[ribbon] (Conus generalis) [P05344],alpha
+BJ,GeXXA (Conus generalis) [P06732],alpha
+BK,GI (Conus geographus (Geography cone)) [P00074],alpha
+BL,GIA (Conus geographus (Geography cone)) [P00022],alpha
+BM,GIC (Conus geographus (Geography cone)) [P00132],alpha
+BN,GID (Conus geographus (Geography cone)) [P00098],alpha
+BO,GII (Conus geographus (Geography cone)) [P00024],alpha
+BP,GVIIIB (Conus geographus (Geography cone)) [P08941],alpha
+BQ,ImI (Conus imperialis) [P00010],alpha
+BR,ImII (Conus imperialis) [P02586],alpha
+BS,Lp1.1 (Conus leopardus) [P02496],alpha
+BT,Lp1.4 (Conus leopardus) [P02497],alpha
+BU,LsIA (Conus limpusi) [P06776],alpha
+BV,LsIA[ribbon] (synthetic construct) [P10430],alpha
+BW,Lt1.3 [globular] (Conus litteratus) [P07480],alpha
+BX,LtIA (Conus litteratus) [P02665],alpha
+BY,LtXIVA (Conus litteratus) [P02588],alpha
+BZ,Lv1d (Conus lividus) [P06424],alpha
+CA,LvIA (Conus lividus) [P05949],alpha
+CB,LvIB (Conus lividus) [P10267],alpha
+CC,MI (Conus magus (Magus cone)) [P00023],alpha
+CD,MIC (Conus magus (Magus cone)) [P05865],alpha
+CE,MII (Conus magus (Magus cone)) [P00039],alpha
+CF,MIIIJ (Conus magus (Magus cone)) [P08892],alpha
+CG,MilIA (Conus milneedwardsi) [P09015],alpha
+CH,Mr1.1 (Conus marmoreus) [P02491],alpha
+CI,Mr1.7 (Conus marmoreus) [P04661],alpha
+CJ,MrIC (Conus marmoreus) [P06003],alpha
+CK,OIVA (Conus obscurus) [P01397],alpha
+CL,OIVB (Conus obscurus) [P01688],alpha
+CM,OmIA (Conus omaria) [P00006],alpha
+CN,PeIA (Conus pergrandis) [P02608],alpha
+CO,PeIVA (Conus pergrandis) [P01689],alpha
+CP,PeIVB (Conus pergrandis) [P01687],alpha
+CQ,PIA (Conus purpurascens) [P00595],alpha
+CR,PIB (Conus purpurascens) [P00038],alpha
+CS,PIC (Conus purpurascens) [P08506],alpha
+CT,PIC[O7P] (Conus purpurascens) [P08505],alpha
+CU,PIIIE (Conus purpurascens) [P01611],alpha
+CV,PIIIF (Conus purpurascens) [P01594],alpha
+CW,PIVA (Conus purpurascens) [P01449],alpha
+CX,PiXXA (Conus princeps (Prince cone)) [P08998],alpha
+CY,PlXIVA (Conus planorbis) [P01539],alpha
+CZ,PnIA (Conus pennaceus) [P00051],alpha
+DA,PnIB (Conus pennaceus) [P00099],alpha
+DB,PrIIIE (Conus parius) [P02832],alpha
+DC,PrXA (Conus parius) [P02859],alpha
+DD,Pu1.2 (Conus pulicarius) [P02520],alpha
+DE,Pu14a (Conus pulicarius) [P03787],alpha
+DF,Qc1.2 (Conus quercinus) [P02511],alpha
+DG,Reg1b/Reg1c (Conus regius) [P00028],alpha
+DH,Reg1d (Conus regius) [P00029],alpha
+DI,Reg1f (Conus regius) [P00031],alpha
+DJ,RegIIA (Conus regius) [P00032],alpha
+DK,RgIA (Conus regius) [P02585],alpha
+DL,"RgIA [P6O,del13] (Conus regius) [P00030]",alpha
+DM,RGIB (Conus regius) [P05941],alpha
+DN,RVIIIA (Conus radiatus) [P01574],alpha
+DO,SIA (Conus striatus (Striated cone)) [P00025],alpha
+DP,SII (Conus striatus (Striated cone)) [P00090],alpha
+DQ,SrIA (Conus spurius) [P03752],alpha
+DR,SrIB (Conus spurius) [P03901],alpha
+DS,TiIA (Conus tinianus) [P04228],alpha
+DT,Tx1.2 (Conus textile (Cloth-of-gold cone)) [P02883],alpha
+DU,TxIA (Conus textile (Cloth-of-gold cone)) [P02881],alpha
+DV,TxIB (Conus textile (Cloth-of-gold cone)) [P05345],alpha
+DW,TxID (Conus textile (Cloth-of-gold cone)) [P06831],alpha
+DX,TxVC (Conus textile (Cloth-of-gold cone)) [P06814],alpha
+DY,Vc1.2 (Conus victoriae) [P04200],alpha
+DZ,VcIA (Conus victoriae) [P02539],alpha
+EA,ViIA (Conus virgo) [P06858],alpha
+EB,VnIB  (Conus ventricosus) [P07652],alpha
+EC,VxXXA (Conus vexillum) [P01686],alpha
+ED,VxXXB (Conus vexillum) [P01685],alpha
+EE,VxXXC (Conus vexillum) [P01684],alpha
+EF,VxXXIVA (Conus vexillum) [P05526],alpha
+EG,Am2766 (Conus amadis) [P01630],delta
+EH,AVIA (Conus aurisiacus) [P01628],delta
+EI,BVIA (Conus bullatus) [P01627],delta
+EJ,C6.2 (Conus catus) [P09974],delta
+EK,CnVIA (Conus consors) [P01626],delta
+EL,CVIE-2 (Conus catus) [P01625],delta
+EM,ErVIA (Conus eburneus) [P06773],delta
+EN,EVIA (Conus ermineus (Atlantic fish-hunting cone)) [P01561],delta
+EO,EVIB (Conus ermineus (Atlantic fish-hunting cone)) [P01575],delta
+EP,GmVIA (Conus gloriamaris) [P01598],delta
+EQ,Mo3964 (Conus monile) [P07063],delta
+ER,MVIA (Conus magus (Magus cone)) [P01624],delta
+ES,MVIB (Conus magus (Magus cone)) [P01623],delta
+ET,MVIC (Conus magus (Magus cone)) [P01622],delta
+EU,MVID (Conus magus (Magus cone)) [P01621],delta
+EV,NgVIA (Conus nigropunctatus) [P01519],delta
+EW,PVIA (Conus purpurascens) [P02595],delta
+EX,SmVIA (Conus stercusmuscarum) [P01620],delta
+EY,SuVIA (Conus suturatus) [P06805],delta
+EZ,SVIE (Conus striatus (Striated cone)) [P02710],delta
+FA,TsVIA (Conus tessulatus) [P06849],delta
+FB,TxVIA (Conus textile (Cloth-of-gold cone)) [P01552],delta
+FC,TxVIB (Conus textile (Cloth-of-gold cone)) [P01553],delta
+FD,BuIIIA (Conus bullatus) [P03623],mu
+FE,BuIIIB (Conus bullatus) [P03625],mu
+FF,CIIIA (Conus catus) [P01692],mu
+FG,CnIIIA (Conus consors) [P01693],mu
+FH,CnIIIB (Conus consors) [P01690],mu
+FI,CnIIIC (Conus consors) [P03834],mu
+FJ,conotoxin-GS (Conus geographus (Geography cone)) [P01268],mu
+FK,GIIIA (Conus geographus (Geography cone)) [P01571],mu
+FL,GIIIB (Conus geographus (Geography cone)) [P01566],mu
+FM,GIIIC (Conus geographus (Geography cone)) [P01744],mu
+FN,GVIIJ (Conus geographus (Geography cone)) [P06822],mu
+FO,KIIIA (Conus kinoshitai) [P02587],mu
+FP,KIIIB (Conus kinoshitai) [P07434],mu
+FQ,Lt5d (Conus litteratus) [P03322],mu
+FR,LtVIC (Conus litteratus) [P02871],mu
+FS,MfVIA (Conus magnificus) [P05840],mu
+FT,MIIIA (Conus magus (Magus cone)) [P01691],mu
+FU,MrVIA (Conus marmoreus) [P01554],mu
+FV,MrVIB (Conus marmoreus) [P01556],mu
+FW,PIIIA (Conus purpurascens) [P02228],mu
+FX,PnIVA (Conus pennaceus) [P01560],mu
+FY,PnIVB (Conus pennaceus) [P01559],mu
+FZ,SIIIA (Conus striatus (Striated cone)) [P02707],mu
+GA,SIIIB (Conus striatus (Striated cone)) [P01615],mu
+GB,SmIIIA (Conus stercusmuscarum) [P01662],mu
+GC,SxIIIA (Conus striolatus) [P03584],mu
+GD,SxIIIB (Conus striolatus) [P03585],mu
+GE,SxIIIC (Conus striolatus) [P09774],mu
+GF,TIIIA (Conus tulipa (tulip cone)) [P01616],mu
+GG,TsIIIA (Conus tessulatus) [P07525],mu
+GH,Bru9a (Conus brunneus) [P07497],omega
+GI,Cal16.2 (Conus californicus) [P04231],omega
+GJ,CnVIIA (Conus consors) [P01632],omega
+GK,Contryphan-Am (Conus amadis) [P01270],omega
+GL,contryphan-M (Conus marmoreus) [P02570],omega
+GM,CVIA (Conus catus) [P02548],omega
+GN,CVIB (Conus catus) [P01726],omega
+GO,CVIC (Conus catus) [P01725],omega
+GP,CVID (Conus catus) [P02549],omega
+GQ,CVIE (Conus catus) [P04243],omega
+GR,CVIF (Conus catus) [P03340],omega
+GS,Eu1.6 (Conus eburneus) [P04644],omega
+GT,FVIA (Conus fulmen) [P04241],omega
+GU,GVIA (Conus geographus (Geography cone)) [P01546],omega
+GV,GVIIA (Conus geographus (Geography cone)) [P01743],omega
+GW,GVIIB (Conus geographus (Geography cone)) [P02581],omega
+GX,MoVIA (Conus moncuri) [P07647],omega
+GY,MoVIB (Conus moncuri) [P07646],omega
+GZ,MVIIA (Conus magus (Magus cone)) [P01386],omega
+HA,MVIIB (Conus magus (Magus cone)) [P01638],omega
+HB,MVIIC (Conus magus (Magus cone)) [P01484],omega
+HC,MVIID (Conus magus (Magus cone)) [P02675],omega
+HD,PnVIA (Conus pennaceus) [P01742],omega
+HE,PnVIB (Conus pennaceus) [P01741],omega
+HF,RsXXVIA (Conus regularis) [P05355],omega
+HG,RVIA (Conus radiatus) [P01728],omega
+HH,SO3 (Conus striatus (Striated cone)) [P01540],omega
+HI,SVIA (Conus striatus (Striated cone)) [P01794],omega
+HJ,SVIA mutant 1 (Conus striatus (Striated cone)) [P03275],omega
+HK,SVIB (Conus striatus (Striated cone)) [P01793],omega
+HL,TVIA (Conus tulipa (tulip cone)) [P01727],omega
+HM,TxVII (Conus textile (Cloth-of-gold cone)) [P01603],omega

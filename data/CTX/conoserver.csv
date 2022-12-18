@@ -1,4 +1,4 @@
-mapped_id,original_id,organism,prot_type,toxin_class,gene_superfamily,cystein_framework,pharmacological_family,evidence
+mapped_id,original_id,organism,prot_type,toxin_class,gene_superfamily,pharmacological_family,cystein_framework,evidence
 P00001,P00001|SI|Conus striatus|Wild type|conotoxin|A superfamily|alpha conotoxin|I|protein level,Conus striatus,Wild type,conotoxin,A superfamily,alpha conotoxin,I,protein level
 P00006,P00006|OmIA|Conus omaria|Wild type|conotoxin|A superfamily|alpha conotoxin|I|protein level,Conus omaria,Wild type,conotoxin,A superfamily,alpha conotoxin,I,protein level
 P00010,P00010|ImI|Conus imperialis|Wild type|conotoxin|A superfamily|alpha conotoxin|I|protein level,Conus imperialis,Wild type,conotoxin,A superfamily,alpha conotoxin,I,protein level
