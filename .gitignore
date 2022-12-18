@@ -2,6 +2,7 @@
 data/*/colabfold/out/
 data/*/PPIHP/out/
 config/
+**.html
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
