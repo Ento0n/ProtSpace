@@ -1,0 +1,242 @@
+id,class,cysteineFramewrok,geneSuperfamily,organismDiet,organismLatin,organismRegion,parentID,pharmacologicalFamily,sequenceEvidence,x_umap,monoisotopicMass,isoelecticPoint,extinctionCoefficient,y_umap,z_umap,x_pca,y_pca,z_pca,variance
+P00001,conotoxin,I,A superfamily,piscivorous,Conus striatus,Indo-Pacific,NA,alpha conotoxin,protein level,-4.7835193,1352.51,9.72,1490.0,3.6739442,2.6018949,-0.9182025,0.20139897,-0.4163885,35.77908277511597
+P00002,conotoxin,I,NA,NA,synthetic construct,NA,P00074,alpha conotoxin,NA,-3.9907713,1575.51,8.09,1490.0,3.9674263,2.003693,-0.99088794,-0.33835882,-0.57109904,16.285161674022675
+P00003,conotoxin,I,NA,NA,synthetic construct,NA,P00074,alpha conotoxin,NA,-4.262839,1548.5,8.09,1490.0,3.6831813,2.394702,-1.0054123,-0.021762777,-0.60087234,7.2109654545784
+P00004,conotoxin,I,NA,NA,synthetic construct,NA,P02539,alpha conotoxin,NA,-4.2656183,1805.64,5.63,1490.0,6.181142,0.9160629,-0.9732265,-0.734339,0.16043364,NA
+P00006,conotoxin,I,A superfamily,molluscivorous,Conus omaria,Indo-Pacific,NA,alpha conotoxin,protein level,-4.885479,1719.65,8.42,0.0,7.2362537,2.6167436,-0.9570297,-0.92713916,-0.0144785885,NA
+P00010,conotoxin,I,A superfamily,vermivorous,Conus imperialis,Indo-Pacific,NA,alpha conotoxin,protein level,-2.851679,1350.48,10.99,5500.0,4.167512,2.8355536,-0.8987056,-0.22063677,-0.6191951,NA
+P00015,conotoxin,I,NA,vermivorous,Conus anemone,Indo-Pacific,NA,alpha conotoxin,protein level,-4.297125,1786.51,5.63,1490.0,7.661174,2.6766238,-0.91894835,-1.3194476,-0.34417707,NA
+P00022,conotoxin,I,A superfamily,piscivorous,Conus geographus,Indo-Pacific,NA,alpha conotoxin,protein level,-4.7955074,1622.58,9.72,1490.0,3.4321473,2.1791773,-0.93776196,0.11784091,-0.4616721,NA
+P00023,conotoxin,I,A superfamily,piscivorous,Conus magus,Indo-Pacific,NA,alpha conotoxin,protein level,-4.743082,1492.56,11.81,1490.0,4.2382193,1.9228355,-0.9518009,-0.3909095,-0.7074369,NA
+P00024,conotoxin,I,A superfamily,piscivorous,Conus geographus,Indo-Pacific,NA,alpha conotoxin,protein level,-4.394366,1415.5,8.42,0.0,3.6247427,2.359141,-0.9640565,-0.027718911,-0.2669144,NA
+P00025,conotoxin,I,A superfamily,piscivorous,Conus striatus,Indo-Pacific,NA,alpha conotoxin,protein level,-4.6805463,1454.5,7.88,1490.0,4.166108,2.0820992,-1.0042493,-0.054764148,-0.2154493,NA
+P00026,conotoxin,I,A superfamily,piscivorous,Conus bullatus,Indo-Pacific,NA,alpha conotoxin,nucleic acid level,-3.9260848,1310.49,8.09,1490.0,4.1804743,2.8870537,-0.84830886,0.09172402,0.011149962,NA
+P00028,conotoxin,I,A superfamily,vermivorous,Conus regius,Eastern Pacific,NA,alpha conotoxin,protein level,-3.266294,1346.47,10.45,0.0,5.0349574,1.7570627,-0.82008225,-0.4647968,-0.64198315,NA
+P00029,conotoxin,I,A superfamily,vermivorous,Conus regius,Eastern Pacific,NA,alpha conotoxin,protein level,-3.0897536,1331.46,8.31,0.0,5.108773,1.836536,-0.8296416,-0.46265092,-0.5722958,NA
+P00030,conotoxin,I,A superfamily,vermivorous,Conus regius,Eastern Pacific,NA,alpha conotoxin,protein level,-2.803822,1428.53,12.2,1490.0,4.32591,2.2972507,-0.7825796,-0.68725085,-0.969979,NA
+P00031,conotoxin,I,A superfamily,vermivorous,Conus regius,Eastern Pacific,NA,alpha conotoxin,protein level,-4.0473986,1568.63,9.9,1490.0,4.615561,2.8657744,-0.8431806,-0.30125538,-0.30869022,NA
+P00032,conotoxin,I,A superfamily,vermivorous,Conus regius,Eastern Pacific,NA,alpha conotoxin,protein level,-4.779146,1662.63,8.42,0.0,7.0681634,2.3952012,-0.95897895,-1.2023116,-0.053201217,NA
+P00033,conotoxin,I,NA,NA,synthetic construct,NA,P00010,alpha conotoxin,NA,-2.9772532,1323.42,4.5,5500.0,4.548665,2.3986554,-0.90758127,-0.4933561,-0.46940556,NA
+P00034,conotoxin,I,NA,NA,synthetic construct,NA,P00010,alpha conotoxin,NA,-3.3570535,1307.47,7.0,5500.0,4.2077317,2.999901,-0.86178994,-0.2742615,-0.2625971,NA
+P00035,conotoxin,I,NA,NA,synthetic construct,NA,P00010,alpha conotoxin,NA,-3.073581,1349.5,12.5,5500.0,4.029405,2.639195,-0.89291656,-0.60933757,-0.8776987,NA
+P00038,conotoxin,I,A superfamily,piscivorous,Conus purpurascens,Eastern Pacific,NA,alpha conotoxin,protein level,-4.496377,1758.68,0.0,0.0,4.0387945,2.6865585,-0.75454783,-0.05351969,-0.47729486,NA
+P00039,conotoxin,I,A superfamily,piscivorous,Conus magus,Indo-Pacific,NA,alpha conotoxin,protein level,-5.184924,1709.65,6.81,0.0,6.5314393,0.9568616,-0.86163247,-0.42919165,0.65391994,NA
+P00050,conotoxin,I,A superfamily,piscivorous,Conus ermineus,Eastern Atlantic and Mediterranean,NA,alpha conotoxin,protein level,-5.55862,2091.78,7.98,1490.0,6.0135407,4.019578,-0.9342718,0.46840015,0.39015874,NA
+P00051,conotoxin,I,A superfamily,molluscivorous,Conus pennaceus,Indo-Pacific,NA,alpha conotoxin,protein level,-3.968536,1700.53,2.19,1490.0,7.2522573,2.795686,-0.9933558,-1.3123213,-0.10273708,NA
+P00074,conotoxin,I,A superfamily,piscivorous,Conus geographus,Indo-Pacific,NA,alpha conotoxin,protein level,-4.5224996,1436.48,8.31,1490.0,3.8960774,2.3391569,-1.074821,-0.21947603,-0.47588187,NA
+P00075,conotoxin,I,NA,NA,synthetic construct,NA,P00051,alpha conotoxin,NA,-3.9557881,1621.58,2.19,1490.0,7.0425897,2.5664263,-1.0739615,-1.3054444,0.032213513,NA
+P00090,conotoxin,II,A superfamily,piscivorous,Conus striatus,Indo-Pacific,NA,alpha conotoxin,protein level,-5.1881514,1789.51,7.0,1490.0,2.025038,3.8989623,-0.46544498,0.9551481,-0.41897294,NA
+P00095,conotoxin,I,A superfamily,molluscivorous,Conus aulicus,Indo-Pacific,NA,alpha conotoxin,protein level,-4.2826085,1571.53,5.47,1490.0,6.388613,2.7915103,-0.9568657,-0.79288554,-0.09374836,NA
+P00098,conotoxin,I,A superfamily,piscivorous,Conus geographus,Indo-Pacific,NA,alpha conotoxin,protein level,-5.6430855,2184.85,8.31,0.0,7.2716746,4.186299,-0.9357898,-0.359373,0.27510253,NA
+P00099,conotoxin,I,A superfamily,molluscivorous,Conus pennaceus,Indo-Pacific,NA,alpha conotoxin,protein level,-4.163999,1715.56,2.19,1490.0,7.188834,2.4666884,-0.8523629,-1.0451635,-0.08438804,NA
+P00112,conotoxin,I,NA,NA,synthetic construct,NA,P00405,alpha conotoxin,NA,-3.4236338,1785.58,5.63,1490.0,6.3946567,1.5965828,-0.9661695,-0.7778379,0.021889288,NA
+P00132,conotoxin,I,A superfamily,piscivorous,Conus geographus,Indo-Pacific,NA,alpha conotoxin,nucleic acid level,-4.5918202,1608.58,8.42,0.0,7.1672435,2.518809,-0.982404,-0.99933225,-0.1799715,NA
+P00404,conotoxin,I,A superfamily,molluscivorous,Conus aulicus,Indo-Pacific,NA,alpha conotoxin,protein level,-4.107284,1724.57,2.19,2980.0,6.440504,2.2991173,-0.9218265,-0.7456017,-0.036236133,NA
+P00405,conotoxin,I,A superfamily,molluscivorous,Conus episcopatus,Indo-Pacific,NA,alpha conotoxin,protein level,-3.6213448,1864.53,4.5,1490.0,6.846267,2.0515532,-0.96797,-0.9705458,-0.19751522,NA
+P00407,conotoxin,I,A superfamily,molluscivorous,Conus aulicus,Indo-Pacific,NA,alpha conotoxin,protein level,-4.2564936,1666.57,7.0,2980.0,6.156858,2.213902,-0.8272554,-0.5426557,-0.11895376,NA
+P00505,conotoxin,I,NA,NA,synthetic construct,NA,P00051,alpha conotoxin,NA,-4.262233,1676.69,9.76,1490.0,6.7178273,2.6078322,-0.938983,-1.0163747,0.060992993,NA
+P00516,conotoxin,I,NA,NA,synthetic construct,NA,P00039,alpha conotoxin,NA,-6.175156,2062.79,6.81,0.0,5.5486035,4.5666137,-0.4131893,0.4936432,0.9015897,NA
+P00517,conotoxin,I,NA,NA,synthetic construct,NA,P00039,alpha conotoxin,NA,-4.1911592,2133.82,6.81,0.0,1.1107962,5.0388045,-0.07942337,1.9688696,1.2152884,NA
+P00595,conotoxin,I,A superfamily,piscivorous,Conus purpurascens,Eastern Pacific,NA,alpha conotoxin,nucleic acid level,-5.530549,1979.82,7.88,0.0,6.561484,4.049509,-1.0077485,0.011477085,0.52350587,NA
+P01268,conotoxin,VI/VII,O1 superfamily,piscivorous,Conus geographus,Indo-Pacific,NA,mu conotoxin,protein level,22.081781,3615.49,12.08,0.0,0.6577202,7.66022,0.9605215,1.0076183,0.12028974,NA
+P01386,conotoxin,VI/VII,O1 superfamily,piscivorous,Conus magus,Indo-Pacific,NA,omega conotoxin,protein level,23.505367,2637.1,12.02,1490.0,-0.30526945,7.0763493,1.9845386,-0.19606622,-0.6635827,NA
+P01397,conotoxin,IV,A superfamily,piscivorous,Conus obscurus,Indo-Pacific,NA,alpha conotoxin,protein level,-4.9710994,1846.65,10.95,0.0,2.8766582,3.5707157,-0.7757801,0.6782557,-0.119932964,NA
+P01449,conotoxin,IV,A superfamily,piscivorous,Conus purpurascens,Eastern Pacific,NA,alpha conotoxin,protein level,-4.9638596,2646.92,10.45,2980.0,2.094532,4.299565,-0.52153504,1.0306536,-0.22754304,NA
+P01484,conotoxin,VI/VII,NA,piscivorous,Conus magus,Indo-Pacific,NA,omega conotoxin,nucleic acid level,22.99292,2747.16,12.35,1490.0,0.22976969,7.572598,1.7470928,0.18356872,-0.585715,NA
+P01519,conotoxin,VI/VII,NA,piscivorous,Conus nigropunctatus,Indo-Pacific,NA,delta conotoxin,protein level,19.238153,3391.46,11.07,0.0,1.788032,7.010741,1.6873358,0.27315632,1.00566,NA
+P01540,conotoxin,VI/VII,O1 superfamily,piscivorous,Conus striatus,Indo-Pacific,NA,omega conotoxin,nucleic acid level,23.31396,2559.08,12.59,1490.0,-0.9522114,7.7231846,1.8312098,-0.2555298,-0.59832543,NA
+P01541,conotoxin,NA,NA,NA,synthetic construct,NA,NA,delta conotoxin,NA,-4.168624,1161.62,10.45,0.0,0.7359631,5.121186,0.023232907,2.2516024,1.6886729,NA
+P01546,conotoxin,VI/VII,O1 superfamily,piscivorous,Conus geographus,Indo-Pacific,NA,omega conotoxin,protein level,22.54567,3035.15,12.58,4470.0,-0.12616552,8.621668,1.5748293,-0.2271175,-0.47932735,NA
+P01552,conotoxin,VI/VII,O1 superfamily,molluscivorous,Conus textile,Indo-Pacific,NA,delta conotoxin,protein level,19.47078,3034.19,4.79,6990.0,0.26309967,8.139613,2.1432173,-1.018712,0.43855754,NA
+P01553,conotoxin,VI/VII,O1 superfamily,molluscivorous,Conus textile,Indo-Pacific,NA,delta conotoxin,protein level,19.196585,3054.16,4.21,6990.0,0.27530304,8.030167,2.091107,-0.9412746,0.45908067,NA
+P01554,conotoxin,VI/VII,O1 superfamily,molluscivorous,Conus marmoreus,Indo-Pacific,NA,mu conotoxin,protein level,18.727146,3486.66,11.12,8480.0,1.1055827,7.077787,1.704932,0.2627312,1.0682441,NA
+P01556,conotoxin,VI/VII,O1 superfamily,molluscivorous,Conus marmoreus,Indo-Pacific,NA,mu conotoxin,protein level,18.68636,3403.58,10.31,8480.0,1.1737069,7.269702,1.8463806,-0.055479866,0.89908963,NA
+P01558,conotoxin,I,A superfamily,piscivorous,Conus consors,Indo-Pacific,NA,alpha conotoxin,protein level,-4.2691994,1541.58,11.81,2980.0,4.227349,2.0296266,-0.85667455,-0.015299122,-0.6467999,NA
+P01559,conotoxin,IV,M superfamily,molluscivorous,Conus pennaceus,Indo-Pacific,NA,mu conotoxin,protein level,-4.281461,1862.61,10.95,12490.0,2.657376,2.9254565,-0.30625772,0.28108138,-0.4744134,NA
+P01560,conotoxin,IV,NA,molluscivorous,Conus pennaceus,Indo-Pacific,NA,mu conotoxin,protein level,-4.6249332,1789.62,10.17,6990.0,2.4886281,2.9959054,-0.38474086,0.5513373,-0.30084667,NA
+P01561,conotoxin,VI/VII,O1 superfamily,piscivorous,Conus ermineus,Eastern Atlantic and Mediterranean,NA,delta conotoxin,protein level,20.02861,3285.44,5.71,1490.0,1.1730002,7.2568,1.4690318,0.033408344,0.79874134,NA
+P01566,conotoxin,III,M superfamily,piscivorous,Conus geographus,Indo-Pacific,NA,mu conotoxin,protein level,-4.682901,2638.14,12.18,0.0,1.2302102,4.244548,-0.42094374,1.4846485,-0.31843743,NA
+P01570,conotoxin,III,NA,NA,synthetic construct,NA,P01571,mu conotoxin,NA,-5.202995,2522.05,11.48,0.0,0.95274466,4.082745,-0.30249894,1.6987052,-0.22464326,NA
+P01571,conotoxin,III,M superfamily,piscivorous,Conus geographus,Indo-Pacific,NA,mu conotoxin,protein level,-5.1177535,2607.12,11.87,0.0,1.1167657,4.217435,-0.40762976,1.554897,-0.3162773,NA
+P01574,conotoxin,VIII,S superfamily,piscivorous,Conus radiatus,Indo-Pacific,NA,alpha conotoxin,protein level,-4.946886,5166.93,10.64,5960.0,1.2508347,5.0769997,0.3861503,1.8190497,0.37735912,NA
+P01575,conotoxin,VI/VII,O1 superfamily,piscivorous,Conus ermineus,Eastern Atlantic and Mediterranean,NA,delta conotoxin,nucleic acid level,18.902678,2970.25,4.5,1490.0,1.3780261,7.860915,1.8546462,-0.37449074,0.89526653,NA
+P01594,conotoxin,III,M superfamily,piscivorous,Conus purpurascens,Eastern Pacific,NA,alpha conotoxin,protein level,-5.1656985,2664.06,12.54,2980.0,1.8843056,3.8207355,-0.38071728,0.7701014,-0.24320367,NA
+P01598,conotoxin,VI/VII,O1 superfamily,molluscivorous,Conus gloriamaris,Indo-Pacific,NA,delta conotoxin,protein level,19.56919,3351.5,11.06,5500.0,0.6201969,7.4801965,1.7641871,-0.08092918,0.50751626,NA
+P01603,conotoxin,VI/VII,O1 superfamily,molluscivorous,Conus textile,Indo-Pacific,NA,omega conotoxin,protein level,19.402468,2832.08,4.03,5500.0,0.8251845,7.923365,1.929208,-0.3830323,0.6829824,NA
+P01611,conotoxin,III,M superfamily,piscivorous,Conus purpurascens,Eastern Pacific,NA,alpha conotoxin,protein level,-4.5844,2715.08,12.81,2980.0,1.6783652,4.094119,-0.5937406,1.051519,-0.30625683,NA
+P01612,conotoxin,IV,NA,NA,synthetic construct,NA,NA,alpha conotoxin,NA,-5.180915,2614.93,9.49,2980.0,1.8090657,4.270956,-0.52153504,1.0306536,-0.22754304,NA
+P01615,conotoxin,III,M superfamily,piscivorous,Conus striatus,Indo-Pacific,NA,mu conotoxin,protein level,-4.8413754,2119.75,0.0,0.0,1.6364368,3.2722256,-0.43801382,1.0905629,-0.77404636,NA
+P01616,conotoxin,III,M superfamily,piscivorous,Conus tulipa,Indo-Pacific,NA,mu conotoxin,nucleic acid level,-5.0663724,2455.97,12.28,0.0,0.7049282,3.3930345,-0.39668146,1.4520624,-0.63263714,NA
+P01620,conotoxin,VI/VII,O1 superfamily,piscivorous,Conus stercusmuscarum,Indo-Pacific,NA,delta conotoxin,nucleic acid level,19.376347,3346.33,4.2,5500.0,1.1715877,7.5669174,1.4578387,-0.1659905,0.98476017,NA
+P01621,conotoxin,VI/VII,O1 superfamily,piscivorous,Conus magus,Indo-Pacific,NA,delta conotoxin,nucleic acid level,19.602306,3391.42,5.63,1490.0,1.8717682,7.2076316,1.768696,0.16399167,1.1045794,NA
+P01622,conotoxin,VI/VII,O1 superfamily,piscivorous,Conus magus,Indo-Pacific,NA,delta conotoxin,nucleic acid level,19.182053,3444.43,4.79,1490.0,1.7695676,7.5417705,1.7802892,-0.21553896,1.1415589,NA
+P01623,conotoxin,VI/VII,O1 superfamily,piscivorous,Conus magus,Indo-Pacific,NA,delta conotoxin,nucleic acid level,19.616388,3496.41,4.79,6990.0,1.6205018,7.0507193,1.5224271,0.24964896,1.069172,NA
+P01624,conotoxin,VI/VII,O1 superfamily,piscivorous,Conus magus,Indo-Pacific,NA,delta conotoxin,protein level,19.425102,3535.42,4.79,6990.0,1.4929872,7.2009706,1.4507927,0.1423212,1.0203388,NA
+P01625,conotoxin,VI/VII,O1 superfamily,piscivorous,Conus catus,Indo-Pacific,NA,delta conotoxin,nucleic acid level,19.773895,2816.1,6.6,6990.0,1.6523808,7.8608046,1.5483364,-0.2416893,0.71142876,NA
+P01626,conotoxin,VI/VII,O1 superfamily,piscivorous,Conus consors,Indo-Pacific,NA,delta conotoxin,protein level,19.389093,3358.36,3.28,2980.0,1.8077492,6.9814935,1.7936177,0.053567037,1.0584811,NA
+P01627,conotoxin,VI/VII,O1 superfamily,piscivorous,Conus bullatus,Indo-Pacific,NA,delta conotoxin,nucleic acid level,19.416807,2961.14,4.2,0.0,1.2567751,8.263194,1.8711244,-0.76146704,0.79521656,NA
+P01628,conotoxin,VI/VII,O1 superfamily,piscivorous,Conus aurisiacus,Indo-Pacific,NA,delta conotoxin,nucleic acid level,19.653168,2768.06,4.51,5500.0,1.4012623,7.7779064,1.594791,-0.43860412,0.6739272,NA
+P01630,conotoxin,VI/VII,O1 superfamily,molluscivorous,Conus amadis,Indo-Pacific,NA,delta conotoxin,protein level,19.400518,2764.09,4.2,0.0,0.5922756,8.348946,2.0707374,-0.7838284,0.51155686,NA
+P01632,conotoxin,VI/VII,O1 superfamily,piscivorous,Conus consors,Indo-Pacific,NA,omega conotoxin,protein level,22.728058,2830.16,11.95,1490.0,0.32296917,7.7982364,1.6228014,0.08696505,-0.4410278,NA
+P01635,conotoxin,IV,NA,piscivorous,Conus ermineus,Eastern Atlantic and Mediterranean,NA,alpha conotoxin,protein level,-5.361475,3094.18,10.05,2980.0,2.0658092,4.339527,-0.4714542,0.76732785,0.031399965,NA
+P01638,conotoxin,VI/VII,O1 superfamily,piscivorous,Conus magus,Indo-Pacific,NA,omega conotoxin,protein level,23.421461,2617.03,11.95,1490.0,-1.170602,8.011423,1.8861325,-0.34992296,-0.8178459,NA
+P01657,conotoxin,VI/VII,NA,NA,synthetic construct,NA,P01386,omega conotoxin,NA,22.71248,2695.1,11.55,1490.0,-0.7371231,7.2957773,1.929699,-0.19754378,-0.61030155,NA
+P01658,conotoxin,VI/VII,NA,NA,synthetic construct,NA,NA,omega conotoxin,NA,23.164206,2885.29,12.4,1490.0,0.35702062,7.474329,1.6174874,0.48794797,-0.626149,NA
+P01661,conotoxin,VI/VII,NA,NA,synthetic construct,NA,P01386,omega conotoxin,NA,23.615568,2609.09,11.69,1490.0,-0.7228007,6.8457756,1.9591525,-0.1931377,-0.6486934,NA
+P01662,conotoxin,III,M superfamily,piscivorous,Conus stercusmuscarum,Indo-Pacific,NA,mu conotoxin,nucleic acid level,-4.455951,0.0,12.8,5500.0,1.1660869,3.08695,-0.26196975,1.0569229,-0.8985088,NA
+P01684,conotoxin,XX,D superfamily,vermivorous,Conus vexillum,Indo-Pacific,NA,alpha conotoxin,protein level,-5.0339737,5272.11,12.2,13980.0,1.1568506,4.970137,0.115364715,1.883915,0.2954971,NA
+P01685,conotoxin,XX,D superfamily,vermivorous,Conus vexillum,Indo-Pacific,NA,alpha conotoxin,protein level,-4.788067,5731.18,11.73,12490.0,0.79991204,4.938631,0.14193493,2.2225184,0.3892571,NA
+P01686,conotoxin,XX,D superfamily,vermivorous,Conus vexillum,Indo-Pacific,NA,alpha conotoxin,protein level,-4.685338,5124.01,12.08,8480.0,1.0952218,4.7601886,0.22992522,2.1906278,0.2876826,NA
+P01687,conotoxin,IV,A superfamily,NA,Conus pergrandis,Indo-Pacific,NA,alpha conotoxin,nucleic acid level,-4.7494297,1804.63,10.95,0.0,2.4806807,3.5251453,-0.75287455,0.8161189,-0.17262816,NA
+P01688,conotoxin,IV,A superfamily,piscivorous,Conus obscurus,Indo-Pacific,NA,alpha conotoxin,protein level,-5.077583,1863.66,10.95,0.0,2.7635539,3.7809806,-0.66889966,0.8111199,0.08362145,NA
+P01689,conotoxin,IV,A superfamily,NA,Conus pergrandis,Indo-Pacific,NA,alpha conotoxin,nucleic acid level,-4.810073,1790.61,10.95,0.0,2.5117052,3.454889,-0.7663713,0.7914468,-0.20173311,NA
+P01690,conotoxin,III,NA,piscivorous,Conus consors,Indo-Pacific,NA,mu conotoxin,protein level,-4.858055,2922.15,0.0,0.0,0.5415381,4.1323,-0.28953472,1.7538072,-0.05144805,NA
+P01691,conotoxin,III,NA,piscivorous,Conus magus,Indo-Pacific,NA,mu conotoxin,protein level,-4.928551,2371.83,0.0,0.0,1.1351053,3.4951463,-0.435644,1.2146665,-0.49207598,NA
+P01692,conotoxin,III,NA,piscivorous,Conus catus,Indo-Pacific,NA,mu conotoxin,protein level,-4.8170357,2419.9,11.53,5500.0,0.89286053,3.59525,-0.24023688,1.3436813,-0.42236653,NA
+P01693,conotoxin,III,NA,piscivorous,Conus consors,Indo-Pacific,NA,mu conotoxin,protein level,-4.9921446,2431.9,10.88,5500.0,0.6318562,3.934416,-0.37778214,1.5536524,-0.31823462,NA
+P01725,conotoxin,VI/VII,O1 superfamily,piscivorous,Conus catus,Indo-Pacific,NA,omega conotoxin,protein level,22.572424,2781.15,12.02,1490.0,0.2328767,7.4615846,1.8084866,0.08555767,-0.47541806,NA
+P01726,conotoxin,VI/VII,O1 superfamily,piscivorous,Conus catus,Indo-Pacific,NA,omega conotoxin,protein level,23.68076,2708.12,12.55,1490.0,-0.23445654,7.9794397,1.7397715,-0.015126262,-0.8961301,NA
+P01727,conotoxin,VI/VII,NA,piscivorous,Conus tulipa,Indo-Pacific,NA,omega conotoxin,Unknown,22.574858,2844.05,12.55,2980.0,-0.34024853,8.411213,1.587358,-0.45388526,-0.47614312,NA
+P01728,conotoxin,VI/VII,NA,piscivorous,Conus radiatus,Indo-Pacific,NA,omega conotoxin,Unknown,22.11323,2911.16,11.23,2980.0,-0.086755864,8.602076,1.4115585,-0.32581413,-0.38825697,NA
+P01740,conotoxin,IV,NA,piscivorous,Conus ermineus,Eastern Atlantic and Mediterranean,NA,alpha conotoxin,protein level,-5.2727213,3098.18,10.05,2980.0,2.322692,4.4975004,-0.43052104,0.7626339,0.013171362,NA
+P01741,conotoxin,VI/VII,O1 superfamily,molluscivorous,Conus pennaceus,Indo-Pacific,NA,omega conotoxin,protein level,19.584944,3176.17,4.03,5500.0,0.79766506,7.2798448,1.5354723,-0.37349084,0.6475046,NA
+P01742,conotoxin,VI/VII,O1 superfamily,molluscivorous,Conus pennaceus,Indo-Pacific,NA,omega conotoxin,protein level,19.890554,3266.31,3.17,1490.0,1.3079709,7.224657,1.5986143,-0.17951968,0.81138825,NA
+P01743,conotoxin,VI/VII,O1 superfamily,piscivorous,Conus geographus,Indo-Pacific,NA,omega conotoxin,protein level,22.090363,3313.38,11.7,2980.0,0.21763884,8.029965,1.357899,-0.054180693,-0.02107314,NA
+P01744,conotoxin,III,NA,piscivorous,Conus geographus,Indo-Pacific,NA,mu conotoxin,protein level,-5.0270724,2592.18,11.94,0.0,1.2663305,4.153613,-0.41601688,1.4342797,-0.21210727,NA
+P01780,conotoxin,VI/VII,NA,NA,synthetic construct,NA,P01546,omega conotoxin,NA,22.47158,3050.2,11.06,4470.0,0.03328796,8.71036,1.5357282,-0.23058711,-0.56889385,NA
+P01793,conotoxin,VI/VII,O1 superfamily,piscivorous,Conus striatus,Indo-Pacific,NA,omega conotoxin,protein level,23.029966,2737.14,11.55,1490.0,-0.5895784,7.914566,1.8892733,-0.20653504,-0.6834975,NA
+P01794,conotoxin,VI/VII,O1 superfamily,piscivorous,Conus striatus,Indo-Pacific,NA,omega conotoxin,protein level,22.948683,2492.0,12.26,1490.0,-0.6301483,8.555231,1.6602186,-0.37017527,-0.6021593,NA
+P02228,conotoxin,III,M superfamily,piscivorous,Conus purpurascens,Eastern Pacific,NA,mu conotoxin,nucleic acid level,-4.485922,0.0,12.99,0.0,1.0163722,3.5919893,-0.34091166,1.3958379,-0.53145057,NA
+P02478,conotoxin,NA,NA,NA,synthetic construct,NA,P00010,alpha conotoxin,NA,-4.141361,1438.38,10.99,5500.0,0.5495074,4.8152394,-0.28461248,2.7747254,0.5259396,NA
+P02479,conotoxin,NA,NA,NA,synthetic construct,NA,P00010,alpha conotoxin,NA,-4.4187703,1526.27,10.99,5500.0,0.43371576,4.997328,-0.26072928,2.665507,1.0436782,NA
+P02496,conotoxin,I,A superfamily,vermivorous,Conus leopardus,Indo-Pacific,NA,alpha conotoxin,nucleic acid level,-4.0059395,1599.65,8.31,0.0,0.85432166,4.92508,-0.49009243,2.2829926,1.0273032,NA
+P02501,conotoxin,I,NA,vermivorous,Conus anemone,Indo-Pacific,NA,alpha conotoxin,protein level,-4.2773614,1672.47,5.63,1490.0,7.5109386,2.1650147,-1.0471972,-1.0867237,-0.2803257,NA
+P02511,conotoxin,I,A superfamily,vermivorous,Conus quercinus,Indo-Pacific,NA,alpha conotoxin,nucleic acid level,-4.571128,1410.54,10.12,0.0,4.3690453,2.750554,-0.9114121,-0.00807061,-0.22102772,NA
+P02548,conotoxin,VI/VII,O1 superfamily,piscivorous,Conus catus,Indo-Pacific,NA,omega conotoxin,protein level,23.69735,2640.03,12.52,1490.0,-0.63561153,8.273053,1.7129126,-0.23812859,-0.95857394,NA
+P02549,conotoxin,VI/VII,O1 superfamily,piscivorous,Conus catus,Indo-Pacific,NA,omega conotoxin,protein level,22.32754,2754.13,11.59,1490.0,-0.24931201,7.294362,1.7910383,-0.23305382,-0.32130554,NA
+P02553,conotoxin,VI/VII,O1 superfamily,molluscivorous,Conus textile,Indo-Pacific,NA,omega conotoxin,nucleic acid level,19.19464,2712.09,3.14,1490.0,0.71632844,8.079724,2.0555096,-0.56267184,0.7752737,NA
+P02554,conotoxin,VI/VII,O1 superfamily,molluscivorous,Conus textile,Indo-Pacific,NA,omega conotoxin,protein level,20.20063,2556.89,5.47,6990.0,0.3700904,8.19923,2.0919354,-0.9024471,0.19361524,NA
+P02555,conotoxin,VI/VII,O1 superfamily,molluscivorous,Conus textile,Indo-Pacific,NA,omega conotoxin,nucleic acid level,20.027506,2546.87,3.01,6990.0,0.6105036,8.259286,2.0709093,-0.57741624,0.34772098,NA
+P02556,conotoxin,VI/VII,O1 superfamily,molluscivorous,Conus textile,Indo-Pacific,NA,omega conotoxin,protein level,19.705782,3203.09,5.63,1490.0,0.96660984,7.550261,1.6683133,-0.42136788,0.5701751,NA
+P02557,conotoxin,VI/VII,O1 superfamily,molluscivorous,Conus textile,Indo-Pacific,NA,omega conotoxin,nucleic acid level,19.767925,2960.15,3.28,12490.0,1.1988612,7.981194,1.6929954,-0.37133443,0.43925613,NA
+P02558,conotoxin,VI/VII,O1 superfamily,molluscivorous,Conus textile,Indo-Pacific,NA,omega conotoxin,protein level,18.981089,3784.54,6.71,9970.0,1.2352873,7.263971,1.7749823,0.099169455,0.68961734,NA
+P02581,conotoxin,VI/VII,NA,piscivorous,Conus geographus,Indo-Pacific,NA,omega conotoxin,protein level,22.103323,3287.33,11.7,2980.0,-0.06349071,7.906909,1.3179693,-0.17147651,-0.1583727,NA
+P02585,conotoxin,I,A superfamily,vermivorous,Conus regius,Eastern Pacific,NA,alpha conotoxin,nucleic acid level,-2.9601874,1569.62,12.5,1490.0,4.063928,2.1331873,-0.70218307,-0.26097703,-0.948354,NA
+P02586,conotoxin,I,A superfamily,vermivorous,Conus imperialis,Indo-Pacific,NA,alpha conotoxin,nucleic acid level,-2.8075094,1508.61,12.5,5500.0,3.4690485,2.2753088,-0.702596,0.4045645,-0.7737451,NA
+P02587,conotoxin,III,M superfamily,piscivorous,Conus kinoshitai,Indo-Pacific,NA,mu conotoxin,nucleic acid level,-4.3588367,1882.63,11.73,5500.0,1.1653248,3.271,-0.45397398,1.0458883,-0.78917974,NA
+P02588,conotoxin,XIV,L superfamily,vermivorous,Conus litteratus,Indo-Pacific,NA,alpha conotoxin,nucleic acid level,-3.9910448,1390.53,10.17,0.0,0.7488667,4.2760987,-0.39754787,2.0947666,0.3209195,NA
+P02595,conotoxin,VI/VII,O1 superfamily,piscivorous,Conus purpurascens,Eastern Pacific,NA,delta conotoxin,protein level,19.14632,2996.21,5.63,1490.0,1.3659779,7.987357,1.840212,-0.3832816,0.84996605,NA
+P02602,conotoxin,VI/VII,O1 superfamily,vermivorous,Conus pulicarius,Indo-Pacific,NA,omega conotoxin,nucleic acid level,20.05701,3565.54,9.19,8480.0,0.92374295,7.473713,1.4324577,-0.113267146,0.54064435,NA
+P02603,conotoxin,VI/VII,O1 superfamily,vermivorous,Conus pulicarius,Indo-Pacific,NA,omega conotoxin,nucleic acid level,22.019285,3201.33,10.24,2980.0,-0.52881205,8.227493,1.7267579,-0.5718222,0.058443036,NA
+P02608,conotoxin,I,A superfamily,NA,Conus pergrandis,Indo-Pacific,NA,alpha conotoxin,nucleic acid level,-4.9325876,1650.62,6.81,0.0,6.926278,1.5518209,-0.9945686,-0.9329132,0.40371102,NA
+P02675,conotoxin,VI/VII,O1 superfamily,piscivorous,Conus magus,Indo-Pacific,NA,omega conotoxin,nucleic acid level,23.530354,2693.05,12.99,1490.0,-0.6293692,8.048125,1.7661549,-0.18038589,-0.786718,NA
+P02707,conotoxin,III,M superfamily,piscivorous,Conus striatus,Indo-Pacific,NA,mu conotoxin,protein level,-4.7566586,0.0,11.62,5500.0,1.362393,3.1069348,-0.51295555,1.0894337,-0.6729792,NA
+P02708,conotoxin,VI/VII,O1 superfamily,piscivorous,Conus striatus,Indo-Pacific,NA,omega conotoxin,nucleic acid level,20.68806,3917.62,9.32,4470.0,1.1063704,7.3710556,1.1378874,0.46442816,0.4887511,NA
+P02709,conotoxin,VI/VII,O1 superfamily,piscivorous,Conus striatus,Indo-Pacific,NA,omega conotoxin,nucleic acid level,21.2037,3762.47,9.03,5960.0,0.85343254,7.515722,1.2128493,0.7464905,0.30271778,NA
+P02710,conotoxin,VI/VII,O1 superfamily,piscivorous,Conus striatus,Indo-Pacific,NA,delta conotoxin,protein level,19.293573,3327.29,4.2,5500.0,1.5104245,7.397894,1.5118191,-0.12430045,1.0695785,NA
+P02725,conotoxin,NA,NA,NA,synthetic construct,NA,P01793,omega conotoxin,NA,22.48469,2753.11,11.95,1490.0,-0.45563123,7.82131,1.9748539,-0.31758612,-0.4543632,NA
+P02727,conotoxin,NA,NA,NA,synthetic construct,NA,P01386,omega conotoxin,NA,23.532372,2581.02,11.95,1490.0,-0.31703562,7.427759,1.9413742,-0.17783472,-0.5917484,NA
+P02728,conotoxin,NA,NA,NA,synthetic construct,NA,P01386,omega conotoxin,NA,23.105309,2581.02,11.95,1490.0,-0.65488505,7.0016,1.8653134,-0.15725882,-0.6237529,NA
+P02729,conotoxin,NA,NA,NA,synthetic construct,NA,P01386,omega conotoxin,NA,23.387753,2620.12,12.02,1490.0,-1.2768822,6.908894,2.0384214,-0.2735866,-0.6380634,NA
+P02730,conotoxin,NA,NA,NA,synthetic construct,NA,P01386,omega conotoxin,NA,23.07667,2581.02,11.95,1490.0,0.073315024,7.4214187,1.8321872,0.03635407,-0.48053047,NA
+P02731,conotoxin,NA,NA,NA,synthetic construct,NA,P01386,omega conotoxin,NA,23.00207,2553.02,11.6,1490.0,-0.20179375,7.0138865,1.9871534,-0.115688704,-0.49038863,NA
+P02732,conotoxin,NA,NA,NA,synthetic construct,NA,P01386,omega conotoxin,NA,22.868687,2553.02,11.6,1490.0,-0.45155823,7.1669407,1.9430883,-0.17917982,-0.5498478,NA
+P02733,conotoxin,NA,NA,NA,synthetic construct,NA,P01386,omega conotoxin,NA,23.180986,2581.02,11.95,1490.0,-0.047212947,7.7799916,1.9089144,-0.17291614,-0.6082421,NA
+P02734,conotoxin,NA,NA,NA,synthetic construct,NA,P01386,omega conotoxin,NA,23.822126,2623.1,12.07,1490.0,-0.8115642,7.554189,1.8723532,-0.16695866,-0.90358454,NA
+P02735,conotoxin,NA,NA,NA,synthetic construct,NA,P01386,omega conotoxin,NA,23.135317,2680.09,0.0,0.0,-0.8987889,7.1204624,1.9845386,-0.19606622,-0.6635827,NA
+P02736,conotoxin,NA,NA,NA,synthetic construct,NA,P01386,omega conotoxin,NA,23.709211,2622.09,12.62,0.0,-0.49864957,7.2811017,2.0498593,-0.26293954,-0.6159209,NA
+P02737,conotoxin,NA,NA,NA,synthetic construct,NA,P01386,omega conotoxin,NA,23.18054,2763.98,12.62,0.0,-0.8285227,6.983025,1.9845386,-0.19606622,-0.6635827,NA
+P02738,conotoxin,NA,NA,NA,synthetic construct,NA,P01386,omega conotoxin,NA,23.289452,2578.08,12.02,1490.0,-1.1143624,7.4380417,1.905659,-0.28369334,-0.7398796,NA
+P02739,conotoxin,NA,NA,NA,synthetic construct,NA,P01386,omega conotoxin,NA,23.618341,2622.1,12.02,1490.0,-0.86693746,7.0619206,1.9845386,-0.19606622,-0.6635827,NA
+P02740,conotoxin,NA,NA,NA,synthetic construct,NA,P01386,omega conotoxin,NA,23.57726,2596.03,12.02,1490.0,-0.760622,7.5205607,1.8623458,-0.13635631,-0.78619164,NA
+P02741,conotoxin,NA,NA,NA,synthetic construct,NA,P01386,omega conotoxin,NA,23.13224,2594.09,12.62,1490.0,-0.51670855,6.785212,1.9260513,-0.099073075,-0.6426185,NA
+P02748,conotoxin,I,A superfamily,vermivorous,Conus arenatus,Indo-Pacific,NA,alpha conotoxin,nucleic acid level,-6.3596206,2593.17,12.33,0.0,6.3699493,5.0271564,-0.75162166,0.0064590396,0.4556997,NA
+P02752,conotoxin,I,NA,vermivorous,Conus arenatus,Indo-Pacific,NA,alpha conotoxin,nucleic acid level,-6.0686646,2323.99,12.03,0.0,6.347762,5.0849586,-0.7181868,0.013559457,0.41667002,NA
+P02753,conotoxin,NA,NA,NA,synthetic construct,NA,P02752,alpha conotoxin,NA,-6.0585585,2392.06,12.33,0.0,5.946423,4.7986116,-0.67473084,0.19213146,0.32799205,NA
+P02754,conotoxin,NA,NA,NA,synthetic construct,NA,P02752,alpha conotoxin,NA,-6.4314785,2338.0,12.03,0.0,6.0498104,4.861794,-0.60747594,0.283628,0.5383121,NA
+P02755,conotoxin,NA,NA,NA,synthetic construct,NA,P02752,alpha conotoxin,NA,-6.385348,2309.97,12.03,0.0,6.317362,4.9412136,-0.6639945,-0.06303395,0.43807563,NA
+P02756,conotoxin,NA,NA,NA,synthetic construct,NA,P02752,alpha conotoxin,NA,-6.078292,2353.96,10.94,0.0,6.025463,5.209891,-0.7082511,0.11900987,0.31494698,NA
+P02832,conotoxin,III,M superfamily,piscivorous,Conus parius,Indo-Pacific,NA,alpha conotoxin,nucleic acid level,-4.333244,2574.11,11.33,2980.0,1.2081407,4.025167,-0.48579153,1.2786498,-0.2724927,NA
+P02850,conotoxin,I,NA,NA,synthetic construct,NA,P00010,alpha conotoxin,NA,-2.4985912,1351.47,10.99,5500.0,3.821646,2.6733308,-0.8987056,-0.22063677,-0.6191951,NA
+P02851,conotoxin,I,NA,NA,synthetic construct,NA,P00010,alpha conotoxin,NA,-2.7964995,1381.52,11.63,5500.0,3.828826,2.7276387,-0.75521255,-0.33274847,-0.9075283,NA
+P02852,conotoxin,I,NA,NA,synthetic construct,NA,P00010,alpha conotoxin,NA,-2.8586626,1324.47,10.99,5500.0,3.5369234,2.9221253,-0.7469441,0.5684129,-0.43324333,NA
+P02853,conotoxin,I,NA,NA,synthetic construct,NA,P00010,alpha conotoxin,NA,-2.7668285,1382.51,11.63,5500.0,3.6520085,2.3753705,-0.75521255,-0.33274847,-0.9075283,NA
+P02871,conotoxin,VI/VII,O1 superfamily,vermivorous,Conus litteratus,Indo-Pacific,NA,mu conotoxin,nucleic acid level,22.43466,2947.28,11.62,5500.0,-0.91171175,8.398428,1.7726862,-0.5727429,0.07061982,NA
+P02881,conotoxin,I,A superfamily,molluscivorous,Conus textile,Indo-Pacific,NA,alpha conotoxin,protein level,-4.0256195,1656.66,7.0,0.0,6.9052587,2.8078103,-0.92068195,-1.1509722,0.012700616,NA
+P03275,conotoxin,VI/VII,O1 superfamily,piscivorous,Conus striatus,Indo-Pacific,NA,omega conotoxin,nucleic acid level,22.831654,2487.01,12.26,1490.0,-0.74788976,8.223077,1.6643968,-0.48102397,-0.53306234,NA
+P03322,conotoxin,V,T superfamily,vermivorous,Conus litteratus,Indo-Pacific,NA,mu conotoxin,protein level,-4.739735,1274.49,7.0,0.0,3.491519,3.0077486,-0.66260594,0.4191781,0.112962335,NA
+P03553,conotoxin,I,NA,NA,synthetic construct,NA,P00098,alpha conotoxin,NA,-5.558667,2140.87,8.31,0.0,7.307731,4.646125,-0.92428654,-0.45562008,0.38914207,NA
+P03557,conotoxin,I,NA,NA,synthetic construct,NA,P00098,alpha conotoxin,NA,-5.320729,2139.88,8.31,0.0,7.4017906,4.6481123,-0.92428654,-0.45562008,0.38914207,NA
+P03558,conotoxin,I,NA,NA,synthetic construct,NA,P00098,alpha conotoxin,NA,-5.640926,2098.82,8.31,0.0,7.390661,5.2058434,-0.92526466,-0.45606744,0.33235052,NA
+P03559,conotoxin,I,NA,NA,synthetic construct,NA,P00098,alpha conotoxin,NA,-5.984117,2055.8,5.8,0.0,6.698599,5.0092635,-0.69026387,0.16655521,0.61906093,NA
+P03560,conotoxin,I,NA,NA,synthetic construct,NA,P00098,alpha conotoxin,NA,-5.3583736,2096.88,10.94,0.0,7.6777306,4.4318156,-0.96376294,-0.48664898,0.33217964,NA
+P03561,conotoxin,I,NA,NA,synthetic construct,NA,P00098,alpha conotoxin,protein level,-5.88191,2082.86,10.94,0.0,7.6634665,3.9511857,-0.9612874,-0.55161756,0.13658628,NA
+P03562,conotoxin,I,NA,NA,synthetic construct,NA,P00098,alpha conotoxin,NA,-5.89444,2124.87,8.31,0.0,7.5972557,4.6166544,-1.017176,-0.41059697,0.41231325,NA
+P03563,conotoxin,I,NA,NA,synthetic construct,NA,P00098,alpha conotoxin,NA,-5.539185,2097.86,8.31,0.0,6.4073305,4.520798,-0.93764544,-0.03730128,0.4714317,NA
+P03564,conotoxin,I,NA,NA,synthetic construct,NA,P00098,alpha conotoxin,NA,-5.733662,2114.85,8.31,0.0,6.6209316,4.809772,-0.8784111,-0.075889744,0.48606783,NA
+P03565,conotoxin,I,NA,NA,synthetic construct,NA,P00098,alpha conotoxin,NA,-5.7720428,2184.85,8.31,0.0,7.121492,4.2737527,-0.9357898,-0.359373,0.27510253,NA
+P03566,conotoxin,I,NA,NA,synthetic construct,NA,P00098,alpha conotoxin,NA,-5.7566595,2112.83,8.31,0.0,7.641761,5.035062,-0.92642593,-0.43332493,0.31263372,NA
+P03567,conotoxin,I,NA,NA,synthetic construct,NA,P00098,alpha conotoxin,NA,-6.1797943,2097.86,8.31,0.0,7.2047167,4.666933,-0.95378596,-0.2819458,0.41275343,NA
+P03568,conotoxin,I,NA,NA,synthetic construct,NA,P00098,alpha conotoxin,NA,-5.9454722,2097.86,8.31,0.0,6.584815,4.290897,-1.0025913,-0.0272873,0.36216724,NA
+P03569,conotoxin,I,NA,NA,synthetic construct,NA,P00098,alpha conotoxin,NA,-5.4835935,2098.86,8.31,0.0,6.8033314,4.8500705,-0.8757275,-0.14894292,0.38642573,NA
+P03570,conotoxin,I,NA,NA,synthetic construct,NA,P00098,alpha conotoxin,NA,-5.5610323,2124.87,8.31,0.0,7.643276,4.805489,-0.92428654,-0.45562008,0.38914207,NA
+P03571,conotoxin,I,NA,NA,synthetic construct,NA,P00098,alpha conotoxin,NA,-5.996305,2074.84,7.0,0.0,7.354244,4.857364,-0.9139728,-0.31631842,0.4492528,NA
+P03572,conotoxin,I,NA,NA,synthetic construct,NA,P00098,alpha conotoxin,NA,-5.980502,2112.83,8.31,0.0,7.739802,4.354967,-1.0024587,-0.5618836,0.26553854,NA
+P03573,conotoxin,I,NA,NA,synthetic construct,NA,P00098,alpha conotoxin,NA,-5.640914,1946.75,5.8,500.0,7.223384,5.1517334,-0.812309,-0.3967688,0.33065894,NA
+P03574,conotoxin,I,NA,NA,synthetic construct,NA,P00098,alpha conotoxin,NA,-5.138557,1827.69,8.31,0.0,7.430845,3.8284562,-0.91809994,-0.6380547,0.19169685,NA
+P03575,conotoxin,I,NA,NA,synthetic construct,NA,P00098,alpha conotoxin,NA,-5.1682353,1756.65,8.31,0.0,7.4448414,3.3875625,-0.9736935,-0.9296313,0.11624601,NA
+P03576,conotoxin,I,NA,NA,synthetic construct,NA,P00098,alpha conotoxin,NA,-4.7368383,1698.65,11.16,0.0,7.1734753,3.0046647,-0.98218894,-1.0802544,-0.13940091,NA
+P03577,conotoxin,I,NA,NA,synthetic construct,NA,P00098,alpha conotoxin,NA,-4.8615026,1627.61,11.65,0.0,7.3422933,3.161043,-1.1303438,-1.0039504,-0.091825545,NA
+P03578,conotoxin,III,NA,NA,synthetic construct,NA,P02587,mu conotoxin,NA,-4.156292,1820.71,11.65,5500.0,0.27473655,4.145353,-0.5976229,2.1073532,-0.23661275,NA
+P03579,conotoxin,III,NA,NA,synthetic construct,NA,P02587,mu conotoxin,NA,-3.9353006,1820.71,11.73,5500.0,0.5871376,4.039587,-0.5145035,1.9180732,-0.36467627,NA
+P03580,conotoxin,III,NA,NA,synthetic construct,NA,P02587,mu conotoxin,NA,-4.201603,1820.71,11.73,5500.0,0.4549187,3.7543252,-0.66640586,1.4628572,-0.33879733,NA
+P03581,conotoxin,III,NA,NA,synthetic construct,NA,P02587,mu conotoxin,NA,-4.076445,1660.66,11.73,5500.0,0.60824615,3.6238256,-0.72849655,1.5885375,-0.5921907,NA
+P03582,conotoxin,I,NA,NA,synthetic construct,NA,P00039,alpha conotoxin,NA,-5.378292,1907.81,5.47,0.0,6.17723,0.8662002,-0.8411957,-0.3183893,0.6552553,NA
+P03583,conotoxin,I,NA,NA,synthetic construct,NA,P00039,alpha conotoxin,NA,-4.943484,1793.77,6.81,0.0,6.201574,0.6854834,-0.8451703,-0.24488686,0.61077136,NA
+P03584,conotoxin,III,M superfamily,piscivorous,Conus striolatus,Indo-Pacific,NA,mu conotoxin,nucleic acid level,-4.900144,2268.99,12.61,0.0,1.6032952,3.8327374,-0.34962925,0.95782316,-0.5594577,NA
+P03585,conotoxin,III,M superfamily,piscivorous,Conus striolatus,Indo-Pacific,NA,mu conotoxin,nucleic acid level,-4.5315385,2380.02,0.0,0.0,1.5813187,3.4670606,-0.24920179,1.0157166,-0.67086124,NA
+P03647,conotoxin,I,NA,NA,synthetic construct,NA,P00004,alpha conotoxin,NA,-3.9463868,1819.65,5.63,1490.0,6.7962956,0.7834665,-0.9963338,-0.548063,0.1386948,NA
+P03648,conotoxin,I,NA,NA,synthetic construct,NA,P00004,alpha conotoxin,NA,-4.274118,1789.64,5.63,1490.0,6.500774,0.3555261,-1.0051763,-0.6270038,0.2667616,NA
+P03649,conotoxin,I,NA,NA,synthetic construct,NA,P00004,alpha conotoxin,NA,-4.4491057,1761.65,6.62,1490.0,5.6748753,0.35244128,-0.9395228,-0.29739803,0.2825335,NA
+P03650,conotoxin,I,NA,NA,synthetic construct,NA,P00004,alpha conotoxin,NA,-3.835083,1779.62,5.63,1490.0,5.4757013,0.20559916,-0.8714561,-0.41865698,0.14310743,NA
+P03651,conotoxin,I,NA,NA,synthetic construct,NA,P00004,alpha conotoxin,NA,-3.8083432,1720.57,4.79,1490.0,7.004768,0.99716216,-0.9278576,-0.81175435,0.19430198,NA
+P03652,conotoxin,I,NA,NA,synthetic construct,NA,P00004,alpha conotoxin,NA,-4.052586,1762.63,5.63,1490.0,6.890558,0.57479125,-0.98815465,-0.6910043,0.19281146,NA
+P03653,conotoxin,I,NA,NA,synthetic construct,NA,P00004,alpha conotoxin,NA,-3.7897682,1713.61,4.8,0.0,7.203333,1.7283329,-1.038647,-1.0636337,0.094524354,NA
+P03654,conotoxin,I,NA,NA,synthetic construct,NA,P00004,alpha conotoxin,NA,-4.1432576,1761.65,6.62,1490.0,6.128661,-0.5758431,-0.5798123,0.40115836,0.44772786,NA
+P03655,conotoxin,I,NA,NA,synthetic construct,NA,P00004,alpha conotoxin,NA,-3.3028967,1739.61,4.79,1490.0,5.654446,0.83081675,-0.9904427,-0.28288323,0.22252202,NA
+P03656,conotoxin,I,NA,NA,synthetic construct,NA,P00004,alpha conotoxin,NA,-3.7358265,1779.62,5.63,1490.0,6.4353466,1.3211721,-0.98248845,-0.7963283,0.18709202,NA
+P03657,conotoxin,I,NA,NA,synthetic construct,NA,P00004,alpha conotoxin,NA,-4.1858497,1747.63,6.62,1490.0,6.1687756,1.4832126,-0.9722737,-0.7204818,-0.018845523,NA
+P03658,conotoxin,I,NA,NA,synthetic construct,NA,P00004,alpha conotoxin,NA,-4.5976706,1763.59,5.63,1490.0,6.360926,0.0252679,-1.0079448,-0.53147775,0.23161627,NA
+P03659,conotoxin,I,NA,NA,synthetic construct,NA,P00004,alpha conotoxin,NA,-3.4497697,1876.71,5.91,1490.0,6.165251,-0.15162854,-0.93788844,-0.26852652,0.26303807,NA
+P03660,conotoxin,I,NA,NA,synthetic construct,NA,P00004,alpha conotoxin,NA,-4.1592126,1846.7,6.62,1490.0,6.456993,-0.37086084,-0.9980863,-0.36612418,0.3057941,NA
+P03661,conotoxin,I,NA,NA,synthetic construct,NA,P00004,alpha conotoxin,NA,-4.1238213,1818.7,8.31,1490.0,5.6444273,0.8804188,-0.9174455,-0.47771502,0.06921115,NA
+P03662,conotoxin,I,NA,NA,synthetic construct,NA,P00004,alpha conotoxin,NA,-3.6529067,1836.68,6.62,1490.0,5.6483192,0.058998287,-0.7878635,-0.32099873,0.097170666,NA
+P03663,conotoxin,I,NA,NA,synthetic construct,NA,P00004,alpha conotoxin,NA,-4.0651803,1777.63,5.63,1490.0,6.1061144,0.007694301,-0.9194063,-0.43423012,0.26755378,NA
+P03664,conotoxin,I,NA,NA,synthetic construct,NA,P00004,alpha conotoxin,NA,-3.884377,1819.69,6.62,1490.0,6.6638107,-0.419017,-0.8700313,-0.30828914,0.24807492,NA
+P03665,conotoxin,I,NA,NA,synthetic construct,NA,P00004,alpha conotoxin,NA,-3.9804602,1818.7,8.31,1490.0,5.661093,0.29926056,-0.8742545,-0.32745636,0.111105494,NA
+P03666,conotoxin,I,NA,NA,synthetic construct,NA,P00004,alpha conotoxin,NA,-3.2867799,1796.67,5.71,1490.0,5.6932054,0.6379261,-0.95152336,-0.39109036,0.1411089,NA
+P03667,conotoxin,I,NA,NA,synthetic construct,NA,P00004,alpha conotoxin,NA,-3.4908137,1836.68,6.62,1490.0,6.1462364,1.0741235,-0.97344804,-0.6480876,0.12205312,NA
+P03668,conotoxin,I,NA,NA,synthetic construct,NA,P00004,alpha conotoxin,NA,-3.988773,1804.69,8.31,1490.0,5.930157,1.0527647,-0.99823403,-0.56024474,0.008962172,NA
+P03669,conotoxin,I,NA,NA,synthetic construct,NA,P00004,alpha conotoxin,NA,-3.9611478,1820.65,6.62,1490.0,6.2360973,0.64002156,-0.96973896,-0.58970004,0.043553174,NA
+P03670,conotoxin,I,NA,NA,synthetic construct,NA,P00004,alpha conotoxin,NA,-3.2743452,1770.67,5.91,0.0,7.0582128,1.4061674,-1.033154,-0.97399324,-0.00263074,NA
+P03671,conotoxin,I,NA,NA,synthetic construct,NA,P00004,alpha conotoxin,NA,-3.530732,1863.64,4.95,1490.0,6.0361004,-0.1771287,-0.86248654,-0.22630867,0.3704767,NA
+P03672,conotoxin,I,NA,NA,synthetic construct,NA,P00004,alpha conotoxin,NA,-3.6067722,1833.63,4.95,1490.0,6.6046762,0.32046273,-0.9743684,-0.5208543,0.2801911,NA
+P03673,conotoxin,I,NA,NA,synthetic construct,NA,P00004,alpha conotoxin,NA,-3.4326062,1823.61,4.95,1490.0,5.9923368,0.2790623,-0.8847242,-0.498897,0.089606576,NA
+P03674,conotoxin,I,NA,NA,synthetic construct,NA,P00004,alpha conotoxin,NA,-3.5489914,1764.56,4.49,1490.0,6.564355,0.36999673,-0.90177745,-0.4782471,0.29317558,NA
+P03675,conotoxin,I,NA,NA,synthetic construct,NA,P00004,alpha conotoxin,NA,-3.5662773,1806.62,4.95,1490.0,6.449764,0.8390163,-1.006745,-0.6927069,0.17090526,NA
+P03676,conotoxin,I,NA,NA,synthetic construct,NA,P00004,alpha conotoxin,NA,-3.7299862,1757.6,4.5,0.0,7.004621,1.3742869,-1.0228977,-0.92027056,0.11551431,NA
+P03677,conotoxin,I,NA,NA,synthetic construct,NA,P00004,alpha conotoxin,NA,-3.0874739,1783.6,4.5,1490.0,5.9351735,0.15747598,-0.8697371,-0.18815124,0.2877083,NA
+P03678,conotoxin,I,NA,NA,synthetic construct,NA,P00004,alpha conotoxin,NA,-3.1666243,1823.61,4.95,1490.0,6.1891513,0.67858124,-0.9396896,-0.41740814,0.16194555,NA
+P03679,conotoxin,I,NA,NA,synthetic construct,NA,P00004,alpha conotoxin,NA,-3.8689451,1791.62,5.63,1490.0,6.537521,1.1758475,-0.9849833,-0.81001735,0.11807141,NA
+P03680,conotoxin,I,NA,NA,synthetic construct,NA,P00004,alpha conotoxin,NA,-3.985154,1807.58,4.95,1490.0,6.306205,0.21186309,-0.9506673,-0.32792482,0.17156695,NA
+P03681,conotoxin,I,NA,NA,synthetic construct,NA,P00004,alpha conotoxin,NA,-3.4796872,1804.68,5.63,1490.0,6.983204,0.5195641,-0.9343375,-0.607976,0.19382748,NA
+P03682,conotoxin,I,NA,NA,synthetic construct,NA,P00004,alpha conotoxin,NA,-4.027749,1804.68,5.63,1490.0,7.0527387,0.17109035,-0.88388723,-0.46629217,0.28066024,NA
+P03683,conotoxin,I,NA,NA,synthetic construct,NA,P00004,alpha conotoxin,NA,-4.456413,1748.62,5.63,1490.0,6.7078247,0.3101133,-1.0053842,-0.5420735,0.23466298,NA
+P03684,conotoxin,I,NA,NA,synthetic construct,NA,P00004,alpha conotoxin,NA,-4.2075567,1874.71,6.62,1490.0,6.4305553,-0.5683363,-0.89411396,-0.1780831,0.4392998,NA
+P03685,conotoxin,I,NA,NA,synthetic construct,NA,P00004,alpha conotoxin,NA,-4.1234107,1803.69,6.62,1490.0,6.7720428,-0.15807013,-0.99883527,-0.4026939,0.2615089,NA
+P03752,conotoxin,I,A superfamily,vermivorous,Conus spurius,Western Atlantic and Caribbean,NA,alpha conotoxin,protein level,-5.518379,2202.84,10.5,1490.0,6.383843,3.9472752,-0.96359426,0.14517325,0.17328513,NA
+P03833,conotoxin,I,A superfamily,piscivorous,Conus achatinus,Indo-Pacific,NA,alpha conotoxin,nucleic acid level,-4.7709284,1640.63,11.81,0.0,4.0311084,1.9268265,-0.91582334,0.01957631,-0.34013295,NA
+P03834,conotoxin,III,M superfamily,piscivorous,Conus consors,Indo-Pacific,NA,mu conotoxin,protein level,-5.0032177,0.0,11.8,5500.0,1.429628,3.2075214,-0.43579775,1.0133132,-0.6463891,NA
+P03892,conotoxin,I,NA,NA,synthetic construct,NA,P00039,alpha conotoxin,NA,-5.001726,1651.65,8.42,0.0,6.454258,1.0782042,-0.8738319,-0.5601419,0.45875427,NA
+P03893,conotoxin,NA,NA,NA,synthetic construct,NA,P02586,alpha conotoxin,NA,-2.5204575,1508.61,12.5,5500.0,3.687527,2.320534,-0.702596,0.4045645,-0.7737451,NA
+P03894,conotoxin,I,NA,NA,synthetic construct,NA,P02586,alpha conotoxin,NA,-2.546961,1485.59,12.5,1490.0,4.0636134,2.3164485,-0.74236345,-0.020095978,-0.9301287,NA

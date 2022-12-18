@@ -1,0 +1,242 @@
+id,class,cysteineFramewrok,extinctionCoefficient,geneSuperfamily,isoelecticPoint,monoisotopicMass,organismDiet,organismLatin,organismRegion,parentID,pharmacologicalFamily,sequenceEvidence
+P00001,conotoxin,I,1490.0,A superfamily,9.72,1352.51,piscivorous,Conus striatus,Indo-Pacific,,alpha conotoxin,protein level
+P00002,conotoxin,I,1490.0,,8.09,1575.51,,synthetic construct,,P00074,alpha conotoxin,
+P00003,conotoxin,I,1490.0,,8.09,1548.5,,synthetic construct,,P00074,alpha conotoxin,
+P00004,conotoxin,I,1490.0,,5.63,1805.64,,synthetic construct,,P02539,alpha conotoxin,
+P00006,conotoxin,I,0.0,A superfamily,8.42,1719.65,molluscivorous,Conus omaria,Indo-Pacific,,alpha conotoxin,protein level
+P00010,conotoxin,I,5500.0,A superfamily,10.99,1350.48,vermivorous,Conus imperialis,Indo-Pacific,,alpha conotoxin,protein level
+P00015,conotoxin,I,1490.0,,5.63,1786.51,vermivorous,Conus anemone,Indo-Pacific,,alpha conotoxin,protein level
+P00022,conotoxin,I,1490.0,A superfamily,9.72,1622.58,piscivorous,Conus geographus,Indo-Pacific,,alpha conotoxin,protein level
+P00023,conotoxin,I,1490.0,A superfamily,11.81,1492.56,piscivorous,Conus magus,Indo-Pacific,,alpha conotoxin,protein level
+P00024,conotoxin,I,0.0,A superfamily,8.42,1415.5,piscivorous,Conus geographus,Indo-Pacific,,alpha conotoxin,protein level
+P00025,conotoxin,I,1490.0,A superfamily,7.88,1454.5,piscivorous,Conus striatus,Indo-Pacific,,alpha conotoxin,protein level
+P00026,conotoxin,I,1490.0,A superfamily,8.09,1310.49,piscivorous,Conus bullatus,Indo-Pacific,,alpha conotoxin,nucleic acid level
+P00028,conotoxin,I,0.0,A superfamily,10.45,1346.47,vermivorous,Conus regius,Eastern Pacific,,alpha conotoxin,protein level
+P00029,conotoxin,I,0.0,A superfamily,8.31,1331.46,vermivorous,Conus regius,Eastern Pacific,,alpha conotoxin,protein level
+P00030,conotoxin,I,1490.0,A superfamily,12.2,1428.53,vermivorous,Conus regius,Eastern Pacific,,alpha conotoxin,protein level
+P00031,conotoxin,I,1490.0,A superfamily,9.9,1568.63,vermivorous,Conus regius,Eastern Pacific,,alpha conotoxin,protein level
+P00032,conotoxin,I,0.0,A superfamily,8.42,1662.63,vermivorous,Conus regius,Eastern Pacific,,alpha conotoxin,protein level
+P00033,conotoxin,I,5500.0,,4.5,1323.42,,synthetic construct,,P00010,alpha conotoxin,
+P00034,conotoxin,I,5500.0,,7.0,1307.47,,synthetic construct,,P00010,alpha conotoxin,
+P00035,conotoxin,I,5500.0,,12.5,1349.5,,synthetic construct,,P00010,alpha conotoxin,
+P00038,conotoxin,I,0.0,A superfamily,0.0,1758.68,piscivorous,Conus purpurascens,Eastern Pacific,,alpha conotoxin,protein level
+P00039,conotoxin,I,0.0,A superfamily,6.81,1709.65,piscivorous,Conus magus,Indo-Pacific,,alpha conotoxin,protein level
+P00050,conotoxin,I,1490.0,A superfamily,7.98,2091.78,piscivorous,Conus ermineus,Eastern Atlantic and Mediterranean,,alpha conotoxin,protein level
+P00051,conotoxin,I,1490.0,A superfamily,2.19,1700.53,molluscivorous,Conus pennaceus,Indo-Pacific,,alpha conotoxin,protein level
+P00074,conotoxin,I,1490.0,A superfamily,8.31,1436.48,piscivorous,Conus geographus,Indo-Pacific,,alpha conotoxin,protein level
+P00075,conotoxin,I,1490.0,,2.19,1621.58,,synthetic construct,,P00051,alpha conotoxin,
+P00090,conotoxin,II,1490.0,A superfamily,7.0,1789.51,piscivorous,Conus striatus,Indo-Pacific,,alpha conotoxin,protein level
+P00095,conotoxin,I,1490.0,A superfamily,5.47,1571.53,molluscivorous,Conus aulicus,Indo-Pacific,,alpha conotoxin,protein level
+P00098,conotoxin,I,0.0,A superfamily,8.31,2184.85,piscivorous,Conus geographus,Indo-Pacific,,alpha conotoxin,protein level
+P00099,conotoxin,I,1490.0,A superfamily,2.19,1715.56,molluscivorous,Conus pennaceus,Indo-Pacific,,alpha conotoxin,protein level
+P00112,conotoxin,I,1490.0,,5.63,1785.58,,synthetic construct,,P00405,alpha conotoxin,
+P00132,conotoxin,I,0.0,A superfamily,8.42,1608.58,piscivorous,Conus geographus,Indo-Pacific,,alpha conotoxin,nucleic acid level
+P00404,conotoxin,I,2980.0,A superfamily,2.19,1724.57,molluscivorous,Conus aulicus,Indo-Pacific,,alpha conotoxin,protein level
+P00405,conotoxin,I,1490.0,A superfamily,4.5,1864.53,molluscivorous,Conus episcopatus,Indo-Pacific,,alpha conotoxin,protein level
+P00407,conotoxin,I,2980.0,A superfamily,7.0,1666.57,molluscivorous,Conus aulicus,Indo-Pacific,,alpha conotoxin,protein level
+P00505,conotoxin,I,1490.0,,9.76,1676.69,,synthetic construct,,P00051,alpha conotoxin,
+P00516,conotoxin,I,0.0,,6.81,2062.79,,synthetic construct,,P00039,alpha conotoxin,
+P00517,conotoxin,I,0.0,,6.81,2133.82,,synthetic construct,,P00039,alpha conotoxin,
+P00595,conotoxin,I,0.0,A superfamily,7.88,1979.82,piscivorous,Conus purpurascens,Eastern Pacific,,alpha conotoxin,nucleic acid level
+P01268,conotoxin,VI/VII,0.0,O1 superfamily,12.08,3615.49,piscivorous,Conus geographus,Indo-Pacific,,mu conotoxin,protein level
+P01386,conotoxin,VI/VII,1490.0,O1 superfamily,12.02,2637.1,piscivorous,Conus magus,Indo-Pacific,,omega conotoxin,protein level
+P01397,conotoxin,IV,0.0,A superfamily,10.95,1846.65,piscivorous,Conus obscurus,Indo-Pacific,,alpha conotoxin,protein level
+P01449,conotoxin,IV,2980.0,A superfamily,10.45,2646.92,piscivorous,Conus purpurascens,Eastern Pacific,,alpha conotoxin,protein level
+P01484,conotoxin,VI/VII,1490.0,,12.35,2747.16,piscivorous,Conus magus,Indo-Pacific,,omega conotoxin,nucleic acid level
+P01519,conotoxin,VI/VII,0.0,,11.07,3391.46,piscivorous,Conus nigropunctatus,Indo-Pacific,,delta conotoxin,protein level
+P01540,conotoxin,VI/VII,1490.0,O1 superfamily,12.59,2559.08,piscivorous,Conus striatus,Indo-Pacific,,omega conotoxin,nucleic acid level
+P01541,conotoxin,,0.0,,10.45,1161.62,,synthetic construct,,,delta conotoxin,
+P01546,conotoxin,VI/VII,4470.0,O1 superfamily,12.58,3035.15,piscivorous,Conus geographus,Indo-Pacific,,omega conotoxin,protein level
+P01552,conotoxin,VI/VII,6990.0,O1 superfamily,4.79,3034.19,molluscivorous,Conus textile,Indo-Pacific,,delta conotoxin,protein level
+P01553,conotoxin,VI/VII,6990.0,O1 superfamily,4.21,3054.16,molluscivorous,Conus textile,Indo-Pacific,,delta conotoxin,protein level
+P01554,conotoxin,VI/VII,8480.0,O1 superfamily,11.12,3486.66,molluscivorous,Conus marmoreus,Indo-Pacific,,mu conotoxin,protein level
+P01556,conotoxin,VI/VII,8480.0,O1 superfamily,10.31,3403.58,molluscivorous,Conus marmoreus,Indo-Pacific,,mu conotoxin,protein level
+P01558,conotoxin,I,2980.0,A superfamily,11.81,1541.58,piscivorous,Conus consors,Indo-Pacific,,alpha conotoxin,protein level
+P01559,conotoxin,IV,12490.0,M superfamily,10.95,1862.61,molluscivorous,Conus pennaceus,Indo-Pacific,,mu conotoxin,protein level
+P01560,conotoxin,IV,6990.0,,10.17,1789.62,molluscivorous,Conus pennaceus,Indo-Pacific,,mu conotoxin,protein level
+P01561,conotoxin,VI/VII,1490.0,O1 superfamily,5.71,3285.44,piscivorous,Conus ermineus,Eastern Atlantic and Mediterranean,,delta conotoxin,protein level
+P01566,conotoxin,III,0.0,M superfamily,12.18,2638.14,piscivorous,Conus geographus,Indo-Pacific,,mu conotoxin,protein level
+P01570,conotoxin,III,0.0,,11.48,2522.05,,synthetic construct,,P01571,mu conotoxin,
+P01571,conotoxin,III,0.0,M superfamily,11.87,2607.12,piscivorous,Conus geographus,Indo-Pacific,,mu conotoxin,protein level
+P01574,conotoxin,VIII,5960.0,S superfamily,10.64,5166.93,piscivorous,Conus radiatus,Indo-Pacific,,alpha conotoxin,protein level
+P01575,conotoxin,VI/VII,1490.0,O1 superfamily,4.5,2970.25,piscivorous,Conus ermineus,Eastern Atlantic and Mediterranean,,delta conotoxin,nucleic acid level
+P01594,conotoxin,III,2980.0,M superfamily,12.54,2664.06,piscivorous,Conus purpurascens,Eastern Pacific,,alpha conotoxin,protein level
+P01598,conotoxin,VI/VII,5500.0,O1 superfamily,11.06,3351.5,molluscivorous,Conus gloriamaris,Indo-Pacific,,delta conotoxin,protein level
+P01603,conotoxin,VI/VII,5500.0,O1 superfamily,4.03,2832.08,molluscivorous,Conus textile,Indo-Pacific,,omega conotoxin,protein level
+P01611,conotoxin,III,2980.0,M superfamily,12.81,2715.08,piscivorous,Conus purpurascens,Eastern Pacific,,alpha conotoxin,protein level
+P01612,conotoxin,IV,2980.0,,9.49,2614.93,,synthetic construct,,,alpha conotoxin,
+P01615,conotoxin,III,0.0,M superfamily,0.0,2119.75,piscivorous,Conus striatus,Indo-Pacific,,mu conotoxin,protein level
+P01616,conotoxin,III,0.0,M superfamily,12.28,2455.97,piscivorous,Conus tulipa,Indo-Pacific,,mu conotoxin,nucleic acid level
+P01620,conotoxin,VI/VII,5500.0,O1 superfamily,4.2,3346.33,piscivorous,Conus stercusmuscarum,Indo-Pacific,,delta conotoxin,nucleic acid level
+P01621,conotoxin,VI/VII,1490.0,O1 superfamily,5.63,3391.42,piscivorous,Conus magus,Indo-Pacific,,delta conotoxin,nucleic acid level
+P01622,conotoxin,VI/VII,1490.0,O1 superfamily,4.79,3444.43,piscivorous,Conus magus,Indo-Pacific,,delta conotoxin,nucleic acid level
+P01623,conotoxin,VI/VII,6990.0,O1 superfamily,4.79,3496.41,piscivorous,Conus magus,Indo-Pacific,,delta conotoxin,nucleic acid level
+P01624,conotoxin,VI/VII,6990.0,O1 superfamily,4.79,3535.42,piscivorous,Conus magus,Indo-Pacific,,delta conotoxin,protein level
+P01625,conotoxin,VI/VII,6990.0,O1 superfamily,6.6,2816.1,piscivorous,Conus catus,Indo-Pacific,,delta conotoxin,nucleic acid level
+P01626,conotoxin,VI/VII,2980.0,O1 superfamily,3.28,3358.36,piscivorous,Conus consors,Indo-Pacific,,delta conotoxin,protein level
+P01627,conotoxin,VI/VII,0.0,O1 superfamily,4.2,2961.14,piscivorous,Conus bullatus,Indo-Pacific,,delta conotoxin,nucleic acid level
+P01628,conotoxin,VI/VII,5500.0,O1 superfamily,4.51,2768.06,piscivorous,Conus aurisiacus,Indo-Pacific,,delta conotoxin,nucleic acid level
+P01630,conotoxin,VI/VII,0.0,O1 superfamily,4.2,2764.09,molluscivorous,Conus amadis,Indo-Pacific,,delta conotoxin,protein level
+P01632,conotoxin,VI/VII,1490.0,O1 superfamily,11.95,2830.16,piscivorous,Conus consors,Indo-Pacific,,omega conotoxin,protein level
+P01635,conotoxin,IV,2980.0,,10.05,3094.18,piscivorous,Conus ermineus,Eastern Atlantic and Mediterranean,,alpha conotoxin,protein level
+P01638,conotoxin,VI/VII,1490.0,O1 superfamily,11.95,2617.03,piscivorous,Conus magus,Indo-Pacific,,omega conotoxin,protein level
+P01657,conotoxin,VI/VII,1490.0,,11.55,2695.1,,synthetic construct,,P01386,omega conotoxin,
+P01658,conotoxin,VI/VII,1490.0,,12.4,2885.29,,synthetic construct,,,omega conotoxin,
+P01661,conotoxin,VI/VII,1490.0,,11.69,2609.09,,synthetic construct,,P01386,omega conotoxin,
+P01662,conotoxin,III,5500.0,M superfamily,12.8,0.0,piscivorous,Conus stercusmuscarum,Indo-Pacific,,mu conotoxin,nucleic acid level
+P01684,conotoxin,XX,13980.0,D superfamily,12.2,5272.11,vermivorous,Conus vexillum,Indo-Pacific,,alpha conotoxin,protein level
+P01685,conotoxin,XX,12490.0,D superfamily,11.73,5731.18,vermivorous,Conus vexillum,Indo-Pacific,,alpha conotoxin,protein level
+P01686,conotoxin,XX,8480.0,D superfamily,12.08,5124.01,vermivorous,Conus vexillum,Indo-Pacific,,alpha conotoxin,protein level
+P01687,conotoxin,IV,0.0,A superfamily,10.95,1804.63,,Conus pergrandis,Indo-Pacific,,alpha conotoxin,nucleic acid level
+P01688,conotoxin,IV,0.0,A superfamily,10.95,1863.66,piscivorous,Conus obscurus,Indo-Pacific,,alpha conotoxin,protein level
+P01689,conotoxin,IV,0.0,A superfamily,10.95,1790.61,,Conus pergrandis,Indo-Pacific,,alpha conotoxin,nucleic acid level
+P01690,conotoxin,III,0.0,,0.0,2922.15,piscivorous,Conus consors,Indo-Pacific,,mu conotoxin,protein level
+P01691,conotoxin,III,0.0,,0.0,2371.83,piscivorous,Conus magus,Indo-Pacific,,mu conotoxin,protein level
+P01692,conotoxin,III,5500.0,,11.53,2419.9,piscivorous,Conus catus,Indo-Pacific,,mu conotoxin,protein level
+P01693,conotoxin,III,5500.0,,10.88,2431.9,piscivorous,Conus consors,Indo-Pacific,,mu conotoxin,protein level
+P01725,conotoxin,VI/VII,1490.0,O1 superfamily,12.02,2781.15,piscivorous,Conus catus,Indo-Pacific,,omega conotoxin,protein level
+P01726,conotoxin,VI/VII,1490.0,O1 superfamily,12.55,2708.12,piscivorous,Conus catus,Indo-Pacific,,omega conotoxin,protein level
+P01727,conotoxin,VI/VII,2980.0,,12.55,2844.05,piscivorous,Conus tulipa,Indo-Pacific,,omega conotoxin,Unknown
+P01728,conotoxin,VI/VII,2980.0,,11.23,2911.16,piscivorous,Conus radiatus,Indo-Pacific,,omega conotoxin,Unknown
+P01740,conotoxin,IV,2980.0,,10.05,3098.18,piscivorous,Conus ermineus,Eastern Atlantic and Mediterranean,,alpha conotoxin,protein level
+P01741,conotoxin,VI/VII,5500.0,O1 superfamily,4.03,3176.17,molluscivorous,Conus pennaceus,Indo-Pacific,,omega conotoxin,protein level
+P01742,conotoxin,VI/VII,1490.0,O1 superfamily,3.17,3266.31,molluscivorous,Conus pennaceus,Indo-Pacific,,omega conotoxin,protein level
+P01743,conotoxin,VI/VII,2980.0,O1 superfamily,11.7,3313.38,piscivorous,Conus geographus,Indo-Pacific,,omega conotoxin,protein level
+P01744,conotoxin,III,0.0,,11.94,2592.18,piscivorous,Conus geographus,Indo-Pacific,,mu conotoxin,protein level
+P01780,conotoxin,VI/VII,4470.0,,11.06,3050.2,,synthetic construct,,P01546,omega conotoxin,
+P01793,conotoxin,VI/VII,1490.0,O1 superfamily,11.55,2737.14,piscivorous,Conus striatus,Indo-Pacific,,omega conotoxin,protein level
+P01794,conotoxin,VI/VII,1490.0,O1 superfamily,12.26,2492.0,piscivorous,Conus striatus,Indo-Pacific,,omega conotoxin,protein level
+P02228,conotoxin,III,0.0,M superfamily,12.99,0.0,piscivorous,Conus purpurascens,Eastern Pacific,,mu conotoxin,nucleic acid level
+P02478,conotoxin,,5500.0,,10.99,1438.38,,synthetic construct,,P00010,alpha conotoxin,
+P02479,conotoxin,,5500.0,,10.99,1526.27,,synthetic construct,,P00010,alpha conotoxin,
+P02496,conotoxin,I,0.0,A superfamily,8.31,1599.65,vermivorous,Conus leopardus,Indo-Pacific,,alpha conotoxin,nucleic acid level
+P02501,conotoxin,I,1490.0,,5.63,1672.47,vermivorous,Conus anemone,Indo-Pacific,,alpha conotoxin,protein level
+P02511,conotoxin,I,0.0,A superfamily,10.12,1410.54,vermivorous,Conus quercinus,Indo-Pacific,,alpha conotoxin,nucleic acid level
+P02548,conotoxin,VI/VII,1490.0,O1 superfamily,12.52,2640.03,piscivorous,Conus catus,Indo-Pacific,,omega conotoxin,protein level
+P02549,conotoxin,VI/VII,1490.0,O1 superfamily,11.59,2754.13,piscivorous,Conus catus,Indo-Pacific,,omega conotoxin,protein level
+P02553,conotoxin,VI/VII,1490.0,O1 superfamily,3.14,2712.09,molluscivorous,Conus textile,Indo-Pacific,,omega conotoxin,nucleic acid level
+P02554,conotoxin,VI/VII,6990.0,O1 superfamily,5.47,2556.89,molluscivorous,Conus textile,Indo-Pacific,,omega conotoxin,protein level
+P02555,conotoxin,VI/VII,6990.0,O1 superfamily,3.01,2546.87,molluscivorous,Conus textile,Indo-Pacific,,omega conotoxin,nucleic acid level
+P02556,conotoxin,VI/VII,1490.0,O1 superfamily,5.63,3203.09,molluscivorous,Conus textile,Indo-Pacific,,omega conotoxin,protein level
+P02557,conotoxin,VI/VII,12490.0,O1 superfamily,3.28,2960.15,molluscivorous,Conus textile,Indo-Pacific,,omega conotoxin,nucleic acid level
+P02558,conotoxin,VI/VII,9970.0,O1 superfamily,6.71,3784.54,molluscivorous,Conus textile,Indo-Pacific,,omega conotoxin,protein level
+P02581,conotoxin,VI/VII,2980.0,,11.7,3287.33,piscivorous,Conus geographus,Indo-Pacific,,omega conotoxin,protein level
+P02585,conotoxin,I,1490.0,A superfamily,12.5,1569.62,vermivorous,Conus regius,Eastern Pacific,,alpha conotoxin,nucleic acid level
+P02586,conotoxin,I,5500.0,A superfamily,12.5,1508.61,vermivorous,Conus imperialis,Indo-Pacific,,alpha conotoxin,nucleic acid level
+P02587,conotoxin,III,5500.0,M superfamily,11.73,1882.63,piscivorous,Conus kinoshitai,Indo-Pacific,,mu conotoxin,nucleic acid level
+P02588,conotoxin,XIV,0.0,L superfamily,10.17,1390.53,vermivorous,Conus litteratus,Indo-Pacific,,alpha conotoxin,nucleic acid level
+P02595,conotoxin,VI/VII,1490.0,O1 superfamily,5.63,2996.21,piscivorous,Conus purpurascens,Eastern Pacific,,delta conotoxin,protein level
+P02602,conotoxin,VI/VII,8480.0,O1 superfamily,9.19,3565.54,vermivorous,Conus pulicarius,Indo-Pacific,,omega conotoxin,nucleic acid level
+P02603,conotoxin,VI/VII,2980.0,O1 superfamily,10.24,3201.33,vermivorous,Conus pulicarius,Indo-Pacific,,omega conotoxin,nucleic acid level
+P02608,conotoxin,I,0.0,A superfamily,6.81,1650.62,,Conus pergrandis,Indo-Pacific,,alpha conotoxin,nucleic acid level
+P02675,conotoxin,VI/VII,1490.0,O1 superfamily,12.99,2693.05,piscivorous,Conus magus,Indo-Pacific,,omega conotoxin,nucleic acid level
+P02707,conotoxin,III,5500.0,M superfamily,11.62,0.0,piscivorous,Conus striatus,Indo-Pacific,,mu conotoxin,protein level
+P02708,conotoxin,VI/VII,4470.0,O1 superfamily,9.32,3917.62,piscivorous,Conus striatus,Indo-Pacific,,omega conotoxin,nucleic acid level
+P02709,conotoxin,VI/VII,5960.0,O1 superfamily,9.03,3762.47,piscivorous,Conus striatus,Indo-Pacific,,omega conotoxin,nucleic acid level
+P02710,conotoxin,VI/VII,5500.0,O1 superfamily,4.2,3327.29,piscivorous,Conus striatus,Indo-Pacific,,delta conotoxin,protein level
+P02725,conotoxin,,1490.0,,11.95,2753.11,,synthetic construct,,P01793,omega conotoxin,
+P02727,conotoxin,,1490.0,,11.95,2581.02,,synthetic construct,,P01386,omega conotoxin,
+P02728,conotoxin,,1490.0,,11.95,2581.02,,synthetic construct,,P01386,omega conotoxin,
+P02729,conotoxin,,1490.0,,12.02,2620.12,,synthetic construct,,P01386,omega conotoxin,
+P02730,conotoxin,,1490.0,,11.95,2581.02,,synthetic construct,,P01386,omega conotoxin,
+P02731,conotoxin,,1490.0,,11.6,2553.02,,synthetic construct,,P01386,omega conotoxin,
+P02732,conotoxin,,1490.0,,11.6,2553.02,,synthetic construct,,P01386,omega conotoxin,
+P02733,conotoxin,,1490.0,,11.95,2581.02,,synthetic construct,,P01386,omega conotoxin,
+P02734,conotoxin,,1490.0,,12.07,2623.1,,synthetic construct,,P01386,omega conotoxin,
+P02735,conotoxin,,0.0,,0.0,2680.09,,synthetic construct,,P01386,omega conotoxin,
+P02736,conotoxin,,0.0,,12.62,2622.09,,synthetic construct,,P01386,omega conotoxin,
+P02737,conotoxin,,0.0,,12.62,2763.98,,synthetic construct,,P01386,omega conotoxin,
+P02738,conotoxin,,1490.0,,12.02,2578.08,,synthetic construct,,P01386,omega conotoxin,
+P02739,conotoxin,,1490.0,,12.02,2622.1,,synthetic construct,,P01386,omega conotoxin,
+P02740,conotoxin,,1490.0,,12.02,2596.03,,synthetic construct,,P01386,omega conotoxin,
+P02741,conotoxin,,1490.0,,12.62,2594.09,,synthetic construct,,P01386,omega conotoxin,
+P02748,conotoxin,I,0.0,A superfamily,12.33,2593.17,vermivorous,Conus arenatus,Indo-Pacific,,alpha conotoxin,nucleic acid level
+P02752,conotoxin,I,0.0,,12.03,2323.99,vermivorous,Conus arenatus,Indo-Pacific,,alpha conotoxin,nucleic acid level
+P02753,conotoxin,,0.0,,12.33,2392.06,,synthetic construct,,P02752,alpha conotoxin,
+P02754,conotoxin,,0.0,,12.03,2338.0,,synthetic construct,,P02752,alpha conotoxin,
+P02755,conotoxin,,0.0,,12.03,2309.97,,synthetic construct,,P02752,alpha conotoxin,
+P02756,conotoxin,,0.0,,10.94,2353.96,,synthetic construct,,P02752,alpha conotoxin,
+P02832,conotoxin,III,2980.0,M superfamily,11.33,2574.11,piscivorous,Conus parius,Indo-Pacific,,alpha conotoxin,nucleic acid level
+P02850,conotoxin,I,5500.0,,10.99,1351.47,,synthetic construct,,P00010,alpha conotoxin,
+P02851,conotoxin,I,5500.0,,11.63,1381.52,,synthetic construct,,P00010,alpha conotoxin,
+P02852,conotoxin,I,5500.0,,10.99,1324.47,,synthetic construct,,P00010,alpha conotoxin,
+P02853,conotoxin,I,5500.0,,11.63,1382.51,,synthetic construct,,P00010,alpha conotoxin,
+P02871,conotoxin,VI/VII,5500.0,O1 superfamily,11.62,2947.28,vermivorous,Conus litteratus,Indo-Pacific,,mu conotoxin,nucleic acid level
+P02881,conotoxin,I,0.0,A superfamily,7.0,1656.66,molluscivorous,Conus textile,Indo-Pacific,,alpha conotoxin,protein level
+P03275,conotoxin,VI/VII,1490.0,O1 superfamily,12.26,2487.01,piscivorous,Conus striatus,Indo-Pacific,,omega conotoxin,nucleic acid level
+P03322,conotoxin,V,0.0,T superfamily,7.0,1274.49,vermivorous,Conus litteratus,Indo-Pacific,,mu conotoxin,protein level
+P03553,conotoxin,I,0.0,,8.31,2140.87,,synthetic construct,,P00098,alpha conotoxin,
+P03557,conotoxin,I,0.0,,8.31,2139.88,,synthetic construct,,P00098,alpha conotoxin,
+P03558,conotoxin,I,0.0,,8.31,2098.82,,synthetic construct,,P00098,alpha conotoxin,
+P03559,conotoxin,I,0.0,,5.8,2055.8,,synthetic construct,,P00098,alpha conotoxin,
+P03560,conotoxin,I,0.0,,10.94,2096.88,,synthetic construct,,P00098,alpha conotoxin,
+P03561,conotoxin,I,0.0,,10.94,2082.86,,synthetic construct,,P00098,alpha conotoxin,protein level
+P03562,conotoxin,I,0.0,,8.31,2124.87,,synthetic construct,,P00098,alpha conotoxin,
+P03563,conotoxin,I,0.0,,8.31,2097.86,,synthetic construct,,P00098,alpha conotoxin,
+P03564,conotoxin,I,0.0,,8.31,2114.85,,synthetic construct,,P00098,alpha conotoxin,
+P03565,conotoxin,I,0.0,,8.31,2184.85,,synthetic construct,,P00098,alpha conotoxin,
+P03566,conotoxin,I,0.0,,8.31,2112.83,,synthetic construct,,P00098,alpha conotoxin,
+P03567,conotoxin,I,0.0,,8.31,2097.86,,synthetic construct,,P00098,alpha conotoxin,
+P03568,conotoxin,I,0.0,,8.31,2097.86,,synthetic construct,,P00098,alpha conotoxin,
+P03569,conotoxin,I,0.0,,8.31,2098.86,,synthetic construct,,P00098,alpha conotoxin,
+P03570,conotoxin,I,0.0,,8.31,2124.87,,synthetic construct,,P00098,alpha conotoxin,
+P03571,conotoxin,I,0.0,,7.0,2074.84,,synthetic construct,,P00098,alpha conotoxin,
+P03572,conotoxin,I,0.0,,8.31,2112.83,,synthetic construct,,P00098,alpha conotoxin,
+P03573,conotoxin,I,500.0,,5.8,1946.75,,synthetic construct,,P00098,alpha conotoxin,
+P03574,conotoxin,I,0.0,,8.31,1827.69,,synthetic construct,,P00098,alpha conotoxin,
+P03575,conotoxin,I,0.0,,8.31,1756.65,,synthetic construct,,P00098,alpha conotoxin,
+P03576,conotoxin,I,0.0,,11.16,1698.65,,synthetic construct,,P00098,alpha conotoxin,
+P03577,conotoxin,I,0.0,,11.65,1627.61,,synthetic construct,,P00098,alpha conotoxin,
+P03578,conotoxin,III,5500.0,,11.65,1820.71,,synthetic construct,,P02587,mu conotoxin,
+P03579,conotoxin,III,5500.0,,11.73,1820.71,,synthetic construct,,P02587,mu conotoxin,
+P03580,conotoxin,III,5500.0,,11.73,1820.71,,synthetic construct,,P02587,mu conotoxin,
+P03581,conotoxin,III,5500.0,,11.73,1660.66,,synthetic construct,,P02587,mu conotoxin,
+P03582,conotoxin,I,0.0,,5.47,1907.81,,synthetic construct,,P00039,alpha conotoxin,
+P03583,conotoxin,I,0.0,,6.81,1793.77,,synthetic construct,,P00039,alpha conotoxin,
+P03584,conotoxin,III,0.0,M superfamily,12.61,2268.99,piscivorous,Conus striolatus,Indo-Pacific,,mu conotoxin,nucleic acid level
+P03585,conotoxin,III,0.0,M superfamily,0.0,2380.02,piscivorous,Conus striolatus,Indo-Pacific,,mu conotoxin,nucleic acid level
+P03647,conotoxin,I,1490.0,,5.63,1819.65,,synthetic construct,,P00004,alpha conotoxin,
+P03648,conotoxin,I,1490.0,,5.63,1789.64,,synthetic construct,,P00004,alpha conotoxin,
+P03649,conotoxin,I,1490.0,,6.62,1761.65,,synthetic construct,,P00004,alpha conotoxin,
+P03650,conotoxin,I,1490.0,,5.63,1779.62,,synthetic construct,,P00004,alpha conotoxin,
+P03651,conotoxin,I,1490.0,,4.79,1720.57,,synthetic construct,,P00004,alpha conotoxin,
+P03652,conotoxin,I,1490.0,,5.63,1762.63,,synthetic construct,,P00004,alpha conotoxin,
+P03653,conotoxin,I,0.0,,4.8,1713.61,,synthetic construct,,P00004,alpha conotoxin,
+P03654,conotoxin,I,1490.0,,6.62,1761.65,,synthetic construct,,P00004,alpha conotoxin,
+P03655,conotoxin,I,1490.0,,4.79,1739.61,,synthetic construct,,P00004,alpha conotoxin,
+P03656,conotoxin,I,1490.0,,5.63,1779.62,,synthetic construct,,P00004,alpha conotoxin,
+P03657,conotoxin,I,1490.0,,6.62,1747.63,,synthetic construct,,P00004,alpha conotoxin,
+P03658,conotoxin,I,1490.0,,5.63,1763.59,,synthetic construct,,P00004,alpha conotoxin,
+P03659,conotoxin,I,1490.0,,5.91,1876.71,,synthetic construct,,P00004,alpha conotoxin,
+P03660,conotoxin,I,1490.0,,6.62,1846.7,,synthetic construct,,P00004,alpha conotoxin,
+P03661,conotoxin,I,1490.0,,8.31,1818.7,,synthetic construct,,P00004,alpha conotoxin,
+P03662,conotoxin,I,1490.0,,6.62,1836.68,,synthetic construct,,P00004,alpha conotoxin,
+P03663,conotoxin,I,1490.0,,5.63,1777.63,,synthetic construct,,P00004,alpha conotoxin,
+P03664,conotoxin,I,1490.0,,6.62,1819.69,,synthetic construct,,P00004,alpha conotoxin,
+P03665,conotoxin,I,1490.0,,8.31,1818.7,,synthetic construct,,P00004,alpha conotoxin,
+P03666,conotoxin,I,1490.0,,5.71,1796.67,,synthetic construct,,P00004,alpha conotoxin,
+P03667,conotoxin,I,1490.0,,6.62,1836.68,,synthetic construct,,P00004,alpha conotoxin,
+P03668,conotoxin,I,1490.0,,8.31,1804.69,,synthetic construct,,P00004,alpha conotoxin,
+P03669,conotoxin,I,1490.0,,6.62,1820.65,,synthetic construct,,P00004,alpha conotoxin,
+P03670,conotoxin,I,0.0,,5.91,1770.67,,synthetic construct,,P00004,alpha conotoxin,
+P03671,conotoxin,I,1490.0,,4.95,1863.64,,synthetic construct,,P00004,alpha conotoxin,
+P03672,conotoxin,I,1490.0,,4.95,1833.63,,synthetic construct,,P00004,alpha conotoxin,
+P03673,conotoxin,I,1490.0,,4.95,1823.61,,synthetic construct,,P00004,alpha conotoxin,
+P03674,conotoxin,I,1490.0,,4.49,1764.56,,synthetic construct,,P00004,alpha conotoxin,
+P03675,conotoxin,I,1490.0,,4.95,1806.62,,synthetic construct,,P00004,alpha conotoxin,
+P03676,conotoxin,I,0.0,,4.5,1757.6,,synthetic construct,,P00004,alpha conotoxin,
+P03677,conotoxin,I,1490.0,,4.5,1783.6,,synthetic construct,,P00004,alpha conotoxin,
+P03678,conotoxin,I,1490.0,,4.95,1823.61,,synthetic construct,,P00004,alpha conotoxin,
+P03679,conotoxin,I,1490.0,,5.63,1791.62,,synthetic construct,,P00004,alpha conotoxin,
+P03680,conotoxin,I,1490.0,,4.95,1807.58,,synthetic construct,,P00004,alpha conotoxin,
+P03681,conotoxin,I,1490.0,,5.63,1804.68,,synthetic construct,,P00004,alpha conotoxin,
+P03682,conotoxin,I,1490.0,,5.63,1804.68,,synthetic construct,,P00004,alpha conotoxin,
+P03683,conotoxin,I,1490.0,,5.63,1748.62,,synthetic construct,,P00004,alpha conotoxin,
+P03684,conotoxin,I,1490.0,,6.62,1874.71,,synthetic construct,,P00004,alpha conotoxin,
+P03685,conotoxin,I,1490.0,,6.62,1803.69,,synthetic construct,,P00004,alpha conotoxin,
+P03752,conotoxin,I,1490.0,A superfamily,10.5,2202.84,vermivorous,Conus spurius,Western Atlantic and Caribbean,,alpha conotoxin,protein level
+P03833,conotoxin,I,0.0,A superfamily,11.81,1640.63,piscivorous,Conus achatinus,Indo-Pacific,,alpha conotoxin,nucleic acid level
+P03834,conotoxin,III,5500.0,M superfamily,11.8,0.0,piscivorous,Conus consors,Indo-Pacific,,mu conotoxin,protein level
+P03892,conotoxin,I,0.0,,8.42,1651.65,,synthetic construct,,P00039,alpha conotoxin,
+P03893,conotoxin,,5500.0,,12.5,1508.61,,synthetic construct,,P02586,alpha conotoxin,
+P03894,conotoxin,I,1490.0,,12.5,1485.59,,synthetic construct,,P02586,alpha conotoxin,

@@ -1,0 +1,136 @@
+﻿symbol,name,canonical_aa
+.,Any,X
+3BrBnz,N-term 3-bromobenzoyl,X
+3BrBz,N-term 3-bromobenzyl,X
+3ClBnz,N-term 3-chlorobenzoyl,X
+3ClBz,N-term 3-chlorobenzyl,X
+4ClBz,N-term 4-chlorobenzyl,X
+4FBnz,N-term 4-fluorobenzoyl,X
+4FBz,N-term 4-fluorobenzyl,X
+5-TAMRA,5-carboxytetramethylrhodamine,X
+A,Alanine,A
+A(S)Pro,4-(S)-amino-proline,P
+ABZ,2-aminobenzoyl,X
+ADMA,Asymmetric dimethylarginine,
+APro,4-(R)-amino-proline,P
+Aad,alpha-aminoadipic acid,X
+Abu,alpha-aminobutyric acid,X
+Ac,N-Acetate (on N-terminus),<empty>
+Acc,3S-3-amino-1-carboxylmethylcaprolactam,X
+Ada,2-amino-DL-dodecanoic acid,X
+Agl,Carbabridge [C2 alkene] (half),
+Alk,Carbabridge [C2 alkane] (half),
+Aly,Carbabridge [C2 alkyne] (half),
+Anc,3-aminonapthylaline-2-carboxylic acid,X
+Aop,5-amino-3-oxo-pentanoic acid,X
+Api,alpha-aminopimelic acid,X
+Asu,alpha-aminosuberic acid,X
+BHK,β-homolysine,K
+BTA,L-3-benzothienylalanine,X
+Bnz,N-term benzoyl,
+Bsc,Carbabridge [C4 alkane] (half),
+Btr,Bromotryptophan,W
+Buc,Carbabridge [C4 alkene] (half),
+BzP,Benzoyl proline,X
+C,Cystine (half),C
+CH3N,Methanimine,
+COOH-Phe,carboxyl-phenylalanine,F
+Cha,Cyclohexylalanine,X
+Chg,cyclohexaglycine,X
+Cit,Citrulline,X
+ClBzP,"3,4-chlorobenzyl proline",X
+Cy3Trz,"Cy3-1,2,3-triazole",X
+D,Aspartic acid,D
+DMF,Dimethyllysine,K
+DPA,"L-β,β-diphenylalanine",X
+Dab,"L-2,4-diaminobutyric acid",X
+Dap,"L-2,3-diaminopropionic acid",X
+Dit,Diiodotyrosine,Y
+E,Glutamic acid,E
+Eac,2-aminoethanethiol (cysteamine) cysteine,C
+F,Phenylalanine,F
+F(4-Cl),4-chloro-phenylacetyl ,F
+F(4-F),4-fluoro-phenylalanine,F
+F-(S)-Pro,4-(S)-fluoro-proline,F
+F-Pro,4-(R)-fluoro-proline,F
+FLA,L-2-furylalanine,X
+G,Glycine,G
+Gla,Gamma carboxylic glutamic acid,Q
+Gua-Pro,4-(R)-guanidino-proline,X
+HFE,L-homophenylalanine,F
+HLE,Homoleucine,L
+HLY,L-homolysine,K
+HOBzP,4-hydroxybenzyl proline,X
+Hcy,Homocysteine,C
+Hse,Homoserine,S
+Huc,Carbabridge [C7 alkene] (half),X
+Ity,3-iodotyrosine,Y
+K,Lysine,K
+L-Dtn,"L-4,5-dithiolnorvaline",X
+MeOBzP,4-Methyloxide-benzyl proline,X
+Meg,Mercaptoethylglycine [oxidised],X
+Mox,Oxomethionine,M
+Mpc,4-mercaptoproline [reduced],P
+Msc,2-mercaptoethanesulfonate-cysteine,
+Mty,O-methyl-tyrosine,Y
+Mtz,"2,2-dimethylthiazolidine",
+N,Asparagine,N
+NOBzP,4-nitrous-benzyl proline,
+Nal,1-naphtyl-alanine,
+Nar,Norarginine,R
+Nle,Norleucine,L
+Nmc,N-methyl (half) cystine,C
+Nmg,N-methyl glycine,G
+Nmv,N-methyl valine,V
+NzP,Naphthyl-2-carboxyl proline,P
+O,4-Hydroxyproline,P
+Orn,Ornithine,X
+PYA,L-3-pyridylalanine,X
+Pbf,Benzoylphenylalanine,X
+Pen,L-Penicillamine,X
+Qin,3-quinoline carboxylic acid,X
+R,Arginine,R
+S,Serine,S
+Scc,S-cysteinylated cysteine,
+Sec,Selenocysteine,U
+Sgc,Glutathionylated cysteine,X
+Smc,S-Methylcystine,X
+Smtc,S-methylthio cysteine,
+TBG,Tert-Butyl Glycine,X
+THI,L-2-thienylalanine,X
+Tcc,[2-mercaptoethyl]trimethylammonium (thiocholine) cysteine,X
+Tic,"1,2,3,4-l-tetrahydroisoquinoline-3-carboxylic acid",X
+Tiq,Tetrahydroisoquinoline-1-carboxylic acid,X
+U,Selenocystine (half),U
+Z,Pyroglutamic acid,X
+a,D-alanine,A
+bA,β-Alanine,A
+benz-Pro,4-(R)-benzyl-proline,X
+bet-Pro,4-(R)-betainamidyl-proline,X
+bhY,L-β-homotyrosine,Y
+c,D-cysteine,C
+d,D-aspartic acid,D
+f,D-phenylalanine,F
+gSr,glycosylated serine,S
+gTr,glycosylated threonine,T
+h,D-histidine,H
+hArg,Homoarginine,R
+hLy,5-hydroxy-lysine,X
+hVa,gamma-hydroxy-D-valine,X
+k,D-lysine,K
+l,D-leucine,L
+m,D-methionine,M
+n,D-asparagine,N
+naph-Prot,4-(R)-1-naphtylmehyl-proline,X
+nh2,C-term amidation,<empty>
+p,D-proline,P
+phi-(S)-Pro,4-(S)-phenyl-proline,X
+phi-Pro,4-(R)-phenyl-proline,X
+phi3-Pro,3-(S)-phenyl-proline,X
+phi5-Pro,5-(R)-phenyl-proline,X
+r,D-arginine,R
+s,D-serine,S
+sTy,Sulfotyrosine,X
+w,D-tryptophan,W
+y,D-tyrosine,Y
+β3hY,β3-homotyrosine,Y
