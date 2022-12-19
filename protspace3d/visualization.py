@@ -467,7 +467,16 @@ class Visualizator:
 
         return toast
 
-    def get_graph_container(self):
+    def get_graph_container(self, umap_paras: dict):
+        # UMAP parameters in string format
+        umap_paras_string = str(
+            str(umap_paras["n_neighbours"])
+            + " ; "
+            + str(umap_paras["min_dist"])
+            + " ; "
+            + umap_paras["metric"],
+        )
+
         graph_container = (
             dbc.Offcanvas(
                 id="graph_offcanvas",
@@ -502,7 +511,7 @@ class Visualizator:
                                         type="number",
                                         min=0,
                                         step=1,
-                                        value=25,
+                                        value=umap_paras["n_neighbours"],
                                     ),
                                 ],
                                 width=4,
@@ -515,7 +524,7 @@ class Visualizator:
                                         type="number",
                                         min=0,
                                         step=0.1,
-                                        value=0.5,
+                                        value=umap_paras["min_dist"],
                                     ),
                                 ],
                                 width=4,
@@ -525,7 +534,7 @@ class Visualizator:
                                     dcc.Markdown("metric:"),
                                     dbc.Input(
                                         id="metric_input",
-                                        value="euclidean",
+                                        value=umap_paras["metric"],
                                         debounce=True,
                                     ),
                                 ],
@@ -541,7 +550,8 @@ class Visualizator:
                     ),
                     dcc.Dropdown(
                         id="last_umap_paras_dd",
-                        options=[],
+                        value=umap_paras_string,
+                        options=[umap_paras_string],
                         clearable=False,
                         searchable=False,
                     ),
@@ -607,7 +617,7 @@ class Visualizator:
 
         return graph_container
 
-    def init_app_pdb(self, original_id_col: list):
+    def init_app_pdb(self, original_id_col: list, umap_paras: dict):
         """
         Initializes app & Builds html layout for Dash
         :return: layout
@@ -630,7 +640,7 @@ class Visualizator:
                 dbc.Row(
                     [
                         dbc.Col(
-                            self.get_graph_container(),
+                            self.get_graph_container(umap_paras),
                             id="left_col",
                             width=6,
                             style={"border-right": "solid black 1px"},
@@ -858,7 +868,7 @@ class Visualizator:
 
         return app
 
-    def init_app(self):
+    def init_app(self, umap_paras: dict):
         """
         Initializes app & Builds html layout for Dash
         :return: layout
@@ -879,7 +889,7 @@ class Visualizator:
                 dbc.Row(
                     [
                         dbc.Col(
-                            self.get_graph_container(),
+                            self.get_graph_container(umap_paras),
                             width=12,
                         ),
                     ]

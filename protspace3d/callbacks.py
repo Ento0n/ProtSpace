@@ -451,6 +451,12 @@ def get_callbacks(
         Output("min_dist_input", "disabled"),
         Output("metric_input", "disabled"),
         Output("last_umap_paras_dd", "options"),
+        Output("last_umap_paras_dd", "disabled"),
+        Output("umap_recalculation_button", "disabled"),
+        Output("n_neighbours_input", "value"),
+        Output("min_dist_input", "value"),
+        Output("metric_input", "value"),
+        Output("last_umap_paras_dd", "value"),
         Input("dd_menu", "value"),
         Input("dim_red_radio", "value"),
         Input("n_neighbours_input", "value"),
@@ -484,42 +490,13 @@ def get_callbacks(
             raise PreventUpdate
 
         # Prevent constant resetting of the graph
-        if ctx.triggered_id not in [
-            "dd_menu",
-            "dim_red_radio",
-            "umap_recalculation_button",
-            "last_umap_paras_dd",
-        ]:
+        if ctx.triggered_id in ["n_neighbours_input", "min_dist_input", "metric_input"]:
             raise PreventUpdate
 
         # load df into inner scope so that it can be modified
         nonlocal df
 
         umap_axis_names = ["x_umap", "y_umap", "z_umap"]
-
-        # If UMAP parameters are changed and accepted
-        if ctx.triggered_id == "umap_recalculation_button":
-            umap_paras["n_neighbours"] = n_neighbours
-            umap_paras["min_dist"] = min_dist
-            umap_paras["metric"] = metric
-
-            df.drop(labels=umap_axis_names, axis="columns", inplace=True)
-
-            df_umap = DataPreprocessor.generate_umap(embeddings, umap_paras)
-            df_umap.index = embedding_uids
-
-            df = df.join(df_umap, how="outer")
-
-            coords_dict = dict(
-                x_umap=df_umap["x_umap"].to_list(),
-                y_umap=df_umap["y_umap"].to_list(),
-                z_umap=df_umap["z_umap"].to_list(),
-            )
-
-            umap_paras_string = (
-                str(n_neighbours) + " ; " + str(min_dist) + " ; " + metric
-            )
-            umap_paras_dict[umap_paras_string] = coords_dict
 
         # If umap parameters are selected in the dropdown menu
         if ctx.triggered_id == "last_umap_paras_dd":
@@ -534,6 +511,41 @@ def get_callbacks(
             df["x_umap"] = coords["x_umap"]
             df["y_umap"] = coords["y_umap"]
             df["z_umap"] = coords["z_umap"]
+
+        # If UMAP parameters are changed and accepted
+        if ctx.triggered_id == "umap_recalculation_button":
+            umap_paras["n_neighbours"] = n_neighbours
+            umap_paras["min_dist"] = min_dist
+            umap_paras["metric"] = metric
+
+            # String representation of the current UMAP parameters
+            umap_paras_string = (
+                str(n_neighbours) + " ; " + str(min_dist) + " ; " + metric
+            )
+
+            df.drop(labels=umap_axis_names, axis="columns", inplace=True)
+
+            df_umap = DataPreprocessor.generate_umap(embeddings, umap_paras)
+            df_umap.index = embedding_uids
+
+            df = df.join(df_umap, how="outer")
+
+            coords_dict = dict(
+                x_umap=df_umap["x_umap"].to_list(),
+                y_umap=df_umap["y_umap"].to_list(),
+                z_umap=df_umap["z_umap"].to_list(),
+            )
+
+            umap_paras_dict[umap_paras_string] = coords_dict
+        # String representation of UMAP parameters still to be created if not button used
+        else:
+            umap_paras_string = (
+                str(umap_paras["n_neighbours"])
+                + " ; "
+                + str(umap_paras["min_dist"])
+                + " ; "
+                + umap_paras["metric"]
+            )
 
         # Set up umap flag
         umap_flag = True if dim_red == "UMAP" else False
@@ -557,6 +569,12 @@ def get_callbacks(
             disabled,
             disabled,
             list(umap_paras_dict.keys()),
+            disabled,
+            disabled,
+            umap_paras["n_neighbours"],
+            umap_paras["min_dist"],
+            umap_paras["metric"],
+            umap_paras_string,
         )
 
     @app.callback(

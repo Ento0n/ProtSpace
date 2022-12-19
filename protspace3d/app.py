@@ -338,9 +338,9 @@ def setup():
 
     # --- APP creation ---
     if pdb_flag:
-        application = visualizator.init_app_pdb(ids)
+        application = visualizator.init_app_pdb(ids, umap_paras)
     else:
-        application = visualizator.init_app()
+        application = visualizator.init_app(umap_paras)
 
     # html cols set or not
     html_flag = True if html_cols is not None else False
