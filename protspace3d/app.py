@@ -379,6 +379,19 @@ def main():
 
     # don't start server if html is needed
     if not html:
+        # Create umap paras dictionary
+        umap_paras_dict = dict()
+        n_neighbours = umap_paras["n_neighbours"]
+        min_dist = umap_paras["min_dist"]
+        metric = umap_paras["metric"]
+        umap_paras_string = str(n_neighbours) + " ; " + str(min_dist) + " ; " + metric
+        coords_dict = dict(
+            x_umap=df["x_umap"].to_list(),
+            y_umap=df["y_umap"].to_list(),
+            z_umap=df["z_umap"].to_list(),
+        )
+        umap_paras_dict[umap_paras_string] = coords_dict
+
         # different callbacks for different layout
         if pdb:
             get_callbacks(
@@ -390,6 +403,7 @@ def main():
                 csv_header,
                 embeddings,
                 embedding_uids,
+                umap_paras_dict,
             )
             get_callbacks_pdb(app, df, struct_container, orig_id_col)
         else:
@@ -402,6 +416,7 @@ def main():
                 csv_header,
                 embeddings,
                 embedding_uids,
+                umap_paras_dict,
             )
 
         app.run_server(debug=True, port=port)

@@ -539,6 +539,12 @@ class Visualizator:
                         color="dark",
                         outline=True,
                     ),
+                    dcc.Dropdown(
+                        id="last_umap_paras_dd",
+                        options=[],
+                        clearable=False,
+                        searchable=False,
+                    ),
                 ],
                 style={"width": "50%"},
                 placement="end",

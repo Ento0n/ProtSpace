@@ -443,18 +443,21 @@ def get_callbacks(
     csv_header: list[str],
     embeddings,
     embedding_uids,
+    umap_paras_dict: dict,
 ):
     @app.callback(
         Output("graph", "figure"),
         Output("n_neighbours_input", "disabled"),
         Output("min_dist_input", "disabled"),
         Output("metric_input", "disabled"),
+        Output("last_umap_paras_dd", "options"),
         Input("dd_menu", "value"),
         Input("dim_red_radio", "value"),
         Input("n_neighbours_input", "value"),
         Input("min_dist_input", "value"),
         Input("metric_input", "value"),
         Input("umap_recalculation_button", "n_clicks"),
+        Input("last_umap_paras_dd", "value"),
     )
     def update_graph(
         selected_value: str,
@@ -463,6 +466,7 @@ def get_callbacks(
         min_dist: float,
         metric: str,
         recal_button_clicks: int,
+        umap_paras_dd_value: str,
     ):
         """
         Renders new graph for selected drop down menu value
@@ -484,11 +488,14 @@ def get_callbacks(
             "dd_menu",
             "dim_red_radio",
             "umap_recalculation_button",
+            "last_umap_paras_dd",
         ]:
             raise PreventUpdate
 
         # load df into inner scope so that it can be modified
         nonlocal df
+
+        umap_axis_names = ["x_umap", "y_umap", "z_umap"]
 
         # If UMAP parameters are changed and accepted
         if ctx.triggered_id == "umap_recalculation_button":
@@ -496,13 +503,37 @@ def get_callbacks(
             umap_paras["min_dist"] = min_dist
             umap_paras["metric"] = metric
 
-            UMAP_AXIS_NAMES = ["x_umap", "y_umap", "z_umap"]
-            df.drop(labels=UMAP_AXIS_NAMES, axis="columns", inplace=True)
+            df.drop(labels=umap_axis_names, axis="columns", inplace=True)
 
             df_umap = DataPreprocessor.generate_umap(embeddings, umap_paras)
             df_umap.index = embedding_uids
 
             df = df.join(df_umap, how="outer")
+
+            coords_dict = dict(
+                x_umap=df_umap["x_umap"].to_list(),
+                y_umap=df_umap["y_umap"].to_list(),
+                z_umap=df_umap["z_umap"].to_list(),
+            )
+
+            umap_paras_string = (
+                str(n_neighbours) + " ; " + str(min_dist) + " ; " + metric
+            )
+            umap_paras_dict[umap_paras_string] = coords_dict
+
+        # If umap parameters are selected in the dropdown menu
+        if ctx.triggered_id == "last_umap_paras_dd":
+
+            splits = umap_paras_dd_value.split(" ; ")
+            umap_paras["n_neighbours"] = splits[0]
+            umap_paras["min_dist"] = splits[1]
+            umap_paras["metric"] = splits[2]
+
+            coords = umap_paras_dict[umap_paras_dd_value]
+            df.drop(labels=umap_axis_names, axis="columns", inplace=True)
+            df["x_umap"] = coords["x_umap"]
+            df["y_umap"] = coords["y_umap"]
+            df["z_umap"] = coords["z_umap"]
 
         # Set up umap flag
         umap_flag = True if dim_red == "UMAP" else False
@@ -520,7 +551,13 @@ def get_callbacks(
         if not umap_flag:
             disabled = True
 
-        return fig, disabled, disabled, disabled
+        return (
+            fig,
+            disabled,
+            disabled,
+            disabled,
+            list(umap_paras_dict.keys()),
+        )
 
     @app.callback(
         Output("disclaimer_modal", "is_open"),
