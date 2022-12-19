@@ -10,7 +10,6 @@ import numpy as np
 import pandas as pd
 from pandas import DataFrame
 
-import umap
 import re
 
 from visualization import Visualizator
@@ -558,6 +557,8 @@ class DataPreprocessor:
         # visualize high-dimensional embeddings with dimensionality reduction (here: umap)
         # Tutorial: https://umap-learn.readthedocs.io/en/latest/basic_usage.html
         # Parameters: https://umap-learn.readthedocs.io/en/latest/parameters.html
+        import umap
+
         fit = umap.UMAP(
             n_neighbors=umap_paras["n_neighbours"],
             min_dist=umap_paras["min_dist"],
