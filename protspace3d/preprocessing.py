@@ -387,6 +387,8 @@ class DataPreprocessor:
                     csv_uids,
                     df_csv,
                     index_name,
+                    embeddings,
+                    embedding_uids,
                 )
             else:
                 # Check each column x, y & z for incompleteness
@@ -398,6 +400,8 @@ class DataPreprocessor:
                         csv_uids,
                         df_csv,
                         index_name,
+                        embeddings,
+                        embedding_uids,
                     )
                 # columns x, y & z are fine
                 else:
@@ -435,6 +439,8 @@ class DataPreprocessor:
                 csv_uids,
                 df_csv,
                 index_name,
+                embeddings,
+                embedding_uids,
             )
 
         return df_embeddings, csv_header, embeddings, embedding_uids
@@ -446,6 +452,8 @@ class DataPreprocessor:
         csv_uids: list[str],
         df_csv: DataFrame,
         index_name: str,
+        embs: np.ndarray,
+        embs_uids: list[str],
     ):
         """
         Use data and create corresponding dataframe
@@ -456,15 +464,9 @@ class DataPreprocessor:
         :param index_name: header of index column
         :return: complete dataframe and list of its headers
         """
-        # read embeddings from HDF5 format
-        embeddings = self._get_embeddings(emb_h5file=hdf_path, csv_uids=csv_uids)
 
         # check for proteins in csv but not in h5 file
-        self._check_csv_uids(embeddings=embeddings, csv_uids=csv_uids)
-
-        # matrix of values (protein-embeddings); n_proteins x embedding_dim
-        uids, embs = zip(*embeddings.items())
-        embs = np.vstack(embs)
+        self._check_csv_uids(embeddings_uids=embs_uids, csv_uids=csv_uids)
 
         # data should be n_proteins x 1024 (ProtT5) OR n_proteins x 128 (ProtTucker)
         print(f"Shape of embeddings (num_proteins x embedding dim): {embs.shape}")
@@ -478,9 +480,9 @@ class DataPreprocessor:
 
         # generate dimensionality reduction components and merge it to CSV DataFrame
         df_dim_red_umap = self.generate_umap(embs, self.umap_paras)
-        df_dim_red_umap.index = uids
+        df_dim_red_umap.index = embs_uids
         df_dim_red_pca = self._generate_pca(embs)
-        df_dim_red_pca.index = uids
+        df_dim_red_pca.index = embs_uids
 
         df_embeddings = df_csv.join([df_dim_red_umap, df_dim_red_pca], how="outer")
         csv_header = [
@@ -488,8 +490,6 @@ class DataPreprocessor:
             for header in df_embeddings.columns
             if header not in self.AXIS_NAMES and header != "variance"
         ]
-
-        print(f"df embeddings ids: {df_embeddings.index.to_list()[27:32]}")
 
         # save dataframe
         df_embeddings.to_csv(
@@ -636,7 +636,7 @@ class DataPreprocessor:
         return pres_df_csv
 
     @staticmethod
-    def _check_csv_uids(embeddings: dict[str, np.ndarray], csv_uids: list[str]):
+    def _check_csv_uids(embeddings_uids: list[str], csv_uids: list[str]):
         """
         Check unique IDs in csv but not in h5 file
         :param embeddings: data of the h5 file
@@ -647,7 +647,7 @@ class DataPreprocessor:
         # iterate over csv uids
         for uid in csv_uids:
 
-            if uid not in embeddings.keys():
+            if uid not in embeddings_uids:
                 missing.append(uid)
 
         if (nr_missed := (len(missing))) > 0:

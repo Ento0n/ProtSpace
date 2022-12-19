@@ -1,4 +1,4 @@
-mapped_id,organism,prot_type,toxin_class,gene_superfamily,cystein_framework,pharmacological_family,evidence,x_umap,y_umap,z_umap,x_pca,y_pca,z_pca,variance
+mapped_id,organism,prot_type,toxin_class,gene_superfamily,pharmacological_family,cystein_framework,evidence,x_umap,y_umap,z_umap,x_pca,y_pca,z_pca,variance
 P00001,Conus striatus,Wild type,conotoxin,A superfamily,alpha conotoxin,I,protein level,8.46506,0.23125963,2.7011304,-1.0968826,-1.6157432,-0.52987707,29.219409823417664
 P00006,Conus omaria,Wild type,conotoxin,A superfamily,alpha conotoxin,I,protein level,6.1539946,0.18686026,4.426315,-1.7395927,-1.1498364,-0.62547857,12.976540625095367
 P00010,Conus imperialis,Wild type,conotoxin,A superfamily,alpha conotoxin,I,protein level,8.264976,0.10337245,3.5111556,-1.4674215,-1.4416912,-0.59947866,9.68683511018753

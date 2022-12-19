@@ -485,7 +485,6 @@ def get_callbacks(
             "dim_red_radio",
             "umap_recalculation_button",
         ]:
-            print("break!")
             raise PreventUpdate
 
         # load df into inner scope so that it can be modified
