@@ -479,6 +479,15 @@ def get_callbacks(
         if selected_value is None:
             raise PreventUpdate
 
+        # Prevent constant resetting of the graph
+        if ctx.triggered_id not in [
+            "dd_menu",
+            "dim_red_radio",
+            "umap_recalculation_button",
+        ]:
+            print("break!")
+            raise PreventUpdate
+
         # load df into inner scope so that it can be modified
         nonlocal df
 
