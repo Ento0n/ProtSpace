@@ -15,6 +15,8 @@ import pandas as pd
 import dash_bootstrap_components as dbc
 
 from pandas import DataFrame
+import json
+from statistics import mean
 
 
 def to_mapped_id(sel_original_seq_ids: list, original_id_col: list, df: DataFrame):
@@ -453,6 +455,7 @@ def get_callbacks(
     embedding_uids,
     umap_paras_dict: dict,
     fasta_dict: dict,
+    struct_container: StructureContainer,
 ):
     @app.callback(
         Output("graph", "figure"),
@@ -666,6 +669,23 @@ def get_callbacks(
         info_header = seq_id
 
         info_text = []
+
+        json_d = struct_container.get_json_dir()
+        if json_d is not None:
+            json_file = json_d / f"{seq_id}.json"
+            if json_file.is_file():
+                with open(json_file) as f:
+                    json_dict = json.load(f)
+
+                ptm = json_dict["ptm"]
+                plddt = mean(json_dict["plddt"])
+
+                info_text.append(
+                    dbc.ListGroupItem(
+                        [html.P(f"plDDT: {plddt}"), html.P(f"pTM: {ptm}")]
+                    )
+                )
+
         if fasta_dict is not None:
             if seq_id in fasta_dict.keys():
                 sequence = str(fasta_dict[seq_id].seq)

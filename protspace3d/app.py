@@ -56,6 +56,9 @@ class LoadConfFile(argparse.Action):
         if "pdb" in dictionary.keys():
             arguments.append("--pdb")
             arguments.append(str(dictionary["pdb"]))
+        if "json" in dictionary.keys():
+            arguments.append("--json")
+            arguments.append(str(dictionary["json"]))
         if "reset" in dictionary.keys():
             if dictionary["reset"]:
                 arguments.append("--reset")
@@ -85,7 +88,8 @@ class Parser:
             self.csv_sep,
             self.uid_col,
             self.html_cols,
-            self.pdb_flag,
+            self.pdb_d,
+            self.json_d,
             self.reset,
             self.conf,
             self.n_neighbours,
@@ -106,7 +110,8 @@ class Parser:
             self.csv_sep,
             self.uid_col,
             self.html_cols,
-            self.pdb_flag,
+            self.pdb_d,
+            self.json_d,
             self.reset,
             self.conf,
             self.n_neighbours,
@@ -200,6 +205,12 @@ class Parser:
             type=str,
             help="Path the directory that holds the .pdb files.",
         )
+        parser.add_argument(
+            "--json",
+            required=False,
+            type=str,
+            help="Path the directory that holds the .json files.",
+        )
         # Optional argument
         parser.add_argument(
             "--reset",
@@ -239,6 +250,7 @@ class Parser:
         uid_col = args.uid_col
         html_cols = args.html_cols
         pdb_d = Path(args.pdb) if args.pdb is not None else None
+        json_d = Path(args.json) if args.json is not None else None
         reset = args.reset
         conf_file = args.configuration
         n_neighbours = args.n_neighbours
@@ -255,6 +267,7 @@ class Parser:
             uid_col,
             html_cols,
             pdb_d,
+            json_d,
             reset,
             conf_file,
             n_neighbours,
@@ -282,6 +295,7 @@ def setup():
         uid_col,
         html_cols,
         pdb_d,
+        json_d,
         reset,
         conf,
         n_neighbours,
@@ -343,6 +357,9 @@ def setup():
     if pdb_flag:
         pdb_d = Path(pdb_d)
         structure_container = data_preprocessor.init_structure_container(pdb_d)
+
+    if json_d is not None:
+        structure_container.set_json_dir(json_d)
 
     # Create visualization object
     visualizator = Visualizator(fig, csv_header)
@@ -424,6 +441,7 @@ def main():
                 embedding_uids,
                 umap_paras_dict,
                 fasta_dict,
+                struct_container,
             )
             get_callbacks_pdb(app, df, struct_container, orig_id_col)
         else:
@@ -438,6 +456,7 @@ def main():
                 embedding_uids,
                 umap_paras_dict,
                 fasta_dict,
+                struct_container,
             )
 
         app.run_server(debug=True, port=port)

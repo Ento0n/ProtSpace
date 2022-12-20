@@ -19,6 +19,7 @@ from visualization import Visualizator
 class StructureContainer(object):
     def __init__(self, pdb_d):
         self.pdb_d = pdb_d
+        self.json_d = None
         self.point_number = None
         self.curve_number = None
         self.public_seq_id = None
@@ -36,6 +37,12 @@ class StructureContainer(object):
 
     def get_structure_dir(self):
         return self.pdb_d
+
+    def set_json_dir(self, json_d: Path):
+        self.json_d = json_d
+
+    def get_json_dir(self) -> Path:
+        return self.json_d
 
     def set_structure_ids(self, seq_ids):
         if isinstance(seq_ids, list):
