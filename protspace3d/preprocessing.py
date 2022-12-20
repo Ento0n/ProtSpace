@@ -9,6 +9,7 @@ from scipy.spatial.distance import pdist, squareform
 import numpy as np
 import pandas as pd
 from pandas import DataFrame
+from Bio import SeqIO
 
 import re
 
@@ -72,6 +73,7 @@ class DataPreprocessor:
         output_d: Path,
         hdf_path: Path,
         csv_path: Path,
+        fasta_path: Path,
         csv_separator: str,
         uid_col: int,
         html_cols: list[str],
@@ -81,6 +83,7 @@ class DataPreprocessor:
         self.output_d = output_d
         self.hdf_path = hdf_path
         self.csv_path = csv_path
+        self.fasta_path = fasta_path
         self.csv_separator = csv_separator
         self.uid_col = uid_col
         self.html_cols = html_cols
@@ -135,6 +138,11 @@ class DataPreprocessor:
         # get UIDs
         csv_uids = df_csv.index.to_list()
 
+        # get sequences if fasta path is given
+        fasta_dict = None
+        if self.fasta_path is not None:
+            fasta_dict = self._read_fasta()
+
         df_embeddings, csv_header, embeddings, embedding_uids = self._read_df_csv(
             self.output_d,
             df_csv,
@@ -171,6 +179,7 @@ class DataPreprocessor:
             original_id_col,
             embeddings,
             embedding_uids,
+            fasta_dict,
         )
 
     def _check_files(
@@ -230,6 +239,11 @@ class DataPreprocessor:
                 mapped_flag = True
 
         return mapped_flag
+
+    def _read_fasta(self):
+        fasta_sequences = SeqIO.parse(open(self.fasta_path), "fasta")
+        fasta_dict = SeqIO.to_dict(fasta_sequences)
+        return fasta_dict
 
     @staticmethod
     def _get_headers(csv_path: Path, separator: str):

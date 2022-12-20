@@ -41,6 +41,9 @@ class LoadConfFile(argparse.Action):
         if "csv" in dictionary.keys():
             arguments.append("--csv")
             arguments.append(str(dictionary["csv"]))
+        if "fasta" in dictionary.keys():
+            arguments.append("--fasta")
+            arguments.append(str(dictionary["fasta"]))
         if "sep" in dictionary.keys():
             arguments.append("--sep")
             arguments.append(str(dictionary["sep"]))
@@ -78,6 +81,7 @@ class Parser:
             self.output_d,
             self.hdf_path,
             self.csv_path,
+            self.fasta_path,
             self.csv_sep,
             self.uid_col,
             self.html_cols,
@@ -98,6 +102,7 @@ class Parser:
             self.output_d,
             self.hdf_path,
             self.csv_path,
+            self.fasta_path,
             self.csv_sep,
             self.uid_col,
             self.html_cols,
@@ -148,6 +153,13 @@ class Parser:
             required=False,
             type=str,
             help="Path to CSV-file containg groups/features by which the dots in the 3D-plot are colored",
+        )
+        parser.add_argument(
+            "-f",
+            "--fasta",
+            required=False,
+            type=str,
+            help="Path to fasta file containing the ID and the according sequence.",
         )
         # Optional argument
         parser.add_argument(
@@ -222,6 +234,7 @@ class Parser:
         output_d = Path(args.output) if args.output is not None else None
         hdf_path = Path(args.hdf) if args.hdf is not None else None
         csv_path = Path(args.csv) if args.csv is not None else None
+        fasta_path = Path(args.fasta) if args.fasta is not None else None
         csv_sep = args.sep
         uid_col = args.uid_col
         html_cols = args.html_cols
@@ -237,6 +250,7 @@ class Parser:
             output_d,
             hdf_path,
             csv_path,
+            fasta_path,
             csv_sep,
             uid_col,
             html_cols,
@@ -263,6 +277,7 @@ def setup():
         output_d,
         hdf_path,
         csv_path,
+        fasta_path,
         csv_sep,
         uid_col,
         html_cols,
@@ -304,6 +319,7 @@ def setup():
         output_d,
         hdf_path,
         csv_path,
+        fasta_path,
         csv_sep,
         uid_col,
         html_cols,
@@ -319,6 +335,7 @@ def setup():
         original_id_col,
         embeddings,
         embedding_uids,
+        fasta_dict,
     ) = data_preprocessor.data_preprocessing()
 
     # initialize structure container if flag set
@@ -358,6 +375,7 @@ def setup():
         port,
         embeddings,
         embedding_uids,
+        fasta_dict,
     )
 
 
@@ -375,6 +393,7 @@ def main():
         port,
         embeddings,
         embedding_uids,
+        fasta_dict,
     ) = setup()
 
     # don't start server if html is needed
@@ -404,6 +423,7 @@ def main():
                 embeddings,
                 embedding_uids,
                 umap_paras_dict,
+                fasta_dict,
             )
             get_callbacks_pdb(app, df, struct_container, orig_id_col)
         else:
@@ -417,6 +437,7 @@ def main():
                 embeddings,
                 embedding_uids,
                 umap_paras_dict,
+                fasta_dict,
             )
 
         app.run_server(debug=True, port=port)

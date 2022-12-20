@@ -6,11 +6,13 @@ from preprocessing import StructureContainer
 from preprocessing import DataPreprocessor
 
 from pathlib import Path
-from dash import Input, Output
+from dash import Input, Output, html
 from dash.exceptions import PreventUpdate
 import dash
 import dash_bio.utils.ngl_parser as ngl_parser
 import pandas as pd
+
+import dash_bootstrap_components as dbc
 
 from pandas import DataFrame
 
@@ -149,6 +151,27 @@ def handle_highlighting(
     )
 
 
+def clickData_to_seqID(click_data, df: DataFrame):
+    # dict with data of clickdata
+    points = click_data["points"][0]
+    # class_index value and it's index number
+    index_num = int(points["pointNumber"])
+    class_index = points["curveNumber"]
+
+    # extract df_row of selected protein
+    class_df = df[df["class_index"] == class_index]
+    df_row = class_df.iloc[index_num]
+    # add missing name to series
+    name = pd.Series(class_df.index[index_num])
+    name.index = ["Name"]
+    df_row = pd.concat([name, df_row])
+
+    # extract sequence ID
+    seq_id = df_row["Name"]
+
+    return seq_id
+
+
 def get_callbacks_pdb(app, df, struct_container, original_id_col):
     @app.callback(
         Output("ngl_molecule_viewer", "data"),
@@ -170,7 +193,7 @@ def get_callbacks_pdb(app, df, struct_container, original_id_col):
         Input("reset_view_button", "n_clicks"),
     )
     def display_molecule(
-        clickdata,
+        click_data,
         dd_molecules: list,
         range_start: int,
         range_end: int,
@@ -179,7 +202,7 @@ def get_callbacks_pdb(app, df, struct_container, original_id_col):
     ):
         """
         callback function to handle the displaying of the molecule
-        :param clickdata: given data by clicking on a datapoint in the 3D plot
+        :param click_data: given data by clicking on a datapoint in the 3D plot
         :param dd_molecules: selected molecules in the dropdown menu
         :param range_start: in the dropdown menu selected start
         :param range_end: in the dropdown menu selected end
@@ -207,22 +230,7 @@ def get_callbacks_pdb(app, df, struct_container, original_id_col):
 
         # triggered by click on graph
         if ctx.triggered_id == "graph":
-            # dict with data of clickdata
-            points = clickdata["points"][0]
-            # class_index value and it's index number
-            index_num = int(points["pointNumber"])
-            class_index = points["curveNumber"]
-
-            # extract df_row of selected protein
-            class_df = df[df["class_index"] == class_index]
-            df_row = class_df.iloc[index_num]
-            # add missing name to series
-            name = pd.Series(class_df.index[index_num])
-            name.index = ["Name"]
-            df_row = pd.concat([name, df_row])
-
-            # extract sequence ID
-            seq_id = df_row["Name"]
+            seq_id = clickData_to_seqID(click_data, df)
 
             if seq_id not in seq_ids:
                 # add selected sequence ID to already selected IDs
@@ -444,6 +452,7 @@ def get_callbacks(
     embeddings,
     embedding_uids,
     umap_paras_dict: dict,
+    fasta_dict: dict,
 ):
     @app.callback(
         Output("graph", "figure"),
@@ -639,3 +648,39 @@ def get_callbacks(
                 fig.write_html(output_d / f"3Dspace_{header}_{dim_red}.html")
 
             return True
+
+    @app.callback(
+        Output("info_toast", "header"),
+        Output("info_toast", "children"),
+        Output("info_toast", "is_open"),
+        Input("graph", "clickData"),
+    )
+    def show_info_toast(click_data):
+        # Check whether an input is triggered
+        ctx = dash.callback_context
+        if not ctx.triggered:
+            raise PreventUpdate
+
+        # get seq id from click data
+        seq_id = clickData_to_seqID(click_data, df)
+        info_header = seq_id
+
+        info_text = []
+        if fasta_dict is not None:
+            if seq_id in fasta_dict.keys():
+                sequence = str(fasta_dict[seq_id].seq)
+                info_text.append(
+                    dbc.ListGroupItem(
+                        [
+                            html.P("Sequence:"),
+                            html.P(sequence),
+                            html.P(f"Seq. length: {len(sequence)}"),
+                        ]
+                    )
+                )
+
+        info_text = dbc.ListGroup(info_text, flush=True)
+
+        open_now = True
+
+        return info_header, info_text, open_now

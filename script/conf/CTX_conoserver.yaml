@@ -1,3 +1,4 @@
 o: data/CTX
 hdf: data/CTX/conoserver_esm2.h5
 csv: data/CTX/conoserver.csv
+fasta: data/CTX/conoserver.fasta

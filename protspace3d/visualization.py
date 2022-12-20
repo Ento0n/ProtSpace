@@ -467,6 +467,22 @@ class Visualizator:
 
         return toast
 
+    @staticmethod
+    def get_info_toast():
+        toast = dbc.Toast(
+            id="info_toast",
+            is_open=False,
+            dismissable=True,
+            style=dict(
+                position="fixed",
+                top=166,
+                left=10,
+                width=200,
+            ),
+        )
+
+        return toast
+
     def get_graph_container(self, umap_paras: dict):
         # UMAP parameters in string format
         umap_paras_string = str(
@@ -636,6 +652,8 @@ class Visualizator:
                 dcc.Store(id="mol_name_storage"),
                 # Toast that is displayed if a html file is created
                 self.get_download_toast(),
+                # Toast to display info on selected protein
+                self.get_info_toast(),
                 # graph and controls
                 dbc.Row(
                     [
@@ -883,6 +901,8 @@ class Visualizator:
                 self.get_disclaimer_modal(),
                 # toast that is displayed if a html file is created
                 self.get_download_toast(),
+                # toast that displays the information of a selected protein
+                self.get_info_toast(),
                 # space between header and content below
                 dbc.Row([html.Br()]),
                 # graph and controls
