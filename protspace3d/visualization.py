@@ -147,6 +147,8 @@ class Visualizator:
 
         color_list = Visualizator.gen_distinct_colors(n=len(col_groups))
 
+        shapes = [chr(unicode) for unicode in range(ord("\u25A0"), ord("\u25FF") + 1)]
+
         # Figure out how many symbols to use depending on number of column groups
         n_symbols = Visualizator.n_symbols_equation(n=len(col_groups))
 
@@ -261,15 +263,14 @@ class Visualizator:
                 x=df_group[x],
                 y=df_group[y],
                 z=df_group[z],
-                mode="markers",
-                name=group_value,
-                marker=dict(
-                    size=10,
+                mode="text",
+                name=shapes[group_idx % n_symbols] + " " + group_value,
+                text=shapes[group_idx % n_symbols],
+                textposition="middle center",
+                textfont=dict(
+                    size=40,
                     color=color,
-                    symbol=Visualizator.SYMBOLS[group_idx % n_symbols],
-                    line=dict(color="black", width=1),
                 ),
-                text=df_group.index.to_list(),
                 showlegend=show_legend,
             )
             fig.add_trace(trace)
@@ -339,6 +340,29 @@ class Visualizator:
                 "x": 0.4,
             }
         )
+
+        x = df.at["mBibiA2", "x_umap"]
+        y = df.at["mBibiA2", "y_umap"]
+        z = df.at["mBibiA2", "z_umap"]
+
+        fig.add_trace(
+            go.Scatter3d(
+                x=[x],
+                y=[y],
+                z=[z],
+                mode="markers",
+                marker=dict(
+                    size=20,
+                    color="black",
+                    symbol="circle-open",
+                ),
+                showlegend=False,
+            )
+        )
+
+        # fig.data = [
+        #     data for idx, data in enumerate(fig.data) if idx != len(fig.data) - 1
+        # ]
 
         # swap index again
         if original_id_col is not None:
