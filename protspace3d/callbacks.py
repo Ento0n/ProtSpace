@@ -684,7 +684,6 @@ def get_callbacks(
                 [html.P(f"{header}: {df.at[seq_id, header]}") for header in csv_header]
             )
         )
-        print(info_text)
 
         # Don't show toast if no information is present
         if len(info_text) == 0:

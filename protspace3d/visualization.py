@@ -473,12 +473,14 @@ class Visualizator:
             id="info_toast",
             is_open=False,
             dismissable=True,
-            style=dict(
-                position="fixed",
-                top=166,
-                left=10,
-                width=200,
-            ),
+            style={
+                "position": "fixed",
+                "top": 166,
+                "left": 10,
+                "width": 200,
+                "max-height": "50%",
+                "overflow": "auto",
+            },
         )
 
         return toast
