@@ -679,6 +679,17 @@ def get_callbacks(
                     )
                 )
 
+        info_text.append(
+            dbc.ListGroupItem(
+                [html.P(f"{header}: {df.at[seq_id, header]}") for header in csv_header]
+            )
+        )
+        print(info_text)
+
+        # Don't show toast if no information is present
+        if len(info_text) == 0:
+            raise PreventUpdate
+
         info_text = dbc.ListGroup(info_text, flush=True)
 
         open_now = True
