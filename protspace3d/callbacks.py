@@ -682,7 +682,10 @@ def get_callbacks(
 
                 info_text.append(
                     dbc.ListGroupItem(
-                        [html.P(f"plDDT: {plddt}"), html.P(f"pTM: {ptm}")]
+                        [
+                            html.P(f"plDDT mean: {round(plddt, 2)}"),
+                            html.P(f"pTM: {ptm}"),
+                        ]
                     )
                 )
 
@@ -693,7 +696,43 @@ def get_callbacks(
                     dbc.ListGroupItem(
                         [
                             html.P("Sequence:"),
-                            html.P(sequence),
+                            html.Div(
+                                id="collapsed_seq_div",
+                                hidden=False,
+                                children=[
+                                    dbc.Row(
+                                        [
+                                            dbc.Col(
+                                                [
+                                                    html.P(sequence[:5]),
+                                                ],
+                                                width=6,
+                                            ),
+                                            dbc.Col(
+                                                [
+                                                    html.Button(
+                                                        "...",
+                                                        id="expand_seq_button",
+                                                        style={
+                                                            "padding": 0,
+                                                            "border": "none",
+                                                            "background": "none",
+                                                        },
+                                                    )
+                                                ],
+                                                width=6,
+                                            ),
+                                        ]
+                                    ),
+                                ],
+                            ),
+                            html.Div(
+                                id="expanded_seq_div",
+                                hidden=True,
+                                children=[
+                                    html.P(sequence),
+                                ],
+                            ),
                             html.P(f"Seq. length: {len(sequence)}"),
                         ]
                     )
@@ -714,3 +753,22 @@ def get_callbacks(
         open_now = True
 
         return info_header, info_text, open_now
+
+    @app.callback(
+        Output("collapsed_seq_div", "hidden"),
+        Output("expanded_seq_div", "hidden"),
+        Input("expand_seq_button", "n_clicks"),
+    )
+    def expand_sequence(expand_button: int):
+        # Check whether an input is triggered
+        ctx = dash.callback_context
+        if not ctx.triggered:
+            raise PreventUpdate
+
+        collapse = False
+        expand = True
+        if expand_button:
+            collapse = True
+            expand = False
+
+        return collapse, expand

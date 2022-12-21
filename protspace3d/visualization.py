@@ -470,6 +470,47 @@ class Visualizator:
     @staticmethod
     def get_info_toast():
         toast = dbc.Toast(
+            children=[
+                html.P("Sequence:"),
+                html.Div(
+                    id="collapsed_seq_div",
+                    hidden=False,
+                    children=[
+                        dbc.Row(
+                            [
+                                dbc.Col(
+                                    [
+                                        html.P("Sequence is here!"),
+                                    ],
+                                    width=6,
+                                ),
+                                dbc.Col(
+                                    [
+                                        html.Button(
+                                            "...",
+                                            id="expand_seq_button",
+                                            style={
+                                                "padding": 0,
+                                                "border": "none",
+                                                "background": "none",
+                                            },
+                                        )
+                                    ],
+                                    width=6,
+                                ),
+                            ]
+                        ),
+                    ],
+                ),
+                html.Div(
+                    id="expanded_seq_div",
+                    hidden=True,
+                    children=[
+                        html.P("Complete sequence shown here!"),
+                    ],
+                ),
+                html.P(f"Seq. length: 0"),
+            ],
             id="info_toast",
             is_open=False,
             dismissable=True,
