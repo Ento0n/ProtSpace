@@ -740,7 +740,22 @@ def get_callbacks(
 
         info_text.append(
             dbc.ListGroupItem(
-                [html.P(f"{header}: {df.at[seq_id, header]}") for header in csv_header]
+                [
+                    dbc.Accordion(
+                        [
+                            dbc.AccordionItem(
+                                [
+                                    html.P(f"{header}: {df.at[seq_id, header]}")
+                                    for header in csv_header
+                                ],
+                                title="Group info",
+                            )
+                        ],
+                        flush=True,
+                        start_collapsed=True,
+                        style={"margin": "0px", "border": "0px", "padding": "0px"},
+                    ),
+                ]
             )
         )
 

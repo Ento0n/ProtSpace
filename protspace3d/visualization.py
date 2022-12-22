@@ -478,13 +478,17 @@ class Visualizator:
             id="info_toast",
             is_open=False,
             dismissable=True,
+            body_style={
+                "max-height": "50vh",
+                "overflow": "auto",
+            },
             style={
                 "position": "fixed",
                 "top": 166,
                 "left": 10,
                 "width": 200,
-                "max-height": "50%",
-                "overflow": "auto",
+                # "max-height": "50%",
+                # "overflow": "auto",
             },
         )
 
