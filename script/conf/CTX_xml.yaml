@@ -1,0 +1,4 @@
+o: data/CTX_xml
+hdf: data/CTX_xml/xml_conoserver_esm2.h5
+csv: data/CTX_xml/xml_conoserver.csv
+fasta: data/CTX_xml/xml_conoserver.fasta
