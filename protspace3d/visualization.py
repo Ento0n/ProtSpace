@@ -663,6 +663,9 @@ class Visualizator:
                 # storage to save the selected molecules
                 # Needed for image download name
                 dcc.Store(id="mol_name_storage"),
+                # Storage to save the clicked on molecule in the graph,
+                # needed for replacing the clicked molecule in the list
+                dcc.Store(id="clicked_mol_storage"),
                 # Toast that is displayed if a html file is created
                 self.get_download_toast(),
                 # Toast to display info on selected protein

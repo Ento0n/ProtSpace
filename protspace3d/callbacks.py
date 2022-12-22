@@ -187,12 +187,14 @@ def get_callbacks_pdb(app, df, struct_container, original_id_col):
         Output("selected_atoms", "value"),
         Output("download_molecule_button", "disabled"),
         Output("mol_name_storage", "data"),
+        Output("clicked_mol_storage", "data"),
         Input("graph", "clickData"),
         Input("molecules_dropdown", "value"),
         Input("range_start", "value"),
         Input("range_end", "value"),
         Input("selected_atoms", "value"),
         Input("reset_view_button", "n_clicks"),
+        Input("clicked_mol_storage", "data"),
     )
     def display_molecule(
         click_data,
@@ -201,6 +203,7 @@ def get_callbacks_pdb(app, df, struct_container, original_id_col):
         range_end: int,
         selected_atoms: list,
         reset_view_clicks: int,
+        last_clicked_mol: str,
     ):
         """
         callback function to handle the displaying of the molecule
@@ -231,12 +234,17 @@ def get_callbacks_pdb(app, df, struct_container, original_id_col):
             saved_seq_ids = list(seq_ids)
 
         # triggered by click on graph
+        clicked_seq_id = last_clicked_mol
         if ctx.triggered_id == "graph":
-            seq_id = clickData_to_seqID(click_data, df)
+            clicked_seq_id = clickData_to_seqID(click_data, df)
 
-            if seq_id not in seq_ids:
-                # add selected sequence ID to already selected IDs
-                seq_ids.append(seq_id)
+            # Add to seq ids or replace last clicked molecule
+            if last_clicked_mol is None:
+                seq_ids.append(clicked_seq_id)
+            else:
+                for idx, value in enumerate(seq_ids):
+                    if value == last_clicked_mol:
+                        seq_ids[idx] = clicked_seq_id
 
         # path to .pdb file
         struct_path = str(struct_container.get_structure_dir()) + "/"
@@ -295,6 +303,7 @@ def get_callbacks_pdb(app, df, struct_container, original_id_col):
             selected_atoms,
             download_disabled,
             mol_names,
+            clicked_seq_id,
         )
 
     @app.callback(
