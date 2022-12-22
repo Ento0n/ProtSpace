@@ -689,6 +689,22 @@ def get_callbacks(
                     )
                 )
 
+        # group info in children format
+        children = [
+            dbc.Button(
+                children=[
+                    "Group info",
+                    html.I(className="bi bi-arrow-up"),
+                ],
+                id="group_info_collapse_button",
+                color="dark",
+                outline=True,
+                style={"border": "none"},
+            ),
+        ]
+        for header in csv_header:
+            children.append(html.P(f"{header}: {df.at[seq_id, header]}"))
+
         if fasta_dict is not None:
             if seq_id in fasta_dict.keys():
                 sequence = str(fasta_dict[seq_id].seq)
@@ -741,19 +757,28 @@ def get_callbacks(
         info_text.append(
             dbc.ListGroupItem(
                 [
-                    dbc.Accordion(
-                        [
-                            dbc.AccordionItem(
-                                [
-                                    html.P(f"{header}: {df.at[seq_id, header]}")
-                                    for header in csv_header
+                    html.Div(
+                        id="group_info_collapsed_div",
+                        children=[
+                            dbc.Button(
+                                children=[
+                                    "Group info",
+                                    html.I(className="bi bi-arrow-down"),
                                 ],
-                                title="Group info",
-                            )
+                                id="group_info_expand_button",
+                                color="dark",
+                                outline=True,
+                                style={
+                                    "border": "none",
+                                },
+                            ),
                         ],
-                        flush=True,
-                        start_collapsed=True,
-                        style={"margin": "0px", "border": "0px", "padding": "0px"},
+                        hidden=False,
+                    ),
+                    html.Div(
+                        id="group_info_expanded_div",
+                        children=children,
+                        hidden=True,
                     ),
                 ]
             )
@@ -780,10 +805,31 @@ def get_callbacks(
         if not ctx.triggered:
             raise PreventUpdate
 
-        collapse = False
-        expand = True
+        collapse_hidden = False
+        expand_hidden = True
         if expand_button:
-            collapse = True
-            expand = False
+            collapse_hidden = True
+            expand_hidden = False
 
-        return collapse, expand
+        return collapse_hidden, expand_hidden
+
+    @app.callback(
+        Output("group_info_expanded_div", "hidden"),
+        Output("group_info_collapsed_div", "hidden"),
+        Input("group_info_expand_button", "n_clicks"),
+        Input("group_info_collapse_button", "n_clicks"),
+    )
+    def handle_group_info(expand_button: int, collapse_button: int):
+        # Check whether an input is triggered
+        ctx = dash.callback_context
+        if not ctx.triggered:
+            raise PreventUpdate
+
+        collapse_hidden = False
+        expand_hidden = True
+
+        if ctx.triggered_id == "group_info_expand_button":
+            collapse_hidden = True
+            expand_hidden = False
+
+        return expand_hidden, collapse_hidden
