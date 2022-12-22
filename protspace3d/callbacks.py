@@ -10,6 +10,7 @@ from dash import Input, Output, html
 from dash.exceptions import PreventUpdate
 import dash
 import dash_bio.utils.ngl_parser as ngl_parser
+import plotly.graph_objects as go
 import pandas as pd
 
 import dash_bootstrap_components as dbc
@@ -485,6 +486,7 @@ def get_callbacks(
         Input("metric_input", "value"),
         Input("umap_recalculation_button", "n_clicks"),
         Input("last_umap_paras_dd", "value"),
+        Input("graph", "clickData"),
     )
     def update_graph(
         selected_value: str,
@@ -494,6 +496,7 @@ def get_callbacks(
         metric: str,
         recal_button_clicks: int,
         umap_paras_dd_value: str,
+        click_data,
     ):
         """
         Renders new graph for selected drop down menu value
@@ -578,6 +581,33 @@ def get_callbacks(
             umap_flag=umap_flag,
             umap_paras=umap_paras,
         )
+
+        # Add trace that highlights the selected molecule with a circle
+        # get seq id from click data
+        if click_data is not None:
+            seq_id = clickData_to_seqID(click_data, df)
+
+            x = df.at[seq_id, "x_umap"]
+            y = df.at[seq_id, "y_umap"]
+            z = df.at[seq_id, "z_umap"]
+
+            fig.add_trace(
+                go.Scatter3d(
+                    x=[x],
+                    y=[y],
+                    z=[z],
+                    mode="markers",
+                    marker=dict(
+                        size=15,
+                        color="black",
+                        symbol="circle-open",
+                    ),
+                    showlegend=False,
+                )
+            )
+
+        # Set the uirevision to the drop down value, so the view is only reset if the dropdown is changed
+        fig["layout"]["uirevision"] = "DO NOT CHANGE"
 
         # Disable UMAP parameter input or not?
         disabled = False
