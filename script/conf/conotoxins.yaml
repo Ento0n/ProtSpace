@@ -2,3 +2,5 @@ o: data/conotoxins
 hdf: data/conotoxins/Conotoxins.h5
 csv: data/conotoxins/Conotoxins_mapped.csv
 pdb: data/conotoxins/colabfold/pdb
+json: data/conotoxins/colabfold/metric
+fasta: data/conotoxins/Conotoxins.fasta

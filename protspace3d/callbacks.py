@@ -699,7 +699,7 @@ def get_callbacks(
                 )
 
         # group info in children format
-        children = [
+        group_info_children = [
             dbc.Button(
                 children=[
                     "Group info",
@@ -712,7 +712,7 @@ def get_callbacks(
             ),
         ]
         for header in csv_header:
-            children.append(html.P(f"{header}: {df.at[seq_id, header]}"))
+            group_info_children.append(html.P(f"{header}: {df.at[seq_id, header]}"))
 
         if fasta_dict is not None:
             if seq_id in fasta_dict.keys():
@@ -755,6 +755,15 @@ def get_callbacks(
                                 id="expanded_seq_div",
                                 hidden=True,
                                 children=[
+                                    html.Button(
+                                        "...",
+                                        id="collapse_seq_button",
+                                        style={
+                                            "padding": 0,
+                                            "border": "none",
+                                            "background": "none",
+                                        },
+                                    ),
                                     html.P(sequence),
                                 ],
                             ),
@@ -786,7 +795,7 @@ def get_callbacks(
                     ),
                     html.Div(
                         id="group_info_expanded_div",
-                        children=children,
+                        children=group_info_children,
                         hidden=True,
                     ),
                 ]
@@ -807,8 +816,9 @@ def get_callbacks(
         Output("collapsed_seq_div", "hidden"),
         Output("expanded_seq_div", "hidden"),
         Input("expand_seq_button", "n_clicks"),
+        Input("collapse_seq_button", "n_clicks"),
     )
-    def expand_sequence(expand_button: int):
+    def expand_sequence(expand_button: int, collapse_button: int):
         # Check whether an input is triggered
         ctx = dash.callback_context
         if not ctx.triggered:
@@ -816,7 +826,7 @@ def get_callbacks(
 
         collapse_hidden = False
         expand_hidden = True
-        if expand_button:
+        if ctx.triggered_id == "expand_seq_button":
             collapse_hidden = True
             expand_hidden = False
 

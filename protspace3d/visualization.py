@@ -474,6 +474,7 @@ class Visualizator:
                 html.Div(id="expanded_seq_div"),
                 html.Div(id="collapsed_seq_div"),
                 html.Button(id="expand_seq_button"),
+                html.Button(id="collapse_seq_button"),
                 html.Div(id="group_info_expanded_div"),
                 html.Div(id="group_info_collapsed_div"),
                 dbc.Button(id="group_info_expand_button"),
