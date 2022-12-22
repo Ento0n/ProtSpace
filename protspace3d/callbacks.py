@@ -33,8 +33,8 @@ def to_mapped_id(sel_original_seq_ids: list, original_id_col: list, df: DataFram
 def to_original_id(sel_mapped_seq_ids: list, original_id_col: list, df: DataFrame):
     seq_ids = list()
 
-    for id in sel_mapped_seq_ids:
-        index_num = df.index.get_indexer_for([id])[0]
+    for seq_id in sel_mapped_seq_ids:
+        index_num = df.index.get_indexer_for([seq_id])[0]
         original_id = original_id_col[index_num]
         seq_ids.append(original_id)
 
@@ -675,7 +675,12 @@ def get_callbacks(
 
         # get seq id from click data
         seq_id = clickData_to_seqID(click_data, df)
-        info_header = seq_id
+
+        actual_seq_id = seq_id
+        if original_id_col is not None:
+            actual_seq_id = to_original_id([seq_id], original_id_col, df)
+
+        info_header = actual_seq_id
 
         info_text = []
 
