@@ -38,6 +38,12 @@ class StructureContainer(object):
     def get_structure_dir(self):
         return self.pdb_d
 
+    def has_json_dir(self):
+        if self.json_d is None:
+            return False
+        else:
+            return True
+
     def set_json_dir(self, json_d: Path):
         self.json_d = json_d
 
