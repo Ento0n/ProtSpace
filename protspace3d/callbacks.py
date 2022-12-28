@@ -467,8 +467,6 @@ def get_callbacks(
     fasta_dict: dict,
     struct_container: StructureContainer,
 ):
-    print(f"df at callback init: {df}")
-
     @app.callback(
         Output("graph", "figure"),
         Output("n_neighbours_input", "disabled"),
@@ -592,7 +590,7 @@ def get_callbacks(
 
         # Add trace that highlights the selected molecule with a circle
         # get seq id from click data
-        if click_data is not None:
+        if ctx.triggered_id == "graph":
             seq_id = clickData_to_seqID(click_data, df)
 
             x = df.at[seq_id, "x_umap"]
