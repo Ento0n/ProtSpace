@@ -6,7 +6,7 @@ from preprocessing import StructureContainer
 from preprocessing import DataPreprocessor
 
 from pathlib import Path
-from dash import Input, Output, html
+from dash import Input, Output, State, html
 from dash.exceptions import PreventUpdate
 import dash
 import dash_bio.utils.ngl_parser as ngl_parser
@@ -467,6 +467,8 @@ def get_callbacks(
     fasta_dict: dict,
     struct_container: StructureContainer,
 ):
+    print(f"df at callback init: {df}")
+
     @app.callback(
         Output("graph", "figure"),
         Output("n_neighbours_input", "disabled"),
@@ -487,6 +489,7 @@ def get_callbacks(
         Input("umap_recalculation_button", "n_clicks"),
         Input("last_umap_paras_dd", "value"),
         Input("graph", "clickData"),
+        State("graph", "figure"),
     )
     def update_graph(
         selected_value: str,
@@ -497,6 +500,7 @@ def get_callbacks(
         recal_button_clicks: int,
         umap_paras_dd_value: str,
         click_data,
+        fig,
     ):
         """
         Renders new graph for selected drop down menu value
@@ -519,6 +523,9 @@ def get_callbacks(
 
         # load df into inner scope so that it can be modified
         nonlocal df
+
+        # convert dictionary state of graph figure into go object
+        fig = go.Figure(fig)
 
         umap_axis_names = ["x_umap", "y_umap", "z_umap"]
 
@@ -574,13 +581,14 @@ def get_callbacks(
         # Set up umap flag
         umap_flag = True if dim_red == "UMAP" else False
 
-        fig = Visualizator.render(
-            df,
-            selected_column=selected_value,
-            original_id_col=original_id_col,
-            umap_flag=umap_flag,
-            umap_paras=umap_paras,
-        )
+        if ctx.triggered_id == "dd_menu":
+            fig = Visualizator.render(
+                df,
+                selected_column=selected_value,
+                original_id_col=original_id_col,
+                umap_flag=umap_flag,
+                umap_paras=umap_paras,
+            )
 
         # Add trace that highlights the selected molecule with a circle
         # get seq id from click data
