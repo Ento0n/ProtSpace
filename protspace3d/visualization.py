@@ -559,6 +559,7 @@ class Visualizator:
                         id="dim_red_radio",
                         inline="True",
                     ),
+                    html.Br(),
                     dcc.Markdown("HTML"),
                     dbc.Button(
                         "Download all files",
@@ -566,6 +567,8 @@ class Visualizator:
                         color="dark",
                         outline=True,
                     ),
+                    html.Br(),
+                    html.Br(),
                     dcc.Markdown("UMAP parameters"),
                     dbc.Row(
                         [
@@ -611,12 +614,15 @@ class Visualizator:
                             ),
                         ],
                     ),
+                    html.Br(),
                     dbc.Button(
                         "Recalculate UMAP",
                         id="umap_recalculation_button",
                         color="dark",
                         outline=True,
                     ),
+                    html.Br(),
+                    html.Br(),
                     dcc.Dropdown(
                         id="last_umap_paras_dd",
                         value=umap_paras_string,
