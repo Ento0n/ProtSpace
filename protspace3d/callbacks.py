@@ -609,11 +609,9 @@ def get_callbacks(
                         symbol="circle-open",
                     ),
                     showlegend=False,
+                    hoverinfo="skip",
                 )
             )
-
-        # Set the uirevision to the drop down value, so the view is only reset if the dropdown is changed
-        fig["layout"]["uirevision"] = "DO NOT CHANGE"
 
         # Disable UMAP parameter input or not?
         disabled = False
