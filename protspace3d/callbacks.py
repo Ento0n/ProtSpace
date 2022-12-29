@@ -579,7 +579,10 @@ def get_callbacks(
         # Set up umap flag
         umap_flag = True if dim_red == "UMAP" else False
 
-        if ctx.triggered_id == "dd_menu":
+        if (
+            ctx.triggered_id == "dd_menu"
+            or ctx.triggered_id == "umap_recalculation_button"
+        ):
             fig = Visualizator.render(
                 df,
                 selected_column=selected_value,

@@ -553,6 +553,9 @@ class Visualizator:
                                         id="min_dist_input",
                                         type="number",
                                         min=0,
+                                        # Set max to 1 since min_dist must be less than or equal to spread,
+                                        # which is 1.0 by default and not changed
+                                        max=1,
                                         step=0.1,
                                         value=umap_paras["min_dist"],
                                     ),
