@@ -521,7 +521,7 @@ class Visualizator:
 
         return toast
 
-    def get_graph_container(self, umap_paras: dict):
+    def get_graph_container(self, umap_paras: dict, pdb: bool):
         # UMAP parameters in string format
         umap_paras_string = str(
             str(umap_paras["n_neighbours"])
@@ -530,6 +530,18 @@ class Visualizator:
             + " ; "
             + umap_paras["metric"],
         )
+
+        # width sizing of the dropdown menu column
+        if pdb:
+            xs = 6
+            sm = 7
+            md = 8
+            xxl = 9
+        else:
+            xs = 8
+            sm = 9
+            md = 10
+            xxl = 11
 
         graph_container = (
             dbc.Offcanvas(
@@ -628,16 +640,16 @@ class Visualizator:
                                 style={"margin-top": "5px"},
                             ),
                         ],
-                        xs=8,
-                        sm=9,
-                        md=10,
-                        xxl=11,
+                        xs=xs,
+                        sm=sm,
+                        md=md,
+                        xxl=xxl,
                     ),
                     dbc.Col(
-                        xs=4,
-                        sm=3,
-                        md=2,
-                        xxl=1,
+                        xs=12 - xs,
+                        sm=12 - sm,
+                        md=12 - md,
+                        xxl=12 - xxl,
                         children=[
                             dbc.Stack(
                                 direction="horizontal",
@@ -714,7 +726,7 @@ class Visualizator:
                 dbc.Row(
                     [
                         dbc.Col(
-                            self.get_graph_container(umap_paras),
+                            self.get_graph_container(umap_paras, True),
                             id="left_col",
                             width=6,
                             style={"border-right": "solid black 1px"},
@@ -963,7 +975,7 @@ class Visualizator:
                 dbc.Row(
                     [
                         dbc.Col(
-                            self.get_graph_container(umap_paras),
+                            self.get_graph_container(umap_paras, False),
                             width=12,
                         ),
                     ]
