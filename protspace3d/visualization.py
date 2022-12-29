@@ -33,6 +33,30 @@ class Visualizator:
         {"label": "helixorient", "value": "helixorient"},
     ]
 
+    metric_options = [
+        "euclidean",
+        "cosine",
+        "manhattan",
+        "chebyshev",
+        "minkowski",
+        "canberra",
+        "braycurtis",
+        "haversine",
+        "mahalanobis",
+        "wminkowski",
+        "seuclidean",
+        "correlation",
+        "hamming",
+        "jaccard",
+        "dice",
+        "russellrao",
+        "kulsinski",
+        "rogerstanimoto",
+        "sokalmichener",
+        "sokalneath",
+        "yule",
+    ]
+
     def __init__(self, fig: go.Figure, csv_header: list[str]):
         self.fig = fig
         self.csv_header = csv_header
@@ -565,10 +589,10 @@ class Visualizator:
                             dbc.Col(
                                 [
                                     dcc.Markdown("metric:"),
-                                    dbc.Input(
+                                    dcc.Dropdown(
                                         id="metric_input",
+                                        options=Visualizator.metric_options,
                                         value=umap_paras["metric"],
-                                        debounce=True,
                                     ),
                                 ],
                                 width=4,
