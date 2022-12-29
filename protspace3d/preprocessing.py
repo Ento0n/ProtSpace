@@ -145,6 +145,9 @@ class DataPreprocessor:
         # replace empty values with NA
         df_csv.fillna("NA", inplace=True)
 
+        # replace "None" values with NA
+        df_csv.replace(to_replace="None", value="NA", inplace=True)
+
         # save index name for df.csv
         index_name = df_csv.index.name
 
