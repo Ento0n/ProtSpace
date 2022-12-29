@@ -617,7 +617,8 @@ class Visualizator:
                 placement="end",
             ),
             dbc.Row(
-                [
+                justify="start",
+                children=[
                     dbc.Col(
                         [
                             dcc.Dropdown(
@@ -627,38 +628,49 @@ class Visualizator:
                                 style={"margin-top": "5px"},
                             ),
                         ],
-                        width=8,
+                        xs=8,
+                        sm=9,
+                        md=10,
+                        xxl=11,
                     ),
                     dbc.Col(
-                        [
-                            dbc.Button(
-                                "",
-                                class_name="bi bi-download",
-                                id="html_download_button",
-                                outline=True,
-                                color="dark",
-                            )
-                        ],
-                        width=2,
-                    ),
-                    dbc.Col(
-                        [
-                            dbc.Button(
-                                "",
-                                id="graph_settings_button",
-                                class_name="bi bi-gear-wide-connected",
-                                outline=True,
-                                color="dark",
-                                style={
-                                    "margin-top": "5px",
-                                    "margin-bottom": "5px",
-                                    "margin-right": "15px",
-                                },
+                        xs=4,
+                        sm=3,
+                        md=2,
+                        xxl=1,
+                        children=[
+                            dbc.Stack(
+                                direction="horizontal",
+                                children=[
+                                    dbc.Button(
+                                        "",
+                                        class_name="bi bi-download",
+                                        id="html_download_button",
+                                        outline=True,
+                                        color="dark",
+                                        style={
+                                            "margin-top": "5px",
+                                            "margin-bottom": "5px",
+                                            "margin-right": "15px",
+                                        },
+                                    ),
+                                    dbc.Button(
+                                        "",
+                                        id="graph_settings_button",
+                                        class_name="bi bi-gear-wide-connected",
+                                        outline=True,
+                                        color="dark",
+                                        style={
+                                            "margin-top": "5px",
+                                            "margin-bottom": "5px",
+                                            "margin-right": "15px",
+                                        },
+                                    ),
+                                ],
                             ),
                         ],
-                        width=2,
                     ),
-                ]
+                ],
             ),
             dcc.Graph(
                 id="graph",
@@ -947,8 +959,6 @@ class Visualizator:
                 self.get_download_toast(),
                 # toast that displays the information of a selected protein
                 self.get_info_toast(),
-                # space between header and content below
-                dbc.Row([html.Br()]),
                 # graph and controls
                 dbc.Row(
                     [
