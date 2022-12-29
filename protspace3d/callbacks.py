@@ -736,8 +736,10 @@ def get_callbacks(
                     info_text.append(
                         dbc.ListGroupItem(
                             [
-                                html.P(f"plDDT mean: {round(plddt, 2)}"),
-                                html.P(f"pTM: {ptm}"),
+                                html.B("plDDT mean: "),
+                                html.P(f"{round(plddt, 2)}"),
+                                html.B("pTM: "),
+                                html.P(f"{ptm}"),
                             ]
                         )
                     )
@@ -764,7 +766,7 @@ def get_callbacks(
                 info_text.append(
                     dbc.ListGroupItem(
                         [
-                            html.P("Sequence:"),
+                            html.B("Sequence:"),
                             html.Div(
                                 id="collapsed_seq_div",
                                 hidden=False,
@@ -808,10 +810,11 @@ def get_callbacks(
                                             "background": "none",
                                         },
                                     ),
-                                    html.P(sequence),
+                                    html.P(f"{sequence}"),
                                 ],
                             ),
-                            html.P(f"Seq. length: {len(sequence)}"),
+                            html.B("Seq. length:"),
+                            html.P(f"{len(sequence)}"),
                         ]
                     )
                 )
