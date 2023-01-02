@@ -758,7 +758,8 @@ def get_callbacks(
             ),
         ]
         for header in csv_header:
-            group_info_children.append(html.P(f"{header}: {df.at[seq_id, header]}"))
+            group_info_children.append(html.B(f"{header}:"))
+            group_info_children.append(html.P(f"{df.at[seq_id, header]}"))
 
         if fasta_dict is not None:
             if seq_id in fasta_dict.keys():
