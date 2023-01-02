@@ -762,28 +762,33 @@ class Visualizator:
                                         ),
                                         dbc.Col(
                                             [
-                                                dbc.Button(
-                                                    "",
-                                                    id="reset_view_button",
-                                                    class_name="bi bi-arrow-counterclockwise",
-                                                    color="dark",
-                                                    outline=True,
-                                                    style={
-                                                        "margin-top": "5px",
-                                                        "margin-bottom": "5px",
-                                                        "margin-right": "20px",
-                                                    },
-                                                ),
-                                                dbc.Button(
-                                                    "",
-                                                    id="molecules_settings_button",
-                                                    class_name="bi bi-gear-wide-connected",
-                                                    outline=True,
-                                                    color="dark",
-                                                    style={
-                                                        "margin-top": "5px",
-                                                        "margin-bottom": "5px",
-                                                    },
+                                                dbc.Stack(
+                                                    direction="horizontal",
+                                                    children=[
+                                                        dbc.Button(
+                                                            "",
+                                                            id="reset_view_button",
+                                                            class_name="bi bi-arrow-counterclockwise",
+                                                            color="dark",
+                                                            outline=True,
+                                                            style={
+                                                                "margin-top": "5px",
+                                                                "margin-bottom": "5px",
+                                                                "margin-right": "20px",
+                                                            },
+                                                        ),
+                                                        dbc.Button(
+                                                            "",
+                                                            id="molecules_settings_button",
+                                                            class_name="bi bi-gear-wide-connected",
+                                                            outline=True,
+                                                            color="dark",
+                                                            style={
+                                                                "margin-top": "5px",
+                                                                "margin-bottom": "5px",
+                                                            },
+                                                        ),
+                                                    ],
                                                 ),
                                             ],
                                             xxl=3,
