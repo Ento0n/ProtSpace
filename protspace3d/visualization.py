@@ -635,7 +635,6 @@ class Visualizator:
                 placement="end",
             ),
             dbc.Row(
-                justify="start",
                 children=[
                     dbc.Col(
                         [

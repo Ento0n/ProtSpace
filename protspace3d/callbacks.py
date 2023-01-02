@@ -597,9 +597,21 @@ def get_callbacks(
         if ctx.triggered_id == "graph":
             seq_id = clickData_to_seqID(click_data, df)
 
-            x = df.at[seq_id, "x_umap"]
-            y = df.at[seq_id, "y_umap"]
-            z = df.at[seq_id, "z_umap"]
+            if umap_flag:
+                x = df.at[seq_id, "x_umap"]
+                y = df.at[seq_id, "y_umap"]
+                z = df.at[seq_id, "z_umap"]
+            else:
+                x = df.at[seq_id, "x_pca"]
+                y = df.at[seq_id, "y_pca"]
+                z = df.at[seq_id, "z_pca"]
+
+            # Remove last trace (highlighting circle) if present
+            col_groups = df[selected_value].unique().tolist()
+            if len(fig["data"]) > len(col_groups):
+                data_list = list(fig.data)
+                data_list.pop(-1)
+                fig.data = data_list
 
             fig.add_trace(
                 go.Scatter3d(
