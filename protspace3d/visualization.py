@@ -446,7 +446,16 @@ class Visualizator:
         modal = dbc.Modal(
             [
                 dbc.ModalHeader(dbc.ModalTitle("Disclaimer"), close_button=False),
-                dbc.ModalBody("Here the disclaimer text is shown!"),
+                dbc.ModalBody(
+                    children=[
+                        dbc.Alert(
+                            color="warning",
+                            children="All fonts and representations used un this app are based on dash, "
+                            "dash bootstrap components and dash_bio. No liability is accepted by the creators "
+                            "of this website.",
+                        )
+                    ]
+                ),
                 dbc.ModalFooter(dbc.Button("Agree", id="disclaimer_modal_button")),
             ],
             id="disclaimer_modal",
