@@ -6,7 +6,7 @@ import sys
 from pathlib import Path
 
 from preprocessing import DataPreprocessor
-from visualization import Visualizator
+from visualization.visualizator import Visualizator
 
 from callbacks import get_callbacks, get_callbacks_pdb
 
@@ -372,9 +372,9 @@ def setup():
 
     # --- APP creation ---
     if pdb_flag:
-        application = visualizator.init_app_pdb(ids, umap_paras)
+        application = visualizator.get_pdb_app(ids, umap_paras)
     else:
-        application = visualizator.init_app(umap_paras)
+        application = visualizator.get_base_app(umap_paras)
 
     # html cols set or not
     html_flag = True if html_cols is not None else False

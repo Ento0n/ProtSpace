@@ -1,8 +1,8 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 
-from visualization import Visualizator
-from preprocessing import StructureContainer
+from visualization.visualizator import Visualizator
+from structurecontainer import StructureContainer
 from preprocessing import DataPreprocessor
 
 from pathlib import Path
