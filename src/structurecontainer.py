@@ -31,19 +31,20 @@ class StructureContainer:
             return Path("")
 
     def get_range(self, uid: str):
-        # add .pdb file type to ID
-        uid = uid + ".pdb"
+        if isinstance(self.pdb_d, Path):
+            # add .pdb file type to ID
+            uid = uid + ".pdb"
 
-        mol_range = set()
-        strand = None
-        with open(self.pdb_d / uid, "r") as f:
-            lines = f.readlines()
+            mol_range = set()
+            strand = None
+            with open(self.pdb_d / uid, "r") as f:
+                lines = f.readlines()
 
-            for line in lines:
-                if line.startswith("ATOM"):
-                    pieces = re.split("\\s+", line)
+                for line in lines:
+                    if line.startswith("ATOM"):
+                        pieces = re.split("\\s+", line)
 
-                    mol_range.add(int(pieces[5]))
-                    strand = pieces[4]
+                        mol_range.add(int(pieces[5]))
+                        strand = pieces[4]
 
-        return sorted(list(mol_range)), strand
+            return sorted(list(mol_range)), strand

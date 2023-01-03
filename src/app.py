@@ -16,6 +16,14 @@ import yaml
 
 class LoadConfFile(argparse.Action):
     def __call__(self, parser, namespace, values, option_string=None):
+        """
+        Handling of conf file
+        :param parser: the argument parser itself
+        :param namespace: argument parser specific variable
+        :param values: value of conf argument
+        :param option_string: argument parser specific variable
+        :return: arguments in parser list format
+        """
         first_arg = sys.argv[1]
 
         if first_arg == "-conf" or first_arg == "--configuration":
@@ -32,6 +40,11 @@ class LoadConfFile(argparse.Action):
 
     @staticmethod
     def yaml_to_parser(dictionary: dict):
+        """
+        Transform the arguments from the yaml file format to the argument parser format
+        :param dictionary: arguments given in conf file
+        :return: arguemnts in parser format
+        """
         arguments = list()
         if "o" in dictionary.keys():
             arguments.append("-o")
@@ -136,13 +149,6 @@ class Parser:
     def _parse_args():
         """
         Creates and returns the ArgumentParser object
-
-        Pla2g2:                 python protspace3d/app.py -o data/Pla2g2 --hdf data/Pla2g2/emb_prott5.h5 --csv data/Pla2g2/Pla2g2.csv --sep ";" --pdb data/Pla2g2/colabfold/pdb
-                                python protspace3d/app.py -o data/Pla2g2 --hdf data/Pla2g2/emb_esm2.h5 --csv data/Pla2g2/Pla2g2.csv --sep ";" --html 1
-        conotoxins_swiss_prot:  python protspace3d/app.py -o data/conotoxins_swiss_prot --hdf data/conotoxins_swiss_prot/Swiss_Prot_Conotoxins_mapped.h5 --csv data/conotoxins_swiss_prot/Swiss_Prot_Conotoxins_mapped.csv
-        conotoxins:             python protspace3d/app.py -o data/conotoxins --hdf data/conotoxins/Conotoxins.h5 --csv data/conotoxins/Conotoxins_mapped.csv --pdb data/conotoxins/colabfold/pdb
-
-
         """
 
         # Instantiate the parser
@@ -305,6 +311,12 @@ class Parser:
 
 
 def required_arguments_check(hdf_path: Path, output_d: Path):
+    """
+    Checks whether the required arguments for the script are given after processing conf file and arguments
+    :param hdf_path:    Path to the hdf file
+    :param output_d:    Path to the output directory
+    :return: None
+    """
     if hdf_path is None or output_d is None:
         if hdf_path is None and output_d is None:
             raise Exception(
@@ -419,6 +431,10 @@ def setup():
 
 
 def main():
+    """
+    Most general processing of the script
+    :return: None
+    """
     (
         app,
         html,
