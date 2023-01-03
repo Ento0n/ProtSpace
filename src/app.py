@@ -278,6 +278,22 @@ class Parser:
         )
 
 
+def required_arguments_check(hdf_path: Path, output_d: Path):
+    if hdf_path is None or output_d is None:
+        if hdf_path is None and output_d is None:
+            raise Exception(
+                "hdf path and output directory must be given either in config file or as argument!"
+            )
+        elif hdf_path is None:
+            raise Exception(
+                "hdf path must be given either in config file or as argument!"
+            )
+        else:
+            raise Exception(
+                "output directory must be given either in config file or as argument!"
+            )
+
+
 def setup():
     """
     Handles the process of the application
@@ -305,20 +321,7 @@ def setup():
         port,
     ) = parser.get_params()
 
-    # Check if h5 file is present
-    if hdf_path is None or output_d is None:
-        if hdf_path is None and output_d is None:
-            raise Exception(
-                "hdf path and output directory must be given either in config file or as argument!"
-            )
-        elif hdf_path is None:
-            raise Exception(
-                "hdf path must be given either in config file or as argument!"
-            )
-        else:
-            raise Exception(
-                "output directory must be given either in config file or as argument!"
-            )
+    required_arguments_check(hdf_path, output_d)
 
     # put UMAP parameters in dictionary
     umap_paras = dict()
