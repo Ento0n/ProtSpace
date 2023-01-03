@@ -181,6 +181,12 @@ class DataPreprocessor:
         return csv_less_flag
 
     def _check_mapped(self, csv_path: Path, separator: str):
+        """
+        Checks whether the given files were mapped beforehand or not
+        :param csv_path: Path to the csv file
+        :param separator: Separator of the csv file
+        :return: bool value whether things are mapped or not
+        """
         mapped_flag = False
         if csv_path.is_file():
             # get headers of csv file and create headers to be expected by a mapped file
@@ -198,12 +204,22 @@ class DataPreprocessor:
         return mapped_flag
 
     def _read_fasta(self):
+        """
+        Reads in fasta file to a dictionary
+        :return: fasta dictionary
+        """
         fasta_sequences = SeqIO.parse(open(self.fasta_path), "fasta")
         fasta_dict = SeqIO.to_dict(fasta_sequences)
         return fasta_dict
 
     @staticmethod
     def _get_headers(csv_path: Path, separator: str):
+        """
+        Reads in csv file and extracts its headers
+        :param csv_path: Path to csv file
+        :param separator: Separator of the csv file
+        :return: Headers of the csv file in lost format
+        """
         with open(csv_path, "r", encoding="utf-8-sig") as f:
             first_line = f.readline()
             headers = first_line.split(separator)
@@ -215,6 +231,13 @@ class DataPreprocessor:
 
     @staticmethod
     def _create_csv_less_df(hdf_path: Path, mapped_flag: bool, csv_path: Path):
+        """
+        df with "no group" column is created
+        :param hdf_path: Path to hdf file
+        :param mapped_flag: Bool whether things are mapped or not
+        :param csv_path: Path to csv file
+        :return: created df and the original id column
+        """
         original_id_col = None
         if mapped_flag:
             # read csv file
@@ -555,6 +578,11 @@ class DataPreprocessor:
         return df_umap
 
     def _generate_pca(self, data: np.ndarray):
+        """
+        generate PCA coords for given data
+        :param data: embeddings data
+        :return: dataframe with PCA coordinates
+        """
         from sklearn.decomposition import PCA
 
         fit = PCA(n_components=3, random_state=42)
@@ -644,6 +672,11 @@ class DataPreprocessor:
             print(", ".join(missing))
 
     def get_umap_paras_dict(self, df: DataFrame):
+        """
+        Create dictionary that saves umap parameters and their coordinates
+        :param df: dataframe with all the data
+        :return: the wanted dictionary
+        """
         umap_paras_dict = dict()
         n_neighbours = self.umap_paras["n_neighbours"]
         min_dist = self.umap_paras["min_dist"]
