@@ -1,10 +1,7 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 
-import dash_bootstrap_components as dbc
 import dash_bio as dashbio
-from dash import dcc, html
-import plotly.graph_objects as go
 
 from .base import *
 

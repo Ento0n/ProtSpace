@@ -36,6 +36,9 @@ class LoadConfFile(argparse.Action):
         if "o" in dictionary.keys():
             arguments.append("-o")
             arguments.append(str(dictionary["o"]))
+        if "output" in dictionary.keys():
+            arguments.append("--output")
+            arguments.append(str(dictionary["output"]))
         if "hdf" in dictionary.keys():
             arguments.append("--hdf")
             arguments.append(str(dictionary["hdf"]))
@@ -75,6 +78,12 @@ class LoadConfFile(argparse.Action):
         if "port" in dictionary.keys():
             arguments.append("--port")
             arguments.append(str(dictionary["port"]))
+        if "verbose" in dictionary.keys():
+            arguments.append("--verbose")
+            arguments.append(str(dictionary["verbose"]))
+        if "v" in dictionary.keys():
+            arguments.append("-v")
+            arguments.append(str(dictionary["v"]))
 
         return arguments
 
@@ -97,6 +106,7 @@ class Parser:
             self.min_dist,
             self.metric,
             self.port,
+            self.verbose,
         ) = self._parse_args()
 
     def get_params(self):
@@ -119,6 +129,7 @@ class Parser:
             self.min_dist,
             self.metric,
             self.port,
+            self.verbose,
         )
 
     @staticmethod
@@ -240,7 +251,20 @@ class Parser:
             default="euclidean",
             help="Metric used for UMAP calculation, default: euclidean",
         )
-        parser.add_argument("--port", required=False, type=int, default=8050)
+        parser.add_argument(
+            "--port",
+            required=False,
+            type=int,
+            default=8050,
+            help="Port on which the website is locally hosted.",
+        )
+        parser.add_argument(
+            "-v",
+            "--verbose",
+            required=False,
+            action="store_true",
+            help="By setting the verbose parameter, the script prints its internal operations.",
+        )
 
         args = parser.parse_args()
         output_d = Path(args.output) if args.output is not None else None
@@ -258,6 +282,7 @@ class Parser:
         min_dist = args.min_dist
         metric = args.metric
         port = args.port
+        verbose = args.verbose
 
         return (
             output_d,
@@ -275,6 +300,7 @@ class Parser:
             min_dist,
             metric,
             port,
+            verbose,
         )
 
 
@@ -319,6 +345,7 @@ def setup():
         min_dist,
         metric,
         port,
+        verbose,
     ) = parser.get_params()
 
     required_arguments_check(hdf_path, output_d)
@@ -340,6 +367,7 @@ def setup():
         html_cols,
         reset,
         umap_paras,
+        verbose,
     )
 
     # Preprocessing

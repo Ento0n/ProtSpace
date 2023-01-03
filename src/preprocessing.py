@@ -12,7 +12,6 @@ from pandas import DataFrame
 from Bio import SeqIO
 
 from visualization.visualizator import Visualizator
-from structurecontainer import StructureContainer
 
 
 class DataPreprocessor:
@@ -31,6 +30,7 @@ class DataPreprocessor:
         html_cols: list[str],
         reset: bool,
         umap_paras: dict,
+        verbose: bool,
     ):
         self.output_d = output_d
         self.hdf_path = hdf_path
@@ -41,6 +41,7 @@ class DataPreprocessor:
         self.html_cols = html_cols
         self.reset = reset
         self.umap_paras = umap_paras
+        self.verbose = verbose
 
     def data_preprocessing(self):
         """
@@ -159,10 +160,10 @@ class DataPreprocessor:
         csv_less_flag = False
         if not csv_path.is_file():
             csv_less_flag = True
-
-            print(
-                "No csv file found!\nActivate csv less mode, no groups or features are visualized."
-            )
+            if self.verbose:
+                print(
+                    "No csv file found!\nActivate csv less mode, no groups or features are visualized."
+                )
         # get csv headers to check whether csv only exists for mapping
         else:
             headers = self._get_headers(csv_path, separator)
@@ -174,7 +175,8 @@ class DataPreprocessor:
             if headers == mapped_headers:
                 csv_less_flag = True
 
-                print("No groups/features in csv file!")
+                if self.verbose:
+                    print("No groups/features in csv file!")
 
         return csv_less_flag
 
@@ -343,7 +345,9 @@ class DataPreprocessor:
         # load & read df.csv if present
         pres_df = output_d / f"df_{hdf_path.stem}.csv"
         if pres_df.is_file():
-            print(f"Pre computed dataframe file df_{hdf_path.stem}.csv is loaded.")
+            if self.verbose:
+                print(f"Pre computed dataframe file df_{hdf_path.stem}.csv is loaded.")
+
             pres_df_csv = pd.read_csv(pres_df, index_col=0)
             pres_df_csv.fillna("NA", inplace=True)
 
@@ -362,7 +366,9 @@ class DataPreprocessor:
             else:
                 # Check each column x, y & z for incompleteness
                 if not self._check_coordinates(pres_df_csv):
-                    print("Start recalculation!")
+                    if self.verbose:
+                        print("Start recalculation!")
+
                     df_embeddings, csv_header, embeddings = self._create_df(
                         output_d,
                         hdf_path,
@@ -380,7 +386,9 @@ class DataPreprocessor:
                         - (len(pres_df_csv.columns) - len(self.AXIS_NAMES))
                         > 0
                     ):
-                        print("New column(s) were found and will be added.")
+                        if self.verbose:
+                            print("New column(s) were found and will be added.")
+
                         pres_df_csv = self._update_df(df_csv, pres_df_csv)
 
                         # save the new obtained df
@@ -434,18 +442,21 @@ class DataPreprocessor:
         :return: complete dataframe and list of its headers
         """
 
-        # check for proteins in csv but not in h5 file
-        self._check_csv_uids(embeddings_uids=embs_uids, csv_uids=csv_uids)
+        if self.verbose:
+            # check for proteins in csv but not in h5 file
+            self._check_csv_uids(embeddings_uids=embs_uids, csv_uids=csv_uids)
 
         # data should be n_proteins x 1024 (ProtT5) OR n_proteins x 128 (ProtTucker)
-        print(f"Shape of embeddings (num_proteins x embedding dim): {embs.shape}")
+        if self.verbose:
+            print(f"Shape of embeddings (num_proteins x embedding dim): {embs.shape}")
 
-        # get pairwise distances; should be n_proteins x n_proteins
-        pairwise_dist = squareform(self._pairwise_distances(embs))
-        print(
-            "Shape of pairwise distance matrix (num_proteins x num_proteins):"
-            f" {pairwise_dist.shape}"
-        )
+        if self.verbose:
+            # get pairwise distances; should be n_proteins x n_proteins
+            pairwise_dist = squareform(self._pairwise_distances(embs))
+            print(
+                "Shape of pairwise distance matrix (num_proteins x num_proteins):"
+                f" {pairwise_dist.shape}"
+            )
 
         # generate dimensionality reduction components and merge it to CSV DataFrame
         df_dim_red_umap = self.generate_umap(embs, self.umap_paras)
@@ -467,8 +478,9 @@ class DataPreprocessor:
 
         return df_embeddings, csv_header, embs
 
-    @staticmethod
-    def _get_embeddings(emb_h5file: Path, csv_uids: list[str]) -> dict[str, np.ndarray]:
+    def _get_embeddings(
+        self, emb_h5file: Path, csv_uids: list[str]
+    ) -> dict[str, np.ndarray]:
         """load pre-computed embeddings in .h5 file format
 
         Args:
@@ -483,7 +495,9 @@ class DataPreprocessor:
 
         embeddings = dict()
         missing = list()
-        print(f"Loading pre-computed embeddings from: {emb_h5file}")
+        if self.verbose:
+            print(f"Loading pre-computed embeddings from: {emb_h5file}")
+
         with h5py.File(emb_h5file, "r") as hdf:
             for identifier, embd in hdf.items():
                 if identifier in csv_uids:
@@ -497,11 +511,12 @@ class DataPreprocessor:
                 "None of the Unique IDs of the h5 and the csv file matched."
             )
 
-        print(f"Example: {next(iter(embeddings.keys()))}")
-        print(f"Number of embeddings: {len(embeddings)}")
-        if (nr_missed := len(missing)) > 0:
-            print(f"{nr_missed} protein(s) in h5 but not in csv file:")
-            print(", ".join(missing))
+        if self.verbose:
+            print(f"Example: {next(iter(embeddings.keys()))}")
+            print(f"Number of embeddings: {len(embeddings)}")
+            if (nr_missed := len(missing)) > 0:
+                print(f"{nr_missed} protein(s) in h5 but not in csv file:")
+                print(", ".join(missing))
 
         return embeddings
 
@@ -564,7 +579,9 @@ class DataPreprocessor:
         """
         # Do the columns x, y and z exist?
         if not all(x in list(data_frame.columns) for x in self.AXIS_NAMES):
-            print("Df corrupted as not all x,y & z columns are present!")
+            if self.verbose:
+                print("Df corrupted as not all x,y & z columns are present!")
+
             return False
 
         # Is the corresponding data complete ?
@@ -572,7 +589,9 @@ class DataPreprocessor:
             for value in list(data_frame[col]):
                 if not isinstance(value, float):
                     # Value is corrupted
-                    print(f"At least one value of the {col} column is corrupted!")
+                    if self.verbose:
+                        print(f"At least one value of the {col} column is corrupted!")
+
                     return False
 
         # All values of the x,y & z column are correct
@@ -597,9 +616,10 @@ class DataPreprocessor:
             pres_df_csv.insert(
                 len(pres_df_cols) - len(self.AXIS_NAMES), col, df_csv[col]
             )
-            print(
-                f"Missing column {col} from the .csv file has been added to the present df.csv file."
-            )
+            if self.verbose:
+                print(
+                    f"Missing column {col} from the .csv file has been added to the present df.csv file."
+                )
 
         # return updated df
         return pres_df_csv

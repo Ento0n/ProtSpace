@@ -5,8 +5,6 @@ import dash_bootstrap_components as dbc
 from dash import Dash, dcc, html
 import plotly.graph_objects as go
 
-import os
-
 metric_options = [
     "euclidean",
     "cosine",
