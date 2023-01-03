@@ -622,9 +622,3 @@ class DataPreprocessor:
         if (nr_missed := (len(missing))) > 0:
             print(f"{nr_missed} protein(s) in csv but not in h5 file:")
             print(", ".join(missing))
-
-    @staticmethod
-    def init_structure_container(pdb_d: Path):
-        structure_container = StructureContainer(pdb_d)
-
-        return structure_container

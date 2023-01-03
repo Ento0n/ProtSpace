@@ -9,6 +9,7 @@ from preprocessing import DataPreprocessor
 from visualization.visualizator import Visualizator
 
 from callbacks import get_callbacks, get_callbacks_pdb
+from structurecontainer import StructureContainer
 
 import yaml
 
@@ -319,9 +320,6 @@ def setup():
                 "output directory must be given either in config file or as argument!"
             )
 
-    # pdb directory given or not
-    pdb_flag = True if pdb_d is not None else False
-
     # put UMAP parameters in dictionary
     umap_paras = dict()
     umap_paras["n_neighbours"] = n_neighbours
@@ -353,13 +351,7 @@ def setup():
     ) = data_preprocessor.data_preprocessing()
 
     # initialize structure container if flag set
-    structure_container = None
-    if pdb_flag:
-        pdb_d = Path(pdb_d)
-        structure_container = data_preprocessor.init_structure_container(pdb_d)
-
-    if json_d is not None:
-        structure_container.set_json_dir(json_d)
+    structure_container = StructureContainer(pdb_d, json_d)
 
     # Create visualization object
     visualizator = Visualizator(fig, csv_header)
@@ -371,20 +363,16 @@ def setup():
         ids = df.index.to_list()
 
     # --- APP creation ---
-    if pdb_flag:
+    if structure_container.pdb_flag:
         application = visualizator.get_pdb_app(ids, umap_paras)
     else:
         application = visualizator.get_base_app(umap_paras)
 
-    # html cols set or not
-    html_flag = True if html_cols is not None else False
-
     return (
         application,
-        html_flag,
+        True if html_cols is not None else False,
         df,
         structure_container,
-        pdb_flag,
         original_id_col,
         umap_paras,
         output_d,
@@ -402,7 +390,6 @@ def main():
         html,
         df,
         struct_container,
-        pdb,
         orig_id_col,
         umap_paras,
         output_d,
@@ -429,7 +416,7 @@ def main():
         umap_paras_dict[umap_paras_string] = coords_dict
 
         # different callbacks for different layout
-        if pdb:
+        if struct_container.pdb_flag:
             get_callbacks(
                 app,
                 df,

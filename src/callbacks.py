@@ -734,27 +734,25 @@ def get_callbacks(
 
         info_text = []
 
-        if struct_container is not None:
-            if struct_container.has_json_dir():
-                json_d = struct_container.get_json_dir()
-                json_file = json_d / f"{seq_id}.json"
-                if json_file.is_file():
-                    with open(json_file) as f:
-                        json_dict = json.load(f)
+        if struct_container.json_flag:
+            json_file = struct_container.get_json_dir() / f"{seq_id}.json"
+            if json_file.is_file():
+                with open(json_file) as f:
+                    json_dict = json.load(f)
 
-                    ptm = json_dict["ptm"]
-                    plddt = mean(json_dict["plddt"])
+                ptm = json_dict["ptm"]
+                plddt = mean(json_dict["plddt"])
 
-                    info_text.append(
-                        dbc.ListGroupItem(
-                            [
-                                html.B("plDDT mean: "),
-                                html.P(f"{round(plddt, 2)}"),
-                                html.B("pTM: "),
-                                html.P(f"{ptm}"),
-                            ]
-                        )
+                info_text.append(
+                    dbc.ListGroupItem(
+                        [
+                            html.B("plDDT mean: "),
+                            html.P(f"{round(plddt, 2)}"),
+                            html.B("pTM: "),
+                            html.P(f"{ptm}"),
+                        ]
                     )
+                )
 
         # group info in children format
         group_info_children = [
