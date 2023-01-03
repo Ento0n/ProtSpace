@@ -362,6 +362,8 @@ def setup():
     else:
         ids = df.index.to_list()
 
+    umap_paras_dict = data_preprocessor.get_umap_paras_dict(df)
+
     # --- APP creation ---
     if structure_container.pdb_flag:
         application = visualizator.get_pdb_app(ids, umap_paras)
@@ -375,6 +377,7 @@ def setup():
         structure_container,
         original_id_col,
         umap_paras,
+        umap_paras_dict,
         output_d,
         csv_header,
         port,
@@ -392,6 +395,7 @@ def main():
         struct_container,
         orig_id_col,
         umap_paras,
+        umap_paras_dict,
         output_d,
         csv_header,
         port,
@@ -402,19 +406,6 @@ def main():
 
     # don't start server if html is needed
     if not html:
-        # Create umap paras dictionary
-        umap_paras_dict = dict()
-        n_neighbours = umap_paras["n_neighbours"]
-        min_dist = umap_paras["min_dist"]
-        metric = umap_paras["metric"]
-        umap_paras_string = str(n_neighbours) + " ; " + str(min_dist) + " ; " + metric
-        coords_dict = dict(
-            x_umap=df["x_umap"].to_list(),
-            y_umap=df["y_umap"].to_list(),
-            z_umap=df["z_umap"].to_list(),
-        )
-        umap_paras_dict[umap_paras_string] = coords_dict
-
         # different callbacks for different layout
         if struct_container.pdb_flag:
             get_callbacks(

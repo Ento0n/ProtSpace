@@ -622,3 +622,18 @@ class DataPreprocessor:
         if (nr_missed := (len(missing))) > 0:
             print(f"{nr_missed} protein(s) in csv but not in h5 file:")
             print(", ".join(missing))
+
+    def get_umap_paras_dict(self, df: DataFrame):
+        umap_paras_dict = dict()
+        n_neighbours = self.umap_paras["n_neighbours"]
+        min_dist = self.umap_paras["min_dist"]
+        metric = self.umap_paras["metric"]
+        umap_paras_string = str(n_neighbours) + " ; " + str(min_dist) + " ; " + metric
+        coords_dict = dict(
+            x_umap=df["x_umap"].to_list(),
+            y_umap=df["y_umap"].to_list(),
+            z_umap=df["z_umap"].to_list(),
+        )
+        umap_paras_dict[umap_paras_string] = coords_dict
+
+        return umap_paras_dict

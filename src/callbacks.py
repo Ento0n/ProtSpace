@@ -583,6 +583,7 @@ def get_callbacks(
             ctx.triggered_id == "dd_menu"
             or ctx.triggered_id == "umap_recalculation_button"
             or ctx.triggered_id == "dim_red_radio"
+            or ctx.triggered_id == "last_umap_paras_dd"
         ):
             fig = Visualizator.render(
                 df,
