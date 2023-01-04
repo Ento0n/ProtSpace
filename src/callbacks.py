@@ -844,34 +844,13 @@ def get_callbacks(
 
             return True
 
-    @app.callback(
-        Output("info_toast", "header"),
-        Output("info_toast", "children"),
-        Output("info_toast", "is_open"),
-        Input("graph", "clickData"),
-    )
-    def show_info_toast(click_data):
+    def get_json_info(seq_id: str, info_text: list):
         """
-        Opens info toast and fills it with information for selected molecule in graph
-        :param click_data: data received from clicking on graph
-        :return: open info toast and give text to display
+        Creates json info in needed format for the info toast
+        :param seq_id: selected sequence ID
+        :param info_text: info text list to be filled
+        :return: info_text list filled or not
         """
-        # Check whether an input is triggered
-        ctx = dash.callback_context
-        if not ctx.triggered:
-            raise PreventUpdate
-
-        # get seq id from click data
-        seq_id = clickdata_to_seqid(click_data, df)
-
-        actual_seq_id = seq_id
-        if original_id_col is not None:
-            actual_seq_id = to_original_id([seq_id], original_id_col, df)
-
-        info_header = actual_seq_id
-
-        info_text = []
-
         if struct_container.json_flag:
             json_file = struct_container.get_json_dir() / f"{seq_id}.json"
             if json_file.is_file():
@@ -892,23 +871,13 @@ def get_callbacks(
                     )
                 )
 
-        # group info in children format
-        group_info_children = [
-            dbc.Button(
-                children=[
-                    "Group info",
-                    html.I(className="bi bi-arrow-up"),
-                ],
-                id="group_info_collapse_button",
-                color="dark",
-                outline=True,
-                style={"border": "none"},
-            ),
-        ]
-        for header in csv_header:
-            group_info_children.append(html.B(f"{header}:"))
-            group_info_children.append(html.P(f"{df.at[seq_id, header]}"))
-
+    def get_fasta_info(seq_id: str, info_text: list):
+        """
+        Creates fasta info in needed format for the info toast
+        :param seq_id: selected sequence ID
+        :param info_text: info text list to be filled
+        :return: info_text list filled or not
+        """
         if fasta_dict is not None:
             if seq_id in fasta_dict.keys():
                 sequence = str(fasta_dict[seq_id].seq)
@@ -968,6 +937,30 @@ def get_callbacks(
                     )
                 )
 
+    def get_group_info(seq_id: str, info_text: list):
+        """
+        Creates group info in needed format for the info toast
+        :param seq_id: selected sequence ID
+        :param info_text: info text list to be filled
+        :return: info_text list filled or not
+        """
+        # group info in children format
+        group_info_children = [
+            dbc.Button(
+                children=[
+                    "Group info",
+                    html.I(className="bi bi-arrow-up"),
+                ],
+                id="group_info_collapse_button",
+                color="dark",
+                outline=True,
+                style={"border": "none"},
+            ),
+        ]
+        for header in csv_header:
+            group_info_children.append(html.B(f"{header}:"))
+            group_info_children.append(html.P(f"{df.at[seq_id, header]}"))
+
         info_text.append(
             dbc.ListGroupItem(
                 [
@@ -1001,6 +994,40 @@ def get_callbacks(
         # Don't show toast if no information is present
         if len(info_text) == 0:
             raise PreventUpdate
+
+    @app.callback(
+        Output("info_toast", "header"),
+        Output("info_toast", "children"),
+        Output("info_toast", "is_open"),
+        Input("graph", "clickData"),
+    )
+    def show_info_toast(click_data):
+        """
+        Opens info toast and fills it with information for selected molecule in graph
+        :param click_data: data received from clicking on graph
+        :return: open info toast and give text to display
+        """
+        # Check whether an input is triggered
+        ctx = dash.callback_context
+        if not ctx.triggered:
+            raise PreventUpdate
+
+        # get seq id from click data
+        seq_id = clickdata_to_seqid(click_data, df)
+
+        actual_seq_id = seq_id
+        if original_id_col is not None:
+            actual_seq_id = to_original_id([seq_id], original_id_col, df)
+
+        info_header = actual_seq_id
+
+        info_text = []
+
+        get_json_info(seq_id, info_text)
+
+        get_fasta_info(seq_id, info_text)
+
+        get_group_info(seq_id, info_text)
 
         info_text = dbc.ListGroup(info_text, flush=True)
 
