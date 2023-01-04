@@ -29,6 +29,11 @@ class Visualizator:
 
     @staticmethod
     def n_symbols_equation(n: int):
+        """
+        Output is the number of symbols used based on the number of groups
+        :param n: number of groups
+        :return: number of symbols
+        """
         if n <= 8:
             return 1
         elif n <= 11:
@@ -46,7 +51,13 @@ class Visualizator:
 
     @staticmethod
     def n_samples_equation(n: int, val_range: int) -> float:
-        # the underlying equation is (x-10)/(x+10)
+        """
+        Output is the range in which saturation and luminositiy of the coloring are picked,
+        dependent on the number of groups. The underlying equation is (x-10)/(x+10).
+        :param n: number of groups
+        :param val_range: maximal range
+        :return: calculated range
+        """
         numerator = n - 10
         denominator = n + 10
         res = numerator / denominator
@@ -60,6 +71,12 @@ class Visualizator:
 
     @staticmethod
     def gen_distinct_colors(n, sort: bool = True):
+        """
+        Creates are list in rgb format that holds the most distinct colors for the number of groups.
+        :param n: number of groups
+        :param sort: Whether colors should be sorted or not.
+        :return: list with colors
+        """
         color_list = list()
         np.random.seed(42)
         hues = np.arange(0, 360, 360 / n)
@@ -94,54 +111,13 @@ class Visualizator:
         return rgb_list
 
     @staticmethod
-    # https://github.com/sacdallago/bio_embeddings/blob/develop/bio_embeddings/visualize/plotly_plots.py
-    def render(
-        df: DataFrame,
-        selected_column: str,
-        original_id_col: object,
-        umap_paras: dict,
-        umap_flag: bool = True,
-    ):
+    def handle_colorbar(col_groups: list, fig: go.Figure, n_symbols: int):
         """
-        Renders the plotly graph with the selected column in the dataframe df
-        :param df: dataframe
-        :param selected_column: column of the dataframe
-        :param original_id_col: the colum "original id" of the mapped csv file
-        :param umap_paras: dictionary holding the parameters of UMAP
-        :param umap_flag: flag is set if umap calculations are used.
-        :return: plotly graphical object
+        Creates a colorbar trace for the plot if only numeric values are in the group.
+        :param col_groups: the column groups
+        :param fig: the graph figure
+        :return: flag whether only numeric values are in the column and number of symbols to be used
         """
-
-        # custom separator to sort str, int and float (str case-insensitive)
-        # order: 1. int and float 2. str 3. rest 4. NA
-        def my_comparator(val):
-            if isinstance(val, float) or isinstance(val, int):
-                return 0, val
-            elif val == "NA":
-                return 3, val
-            elif isinstance(val, str):
-                val = val.lower()
-                return 1, val
-            else:
-                return 2, val
-
-        mapped_index = None
-        if original_id_col is not None:
-            # swap index
-            mapped_index = df.index
-            df.index = original_id_col
-
-        col_groups = df[selected_column].unique().tolist()
-
-        col_groups.sort(key=my_comparator)
-
-        color_list = Visualizator.gen_distinct_colors(n=len(col_groups))
-
-        # Figure out how many symbols to use depending on number of column groups
-        n_symbols = Visualizator.n_symbols_equation(n=len(col_groups))
-
-        fig = go.Figure()
-
         numeric_flag = False
         if all(
             [
@@ -216,6 +192,147 @@ class Visualizator:
 
             fig.add_trace(color_trace)
 
+        return numeric_flag, n_symbols
+
+    @staticmethod
+    def customize_axis_titles(umap_flag: bool, fig: go.Figure, df: DataFrame):
+        """
+        Axis titles are edited dependent on dimensionality reduction (UMAP or PCA)
+        :param umap_flag: flag whether UMAP or not
+        :param fig: graph figure
+        :param df: dataframe with all the data
+        :return: None
+        """
+        if umap_flag:
+            fig.update_layout(
+                # Remove axes ticks and labels as they are usually not informative
+                scene=dict(
+                    xaxis=dict(showticklabels=False, showspikes=False, title=""),
+                    yaxis=dict(showticklabels=False, showspikes=False, title=""),
+                    zaxis=dict(showticklabels=False, showspikes=False, title=""),
+                ),
+            )
+        else:
+            # extract variance column
+            pca_variance = df["variance"].to_list()
+
+            fig.update_layout(
+                # Remove axes ticks and labels as they are usually not informative
+                scene=dict(
+                    xaxis=dict(
+                        showticklabels=False,
+                        showspikes=False,
+                        title=f"PC1 ({float(pca_variance[0]):.1f}%)",
+                    ),
+                    yaxis=dict(
+                        showticklabels=False,
+                        showspikes=False,
+                        title=f"PC2 ({float(pca_variance[1]):.1f}%)",
+                    ),
+                    zaxis=dict(
+                        showticklabels=False,
+                        showspikes=False,
+                        title=f"PC3 ({float(pca_variance[2]):.1f}%)",
+                    ),
+                ),
+            )
+
+    @staticmethod
+    def handle_title(umap_flag: bool, umap_paras: dict, fig: go.Figure):
+        """
+        Sets up the title of the graph depending on the dimensionality reduction (UMAP or PCA)
+        :param umap_flag: flag whether UMAP is set or not
+        :param umap_paras: parameters of the UMAP calculation
+        :param fig: graph figure
+        :return: None
+        """
+        # Update title
+        if umap_flag:
+            title = (
+                "UMAP" + f"<br>n_neighbours: {umap_paras['n_neighbours']},"
+                f" min_dist: {umap_paras['min_dist']}, metric: {umap_paras['metric']}"
+            )
+        else:
+            title = "PCA"
+
+        fig.update_layout(
+            title={
+                "text": title,
+                "y": 0.98,
+                "x": 0.4,
+            }
+        )
+
+    @staticmethod
+    def update_layout(fig: go.Figure):
+        """
+        Updates the layout of the graph figure. Margin, hoverinfo and legend positioning
+        :param fig: graph Figure
+        :return: None
+        """
+        # Set hoverinfo
+        fig.update_traces(
+            hoverinfo=["name", "text"],
+            hoverlabel=dict(namelength=-1),
+            hovertemplate="%{text}",
+        )
+
+        # Set legend in right upper corner of the plot
+        fig.update_layout(legend=dict(yanchor="top", y=0.97, xanchor="right", x=0.99))
+
+        # change margins of the graph
+        fig.update_layout(margin=dict(l=1, r=1, t=1, b=1))
+
+    @staticmethod
+    # https://github.com/sacdallago/bio_embeddings/blob/develop/bio_embeddings/visualize/plotly_plots.py
+    def render(
+        df: DataFrame,
+        selected_column: str,
+        original_id_col: object,
+        umap_paras: dict,
+        umap_flag: bool = True,
+    ):
+        """
+        Renders the plotly graph with the selected column in the dataframe df
+        :param df: dataframe
+        :param selected_column: column of the dataframe
+        :param original_id_col: the colum "original id" of the mapped csv file
+        :param umap_paras: dictionary holding the parameters of UMAP
+        :param umap_flag: flag is set if umap calculations are used.
+        :return: plotly graphical object
+        """
+
+        # custom separator to sort str, int and float (str case-insensitive)
+        # order: 1. int and float 2. str 3. rest 4. NA
+        def my_comparator(val):
+            if isinstance(val, float) or isinstance(val, int):
+                return 0, val
+            elif val == "NA":
+                return 3, val
+            elif isinstance(val, str):
+                val = val.lower()
+                return 1, val
+            else:
+                return 2, val
+
+        mapped_index = None
+        if original_id_col is not None:
+            # swap index
+            mapped_index = df.index
+            df.index = original_id_col
+
+        col_groups = df[selected_column].unique().tolist()
+        col_groups.sort(key=my_comparator)
+
+        color_list = Visualizator.gen_distinct_colors(n=len(col_groups))
+
+        # Figure out how many symbols to use depending on number of column groups
+        n_symbols = Visualizator.n_symbols_equation(n=len(col_groups))
+
+        fig = go.Figure()
+
+        numeric_flag = Visualizator.handle_colorbar(col_groups, fig)
+
         df["class_index"] = np.ones(len(df)) * -100
 
         if umap_flag:
@@ -266,69 +383,9 @@ class Visualizator:
             # Give the different group values a number
             df.loc[df[selected_column] == group_value, "class_index"] = group_idx
 
-        if umap_flag:
-            fig.update_layout(
-                # Remove axes ticks and labels as they are usually not informative
-                scene=dict(
-                    xaxis=dict(showticklabels=False, showspikes=False, title=""),
-                    yaxis=dict(showticklabels=False, showspikes=False, title=""),
-                    zaxis=dict(showticklabels=False, showspikes=False, title=""),
-                ),
-            )
-        else:
-            # extract variance column
-            pca_variance = df["variance"].to_list()
+        Visualizator.update_layout(fig)
 
-            fig.update_layout(
-                # Remove axes ticks and labels as they are usually not informative
-                scene=dict(
-                    xaxis=dict(
-                        showticklabels=False,
-                        showspikes=False,
-                        title=f"PC1 ({float(pca_variance[0]):.1f}%)",
-                    ),
-                    yaxis=dict(
-                        showticklabels=False,
-                        showspikes=False,
-                        title=f"PC2 ({float(pca_variance[1]):.1f}%)",
-                    ),
-                    zaxis=dict(
-                        showticklabels=False,
-                        showspikes=False,
-                        title=f"PC3 ({float(pca_variance[2]):.1f}%)",
-                    ),
-                ),
-            )
-
-        # Set hoverinfo
-        fig.update_traces(
-            hoverinfo=["name", "text"],
-            hoverlabel=dict(namelength=-1),
-            hovertemplate="%{text}",
-        )
-
-        # Set legend in right upper corner of the plot
-        fig.update_layout(legend=dict(yanchor="top", y=0.97, xanchor="right", x=0.99))
-
-        # change margins of the graph
-        fig.update_layout(margin=dict(l=1, r=1, t=1, b=1))
-
-        # Update title
-        if umap_flag:
-            title = (
-                "UMAP" + f"<br>n_neighbours: {umap_paras['n_neighbours']},"
-                f" min_dist: {umap_paras['min_dist']}, metric: {umap_paras['metric']}"
-            )
-        else:
-            title = "PCA"
-
-        fig.update_layout(
-            title={
-                "text": title,
-                "y": 0.98,
-                "x": 0.4,
-            }
-        )
+        Visualizator.handle_title(umap_flag, umap_paras, fig)
 
         # swap index again
         if original_id_col is not None:
@@ -337,7 +394,18 @@ class Visualizator:
         return fig
 
     def get_base_app(self, umap_paras: dict):
+        """
+        Initializes the dash app in base.py
+        :param umap_paras: Parameters of the UMAP calculation
+        :return: the application layout
+        """
         return init_app(umap_paras, self.csv_header, self.fig)
 
     def get_pdb_app(self, orig_id_col: list[str], umap_paras: dict):
+        """
+        Initializes the dash app in pdb.py
+        :param orig_id_col: List of the original IDs
+        :param umap_paras: Parameters of the UMAP calculation
+        :return: the application layout
+        """
         return init_app_pdb(orig_id_col, umap_paras, self.csv_header, self.fig)
