@@ -21,6 +21,13 @@ from statistics import mean
 
 
 def to_mapped_id(sel_original_seq_ids: list, original_id_col: list, df: DataFrame):
+    """
+    Converts IDs from original to mapped
+    :param sel_original_seq_ids: selected original sequence IDs
+    :param original_id_col: list of original IDs
+    :param df: Dataframe with all data
+    :return: sequence IDs in mapped
+    """
     seq_ids = list()
 
     for seq_id in sel_original_seq_ids:
@@ -32,6 +39,13 @@ def to_mapped_id(sel_original_seq_ids: list, original_id_col: list, df: DataFram
 
 
 def to_original_id(sel_mapped_seq_ids: list, original_id_col: list, df: DataFrame):
+    """
+    Converts IDs from mapped to original
+    :param sel_mapped_seq_ids: selected mapped sequence IDs
+    :param original_id_col: list of original IDs
+    :param df: Dataframe with all data
+    :return: sequence IDs in mapped
+    """
     seq_ids = list()
 
     for seq_id in sel_mapped_seq_ids:
@@ -49,6 +63,16 @@ def handle_highlighting(
     range_end: int,
     selected_atoms: list,
 ):
+    """
+    Takes selected sequence IDs and if one is selected and range, highlighting is set up, convert
+    the ID into needed string representation.
+    :param seq_ids: selected sequence IDs
+    :param struct_container: structure container handling files
+    :param range_start: selected range start
+    :param range_end: selected range end
+    :param selected_atoms: selected atoms to be highlighted
+    :return: highlighting parameters
+    """
     # disable range and highlighting selection in case more than 1 atom is selected
     start_disabled = False
     end_disabled = False
@@ -155,6 +179,12 @@ def handle_highlighting(
 
 
 def clickdata_to_seqid(click_data, df: DataFrame):
+    """
+    takes clickdata recieved from graph and converts it into the sequence ID
+    :param click_data: graph click data
+    :param df: dataframe with all info
+    :return: retrieved sequence ID
+    """
     # dict with data of clickdata
     points = click_data["points"][0]
     # class_index value and it's index number
@@ -176,6 +206,15 @@ def clickdata_to_seqid(click_data, df: DataFrame):
 
 
 def get_callbacks_pdb(app, df, struct_container, original_id_col):
+    """
+    Holds callbacks needed for pdb layout
+    :param app: dash application
+    :param df: dataframe with all data
+    :param struct_container: structure container handling files
+    :param original_id_col: list with original IDs
+    :return: None
+    """
+
     @app.callback(
         Output("ngl_molecule_viewer", "data"),
         Output("molecules_dropdown", "value"),
@@ -318,6 +357,12 @@ def get_callbacks_pdb(app, df, struct_container, original_id_col):
         Input("spacing_slider", "value"),
     )
     def set_mol_style(selected_representation, spacing_slider_value):
+        """
+        Updates the representation of the molecule viewer
+        :param selected_representation: in the dropdown menu selected representation(s)
+        :param spacing_slider_value: value of the slider, space between molecules
+        :return: filled dictionary
+        """
         molstyles_dict = {
             "representations": selected_representation,
             "chosenAtomsColor": "white",
@@ -333,6 +378,11 @@ def get_callbacks_pdb(app, df, struct_container, original_id_col):
         Input("molecules_settings_button", "n_clicks"),
     )
     def handle_molecules_canvas(button_click):
+        """
+        Opens the molecule viewer settings offcanvas
+        :param button_click: settings button clicked
+        :return: True for open offcanvas
+        """
         if button_click:
             return True
 
@@ -365,6 +415,16 @@ def get_callbacks_pdb(app, df, struct_container, original_id_col):
     def set_molviewer_size(
         sizing, slider_height, slider_width, div_style_dic, distribution
     ):
+        """
+        Calculates and or simply changes the molecule viewer height and width, also
+        depending on space distribution.
+        :param sizing: calculated height and width
+        :param slider_height: height value of the height slider
+        :param slider_width: width value of the width slider
+        :param div_style_dic: Border of the molecule viewer
+        :param distribution: space distribution slider value
+        :return: height and width of the components
+        """
         ctx = dash.callback_context
         if not ctx.triggered:
             raise PreventUpdate
@@ -424,6 +484,14 @@ def get_callbacks_pdb(app, df, struct_container, original_id_col):
         Input("mol_name_storage", "data"),
     )
     def download_molecule(button_clicks: int, filename_input: str, mol_names: str):
+        """
+        download option for molecule viewer, takes in selected sequence IDs in string format,
+        a filename input and names the file accordingly
+        :param button_clicks: button click of download button
+        :param filename_input: text of the filename input
+        :param mol_names: selected sequence IDs in string format
+        :return: needed download parameters
+        """
         ctx = dash.callback_context
         if not ctx.triggered:
             raise PreventUpdate
@@ -476,6 +544,22 @@ def get_callbacks(
     fasta_dict: dict,
     struct_container: StructureContainer,
 ):
+    """
+    General callbacks needed for application
+    :param app: application
+    :param df: dataframe with all data
+    :param original_id_col: list of original IDs
+    :param umap_paras: UMAP parameters in dictionary
+    :param output_d: output directory
+    :param csv_header: the csv headers
+    :param embeddings: the embeddings in a numpy stack
+    :param embedding_uids: the unique IDs of the embeddings
+    :param umap_paras_dict: already calculated UMAP parameters and their coordinates
+    :param fasta_dict: fasta file in dictionary format
+    :param struct_container: the structure container handling files
+    :return:
+    """
+
     @app.callback(
         Output("graph", "figure"),
         Output("n_neighbours_input", "disabled"),
@@ -509,6 +593,20 @@ def get_callbacks(
         click_data,
         fig,
     ):
+        """
+        Handles updating the graph when another group is selected, dimensionality reduction has changed,
+        new parameters for UMAP should be calculated and applied, or a trace is removed/added for highlighting
+        :param selected_value: selected group in dropdown menu
+        :param dim_red: selected dimensionality reduction
+        :param n_neighbours: UMAP value n_neighbours
+        :param min_dist: UMAP value min_dist
+        :param metric: UMAP value metric
+        :param recal_button_clicks: Button for recalculating UMAP with new values and applying these.
+        :param umap_paras_dd_value: selected UMAP parameters of already calculated ones
+        :param click_data: data received from clicking the graph
+        :param fig: graph Figure
+        :return:
+        """
         # Check whether an input is triggered
         ctx = dash.callback_context
         if not ctx.triggered:
@@ -661,6 +759,11 @@ def get_callbacks(
         Input("disclaimer_modal_button", "n_clicks"),
     )
     def close_disclaimer_modal(button):
+        """
+        Handles the closing of the disclaimer modal on button click
+        :param button: "Agree" button on disclaimer modal
+        :return: open state of disclaimer modal
+        """
         if button:
             return False
 
@@ -671,6 +774,11 @@ def get_callbacks(
         Input("help_button", "n_clicks"),
     )
     def open_help_modal(button):
+        """
+        handles the closing of the help modal on button click
+        :param button: "Close" button on help modal
+        :return: open state of help modal
+        """
         if button:
             return True
 
@@ -680,6 +788,11 @@ def get_callbacks(
         Output("graph_offcanvas", "is_open"), Input("graph_settings_button", "n_clicks")
     )
     def handle_graph_canvas(button_click):
+        """
+        Opens settings offcanvas for graph on button click
+        :param button_click: settings button click in graph container
+        :return: open settings
+        """
         if button_click:
             return True
 
@@ -691,6 +804,14 @@ def get_callbacks(
         Input("dim_red_radio", "value"),
     )
     def create_html(dd_value: str, button: int, all_button: int, dim_red: str):
+        """
+        Creates html of selected group on button click and indicates this with an download toast
+        :param dd_value: selected group in the dropdown menu
+        :param button: html download button
+        :param all_button: button indicating all groups should be downloaded
+        :param dim_red: selected dimensionality reduction
+        :return: open download toast
+        """
         # Check whether an input is triggered
         ctx = dash.callback_context
         if not ctx.triggered:
@@ -730,6 +851,11 @@ def get_callbacks(
         Input("graph", "clickData"),
     )
     def show_info_toast(click_data):
+        """
+        Opens info toast and fills it with information for selected molecule in graph
+        :param click_data: data received from clicking on graph
+        :return: open info toast and give text to display
+        """
         # Check whether an input is triggered
         ctx = dash.callback_context
         if not ctx.triggered:
@@ -889,6 +1015,12 @@ def get_callbacks(
         Input("collapse_seq_button", "n_clicks"),
     )
     def expand_sequence(expand_button: int, collapse_button: int):
+        """
+        Expands or collapses the sequence in the info toast
+        :param expand_button: button indicating sequence should expand
+        :param collapse_button: button indicating sequence should be collapsed
+        :return: which sequence to display
+        """
         # Check whether an input is triggered
         ctx = dash.callback_context
         if not ctx.triggered:
@@ -913,6 +1045,12 @@ def get_callbacks(
         Input("group_info_collapse_button", "n_clicks"),
     )
     def handle_group_info(expand_button: int, collapse_button: int):
+        """
+        Expand or collapse group info on button click
+        :param expand_button: button indicating group info should be shown
+        :param collapse_button: button indicating group info should be hidden.
+        :return: Hide or show group info
+        """
         # Check whether an input is triggered
         ctx = dash.callback_context
         if not ctx.triggered:
