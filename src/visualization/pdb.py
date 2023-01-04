@@ -17,12 +17,151 @@ representation_options = [
 ]
 
 
+def get_pdb_offcanvas():
+    """
+    Layout of the offcanvas for the settings of the molecule displaying (pdb)
+    :return: offcanvas layout
+    """
+    offcanvas = dbc.Offcanvas(
+        id="molecules_offcanvas",
+        title="Settings",
+        is_open=False,
+        style={"width": "50%"},
+        children=[
+            dcc.Markdown("Representations:"),
+            dcc.Dropdown(
+                id="representation_dropdown",
+                options=representation_options,
+                multi=True,
+                value=["cartoon"],
+            ),
+            html.Br(),
+            dbc.Row(
+                [
+                    dbc.Col(
+                        [
+                            dcc.Markdown("Start:"),
+                            dcc.Dropdown(
+                                id="range_start",
+                                disabled=True,
+                            ),
+                        ]
+                    ),
+                    dbc.Col(
+                        [
+                            dcc.Markdown("End:"),
+                            dcc.Dropdown(
+                                id="range_end",
+                                disabled=True,
+                            ),
+                        ]
+                    ),
+                    dbc.Col(
+                        [
+                            dcc.Markdown(
+                                "Highlighted atoms:",
+                            ),
+                            dcc.Dropdown(
+                                id="selected_atoms",
+                                multi=True,
+                                disabled=True,
+                            ),
+                        ]
+                    ),
+                ]
+            ),
+            html.Br(),
+            dcc.Markdown("Spacing:"),
+            dcc.Slider(
+                id="spacing_slider",
+                min=10,
+                max=200,
+                value=50,
+                marks=None,
+                tooltip={
+                    "placement": "bottom",
+                    "always_visible": False,
+                },
+            ),
+            dcc.Markdown("Space distribution:"),
+            dcc.Slider(
+                id="distribution_slider",
+                min=3,
+                max=9,
+                value=6,
+                step=1,
+                marks=None,
+            ),
+            dbc.Button(
+                "Recalculate molecule viewing size",
+                id="recal_size_button",
+                class_name="d-grid mx-auto",
+                color="dark",
+                outline=True,
+                style={"margin-bottom": "10px"},
+            ),
+            dcc.Markdown("Height:"),
+            dcc.Slider(
+                id="height_slider",
+                min=200,
+                max=5000,
+                value=300,
+                marks=None,
+                tooltip={
+                    "placement": "bottom",
+                    "always_visible": False,
+                },
+            ),
+            dcc.Markdown("Width:"),
+            dcc.Slider(
+                id="width_slider",
+                min=200,
+                max=5000,
+                value=500,
+                marks=None,
+                tooltip={
+                    "placement": "bottom",
+                    "always_visible": False,
+                },
+            ),
+            dbc.Row(
+                [
+                    dbc.Col(
+                        dcc.Input(
+                            id="filename_input",
+                            type="text",
+                            placeholder="filename",
+                            style={
+                                "height": "38px",
+                                "margin-right": "20px",
+                            },
+                        ),
+                        width=6,
+                    ),
+                    dbc.Col(
+                        dbc.Button(
+                            "Download image",
+                            id="download_molecule_button",
+                            color="dark",
+                            outline=True,
+                            disabled=True,
+                        ),
+                        width=6,
+                    ),
+                ]
+            ),
+        ],
+    )
+
+    return offcanvas
+
+
 def init_app_pdb(
     original_id_col: list, umap_paras: dict, csv_header: list[str], fig: go.Figure
 ):
     """
-    Initializes app & Builds html layout for Dash
-    :return: layout
+    Layout for the molecule displaying, in general the right column in pdb mode
+    :return: application layout
     """
     app = get_app()
 
@@ -43,6 +182,8 @@ def init_app_pdb(
             get_download_toast(),
             # Toast to display info on selected protein
             get_info_toast(),
+            # offcanvas for the settings
+            get_pdb_offcanvas(),
             # graph and controls
             dbc.Row(
                 [
@@ -134,136 +275,6 @@ def init_app_pdb(
                                     "border-right": "1px solid grey",
                                     "margin-left": "0px",
                                 },
-                            ),
-                            dbc.Offcanvas(
-                                id="molecules_offcanvas",
-                                title="Settings",
-                                is_open=False,
-                                children=[
-                                    dcc.Markdown("Representations:"),
-                                    dcc.Dropdown(
-                                        id="representation_dropdown",
-                                        options=representation_options,
-                                        multi=True,
-                                        value=["cartoon"],
-                                    ),
-                                    html.Br(),
-                                    dbc.Row(
-                                        [
-                                            dbc.Col(
-                                                [
-                                                    dcc.Markdown("Start:"),
-                                                    dcc.Dropdown(
-                                                        id="range_start",
-                                                        disabled=True,
-                                                    ),
-                                                ]
-                                            ),
-                                            dbc.Col(
-                                                [
-                                                    dcc.Markdown("End:"),
-                                                    dcc.Dropdown(
-                                                        id="range_end",
-                                                        disabled=True,
-                                                    ),
-                                                ]
-                                            ),
-                                            dbc.Col(
-                                                [
-                                                    dcc.Markdown(
-                                                        "Highlighted atoms:",
-                                                    ),
-                                                    dcc.Dropdown(
-                                                        id="selected_atoms",
-                                                        multi=True,
-                                                        disabled=True,
-                                                    ),
-                                                ]
-                                            ),
-                                        ]
-                                    ),
-                                    html.Br(),
-                                    dcc.Markdown("Spacing:"),
-                                    dcc.Slider(
-                                        id="spacing_slider",
-                                        min=10,
-                                        max=200,
-                                        value=50,
-                                        marks=None,
-                                        tooltip={
-                                            "placement": "bottom",
-                                            "always_visible": False,
-                                        },
-                                    ),
-                                    dcc.Markdown("Space distribution:"),
-                                    dcc.Slider(
-                                        id="distribution_slider",
-                                        min=3,
-                                        max=9,
-                                        value=6,
-                                        step=1,
-                                        marks=None,
-                                    ),
-                                    dbc.Button(
-                                        "Recalculate molecule viewing size",
-                                        id="recal_size_button",
-                                        class_name="d-grid mx-auto",
-                                        color="dark",
-                                        outline=True,
-                                        style={"margin-bottom": "10px"},
-                                    ),
-                                    dcc.Markdown("Height:"),
-                                    dcc.Slider(
-                                        id="height_slider",
-                                        min=200,
-                                        max=5000,
-                                        value=300,
-                                        marks=None,
-                                        tooltip={
-                                            "placement": "bottom",
-                                            "always_visible": False,
-                                        },
-                                    ),
-                                    dcc.Markdown("Width:"),
-                                    dcc.Slider(
-                                        id="width_slider",
-                                        min=200,
-                                        max=5000,
-                                        value=500,
-                                        marks=None,
-                                        tooltip={
-                                            "placement": "bottom",
-                                            "always_visible": False,
-                                        },
-                                    ),
-                                    dbc.Row(
-                                        [
-                                            dbc.Col(
-                                                dcc.Input(
-                                                    id="filename_input",
-                                                    type="text",
-                                                    placeholder="filename",
-                                                    style={
-                                                        "height": "38px",
-                                                        "margin-right": "20px",
-                                                    },
-                                                ),
-                                                width=6,
-                                            ),
-                                            dbc.Col(
-                                                dbc.Button(
-                                                    "Download image",
-                                                    id="download_molecule_button",
-                                                    color="dark",
-                                                    outline=True,
-                                                    disabled=True,
-                                                ),
-                                                width=6,
-                                            ),
-                                        ]
-                                    ),
-                                ],
-                                style={"width": "50%"},
                             ),
                         ],
                         id="right_col",
