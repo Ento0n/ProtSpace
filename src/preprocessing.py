@@ -559,6 +559,7 @@ class DataPreprocessor:
         """
         generated umap for given data
         :param data: embeddings data
+        :param umap_paras: parameters of the UMAP calculation
         :return: dataframe of the umap coordinates
         """
         # visualize high-dimensional embeddings with dimensionality reduction (here: umap)
@@ -656,7 +657,7 @@ class DataPreprocessor:
     def _check_csv_uids(embeddings_uids: list[str], csv_uids: list[str]):
         """
         Check unique IDs in csv but not in h5 file
-        :param embeddings: data of the h5 file
+        :param embeddings_uids: unique IDs of the embeddings file
         :param csv_uids: unique IDs of the csv file
         """
         missing = list()

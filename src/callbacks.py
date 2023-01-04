@@ -23,8 +23,8 @@ from statistics import mean
 def to_mapped_id(sel_original_seq_ids: list, original_id_col: list, df: DataFrame):
     seq_ids = list()
 
-    for id in sel_original_seq_ids:
-        index_num = original_id_col.index(id)
+    for seq_id in sel_original_seq_ids:
+        index_num = original_id_col.index(seq_id)
         mapped_id = df.index[index_num]
         seq_ids.append(mapped_id)
 
@@ -154,7 +154,7 @@ def handle_highlighting(
     )
 
 
-def clickData_to_seqID(click_data, df: DataFrame):
+def clickdata_to_seqid(click_data, df: DataFrame):
     # dict with data of clickdata
     points = click_data["points"][0]
     # class_index value and it's index number
@@ -214,12 +214,17 @@ def get_callbacks_pdb(app, df, struct_container, original_id_col):
         :param range_end: in the dropdown menu selected end
         :param selected_atoms: selected values of the dropdown menu for highlighted atoms
         :param reset_view_clicks: button to reset the view of the molecule viewer.
-        :return:
+        :param last_clicked_mol: sequence ID of the last clicked molecule
+        :return: molecule viewer variables etc.
         """
 
         ctx = dash.callback_context
         if not ctx.triggered:
             raise PreventUpdate
+
+        # Make redundant variable used
+        if reset_view_clicks:
+            pass
 
         # convert original to mapped IDs
         seq_ids = list()
@@ -237,7 +242,7 @@ def get_callbacks_pdb(app, df, struct_container, original_id_col):
         # triggered by click on graph
         clicked_seq_id = last_clicked_mol
         if ctx.triggered_id == "graph":
-            clicked_seq_id = clickData_to_seqID(click_data, df)
+            clicked_seq_id = clickdata_to_seqid(click_data, df)
 
             # Add to seq ids or replace last clicked molecule
             if last_clicked_mol is None:
@@ -423,6 +428,10 @@ def get_callbacks_pdb(app, df, struct_container, original_id_col):
         if not ctx.triggered:
             raise PreventUpdate
 
+        # Make redundant variable used
+        if button_clicks:
+            pass
+
         if filename_input is None or filename_input == "":
             filename_input = mol_names
 
@@ -500,16 +509,14 @@ def get_callbacks(
         click_data,
         fig,
     ):
-        """
-        Renders new graph for selected drop down menu value
-        :param selected_value: selected column of dropdown menu
-        :param dim_red: Chosen dimensionality reduction in str format
-        :return: graph to be displayed
-        """
         # Check whether an input is triggered
         ctx = dash.callback_context
         if not ctx.triggered:
             raise PreventUpdate
+
+        # Make redundant variable used
+        if recal_button_clicks:
+            pass
 
         # In case dropdown menu is being cleared
         if selected_value is None:
@@ -596,7 +603,7 @@ def get_callbacks(
         # Add trace that highlights the selected molecule with a circle
         # get seq id from click data
         if ctx.triggered_id == "graph":
-            seq_id = clickData_to_seqID(click_data, df)
+            seq_id = clickdata_to_seqid(click_data, df)
 
             if umap_flag:
                 x = df.at[seq_id, "x_umap"]
@@ -689,6 +696,10 @@ def get_callbacks(
         if not ctx.triggered:
             raise PreventUpdate
 
+        # Make redundant variable used
+        if button or all_button:
+            pass
+
         if ctx.triggered_id == "html_download_button":
             # Set up umap flag
             umap_flag = True if dim_red == "UMAP" else False
@@ -725,7 +736,7 @@ def get_callbacks(
             raise PreventUpdate
 
         # get seq id from click data
-        seq_id = clickData_to_seqID(click_data, df)
+        seq_id = clickdata_to_seqid(click_data, df)
 
         actual_seq_id = seq_id
         if original_id_col is not None:
@@ -883,6 +894,10 @@ def get_callbacks(
         if not ctx.triggered:
             raise PreventUpdate
 
+        # Make redundant variable used
+        if expand_button or collapse_button:
+            pass
+
         collapse_hidden = False
         expand_hidden = True
         if ctx.triggered_id == "expand_seq_button":
@@ -902,6 +917,10 @@ def get_callbacks(
         ctx = dash.callback_context
         if not ctx.triggered:
             raise PreventUpdate
+
+        # Make redundant variable used
+        if expand_button or collapse_button:
+            pass
 
         collapse_hidden = False
         expand_hidden = True
