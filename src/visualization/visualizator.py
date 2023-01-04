@@ -331,7 +331,7 @@ class Visualizator:
 
         fig = go.Figure()
 
-        numeric_flag = Visualizator.handle_colorbar(col_groups, fig)
+        numeric_flag = Visualizator.handle_colorbar(col_groups, fig, n_symbols)
 
         df["class_index"] = np.ones(len(df)) * -100
 

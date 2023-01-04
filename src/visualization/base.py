@@ -31,6 +31,10 @@ metric_options = [
 
 
 def get_app():
+    """
+    Initializes dash application
+    :return: application
+    """
     app = Dash(
         __name__,
         external_stylesheets=[dbc.themes.BOOTSTRAP, dbc.icons.BOOTSTRAP],
@@ -41,8 +45,8 @@ def get_app():
 
 def init_app(umap_paras: dict, csv_header: list[str], fig: go.Figure):
     """
-    Initializes app & Builds html layout for Dash
-    :return: layout
+    Set up the layout of the application
+    :return: application
     """
     app = get_app()
 
@@ -72,9 +76,118 @@ def init_app(umap_paras: dict, csv_header: list[str], fig: go.Figure):
     return app
 
 
+def get_graph_offcanvas(umap_paras: dict, umap_paras_string: str):
+    """
+    Creates layout of the offcanvas for the graph.
+    :param umap_paras: Parameters of the UMAP calculation
+    :param umap_paras_string: UMAP parameters in string format.
+    :return: graph offcanvas layout
+    """
+    offcanvas = dbc.Offcanvas(
+        id="graph_offcanvas",
+        is_open=False,
+        title="Graph settings",
+        style={"width": "50%"},
+        placement="end",
+        children=[
+            dcc.Markdown("Dimensionality reduction"),
+            dbc.RadioItems(
+                options=[
+                    {"label": "UMAP", "value": "UMAP"},
+                    {"label": "PCA", "value": "PCA"},
+                ],
+                value="UMAP",
+                id="dim_red_radio",
+                inline="True",
+            ),
+            html.Br(),
+            dcc.Markdown("HTML"),
+            dbc.Button(
+                "Download all files",
+                id="button_html_all",
+                color="dark",
+                outline=True,
+            ),
+            html.Br(),
+            html.Br(),
+            dcc.Markdown("UMAP parameters"),
+            dbc.Row(
+                [
+                    dbc.Col(
+                        [
+                            dcc.Markdown("n_neighbours:"),
+                            dbc.Input(
+                                id="n_neighbours_input",
+                                type="number",
+                                min=0,
+                                step=1,
+                                value=umap_paras["n_neighbours"],
+                            ),
+                        ],
+                        width=4,
+                    ),
+                    dbc.Col(
+                        [
+                            dcc.Markdown("min_dist:"),
+                            dbc.Input(
+                                id="min_dist_input",
+                                type="number",
+                                min=0,
+                                # Set max to 1 since min_dist must be less than or equal to spread,
+                                # which is 1.0 by default and not changed
+                                max=1,
+                                step=0.1,
+                                value=umap_paras["min_dist"],
+                            ),
+                        ],
+                        width=4,
+                    ),
+                    dbc.Col(
+                        [
+                            dcc.Markdown("metric:"),
+                            dcc.Dropdown(
+                                id="metric_input",
+                                options=metric_options,
+                                value=umap_paras["metric"],
+                            ),
+                        ],
+                        width=4,
+                    ),
+                ],
+            ),
+            html.Br(),
+            dbc.Button(
+                "Recalculate UMAP",
+                id="umap_recalculation_button",
+                color="dark",
+                outline=True,
+            ),
+            html.Br(),
+            html.Br(),
+            dcc.Dropdown(
+                id="last_umap_paras_dd",
+                value=umap_paras_string,
+                options=[umap_paras_string],
+                clearable=False,
+                searchable=False,
+            ),
+        ],
+    )
+
+    return offcanvas
+
+
 def get_graph_container(
     umap_paras: dict, pdb: bool, csv_header: list[str], fig: go.Figure
 ):
+    """
+    Creates the layout for the graph Row
+    :param umap_paras: umap parameters
+    :param pdb: flag whether pdb layout is needed or not.
+    :param csv_header: headers of the csv file
+    :param fig: graph Figure
+    :return: Layout of the offcanvas
+    """
     # UMAP parameters in string format
     umap_paras_string = str(
         str(umap_paras["n_neighbours"])
@@ -97,96 +210,7 @@ def get_graph_container(
         xxl = 11
 
     graph_container = (
-        dbc.Offcanvas(
-            id="graph_offcanvas",
-            is_open=False,
-            title="Graph settings",
-            children=[
-                dcc.Markdown("Dimensionality reduction"),
-                dbc.RadioItems(
-                    options=[
-                        {"label": "UMAP", "value": "UMAP"},
-                        {"label": "PCA", "value": "PCA"},
-                    ],
-                    value="UMAP",
-                    id="dim_red_radio",
-                    inline="True",
-                ),
-                html.Br(),
-                dcc.Markdown("HTML"),
-                dbc.Button(
-                    "Download all files",
-                    id="button_html_all",
-                    color="dark",
-                    outline=True,
-                ),
-                html.Br(),
-                html.Br(),
-                dcc.Markdown("UMAP parameters"),
-                dbc.Row(
-                    [
-                        dbc.Col(
-                            [
-                                dcc.Markdown("n_neighbours:"),
-                                dbc.Input(
-                                    id="n_neighbours_input",
-                                    type="number",
-                                    min=0,
-                                    step=1,
-                                    value=umap_paras["n_neighbours"],
-                                ),
-                            ],
-                            width=4,
-                        ),
-                        dbc.Col(
-                            [
-                                dcc.Markdown("min_dist:"),
-                                dbc.Input(
-                                    id="min_dist_input",
-                                    type="number",
-                                    min=0,
-                                    # Set max to 1 since min_dist must be less than or equal to spread,
-                                    # which is 1.0 by default and not changed
-                                    max=1,
-                                    step=0.1,
-                                    value=umap_paras["min_dist"],
-                                ),
-                            ],
-                            width=4,
-                        ),
-                        dbc.Col(
-                            [
-                                dcc.Markdown("metric:"),
-                                dcc.Dropdown(
-                                    id="metric_input",
-                                    options=metric_options,
-                                    value=umap_paras["metric"],
-                                ),
-                            ],
-                            width=4,
-                        ),
-                    ],
-                ),
-                html.Br(),
-                dbc.Button(
-                    "Recalculate UMAP",
-                    id="umap_recalculation_button",
-                    color="dark",
-                    outline=True,
-                ),
-                html.Br(),
-                html.Br(),
-                dcc.Dropdown(
-                    id="last_umap_paras_dd",
-                    value=umap_paras_string,
-                    options=[umap_paras_string],
-                    clearable=False,
-                    searchable=False,
-                ),
-            ],
-            style={"width": "50%"},
-            placement="end",
-        ),
+        get_graph_offcanvas(umap_paras, umap_paras_string),
         dbc.Row(
             children=[
                 dbc.Col(
@@ -258,6 +282,10 @@ def get_graph_container(
 
 
 def get_disclaimer_modal():
+    """
+    Layout for the modal (window) with the disclaimer displayed at startup of the website.
+    :return: Disclaimer layout modal
+    """
     modal = dbc.Modal(
         [
             dbc.ModalHeader(dbc.ModalTitle("Disclaimer"), close_button=False),
@@ -283,6 +311,10 @@ def get_disclaimer_modal():
 
 
 def get_help_modal():
+    """
+    Layout for the modal (window) with the help text.
+    :return: Help layout modal
+    """
     modal = dbc.Modal(
         [
             dbc.ModalHeader(dbc.ModalTitle("Help"), close_button=True),
@@ -298,6 +330,10 @@ def get_help_modal():
 
 
 def get_download_toast():
+    """
+    Layout for the toast (infobox) shown when downloading an html file.
+    :return: download toast layout
+    """
     toast = dbc.Toast(
         "Html file(s) successfully saved in output folder!",
         header="Download HTML",
@@ -317,6 +353,10 @@ def get_download_toast():
 
 
 def get_info_toast():
+    """
+    Layout for the toast (infobox) shown when clicking on a molecule in the graph.
+    :return: info toast layout
+    """
     toast = dbc.Toast(
         children=[
             html.Div(id="expanded_seq_div"),
@@ -347,6 +387,11 @@ def get_info_toast():
 
 
 def get_header(app: Dash):
+    """
+    Layout for the black header of the application
+    :param app: the application itself
+    :return: layout of the header
+    """
     header = dbc.Row(
         [
             dbc.Col(
