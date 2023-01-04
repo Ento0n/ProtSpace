@@ -331,7 +331,9 @@ class Visualizator:
 
         fig = go.Figure()
 
-        numeric_flag = Visualizator.handle_colorbar(col_groups, fig, n_symbols)
+        numeric_flag, n_symbols = Visualizator.handle_colorbar(
+            col_groups, fig, n_symbols
+        )
 
         df["class_index"] = np.ones(len(df)) * -100
 
@@ -386,6 +388,8 @@ class Visualizator:
         Visualizator.update_layout(fig)
 
         Visualizator.handle_title(umap_flag, umap_paras, fig)
+
+        Visualizator.customize_axis_titles(umap_flag, fig, df)
 
         # swap index again
         if original_id_col is not None:
