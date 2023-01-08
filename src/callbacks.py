@@ -279,6 +279,11 @@ def get_callbacks_pdb(app, df, struct_container, original_id_col):
         # path to .pdb file
         struct_path = str(struct_container.get_structure_dir()) + "/"
 
+        # check whether .pdb file is present
+        file_path = Path(struct_path + seq_ids[0] + ".pdb")
+        if not file_path.is_file():
+            raise PreventUpdate
+
         # handle the range and atom selection
         (
             start_disabled,
@@ -705,6 +710,9 @@ def get_callbacks(
         if ctx.triggered_id == "graph":
             seq_id = clickdata_to_seqid(click_data)
 
+            if original_id_col is not None:
+                seq_id = to_mapped_id([seq_id], original_id_col, df)[0]
+
             if umap_flag:
                 x = df.at[seq_id, "x_umap"]
                 y = df.at[seq_id, "y_umap"]
@@ -1025,11 +1033,11 @@ def get_callbacks(
             raise PreventUpdate
 
         # get seq id from click data
-        seq_id = clickdata_to_seqid(click_data)
+        actual_seq_id = clickdata_to_seqid(click_data)
 
-        actual_seq_id = seq_id
+        seq_id = actual_seq_id
         if original_id_col is not None:
-            actual_seq_id = to_original_id([seq_id], original_id_col, df)
+            seq_id = to_mapped_id([seq_id], original_id_col, df)[0]
 
         info_header = actual_seq_id
 
