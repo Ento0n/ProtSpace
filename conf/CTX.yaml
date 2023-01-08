@@ -1,0 +1,5 @@
+o: data/CTX
+hdf: data/CTX/CTX_esm2.h5
+csv: data/CTX/CTX_mapped.csv
+fasta: data/CTX/CTX_mapped.fasta
+pdb: data/CTX/colabfold/pdb

@@ -268,6 +268,9 @@ def get_callbacks_pdb(app, df, struct_container, original_id_col):
         if ctx.triggered_id == "graph":
             clicked_seq_id = clickdata_to_seqid(click_data)
 
+            if original_id_col is not None:
+                clicked_seq_id = to_mapped_id([clicked_seq_id], original_id_col, df)[0]
+
             # Add to seq ids or replace last clicked molecule
             if last_clicked_mol is None:
                 seq_ids.append(clicked_seq_id)
@@ -280,9 +283,10 @@ def get_callbacks_pdb(app, df, struct_container, original_id_col):
         struct_path = str(struct_container.get_structure_dir()) + "/"
 
         # check whether .pdb file is present
-        file_path = Path(struct_path + seq_ids[0] + ".pdb")
-        if not file_path.is_file():
-            raise PreventUpdate
+        if seq_ids:
+            file_path = Path(struct_path + seq_ids[0] + ".pdb")
+            if not file_path.is_file():
+                raise PreventUpdate
 
         # handle the range and atom selection
         (
