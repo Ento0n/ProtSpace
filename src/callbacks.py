@@ -558,6 +558,7 @@ def get_callbacks(
         Output("metric_input", "value"),
         Output("last_umap_paras_dd", "value"),
         Output("highlighting_bool", "data"),
+        Output("relayoutData_save", "data"),
         Input("dd_menu", "value"),
         Input("dim_red_radio", "value"),
         Input("n_neighbours_input", "value"),
@@ -567,7 +568,9 @@ def get_callbacks(
         Input("last_umap_paras_dd", "value"),
         Input("graph", "clickData"),
         Input("highlighting_bool", "data"),
+        Input("relayoutData_save", "data"),
         State("graph", "figure"),
+        State("graph", "relayoutData"),
     )
     def update_graph(
         selected_value: str,
@@ -579,7 +582,9 @@ def get_callbacks(
         umap_paras_dd_value: str,
         click_data: dict,
         highlighting_bool: bool,
+        relayout_data_save: dict,
         fig,
+        relayout_data: dict,
     ):
         """
         Handles updating the graph when another group is selected, dimensionality reduction has changed,
@@ -592,9 +597,11 @@ def get_callbacks(
         :param recal_button_clicks: Button for recalculating UMAP with new values and applying these.
         :param umap_paras_dd_value: selected UMAP parameters of already calculated ones
         :param click_data: data received from clicking the graph
-        :param fig: graph Figure
         :param highlighting_bool: boolean indicating whether highlighting circle is already displayed or not
-        :return:
+        :param relayout_data_save: relayout dict of the last click, needed for buggy plotly
+        :param fig: graph Figure
+        :param relayout_data: scene data of the graph
+        :return: Output variables
         """
         # Check whether an input is triggered
         ctx = dash.callback_context
@@ -615,6 +622,10 @@ def get_callbacks(
 
         # load df into inner scope so that it can be modified
         nonlocal df
+
+        # If plotly relayoutData is bugged and dict is empty for a reason, use last saved relayoutData
+        if not relayout_data:
+            relayout_data = relayout_data_save
 
         # convert dictionary state of graph figure into go object
         fig = go.Figure(fig)
@@ -728,6 +739,12 @@ def get_callbacks(
             # set highlighting_bool to true since highlighting circle is now displayed
             highlighting_bool = True
 
+            # set camera to old settings so that camera stays in its position and doesn't reset
+            fig.update_layout(scene_camera=relayout_data["scene.camera"])
+
+            # save relayoutData for buggy plotly
+            relayout_data_save = relayout_data
+
         # Disable UMAP parameter input or not?
         disabled = False
         if not umap_flag:
@@ -746,6 +763,7 @@ def get_callbacks(
             umap_paras["metric"],
             umap_paras_string,
             highlighting_bool,
+            relayout_data_save,
         )
 
     @app.callback(

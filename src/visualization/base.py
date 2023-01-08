@@ -212,6 +212,8 @@ def get_graph_container(
     graph_container = (
         # Storage to save whether Highlighting circle is already displayed or not
         dcc.Store(id="highlighting_bool", storage_type="memory", data=False),
+        # Storage to save last camera data (relayoutData)
+        dcc.Store(id="relayoutData_save", storage_type="memory", data={}),
         get_graph_offcanvas(umap_paras, umap_paras_string),
         dbc.Row(
             children=[
