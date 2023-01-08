@@ -11,7 +11,6 @@ from dash.exceptions import PreventUpdate
 import dash
 import dash_bio.utils.ngl_parser as ngl_parser
 import plotly.graph_objects as go
-import pandas as pd
 
 import dash_bootstrap_components as dbc
 
@@ -178,29 +177,15 @@ def handle_highlighting(
     )
 
 
-def clickdata_to_seqid(click_data, df: DataFrame):
+def clickdata_to_seqid(click_data):
     """
     takes clickdata recieved from graph and converts it into the sequence ID
     :param click_data: graph click data
-    :param df: dataframe with all info
     :return: retrieved sequence ID
     """
     # dict with data of clickdata
-    points = click_data["points"][0]
-    # class_index value and it's index number
-    index_num = int(points["pointNumber"])
-    class_index = points["curveNumber"]
-
-    # extract df_row of selected protein
-    class_df = df[df["class_index"] == class_index]
-    df_row = class_df.iloc[index_num]
-    # add missing name to series
-    name = pd.Series(class_df.index[index_num])
-    name.index = ["Name"]
-    df_row = pd.concat([name, df_row])
-
-    # extract sequence ID
-    seq_id = df_row["Name"]
+    values = click_data["points"][0]
+    seq_id = values["text"]
 
     return seq_id
 
@@ -281,7 +266,7 @@ def get_callbacks_pdb(app, df, struct_container, original_id_col):
         # triggered by click on graph
         clicked_seq_id = last_clicked_mol
         if ctx.triggered_id == "graph":
-            clicked_seq_id = clickdata_to_seqid(click_data, df)
+            clicked_seq_id = clickdata_to_seqid(click_data)
 
             # Add to seq ids or replace last clicked molecule
             if last_clicked_mol is None:
@@ -572,6 +557,7 @@ def get_callbacks(
         Output("min_dist_input", "value"),
         Output("metric_input", "value"),
         Output("last_umap_paras_dd", "value"),
+        Output("highlighting_bool", "data"),
         Input("dd_menu", "value"),
         Input("dim_red_radio", "value"),
         Input("n_neighbours_input", "value"),
@@ -580,6 +566,7 @@ def get_callbacks(
         Input("umap_recalculation_button", "n_clicks"),
         Input("last_umap_paras_dd", "value"),
         Input("graph", "clickData"),
+        Input("highlighting_bool", "data"),
         State("graph", "figure"),
     )
     def update_graph(
@@ -590,7 +577,8 @@ def get_callbacks(
         metric: str,
         recal_button_clicks: int,
         umap_paras_dd_value: str,
-        click_data,
+        click_data: dict,
+        highlighting_bool: bool,
         fig,
     ):
         """
@@ -605,6 +593,7 @@ def get_callbacks(
         :param umap_paras_dd_value: selected UMAP parameters of already calculated ones
         :param click_data: data received from clicking the graph
         :param fig: graph Figure
+        :param highlighting_bool: boolean indicating whether highlighting circle is already displayed or not
         :return:
         """
         # Check whether an input is triggered
@@ -697,11 +686,13 @@ def get_callbacks(
                 umap_flag=umap_flag,
                 umap_paras=umap_paras,
             )
+            # Set highlighting_bool to False since new graph is displayed and highlighting circle is removed
+            highlighting_bool = False
 
         # Add trace that highlights the selected molecule with a circle
         # get seq id from click data
         if ctx.triggered_id == "graph":
-            seq_id = clickdata_to_seqid(click_data, df)
+            seq_id = clickdata_to_seqid(click_data)
 
             if umap_flag:
                 x = df.at[seq_id, "x_umap"]
@@ -713,8 +704,7 @@ def get_callbacks(
                 z = df.at[seq_id, "z_pca"]
 
             # Remove last trace (highlighting circle) if present
-            col_groups = df[selected_value].unique().tolist()
-            if len(fig["data"]) > len(col_groups):
+            if highlighting_bool:
                 data_list = list(fig.data)
                 data_list.pop(-1)
                 fig.data = data_list
@@ -735,6 +725,9 @@ def get_callbacks(
                 )
             )
 
+            # set highlighting_bool to true since highlighting circle is now displayed
+            highlighting_bool = True
+
         # Disable UMAP parameter input or not?
         disabled = False
         if not umap_flag:
@@ -752,6 +745,7 @@ def get_callbacks(
             umap_paras["min_dist"],
             umap_paras["metric"],
             umap_paras_string,
+            highlighting_bool,
         )
 
     @app.callback(
@@ -1013,7 +1007,7 @@ def get_callbacks(
             raise PreventUpdate
 
         # get seq id from click data
-        seq_id = clickdata_to_seqid(click_data, df)
+        seq_id = clickdata_to_seqid(click_data)
 
         actual_seq_id = seq_id
         if original_id_col is not None:

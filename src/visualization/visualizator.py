@@ -111,11 +111,15 @@ class Visualizator:
         return rgb_list
 
     @staticmethod
-    def handle_colorbar(col_groups: list, fig: go.Figure, n_symbols: int):
+    def handle_colorbar(
+        col_groups: list, fig: go.Figure, n_symbols: int, color_list: list
+    ):
         """
         Creates a colorbar trace for the plot if only numeric values are in the group.
         :param col_groups: the column groups
         :param fig: the graph figure
+        :param n_symbols: number of different symbols to be displayed.
+        :param color_list: list with the different colors to be displayed.
         :return: flag whether only numeric values are in the column and number of symbols to be used
         """
         numeric_flag = False
@@ -192,7 +196,7 @@ class Visualizator:
 
             fig.add_trace(color_trace)
 
-        return numeric_flag, n_symbols
+        return numeric_flag, n_symbols, color_list
 
     @staticmethod
     def customize_axis_titles(umap_flag: bool, fig: go.Figure, df: DataFrame):
@@ -331,8 +335,8 @@ class Visualizator:
 
         fig = go.Figure()
 
-        numeric_flag, n_symbols = Visualizator.handle_colorbar(
-            col_groups, fig, n_symbols
+        numeric_flag, n_symbols, color_list = Visualizator.handle_colorbar(
+            col_groups, fig, n_symbols, color_list
         )
 
         df["class_index"] = np.ones(len(df)) * -100
