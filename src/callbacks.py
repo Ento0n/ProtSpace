@@ -286,7 +286,20 @@ def get_callbacks_pdb(app, df, struct_container, original_id_col):
         if seq_ids:
             file_path = Path(struct_path + seq_ids[0] + ".pdb")
             if not file_path.is_file():
-                raise PreventUpdate
+                return (
+                    dash.no_update,
+                    seq_ids,
+                    dash.no_update,
+                    dash.no_update,
+                    dash.no_update,
+                    dash.no_update,
+                    dash.no_update,
+                    dash.no_update,
+                    dash.no_update,
+                    dash.no_update,
+                    dash.no_update,
+                    clicked_seq_id,
+                )
 
         # handle the range and atom selection
         (
