@@ -165,9 +165,7 @@ class Parser:
             "--output",
             required=False,
             type=str,
-            help=(
-                "Name of the output folder in the project directory where generated files will be stored."
-            ),
+            help=("Name of the output folder where generated files will be stored."),
         )
         # Required argument
         parser.add_argument(
@@ -181,7 +179,7 @@ class Parser:
             "--csv",
             required=False,
             type=str,
-            help="Path to CSV-file containg groups/features by which the dots in the 3D-plot are colored",
+            help="Path to CSV-file containing groups/features by which the dots in the 3D-plot are colored",
         )
         parser.add_argument(
             "-f",
@@ -205,7 +203,7 @@ class Parser:
             required=False,
             type=str,
             default=",",
-            help="Separator for CSV file",
+            help="Separator of CSV file",
         )
         # Optional argument
         parser.add_argument(
@@ -219,7 +217,7 @@ class Parser:
         parser.add_argument(
             "--html_cols",
             required=False,
-            help="CSV columns to be saved as html",
+            help="CSV columns to be saved as html, either the column index(es) or column name(s).",
             nargs="+",
         )
         # Optional argument
@@ -240,7 +238,7 @@ class Parser:
             "--reset",
             required=False,
             action="store_true",
-            help="Generated df.csv is deleted and recalculated.",
+            help="Precomputed file df.csv is deleted and recalculated.",
         )
         # Optional argument
         parser.add_argument(
