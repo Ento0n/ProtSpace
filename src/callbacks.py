@@ -15,6 +15,7 @@ import plotly.graph_objects as go
 import dash_bootstrap_components as dbc
 
 from pandas import DataFrame
+import numpy as np
 import json
 from statistics import mean
 
@@ -177,7 +178,7 @@ def handle_highlighting(
     )
 
 
-def clickdata_to_seqid(click_data):
+def clickdata_to_seqid(click_data: dict):
     """
     takes clickdata recieved from graph and converts it into the sequence ID
     :param click_data: graph click data
@@ -190,7 +191,12 @@ def clickdata_to_seqid(click_data):
     return seq_id
 
 
-def get_callbacks_pdb(app, df, struct_container, original_id_col):
+def get_callbacks_pdb(
+    app: dash.Dash,
+    df: DataFrame,
+    struct_container: StructureContainer,
+    original_id_col: list,
+):
     """
     Holds callbacks needed for pdb layout
     :param app: dash application
@@ -225,7 +231,7 @@ def get_callbacks_pdb(app, df, struct_container, original_id_col):
         Input("molecules_dropdown_save", "data"),
     )
     def display_molecule(
-        click_data,
+        click_data: dict,
         dd_molecules: list,
         range_start: int,
         range_end: int,
@@ -379,7 +385,7 @@ def get_callbacks_pdb(app, df, struct_container, original_id_col):
         Input("representation_dropdown", "value"),
         Input("spacing_slider", "value"),
     )
-    def set_mol_style(selected_representation, spacing_slider_value):
+    def set_mol_style(selected_representation: list, spacing_slider_value: int):
         """
         Updates the representation of the molecule viewer
         :param selected_representation: in the dropdown menu selected representation(s)
@@ -400,7 +406,7 @@ def get_callbacks_pdb(app, df, struct_container, original_id_col):
         Output("molecules_offcanvas", "is_open"),
         Input("molecules_settings_button", "n_clicks"),
     )
-    def handle_molecules_canvas(button_click):
+    def handle_molecules_canvas(button_click: int):
         """
         Opens the molecule viewer settings offcanvas
         :param button_click: settings button clicked
@@ -436,7 +442,11 @@ def get_callbacks_pdb(app, df, struct_container, original_id_col):
         Input("distribution_slider", "value"),
     )
     def set_molviewer_size(
-        sizing, slider_height, slider_width, div_style_dic, distribution
+        sizing: list,
+        slider_height: int,
+        slider_width: int,
+        div_style_dict: dict,
+        distribution: int,
     ):
         """
         Calculates and or simply changes the molecule viewer height and width, also
@@ -444,7 +454,7 @@ def get_callbacks_pdb(app, df, struct_container, original_id_col):
         :param sizing: calculated height and width
         :param slider_height: height value of the height slider
         :param slider_width: width value of the width slider
-        :param div_style_dic: Border of the molecule viewer
+        :param div_style_dict: Border of the molecule viewer
         :param distribution: space distribution slider value
         :return: height and width of the components
         """
@@ -455,15 +465,15 @@ def get_callbacks_pdb(app, df, struct_container, original_id_col):
         # sliders are used
         if ctx.triggered_id == "height_slider" or ctx.triggered_id == "width_slider":
             # set style of div accordingly
-            div_style_dic["height"] = str(slider_height + 1) + "px"
-            div_style_dic["width"] = str(slider_width + 1) + "px"
+            div_style_dict["height"] = str(slider_height + 1) + "px"
+            div_style_dict["width"] = str(slider_width + 1) + "px"
 
             return (
                 slider_height,
                 slider_width,
                 slider_height,
                 slider_width,
-                div_style_dic,
+                div_style_dict,
             )
 
         # automatic sizing
@@ -494,10 +504,10 @@ def get_callbacks_pdb(app, df, struct_container, original_id_col):
             width = sizing[1] / 4.5
 
         # set style of div accordingly
-        div_style_dic["height"] = str(height + 1) + "px"
-        div_style_dic["width"] = str(width + 1) + "px"
+        div_style_dict["height"] = str(height + 1) + "px"
+        div_style_dict["width"] = str(width + 1) + "px"
 
-        return height, width, height, width, div_style_dic
+        return height, width, height, width, div_style_dict
 
     @app.callback(
         Output("ngl_molecule_viewer", "downloadImage"),
@@ -548,7 +558,7 @@ def get_callbacks_pdb(app, df, struct_container, original_id_col):
         Output("right_col", "width"),
         Input("distribution_slider", "value"),
     )
-    def set_space_distribution(left_width):
+    def set_space_distribution(left_width: int):
         right_width = 12 - left_width
 
         return left_width, right_width
@@ -561,8 +571,8 @@ def get_callbacks(
     umap_paras: dict,
     output_d: Path,
     csv_header: list[str],
-    embeddings,
-    embedding_uids,
+    embeddings: np.stack,
+    embedding_uids: list,
     umap_paras_dict: dict,
     fasta_dict: dict,
     struct_container: StructureContainer,
@@ -621,7 +631,7 @@ def get_callbacks(
         click_data: dict,
         highlighting_bool: bool,
         relayout_data_save: dict,
-        fig,
+        fig: go.Figure,
         relayout_data: dict,
     ):
         """
@@ -812,7 +822,7 @@ def get_callbacks(
         Output("disclaimer_modal", "is_open"),
         Input("disclaimer_modal_button", "n_clicks"),
     )
-    def close_disclaimer_modal(button):
+    def close_disclaimer_modal(button: int):
         """
         Handles the closing of the disclaimer modal on button click
         :param button: "Agree" button on disclaimer modal
@@ -827,7 +837,7 @@ def get_callbacks(
         Output("help_modal", "is_open"),
         Input("help_button", "n_clicks"),
     )
-    def open_help_modal(button):
+    def open_help_modal(button: int):
         """
         handles the closing of the help modal on button click
         :param button: "Close" button on help modal
@@ -841,7 +851,7 @@ def get_callbacks(
     @app.callback(
         Output("graph_offcanvas", "is_open"), Input("graph_settings_button", "n_clicks")
     )
-    def handle_graph_canvas(button_click):
+    def handle_graph_canvas(button_click: int):
         """
         Opens settings offcanvas for graph on button click
         :param button_click: settings button click in graph container
@@ -1055,7 +1065,7 @@ def get_callbacks(
         Output("info_toast", "is_open"),
         Input("graph", "clickData"),
     )
-    def show_info_toast(click_data):
+    def show_info_toast(click_data: dict):
         """
         Opens info toast and fills it with information for selected molecule in graph
         :param click_data: data received from clicking on graph
