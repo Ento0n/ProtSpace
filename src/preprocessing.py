@@ -544,7 +544,7 @@ class DataPreprocessor:
         return embeddings
 
     @staticmethod
-    def _pairwise_distances(data, metric="euclidean"):
+    def _pairwise_distances(data: np.ndarray, metric: str = "euclidean"):
         """
         Calculate pairwise distance for given data
         :param data: embedding data

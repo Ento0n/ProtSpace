@@ -70,7 +70,7 @@ class Visualizator:
         return res_range
 
     @staticmethod
-    def gen_distinct_colors(n, sort: bool = True):
+    def gen_distinct_colors(n: int, sort: bool = True):
         """
         Creates are list in rgb format that holds the most distinct colors for the number of groups.
         :param n: number of groups
