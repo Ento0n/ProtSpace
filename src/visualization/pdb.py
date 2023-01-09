@@ -255,11 +255,7 @@ def init_app_pdb(
                                                         class_name="bi bi-arrow-counterclockwise",
                                                         color="dark",
                                                         outline=True,
-                                                        style={
-                                                            "margin-top": "5px",
-                                                            "margin-bottom": "5px",
-                                                            "margin-right": "20px",
-                                                        },
+                                                        style=main_button_style,
                                                     ),
                                                     dbc.Button(
                                                         "",
@@ -267,10 +263,7 @@ def init_app_pdb(
                                                         class_name="bi bi-gear-wide-connected",
                                                         outline=True,
                                                         color="dark",
-                                                        style={
-                                                            "margin-top": "5px",
-                                                            "margin-bottom": "5px",
-                                                        },
+                                                        style=main_button_style,
                                                     ),
                                                 ],
                                             ),

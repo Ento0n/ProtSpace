@@ -29,6 +29,12 @@ metric_options = [
     "yule",
 ]
 
+main_button_style = {
+    "margin-top": "5px",
+    "margin-bottom": "5px",
+    "margin-right": "15px",
+}
+
 
 def get_app():
     """
@@ -246,11 +252,7 @@ def get_graph_container(
                                     id="html_download_button",
                                     outline=True,
                                     color="dark",
-                                    style={
-                                        "margin-top": "5px",
-                                        "margin-bottom": "5px",
-                                        "margin-right": "15px",
-                                    },
+                                    style=main_button_style,
                                 ),
                                 dbc.Button(
                                     "",
@@ -258,11 +260,7 @@ def get_graph_container(
                                     class_name="bi bi-gear-wide-connected",
                                     outline=True,
                                     color="dark",
-                                    style={
-                                        "margin-top": "5px",
-                                        "margin-bottom": "5px",
-                                        "margin-right": "15px",
-                                    },
+                                    style=main_button_style,
                                 ),
                             ],
                         ),
