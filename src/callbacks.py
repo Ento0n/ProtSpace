@@ -214,6 +214,7 @@ def get_callbacks_pdb(app, df, struct_container, original_id_col):
         Output("mol_name_storage", "data"),
         Output("clicked_mol_storage", "data"),
         Output("no_pdb_toast", "is_open"),
+        Output("molecules_dropdown_save", "data"),
         Input("graph", "clickData"),
         Input("molecules_dropdown", "value"),
         Input("range_start", "value"),
@@ -221,6 +222,7 @@ def get_callbacks_pdb(app, df, struct_container, original_id_col):
         Input("selected_atoms", "value"),
         Input("reset_view_button", "n_clicks"),
         Input("clicked_mol_storage", "data"),
+        Input("molecules_dropdown_save", "data"),
     )
     def display_molecule(
         click_data,
@@ -230,6 +232,7 @@ def get_callbacks_pdb(app, df, struct_container, original_id_col):
         selected_atoms: list,
         reset_view_clicks: int,
         last_clicked_mol: str,
+        dd_molecules_save: list,
     ):
         """
         callback function to handle the displaying of the molecule
@@ -240,6 +243,7 @@ def get_callbacks_pdb(app, df, struct_container, original_id_col):
         :param selected_atoms: selected values of the dropdown menu for highlighted atoms
         :param reset_view_clicks: button to reset the view of the molecule viewer.
         :param last_clicked_mol: sequence ID of the last clicked molecule
+        :param dd_molecules_save: molecule values in dd menu before new interaction
         :return: molecule viewer variables etc.
         """
 
@@ -283,25 +287,32 @@ def get_callbacks_pdb(app, df, struct_container, original_id_col):
         # path to .pdb file
         struct_path = str(struct_container.get_structure_dir()) + "/"
 
+        # needed for displaying molecules in dd menu
+        orig_seq_ids = seq_ids
+        if original_id_col is not None:
+            orig_seq_ids = to_original_id(seq_ids, original_id_col, df)
+
         # check whether .pdb file is present
-        if seq_ids:
-            file_path = Path(struct_path + seq_ids[0] + ".pdb")
-            if not file_path.is_file():
-                return (
-                    dash.no_update,
-                    seq_ids,
-                    dash.no_update,
-                    dash.no_update,
-                    dash.no_update,
-                    dash.no_update,
-                    dash.no_update,
-                    dash.no_update,
-                    dash.no_update,
-                    dash.no_update,
-                    dash.no_update,
-                    clicked_seq_id,
-                    True,
-                )
+        for seq in seq_ids:
+            if seq not in dd_molecules_save:
+                file_path = Path(struct_path + seq + ".pdb")
+                if not file_path.is_file():
+                    return (
+                        dash.no_update,
+                        orig_seq_ids,
+                        dash.no_update,
+                        dash.no_update,
+                        dash.no_update,
+                        dash.no_update,
+                        dash.no_update,
+                        dash.no_update,
+                        dash.no_update,
+                        dash.no_update,
+                        dash.no_update,
+                        clicked_seq_id,
+                        True,
+                        seq_ids,
+                    )
 
         # handle the range and atom selection
         (
@@ -331,6 +342,7 @@ def get_callbacks_pdb(app, df, struct_container, original_id_col):
             # replace edited seq ids with saved unedited seq ids
             seq_ids = saved_seq_ids
 
+        mapped_seq_ids = seq_ids
         if original_id_col is not None:
             # back to original IDs
             seq_ids = to_original_id(seq_ids, original_id_col, df)
@@ -359,6 +371,7 @@ def get_callbacks_pdb(app, df, struct_container, original_id_col):
             mol_names,
             clicked_seq_id,
             dash.no_update,
+            mapped_seq_ids,
         )
 
     @app.callback(

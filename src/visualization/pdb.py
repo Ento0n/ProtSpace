@@ -201,6 +201,8 @@ def init_app_pdb(
             # Storage to save the clicked on molecule in the graph,
             # needed for replacing the clicked molecule in the list
             dcc.Store(id="clicked_mol_storage"),
+            # Storage to save the values of the molecules dropdown
+            dcc.Store(id="molecules_dropdown_save", data=[]),
             # Toast that is displayed if a html file is created
             get_download_toast(),
             # Toast to display info on selected protein
