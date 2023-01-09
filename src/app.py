@@ -15,7 +15,13 @@ import yaml
 
 
 class LoadConfFile(argparse.Action):
-    def __call__(self, parser, namespace, values, option_string=None):
+    def __call__(
+        self,
+        parser: argparse.ArgumentParser,
+        namespace: argparse.Namespace,
+        values: str,
+        option_string: str = None,
+    ):
         """
         Handling of conf file
         :param parser: the argument parser itself
