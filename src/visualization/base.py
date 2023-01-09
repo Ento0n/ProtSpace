@@ -163,7 +163,17 @@ def get_graph_offcanvas(umap_paras: dict, umap_paras_string: str):
             ),
             html.Br(),
             dbc.Button(
-                "Recalculate UMAP",
+                children=[
+                    dbc.Spinner(
+                        children=[
+                            html.Div(
+                                id="load_umap_spinner",
+                                children="Recalculate UMAP",
+                            )
+                        ],
+                        size="sm",
+                    ),
+                ],
                 id="umap_recalculation_button",
                 color="dark",
                 outline=True,

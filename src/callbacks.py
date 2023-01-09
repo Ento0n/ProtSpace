@@ -607,6 +607,7 @@ def get_callbacks(
         Output("last_umap_paras_dd", "value"),
         Output("highlighting_bool", "data"),
         Output("relayoutData_save", "data"),
+        Output("load_umap_spinner", "children"),
         Input("dd_menu", "value"),
         Input("dim_red_radio", "value"),
         Input("n_neighbours_input", "value"),
@@ -816,6 +817,7 @@ def get_callbacks(
             umap_paras_string,
             highlighting_bool,
             relayout_data_save,
+            "Recalculate UMAP",
         )
 
     @app.callback(
