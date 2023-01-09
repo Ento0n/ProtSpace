@@ -649,7 +649,7 @@ def get_callbacks(
         nonlocal df
 
         # If plotly relayoutData is bugged and dict is empty for a reason, use last saved relayoutData
-        if not relayout_data:
+        if not relayout_data or "scene.camera" not in relayout_data:
             relayout_data = relayout_data_save
 
         # convert dictionary state of graph figure into go object
@@ -768,7 +768,8 @@ def get_callbacks(
             highlighting_bool = True
 
             # set camera to old settings so that camera stays in its position and doesn't reset
-            fig.update_layout(scene_camera=relayout_data["scene.camera"])
+            if relayout_data:
+                fig.update_layout(scene_camera=relayout_data["scene.camera"])
 
             # save relayoutData for buggy plotly
             relayout_data_save = relayout_data
