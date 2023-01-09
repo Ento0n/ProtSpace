@@ -322,7 +322,21 @@ def get_help_modal():
     modal = dbc.Modal(
         [
             dbc.ModalHeader(dbc.ModalTitle("Help"), close_button=True),
-            dbc.ModalBody("Here the help text is shown!"),
+            dbc.ModalBody(
+                children=[
+                    dcc.Markdown(
+                        """
+                        Graph
+                                Navigation
+                                    Orbital rotation by clicking and dragging with left mouse button
+                                    Pan by clicking and dragging with right mouse button
+                                Selection
+                                    By clicking on a molecule-dot in the graph, the infobox is shown, 
+                                    and the selected molecule is indicated by a black circle around it.
+                    """
+                    ),
+                ]
+            ),
         ],
         id="help_modal",
         size="xl",
