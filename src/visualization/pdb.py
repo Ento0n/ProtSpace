@@ -17,6 +17,29 @@ representation_options = [
 ]
 
 
+def get_no_pdb_toast():
+    """
+    Layout for the toast (infobox) shown when pdb file is missing for the selected ID.
+    :return: no pdb file toast layout
+    """
+    toast = dbc.Toast(
+        "No pdb file found for this ID!",
+        header="File error",
+        id="no_pdb_toast",
+        is_open=False,
+        dismissable=True,
+        duration=4000,
+        style={
+            "position": "fixed",
+            "top": 66,
+            "right": 10,
+            "width": 350,
+        },
+    )
+
+    return toast
+
+
 def get_pdb_offcanvas():
     """
     Layout of the offcanvas for the settings of the molecule displaying (pdb)
@@ -182,6 +205,8 @@ def init_app_pdb(
             get_download_toast(),
             # Toast to display info on selected protein
             get_info_toast(),
+            # Toast to display that pdb file is missing
+            get_no_pdb_toast(),
             # offcanvas for the settings
             get_pdb_offcanvas(),
             # graph and controls

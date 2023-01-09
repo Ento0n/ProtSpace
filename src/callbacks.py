@@ -213,6 +213,7 @@ def get_callbacks_pdb(app, df, struct_container, original_id_col):
         Output("download_molecule_button", "disabled"),
         Output("mol_name_storage", "data"),
         Output("clicked_mol_storage", "data"),
+        Output("no_pdb_toast", "is_open"),
         Input("graph", "clickData"),
         Input("molecules_dropdown", "value"),
         Input("range_start", "value"),
@@ -299,6 +300,7 @@ def get_callbacks_pdb(app, df, struct_container, original_id_col):
                     dash.no_update,
                     dash.no_update,
                     clicked_seq_id,
+                    True,
                 )
 
         # handle the range and atom selection
@@ -356,6 +358,7 @@ def get_callbacks_pdb(app, df, struct_container, original_id_col):
             download_disabled,
             mol_names,
             clicked_seq_id,
+            dash.no_update,
         )
 
     @app.callback(
