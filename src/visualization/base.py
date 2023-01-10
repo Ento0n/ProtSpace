@@ -193,6 +193,20 @@ def get_graph_offcanvas(umap_paras: dict, umap_paras_string: str):
     return offcanvas
 
 
+def get_settings_button_tooltip(button_id: str):
+    tooltip = dbc.Tooltip(
+        "Settings",
+        target=button_id,
+        placement="bottom",
+    )
+    return tooltip
+
+
+def get_html_download_button_tooltip(button_id: str):
+    tooltip = dbc.Tooltip("HTML download", target=button_id, placement="bottom")
+    return tooltip
+
+
 def get_graph_container(
     umap_paras: dict, pdb: bool, csv_header: list[str], fig: go.Figure
 ):
@@ -231,6 +245,8 @@ def get_graph_container(
         # Storage to save last camera data (relayoutData)
         dcc.Store(id="relayoutData_save", storage_type="memory", data={}),
         get_graph_offcanvas(umap_paras, umap_paras_string),
+        get_settings_button_tooltip(button_id="graph_settings_button"),
+        get_html_download_button_tooltip(button_id="html_download_button"),
         dbc.Row(
             children=[
                 dbc.Col(
@@ -412,6 +428,15 @@ def get_info_toast():
     return toast
 
 
+def get_help_button_tooltip(button_id: str):
+    tooltip = dbc.Tooltip(
+        "Help",
+        target=button_id,
+        placement="left",
+    )
+    return tooltip
+
+
 def get_header(app: Dash):
     """
     Layout for the black header of the application
@@ -420,6 +445,7 @@ def get_header(app: Dash):
     """
     header = dbc.Row(
         [
+            get_help_button_tooltip(button_id="help_button"),
             dbc.Col(
                 html.H1("ProtSpace3D", style={"color": "white"}),
                 style={"background-color": "black"},

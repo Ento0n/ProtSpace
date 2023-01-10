@@ -179,6 +179,15 @@ def get_pdb_offcanvas():
     return offcanvas
 
 
+def get_reset_view_button_tooltip(button_id: str):
+    tooltip = dbc.Tooltip(
+        "Reset view",
+        target=button_id,
+        placement="bottom",
+    )
+    return tooltip
+
+
 def init_app_pdb(
     original_id_col: list, umap_paras: dict, csv_header: list[str], fig: go.Figure
 ):
@@ -211,6 +220,8 @@ def init_app_pdb(
             get_no_pdb_toast(),
             # offcanvas for the settings
             get_pdb_offcanvas(),
+            get_settings_button_tooltip(button_id="molecules_settings_button"),
+            get_reset_view_button_tooltip(button_id="reset_view_button"),
             # graph and controls
             dbc.Row(
                 [
