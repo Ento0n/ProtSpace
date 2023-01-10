@@ -910,6 +910,22 @@ def get_callbacks(
 
             return True
 
+    def get_expand_sequence_tooltip(button_id: str):
+        tooltip = dbc.Tooltip(
+            "Expand sequence",
+            target=button_id,
+            placement="right",
+        )
+        return tooltip
+
+    def get_collapse_sequence_tooltip(button_id: str):
+        tooltip = dbc.Tooltip(
+            "Collapse sequence",
+            target=button_id,
+            placement="top",
+        )
+        return tooltip
+
     def get_json_info(seq_id: str, info_text: list):
         """
         Creates json info in needed format for the info toast
@@ -950,6 +966,10 @@ def get_callbacks(
                 info_text.append(
                     dbc.ListGroupItem(
                         [
+                            get_expand_sequence_tooltip(button_id="expand_seq_button"),
+                            get_collapse_sequence_tooltip(
+                                button_id="collapse_seq_button"
+                            ),
                             html.B("Sequence:"),
                             html.Div(
                                 id="collapsed_seq_div",
