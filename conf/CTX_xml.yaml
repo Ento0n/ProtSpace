@@ -1,4 +1,4 @@
-o: /Users/anton/PycharmProjects/protspace3d/data/CTX_xml
-hdf: /Users/anton/PycharmProjects/protspace3d/data/CTX_xml/xml_conoserver_esm2.h5
-csv: /Users/anton/PycharmProjects/protspace3d/data/CTX_xml/xml_conoserver.csv
-fasta: /Users/anton/PycharmProjects/protspace3d/data/CTX_xml/xml_conoserver.fasta
+o: data/CTX_xml
+hdf: data/CTX_xml/xml_conoserver_esm2.h5
+csv: data/CTX_xml/xml_conoserver.csv
+fasta: data/CTX_xml/xml_conoserver.fasta
