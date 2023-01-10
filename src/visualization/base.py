@@ -194,6 +194,11 @@ def get_graph_offcanvas(umap_paras: dict, umap_paras_string: str):
 
 
 def get_settings_button_tooltip(button_id: str):
+    """
+    Returns the tooltip for the settings buttons
+    :param button_id: target button id the tooltip is to be displayed
+    :return: tooltip
+    """
     tooltip = dbc.Tooltip(
         "Settings",
         target=button_id,
@@ -203,6 +208,11 @@ def get_settings_button_tooltip(button_id: str):
 
 
 def get_html_download_button_tooltip(button_id: str):
+    """
+    Returns the tooltip for the download html button
+    :param button_id: target button id the tooltip is to be displayed
+    :return: tooltip
+    """
     tooltip = dbc.Tooltip("HTML download", target=button_id, placement="bottom")
     return tooltip
 
@@ -429,6 +439,11 @@ def get_info_toast():
 
 
 def get_help_button_tooltip(button_id: str):
+    """
+    Returns the tooltip for the help button
+    :param button_id: target button id the tooltip is to be displayed
+    :return: tooltip
+    """
     tooltip = dbc.Tooltip(
         "Help",
         target=button_id,

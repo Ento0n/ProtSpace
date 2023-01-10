@@ -911,6 +911,11 @@ def get_callbacks(
             return True
 
     def get_expand_sequence_tooltip(button_id: str):
+        """
+        Returns the tooltip for the expand sequence button
+        :param button_id: target button id the tooltip is to be displayed
+        :return: tooltip
+        """
         tooltip = dbc.Tooltip(
             "Expand sequence",
             target=button_id,
@@ -919,6 +924,11 @@ def get_callbacks(
         return tooltip
 
     def get_collapse_sequence_tooltip(button_id: str):
+        """
+        Returns the tooltip for the collapse sequence button
+        :param button_id: target button id the tooltip is to be displayed
+        :return: tooltip
+        """
         tooltip = dbc.Tooltip(
             "Collapse sequence",
             target=button_id,
