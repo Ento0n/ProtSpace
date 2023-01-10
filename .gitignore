@@ -2,6 +2,7 @@
 data/*/colabfold/out/
 data/*/PPIHP/out/
 config/
+out/
 **.html
 
 # Byte-compiled / optimized / DLL files
