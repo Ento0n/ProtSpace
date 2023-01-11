@@ -358,17 +358,113 @@ def get_help_modal():
             dbc.ModalHeader(dbc.ModalTitle("Help"), close_button=True),
             dbc.ModalBody(
                 children=[
-                    dcc.Markdown(
-                        """
-                        Graph
-                                Navigation
-                                    Orbital rotation by clicking and dragging with left mouse button
-                                    Pan by clicking and dragging with right mouse button
-                                Selection
-                                    By clicking on a molecule-dot in the graph, the infobox is shown, 
-                                    and the selected molecule is indicated by a black circle around it.
-                    """
-                    ),
+                    dbc.ListGroup(
+                        children=[
+                            dbc.ListGroupItem(
+                                children=[
+                                    html.H4("Graph"),
+                                    html.Br(),
+                                    html.H5("Group Selection"),
+                                    html.P(
+                                        "Group selection is done by clicking on the dropdown menu above the graph "
+                                        "and selecting the wanted group."
+                                    ),
+                                    html.H5("Buttons"),
+                                    dbc.Stack(
+                                        direction="horizontal",
+                                        gap=3,
+                                        children=[
+                                            html.I(className="bi bi-download"),
+                                            html.P(
+                                                "Download a html file of the selected group."
+                                            ),
+                                        ],
+                                    ),
+                                    dbc.Stack(
+                                        direction="horizontal",
+                                        gap=3,
+                                        children=[
+                                            html.I(
+                                                className="bi bi-gear-wide-connected"
+                                            ),
+                                            html.P("Open the settings to the graph."),
+                                        ],
+                                    ),
+                                    html.H5("Navigation"),
+                                    html.B("Orbital rotation:"),
+                                    html.P("Click and hold the left mouse button."),
+                                    html.B("Pan:"),
+                                    html.P("Click and hold the right mouse button."),
+                                    html.B("Zoom:"),
+                                    html.P(
+                                        "Scrolling with the mouse wheel zooms in and out "
+                                        "while in the graph with the cursor"
+                                    ),
+                                    html.H5("Molecule selection"),
+                                    html.P(
+                                        "A molecule is selected by clicking on the corresponding dot in the graph"
+                                    ),
+                                    html.H5("Legend"),
+                                    html.P(
+                                        "By clicking on a group in the legend, it is hidden. Clicking on a hidden "
+                                        "group shows it again."
+                                    ),
+                                    html.P(
+                                        "Double click on a displayed group to only show the selected group. "
+                                        "Double click again on it displays all groups."
+                                    ),
+                                ]
+                            ),
+                            dbc.ListGroupItem(
+                                children=[
+                                    html.H4("Molecule viewer"),
+                                    html.Br(),
+                                    html.H5("Molecule selection"),
+                                    html.P(
+                                        "In the dropdown menu above the molecule viewer the selected molecule(s) "
+                                        "are displayed. More can be selected by opening the dropdown-menu and "
+                                        "seledting more. Less can be selected by clicking on the x next to the "
+                                        "molecule ID"
+                                    ),
+                                    html.H5("Buttons"),
+                                    dbc.Stack(
+                                        direction="horizontal",
+                                        gap=3,
+                                        children=[
+                                            html.I(
+                                                className="bi bi-arrow-counterclockwise"
+                                            ),
+                                            html.P(
+                                                "Reset the view of the molecule viewer."
+                                            ),
+                                        ],
+                                    ),
+                                    dbc.Stack(
+                                        direction="horizontal",
+                                        gap=3,
+                                        children=[
+                                            html.I(
+                                                className="bi bi-gear-wide-connected"
+                                            ),
+                                            html.P(
+                                                "Open the settings to the molecule viewer."
+                                            ),
+                                        ],
+                                    ),
+                                    html.H5("Navigation"),
+                                    html.B("Orbital rotation:"),
+                                    html.P("Click and hold the left mouse button."),
+                                    html.B("Pan:"),
+                                    html.P("Click and hold the right mouse button."),
+                                    html.B("Zoom:"),
+                                    html.P(
+                                        "Scrolling with the mouse wheel zooms in and out "
+                                        "while in the graph with the cursor"
+                                    ),
+                                ]
+                            ),
+                        ]
+                    )
                 ]
             ),
         ],
