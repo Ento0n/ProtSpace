@@ -257,6 +257,8 @@ def get_callbacks_pdb(
         if not ctx.triggered:
             raise PreventUpdate
 
+        print(f"last clicked mol: {last_clicked_mol}")
+
         # Make redundant variable used
         if reset_view_clicks:
             pass
@@ -289,6 +291,12 @@ def get_callbacks_pdb(
                 for idx, value in enumerate(seq_ids):
                     if value == last_clicked_mol:
                         seq_ids[idx] = clicked_seq_id
+
+        # triggered by the molecule dropdown menu
+        if ctx.triggered_id == "molecules_dropdown":
+            # set clicked sequence id to None if the selection was deleted in the dropdown menu
+            if clicked_seq_id not in seq_ids:
+                clicked_seq_id = None
 
         # path to .pdb file
         struct_path = str(struct_container.get_structure_dir()) + "/"
