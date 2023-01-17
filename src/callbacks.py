@@ -257,8 +257,6 @@ def get_callbacks_pdb(
         if not ctx.triggered:
             raise PreventUpdate
 
-        print(f"last clicked mol: {last_clicked_mol}")
-
         # Make redundant variable used
         if reset_view_clicks:
             pass
@@ -663,6 +661,10 @@ def get_callbacks(
         # Check whether an input is triggered
         ctx = dash.callback_context
         if not ctx.triggered:
+            raise PreventUpdate
+
+        # Prevent constant resetting of the graph
+        if ctx.triggered_id in ["n_neighbours_input", "min_dist_input", "metric_input"]:
             raise PreventUpdate
 
         # Make redundant variable used
