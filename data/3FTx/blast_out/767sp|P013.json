@@ -1,0 +1,69 @@
+{
+    "program": "blastp",
+    "version": "BLASTP 2.12.0+",
+    "command": "$APPBIN/ncbi-blast-2.9.0+/bin/blastp -db &quot;uniprotkb&quot; -query ncbiblast-R20230122-023941-0207-59214060-p1m.sequence  -num_threads 32 -outfmt 11 -out ncbiblast-R20230122-023941-0207-59214060-p1m.archive -matrix BLOSUM62 -max_target_seqs 5 -seg no -ungapped -taxidlist ncbiblast-R20230122-023941-0207-59214060-p1m.taxidlist -comp_based_stats F",
+    "query_def": "EMBOSS_001",
+    "query_stype": "protein",
+    "query_len": 72,
+    "db_count": 1,
+    "db_num": 230190369,
+    "db_len": 81010115241,
+    "dbs": [
+        {
+            "name": "uniprotkb",
+            "stype": "protein",
+            "created": "2022-12-14T02:19:00+00:00"
+        }
+    ],
+    "alignments": 5,
+    "scores": 5,
+    "expect_upper": 10.0,
+    "filter": "F",
+    "gap_extend": 1.0,
+    "gap_open": 11.0,
+    "matrix": "BLOSUM62",
+    "start": "2023-01-22T02:39:41+00:00",
+    "end": "2023-01-22T02:40:57+00:00",
+    "search": "P0Y0M0DT0H0M76.000S",
+    "hits": [
+        {
+            "hit_num": 1,
+            "hit_def": "SP:P01389 3L21_NAJAC Long neurotoxin 1 OS=Naja anchietae OX=263737 PE=1 SV=1",
+            "hit_db": "SP",
+            "hit_id": "3L21_NAJAC",
+            "hit_acc": "P01389",
+            "hit_desc": "Long neurotoxin 1 OS=Naja anchietae OX=263737 PE=1 SV=1",
+            "hit_url": "https://www.uniprot.org/uniprot/P01389",
+            "hit_xref_url": "https://www.ebi.ac.uk/ebisearch/search.ebi?db=uniprot&query=P01389",
+            "hit_os": "Naja anchietae",
+            "hit_uni_de": "Long neurotoxin 1",
+            "hit_uni_os": "Naja anchietae",
+            "hit_uni_ox": "263737",
+            "hit_uni_pe": "1",
+            "hit_uni_sv": "1",
+            "hit_len": 72,
+            "hit_hsps": [
+                {
+                    "hsp_num": 1,
+                    "hsp_score": 423,
+                    "hsp_bit_score": 201.454,
+                    "hsp_expect": 4e-56,
+                    "hsp_align_len": 72,
+                    "hsp_identity": 100.0,
+                    "hsp_positive": 100.0,
+                    "hsp_gaps": 0,
+                    "hsp_query_frame": "0",
+                    "hsp_hit_frame": "0",
+                    "hsp_strand": "none/none",
+                    "hsp_query_from": 1,
+                    "hsp_query_to": 72,
+                    "hsp_hit_from": 1,
+                    "hsp_hit_to": 72,
+                    "hsp_qseq": "IRCFITPDVTSQACPDGQNICYTKTWCDNFCGMRGKRVDLGCAATCPTVKPGVDIKCCSTDNCNPFPTRERS",
+                    "hsp_mseq": "IRCFITPDVTSQACPDGQNICYTKTWCDNFCGMRGKRVDLGCAATCPTVKPGVDIKCCSTDNCNPFPTRERS",
+                    "hsp_hseq": "IRCFITPDVTSQACPDGQNICYTKTWCDNFCGMRGKRVDLGCAATCPTVKPGVDIKCCSTDNCNPFPTRERS"
+                }
+            ]
+        }
+    ]
+}

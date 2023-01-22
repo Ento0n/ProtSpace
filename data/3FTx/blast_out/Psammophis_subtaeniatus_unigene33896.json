@@ -1,0 +1,110 @@
+{
+    "program": "blastp",
+    "version": "BLASTP 2.12.0+",
+    "command": "$APPBIN/ncbi-blast-2.9.0+/bin/blastp -db &quot;uniprotkb&quot; -query ncbiblast-R20230121-201125-0876-57166264-p1m.sequence  -num_threads 32 -outfmt 11 -out ncbiblast-R20230121-201125-0876-57166264-p1m.archive -matrix BLOSUM62 -max_target_seqs 5 -seg no -ungapped -taxidlist ncbiblast-R20230121-201125-0876-57166264-p1m.taxidlist -comp_based_stats F",
+    "query_def": "EMBOSS_001",
+    "query_stype": "protein",
+    "query_len": 60,
+    "db_count": 1,
+    "db_num": 230190369,
+    "db_len": 81010115241,
+    "dbs": [
+        {
+            "name": "uniprotkb",
+            "stype": "protein",
+            "created": "2022-12-14T02:19:00+00:00"
+        }
+    ],
+    "alignments": 5,
+    "scores": 5,
+    "expect_upper": 10.0,
+    "filter": "F",
+    "gap_extend": 1.0,
+    "gap_open": 11.0,
+    "matrix": "BLOSUM62",
+    "start": "2023-01-21T20:11:25+00:00",
+    "end": "2023-01-21T20:12:46+00:00",
+    "search": "P0Y0M0DT0H0M81.000S",
+    "hits": [
+        {
+            "hit_num": 1,
+            "hit_def": "TR:A0A1B3B3U4 A0A1B3B3U4_9SAUR V(D)J recombination-activating protein 1 (Fragment) OS=Psammophis subtaeniatus OX=292884 GN=rag1 PE=3 SV=1",
+            "hit_db": "TR",
+            "hit_id": "A0A1B3B3U4_9SAUR",
+            "hit_acc": "A0A1B3B3U4",
+            "hit_desc": "V(D)J recombination-activating protein 1 (Fragment) OS=Psammophis subtaeniatus OX=292884 GN=rag1 PE=3 SV=1",
+            "hit_url": "https://www.uniprot.org/uniprot/A0A1B3B3U4",
+            "hit_xref_url": "https://www.ebi.ac.uk/ebisearch/search.ebi?db=uniprot&query=A0A1B3B3U4",
+            "hit_os": "Psammophis subtaeniatus",
+            "hit_uni_de": "V(D)J recombination-activating protein 1 (Fragment)",
+            "hit_uni_os": "Psammophis subtaeniatus",
+            "hit_uni_ox": "292884",
+            "hit_uni_gn": "rag1",
+            "hit_uni_pe": "3",
+            "hit_uni_sv": "1",
+            "hit_len": 268,
+            "hit_hsps": [
+                {
+                    "hsp_num": 1,
+                    "hsp_score": 26,
+                    "hsp_bit_score": 14.8698,
+                    "hsp_expect": 2.4,
+                    "hsp_align_len": 17,
+                    "hsp_identity": 29.4,
+                    "hsp_positive": 47.1,
+                    "hsp_gaps": 0,
+                    "hsp_query_frame": "0",
+                    "hsp_hit_frame": "0",
+                    "hsp_strand": "none/none",
+                    "hsp_query_from": 27,
+                    "hsp_query_to": 43,
+                    "hsp_hit_from": 90,
+                    "hsp_hit_to": 106,
+                    "hsp_qseq": "NGTGLLGVVRGCATSCP",
+                    "hsp_mseq": "+G G +    GC  + P",
+                    "hsp_hseq": "DGMGDVSEKHGCGPAVP"
+                }
+            ]
+        },
+        {
+            "hit_num": 2,
+            "hit_def": "TR:A0A342ACF9 A0A342ACF9_9SAUR Cytochrome b OS=Psammophis subtaeniatus orientalis OX=292885 GN=cytb PE=3 SV=1",
+            "hit_db": "TR",
+            "hit_id": "A0A342ACF9_9SAUR",
+            "hit_acc": "A0A342ACF9",
+            "hit_desc": "Cytochrome b OS=Psammophis subtaeniatus orientalis OX=292885 GN=cytb PE=3 SV=1",
+            "hit_url": "https://www.uniprot.org/uniprot/A0A342ACF9",
+            "hit_xref_url": "https://www.ebi.ac.uk/ebisearch/search.ebi?db=uniprot&query=A0A342ACF9",
+            "hit_os": "Psammophis subtaeniatus orientalis",
+            "hit_uni_de": "Cytochrome b",
+            "hit_uni_os": "Psammophis subtaeniatus orientalis",
+            "hit_uni_ox": "292885",
+            "hit_uni_gn": "cytb",
+            "hit_uni_pe": "3",
+            "hit_uni_sv": "1",
+            "hit_len": 372,
+            "hit_hsps": [
+                {
+                    "hsp_num": 1,
+                    "hsp_score": 25,
+                    "hsp_bit_score": 14.4077,
+                    "hsp_expect": 3.4,
+                    "hsp_align_len": 6,
+                    "hsp_identity": 66.7,
+                    "hsp_positive": 66.7,
+                    "hsp_gaps": 0,
+                    "hsp_query_frame": "0",
+                    "hsp_hit_frame": "0",
+                    "hsp_strand": "none/none",
+                    "hsp_query_from": 40,
+                    "hsp_query_to": 45,
+                    "hsp_hit_from": 308,
+                    "hsp_hit_to": 313,
+                    "hsp_qseq": "TSCPSP",
+                    "hsp_mseq": "T CP P",
+                    "hsp_hseq": "TFCPMP"
+                }
+            ]
+        }
+    ]
+}

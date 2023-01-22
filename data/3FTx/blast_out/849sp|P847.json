@@ -1,0 +1,108 @@
+{
+    "program": "blastp",
+    "version": "BLASTP 2.12.0+",
+    "command": "$APPBIN/ncbi-blast-2.9.0+/bin/blastp -db &quot;uniprotkb&quot; -query ncbiblast-R20230122-024909-0956-1232376-p1m.sequence  -num_threads 32 -outfmt 11 -out ncbiblast-R20230122-024909-0956-1232376-p1m.archive -matrix BLOSUM62 -max_target_seqs 5 -seg no -ungapped -taxidlist ncbiblast-R20230122-024909-0956-1232376-p1m.taxidlist -comp_based_stats F",
+    "query_def": "EMBOSS_001",
+    "query_stype": "protein",
+    "query_len": 61,
+    "db_count": 1,
+    "db_num": 230190369,
+    "db_len": 81010115241,
+    "dbs": [
+        {
+            "name": "uniprotkb",
+            "stype": "protein",
+            "created": "2022-12-14T02:19:00+00:00"
+        }
+    ],
+    "alignments": 5,
+    "scores": 5,
+    "expect_upper": 10.0,
+    "filter": "F",
+    "gap_extend": 1.0,
+    "gap_open": 11.0,
+    "matrix": "BLOSUM62",
+    "start": "2023-01-22T02:49:09+00:00",
+    "end": "2023-01-22T02:50:29+00:00",
+    "search": "P0Y0M0DT0H0M80.000S",
+    "hits": [
+        {
+            "hit_num": 1,
+            "hit_def": "SP:P84716 3SO3_CAURH Neurotoxin-like protein 1 OS=Causus rhombeatus OX=44735 PE=1 SV=1",
+            "hit_db": "SP",
+            "hit_id": "3SO3_CAURH",
+            "hit_acc": "P84716",
+            "hit_desc": "Neurotoxin-like protein 1 OS=Causus rhombeatus OX=44735 PE=1 SV=1",
+            "hit_url": "https://www.uniprot.org/uniprot/P84716",
+            "hit_xref_url": "https://www.ebi.ac.uk/ebisearch/search.ebi?db=uniprot&query=P84716",
+            "hit_os": "Causus rhombeatus",
+            "hit_uni_de": "Neurotoxin-like protein 1",
+            "hit_uni_os": "Causus rhombeatus",
+            "hit_uni_ox": "44735",
+            "hit_uni_pe": "1",
+            "hit_uni_sv": "1",
+            "hit_len": 61,
+            "hit_hsps": [
+                {
+                    "hsp_num": 1,
+                    "hsp_score": 352,
+                    "hsp_bit_score": 165.606,
+                    "hsp_expect": 1.9e-45,
+                    "hsp_align_len": 61,
+                    "hsp_identity": 100.0,
+                    "hsp_positive": 100.0,
+                    "hsp_gaps": 0,
+                    "hsp_query_frame": "0",
+                    "hsp_hit_frame": "0",
+                    "hsp_strand": "none/none",
+                    "hsp_query_from": 1,
+                    "hsp_query_to": 61,
+                    "hsp_hit_from": 1,
+                    "hsp_hit_to": 61,
+                    "hsp_qseq": "MKCLTKYSRVSETSQTCHVWQNLCFKKWQKGKKVSRGCTATCPKPKKDEVIQCCAKDKCNK",
+                    "hsp_mseq": "MKCLTKYSRVSETSQTCHVWQNLCFKKWQKGKKVSRGCTATCPKPKKDEVIQCCAKDKCNK",
+                    "hsp_hseq": "MKCLTKYSRVSETSQTCHVWQNLCFKKWQKGKKVSRGCTATCPKPKKDEVIQCCAKDKCNK"
+                }
+            ]
+        },
+        {
+            "hit_num": 2,
+            "hit_def": "SP:A7X4T8 CRVP_CAURH Cysteine-rich venom protein Cau1 (Fragment) OS=Causus rhombeatus OX=44735 PE=2 SV=1",
+            "hit_db": "SP",
+            "hit_id": "CRVP_CAURH",
+            "hit_acc": "A7X4T8",
+            "hit_desc": "Cysteine-rich venom protein Cau1 (Fragment) OS=Causus rhombeatus OX=44735 PE=2 SV=1",
+            "hit_url": "https://www.uniprot.org/uniprot/A7X4T8",
+            "hit_xref_url": "https://www.ebi.ac.uk/ebisearch/search.ebi?db=uniprot&query=A7X4T8",
+            "hit_os": "Causus rhombeatus",
+            "hit_uni_de": "Cysteine-rich venom protein Cau1 (Fragment)",
+            "hit_uni_os": "Causus rhombeatus",
+            "hit_uni_ox": "44735",
+            "hit_uni_pe": "2",
+            "hit_uni_sv": "1",
+            "hit_len": 116,
+            "hit_hsps": [
+                {
+                    "hsp_num": 1,
+                    "hsp_score": 26,
+                    "hsp_bit_score": 14.9728,
+                    "hsp_expect": 4.3,
+                    "hsp_align_len": 13,
+                    "hsp_identity": 46.2,
+                    "hsp_positive": 53.8,
+                    "hsp_gaps": 0,
+                    "hsp_query_frame": "0",
+                    "hsp_hit_frame": "0",
+                    "hsp_strand": "none/none",
+                    "hsp_query_from": 41,
+                    "hsp_query_to": 53,
+                    "hsp_hit_from": 75,
+                    "hsp_hit_to": 87,
+                    "hsp_qseq": "TCPKPKKDEVIQC",
+                    "hsp_mseq": "T P   +DE I C",
+                    "hsp_hseq": "TNPCRVEDEFINC"
+                }
+            ]
+        }
+    ]
+}

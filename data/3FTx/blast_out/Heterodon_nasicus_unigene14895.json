@@ -1,0 +1,110 @@
+{
+    "program": "blastp",
+    "version": "BLASTP 2.12.0+",
+    "command": "$APPBIN/ncbi-blast-2.9.0+/bin/blastp -db &quot;uniprotkb&quot; -query ncbiblast-R20230121-195612-0606-57524672-p1m.sequence  -num_threads 32 -outfmt 11 -out ncbiblast-R20230121-195612-0606-57524672-p1m.archive -matrix BLOSUM62 -max_target_seqs 5 -seg no -ungapped -taxidlist ncbiblast-R20230121-195612-0606-57524672-p1m.taxidlist -comp_based_stats F",
+    "query_def": "EMBOSS_001",
+    "query_stype": "protein",
+    "query_len": 61,
+    "db_count": 1,
+    "db_num": 230190369,
+    "db_len": 81010115241,
+    "dbs": [
+        {
+            "name": "uniprotkb",
+            "stype": "protein",
+            "created": "2022-12-14T02:19:00+00:00"
+        }
+    ],
+    "alignments": 5,
+    "scores": 5,
+    "expect_upper": 10.0,
+    "filter": "F",
+    "gap_extend": 1.0,
+    "gap_open": 11.0,
+    "matrix": "BLOSUM62",
+    "start": "2023-01-21T19:56:12+00:00",
+    "end": "2023-01-21T19:57:49+00:00",
+    "search": "P0Y0M0DT0H0M97.000S",
+    "hits": [
+        {
+            "hit_num": 1,
+            "hit_def": "TR:H9EA51 H9EA51_9SAUR Skeletal muscle sodium channel Nav1.4 (Fragment) OS=Heterodon nasicus OX=121332 GN=SCN4a PE=4 SV=1",
+            "hit_db": "TR",
+            "hit_id": "H9EA51_9SAUR",
+            "hit_acc": "H9EA51",
+            "hit_desc": "Skeletal muscle sodium channel Nav1.4 (Fragment) OS=Heterodon nasicus OX=121332 GN=SCN4a PE=4 SV=1",
+            "hit_url": "https://www.uniprot.org/uniprot/H9EA51",
+            "hit_xref_url": "https://www.ebi.ac.uk/ebisearch/search.ebi?db=uniprot&query=H9EA51",
+            "hit_os": "Heterodon nasicus",
+            "hit_uni_de": "Skeletal muscle sodium channel Nav1.4 (Fragment)",
+            "hit_uni_os": "Heterodon nasicus",
+            "hit_uni_ox": "121332",
+            "hit_uni_gn": "SCN4a",
+            "hit_uni_pe": "4",
+            "hit_uni_sv": "1",
+            "hit_len": 140,
+            "hit_hsps": [
+                {
+                    "hsp_num": 1,
+                    "hsp_score": 25,
+                    "hsp_bit_score": 14.4361,
+                    "hsp_expect": 4.4,
+                    "hsp_align_len": 10,
+                    "hsp_identity": 30.0,
+                    "hsp_positive": 70.0,
+                    "hsp_gaps": 0,
+                    "hsp_query_frame": "0",
+                    "hsp_hit_frame": "0",
+                    "hsp_strand": "none/none",
+                    "hsp_query_from": 27,
+                    "hsp_query_to": 36,
+                    "hsp_hit_from": 50,
+                    "hsp_hit_to": 59,
+                    "hsp_qseq": "NYDLFGLKVV",
+                    "hsp_mseq": "N++ FG  ++",
+                    "hsp_hseq": "NFETFGNSII"
+                }
+            ]
+        },
+        {
+            "hit_num": 2,
+            "hit_def": "TR:A0A1B0Z7A1 A0A1B0Z7A1_9SAUR Sodium channel protein type 8 subunit alpha (Fragment) OS=Heterodon nasicus OX=121332 GN=SCN8A PE=4 SV=1",
+            "hit_db": "TR",
+            "hit_id": "A0A1B0Z7A1_9SAUR",
+            "hit_acc": "A0A1B0Z7A1",
+            "hit_desc": "Sodium channel protein type 8 subunit alpha (Fragment) OS=Heterodon nasicus OX=121332 GN=SCN8A PE=4 SV=1",
+            "hit_url": "https://www.uniprot.org/uniprot/A0A1B0Z7A1",
+            "hit_xref_url": "https://www.ebi.ac.uk/ebisearch/search.ebi?db=uniprot&query=A0A1B0Z7A1",
+            "hit_os": "Heterodon nasicus",
+            "hit_uni_de": "Sodium channel protein type 8 subunit alpha (Fragment)",
+            "hit_uni_os": "Heterodon nasicus",
+            "hit_uni_ox": "121332",
+            "hit_uni_gn": "SCN8A",
+            "hit_uni_pe": "4",
+            "hit_uni_sv": "1",
+            "hit_len": 128,
+            "hit_hsps": [
+                {
+                    "hsp_num": 1,
+                    "hsp_score": 23,
+                    "hsp_bit_score": 13.5063,
+                    "hsp_expect": 8.3,
+                    "hsp_align_len": 10,
+                    "hsp_identity": 30.0,
+                    "hsp_positive": 70.0,
+                    "hsp_gaps": 0,
+                    "hsp_query_frame": "0",
+                    "hsp_hit_frame": "0",
+                    "hsp_strand": "none/none",
+                    "hsp_query_from": 27,
+                    "hsp_query_to": 36,
+                    "hsp_hit_from": 37,
+                    "hsp_hit_to": 46,
+                    "hsp_qseq": "NYDLFGLKVV",
+                    "hsp_mseq": "N++ FG  ++",
+                    "hsp_hseq": "NFETFGNSMI"
+                }
+            ]
+        }
+    ]
+}

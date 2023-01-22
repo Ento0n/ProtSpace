@@ -1,0 +1,90 @@
+{
+    "program": "blastp",
+    "version": "BLASTP 2.12.0+",
+    "command": "$APPBIN/ncbi-blast-2.9.0+/bin/blastp -db &quot;uniprotkb&quot; -query ncbiblast-R20230118-031801-0812-18775146-p1m.sequence  -num_threads 32 -outfmt 11 -out ncbiblast-R20230118-031801-0812-18775146-p1m.archive -matrix BLOSUM62 -max_target_seqs 5 -seg no -ungapped -taxidlist ncbiblast-R20230118-031801-0812-18775146-p1m.taxidlist -comp_based_stats F",
+    "query_def": "EMBOSS_001",
+    "query_stype": "protein",
+    "query_len": 77,
+    "db_count": 1,
+    "db_num": 230190369,
+    "db_len": 81010115241,
+    "dbs": [
+        {
+            "name": "uniprotkb",
+            "stype": "protein",
+            "created": "2022-12-14T02:19:00+00:00"
+        }
+    ],
+    "alignments": 5,
+    "scores": 5,
+    "expect_upper": 10.0,
+    "filter": "F",
+    "gap_extend": 1.0,
+    "gap_open": 11.0,
+    "matrix": "BLOSUM62",
+    "start": "2023-01-18T03:18:01+00:00",
+    "end": "2023-01-18T03:19:17+00:00",
+    "search": "P0Y0M0DT0H0M76.000S",
+    "hits": [
+        {
+            "hit_num": 1,
+            "hit_def": "TR:A0A7G8JVL3 A0A7G8JVL3_BOIDE G protein-coupled receptor 37 (Fragment) OS=Boiga dendrophila dendrophila OX=2766793 GN=GPR37 PE=4 SV=1",
+            "hit_db": "TR",
+            "hit_id": "A0A7G8JVL3_BOIDE",
+            "hit_acc": "A0A7G8JVL3",
+            "hit_desc": "G protein-coupled receptor 37 (Fragment) OS=Boiga dendrophila dendrophila OX=2766793 GN=GPR37 PE=4 SV=1",
+            "hit_url": "https://www.uniprot.org/uniprot/A0A7G8JVL3",
+            "hit_xref_url": "https://www.ebi.ac.uk/ebisearch/search.ebi?db=uniprot&query=A0A7G8JVL3",
+            "hit_os": "Boiga dendrophila dendrophila",
+            "hit_uni_de": "G protein-coupled receptor 37 (Fragment)",
+            "hit_uni_os": "Boiga dendrophila dendrophila",
+            "hit_uni_ox": "2766793",
+            "hit_uni_gn": "GPR37",
+            "hit_uni_pe": "4",
+            "hit_uni_sv": "1",
+            "hit_len": 221,
+            "hit_hsps": [
+                {
+                    "hsp_num": 1,
+                    "hsp_score": 25,
+                    "hsp_bit_score": 14.5719,
+                    "hsp_expect": 2.8,
+                    "hsp_align_len": 11,
+                    "hsp_identity": 45.5,
+                    "hsp_positive": 63.6,
+                    "hsp_gaps": 0,
+                    "hsp_query_frame": "0",
+                    "hsp_hit_frame": "0",
+                    "hsp_strand": "none/none",
+                    "hsp_query_from": 10,
+                    "hsp_query_to": 20,
+                    "hsp_hit_from": 194,
+                    "hsp_hit_to": 204,
+                    "hsp_qseq": "CIQCNRKTSSD",
+                    "hsp_mseq": "CIQ +   +SD",
+                    "hsp_hseq": "CIQKSSTVTSD"
+                },
+                {
+                    "hsp_num": 2,
+                    "hsp_score": 24,
+                    "hsp_bit_score": 14.1052,
+                    "hsp_expect": 3.8,
+                    "hsp_align_len": 12,
+                    "hsp_identity": 41.7,
+                    "hsp_positive": 41.7,
+                    "hsp_gaps": 0,
+                    "hsp_query_frame": "0",
+                    "hsp_hit_frame": "0",
+                    "hsp_strand": "none/none",
+                    "hsp_query_from": 48,
+                    "hsp_query_to": 59,
+                    "hsp_hit_from": 67,
+                    "hsp_hit_to": 78,
+                    "hsp_qseq": "WAVKGCARMCPT",
+                    "hsp_mseq": "W   GC    PT",
+                    "hsp_hseq": "WWYFGCYFCLPT"
+                }
+            ]
+        }
+    ]
+}

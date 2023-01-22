@@ -1,0 +1,109 @@
+{
+    "program": "blastp",
+    "version": "BLASTP 2.12.0+",
+    "command": "$APPBIN/ncbi-blast-2.9.0+/bin/blastp -db &quot;uniprotkb&quot; -query ncbiblast-R20230122-001531-0020-92431509-p1m.sequence  -num_threads 32 -outfmt 11 -out ncbiblast-R20230122-001531-0020-92431509-p1m.archive -matrix BLOSUM62 -max_target_seqs 5 -seg no -ungapped -taxidlist ncbiblast-R20230122-001531-0020-92431509-p1m.taxidlist -comp_based_stats F",
+    "query_def": "EMBOSS_001",
+    "query_stype": "protein",
+    "query_len": 62,
+    "db_count": 1,
+    "db_num": 230190369,
+    "db_len": 81010115241,
+    "dbs": [
+        {
+            "name": "uniprotkb",
+            "stype": "protein",
+            "created": "2022-12-14T02:19:00+00:00"
+        }
+    ],
+    "alignments": 5,
+    "scores": 5,
+    "expect_upper": 10.0,
+    "filter": "F",
+    "gap_extend": 1.0,
+    "gap_open": 11.0,
+    "matrix": "BLOSUM62",
+    "start": "2023-01-22T00:15:31+00:00",
+    "end": "2023-01-22T00:16:53+00:00",
+    "search": "P0Y0M0DT0H0M82.000S",
+    "hits": [
+        {
+            "hit_num": 1,
+            "hit_def": "SP:P34076 3S11_NAJCH Short neurotoxin 1 OS=Naja christyi OX=8611 PE=1 SV=1",
+            "hit_db": "SP",
+            "hit_id": "3S11_NAJCH",
+            "hit_acc": "P34076",
+            "hit_desc": "Short neurotoxin 1 OS=Naja christyi OX=8611 PE=1 SV=1",
+            "hit_url": "https://www.uniprot.org/uniprot/P34076",
+            "hit_xref_url": "https://www.ebi.ac.uk/ebisearch/search.ebi?db=uniprot&query=P34076",
+            "hit_os": "Naja christyi",
+            "hit_uni_de": "Short neurotoxin 1",
+            "hit_uni_os": "Naja christyi",
+            "hit_uni_ox": "8611",
+            "hit_uni_pe": "1",
+            "hit_uni_sv": "1",
+            "hit_len": 62,
+            "hit_hsps": [
+                {
+                    "hsp_num": 1,
+                    "hsp_score": 375,
+                    "hsp_bit_score": 174.678,
+                    "hsp_expect": 1.1e-48,
+                    "hsp_align_len": 62,
+                    "hsp_identity": 100.0,
+                    "hsp_positive": 100.0,
+                    "hsp_gaps": 0,
+                    "hsp_query_frame": "0",
+                    "hsp_hit_frame": "0",
+                    "hsp_strand": "none/none",
+                    "hsp_query_from": 1,
+                    "hsp_query_to": 62,
+                    "hsp_hit_from": 1,
+                    "hsp_hit_to": 62,
+                    "hsp_qseq": "MECHNQQSSQPPTTTHCSGGETNCYEKRWHDHRGTIIERGCGCPTVKPGVKLNCCTTDKCNN",
+                    "hsp_mseq": "MECHNQQSSQPPTTTHCSGGETNCYEKRWHDHRGTIIERGCGCPTVKPGVKLNCCTTDKCNN",
+                    "hsp_hseq": "MECHNQQSSQPPTTTHCSGGETNCYEKRWHDHRGTIIERGCGCPTVKPGVKLNCCTTDKCNN"
+                }
+            ]
+        },
+        {
+            "hit_num": 2,
+            "hit_def": "TR:A0A7L5TXA0 A0A7L5TXA0_NAJCH Neurotrophin-3 (Fragment) OS=Naja christyi OX=8611 GN=NTF3 PE=3 SV=1",
+            "hit_db": "TR",
+            "hit_id": "A0A7L5TXA0_NAJCH",
+            "hit_acc": "A0A7L5TXA0",
+            "hit_desc": "Neurotrophin-3 (Fragment) OS=Naja christyi OX=8611 GN=NTF3 PE=3 SV=1",
+            "hit_url": "https://www.uniprot.org/uniprot/A0A7L5TXA0",
+            "hit_xref_url": "https://www.ebi.ac.uk/ebisearch/search.ebi?db=uniprot&query=A0A7L5TXA0",
+            "hit_os": "Naja christyi",
+            "hit_uni_de": "Neurotrophin-3 (Fragment)",
+            "hit_uni_os": "Naja christyi",
+            "hit_uni_ox": "8611",
+            "hit_uni_gn": "NTF3",
+            "hit_uni_pe": "3",
+            "hit_uni_sv": "1",
+            "hit_len": 219,
+            "hit_hsps": [
+                {
+                    "hsp_num": 1,
+                    "hsp_score": 21,
+                    "hsp_bit_score": 12.5298,
+                    "hsp_expect": 7.1,
+                    "hsp_align_len": 4,
+                    "hsp_identity": 75.0,
+                    "hsp_positive": 75.0,
+                    "hsp_gaps": 0,
+                    "hsp_query_frame": "0",
+                    "hsp_hit_frame": "0",
+                    "hsp_strand": "none/none",
+                    "hsp_query_from": 26,
+                    "hsp_query_to": 29,
+                    "hsp_hit_from": 145,
+                    "hsp_hit_to": 148,
+                    "hsp_qseq": "EKRW",
+                    "hsp_mseq": "E RW",
+                    "hsp_hseq": "ESRW"
+                }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,108 @@
+{
+    "program": "blastp",
+    "version": "BLASTP 2.12.0+",
+    "command": "$APPBIN/ncbi-blast-2.9.0+/bin/blastp -db &quot;uniprotkb&quot; -query ncbiblast-R20230122-030558-0829-43259626-p1m.sequence  -num_threads 32 -outfmt 11 -out ncbiblast-R20230122-030558-0829-43259626-p1m.archive -matrix BLOSUM62 -max_target_seqs 5 -seg no -ungapped -taxidlist ncbiblast-R20230122-030558-0829-43259626-p1m.taxidlist -comp_based_stats F",
+    "query_def": "EMBOSS_001",
+    "query_stype": "protein",
+    "query_len": 60,
+    "db_count": 1,
+    "db_num": 230190369,
+    "db_len": 81010115241,
+    "dbs": [
+        {
+            "name": "uniprotkb",
+            "stype": "protein",
+            "created": "2022-12-14T02:19:00+00:00"
+        }
+    ],
+    "alignments": 5,
+    "scores": 5,
+    "expect_upper": 10.0,
+    "filter": "F",
+    "gap_extend": 1.0,
+    "gap_open": 11.0,
+    "matrix": "BLOSUM62",
+    "start": "2023-01-22T03:05:58+00:00",
+    "end": "2023-01-22T03:07:35+00:00",
+    "search": "P0Y0M0DT0H0M97.000S",
+    "hits": [
+        {
+            "hit_num": 1,
+            "hit_def": "SP:P62389 3S15_HYDSC Toxin 5 OS=Hydrophis schistosus OX=8682 PE=1 SV=1",
+            "hit_db": "SP",
+            "hit_id": "3S15_HYDSC",
+            "hit_acc": "P62389",
+            "hit_desc": "Toxin 5 OS=Hydrophis schistosus OX=8682 PE=1 SV=1",
+            "hit_url": "https://www.uniprot.org/uniprot/P62389",
+            "hit_xref_url": "https://www.ebi.ac.uk/ebisearch/search.ebi?db=uniprot&query=P62389",
+            "hit_os": "Hydrophis schistosus",
+            "hit_uni_de": "Toxin 5",
+            "hit_uni_os": "Hydrophis schistosus",
+            "hit_uni_ox": "8682",
+            "hit_uni_pe": "1",
+            "hit_uni_sv": "1",
+            "hit_len": 60,
+            "hit_hsps": [
+                {
+                    "hsp_num": 1,
+                    "hsp_score": 353,
+                    "hsp_bit_score": 164.162,
+                    "hsp_expect": 1.9e-44,
+                    "hsp_align_len": 60,
+                    "hsp_identity": 100.0,
+                    "hsp_positive": 100.0,
+                    "hsp_gaps": 0,
+                    "hsp_query_frame": "0",
+                    "hsp_hit_frame": "0",
+                    "hsp_strand": "none/none",
+                    "hsp_query_from": 1,
+                    "hsp_query_to": 60,
+                    "hsp_hit_from": 1,
+                    "hsp_hit_to": 60,
+                    "hsp_qseq": "MTCCNQQSSQPKTTTNCAESSCYKKTWSDHRGTRIERGCGCPQVKSGIKLECCHTNECNN",
+                    "hsp_mseq": "MTCCNQQSSQPKTTTNCAESSCYKKTWSDHRGTRIERGCGCPQVKSGIKLECCHTNECNN",
+                    "hsp_hseq": "MTCCNQQSSQPKTTTNCAESSCYKKTWSDHRGTRIERGCGCPQVKSGIKLECCHTNECNN"
+                }
+            ]
+        },
+        {
+            "hit_num": 2,
+            "hit_def": "SP:P68415 3S11_HYDSC Short neurotoxin 1 OS=Hydrophis schistosus OX=8682 PE=1 SV=1",
+            "hit_db": "SP",
+            "hit_id": "3S11_HYDSC",
+            "hit_acc": "P68415",
+            "hit_desc": "Short neurotoxin 1 OS=Hydrophis schistosus OX=8682 PE=1 SV=1",
+            "hit_url": "https://www.uniprot.org/uniprot/P68415",
+            "hit_xref_url": "https://www.ebi.ac.uk/ebisearch/search.ebi?db=uniprot&query=P68415",
+            "hit_os": "Hydrophis schistosus",
+            "hit_uni_de": "Short neurotoxin 1",
+            "hit_uni_os": "Hydrophis schistosus",
+            "hit_uni_ox": "8682",
+            "hit_uni_pe": "1",
+            "hit_uni_sv": "1",
+            "hit_len": 60,
+            "hit_hsps": [
+                {
+                    "hsp_num": 1,
+                    "hsp_score": 348,
+                    "hsp_bit_score": 161.879,
+                    "hsp_expect": 9.3e-44,
+                    "hsp_align_len": 60,
+                    "hsp_identity": 98.3,
+                    "hsp_positive": 98.3,
+                    "hsp_gaps": 0,
+                    "hsp_query_frame": "0",
+                    "hsp_hit_frame": "0",
+                    "hsp_strand": "none/none",
+                    "hsp_query_from": 1,
+                    "hsp_query_to": 60,
+                    "hsp_hit_from": 1,
+                    "hsp_hit_to": 60,
+                    "hsp_qseq": "MTCCNQQSSQPKTTTNCAESSCYKKTWSDHRGTRIERGCGCPQVKSGIKLECCHTNECNN",
+                    "hsp_mseq": "MTCCNQQSSQPKTTTNCAESSCYKKTWSDHRGTRIERGCGCPQVK GIKLECCHTNECNN",
+                    "hsp_hseq": "MTCCNQQSSQPKTTTNCAESSCYKKTWSDHRGTRIERGCGCPQVKPGIKLECCHTNECNN"
+                }
+            ]
+        }
+    ]
+}
