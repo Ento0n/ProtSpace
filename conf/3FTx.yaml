@@ -1,0 +1,4 @@
+o: data/3FTx
+hdf: data/3FTx/3FTx_esm2.h5 # 3FTx_protT5 3FTx_esm2
+csv: data/3FTx/3FTx.csv
+fasta: data/3FTx/3FTx.fasta
