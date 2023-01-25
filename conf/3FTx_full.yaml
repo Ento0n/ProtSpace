@@ -1,4 +1,4 @@
-o: data/3FTx_full
-hdf: data/3FTx_full/3FTx_esm2_.h5 # 3FTx_protT5 3FTx_esm2
-csv: data/3FTx_full/3FTx_.csv
-fasta: data/3FTx_full/3FTx.fasta
+o: data/3FTx
+hdf: data/3FTx/3FTx_full_esm2.h5 # 3FTx_protT5 3FTx_esm2
+csv: data/3FTx/3FTx.csv
+fasta: data/3FTx/3FTx_full.fasta

@@ -1,10 +1,10 @@
 {
     "program": "blastp",
     "version": "BLASTP 2.12.0+",
-    "command": "$APPBIN/ncbi-blast-2.9.0+/bin/blastp -db &quot;uniprotkb&quot; -query ncbiblast-R20230121-201838-0925-3802823-p1m.sequence  -num_threads 32 -outfmt 11 -out ncbiblast-R20230121-201838-0925-3802823-p1m.archive -matrix BLOSUM62 -max_target_seqs 5 -seg no -ungapped -taxidlist ncbiblast-R20230121-201838-0925-3802823-p1m.taxidlist -comp_based_stats F",
+    "command": "$APPBIN/ncbi-blast-2.9.0+/bin/blastp -db &quot;uniprotkb&quot; -query ncbiblast-R20230124-115524-0442-17941056-p2m.sequence  -num_threads 32 -outfmt 11 -out ncbiblast-R20230124-115524-0442-17941056-p2m.archive -matrix BLOSUM62 -max_target_seqs 5 -seg no -ungapped -taxidlist ncbiblast-R20230124-115524-0442-17941056-p2m.taxidlist -comp_based_stats F",
     "query_def": "EMBOSS_001",
     "query_stype": "protein",
-    "query_len": 78,
+    "query_len": 86,
     "db_count": 1,
     "db_num": 230190369,
     "db_len": 81010115241,
@@ -22,9 +22,9 @@
     "gap_extend": 1.0,
     "gap_open": 11.0,
     "matrix": "BLOSUM62",
-    "start": "2023-01-21T20:18:38+00:00",
-    "end": "2023-01-21T20:19:53+00:00",
-    "search": "P0Y0M0DT0H0M75.000S",
+    "start": "2023-01-24T11:55:24+00:00",
+    "end": "2023-01-24T11:58:29+00:00",
+    "search": "P0Y0M0DT0H0M185.000S",
     "hits": [
         {
             "hit_num": 1,
@@ -45,23 +45,23 @@
             "hit_hsps": [
                 {
                     "hsp_num": 1,
-                    "hsp_score": 443,
-                    "hsp_bit_score": 208.526,
-                    "hsp_expect": 8.2e-56,
-                    "hsp_align_len": 78,
-                    "hsp_identity": 92.3,
-                    "hsp_positive": 93.6,
+                    "hsp_score": 486,
+                    "hsp_bit_score": 227.861,
+                    "hsp_expect": 1.5e-61,
+                    "hsp_align_len": 86,
+                    "hsp_identity": 93.0,
+                    "hsp_positive": 94.2,
                     "hsp_gaps": 0,
                     "hsp_query_frame": "0",
                     "hsp_hit_frame": "0",
                     "hsp_strand": "none/none",
                     "hsp_query_from": 1,
-                    "hsp_query_to": 78,
-                    "hsp_hit_from": 28,
+                    "hsp_query_to": 86,
+                    "hsp_hit_from": 20,
                     "hsp_hit_to": 105,
-                    "hsp_qseq": "PPLDLHSRYCFQCTPENHWYKCPRAEKCTGMANKCYTLYKHDGNGEEKWAVKNCAYTCPTAGPGERVKCCFYNGCNEY",
-                    "hsp_mseq": "PPLDLHS YCFQCTPENHWYKCPRAEKCTG+ANKCYTLYK DGNGEEKWAVK CAYTCPTAGP ERVKCCFYN CNEY",
-                    "hsp_hseq": "PPLDLHSTYCFQCTPENHWYKCPRAEKCTGIANKCYTLYKRDGNGEEKWAVKGCAYTCPTAGPDERVKCCFYNRCNEY"
+                    "hsp_qseq": "NQQGRGRKPPLDLHSRYCFQCTPENHWYKCPRAEKCTGMANKCYTLYKHDGNGEEKWAVKNCAYTCPTAGPGERVKCCFYNGCNEY",
+                    "hsp_mseq": "NQQGRGRKPPLDLHS YCFQCTPENHWYKCPRAEKCTG+ANKCYTLYK DGNGEEKWAVK CAYTCPTAGP ERVKCCFYN CNEY",
+                    "hsp_hseq": "NQQGRGRKPPLDLHSTYCFQCTPENHWYKCPRAEKCTGIANKCYTLYKRDGNGEEKWAVKGCAYTCPTAGPDERVKCCFYNRCNEY"
                 }
             ]
         },
@@ -84,23 +84,23 @@
             "hit_hsps": [
                 {
                     "hsp_num": 1,
-                    "hsp_score": 443,
-                    "hsp_bit_score": 208.526,
-                    "hsp_expect": 8.2e-56,
-                    "hsp_align_len": 78,
-                    "hsp_identity": 92.3,
-                    "hsp_positive": 93.6,
+                    "hsp_score": 486,
+                    "hsp_bit_score": 227.861,
+                    "hsp_expect": 1.5e-61,
+                    "hsp_align_len": 86,
+                    "hsp_identity": 93.0,
+                    "hsp_positive": 94.2,
                     "hsp_gaps": 0,
                     "hsp_query_frame": "0",
                     "hsp_hit_frame": "0",
                     "hsp_strand": "none/none",
                     "hsp_query_from": 1,
-                    "hsp_query_to": 78,
-                    "hsp_hit_from": 28,
+                    "hsp_query_to": 86,
+                    "hsp_hit_from": 20,
                     "hsp_hit_to": 105,
-                    "hsp_qseq": "PPLDLHSRYCFQCTPENHWYKCPRAEKCTGMANKCYTLYKHDGNGEEKWAVKNCAYTCPTAGPGERVKCCFYNGCNEY",
-                    "hsp_mseq": "PPLDLHS YCFQCTPENHWYKCPRAEKCTG+ANKCYTLYK DGNGEEKWAVK CAYTCPTAGP ERVKCCFYN CNEY",
-                    "hsp_hseq": "PPLDLHSTYCFQCTPENHWYKCPRAEKCTGIANKCYTLYKRDGNGEEKWAVKGCAYTCPTAGPDERVKCCFYNRCNEY"
+                    "hsp_qseq": "NQQGRGRKPPLDLHSRYCFQCTPENHWYKCPRAEKCTGMANKCYTLYKHDGNGEEKWAVKNCAYTCPTAGPGERVKCCFYNGCNEY",
+                    "hsp_mseq": "NQQGRGRKPPLDLHS YCFQCTPENHWYKCPRAEKCTG+ANKCYTLYK DGNGEEKWAVK CAYTCPTAGP ERVKCCFYN CNEY",
+                    "hsp_hseq": "NQQGRGRKPPLDLHSTYCFQCTPENHWYKCPRAEKCTGIANKCYTLYKRDGNGEEKWAVKGCAYTCPTAGPDERVKCCFYNRCNEY"
                 }
             ]
         },
@@ -123,23 +123,23 @@
             "hit_hsps": [
                 {
                     "hsp_num": 1,
-                    "hsp_score": 437,
-                    "hsp_bit_score": 205.741,
-                    "hsp_expect": 5.6e-55,
-                    "hsp_align_len": 78,
-                    "hsp_identity": 89.7,
-                    "hsp_positive": 93.6,
+                    "hsp_score": 480,
+                    "hsp_bit_score": 225.083,
+                    "hsp_expect": 1e-60,
+                    "hsp_align_len": 86,
+                    "hsp_identity": 90.7,
+                    "hsp_positive": 94.2,
                     "hsp_gaps": 0,
                     "hsp_query_frame": "0",
                     "hsp_hit_frame": "0",
                     "hsp_strand": "none/none",
                     "hsp_query_from": 1,
-                    "hsp_query_to": 78,
-                    "hsp_hit_from": 28,
+                    "hsp_query_to": 86,
+                    "hsp_hit_from": 20,
                     "hsp_hit_to": 105,
-                    "hsp_qseq": "PPLDLHSRYCFQCTPENHWYKCPRAEKCTGMANKCYTLYKHDGNGEEKWAVKNCAYTCPTAGPGERVKCCFYNGCNEY",
-                    "hsp_mseq": "PPLDLHS YCFQCTPENHWYKCPRAEKCTG+ANKCYTLYK DGNGEEKWAVK CAYTCPTAGP ER+KCC+YN CNEY",
-                    "hsp_hseq": "PPLDLHSTYCFQCTPENHWYKCPRAEKCTGIANKCYTLYKRDGNGEEKWAVKGCAYTCPTAGPDERLKCCYYNKCNEY"
+                    "hsp_qseq": "NQQGRGRKPPLDLHSRYCFQCTPENHWYKCPRAEKCTGMANKCYTLYKHDGNGEEKWAVKNCAYTCPTAGPGERVKCCFYNGCNEY",
+                    "hsp_mseq": "NQQGRGRKPPLDLHS YCFQCTPENHWYKCPRAEKCTG+ANKCYTLYK DGNGEEKWAVK CAYTCPTAGP ER+KCC+YN CNEY",
+                    "hsp_hseq": "NQQGRGRKPPLDLHSTYCFQCTPENHWYKCPRAEKCTGIANKCYTLYKRDGNGEEKWAVKGCAYTCPTAGPDERLKCCYYNKCNEY"
                 }
             ]
         },
@@ -162,23 +162,23 @@
             "hit_hsps": [
                 {
                     "hsp_num": 1,
-                    "hsp_score": 433,
-                    "hsp_bit_score": 203.883,
-                    "hsp_expect": 2e-54,
-                    "hsp_align_len": 78,
-                    "hsp_identity": 89.7,
-                    "hsp_positive": 92.3,
+                    "hsp_score": 476,
+                    "hsp_bit_score": 223.231,
+                    "hsp_expect": 3.6e-60,
+                    "hsp_align_len": 86,
+                    "hsp_identity": 90.7,
+                    "hsp_positive": 93.0,
                     "hsp_gaps": 0,
                     "hsp_query_frame": "0",
                     "hsp_hit_frame": "0",
                     "hsp_strand": "none/none",
                     "hsp_query_from": 1,
-                    "hsp_query_to": 78,
-                    "hsp_hit_from": 28,
+                    "hsp_query_to": 86,
+                    "hsp_hit_from": 20,
                     "hsp_hit_to": 105,
-                    "hsp_qseq": "PPLDLHSRYCFQCTPENHWYKCPRAEKCTGMANKCYTLYKHDGNGEEKWAVKNCAYTCPTAGPGERVKCCFYNGCNEY",
-                    "hsp_mseq": "PPLDLHS YCFQCTPENHWYKCPRAEKCTG+ANKCYTLYK DGNGEEKWAVK C Y+CPTAGP ERVKCCFYN CNEY",
-                    "hsp_hseq": "PPLDLHSTYCFQCTPENHWYKCPRAEKCTGIANKCYTLYKRDGNGEEKWAVKGCDYSCPTAGPDERVKCCFYNRCNEY"
+                    "hsp_qseq": "NQQGRGRKPPLDLHSRYCFQCTPENHWYKCPRAEKCTGMANKCYTLYKHDGNGEEKWAVKNCAYTCPTAGPGERVKCCFYNGCNEY",
+                    "hsp_mseq": "NQQGRGRKPPLDLHS YCFQCTPENHWYKCPRAEKCTG+ANKCYTLYK DGNGEEKWAVK C Y+CPTAGP ERVKCCFYN CNEY",
+                    "hsp_hseq": "NQQGRGRKPPLDLHSTYCFQCTPENHWYKCPRAEKCTGIANKCYTLYKRDGNGEEKWAVKGCDYSCPTAGPDERVKCCFYNRCNEY"
                 }
             ]
         },
@@ -201,23 +201,23 @@
             "hit_hsps": [
                 {
                     "hsp_num": 1,
-                    "hsp_score": 432,
-                    "hsp_bit_score": 203.419,
-                    "hsp_expect": 2.8e-54,
-                    "hsp_align_len": 78,
-                    "hsp_identity": 88.5,
-                    "hsp_positive": 93.6,
+                    "hsp_score": 475,
+                    "hsp_bit_score": 222.768,
+                    "hsp_expect": 5e-60,
+                    "hsp_align_len": 86,
+                    "hsp_identity": 89.5,
+                    "hsp_positive": 94.2,
                     "hsp_gaps": 0,
                     "hsp_query_frame": "0",
                     "hsp_hit_frame": "0",
                     "hsp_strand": "none/none",
                     "hsp_query_from": 1,
-                    "hsp_query_to": 78,
-                    "hsp_hit_from": 28,
+                    "hsp_query_to": 86,
+                    "hsp_hit_from": 20,
                     "hsp_hit_to": 105,
-                    "hsp_qseq": "PPLDLHSRYCFQCTPENHWYKCPRAEKCTGMANKCYTLYKHDGNGEEKWAVKNCAYTCPTAGPGERVKCCFYNGCNEY",
-                    "hsp_mseq": "PP+DLHSRYCFQCTPEN WYKCP+A +CTG+ANKCYTLYK D NGEEKWAVKNCAYTCPTAGP ERVKCCFYNGCNEY",
-                    "hsp_hseq": "PPIDLHSRYCFQCTPENRWYKCPQATRCTGIANKCYTLYKRDENGEEKWAVKNCAYTCPTAGPDERVKCCFYNGCNEY"
+                    "hsp_qseq": "NQQGRGRKPPLDLHSRYCFQCTPENHWYKCPRAEKCTGMANKCYTLYKHDGNGEEKWAVKNCAYTCPTAGPGERVKCCFYNGCNEY",
+                    "hsp_mseq": "NQQGRGRKPP+DLHSRYCFQCTPEN WYKCP+A +CTG+ANKCYTLYK D NGEEKWAVKNCAYTCPTAGP ERVKCCFYNGCNEY",
+                    "hsp_hseq": "NQQGRGRKPPIDLHSRYCFQCTPENRWYKCPQATRCTGIANKCYTLYKRDENGEEKWAVKNCAYTCPTAGPDERVKCCFYNGCNEY"
                 }
             ]
         }

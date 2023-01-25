@@ -1,10 +1,10 @@
 {
     "program": "blastp",
     "version": "BLASTP 2.12.0+",
-    "command": "$APPBIN/ncbi-blast-2.9.0+/bin/blastp -db &quot;uniprotkb&quot; -query ncbiblast-R20230121-201810-0949-68201341-p1m.sequence  -num_threads 32 -outfmt 11 -out ncbiblast-R20230121-201810-0949-68201341-p1m.archive -matrix BLOSUM62 -max_target_seqs 5 -seg no -ungapped -taxidlist ncbiblast-R20230121-201810-0949-68201341-p1m.taxidlist -comp_based_stats F",
+    "command": "$APPBIN/ncbi-blast-2.9.0+/bin/blastp -db &quot;uniprotkb&quot; -query ncbiblast-R20230124-115006-0975-4087060-p1m.sequence  -num_threads 32 -outfmt 11 -out ncbiblast-R20230124-115006-0975-4087060-p1m.archive -matrix BLOSUM62 -max_target_seqs 5 -seg no -ungapped -taxidlist ncbiblast-R20230124-115006-0975-4087060-p1m.taxidlist -comp_based_stats F",
     "query_def": "EMBOSS_001",
     "query_stype": "protein",
-    "query_len": 78,
+    "query_len": 86,
     "db_count": 1,
     "db_num": 230190369,
     "db_len": 81010115241,
@@ -22,9 +22,9 @@
     "gap_extend": 1.0,
     "gap_open": 11.0,
     "matrix": "BLOSUM62",
-    "start": "2023-01-21T20:18:10+00:00",
-    "end": "2023-01-21T20:19:28+00:00",
-    "search": "P0Y0M0DT0H0M78.000S",
+    "start": "2023-01-24T11:50:06+00:00",
+    "end": "2023-01-24T11:51:23+00:00",
+    "search": "P0Y0M0DT0H0M77.000S",
     "hits": [
         {
             "hit_num": 1,
@@ -45,23 +45,23 @@
             "hit_hsps": [
                 {
                     "hsp_num": 1,
-                    "hsp_score": 461,
-                    "hsp_bit_score": 218.433,
-                    "hsp_expect": 8.5e-59,
-                    "hsp_align_len": 78,
-                    "hsp_identity": 97.4,
+                    "hsp_score": 504,
+                    "hsp_bit_score": 237.723,
+                    "hsp_expect": 1.6e-64,
+                    "hsp_align_len": 86,
+                    "hsp_identity": 97.7,
                     "hsp_positive": 100.0,
                     "hsp_gaps": 0,
                     "hsp_query_frame": "0",
                     "hsp_hit_frame": "0",
                     "hsp_strand": "none/none",
                     "hsp_query_from": 1,
-                    "hsp_query_to": 78,
-                    "hsp_hit_from": 28,
+                    "hsp_query_to": 86,
+                    "hsp_hit_from": 20,
                     "hsp_hit_to": 105,
-                    "hsp_qseq": "PPLDLHSRYCFQCTPENRLDKCPQAKRCTGMRTMCYTLYKRDENGEEKWAVKGCDYSCPTAGPDERLKCCFYNRCNQY",
-                    "hsp_mseq": "PPLDLHSRYCFQCTPENRLDKCPQAKRCTGMRTMCYTLYKRDENGEEKWAVKGCDYSCPTAGPDER+KCCFYNRCN+Y",
-                    "hsp_hseq": "PPLDLHSRYCFQCTPENRLDKCPQAKRCTGMRTMCYTLYKRDENGEEKWAVKGCDYSCPTAGPDERVKCCFYNRCNEY"
+                    "hsp_qseq": "NQQGRGRKPPLDLHSRYCFQCTPENRLDKCPQAKRCTGMRTMCYTLYKRDENGEEKWAVKGCDYSCPTAGPDERLKCCFYNRCNQY",
+                    "hsp_mseq": "NQQGRGRKPPLDLHSRYCFQCTPENRLDKCPQAKRCTGMRTMCYTLYKRDENGEEKWAVKGCDYSCPTAGPDER+KCCFYNRCN+Y",
+                    "hsp_hseq": "NQQGRGRKPPLDLHSRYCFQCTPENRLDKCPQAKRCTGMRTMCYTLYKRDENGEEKWAVKGCDYSCPTAGPDERVKCCFYNRCNEY"
                 }
             ]
         },
@@ -84,23 +84,23 @@
             "hit_hsps": [
                 {
                     "hsp_num": 1,
-                    "hsp_score": 458,
-                    "hsp_bit_score": 217.03,
-                    "hsp_expect": 2.3e-58,
-                    "hsp_align_len": 78,
-                    "hsp_identity": 96.2,
+                    "hsp_score": 501,
+                    "hsp_bit_score": 236.325,
+                    "hsp_expect": 4.2e-64,
+                    "hsp_align_len": 86,
+                    "hsp_identity": 96.5,
                     "hsp_positive": 100.0,
                     "hsp_gaps": 0,
                     "hsp_query_frame": "0",
                     "hsp_hit_frame": "0",
                     "hsp_strand": "none/none",
                     "hsp_query_from": 1,
-                    "hsp_query_to": 78,
-                    "hsp_hit_from": 28,
+                    "hsp_query_to": 86,
+                    "hsp_hit_from": 20,
                     "hsp_hit_to": 105,
-                    "hsp_qseq": "PPLDLHSRYCFQCTPENRLDKCPQAKRCTGMRTMCYTLYKRDENGEEKWAVKGCDYSCPTAGPDERLKCCFYNRCNQY",
-                    "hsp_mseq": "PPLDLHSRYCFQCTPENRLDKCPQAKRCTGMRTMCYTLYKRDENGEEKWAVKGCDYSCPTAGPDERLKCC+YN+CN+Y",
-                    "hsp_hseq": "PPLDLHSRYCFQCTPENRLDKCPQAKRCTGMRTMCYTLYKRDENGEEKWAVKGCDYSCPTAGPDERLKCCYYNKCNEY"
+                    "hsp_qseq": "NQQGRGRKPPLDLHSRYCFQCTPENRLDKCPQAKRCTGMRTMCYTLYKRDENGEEKWAVKGCDYSCPTAGPDERLKCCFYNRCNQY",
+                    "hsp_mseq": "NQQGRGRKPPLDLHSRYCFQCTPENRLDKCPQAKRCTGMRTMCYTLYKRDENGEEKWAVKGCDYSCPTAGPDERLKCC+YN+CN+Y",
+                    "hsp_hseq": "NQQGRGRKPPLDLHSRYCFQCTPENRLDKCPQAKRCTGMRTMCYTLYKRDENGEEKWAVKGCDYSCPTAGPDERLKCCYYNKCNEY"
                 }
             ]
         },
@@ -123,23 +123,23 @@
             "hit_hsps": [
                 {
                     "hsp_num": 1,
-                    "hsp_score": 458,
-                    "hsp_bit_score": 217.03,
-                    "hsp_expect": 2.3e-58,
-                    "hsp_align_len": 78,
-                    "hsp_identity": 96.2,
+                    "hsp_score": 501,
+                    "hsp_bit_score": 236.325,
+                    "hsp_expect": 4.2e-64,
+                    "hsp_align_len": 86,
+                    "hsp_identity": 96.5,
                     "hsp_positive": 100.0,
                     "hsp_gaps": 0,
                     "hsp_query_frame": "0",
                     "hsp_hit_frame": "0",
                     "hsp_strand": "none/none",
                     "hsp_query_from": 1,
-                    "hsp_query_to": 78,
-                    "hsp_hit_from": 28,
+                    "hsp_query_to": 86,
+                    "hsp_hit_from": 20,
                     "hsp_hit_to": 105,
-                    "hsp_qseq": "PPLDLHSRYCFQCTPENRLDKCPQAKRCTGMRTMCYTLYKRDENGEEKWAVKGCDYSCPTAGPDERLKCCFYNRCNQY",
-                    "hsp_mseq": "PPLDLHSRYCFQCTPENRLDKCPQAKRCTGMRTMCYTLYKRDENGEEKWAVKGCDYSCPTAGPDERLKCC+YN+CN+Y",
-                    "hsp_hseq": "PPLDLHSRYCFQCTPENRLDKCPQAKRCTGMRTMCYTLYKRDENGEEKWAVKGCDYSCPTAGPDERLKCCYYNKCNEY"
+                    "hsp_qseq": "NQQGRGRKPPLDLHSRYCFQCTPENRLDKCPQAKRCTGMRTMCYTLYKRDENGEEKWAVKGCDYSCPTAGPDERLKCCFYNRCNQY",
+                    "hsp_mseq": "NQQGRGRKPPLDLHSRYCFQCTPENRLDKCPQAKRCTGMRTMCYTLYKRDENGEEKWAVKGCDYSCPTAGPDERLKCC+YN+CN+Y",
+                    "hsp_hseq": "NQQGRGRKPPLDLHSRYCFQCTPENRLDKCPQAKRCTGMRTMCYTLYKRDENGEEKWAVKGCDYSCPTAGPDERLKCCYYNKCNEY"
                 }
             ]
         },
@@ -162,23 +162,23 @@
             "hit_hsps": [
                 {
                     "hsp_num": 1,
-                    "hsp_score": 458,
-                    "hsp_bit_score": 217.03,
-                    "hsp_expect": 2.3e-58,
-                    "hsp_align_len": 78,
-                    "hsp_identity": 96.2,
+                    "hsp_score": 501,
+                    "hsp_bit_score": 236.325,
+                    "hsp_expect": 4.2e-64,
+                    "hsp_align_len": 86,
+                    "hsp_identity": 96.5,
                     "hsp_positive": 100.0,
                     "hsp_gaps": 0,
                     "hsp_query_frame": "0",
                     "hsp_hit_frame": "0",
                     "hsp_strand": "none/none",
                     "hsp_query_from": 1,
-                    "hsp_query_to": 78,
-                    "hsp_hit_from": 28,
+                    "hsp_query_to": 86,
+                    "hsp_hit_from": 20,
                     "hsp_hit_to": 105,
-                    "hsp_qseq": "PPLDLHSRYCFQCTPENRLDKCPQAKRCTGMRTMCYTLYKRDENGEEKWAVKGCDYSCPTAGPDERLKCCFYNRCNQY",
-                    "hsp_mseq": "PPLDLHSRYCFQCTPENRLDKCPQAKRCTGMRTMCYTLYKRDENGEEKWAVKGCDYSCPTAGPDERLKCC+YN+CN+Y",
-                    "hsp_hseq": "PPLDLHSRYCFQCTPENRLDKCPQAKRCTGMRTMCYTLYKRDENGEEKWAVKGCDYSCPTAGPDERLKCCYYNKCNEY"
+                    "hsp_qseq": "NQQGRGRKPPLDLHSRYCFQCTPENRLDKCPQAKRCTGMRTMCYTLYKRDENGEEKWAVKGCDYSCPTAGPDERLKCCFYNRCNQY",
+                    "hsp_mseq": "NQQGRGRKPPLDLHSRYCFQCTPENRLDKCPQAKRCTGMRTMCYTLYKRDENGEEKWAVKGCDYSCPTAGPDERLKCC+YN+CN+Y",
+                    "hsp_hseq": "NQQGRGRKPPLDLHSRYCFQCTPENRLDKCPQAKRCTGMRTMCYTLYKRDENGEEKWAVKGCDYSCPTAGPDERLKCCYYNKCNEY"
                 }
             ]
         },
@@ -201,23 +201,23 @@
             "hit_hsps": [
                 {
                     "hsp_num": 1,
-                    "hsp_score": 458,
-                    "hsp_bit_score": 217.03,
-                    "hsp_expect": 2.3e-58,
-                    "hsp_align_len": 78,
-                    "hsp_identity": 96.2,
+                    "hsp_score": 501,
+                    "hsp_bit_score": 236.325,
+                    "hsp_expect": 4.2e-64,
+                    "hsp_align_len": 86,
+                    "hsp_identity": 96.5,
                     "hsp_positive": 100.0,
                     "hsp_gaps": 0,
                     "hsp_query_frame": "0",
                     "hsp_hit_frame": "0",
                     "hsp_strand": "none/none",
                     "hsp_query_from": 1,
-                    "hsp_query_to": 78,
-                    "hsp_hit_from": 28,
+                    "hsp_query_to": 86,
+                    "hsp_hit_from": 20,
                     "hsp_hit_to": 105,
-                    "hsp_qseq": "PPLDLHSRYCFQCTPENRLDKCPQAKRCTGMRTMCYTLYKRDENGEEKWAVKGCDYSCPTAGPDERLKCCFYNRCNQY",
-                    "hsp_mseq": "PPLDLHSRYCFQCTPENRLDKCPQAKRCTGMRTMCYTLYKRDENGEEKWAVKGCDYSCPTAGPDERLKCC+YN+CN+Y",
-                    "hsp_hseq": "PPLDLHSRYCFQCTPENRLDKCPQAKRCTGMRTMCYTLYKRDENGEEKWAVKGCDYSCPTAGPDERLKCCYYNKCNEY"
+                    "hsp_qseq": "NQQGRGRKPPLDLHSRYCFQCTPENRLDKCPQAKRCTGMRTMCYTLYKRDENGEEKWAVKGCDYSCPTAGPDERLKCCFYNRCNQY",
+                    "hsp_mseq": "NQQGRGRKPPLDLHSRYCFQCTPENRLDKCPQAKRCTGMRTMCYTLYKRDENGEEKWAVKGCDYSCPTAGPDERLKCC+YN+CN+Y",
+                    "hsp_hseq": "NQQGRGRKPPLDLHSRYCFQCTPENRLDKCPQAKRCTGMRTMCYTLYKRDENGEEKWAVKGCDYSCPTAGPDERLKCCYYNKCNEY"
                 }
             ]
         }

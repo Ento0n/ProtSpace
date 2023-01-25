@@ -268,15 +268,19 @@ def run_blast(df: pd.DataFrame, blast_dir: Path) -> pd.DataFrame:
 
 def manual_curation(df: pd.DataFrame) -> pd.DataFrame:
     # remove unneded column
-    df = df.drop(columns="original_fasta_header")
+    # df = df.drop(columns="original_fasta_header")
     # remove duplicates
+    len_before = len(df)
     df = df.drop_duplicates(subset=["acc_id", "species", "seq"])
+    len_after = len(df)
+    if len_before > len_after:
+        print(f"{len_before-len_after} duplicate sequences were removed.")
 
     # find sequences that come from genomic sequences
     # pattern: ^\d+[A-Za-z]{4}[_\d]
     genomic_id_cond = df["fasta_id"].str.match(r"^\d+[A-Za-z]{4}[_\d]") == True
     df.loc[genomic_id_cond, "data_origin"] = "genomic"
-    # df.loc[genomic_id_cond, "fasta_id"] = df.loc[genomic_id_cond, "fasta_id"].str.lstrip("0123456789")
+    df.loc[genomic_id_cond, "fasta_id"] = df.loc[genomic_id_cond, "fasta_id"].str.lstrip("0123456789")
     return df
 
 

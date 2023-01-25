@@ -1,6 +1,8 @@
 # colabfold output (too large)
 data/*/colabfold/out/
 data/*/PPIHP/out/
+data/3FTx/blast_out/
+data/3FTx/uniprot_entry/
 config/
 out/
 **.html
