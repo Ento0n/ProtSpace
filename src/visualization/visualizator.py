@@ -112,7 +112,7 @@ class Visualizator:
 
     @staticmethod
     def handle_colorbar(
-        col_groups: list, fig: go.Figure, n_symbols: int, color_list: list
+        col_groups: list, fig: go.Figure, n_symbols: int, color_list: list, two_d: bool
     ):
         """
         Creates a colorbar trace for the plot if only numeric values are in the group.
@@ -120,6 +120,7 @@ class Visualizator:
         :param fig: the graph figure
         :param n_symbols: number of different symbols to be displayed.
         :param color_list: list with the different colors to be displayed.
+        :param two_d: if True graph should be displayed in 2D
         :return: flag whether only numeric values are in the column and number of symbols to be used
         """
         numeric_flag = False
@@ -179,20 +180,35 @@ class Visualizator:
             )
 
             # create and add a dummy trace that holds the colorbar
-            color_trace = go.Scatter3d(
-                x=[None],
-                y=[None],
-                z=[None],
-                mode="markers",
-                marker=dict(
-                    colorscale=colorscale,
-                    showscale=True,
-                    colorbar=colorbar,
-                    cmin=min_val,
-                    cmax=max_val,
-                ),
-                showlegend=False,
-            )
+            if not two_d:
+                color_trace = go.Scatter3d(
+                    x=[None],
+                    y=[None],
+                    z=[None],
+                    mode="markers",
+                    marker=dict(
+                        colorscale=colorscale,
+                        showscale=True,
+                        colorbar=colorbar,
+                        cmin=min_val,
+                        cmax=max_val,
+                    ),
+                    showlegend=False,
+                )
+            else:
+                color_trace = go.Scatter(
+                    x=[None],
+                    y=[None],
+                    mode="markers",
+                    marker=dict(
+                        colorscale=colorscale,
+                        showscale=True,
+                        colorbar=colorbar,
+                        cmin=min_val,
+                        cmax=max_val,
+                    ),
+                    showlegend=False,
+                )
 
             fig.add_trace(color_trace)
 
@@ -297,6 +313,7 @@ class Visualizator:
         original_id_col: object,
         umap_paras: dict,
         dim_red: str = "UMAP",
+        two_d: bool = False,
     ):
         """
         Renders the plotly graph with the selected column in the dataframe df
@@ -305,6 +322,7 @@ class Visualizator:
         :param original_id_col: the colum "original id" of the mapped csv file
         :param umap_paras: dictionary holding the parameters of UMAP
         :param dim_red: to be displayed dimensionality reduction
+        :param two_d: if True plot should be in 2D
         :return: plotly graphical object
         """
 
@@ -338,7 +356,7 @@ class Visualizator:
         fig = go.Figure()
 
         numeric_flag, n_symbols, color_list = Visualizator.handle_colorbar(
-            col_groups, fig, n_symbols, color_list
+            col_groups, fig, n_symbols, color_list, two_d
         )
 
         df["class_index"] = np.ones(len(df)) * -100
@@ -376,21 +394,37 @@ class Visualizator:
             # extract df with only group value
             df_group = df[df[selected_column] == group_value]
 
-            trace = go.Scatter3d(
-                x=df_group[x],
-                y=df_group[y],
-                z=df_group[z],
-                mode="markers",
-                name=group_value,
-                marker=dict(
-                    size=10,
-                    color=color,
-                    symbol=Visualizator.SYMBOLS[group_idx % n_symbols],
-                    line=dict(color="black", width=1),
-                ),
-                text=df_group.index.to_list(),
-                showlegend=show_legend,
-            )
+            if not two_d:
+                trace = go.Scatter3d(
+                    x=df_group[x],
+                    y=df_group[y],
+                    z=df_group[z],
+                    mode="markers",
+                    name=group_value,
+                    marker=dict(
+                        size=10,
+                        color=color,
+                        symbol=Visualizator.SYMBOLS[group_idx % n_symbols],
+                        line=dict(color="black", width=1),
+                    ),
+                    text=df_group.index.to_list(),
+                    showlegend=show_legend,
+                )
+            else:
+                trace = go.Scatter(
+                    x=df_group[x],
+                    y=df_group[y],
+                    mode="markers",
+                    name=group_value,
+                    marker=dict(
+                        size=10,
+                        color=color,
+                        symbol=Visualizator.SYMBOLS[group_idx % n_symbols],
+                        line=dict(color="black", width=1),
+                    ),
+                    text=df_group.index.to_list(),
+                    showlegend=show_legend,
+                )
             fig.add_trace(trace)
             # Give the different group values a number
             df.loc[df[selected_column] == group_value, "class_index"] = group_idx

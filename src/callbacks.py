@@ -624,6 +624,7 @@ def get_callbacks(
         Input("graph", "clickData"),
         Input("highlighting_bool", "data"),
         Input("relayoutData_save", "data"),
+        Input("dim_radio", "value"),
         State("graph", "figure"),
         State("graph", "relayoutData"),
     )
@@ -638,6 +639,7 @@ def get_callbacks(
         click_data: dict,
         highlighting_bool: bool,
         relayout_data_save: dict,
+        dim: str,
         fig: go.Figure,
         relayout_data: dict,
     ):
@@ -656,6 +658,7 @@ def get_callbacks(
         :param relayout_data_save: relayout dict of the last click, needed for buggy plotly
         :param fig: graph Figure
         :param relayout_data: scene data of the graph
+        :param dim: chosen dimension, 2D or 3D
         :return: Output variables
         """
         # Check whether an input is triggered
@@ -740,11 +743,17 @@ def get_callbacks(
                 + umap_paras["metric"]
             )
 
+        if dim == "2D":
+            two_d = True
+        else:
+            two_d = False
+
         if (
             ctx.triggered_id == "dd_menu"
             or ctx.triggered_id == "umap_recalculation_button"
             or ctx.triggered_id == "dim_red_radio"
             or ctx.triggered_id == "last_umap_paras_dd"
+            or ctx.triggered_id == "dim_radio"
         ):
             fig = Visualizator.render(
                 df,
@@ -752,6 +761,7 @@ def get_callbacks(
                 original_id_col=original_id_col,
                 dim_red=dim_red,
                 umap_paras=umap_paras,
+                two_d=two_d,
             )
             # Set highlighting_bool to False since new graph is displayed and highlighting circle is removed
             highlighting_bool = False
@@ -783,21 +793,37 @@ def get_callbacks(
                 data_list.pop(-1)
                 fig.data = data_list
 
-            fig.add_trace(
-                go.Scatter3d(
-                    x=[x],
-                    y=[y],
-                    z=[z],
-                    mode="markers",
-                    marker=dict(
-                        size=15,
-                        color="black",
-                        symbol="circle-open",
-                    ),
-                    showlegend=False,
-                    hoverinfo="skip",
+            if dim == "3D":
+                fig.add_trace(
+                    go.Scatter3d(
+                        x=[x],
+                        y=[y],
+                        z=[z],
+                        mode="markers",
+                        marker=dict(
+                            size=15,
+                            color="black",
+                            symbol="circle-open",
+                        ),
+                        showlegend=False,
+                        hoverinfo="skip",
+                    )
                 )
-            )
+            else:
+                fig.add_trace(
+                    go.Scatter(
+                        x=[x],
+                        y=[y],
+                        mode="markers",
+                        marker=dict(
+                            size=15,
+                            color="black",
+                            symbol="circle-open",
+                        ),
+                        showlegend=False,
+                        hoverinfo="skip",
+                    )
+                )
 
             # set highlighting_bool to true since highlighting circle is now displayed
             highlighting_bool = True

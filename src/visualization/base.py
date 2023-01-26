@@ -96,6 +96,17 @@ def get_graph_offcanvas(umap_paras: dict, umap_paras_string: str):
         style={"width": "50%"},
         placement="end",
         children=[
+            dcc.Markdown("Dimensions"),
+            dbc.RadioItems(
+                options=[
+                    {"label": "3D", "value": "3D"},
+                    {"label": "2D", "value": "2D"},
+                ],
+                value="3D",
+                id="dim_radio",
+                inline=True,
+            ),
+            html.Br(),
             dcc.Markdown("Dimensionality reduction"),
             dbc.RadioItems(
                 options=[
