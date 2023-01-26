@@ -740,9 +740,6 @@ def get_callbacks(
                 + umap_paras["metric"]
             )
 
-        # Set up umap flag
-        umap_flag = True if dim_red == "UMAP" else False
-
         if (
             ctx.triggered_id == "dd_menu"
             or ctx.triggered_id == "umap_recalculation_button"
@@ -753,7 +750,7 @@ def get_callbacks(
                 df,
                 selected_column=selected_value,
                 original_id_col=original_id_col,
-                umap_flag=umap_flag,
+                dim_red=dim_red,
                 umap_paras=umap_paras,
             )
             # Set highlighting_bool to False since new graph is displayed and highlighting circle is removed
@@ -767,14 +764,18 @@ def get_callbacks(
             if original_id_col is not None:
                 seq_id = to_mapped_id([seq_id], original_id_col, df)[0]
 
-            if umap_flag:
+            if dim_red == "UMAP":
                 x = df.at[seq_id, "x_umap"]
                 y = df.at[seq_id, "y_umap"]
                 z = df.at[seq_id, "z_umap"]
-            else:
+            elif dim_red == "PCA":
                 x = df.at[seq_id, "x_pca"]
                 y = df.at[seq_id, "y_pca"]
                 z = df.at[seq_id, "z_pca"]
+            else:
+                x = df.at[seq_id, "x_tsne"]
+                y = df.at[seq_id, "y_tsne"]
+                z = df.at[seq_id, "z_tsne"]
 
             # Remove last trace (highlighting circle) if present
             if highlighting_bool:
@@ -810,7 +811,7 @@ def get_callbacks(
 
         # Disable UMAP parameter input or not?
         disabled = False
-        if not umap_flag:
+        if not dim_red == "UMAP":
             disabled = True
 
         return (
@@ -898,23 +899,17 @@ def get_callbacks(
             pass
 
         if ctx.triggered_id == "html_download_button":
-            # Set up umap flag
-            umap_flag = True if dim_red == "UMAP" else False
-
             fig = Visualizator.render(
-                df, dd_value, original_id_col, umap_paras, umap_flag
+                df, dd_value, original_id_col, umap_paras, dim_red
             )
             fig.write_html(output_d / f"3Dspace_{dd_value}_{dim_red}.html")
 
             return True
 
         if ctx.triggered_id == "button_html_all":
-            # Set up umap flag
-            umap_flag = True if dim_red == "UMAP" else False
-
             for header in csv_header:
                 fig = Visualizator.render(
-                    df, header, original_id_col, umap_paras, umap_flag
+                    df, header, original_id_col, umap_paras, dim_red
                 )
                 fig.write_html(output_d / f"3Dspace_{header}_{dim_red}.html")
 

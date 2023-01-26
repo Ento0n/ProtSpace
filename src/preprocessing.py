@@ -17,7 +17,18 @@ from visualization.visualizator import Visualizator
 class DataPreprocessor:
     UMAP_AXIS_NAMES = ["x_umap", "y_umap", "z_umap"]
     PCA_AXIS_NAMES = ["x_pca", "y_pca", "z_pca"]
-    AXIS_NAMES = ["x_umap", "y_umap", "z_umap", "x_pca", "y_pca", "z_pca"]
+    TSNE_AXIS_NAMES = ["x_tsne", "y_tsne", "z_tsne"]
+    AXIS_NAMES = [
+        "x_umap",
+        "y_umap",
+        "z_umap",
+        "x_pca",
+        "y_pca",
+        "z_pca",
+        "x_tsne",
+        "y_tsne",
+        "z_tsne",
+    ]
 
     def __init__(
         self,
@@ -486,8 +497,12 @@ class DataPreprocessor:
         df_dim_red_umap.index = embs_uids
         df_dim_red_pca = self._generate_pca(embs)
         df_dim_red_pca.index = embs_uids
+        df_dim_red_tsne = self._generate_tsne(embs)
+        df_dim_red_tsne.index = embs_uids
 
-        df_embeddings = df_csv.join([df_dim_red_umap, df_dim_red_pca], how="outer")
+        df_embeddings = df_csv.join(
+            [df_dim_red_umap, df_dim_red_pca, df_dim_red_tsne], how="outer"
+        )
         csv_header = [
             header
             for header in df_embeddings.columns
@@ -599,6 +614,20 @@ class DataPreprocessor:
         df_pca = pandas.concat([df_pca, variance_df], axis=1)
 
         return df_pca
+
+    def _generate_tsne(self, data: np.ndarray):
+        """
+        Generate tsne coordinates for given data
+        :param data: embeddings data
+        :return: dataframe with t-sne coordinates
+        """
+        from sklearn.manifold import TSNE
+
+        fit = TSNE(n_components=3, random_state=42, init="random", learning_rate="auto")
+        tsne_fit = fit.fit_transform(data)
+        df_tsne = DataFrame(data=tsne_fit, columns=self.TSNE_AXIS_NAMES)
+
+        return df_tsne
 
     def _check_coordinates(self, data_frame: DataFrame) -> bool:
         """

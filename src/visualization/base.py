@@ -101,6 +101,7 @@ def get_graph_offcanvas(umap_paras: dict, umap_paras_string: str):
                 options=[
                     {"label": "UMAP", "value": "UMAP"},
                     {"label": "PCA", "value": "PCA"},
+                    {"label": "t-SNE", "value": "TSNE"},
                 ],
                 value="UMAP",
                 id="dim_red_radio",

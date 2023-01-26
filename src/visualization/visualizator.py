@@ -199,15 +199,15 @@ class Visualizator:
         return numeric_flag, n_symbols, color_list
 
     @staticmethod
-    def customize_axis_titles(umap_flag: bool, fig: go.Figure, df: DataFrame):
+    def customize_axis_titles(dim_red: str, fig: go.Figure, df: DataFrame):
         """
         Axis titles are edited dependent on dimensionality reduction (UMAP or PCA)
-        :param umap_flag: flag whether UMAP or not
+        :param dim_red: to be displayed dimensionality reduction
         :param fig: graph figure
         :param df: dataframe with all the data
         :return: None
         """
-        if umap_flag:
+        if dim_red == "UMAP" or dim_red == "TSNE":
             fig.update_layout(
                 # Remove axes ticks and labels as they are usually not informative
                 scene=dict(
@@ -242,22 +242,24 @@ class Visualizator:
             )
 
     @staticmethod
-    def handle_title(umap_flag: bool, umap_paras: dict, fig: go.Figure):
+    def handle_title(dim_red: str, umap_paras: dict, fig: go.Figure):
         """
         Sets up the title of the graph depending on the dimensionality reduction (UMAP or PCA)
-        :param umap_flag: flag whether UMAP is set or not
+        :param dim_red: to be displayed dimensionality reduction
         :param umap_paras: parameters of the UMAP calculation
         :param fig: graph figure
         :return: None
         """
         # Update title
-        if umap_flag:
+        if dim_red == "UMAP":
             title = (
                 "UMAP" + f"<br>n_neighbours: {umap_paras['n_neighbours']},"
                 f" min_dist: {umap_paras['min_dist']}, metric: {umap_paras['metric']}"
             )
-        else:
+        elif dim_red == "PCA":
             title = "PCA"
+        else:
+            title = "TSNE"
 
         fig.update_layout(
             title={
@@ -294,7 +296,7 @@ class Visualizator:
         selected_column: str,
         original_id_col: object,
         umap_paras: dict,
-        umap_flag: bool = True,
+        dim_red: str = "UMAP",
     ):
         """
         Renders the plotly graph with the selected column in the dataframe df
@@ -302,7 +304,7 @@ class Visualizator:
         :param selected_column: column of the dataframe
         :param original_id_col: the colum "original id" of the mapped csv file
         :param umap_paras: dictionary holding the parameters of UMAP
-        :param umap_flag: flag is set if umap calculations are used.
+        :param dim_red: to be displayed dimensionality reduction
         :return: plotly graphical object
         """
 
@@ -341,14 +343,18 @@ class Visualizator:
 
         df["class_index"] = np.ones(len(df)) * -100
 
-        if umap_flag:
+        if dim_red == "UMAP":
             x = "x_umap"
             y = "y_umap"
             z = "z_umap"
-        else:
+        elif dim_red == "PCA":
             x = "x_pca"
             y = "y_pca"
             z = "z_pca"
+        else:
+            x = "x_tsne"
+            y = "y_tsne"
+            z = "z_tsne"
 
         # iterate over different values of the selected column
         for group_idx, group_value in enumerate(col_groups):
@@ -391,9 +397,9 @@ class Visualizator:
 
         Visualizator.update_layout(fig)
 
-        Visualizator.handle_title(umap_flag, umap_paras, fig)
+        Visualizator.handle_title(dim_red, umap_paras, fig)
 
-        Visualizator.customize_axis_titles(umap_flag, fig, df)
+        Visualizator.customize_axis_titles(dim_red, fig, df)
 
         # swap index again
         if original_id_col is not None:
