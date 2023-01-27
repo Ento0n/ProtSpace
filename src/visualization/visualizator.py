@@ -391,6 +391,11 @@ class Visualizator:
                 else:
                     color = f"rgb{color_list[group_idx]}"
 
+            # set up opacity dependent on NA or not
+            opacity = 1.0
+            if group_value == "NA":
+                opacity = 0.4
+
             # extract df with only group value
             df_group = df[df[selected_column] == group_value]
 
@@ -401,6 +406,7 @@ class Visualizator:
                     z=df_group[z],
                     mode="markers",
                     name=group_value,
+                    opacity=opacity,
                     marker=dict(
                         size=10,
                         color=color,
@@ -416,6 +422,7 @@ class Visualizator:
                     y=df_group[y],
                     mode="markers",
                     name=group_value,
+                    opacity=opacity,
                     marker=dict(
                         size=10,
                         color=color,
