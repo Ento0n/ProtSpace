@@ -426,6 +426,11 @@ class Visualizator:
                 symbol = Visualizator.SYMBOLS[group_idx % n_symbols]
                 color = f"rgb{color_list[group_idx]}"
 
+            # set up opacity dependent on NA or not
+            opacity = 1.0
+            if group_value == "NA":
+                opacity = 0.4
+
             # extract df with only group value
             if not pd.isna(group_value):
                 df_group = df[df[selected_column] == group_value]
