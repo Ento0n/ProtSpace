@@ -85,6 +85,10 @@ class LoadConfFile(argparse.Action):
         if "reset" in dictionary.keys():
             if dictionary["reset"]:
                 arguments.append("--reset")
+        if "pca" in dictionary.keys():
+            arguments.append("--pca")
+        if "tsne" in dictionary.keys():
+            arguments.append("--tsne")
         if "n_neighbours" in dictionary.keys():
             arguments.append("--n_neighbours")
             arguments.append(str(dictionary["n_neighbours"]))
@@ -102,7 +106,6 @@ class LoadConfFile(argparse.Action):
             arguments.append(str(dictionary["verbose"]))
         if "v" in dictionary.keys():
             arguments.append("-v")
-            arguments.append(str(dictionary["v"]))
 
         return arguments
 
@@ -121,6 +124,8 @@ class Parser:
             self.json_d,
             self.reset,
             self.conf,
+            self.pca_flag,
+            self.tsne_flag,
             self.n_neighbours,
             self.min_dist,
             self.metric,
@@ -144,6 +149,8 @@ class Parser:
             self.json_d,
             self.reset,
             self.conf,
+            self.pca_flag,
+            self.tsne_flag,
             self.n_neighbours,
             self.min_dist,
             self.metric,
@@ -240,6 +247,20 @@ class Parser:
             action="store_true",
             help="Precomputed file df.csv is deleted and recalculated.",
         )
+        # Optional arfument
+        parser.add_argument(
+            "--pca",
+            required=False,
+            action="store_true",
+            help="PCA is initially used as dimensionality reduction",
+        )
+        # Optional arfument
+        parser.add_argument(
+            "--tsne",
+            required=False,
+            action="store_true",
+            help="t-SNE is initially used as dimensionality reduction",
+        )
         # Optional argument
         parser.add_argument(
             "--n_neighbours",
@@ -288,6 +309,8 @@ class Parser:
         json_d = Path(args.json) if args.json is not None else None
         reset = args.reset
         conf_file = args.configuration
+        pca_flag = args.pca
+        tsne_flag = args.tsne
         n_neighbours = args.n_neighbours
         min_dist = args.min_dist
         metric = args.metric
@@ -306,6 +329,8 @@ class Parser:
             json_d,
             reset,
             conf_file,
+            pca_flag,
+            tsne_flag,
             n_neighbours,
             min_dist,
             metric,
@@ -357,6 +382,8 @@ def setup():
         json_d,
         reset,
         conf,
+        pca_flag,
+        tsne_flag,
         n_neighbours,
         min_dist,
         metric,
@@ -365,6 +392,12 @@ def setup():
     ) = parser.get_params()
 
     required_arguments_check(hdf_path, output_d)
+
+    dim_red = "UMAP"
+    if pca_flag:
+        dim_red = "PCA"
+    elif tsne_flag:
+        dim_red = "TSNE"
 
     # put UMAP parameters in dictionary
     umap_paras = dict()
@@ -382,6 +415,7 @@ def setup():
         uid_col,
         html_cols,
         reset,
+        dim_red,
         umap_paras,
         verbose,
     )
@@ -401,7 +435,7 @@ def setup():
     structure_container = StructureContainer(pdb_d, json_d)
 
     # Create visualization object
-    visualizator = Visualizator(fig, csv_header)
+    visualizator = Visualizator(fig, csv_header, dim_red)
 
     # get ids of the proteins
     if original_id_col is not None:

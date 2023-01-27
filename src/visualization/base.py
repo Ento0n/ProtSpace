@@ -49,7 +49,7 @@ def get_app():
     return app
 
 
-def init_app(umap_paras: dict, csv_header: list[str], fig: go.Figure):
+def init_app(umap_paras: dict, csv_header: list[str], fig: go.Figure, dim_red: str):
     """
     Set up the layout of the application
     :return: application
@@ -70,7 +70,9 @@ def init_app(umap_paras: dict, csv_header: list[str], fig: go.Figure):
             dbc.Row(
                 [
                     dbc.Col(
-                        get_graph_container(umap_paras, False, csv_header, fig),
+                        get_graph_container(
+                            umap_paras, False, csv_header, fig, dim_red
+                        ),
                         width=12,
                     ),
                 ]
@@ -82,7 +84,7 @@ def init_app(umap_paras: dict, csv_header: list[str], fig: go.Figure):
     return app
 
 
-def get_graph_offcanvas(umap_paras: dict, umap_paras_string: str):
+def get_graph_offcanvas(umap_paras: dict, umap_paras_string: str, dim_red: str):
     """
     Creates layout of the offcanvas for the graph.
     :param umap_paras: Parameters of the UMAP calculation
@@ -114,7 +116,7 @@ def get_graph_offcanvas(umap_paras: dict, umap_paras_string: str):
                     {"label": "PCA", "value": "PCA"},
                     {"label": "t-SNE", "value": "TSNE"},
                 ],
-                value="UMAP",
+                value=dim_red,
                 id="dim_red_radio",
                 inline="True",
             ),
@@ -229,7 +231,7 @@ def get_html_download_button_tooltip(button_id: str):
 
 
 def get_graph_container(
-    umap_paras: dict, pdb: bool, csv_header: list[str], fig: go.Figure
+    umap_paras: dict, pdb: bool, csv_header: list[str], fig: go.Figure, dim_red: str
 ):
     """
     Creates the layout for the graph Row
@@ -265,7 +267,7 @@ def get_graph_container(
         dcc.Store(id="highlighting_bool", storage_type="memory", data=False),
         # Storage to save last camera data (relayoutData)
         dcc.Store(id="relayoutData_save", storage_type="memory", data={}),
-        get_graph_offcanvas(umap_paras, umap_paras_string),
+        get_graph_offcanvas(umap_paras, umap_paras_string, dim_red),
         get_settings_button_tooltip(button_id="graph_settings_button"),
         get_html_download_button_tooltip(button_id="html_download_button"),
         dbc.Row(

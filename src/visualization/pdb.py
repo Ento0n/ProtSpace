@@ -189,7 +189,11 @@ def get_reset_view_button_tooltip(button_id: str):
 
 
 def init_app_pdb(
-    original_id_col: list, umap_paras: dict, csv_header: list[str], fig: go.Figure
+    original_id_col: list,
+    umap_paras: dict,
+    csv_header: list[str],
+    fig: go.Figure,
+    dim_red: str,
 ):
     """
     Layout for the molecule displaying, in general the right column in pdb mode
@@ -226,7 +230,7 @@ def init_app_pdb(
             dbc.Row(
                 [
                     dbc.Col(
-                        get_graph_container(umap_paras, True, csv_header, fig),
+                        get_graph_container(umap_paras, True, csv_header, fig, dim_red),
                         id="left_col",
                         width=6,
                         style={"border-right": "solid black 1px"},

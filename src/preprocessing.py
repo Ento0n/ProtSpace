@@ -40,6 +40,7 @@ class DataPreprocessor:
         uid_col: int,
         html_cols: list[str],
         reset: bool,
+        dim_red: str,
         umap_paras: dict,
         verbose: bool,
     ):
@@ -51,6 +52,7 @@ class DataPreprocessor:
         self.uid_col = uid_col
         self.html_cols = html_cols
         self.reset = reset
+        self.dim_red = dim_red
         self.umap_paras = umap_paras
         self.verbose = verbose
 
@@ -137,6 +139,7 @@ class DataPreprocessor:
             selected_column=csv_header[0],
             original_id_col=original_id_col,
             umap_paras=self.umap_paras,
+            dim_red=self.dim_red,
         )
 
         return (

@@ -23,9 +23,10 @@ class Visualizator:
         "square-open",
     ]
 
-    def __init__(self, fig: go.Figure, csv_header: list[str]):
+    def __init__(self, fig: go.Figure, csv_header: list[str], dim_red: str):
         self.fig = fig
         self.csv_header = csv_header
+        self.dim_red = dim_red
 
     @staticmethod
     def n_symbols_equation(n: int):
@@ -234,7 +235,15 @@ class Visualizator:
             )
         else:
             # extract variance column
-            pca_variance = df["variance"].to_list()
+            unique_variance_column = df["variance"].unique().tolist()
+
+            pca_variance = list()
+            for value in unique_variance_column:
+                if value != "NA":
+                    pca_variance.append(value)
+
+            # Sort descending since the first component of PCA has more variance than the second and so on
+            pca_variance.sort(reverse=True)
 
             fig.update_layout(
                 # Remove axes ticks and labels as they are usually not informative
@@ -454,7 +463,7 @@ class Visualizator:
         :param umap_paras: Parameters of the UMAP calculation
         :return: the application layout
         """
-        return init_app(umap_paras, self.csv_header, self.fig)
+        return init_app(umap_paras, self.csv_header, self.fig, self.dim_red)
 
     def get_pdb_app(self, orig_id_col: list[str], umap_paras: dict):
         """
@@ -463,4 +472,6 @@ class Visualizator:
         :param umap_paras: Parameters of the UMAP calculation
         :return: the application layout
         """
-        return init_app_pdb(orig_id_col, umap_paras, self.csv_header, self.fig)
+        return init_app_pdb(
+            orig_id_col, umap_paras, self.csv_header, self.fig, self.dim_red
+        )
