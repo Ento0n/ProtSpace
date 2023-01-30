@@ -77,7 +77,6 @@ def init_app(umap_paras: dict, csv_header: list[str], fig: go.Figure, dim_red: s
                     "position": "fixed",
                     "top": 166,
                     "left": 10,
-                    "width": 200,
                 },
             ),
             # graph and controls
@@ -547,7 +546,7 @@ def get_info_toast():
         is_open=False,
         dismissable=True,
         body_style={
-            "max-height": "50vh",
+            "max-height": "35vh",
             "overflow": "auto",
         },
     )
@@ -565,7 +564,7 @@ def get_neighbour_toast():
         is_open=False,
         dismissable=True,
         body_style={
-            "max-height": "50vh",
+            "max-height": "35vh",
             "overflow": "auto",
         },
     )
