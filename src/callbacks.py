@@ -1230,10 +1230,72 @@ def get_callbacks(
         Output("neighbour_toast", "is_open"),
         Input("graph", "clickData"),
     )
-    def show_neighbour_toast(clickData):
+    def show_neighbour_toast(click_data):
+        """
+        Fills the toast showing nearest neighbours with data and opens it
+        :param click_data: Holds data which data point is clicked
+        :return: ID of the molecule for the header, Body of the toast with data, Boolean whether toast is shown or not
+        """
         # Check whether an input is triggered
         ctx = dash.callback_context
         if not ctx.triggered:
             raise PreventUpdate
 
-        return "Test", "Test", True
+        # Which data point is clicked -> ID
+        seq_id = clickdata_to_seqid(click_data)
+
+        # Convert embedding UIDS to original ID form if needed
+        ids = embedding_uids
+        if original_id_col is not None:
+            ids = to_original_id(embedding_uids, original_id_col, df)
+
+        # Get index of selected ID in the embedding IDs
+        idx = ids.index(seq_id)
+
+        # get id to distance dictionary for all 3 metrics
+        euclidean_id_to_dis = get_id_to_dis(idx, ids, "euclidean")
+        cosine_id_to_dis = get_id_to_dis(idx, ids, "cosine")
+        hamming_id_to_dis = get_id_to_dis(idx, ids, "hamming")
+
+        # sort the dictionaries by their values in ascending order
+        euclidean_id_to_dis = dict(
+            sorted(euclidean_id_to_dis.items(), key=lambda x: x[1])
+        )
+        cosine_id_to_dis = dict(sorted(cosine_id_to_dis.items(), key=lambda x: x[1]))
+        hamming_id_to_dis = dict(sorted(hamming_id_to_dis.items(), key=lambda x: x[1]))
+
+        # Create the lists that are shown in the tabs
+        euclidean_list = get_list(euclidean_id_to_dis)
+        cosine_list = get_list(cosine_id_to_dis)
+        hamming_list = get_list(hamming_id_to_dis)
+
+        # Header of the toast
+        header = "Nearest neighbours"
+
+        # Body of the toast
+        body = dbc.Tabs(
+            children=[
+                dbc.Tab(euclidean_list, label="euclidean"),
+                dbc.Tab(cosine_list, label="cosine"),
+                dbc.Tab(hamming_list, label="hamming"),
+            ]
+        )
+
+        return header, body, True
+
+    def get_id_to_dis(idx: int, ids: list, metric: str):
+        # get row of selected data point
+        distance_row = distance_dic[metric][idx]
+
+        # create hashing that saves ID to distance
+        id_to_dis = dict()
+        for idx, value in enumerate(ids):
+            id_to_dis[value] = distance_row[idx]
+
+        return id_to_dis
+
+    def get_list(id_to_dis: dict):
+        list_group_items = [
+            dbc.ListGroupItem(f"{key}: {value}") for key, value in id_to_dis.items()
+        ]
+        return dbc.ListGroup(children=list_group_items, flush=True)
