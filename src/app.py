@@ -428,6 +428,7 @@ def setup():
         original_id_col,
         embeddings,
         embedding_uids,
+        distance_dic,
         fasta_dict,
     ) = data_preprocessor.data_preprocessing()
 
@@ -464,6 +465,7 @@ def setup():
         port,
         embeddings,
         embedding_uids,
+        distance_dic,
         fasta_dict,
     )
 
@@ -486,6 +488,7 @@ def main():
         port,
         embeddings,
         embedding_uids,
+        distance_dic,
         fasta_dict,
     ) = setup()
 
@@ -502,6 +505,7 @@ def main():
                 csv_header,
                 embeddings,
                 embedding_uids,
+                distance_dic,
                 umap_paras_dict,
                 fasta_dict,
                 struct_container,
@@ -517,6 +521,7 @@ def main():
                 csv_header,
                 embeddings,
                 embedding_uids,
+                distance_dic,
                 umap_paras_dict,
                 fasta_dict,
                 struct_container,

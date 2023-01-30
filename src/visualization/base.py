@@ -64,8 +64,22 @@ def init_app(umap_paras: dict, csv_header: list[str], fig: go.Figure, dim_red: s
             get_disclaimer_modal(),
             # toast that is displayed if a html file is created
             get_download_toast(),
-            # toast that displays the information of a selected protein
-            get_info_toast(),
+            # Toasts in container, so they stack below each other...
+            dbc.Container(
+                [
+                    # toast that displays the information of a selected protein
+                    get_info_toast(),
+                    html.Br(),
+                    # toast that displays the nearest neighbours of the selected points
+                    get_neighbour_toast(),
+                ],
+                style={
+                    "position": "fixed",
+                    "top": 166,
+                    "left": 10,
+                    "width": 200,
+                },
+            ),
             # graph and controls
             dbc.Row(
                 [
@@ -536,11 +550,23 @@ def get_info_toast():
             "max-height": "50vh",
             "overflow": "auto",
         },
-        style={
-            "position": "fixed",
-            "top": 166,
-            "left": 10,
-            "width": 200,
+    )
+
+    return toast
+
+
+def get_neighbour_toast():
+    """
+    Layout for the toast (window showing nearest neighbours) shown when clicking on a molecule in the graph.
+    :return: neihgbour toast layout
+    """
+    toast = dbc.Toast(
+        id="neighbour_toast",
+        is_open=False,
+        dismissable=True,
+        body_style={
+            "max-height": "50vh",
+            "overflow": "auto",
         },
     )
 

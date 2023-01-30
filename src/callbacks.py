@@ -579,6 +579,7 @@ def get_callbacks(
     csv_header: list[str],
     embeddings: np.stack,
     embedding_uids: list,
+    distance_dic: dict,
     umap_paras_dict: dict,
     fasta_dict: dict,
     struct_container: StructureContainer,
@@ -1222,3 +1223,17 @@ def get_callbacks(
             expand_hidden = False
 
         return expand_hidden, collapse_hidden
+
+    @app.callback(
+        Output("neighbour_toast", "header"),
+        Output("neighbour_toast", "children"),
+        Output("neighbour_toast", "is_open"),
+        Input("graph", "clickData"),
+    )
+    def show_neighbour_toast(clickData):
+        # Check whether an input is triggered
+        ctx = dash.callback_context
+        if not ctx.triggered:
+            raise PreventUpdate
+
+        return "Test", "Test", True

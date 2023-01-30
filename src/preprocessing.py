@@ -5,7 +5,7 @@ import os
 from pathlib import Path
 import h5py
 import pandas
-from scipy.spatial.distance import pdist, squareform
+from scipy.spatial.distance import pdist, squareform, cdist
 import numpy as np
 import pandas as pd
 from pandas import DataFrame
@@ -142,6 +142,9 @@ class DataPreprocessor:
             dim_red=self.dim_red,
         )
 
+        # get distance matrices for displaying nearest neighbour
+        distance_dic = self._get_distance_matrices(embeddings)
+
         return (
             df_embeddings,
             fig,
@@ -149,8 +152,27 @@ class DataPreprocessor:
             original_id_col,
             embeddings,
             embedding_uids,
+            distance_dic,
             fasta_dict,
         )
+
+    @staticmethod
+    def _get_distance_matrices(embeddings):
+        """
+        Create the distance matrices for displaying nearest neighbours of a selected point
+        :param embeddings: The embedding values
+        :return: The distance matrices in a dictionary
+        """
+
+        euclidean_dis_mat = cdist(embeddings, embeddings, "euclidean")
+        cosine_dis_mat = cdist(embeddings, embeddings, "cosine")
+        hamming_dis_mat = cdist(embeddings, embeddings, "hamming")
+
+        distance_dic = dict(
+            euclidean=euclidean_dis_mat, cosine=cosine_dis_mat, hamming=hamming_dis_mat
+        )
+
+        return distance_dic
 
     def _check_files(
         self,

@@ -2,3 +2,7 @@
 .toast {
     z-index: 999 !important;
 }
+
+.container {
+    z-index: 999 !important;
+}
