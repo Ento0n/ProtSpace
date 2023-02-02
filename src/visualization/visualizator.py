@@ -301,12 +301,6 @@ class Visualizator:
         :param fig: graph Figure
         :return: None
         """
-        # Set hoverinfo
-        fig.update_traces(
-            hoverinfo=["name", "text"],
-            hoverlabel=dict(namelength=-1),
-            hovertemplate="%{text}",
-        )
 
         # Set legend in right upper corner of the plot
         fig.update_layout(legend=dict(yanchor="top", y=0.97, xanchor="right", x=0.99))
@@ -445,7 +439,15 @@ class Visualizator:
             # Give the different group values a number
             df.loc[df[selected_column] == group_value, "class_index"] = group_idx
 
-        Visualizator.update_layout(fig)
+        # Set hover-info
+        fig.update_traces(
+            hoverinfo=["name", "text"],
+            hoverlabel=dict(namelength=-1),
+            hovertemplate="%{text}",
+        )
+
+        if not two_d:
+            Visualizator.update_layout(fig)
 
         Visualizator.handle_title(dim_red, umap_paras, fig)
 
