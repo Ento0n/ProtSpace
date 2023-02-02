@@ -203,8 +203,8 @@ def init_app_pdb(
 
     app.layout = dbc.Container(
         [
-            # Header
-            get_header(app),
+            # side components like header and the toasts
+            get_side_components(app),
             # sizing of the molecule viewer
             dcc.Location(id="url"),
             html.Div(id="molviewer_sizing_div", hidden=True),
@@ -216,26 +216,8 @@ def init_app_pdb(
             dcc.Store(id="clicked_mol_storage"),
             # Storage to save the values of the molecules dropdown
             dcc.Store(id="molecules_dropdown_save", data=[]),
-            # Toast that is displayed if a html file is created
-            get_download_toast(),
             # Toast to display that pdb file is missing
             get_no_pdb_toast(),
-            # Toasts in container, so they stack below each other...
-            dbc.Container(
-                [
-                    # toast that displays the information of a selected protein
-                    get_info_toast(),
-                    html.Br(),
-                    # toast that displays the nearest neighbours of the selected points
-                    get_neighbour_toast(),
-                ],
-                style={
-                    "position": "fixed",
-                    "top": 166,
-                    "left": 10,
-                    "width": 200,
-                },
-            ),
             # offcanvas for the settings
             get_pdb_offcanvas(),
             get_settings_button_tooltip(button_id="molecules_settings_button"),

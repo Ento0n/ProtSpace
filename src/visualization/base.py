@@ -63,27 +63,10 @@ def init_app(umap_paras: dict, csv_header: list[str], fig: go.Figure, dim_red: s
 
     app.layout = dbc.Container(
         [
-            # Header
-            get_header(app),
-            # model with disclaimer that opens on startup
+            # get all side components like header, toasts etc
+            get_side_components(app),
+            # modal with disclaimer that opens on startup
             get_disclaimer_modal(),
-            # toast that is displayed if a html file is created
-            get_download_toast(),
-            # Toasts in container, so they stack below each other...
-            dbc.Container(
-                [
-                    # toast that displays the information of a selected protein
-                    get_info_toast(),
-                    html.Br(),
-                    # toast that displays the nearest neighbours of the selected points
-                    get_neighbour_toast(),
-                ],
-                style={
-                    "position": "fixed",
-                    "top": 166,
-                    "left": 10,
-                },
-            ),
             # graph and controls
             dbc.Row(
                 [
@@ -100,6 +83,41 @@ def init_app(umap_paras: dict, csv_header: list[str], fig: go.Figure, dim_red: s
     )
 
     return app
+
+
+def get_side_components(app: Dash):
+    """
+    Collection of side components like header, toasts etc. shared by normal and pdb app
+    :param app: the Dash application
+    :return: side components in a html Div object
+    """
+
+    side_components = html.Div(
+        children=[
+            # Header
+            get_header(app),
+            # toast that is displayed if a html file is created
+            get_download_toast(),
+            # Toasts in container, so they stack below each other...
+            dbc.Container(
+                [
+                    # toast that displays the information of a selected protein
+                    get_info_toast(),
+                    html.Br(),
+                    # toast that displays the nearest neighbours of the selected points
+                    get_neighbour_toast(),
+                ],
+                style={
+                    "position": "fixed",
+                    "top": 166,
+                    "left": 10,
+                    "width": 350,
+                },
+            ),
+        ]
+    )
+
+    return side_components
 
 
 def get_graph_offcanvas(umap_paras: dict, umap_paras_string: str, dim_red: str):
@@ -577,6 +595,7 @@ def get_info_toast():
             "max-height": "35vh",
             "overflow": "auto",
         },
+        style={"width": 200},
     )
 
     return toast
