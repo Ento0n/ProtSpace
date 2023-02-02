@@ -365,7 +365,7 @@ def get_disclaimer_modal():
                         children=[
                             dcc.Markdown(
                                 """
-                            This is the protspace3D tool. There is no usage summary statistics provided by 
+                            This is the ProtSpace3D tool. There is no usage summary statistics provided by 
                             the developers.
                             """
                             ),
