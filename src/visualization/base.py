@@ -357,9 +357,26 @@ def get_disclaimer_modal():
                 children=[
                     dbc.Alert(
                         color="warning",
-                        children="All fonts and representations used un this app are based on dash, "
-                        "dash bootstrap components and dash_bio. No liability is accepted by the creators "
-                        "of this website.",
+                        children=[
+                            dcc.Markdown(
+                                """
+                            This is the protspace3D tool. There is no usage summary statistics provided by 
+                            the developers.
+                            """
+                            ),
+                            dcc.Markdown(
+                                """
+                            Considering the data collection in the background and the displayed in the web application, 
+                            the Python library Dash is used and liable.
+                            """
+                            ),
+                            dcc.Markdown(
+                                """
+                            Please refer to the policy of its developers Plotly: https://plotly.com/privacy/ 
+                            for more information.
+                            """
+                            ),
+                        ],
                     )
                 ]
             ),
