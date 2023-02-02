@@ -35,6 +35,11 @@ main_button_style = {
     "margin-right": "15px",
 }
 
+help_modal_icon_style = {
+    "position": "relative",
+    "bottom": "8px",
+}
+
 
 def get_app():
     """
@@ -417,7 +422,10 @@ def get_help_modal():
                                         direction="horizontal",
                                         gap=3,
                                         children=[
-                                            html.I(className="bi bi-download"),
+                                            html.I(
+                                                className="bi bi-download",
+                                                style=help_modal_icon_style,
+                                            ),
                                             html.P(
                                                 "Download a html file of the selected group."
                                             ),
@@ -428,7 +436,8 @@ def get_help_modal():
                                         gap=3,
                                         children=[
                                             html.I(
-                                                className="bi bi-gear-wide-connected"
+                                                className="bi bi-gear-wide-connected",
+                                                style=help_modal_icon_style,
                                             ),
                                             html.P("Open the settings to the graph."),
                                         ],
@@ -475,7 +484,8 @@ def get_help_modal():
                                         gap=3,
                                         children=[
                                             html.I(
-                                                className="bi bi-arrow-counterclockwise"
+                                                className="bi bi-arrow-counterclockwise",
+                                                style=help_modal_icon_style,
                                             ),
                                             html.P(
                                                 "Reset the view of the molecule viewer."
@@ -487,7 +497,8 @@ def get_help_modal():
                                         gap=3,
                                         children=[
                                             html.I(
-                                                className="bi bi-gear-wide-connected"
+                                                className="bi bi-gear-wide-connected",
+                                                style=help_modal_icon_style,
                                             ),
                                             html.P(
                                                 "Open the settings to the molecule viewer."
