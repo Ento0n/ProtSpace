@@ -166,10 +166,12 @@ class DataPreprocessor:
 
         euclidean_dis_mat = cdist(embeddings, embeddings, "euclidean")
         cosine_dis_mat = cdist(embeddings, embeddings, "cosine")
-        hamming_dis_mat = cdist(embeddings, embeddings, "hamming")
+        manhattan_dis_mat = cdist(embeddings, embeddings, "cityblock")
 
         distance_dic = dict(
-            euclidean=euclidean_dis_mat, cosine=cosine_dis_mat, hamming=hamming_dis_mat
+            euclidean=euclidean_dis_mat,
+            cosine=cosine_dis_mat,
+            manhattan=manhattan_dis_mat,
         )
 
         return distance_dic

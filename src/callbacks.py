@@ -1255,19 +1255,21 @@ def get_callbacks(
         # get id to distance dictionary for all 3 metrics
         euclidean_id_to_dis = get_id_to_dis(idx, ids, "euclidean")
         cosine_id_to_dis = get_id_to_dis(idx, ids, "cosine")
-        hamming_id_to_dis = get_id_to_dis(idx, ids, "hamming")
+        manhattan_id_to_dis = get_id_to_dis(idx, ids, "manhattan")
 
         # sort the dictionaries by their values in ascending order
         euclidean_id_to_dis = dict(
             sorted(euclidean_id_to_dis.items(), key=lambda x: x[1])
         )
         cosine_id_to_dis = dict(sorted(cosine_id_to_dis.items(), key=lambda x: x[1]))
-        hamming_id_to_dis = dict(sorted(hamming_id_to_dis.items(), key=lambda x: x[1]))
+        manhattan_id_to_dis = dict(
+            sorted(manhattan_id_to_dis.items(), key=lambda x: x[1])
+        )
 
         # Create the lists that are shown in the tabs
         euclidean_list = get_list(euclidean_id_to_dis)
         cosine_list = get_list(cosine_id_to_dis)
-        hamming_list = get_list(hamming_id_to_dis)
+        manhattan_list = get_list(manhattan_id_to_dis)
 
         # Header of the toast
         header = "Nearest neighbours"
@@ -1277,7 +1279,7 @@ def get_callbacks(
             children=[
                 dbc.Tab(euclidean_list, label="euclidean"),
                 dbc.Tab(cosine_list, label="cosine"),
-                dbc.Tab(hamming_list, label="hamming"),
+                dbc.Tab(manhattan_list, label="manhattan"),
             ]
         )
 
