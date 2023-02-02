@@ -216,7 +216,7 @@ class Visualizator:
         return numeric_flag, n_symbols, color_list
 
     @staticmethod
-    def customize_axis_titles(dim_red: str, fig: go.Figure, df: DataFrame):
+    def customize_axis_titles(dim_red: str, fig: go.Figure, df: DataFrame, two_d: bool):
         """
         Axis titles are edited dependent on dimensionality reduction (UMAP or PCA)
         :param dim_red: to be displayed dimensionality reduction
@@ -225,14 +225,18 @@ class Visualizator:
         :return: None
         """
         if dim_red == "UMAP" or dim_red == "TSNE":
-            fig.update_layout(
-                # Remove axes ticks and labels as they are usually not informative
-                scene=dict(
-                    xaxis=dict(showticklabels=False, showspikes=False, title=""),
-                    yaxis=dict(showticklabels=False, showspikes=False, title=""),
-                    zaxis=dict(showticklabels=False, showspikes=False, title=""),
-                ),
-            )
+            if not two_d:
+                fig.update_layout(
+                    # Remove axes ticks and labels as they are usually not informative
+                    scene=dict(
+                        xaxis=dict(showticklabels=False, showspikes=False, title=""),
+                        yaxis=dict(showticklabels=False, showspikes=False, title=""),
+                        zaxis=dict(showticklabels=False, showspikes=False, title=""),
+                    ),
+                )
+            else:
+                fig.update_xaxes(showticklabels=False)
+                fig.update_yaxes(showticklabels=False)
         else:
             # extract variance column
             unique_variance_column = df["variance"].unique().tolist()
@@ -245,26 +249,37 @@ class Visualizator:
             # Sort descending since the first component of PCA has more variance than the second and so on
             pca_variance.sort(reverse=True)
 
-            fig.update_layout(
-                # Remove axes ticks and labels as they are usually not informative
-                scene=dict(
-                    xaxis=dict(
-                        showticklabels=False,
-                        showspikes=False,
-                        title=f"PC1 ({float(pca_variance[0]):.1f}%)",
+            if not two_d:
+                fig.update_layout(
+                    # Remove axes ticks and labels as they are usually not informative
+                    scene=dict(
+                        xaxis=dict(
+                            showticklabels=False,
+                            showspikes=False,
+                            title=f"PC1 ({float(pca_variance[0]):.1f}%)",
+                        ),
+                        yaxis=dict(
+                            showticklabels=False,
+                            showspikes=False,
+                            title=f"PC2 ({float(pca_variance[1]):.1f}%)",
+                        ),
+                        zaxis=dict(
+                            showticklabels=False,
+                            showspikes=False,
+                            title=f"PC3 ({float(pca_variance[2]):.1f}%)",
+                        ),
                     ),
-                    yaxis=dict(
-                        showticklabels=False,
-                        showspikes=False,
-                        title=f"PC2 ({float(pca_variance[1]):.1f}%)",
-                    ),
-                    zaxis=dict(
-                        showticklabels=False,
-                        showspikes=False,
-                        title=f"PC3 ({float(pca_variance[2]):.1f}%)",
-                    ),
-                ),
-            )
+                )
+            else:
+                fig.update_xaxes(
+                    showticklabels=False,
+                    title_text=f"PC1 ({float(pca_variance[0]):.1f}%)",
+                )
+                fig.update_yaxes(
+                    showticklabels=False,
+                    title_text=f"PC2 ({float(pca_variance[1]):.1f}%)",
+                    title_standoff=0,
+                )
 
     @staticmethod
     def handle_title(dim_red: str, umap_paras: dict, fig: go.Figure):
@@ -450,11 +465,11 @@ class Visualizator:
             Visualizator.update_layout(fig)
         else:
             # Safe space for displaying info toast and nearest neighbour
-            fig.update_layout(margin=dict(l=350))
+            fig.update_layout(margin=dict(l=370))
 
         Visualizator.handle_title(dim_red, umap_paras, fig)
 
-        Visualizator.customize_axis_titles(dim_red, fig, df)
+        Visualizator.customize_axis_titles(dim_red, fig, df, two_d)
 
         # swap index again
         if original_id_col is not None:
