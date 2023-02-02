@@ -1267,9 +1267,9 @@ def get_callbacks(
         )
 
         # Create the lists that are shown in the tabs
-        euclidean_list = get_list(euclidean_id_to_dis)
-        cosine_list = get_list(cosine_id_to_dis)
-        manhattan_list = get_list(manhattan_id_to_dis)
+        euclidean_list = get_list(euclidean_id_to_dis, seq_id)
+        cosine_list = get_list(cosine_id_to_dis, seq_id)
+        manhattan_list = get_list(manhattan_id_to_dis, seq_id)
 
         # Header of the toast
         header = "Nearest neighbours"
@@ -1286,6 +1286,13 @@ def get_callbacks(
         return header, body, True
 
     def get_id_to_dis(idx: int, ids: list, metric: str):
+        """
+        Creates a dictionary that has the ID of the niehgbours as key and the distance as value
+        :param idx: index of the selected ID in the distance matrix
+        :param ids: list with the IDs of neighbours
+        :param metric: the to be processed metric
+        :return: filled dictionary
+        """
         # get row of selected data point
         distance_row = distance_dic[metric][idx]
 
@@ -1296,8 +1303,16 @@ def get_callbacks(
 
         return id_to_dis
 
-    def get_list(id_to_dis: dict):
+    def get_list(id_to_dis: dict, seq_id: str):
+        """
+        Creates the Listgroup item that is shown in the web application for each neighbour
+        :param id_to_dis: dictionary with IDs and distances
+        :param seq_id: the selected ID, should not be displayed
+        :return: The complete ListGroup shown in the tab of a metric
+        """
         list_group_items = [
-            dbc.ListGroupItem(f"{key}: {value}") for key, value in id_to_dis.items()
+            dbc.ListGroupItem(f"{key}: {value}")
+            for key, value in id_to_dis.items()
+            if key != seq_id
         ]
         return dbc.ListGroup(children=list_group_items, flush=True)
