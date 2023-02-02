@@ -667,10 +667,6 @@ def get_callbacks(
         if not ctx.triggered:
             raise PreventUpdate
 
-        # Prevent constant resetting of the graph
-        if ctx.triggered_id in ["n_neighbours_input", "min_dist_input", "metric_input"]:
-            raise PreventUpdate
-
         # Make redundant variable used
         if recal_button_clicks:
             pass
@@ -681,7 +677,60 @@ def get_callbacks(
 
         # Prevent constant resetting of the graph
         if ctx.triggered_id in ["n_neighbours_input", "min_dist_input", "metric_input"]:
-            raise PreventUpdate
+            # Disable recalculating when one of the values is empty
+            if min_dist is None or n_neighbours is None or metric is None:
+                return (
+                    dash.no_update,
+                    dash.no_update,
+                    dash.no_update,
+                    dash.no_update,
+                    dash.no_update,
+                    dash.no_update,
+                    True,
+                    dash.no_update,
+                    dash.no_update,
+                    dash.no_update,
+                    dash.no_update,
+                    dash.no_update,
+                    dash.no_update,
+                    dash.no_update,
+                )
+
+            # Disable recalculating when min dist is out of bounds
+            if min_dist > 1.0:
+                return (
+                    dash.no_update,
+                    dash.no_update,
+                    dash.no_update,
+                    dash.no_update,
+                    dash.no_update,
+                    dash.no_update,
+                    True,
+                    dash.no_update,
+                    dash.no_update,
+                    dash.no_update,
+                    dash.no_update,
+                    dash.no_update,
+                    dash.no_update,
+                    dash.no_update,
+                )
+            else:
+                return (
+                    dash.no_update,
+                    dash.no_update,
+                    dash.no_update,
+                    dash.no_update,
+                    dash.no_update,
+                    dash.no_update,
+                    False,
+                    dash.no_update,
+                    dash.no_update,
+                    dash.no_update,
+                    dash.no_update,
+                    dash.no_update,
+                    dash.no_update,
+                    dash.no_update,
+                )
 
         # load df into inner scope so that it can be modified
         nonlocal df
