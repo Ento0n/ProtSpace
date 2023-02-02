@@ -366,10 +366,16 @@ class Visualizator:
         col_groups = df[selected_column].unique().tolist()
         col_groups.sort(key=my_comparator)
 
-        color_list = Visualizator.gen_distinct_colors(n=len(col_groups))
+        # get nr of col groups without NA
+        if "NA" in col_groups:
+            n_col_groups = len(col_groups) - 1
+        else:
+            n_col_groups = len(col_groups)
+
+        color_list = Visualizator.gen_distinct_colors(n=n_col_groups)
 
         # Figure out how many symbols to use depending on number of column groups
-        n_symbols = Visualizator.n_symbols_equation(n=len(col_groups))
+        n_symbols = Visualizator.n_symbols_equation(n=n_col_groups)
 
         fig = go.Figure()
 
@@ -400,19 +406,15 @@ class Visualizator:
                 if group_value != "NA":
                     show_legend = False
 
-            # set up color depending on numeric processing
-            if not numeric_flag:
-                color = f"rgb{color_list[group_idx]}"
-            else:
-                if group_value == "NA":
-                    color = f"rgb(255,0,0)"
-                else:
-                    color = f"rgb{color_list[group_idx]}"
-
             # set up opacity dependent on NA or not
-            opacity = 1.0
             if group_value == "NA":
-                opacity = 0.4
+                opacity = 0.3
+                symbol = "circle"
+                color = "lightgrey"
+            else:
+                opacity = 1.0
+                symbol = Visualizator.SYMBOLS[group_idx % n_symbols]
+                color = f"rgb{color_list[group_idx]}"
 
             # extract df with only group value
             df_group = df[df[selected_column] == group_value]
@@ -428,7 +430,7 @@ class Visualizator:
                     marker=dict(
                         size=10,
                         color=color,
-                        symbol=Visualizator.SYMBOLS[group_idx % n_symbols],
+                        symbol=symbol,
                         line=dict(color="black", width=1),
                     ),
                     text=df_group.index.to_list(),
