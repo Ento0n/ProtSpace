@@ -448,6 +448,9 @@ class Visualizator:
 
         if not two_d:
             Visualizator.update_layout(fig)
+        else:
+            # Safe space for displaying info toast and nearest neighbour
+            fig.update_layout(margin=dict(l=350))
 
         Visualizator.handle_title(dim_red, umap_paras, fig)
 
