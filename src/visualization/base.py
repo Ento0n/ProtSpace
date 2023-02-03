@@ -134,6 +134,25 @@ def get_graph_offcanvas(umap_paras: dict, umap_paras_string: str, dim_red: str):
         style={"width": "50%"},
         placement="end",
         children=[
+            dbc.Spinner(
+                children=[
+                    html.Div(
+                        id="load_umap_spinner",
+                        hidden=True,
+                    )
+                ],
+                fullscreen=True,
+                delay_show=80,
+            ),
+            dcc.Markdown("HTML"),
+            dbc.Button(
+                "Download all files",
+                id="button_html_all",
+                color="dark",
+                outline=True,
+            ),
+            html.Br(),
+            html.Br(),
             dcc.Markdown("Dimensions"),
             dbc.RadioItems(
                 options=[
@@ -146,96 +165,79 @@ def get_graph_offcanvas(umap_paras: dict, umap_paras_string: str, dim_red: str):
             ),
             html.Br(),
             dcc.Markdown("Dimensionality reduction"),
-            dbc.RadioItems(
-                options=[
-                    {"label": "UMAP", "value": "UMAP"},
-                    {"label": "PCA", "value": "PCA"},
-                    {"label": "t-SNE", "value": "TSNE"},
-                ],
-                value=dim_red,
-                id="dim_red_radio",
-                inline="True",
-            ),
-            html.Br(),
-            dcc.Markdown("HTML"),
-            dbc.Button(
-                "Download all files",
-                id="button_html_all",
-                color="dark",
-                outline=True,
-            ),
-            html.Br(),
-            html.Br(),
-            dcc.Markdown("UMAP parameters"),
-            dbc.Row(
-                [
-                    dbc.Col(
-                        [
-                            dcc.Markdown("n_neighbours:"),
-                            dbc.Input(
-                                id="n_neighbours_input",
-                                type="number",
-                                min=0,
-                                step=1,
-                                value=umap_paras["n_neighbours"],
-                            ),
-                        ],
-                        width=4,
-                    ),
-                    dbc.Col(
-                        [
-                            dcc.Markdown("min_dist:"),
-                            dbc.Input(
-                                id="min_dist_input",
-                                type="number",
-                                min=0,
-                                # Set max to 1 since min_dist must be less than or equal to spread,
-                                # which is 1.0 by default and not changed
-                                max=1,
-                                step=0.1,
-                                value=umap_paras["min_dist"],
-                            ),
-                        ],
-                        width=4,
-                    ),
-                    dbc.Col(
-                        [
-                            dcc.Markdown("metric:"),
-                            dcc.Dropdown(
-                                id="metric_input",
-                                options=metric_options,
-                                value=umap_paras["metric"],
-                            ),
-                        ],
-                        width=4,
-                    ),
-                ],
-            ),
-            html.Br(),
-            dbc.Button(
-                "Recalculate UMAP",
-                id="umap_recalculation_button",
-                color="dark",
-                outline=True,
-            ),
-            dbc.Spinner(
+            dbc.Tabs(
+                id="dim_red_tabs",
                 children=[
-                    html.Div(
-                        id="load_umap_spinner",
-                        hidden=True,
-                    )
+                    dbc.Tab(
+                        label="UMAP",
+                        tab_id="UMAP",
+                        children=[
+                            html.Br(),
+                            dbc.Row(
+                                [
+                                    dbc.Col(
+                                        [
+                                            dcc.Markdown("n_neighbours:"),
+                                            dbc.Input(
+                                                id="n_neighbours_input",
+                                                type="number",
+                                                min=0,
+                                                step=1,
+                                                value=umap_paras["n_neighbours"],
+                                            ),
+                                        ],
+                                        width=4,
+                                    ),
+                                    dbc.Col(
+                                        [
+                                            dcc.Markdown("min_dist:"),
+                                            dbc.Input(
+                                                id="min_dist_input",
+                                                type="number",
+                                                min=0,
+                                                # Set max to 1 since min_dist must be less than or equal to spread,
+                                                # which is 1.0 by default and not changed
+                                                max=1,
+                                                step=0.1,
+                                                value=umap_paras["min_dist"],
+                                            ),
+                                        ],
+                                        width=4,
+                                    ),
+                                    dbc.Col(
+                                        [
+                                            dcc.Markdown("metric:"),
+                                            dcc.Dropdown(
+                                                id="metric_input",
+                                                options=metric_options,
+                                                value=umap_paras["metric"],
+                                            ),
+                                        ],
+                                        width=4,
+                                    ),
+                                ],
+                            ),
+                            html.Br(),
+                            dbc.Button(
+                                "Recalculate UMAP",
+                                id="umap_recalculation_button",
+                                color="dark",
+                                outline=True,
+                            ),
+                            html.Br(),
+                            html.Br(),
+                            dcc.Dropdown(
+                                id="last_umap_paras_dd",
+                                value=umap_paras_string,
+                                options=[umap_paras_string],
+                                clearable=False,
+                                searchable=False,
+                            ),
+                        ],
+                    ),
+                    dbc.Tab(label="PCA", tab_id="PCA"),
+                    dbc.Tab(label="t-SNE", tab_id="TSNE"),
                 ],
-                fullscreen=True,
-                delay_show=80,
-            ),
-            html.Br(),
-            html.Br(),
-            dcc.Dropdown(
-                id="last_umap_paras_dd",
-                value=umap_paras_string,
-                options=[umap_paras_string],
-                clearable=False,
-                searchable=False,
             ),
         ],
     )

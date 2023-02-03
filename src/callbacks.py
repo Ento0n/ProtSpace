@@ -616,7 +616,7 @@ def get_callbacks(
         Output("relayoutData_save", "data"),
         Output("load_umap_spinner", "children"),
         Input("dd_menu", "value"),
-        Input("dim_red_radio", "value"),
+        Input("dim_red_tabs", "active_tab"),
         Input("n_neighbours_input", "value"),
         Input("min_dist_input", "value"),
         Input("metric_input", "value"),
@@ -801,7 +801,7 @@ def get_callbacks(
         if (
             ctx.triggered_id == "dd_menu"
             or ctx.triggered_id == "umap_recalculation_button"
-            or ctx.triggered_id == "dim_red_radio"
+            or ctx.triggered_id == "dim_red_tabs"
             or ctx.triggered_id == "last_umap_paras_dd"
             or ctx.triggered_id == "dim_radio"
         ):
@@ -954,7 +954,7 @@ def get_callbacks(
         Input("dd_menu", "value"),
         Input("html_download_button", "n_clicks"),
         Input("button_html_all", "n_clicks"),
-        Input("dim_red_radio", "value"),
+        Input("dim_red_tabs", "active_tab"),
     )
     def create_html(dd_value: str, button: int, all_button: int, dim_red: str):
         """
