@@ -667,14 +667,6 @@ def get_callbacks(
         if not ctx.triggered:
             raise PreventUpdate
 
-        # Make redundant variable used
-        if recal_button_clicks:
-            pass
-
-        # In case dropdown menu is being cleared
-        if selected_value is None:
-            raise PreventUpdate
-
         # Prevent constant resetting of the graph
         if ctx.triggered_id in ["n_neighbours_input", "min_dist_input", "metric_input"]:
             # Disable recalculating when one of the values is empty
@@ -731,6 +723,14 @@ def get_callbacks(
                     dash.no_update,
                     dash.no_update,
                 )
+
+        # Make redundant variable used
+        if recal_button_clicks:
+            pass
+
+        # In case dropdown menu is being cleared
+        if selected_value is None:
+            raise PreventUpdate
 
         # load df into inner scope so that it can be modified
         nonlocal df

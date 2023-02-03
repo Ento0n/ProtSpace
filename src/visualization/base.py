@@ -226,6 +226,7 @@ def get_graph_offcanvas(umap_paras: dict, umap_paras_string: str, dim_red: str):
                     )
                 ],
                 fullscreen=True,
+                delay_show=80,
             ),
             html.Br(),
             html.Br(),
