@@ -49,7 +49,7 @@ def get_pdb_offcanvas():
         id="molecules_offcanvas",
         title="Settings",
         is_open=False,
-        style={"width": "50%"},
+        style={"width": "50%", "max-width": "600px"},
         children=[
             dcc.Markdown("Representations:"),
             dcc.Dropdown(

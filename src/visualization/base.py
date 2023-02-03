@@ -132,7 +132,7 @@ def get_graph_offcanvas(umap_paras: dict, umap_paras_string: str, dim_red: str):
         id="graph_offcanvas",
         is_open=False,
         title="Graph settings",
-        style={"width": "50%"},
+        style={"width": "50%", "max-width": "600px"},
         placement="end",
         children=[
             dbc.Spinner(
@@ -389,19 +389,19 @@ def get_disclaimer_modal():
                         children=[
                             dcc.Markdown(
                                 """
-                            This is the ProtSpace3D tool. There is no usage summary statistics provided by 
+                            This is the ProtSpace3D tool. There is no usage summary statistics provided by
                             the developers.
                             """
                             ),
                             dcc.Markdown(
                                 """
-                            Considering the data collection in the background and the displayed in the web application, 
+                            Considering the data collection in the background and the displayed in the web application,
                             the Python library Dash is used and liable.
                             """
                             ),
                             dcc.Markdown(
                                 """
-                            Please refer to the policy of its developers Plotly: https://plotly.com/privacy/ 
+                            Please refer to the policy of its developers Plotly: https://plotly.com/privacy/
                             for more information.
                             """
                             ),
