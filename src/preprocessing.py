@@ -42,6 +42,7 @@ class DataPreprocessor:
         reset: bool,
         dim_red: str,
         umap_paras: dict,
+        tsne_paras: dict,
         verbose: bool,
     ):
         self.output_d = output_d
@@ -54,6 +55,7 @@ class DataPreprocessor:
         self.reset = reset
         self.dim_red = dim_red
         self.umap_paras = umap_paras
+        self.tsne_paras = tsne_paras
         self.verbose = verbose
 
     def data_preprocessing(self):
@@ -524,7 +526,7 @@ class DataPreprocessor:
         df_dim_red_umap.index = embs_uids
         df_dim_red_pca = self._generate_pca(embs)
         df_dim_red_pca.index = embs_uids
-        df_dim_red_tsne = self._generate_tsne(embs)
+        df_dim_red_tsne = self.generate_tsne(embs, self.tsne_paras)
         df_dim_red_tsne.index = embs_uids
 
         df_embeddings = df_csv.join(
@@ -642,15 +644,24 @@ class DataPreprocessor:
 
         return df_pca
 
-    def _generate_tsne(self, data: np.ndarray):
+    def generate_tsne(self, data: np.ndarray, tsne_paras: dict):
         """
         Generate tsne coordinates for given data
         :param data: embeddings data
+        :param tsne_paras: hyperparameters of t-SNE saved in a dictionary
         :return: dataframe with t-sne coordinates
         """
         from sklearn.manifold import TSNE
 
-        fit = TSNE(n_components=3, random_state=42, init="random", learning_rate="auto")
+        fit = TSNE(
+            n_components=3,
+            random_state=42,
+            init="random",
+            learning_rate=tsne_paras["learning_rate"],
+            n_iter=tsne_paras["iterations"],
+            perplexity=tsne_paras["perplexity"],
+            metric=tsne_paras["metric"],
+        )
         tsne_fit = fit.fit_transform(data)
         df_tsne = DataFrame(data=tsne_fit, columns=self.TSNE_AXIS_NAMES)
 

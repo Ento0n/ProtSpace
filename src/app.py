@@ -89,6 +89,18 @@ class LoadConfFile(argparse.Action):
             arguments.append("--pca")
         if "tsne" in dictionary.keys():
             arguments.append("--tsne")
+        if "iterations" in dictionary.keys():
+            arguments.append("--iterations")
+            arguments.append(str(dictionary["iterations"]))
+        if "perplexity" in dictionary.keys():
+            arguments.append("--perplexity")
+            arguments.append(str(dictionary["perplexity"]))
+        if "learning_rate" in dictionary.keys():
+            arguments.append("--learning_rate")
+            arguments.append(str(dictionary["learning_rate"]))
+        if "tsne_metric" in dictionary.keys():
+            arguments.append("--tsne_metric")
+            arguments.append(str(dictionary["tsne_metric"]))
         if "n_neighbours" in dictionary.keys():
             arguments.append("--n_neighbours")
             arguments.append(str(dictionary["n_neighbours"]))
@@ -126,6 +138,10 @@ class Parser:
             self.conf,
             self.pca_flag,
             self.tsne_flag,
+            self.iterations,
+            self.perplexity,
+            self.learning_rate,
+            self.tsne_metric,
             self.n_neighbours,
             self.min_dist,
             self.metric,
@@ -151,6 +167,10 @@ class Parser:
             self.conf,
             self.pca_flag,
             self.tsne_flag,
+            self.iterations,
+            self.perplexity,
+            self.learning_rate,
+            self.tsne_metric,
             self.n_neighbours,
             self.min_dist,
             self.metric,
@@ -247,19 +267,49 @@ class Parser:
             action="store_true",
             help="Precomputed file df.csv is deleted and recalculated.",
         )
-        # Optional arfument
+        # Optional argument
         parser.add_argument(
             "--pca",
             required=False,
             action="store_true",
             help="PCA is initially used as dimensionality reduction",
         )
-        # Optional arfument
+        # Optional argument
         parser.add_argument(
             "--tsne",
             required=False,
             action="store_true",
             help="t-SNE is initially used as dimensionality reduction",
+        )
+        # Optional argument
+        parser.add_argument(
+            "--iterations",
+            required=False,
+            default=1000,
+            type=int,
+            help="t-SNE parameter n_iters, default: 1000",
+        )
+        # Optional argument
+        parser.add_argument(
+            "--perplexity",
+            required=False,
+            default=30.0,
+            type=float,
+            help="t-SNE parameter perplexity, default: 30.0",
+        )
+        # Optional argument
+        parser.add_argument(
+            "--learning_rate",
+            required=False,
+            default="auto",
+            help="t-SNE parameter learning_rate, default: auto",
+        )
+        # Optional argument
+        parser.add_argument(
+            "--tsne_metric",
+            required=False,
+            default="euclidean",
+            help="t-SNE parameter metric, default: euclidean",
         )
         # Optional argument
         parser.add_argument(
@@ -311,6 +361,10 @@ class Parser:
         conf_file = args.configuration
         pca_flag = args.pca
         tsne_flag = args.tsne
+        iterations = args.iterations
+        perplexity = args.perplexity
+        learning_rate = args.learning_rate
+        tsne_metric = args.tsne_metric
         n_neighbours = args.n_neighbours
         min_dist = args.min_dist
         metric = args.metric
@@ -331,6 +385,10 @@ class Parser:
             conf_file,
             pca_flag,
             tsne_flag,
+            iterations,
+            perplexity,
+            learning_rate,
+            tsne_metric,
             n_neighbours,
             min_dist,
             metric,
@@ -384,6 +442,10 @@ def setup():
         conf,
         pca_flag,
         tsne_flag,
+        iterations,
+        perplexity,
+        learning_rate,
+        tsne_metric,
         n_neighbours,
         min_dist,
         metric,
@@ -405,6 +467,13 @@ def setup():
     umap_paras["min_dist"] = min_dist
     umap_paras["metric"] = metric
 
+    # Put TSNE parameters in dictionary
+    tsne_paras = dict()
+    tsne_paras["iterations"] = iterations
+    tsne_paras["perplexity"] = perplexity
+    tsne_paras["learning_rate"] = learning_rate
+    tsne_paras["tsne_metric"] = tsne_metric
+
     # Create data preprocessor object
     data_preprocessor = DataPreprocessor(
         output_d,
@@ -417,6 +486,7 @@ def setup():
         reset,
         dim_red,
         umap_paras,
+        tsne_paras,
         verbose,
     )
 
