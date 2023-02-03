@@ -575,6 +575,7 @@ def get_callbacks(
     df: DataFrame,
     original_id_col: list,
     umap_paras: dict,
+    tsne_paras: dict,
     output_d: Path,
     csv_header: list[str],
     embeddings: np.stack,
@@ -590,10 +591,12 @@ def get_callbacks(
     :param df: dataframe with all data
     :param original_id_col: list of original IDs
     :param umap_paras: UMAP parameters in dictionary
+    :param tsne_paras: TSNE parameters in dictionary
     :param output_d: output directory
     :param csv_header: the csv headers
     :param embeddings: the embeddings in a numpy stack
     :param embedding_uids: the unique IDs of the embeddings
+    :param distance_dic: different distance metrices, euclidean, cosine and manhattan
     :param umap_paras_dict: already calculated UMAP parameters and their coordinates
     :param fasta_dict: fasta file in dictionary format
     :param struct_container: the structure container handling files

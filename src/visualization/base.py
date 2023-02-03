@@ -125,6 +125,7 @@ def get_graph_offcanvas(umap_paras: dict, umap_paras_string: str, dim_red: str):
     Creates layout of the offcanvas for the graph.
     :param umap_paras: Parameters of the UMAP calculation
     :param umap_paras_string: UMAP parameters in string format.
+    :param dim_red: the initial dimensionality reduction
     :return: graph offcanvas layout
     """
     offcanvas = dbc.Offcanvas(
@@ -238,6 +239,7 @@ def get_graph_offcanvas(umap_paras: dict, umap_paras_string: str, dim_red: str):
                     dbc.Tab(label="PCA", tab_id="PCA"),
                     dbc.Tab(label="t-SNE", tab_id="TSNE"),
                 ],
+                active_tab=dim_red,
             ),
         ],
     )
@@ -278,6 +280,7 @@ def get_graph_container(
     :param pdb: flag whether pdb layout is needed or not.
     :param csv_header: headers of the csv file
     :param fig: graph Figure
+    :param dim_red: initial dimensionality reduction
     :return: Layout of the offcanvas
     """
     # UMAP parameters in string format
