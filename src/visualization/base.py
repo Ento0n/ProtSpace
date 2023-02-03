@@ -596,6 +596,7 @@ def get_info_toast():
             "overflow": "auto",
         },
         style={"width": 200},
+        header_style={"overflow": "auto"},
     )
 
     return toast
