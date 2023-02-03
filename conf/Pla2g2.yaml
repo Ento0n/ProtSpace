@@ -1,0 +1,5 @@
+o: data/Pla2g2
+hdf: data/Pla2g2/emb_esm2.h5
+csv: data/Pla2g2/Pla2g2.csv
+sep: ;
+fasta: data/Pla2g2/Pla2g2.fasta
