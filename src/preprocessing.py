@@ -660,7 +660,7 @@ class DataPreprocessor:
             learning_rate=tsne_paras["learning_rate"],
             n_iter=tsne_paras["iterations"],
             perplexity=tsne_paras["perplexity"],
-            metric=tsne_paras["metric"],
+            metric=tsne_paras["tsne_metric"],
         )
         tsne_fit = fit.fit_transform(data)
         df_tsne = DataFrame(data=tsne_fit, columns=self.TSNE_AXIS_NAMES)
