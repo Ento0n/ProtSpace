@@ -518,9 +518,9 @@ def setup():
 
     # --- APP creation ---
     if structure_container.pdb_flag:
-        application = visualizator.get_pdb_app(ids, umap_paras)
+        application = visualizator.get_pdb_app(ids, umap_paras, tsne_paras)
     else:
-        application = visualizator.get_base_app(umap_paras)
+        application = visualizator.get_base_app(umap_paras, tsne_paras)
 
     return (
         application,

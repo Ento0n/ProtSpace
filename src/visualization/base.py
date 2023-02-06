@@ -54,7 +54,13 @@ def get_app():
     return app
 
 
-def init_app(umap_paras: dict, csv_header: list[str], fig: go.Figure, dim_red: str):
+def init_app(
+    umap_paras: dict,
+    csv_header: list[str],
+    fig: go.Figure,
+    dim_red: str,
+    tsne_paras: dict,
+):
     """
     Set up the layout of the application
     :return: application
@@ -72,7 +78,7 @@ def init_app(umap_paras: dict, csv_header: list[str], fig: go.Figure, dim_red: s
                 [
                     dbc.Col(
                         get_graph_container(
-                            umap_paras, False, csv_header, fig, dim_red
+                            umap_paras, False, csv_header, fig, dim_red, tsne_paras
                         ),
                         width=12,
                     ),
@@ -120,12 +126,19 @@ def get_side_components(app: Dash):
     return side_components
 
 
-def get_graph_offcanvas(umap_paras: dict, umap_paras_string: str, dim_red: str):
+def get_graph_offcanvas(
+    umap_paras: dict,
+    umap_paras_string: str,
+    dim_red: str,
+    tsne_paras: dict,
+    tsne_paras_string: str,
+):
     """
     Creates layout of the offcanvas for the graph.
     :param umap_paras: Parameters of the UMAP calculation
     :param umap_paras_string: UMAP parameters in string format.
     :param dim_red: the initial dimensionality reduction
+    :param tsne_paras: Parameters of the TSNE calculation
     :return: graph offcanvas layout
     """
     offcanvas = dbc.Offcanvas(
@@ -237,7 +250,78 @@ def get_graph_offcanvas(umap_paras: dict, umap_paras_string: str, dim_red: str):
                         ],
                     ),
                     dbc.Tab(label="PCA", tab_id="PCA"),
-                    dbc.Tab(label="t-SNE", tab_id="TSNE"),
+                    dbc.Tab(
+                        label="t-SNE",
+                        tab_id="TSNE",
+                        children=[
+                            html.Br(),
+                            dbc.Row(
+                                children=[
+                                    dbc.Col(
+                                        children=[
+                                            dcc.Markdown("Iterations:"),
+                                            dbc.Input(
+                                                id="iterations_input",
+                                                type="number",
+                                                min=250,
+                                                step=10,
+                                                value=tsne_paras["iterations"],
+                                            ),
+                                        ],
+                                        width=4,
+                                    ),
+                                    dbc.Col(
+                                        children=[
+                                            dcc.Markdown("Perplexity:"),
+                                            dbc.Input(
+                                                id="perplexity input",
+                                                type="number",
+                                                min=1,
+                                                step=1,
+                                                value=tsne_paras["perplexity"],
+                                            ),
+                                        ],
+                                        width=4,
+                                    ),
+                                    dbc.Col(
+                                        children=[
+                                            dcc.Markdown("Learning rate:"),
+                                            dbc.Input(
+                                                id="learning_rate_input",
+                                                min=1,
+                                                step=1,
+                                                value=tsne_paras["learning_rate"],
+                                            ),
+                                        ],
+                                        width=4,
+                                    ),
+                                ]
+                            ),
+                            html.Br(),
+                            dcc.Markdown("Metric:"),
+                            dcc.Dropdown(
+                                id="tsne_metric_input",
+                                options=metric_options,
+                                value=tsne_paras["tsne_metric"],
+                            ),
+                            html.Br(),
+                            dbc.Button(
+                                "Recalculate t-SNE",
+                                id="tsne_recalculation_button",
+                                color="dark",
+                                outline=True,
+                            ),
+                            html.Br(),
+                            html.Br(),
+                            dcc.Dropdown(
+                                id="last_tsne_paras_dd",
+                                value=tsne_paras_string,
+                                options=[tsne_paras_string],
+                                clearable=False,
+                                searchable=False,
+                            ),
+                        ],
+                    ),
                 ],
                 active_tab=dim_red,
             ),
@@ -272,7 +356,12 @@ def get_html_download_button_tooltip(button_id: str):
 
 
 def get_graph_container(
-    umap_paras: dict, pdb: bool, csv_header: list[str], fig: go.Figure, dim_red: str
+    umap_paras: dict,
+    pdb: bool,
+    csv_header: list[str],
+    fig: go.Figure,
+    dim_red: str,
+    tsne_paras: dict,
 ):
     """
     Creates the layout for the graph Row
@@ -281,6 +370,7 @@ def get_graph_container(
     :param csv_header: headers of the csv file
     :param fig: graph Figure
     :param dim_red: initial dimensionality reduction
+    :param tsne_paras: TSNE parameters
     :return: Layout of the offcanvas
     """
     # UMAP parameters in string format
@@ -290,6 +380,17 @@ def get_graph_container(
         + str(umap_paras["min_dist"])
         + " ; "
         + umap_paras["metric"],
+    )
+
+    # TSNE parameters in string format
+    tsne_paras_string = str(
+        str(tsne_paras["iterations"])
+        + " ; "
+        + str(tsne_paras["perplexity"])
+        + " ; "
+        + str(tsne_paras["learning_rate"])
+        + " ; "
+        + str(tsne_paras["tsne_metric"])
     )
 
     # width sizing of the dropdown menu column
@@ -309,7 +410,9 @@ def get_graph_container(
         dcc.Store(id="highlighting_bool", storage_type="memory", data=False),
         # Storage to save last camera data (relayoutData)
         dcc.Store(id="relayoutData_save", storage_type="memory", data={}),
-        get_graph_offcanvas(umap_paras, umap_paras_string, dim_red),
+        get_graph_offcanvas(
+            umap_paras, umap_paras_string, dim_red, tsne_paras, tsne_paras_string
+        ),
         get_settings_button_tooltip(button_id="graph_settings_button"),
         get_html_download_button_tooltip(button_id="html_download_button"),
         dbc.Row(
