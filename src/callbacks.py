@@ -655,7 +655,7 @@ def get_callbacks(
         umap_paras_dd_value: str,
         iterations: int,
         perplexity: int,
-        learning_rate,
+        learning_rate: str,
         tsne_metric: str,
         tsne_recal_button_clicks: int,
         tsne_paras_dd_value: str,
@@ -840,7 +840,28 @@ def get_callbacks(
 
         tsne_axis_names = ["x_tsne", "y_tsne", "z_tsne"]
 
+        # If umap parameters are selected in the dropdown menu
+        if ctx.triggered_id == "last_tsne_paras_dd":
+
+            splits = tsne_paras_dd_value.split(" ; ")
+            tsne_paras["iterations"] = splits[0]
+            tsne_paras["perplexity"] = splits[1]
+            tsne_paras["learning_rate"] = splits[2]
+            tsne_paras["tsne_metric"] = splits[3]
+
+            coords = tsne_paras_dict[tsne_paras_dd_value]
+            df.drop(labels=tsne_axis_names, axis="columns", inplace=True)
+            df["x_tsne"] = coords["x_tsne"]
+            df["y_tsne"] = coords["y_tsne"]
+            df["z_tsne"] = coords["z_tsne"]
+
         if ctx.triggered_id == "tsne_recalculation_button":
+            # check whether learning rate is auto or a number
+            if learning_rate.isnumeric():
+                learning_rate = float(learning_rate)
+            elif learning_rate != "auto":
+                raise PreventUpdate
+
             tsne_paras["iterations"] = iterations
             tsne_paras["perplexity"] = perplexity
             tsne_paras["learning_rate"] = learning_rate
@@ -865,9 +886,9 @@ def get_callbacks(
             df = df.join(df_tsne, how="outer")
 
             coords_dict = dict(
-                x_umap=df_tsne["x_tsne"].to_list(),
-                y_umap=df_tsne["y_tsne"].to_list(),
-                z_umap=df_tsne["z_tsne"].to_list(),
+                x_tsne=df_tsne["x_tsne"].to_list(),
+                y_tsne=df_tsne["y_tsne"].to_list(),
+                z_tsne=df_tsne["z_tsne"].to_list(),
             )
 
             tsne_paras_dict[tsne_paras_string] = coords_dict
@@ -895,6 +916,7 @@ def get_callbacks(
             or ctx.triggered_id == "tsne_recalculation_button"
             or ctx.triggered_id == "dim_red_tabs"
             or ctx.triggered_id == "last_umap_paras_dd"
+            or ctx.triggered_id == "last_tsne_paras_dd"
             or ctx.triggered_id == "dim_radio"
         ):
             fig = Visualizator.render(
