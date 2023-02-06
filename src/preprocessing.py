@@ -644,7 +644,8 @@ class DataPreprocessor:
 
         return df_pca
 
-    def generate_tsne(self, data: np.ndarray, tsne_paras: dict):
+    @staticmethod
+    def generate_tsne(data: np.ndarray, tsne_paras: dict):
         """
         Generate tsne coordinates for given data
         :param data: embeddings data
@@ -663,7 +664,7 @@ class DataPreprocessor:
             metric=tsne_paras["tsne_metric"],
         )
         tsne_fit = fit.fit_transform(data)
-        df_tsne = DataFrame(data=tsne_fit, columns=self.TSNE_AXIS_NAMES)
+        df_tsne = DataFrame(data=tsne_fit, columns=["x_tsne", "y_tsne", "z_tsne"])
 
         return df_tsne
 
@@ -758,3 +759,33 @@ class DataPreprocessor:
         umap_paras_dict[umap_paras_string] = coords_dict
 
         return umap_paras_dict
+
+    def get_tsne_paras_dict(self, df: DataFrame):
+        """
+        Vreate dictionary that saves TSNE parameters and their corresponding coordinates
+        :param df: dataframe with all the data
+        :return: the wanted dictionary
+        """
+        tsne_paras_dict = dict()
+        iterations = self.tsne_paras["iterations"]
+        perplexity = self.tsne_paras["perplexity"]
+        learning_rate = self.tsne_paras["learning_rate"]
+        tsne_metric = self.tsne_paras["tsne_metric"]
+        # String representation of the current TSNE parameters
+        tsne_paras_string = (
+            str(iterations)
+            + " ; "
+            + str(perplexity)
+            + " ; "
+            + str(learning_rate)
+            + " ; "
+            + str(tsne_metric)
+        )
+        coords_dict = dict(
+            x_tsne=df["x_tsne"].to_list(),
+            y_tsne=df["y_tsne"].to_list(),
+            z_tsne=df["z_tsne"].to_list(),
+        )
+        tsne_paras_dict[tsne_paras_string] = coords_dict
+
+        return tsne_paras_dict

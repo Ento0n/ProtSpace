@@ -274,7 +274,7 @@ def get_graph_offcanvas(
                                         children=[
                                             dcc.Markdown("Perplexity:"),
                                             dbc.Input(
-                                                id="perplexity input",
+                                                id="perplexity_input",
                                                 type="number",
                                                 min=1,
                                                 step=1,

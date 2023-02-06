@@ -582,6 +582,7 @@ def get_callbacks(
     embedding_uids: list,
     distance_dic: dict,
     umap_paras_dict: dict,
+    tsne_paras_dict: dict,
     fasta_dict: dict,
     struct_container: StructureContainer,
 ):
@@ -615,6 +616,12 @@ def get_callbacks(
         Output("min_dist_input", "value"),
         Output("metric_input", "value"),
         Output("last_umap_paras_dd", "value"),
+        Output("iterations_input", "value"),
+        Output("perplexity_input", "value"),
+        Output("learning_rate_input", "value"),
+        Output("tsne_metric_input", "value"),
+        Output("last_tsne_paras_dd", "value"),
+        Output("last_tsne_paras_dd", "options"),
         Output("highlighting_bool", "data"),
         Output("relayoutData_save", "data"),
         Output("load_umap_spinner", "children"),
@@ -625,6 +632,12 @@ def get_callbacks(
         Input("metric_input", "value"),
         Input("umap_recalculation_button", "n_clicks"),
         Input("last_umap_paras_dd", "value"),
+        Input("iterations_input", "value"),
+        Input("perplexity_input", "value"),
+        Input("learning_rate_input", "value"),
+        Input("metric_input", "value"),
+        Input("tsne_recalculation_button", "n_clicks"),
+        Input("last_tsne_paras_dd", "value"),
         Input("graph", "clickData"),
         Input("highlighting_bool", "data"),
         Input("relayoutData_save", "data"),
@@ -640,6 +653,12 @@ def get_callbacks(
         metric: str,
         recal_button_clicks: int,
         umap_paras_dd_value: str,
+        iterations: int,
+        perplexity: int,
+        learning_rate,
+        tsne_metric: str,
+        tsne_recal_button_clicks: int,
+        tsne_paras_dd_value: str,
         click_data: dict,
         highlighting_bool: bool,
         relayout_data_save: dict,
@@ -689,6 +708,11 @@ def get_callbacks(
                     dash.no_update,
                     dash.no_update,
                     dash.no_update,
+                    dash.no_update,
+                    dash.no_update,
+                    dash.no_update,
+                    dash.no_update,
+                    dash.no_update,
                 )
 
             # Disable recalculating when min dist is out of bounds
@@ -701,6 +725,11 @@ def get_callbacks(
                     dash.no_update,
                     dash.no_update,
                     True,
+                    dash.no_update,
+                    dash.no_update,
+                    dash.no_update,
+                    dash.no_update,
+                    dash.no_update,
                     dash.no_update,
                     dash.no_update,
                     dash.no_update,
@@ -725,10 +754,23 @@ def get_callbacks(
                     dash.no_update,
                     dash.no_update,
                     dash.no_update,
+                    dash.no_update,
+                    dash.no_update,
+                    dash.no_update,
+                    dash.no_update,
+                    dash.no_update,
                 )
 
+        if ctx.triggered_id in [
+            "iterations_input",
+            "perplexity_input",
+            "learning_rate_input",
+            "metric_input",
+        ]:
+            raise PreventUpdate
+
         # Make redundant variable used
-        if recal_button_clicks:
+        if recal_button_clicks or tsne_recal_button_clicks:
             pass
 
         # In case dropdown menu is being cleared
@@ -796,6 +838,52 @@ def get_callbacks(
                 + umap_paras["metric"]
             )
 
+        tsne_axis_names = ["x_tsne", "y_tsne", "z_tsne"]
+
+        if ctx.triggered_id == "tsne_recalculation_button":
+            tsne_paras["iterations"] = iterations
+            tsne_paras["perplexity"] = perplexity
+            tsne_paras["learning_rate"] = learning_rate
+            tsne_paras["tsne_metric"] = tsne_metric
+
+            # String representation of the current TSNE parameters
+            tsne_paras_string = (
+                str(iterations)
+                + " ; "
+                + str(perplexity)
+                + " ; "
+                + str(learning_rate)
+                + " ; "
+                + str(tsne_metric)
+            )
+
+            df.drop(labels=tsne_axis_names, axis="columns", inplace=True)
+
+            df_tsne = DataPreprocessor.generate_tsne(embeddings, tsne_paras)
+            df_tsne.index = embedding_uids
+
+            df = df.join(df_tsne, how="outer")
+
+            coords_dict = dict(
+                x_umap=df_tsne["x_tsne"].to_list(),
+                y_umap=df_tsne["y_tsne"].to_list(),
+                z_umap=df_tsne["z_tsne"].to_list(),
+            )
+
+            tsne_paras_dict[tsne_paras_string] = coords_dict
+
+        # String representation still needed if not button used
+        else:
+            tsne_paras_string = (
+                str(tsne_paras["iterations"])
+                + " ; "
+                + str(tsne_paras["perplexity"])
+                + " ; "
+                + str(tsne_paras["learning_rate"])
+                + " ; "
+                + str(tsne_paras["tsne_metric"])
+            )
+
         if dim == "2D":
             two_d = True
         else:
@@ -804,6 +892,7 @@ def get_callbacks(
         if (
             ctx.triggered_id == "dd_menu"
             or ctx.triggered_id == "umap_recalculation_button"
+            or ctx.triggered_id == "tsne_recalculation_button"
             or ctx.triggered_id == "dim_red_tabs"
             or ctx.triggered_id == "last_umap_paras_dd"
             or ctx.triggered_id == "dim_radio"
@@ -905,6 +994,12 @@ def get_callbacks(
             umap_paras["min_dist"],
             umap_paras["metric"],
             umap_paras_string,
+            tsne_paras["iterations"],
+            tsne_paras["perplexity"],
+            tsne_paras["learning_rate"],
+            tsne_paras["tsne_metric"],
+            tsne_paras_string,
+            list(tsne_paras_dict.keys()),
             highlighting_bool,
             relayout_data_save,
             "Recalculate UMAP",

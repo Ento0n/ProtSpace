@@ -515,6 +515,7 @@ def setup():
         ids = df.index.to_list()
 
     umap_paras_dict = data_preprocessor.get_umap_paras_dict(df)
+    tsne_paras_dict = data_preprocessor.get_tsne_paras_dict(df)
 
     # --- APP creation ---
     if structure_container.pdb_flag:
@@ -532,6 +533,7 @@ def setup():
         umap_paras,
         umap_paras_dict,
         tsne_paras,
+        tsne_paras_dict,
         output_d,
         csv_header,
         port,
@@ -557,6 +559,7 @@ def main():
         umap_paras,
         umap_paras_dict,
         tsne_paras,
+        tsne_paras_dict,
         output_d,
         csv_header,
         port,
@@ -582,6 +585,7 @@ def main():
                 embedding_uids,
                 distance_dic,
                 umap_paras_dict,
+                tsne_paras_dict,
                 fasta_dict,
                 struct_container,
             )
@@ -599,6 +603,7 @@ def main():
                 embedding_uids,
                 distance_dic,
                 umap_paras_dict,
+                tsne_paras_dict,
                 fasta_dict,
                 struct_container,
             )
