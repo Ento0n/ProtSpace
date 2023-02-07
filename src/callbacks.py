@@ -1075,8 +1075,11 @@ def get_callbacks(
         Input("graph_download_button", "n_clicks"),
         Input("button_graph_all", "n_clicks"),
         Input("dim_red_tabs", "active_tab"),
+        Input("dim_radio", "value"),
     )
-    def download_graph(dd_value: str, button: int, all_button: int, dim_red: str):
+    def download_graph(
+        dd_value: str, button: int, all_button: int, dim_red: str, dim: str
+    ):
         """
         Creates file(s) of the graph with the selected group on button click and indicates this with an download toast
         :param dd_value: selected group in the dropdown menu
@@ -1094,20 +1097,33 @@ def get_callbacks(
         if button or all_button:
             pass
 
+        # Dimension to bool
+        if dim == "2D":
+            two_d = True
+        else:
+            two_d = False
+
         if ctx.triggered_id == "graph_download_button":
             fig = Visualizator.render(
-                df, dd_value, original_id_col, umap_paras, dim_red
+                df, dd_value, original_id_col, umap_paras, dim_red, two_d, True
             )
-            fig.write_html(output_d / f"3Dspace_{dd_value}_{dim_red}.html")
+
+            if not two_d:
+                fig.write_html(output_d / f"3Dspace_{dd_value}_{dim_red}.html")
+            else:
+                fig.write_image(output_d / f"2Dspace_{dd_value}_{dim_red}.png")
 
             return True
 
         if ctx.triggered_id == "button_graph_all":
             for header in csv_header:
                 fig = Visualizator.render(
-                    df, header, original_id_col, umap_paras, dim_red
+                    df, header, original_id_col, umap_paras, dim_red, two_d, True
                 )
-                fig.write_html(output_d / f"3Dspace_{header}_{dim_red}.html")
+                if not two_d:
+                    fig.write_html(output_d / f"3Dspace_{header}_{dim_red}.html")
+                else:
+                    fig.write_image(output_d / f"2Dspace_{header}_{dim_red}.png")
 
             return True
 

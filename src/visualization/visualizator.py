@@ -332,6 +332,7 @@ class Visualizator:
         umap_paras: dict,
         dim_red: str = "UMAP",
         two_d: bool = False,
+        download: bool = False,
     ):
         """
         Renders the plotly graph with the selected column in the dataframe df
@@ -466,8 +467,9 @@ class Visualizator:
         if not two_d:
             Visualizator.update_layout(fig)
         else:
-            # Safe space for displaying info toast and nearest neighbour
-            fig.update_layout(margin=dict(l=370))
+            if not download:
+                # Safe space for displaying info toast and nearest neighbour
+                fig.update_layout(margin=dict(l=370))
 
         Visualizator.handle_title(dim_red, umap_paras, fig)
 
