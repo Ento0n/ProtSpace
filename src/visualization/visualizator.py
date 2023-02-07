@@ -283,11 +283,12 @@ class Visualizator:
                 )
 
     @staticmethod
-    def handle_title(dim_red: str, umap_paras: dict, fig: go.Figure):
+    def handle_title(dim_red: str, umap_paras: dict, tsne_paras: dict, fig: go.Figure):
         """
         Sets up the title of the graph depending on the dimensionality reduction (UMAP or PCA)
         :param dim_red: to be displayed dimensionality reduction
         :param umap_paras: parameters of the UMAP calculation
+        :param tsne_paras: parameters of the TSNE calculation
         :param fig: graph figure
         :return: None
         """
@@ -295,12 +296,17 @@ class Visualizator:
         if dim_red == "UMAP":
             title = (
                 "UMAP" + f"<br>n_neighbours: {umap_paras['n_neighbours']},"
-                f" min_dist: {umap_paras['min_dist']}, metric: {umap_paras['metric']}"
+                f" min_dist: {umap_paras['min_dist']}, "
+                f"<br>metric: {umap_paras['metric']}"
             )
         elif dim_red == "PCA":
             title = "PCA"
         else:
-            title = "TSNE"
+            title = (
+                "TSNE"
+                + f"<br>iterations: {tsne_paras['iterations']}, perplexity: {tsne_paras['perplexity']}, "
+                f"<br>learning_rate: {tsne_paras['learning_rate']}, metric: {tsne_paras['tsne_metric']}"
+            )
 
         fig.update_layout(
             title={
@@ -331,6 +337,7 @@ class Visualizator:
         selected_column: str,
         original_id_col: object,
         umap_paras: dict,
+        tsne_paras: dict,
         dim_red: str = "UMAP",
         two_d: bool = False,
         download: bool = False,
@@ -343,6 +350,7 @@ class Visualizator:
         :param umap_paras: dictionary holding the parameters of UMAP
         :param dim_red: to be displayed dimensionality reduction
         :param two_d: if True plot should be in 2D
+        :param download: boolean  whether it is rendered for downloading or not
         :return: plotly graphical object
         """
 
@@ -472,7 +480,7 @@ class Visualizator:
                 # Safe space for displaying info toast and nearest neighbour
                 fig.update_layout(margin=dict(l=370))
 
-        Visualizator.handle_title(dim_red, umap_paras, fig)
+        Visualizator.handle_title(dim_red, umap_paras, tsne_paras, fig)
 
         Visualizator.customize_axis_titles(dim_red, fig, df, two_d)
 

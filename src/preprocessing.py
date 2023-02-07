@@ -141,6 +141,7 @@ class DataPreprocessor:
             selected_column=csv_header[0],
             original_id_col=original_id_col,
             umap_paras=self.umap_paras,
+            tsne_paras=self.tsne_paras,
             dim_red=self.dim_red,
         )
 
@@ -331,6 +332,7 @@ class DataPreprocessor:
                         selected_column=col,
                         original_id_col=original_id_col,
                         umap_paras=self.umap_paras,
+                        tsne_paras=self.tsne_paras,
                     )
                     fig.write_html(output_d / f"3Dspace_{col}.html")
 
@@ -344,6 +346,7 @@ class DataPreprocessor:
                                 selected_column=item,
                                 original_id_col=original_id_col,
                                 umap_paras=self.umap_paras,
+                                tsne_paras=self.tsne_paras,
                             )
                             fig.write_html(output_d / f"3Dspace_{item}.html")
                     except Exception:
@@ -375,6 +378,7 @@ class DataPreprocessor:
                             selected_column=csv_header[col],
                             original_id_col=original_id_col,
                             umap_paras=self.umap_paras,
+                            tsne_paras=self.tsne_paras,
                         )
                         fig.write_html(output_d / f"3Dspace_{csv_header[col]}.html")
                 # Mixed types in the html columns list, can't process this

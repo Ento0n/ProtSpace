@@ -925,6 +925,7 @@ def get_callbacks(
                 original_id_col=original_id_col,
                 dim_red=dim_red,
                 umap_paras=umap_paras,
+                tsne_paras=tsne_paras,
                 two_d=two_d,
             )
             # Set highlighting_bool to False since new graph is displayed and highlighting circle is removed
@@ -1105,7 +1106,14 @@ def get_callbacks(
 
         if ctx.triggered_id == "graph_download_button":
             fig = Visualizator.render(
-                df, dd_value, original_id_col, umap_paras, dim_red, two_d, True
+                df,
+                dd_value,
+                original_id_col,
+                umap_paras,
+                tsne_paras,
+                dim_red,
+                two_d,
+                True,
             )
 
             if not two_d:
@@ -1118,7 +1126,14 @@ def get_callbacks(
         if ctx.triggered_id == "button_graph_all":
             for header in csv_header:
                 fig = Visualizator.render(
-                    df, header, original_id_col, umap_paras, dim_red, two_d, True
+                    df,
+                    header,
+                    original_id_col,
+                    umap_paras,
+                    tsne_paras,
+                    dim_red,
+                    two_d,
+                    True,
                 )
                 if not two_d:
                     fig.write_html(output_d / f"3Dspace_{header}_{dim_red}.html")
