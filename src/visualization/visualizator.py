@@ -4,6 +4,7 @@ import sys
 from colorsys import hls_to_rgb
 
 import numpy as np
+import pandas as pd
 import plotly.graph_objects as go
 from matplotlib import cm
 from pandas import DataFrame
@@ -243,7 +244,7 @@ class Visualizator:
 
             pca_variance = list()
             for value in unique_variance_column:
-                if value != "NA":
+                if not pd.isna(value):
                     pca_variance.append(value)
 
             # Sort descending since the first component of PCA has more variance than the second and so on
