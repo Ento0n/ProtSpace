@@ -158,10 +158,10 @@ def get_graph_offcanvas(
                 fullscreen=True,
                 delay_show=80,
             ),
-            dcc.Markdown("HTML"),
+            dcc.Markdown("Download"),
             dbc.Button(
                 "Download all files",
-                id="button_html_all",
+                id="button_graph_all",
                 color="dark",
                 outline=True,
             ),
@@ -345,13 +345,13 @@ def get_settings_button_tooltip(button_id: str):
     return tooltip
 
 
-def get_html_download_button_tooltip(button_id: str):
+def get_graph_download_button_tooltip(button_id: str):
     """
-    Returns the tooltip for the download html button
+    Returns the tooltip for the download graph button
     :param button_id: target button id the tooltip is to be displayed
     :return: tooltip
     """
-    tooltip = dbc.Tooltip("HTML download", target=button_id, placement="bottom")
+    tooltip = dbc.Tooltip("Graph download", target=button_id, placement="bottom")
     return tooltip
 
 
@@ -414,7 +414,7 @@ def get_graph_container(
             umap_paras, umap_paras_string, dim_red, tsne_paras, tsne_paras_string
         ),
         get_settings_button_tooltip(button_id="graph_settings_button"),
-        get_html_download_button_tooltip(button_id="html_download_button"),
+        get_graph_download_button_tooltip(button_id="graph_download_button"),
         dbc.Row(
             children=[
                 dbc.Col(
@@ -443,7 +443,7 @@ def get_graph_container(
                                 dbc.Button(
                                     "",
                                     class_name="bi bi-download",
-                                    id="html_download_button",
+                                    id="graph_download_button",
                                     outline=True,
                                     color="dark",
                                     style=main_button_style,
@@ -554,7 +554,7 @@ def get_help_modal():
                                                 style=help_modal_icon_style,
                                             ),
                                             html.P(
-                                                "Download a html file of the selected group."
+                                                "Download a html or png file of the selected group."
                                             ),
                                         ],
                                     ),
@@ -660,13 +660,13 @@ def get_help_modal():
 
 def get_download_toast():
     """
-    Layout for the toast (infobox) shown when downloading an html file.
+    Layout for the toast (infobox) shown when downloading the graph as file.
     :return: download toast layout
     """
     toast = dbc.Toast(
-        "Html file(s) successfully saved in output folder!",
-        header="Download HTML",
-        id="html_download_toast",
+        "File(s) successfully saved in output folder!",
+        header="Download graph",
+        id="graph_download_toast",
         is_open=False,
         dismissable=True,
         duration=4000,

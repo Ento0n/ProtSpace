@@ -1070,17 +1070,17 @@ def get_callbacks(
             return True
 
     @app.callback(
-        Output("html_download_toast", "is_open"),
+        Output("graph_download_toast", "is_open"),
         Input("dd_menu", "value"),
-        Input("html_download_button", "n_clicks"),
-        Input("button_html_all", "n_clicks"),
+        Input("graph_download_button", "n_clicks"),
+        Input("button_graph_all", "n_clicks"),
         Input("dim_red_tabs", "active_tab"),
     )
-    def create_html(dd_value: str, button: int, all_button: int, dim_red: str):
+    def download_graph(dd_value: str, button: int, all_button: int, dim_red: str):
         """
-        Creates html of selected group on button click and indicates this with an download toast
+        Creates file(s) of the graph with the selected group on button click and indicates this with an download toast
         :param dd_value: selected group in the dropdown menu
-        :param button: html download button
+        :param button: graph download button
         :param all_button: button indicating all groups should be downloaded
         :param dim_red: selected dimensionality reduction
         :return: open download toast
@@ -1094,7 +1094,7 @@ def get_callbacks(
         if button or all_button:
             pass
 
-        if ctx.triggered_id == "html_download_button":
+        if ctx.triggered_id == "graph_download_button":
             fig = Visualizator.render(
                 df, dd_value, original_id_col, umap_paras, dim_red
             )
@@ -1102,7 +1102,7 @@ def get_callbacks(
 
             return True
 
-        if ctx.triggered_id == "button_html_all":
+        if ctx.triggered_id == "button_graph_all":
             for header in csv_header:
                 fig = Visualizator.render(
                     df, header, original_id_col, umap_paras, dim_red
