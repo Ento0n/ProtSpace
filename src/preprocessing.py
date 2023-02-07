@@ -583,7 +583,9 @@ class DataPreprocessor:
             print(f"Number of embeddings: {len(embeddings)}")
             if (nr_missed := len(missing)) > 0:
                 print(f"{nr_missed} protein(s) in h5 but not in csv file:")
-                print(", ".join(missing))
+                print(", ".join(missing[:10]))
+                if nr_missed > 10:
+                    print("...")
 
         return embeddings
 
@@ -738,7 +740,9 @@ class DataPreprocessor:
 
         if (nr_missed := (len(missing))) > 0:
             print(f"{nr_missed} protein(s) in csv but not in h5 file:")
-            print(", ".join(missing))
+            print(", ".join(missing[:10]))
+            if nr_missed > 10:
+                print("...")
 
     def get_umap_paras_dict(self, df: DataFrame):
         """
