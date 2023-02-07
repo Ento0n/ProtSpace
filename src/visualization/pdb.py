@@ -194,6 +194,7 @@ def init_app_pdb(
     csv_header: list[str],
     fig: go.Figure,
     dim_red: str,
+    tsne_paras: dict,
 ):
     """
     Layout for the molecule displaying, in general the right column in pdb mode
@@ -226,7 +227,9 @@ def init_app_pdb(
             dbc.Row(
                 [
                     dbc.Col(
-                        get_graph_container(umap_paras, True, csv_header, fig, dim_red),
+                        get_graph_container(
+                            umap_paras, True, csv_header, fig, dim_red, tsne_paras
+                        ),
                         id="left_col",
                         width=6,
                         style={"border-right": "solid black 1px"},
