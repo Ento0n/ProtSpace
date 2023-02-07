@@ -244,7 +244,7 @@ class Visualizator:
 
             pca_variance = list()
             for value in unique_variance_column:
-                if not pd.isna(value):
+                if not pd.isna(value) and value != "NA":
                     pca_variance.append(value)
 
             # Sort descending since the first component of PCA has more variance than the second and so on
