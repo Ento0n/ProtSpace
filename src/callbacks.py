@@ -1490,7 +1490,8 @@ def get_callbacks(
                 dbc.Tab(euclidean_list, label="euclidean"),
                 dbc.Tab(cosine_list, label="cosine"),
                 dbc.Tab(manhattan_list, label="manhattan"),
-            ]
+            ],
+            active_tab="tab-0",
         )
 
         return header, body, True
