@@ -212,9 +212,6 @@ def init_app_pdb(
             # storage to save the selected molecules
             # Needed for image download name
             dcc.Store(id="mol_name_storage"),
-            # Storage to save the clicked on molecule in the graph,
-            # needed for replacing the clicked molecule in the list
-            dcc.Store(id="clicked_mol_storage"),
             # Storage to save the values of the molecules dropdown
             dcc.Store(id="molecules_dropdown_save", data=[]),
             # Toast to display that pdb file is missing

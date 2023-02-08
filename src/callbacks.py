@@ -208,7 +208,6 @@ def get_callbacks_pdb(
 
     @app.callback(
         Output("ngl_molecule_viewer", "data"),
-        Output("molecules_dropdown", "value"),
         Output("range_start", "disabled"),
         Output("range_end", "disabled"),
         Output("selected_atoms", "disabled"),
@@ -218,7 +217,6 @@ def get_callbacks_pdb(
         Output("selected_atoms", "value"),
         Output("download_molecule_button", "disabled"),
         Output("mol_name_storage", "data"),
-        Output("clicked_mol_storage", "data"),
         Output("no_pdb_toast", "is_open"),
         Output("molecules_dropdown_save", "data"),
         Input("graph", "clickData"),
@@ -274,35 +272,8 @@ def get_callbacks_pdb(
             # (editing for range selection and highlighting)
             saved_seq_ids = list(seq_ids)
 
-        # triggered by click on graph
-        clicked_seq_id = last_clicked_mol
-        if ctx.triggered_id == "graph":
-            clicked_seq_id = clickdata_to_seqid(click_data)
-
-            if original_id_col is not None:
-                clicked_seq_id = to_mapped_id([clicked_seq_id], original_id_col, df)[0]
-
-            # Add to seq ids or replace last clicked molecule
-            if last_clicked_mol is None:
-                seq_ids.append(clicked_seq_id)
-            else:
-                for idx, value in enumerate(seq_ids):
-                    if value == last_clicked_mol:
-                        seq_ids[idx] = clicked_seq_id
-
-        # triggered by the molecule dropdown menu
-        if ctx.triggered_id == "molecules_dropdown":
-            # set clicked sequence id to None if the selection was deleted in the dropdown menu
-            if clicked_seq_id not in seq_ids:
-                clicked_seq_id = None
-
         # path to .pdb file
         struct_path = str(struct_container.get_structure_dir()) + "/"
-
-        # needed for displaying molecules in dd menu
-        orig_seq_ids = seq_ids
-        if original_id_col is not None:
-            orig_seq_ids = to_original_id(seq_ids, original_id_col, df)
 
         # check whether .pdb file is present
         for seq in seq_ids:
@@ -311,7 +282,6 @@ def get_callbacks_pdb(
                 if not file_path.is_file():
                     return (
                         dash.no_update,
-                        orig_seq_ids,
                         dash.no_update,
                         dash.no_update,
                         dash.no_update,
@@ -321,7 +291,6 @@ def get_callbacks_pdb(
                         dash.no_update,
                         dash.no_update,
                         dash.no_update,
-                        clicked_seq_id,
                         True,
                         seq_ids,
                     )
@@ -371,7 +340,6 @@ def get_callbacks_pdb(
 
         return (
             data_list,
-            seq_ids,
             start_disabled,
             end_disabled,
             atoms_disabled,
@@ -381,7 +349,6 @@ def get_callbacks_pdb(
             selected_atoms,
             download_disabled,
             mol_names,
-            clicked_seq_id,
             dash.no_update,
             mapped_seq_ids,
         )
@@ -625,6 +592,8 @@ def get_callbacks(
         Output("highlighting_bool", "data"),
         Output("relayoutData_save", "data"),
         Output("load_umap_spinner", "children"),
+        Output("molecules_dropdown", "value"),
+        Output("clicked_mol_storage", "data"),
         Input("dd_menu", "value"),
         Input("dim_red_tabs", "active_tab"),
         Input("n_neighbours_input", "value"),
@@ -642,6 +611,8 @@ def get_callbacks(
         Input("highlighting_bool", "data"),
         Input("relayoutData_save", "data"),
         Input("dim_radio", "value"),
+        Input("molecules_dropdown", "value"),
+        Input("clicked_mol_storage", "data"),
         State("graph", "figure"),
         State("graph", "relayoutData"),
     )
@@ -663,6 +634,8 @@ def get_callbacks(
         highlighting_bool: bool,
         relayout_data_save: dict,
         dim: str,
+        dd_molecules: list,
+        last_clicked_mol: str,
         fig: go.Figure,
         relayout_data: dict,
     ):
@@ -783,6 +756,41 @@ def get_callbacks(
         # If plotly relayoutData is bugged and dict is empty for a reason, use last saved relayoutData
         if not relayout_data or "scene.camera" not in relayout_data:
             relayout_data = relayout_data_save
+
+        # convert original to mapped IDs
+        seq_ids = list()
+        if dd_molecules is not None:
+            if original_id_col is not None:
+                seq_ids = to_mapped_id(dd_molecules, original_id_col, df)
+            else:
+                seq_ids = dd_molecules
+
+        # triggered by click on graph
+        clicked_seq_id = last_clicked_mol
+        if ctx.triggered_id == "graph":
+            clicked_seq_id = clickdata_to_seqid(click_data)
+
+            if original_id_col is not None:
+                clicked_seq_id = to_mapped_id([clicked_seq_id], original_id_col, df)[0]
+
+            # Add to seq ids or replace last clicked molecule
+            if last_clicked_mol is None:
+                seq_ids.append(clicked_seq_id)
+            else:
+                for idx, value in enumerate(seq_ids):
+                    if value == last_clicked_mol:
+                        seq_ids[idx] = clicked_seq_id
+
+        # triggered by the molecule dropdown menu
+        if ctx.triggered_id == "molecules_dropdown":
+            # set clicked sequence id to None if the selection was deleted in the dropdown menu
+            if clicked_seq_id not in seq_ids:
+                clicked_seq_id = None
+
+        mapped_seq_ids = seq_ids
+        if original_id_col is not None:
+            # back to original IDs
+            seq_ids = to_original_id(seq_ids, original_id_col, df)
 
         # convert dictionary state of graph figure into go object
         fig = go.Figure(fig)
@@ -1026,6 +1034,8 @@ def get_callbacks(
             highlighting_bool,
             relayout_data_save,
             "Recalculate UMAP",
+            seq_ids,
+            clicked_seq_id,
         )
 
     @app.callback(

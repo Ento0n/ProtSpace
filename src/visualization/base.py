@@ -109,6 +109,9 @@ def get_side_components(app: Dash):
         children=[
             # Header
             get_header(app),
+            # Storage to save the clicked on molecule in the graph,
+            # needed for replacing the clicked molecule in the list
+            dcc.Store(id="clicked_mol_storage"),
             # toast that is displayed if a html file is created
             get_download_toast(),
             # Toasts in container, so they stack below each other...
@@ -437,7 +440,7 @@ def get_graph_container(
                 dbc.Col(
                     children=[
                         dcc.Dropdown(
-                            id="graph_molecules_dropdown",
+                            id="molecules_dropdown",
                             options=original_id_col,
                             multi=True,
                             style={"margin-top": "5px"},
