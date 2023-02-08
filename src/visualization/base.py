@@ -60,6 +60,7 @@ def init_app(
     fig: go.Figure,
     dim_red: str,
     tsne_paras: dict,
+    original_id_col: list,
 ):
     """
     Set up the layout of the application
@@ -78,7 +79,13 @@ def init_app(
                 [
                     dbc.Col(
                         get_graph_container(
-                            umap_paras, False, csv_header, fig, dim_red, tsne_paras
+                            umap_paras,
+                            False,
+                            csv_header,
+                            fig,
+                            dim_red,
+                            tsne_paras,
+                            original_id_col,
                         ),
                         width=12,
                     ),
@@ -362,6 +369,7 @@ def get_graph_container(
     fig: go.Figure,
     dim_red: str,
     tsne_paras: dict,
+    original_id_col: list,
 ):
     """
     Creates the layout for the graph Row
@@ -371,6 +379,7 @@ def get_graph_container(
     :param fig: graph Figure
     :param dim_red: initial dimensionality reduction
     :param tsne_paras: TSNE parameters
+    :param original_id_col: list with the original IDs
     :return: Layout of the offcanvas
     """
     # UMAP parameters in string format
@@ -393,17 +402,51 @@ def get_graph_container(
         + str(tsne_paras["tsne_metric"])
     )
 
-    # width sizing of the dropdown menu column
+    # width sizing of the dropdown menu column and whether 2 dropdowns are above the graph or not
     if pdb:
         xs = 6
         sm = 7
         md = 8
         xxl = 9
+
+        dropdown_s = dcc.Dropdown(
+            csv_header,
+            csv_header[0],
+            id="dd_menu",
+            style={"margin-top": "5px"},
+        )
     else:
         xs = 8
         sm = 9
         md = 10
         xxl = 11
+
+        dropdown_s = dbc.Row(
+            children=[
+                dbc.Col(
+                    children=[
+                        dcc.Dropdown(
+                            csv_header,
+                            csv_header[0],
+                            id="dd_menu",
+                            style={"margin-top": "5px"},
+                        ),
+                    ],
+                    width=6,
+                ),
+                dbc.Col(
+                    children=[
+                        dcc.Dropdown(
+                            id="graph_molecules_dropdown",
+                            options=original_id_col,
+                            multi=True,
+                            style={"margin-top": "5px"},
+                        ),
+                    ],
+                    width=6,
+                ),
+            ],
+        )
 
     graph_container = (
         # Storage to save whether Highlighting circle is already displayed or not
@@ -419,12 +462,7 @@ def get_graph_container(
             children=[
                 dbc.Col(
                     [
-                        dcc.Dropdown(
-                            csv_header,
-                            csv_header[0],
-                            id="dd_menu",
-                            style={"margin-top": "5px"},
-                        ),
+                        dropdown_s,
                     ],
                     xs=xs,
                     sm=sm,

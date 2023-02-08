@@ -490,14 +490,22 @@ class Visualizator:
 
         return fig
 
-    def get_base_app(self, umap_paras: dict, tsne_paras: dict):
+    def get_base_app(self, umap_paras: dict, tsne_paras: dict, original_id_col: list):
         """
         Initializes the dash app in base.py
         :param umap_paras: Parameters of the UMAP calculation
         :param tsne_paras: Parameters of the TSNE calculation
+        :param original_id_col: list with the original IDs
         :return: the application layout
         """
-        return init_app(umap_paras, self.csv_header, self.fig, self.dim_red, tsne_paras)
+        return init_app(
+            umap_paras,
+            self.csv_header,
+            self.fig,
+            self.dim_red,
+            tsne_paras,
+            original_id_col,
+        )
 
     def get_pdb_app(self, orig_id_col: list[str], umap_paras: dict, tsne_paras: dict):
         """

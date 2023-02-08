@@ -228,7 +228,13 @@ def init_app_pdb(
                 [
                     dbc.Col(
                         get_graph_container(
-                            umap_paras, True, csv_header, fig, dim_red, tsne_paras
+                            umap_paras,
+                            True,
+                            csv_header,
+                            fig,
+                            dim_red,
+                            tsne_paras,
+                            original_id_col,
                         ),
                         id="left_col",
                         width=6,
