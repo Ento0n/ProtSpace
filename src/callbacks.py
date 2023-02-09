@@ -686,6 +686,9 @@ def get_callbacks(
                     dash.no_update,
                     dash.no_update,
                     dash.no_update,
+                    dash.no_update,
+                    dash.no_update,
+                    dash.no_update,
                 )
 
             # Disable recalculating when min dist is out of bounds
@@ -710,6 +713,9 @@ def get_callbacks(
                     dash.no_update,
                     dash.no_update,
                     dash.no_update,
+                    dash.no_update,
+                    dash.no_update,
+                    dash.no_update,
                 )
             else:
                 return (
@@ -720,6 +726,9 @@ def get_callbacks(
                     dash.no_update,
                     dash.no_update,
                     False,
+                    dash.no_update,
+                    dash.no_update,
+                    dash.no_update,
                     dash.no_update,
                     dash.no_update,
                     dash.no_update,
