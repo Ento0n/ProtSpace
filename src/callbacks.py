@@ -592,6 +592,7 @@ def get_callbacks(
         Output("highlighting_bool", "data"),
         Output("relayoutData_save", "data"),
         Output("load_umap_spinner", "children"),
+        Output("load_graph_spinner", "children"),
         Output("molecules_dropdown", "value"),
         Output("clicked_mol_storage", "data"),
         Input("dd_menu", "value"),
@@ -685,6 +686,7 @@ def get_callbacks(
             dash.no_update,
             dash.no_update,
             dash.no_update,
+            dash.no_update,
         )
 
         # Prevent constant resetting of the graph
@@ -705,6 +707,7 @@ def get_callbacks(
                     dash.no_update,
                     dash.no_update,
                     False,
+                    dash.no_update,
                     dash.no_update,
                     dash.no_update,
                     dash.no_update,
@@ -1084,7 +1087,8 @@ def get_callbacks(
             list(tsne_paras_dict.keys()),
             highlighting_bool,
             relayout_data_save,
-            "Recalculate UMAP",
+            "Output for UMAP spinner",
+            "Output for graph spinner",
             seq_ids,
             clicked_seq_id,
         )

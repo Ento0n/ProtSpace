@@ -792,9 +792,24 @@ def get_header(app: Dash):
     """
     header = dbc.Row(
         [
-            get_help_button_tooltip(button_id="help_button"),
             dbc.Col(
-                html.H1("ProtSpace3D", style={"color": "white"}),
+                dbc.Stack(
+                    direction="horizontal",
+                    gap=5,
+                    children=[
+                        html.H1("ProtSpace3D", style={"color": "white"}),
+                        dcc.Loading(
+                            color="white",
+                            style={},
+                            children=[
+                                html.Div(
+                                    id="load_graph_spinner",
+                                    hidden=True,
+                                )
+                            ],
+                        ),
+                    ],
+                ),
                 style={"background-color": "black"},
                 xxl=10,
                 xl=10,
@@ -817,6 +832,7 @@ def get_header(app: Dash):
                             "background-color": "black",
                         },
                     ),
+                    get_help_button_tooltip(button_id="help_button"),
                     get_help_modal(),
                 ],
                 xxl=1,
