@@ -927,8 +927,69 @@ def get_callbacks(
             # Set highlighting_bool to False since new graph is displayed and highlighting circle is removed
             highlighting_bool = False
 
-        # Add trace that highlights the selected molecule with a circle
-        # get seq id from click data
+        # Add traces with open circles that have no values, but will be filled if something has to be highlighted
+        if dim == "3D":
+            fig.add_trace(
+                go.Scatter3d(
+                    x=[],
+                    y=[],
+                    z=[],
+                    mode="markers",
+                    marker=dict(
+                        size=15,
+                        color="black",
+                        symbol="circle-open",
+                    ),
+                    showlegend=False,
+                    hoverinfo="skip",
+                )
+            )
+            fig.add_trace(
+                go.Scatter3d(
+                    x=[],
+                    y=[],
+                    z=[],
+                    mode="markers",
+                    marker=dict(
+                        size=15,
+                        color="white",
+                        symbol="circle-open",
+                    ),
+                    showlegend=False,
+                    hoverinfo="skip",
+                )
+            )
+        else:
+            fig.add_trace(
+                go.Scatter(
+                    x=[],
+                    y=[],
+                    mode="markers",
+                    marker=dict(
+                        size=15,
+                        color="black",
+                        symbol="circle-open",
+                    ),
+                    showlegend=False,
+                    hoverinfo="skip",
+                )
+            )
+            fig.add_trace(
+                go.Scatter(
+                    x=[],
+                    y=[],
+                    mode="markers",
+                    marker=dict(
+                        size=15,
+                        color="white",
+                        symbol="circle-open",
+                    ),
+                    showlegend=False,
+                    hoverinfo="skip",
+                )
+            )
+
+        # Molecule is selected in graph and highlighting trace is now filled with x, y and/or z
         if ctx.triggered_id == "graph":
             seq_id = clickdata_to_seqid(click_data)
 
@@ -948,42 +1009,20 @@ def get_callbacks(
                 y = df.at[seq_id, "y_tsne"]
                 z = df.at[seq_id, "z_tsne"]
 
-            # Remove last trace (highlighting circle) if present
-            if highlighting_bool:
-                data_list = list(fig.data)
-                data_list.pop(-1)
-                fig.data = data_list
-
             if dim == "3D":
-                fig.add_trace(
-                    go.Scatter3d(
-                        x=[x],
-                        y=[y],
-                        z=[z],
-                        mode="markers",
-                        marker=dict(
-                            size=15,
-                            color="black",
-                            symbol="circle-open",
-                        ),
-                        showlegend=False,
-                        hoverinfo="skip",
-                    )
+                fig.update_traces(
+                    x=[x],
+                    y=[y],
+                    z=[z],
+                    selector=dict(marker_symbol="circle-open", marker_color="black"),
+                    overwrite=True,
                 )
             else:
-                fig.add_trace(
-                    go.Scatter(
-                        x=[x],
-                        y=[y],
-                        mode="markers",
-                        marker=dict(
-                            size=15,
-                            color="black",
-                            symbol="circle-open",
-                        ),
-                        showlegend=False,
-                        hoverinfo="skip",
-                    )
+                fig.update_traces(
+                    x=[x],
+                    y=[y],
+                    selector=dict(marker_symbol="circle-open", marker_color="black"),
+                    overwrite=True,
                 )
 
             # set highlighting_bool to true since highlighting circle is now displayed
@@ -1000,11 +1039,25 @@ def get_callbacks(
         if ctx.triggered_id == "molecules_dropdown":
             # Remove highlighting of clicked molecule if deselected in the dropdown menu
             if last_clicked_mol not in seq_ids and last_clicked_mol is not None:
-                data_list = list(fig.data)
-                data_list.pop(-1)
-                fig.data = data_list
-
-                highlighting_bool = False
+                if dim == "3D":
+                    fig.update_traces(
+                        x=[],
+                        y=[],
+                        z=[],
+                        selector=dict(
+                            marker_symbol="circle-open", marker_color="black"
+                        ),
+                        overwrite=True,
+                    )
+                else:
+                    fig.update_traces(
+                        x=[],
+                        y=[],
+                        selector=dict(
+                            marker_symbol="circle-open", marker_color="black"
+                        ),
+                        overwrite=True,
+                    )
 
         # Disable UMAP parameter input or not?
         disabled = False
