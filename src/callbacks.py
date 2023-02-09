@@ -996,6 +996,16 @@ def get_callbacks(
             # save relayoutData for buggy plotly
             relayout_data_save = relayout_data
 
+        # Process dropdown menu selection
+        if ctx.triggered_id == "molecules_dropdown":
+            # Remove highlighting of clicked molecule if deselected in the dropdown menu
+            if last_clicked_mol not in seq_ids and last_clicked_mol is not None:
+                data_list = list(fig.data)
+                data_list.pop(-1)
+                fig.data = data_list
+
+                highlighting_bool = False
+
         # Disable UMAP parameter input or not?
         disabled = False
         if not dim_red == "UMAP":
