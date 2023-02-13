@@ -790,17 +790,14 @@ def get_callbacks(
 
         # If umap parameters are selected in the dropdown menu
         if ctx.triggered_id == "last_umap_paras_dd":
-
             splits = umap_paras_dd_value.split(" ; ")
             umap_paras["n_neighbours"] = splits[0]
             umap_paras["min_dist"] = splits[1]
             umap_paras["metric"] = splits[2]
 
-            coords = umap_paras_dict[umap_paras_dd_value]
             df.drop(labels=umap_axis_names, axis="columns", inplace=True)
-            df["x_umap"] = coords["x_umap"]
-            df["y_umap"] = coords["y_umap"]
-            df["z_umap"] = coords["z_umap"]
+            coords_df = umap_paras_dict[umap_paras_dd_value]
+            df = df.join(coords_df, how="left")
 
         # If UMAP parameters are changed and accepted
         if ctx.triggered_id == "umap_recalculation_button":
@@ -818,15 +815,11 @@ def get_callbacks(
             df_umap = DataPreprocessor.generate_umap(embeddings, umap_paras)
             df_umap.index = embedding_uids
 
-            df = df.join(df_umap, how="outer")
+            df = df.join(df_umap, how="left")
 
-            coords_dict = dict(
-                x_umap=df_umap["x_umap"].to_list(),
-                y_umap=df_umap["y_umap"].to_list(),
-                z_umap=df_umap["z_umap"].to_list(),
-            )
+            coords_df = df[umap_axis_names]
 
-            umap_paras_dict[umap_paras_string] = coords_dict
+            umap_paras_dict[umap_paras_string] = coords_df
         # String representation of UMAP parameters still to be created if not button used
         else:
             umap_paras_string = (

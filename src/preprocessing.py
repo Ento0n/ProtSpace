@@ -759,12 +759,8 @@ class DataPreprocessor:
         min_dist = self.umap_paras["min_dist"]
         metric = self.umap_paras["metric"]
         umap_paras_string = str(n_neighbours) + " ; " + str(min_dist) + " ; " + metric
-        coords_dict = dict(
-            x_umap=df["x_umap"].to_list(),
-            y_umap=df["y_umap"].to_list(),
-            z_umap=df["z_umap"].to_list(),
-        )
-        umap_paras_dict[umap_paras_string] = coords_dict
+        coords_df = df[self.UMAP_AXIS_NAMES]
+        umap_paras_dict[umap_paras_string] = coords_df
 
         return umap_paras_dict
 
