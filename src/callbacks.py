@@ -605,7 +605,7 @@ def get_callbacks(
         Input("iterations_input", "value"),
         Input("perplexity_input", "value"),
         Input("learning_rate_input", "value"),
-        Input("metric_input", "value"),
+        Input("tsne_metric_input", "value"),
         Input("tsne_recalculation_button", "n_clicks"),
         Input("last_tsne_paras_dd", "value"),
         Input("graph", "clickData"),
@@ -729,7 +729,7 @@ def get_callbacks(
             "iterations_input",
             "perplexity_input",
             "learning_rate_input",
-            "metric_input",
+            "tsne_metric_input",
         ]:
             raise PreventUpdate
 
@@ -841,11 +841,9 @@ def get_callbacks(
             tsne_paras["learning_rate"] = splits[2]
             tsne_paras["tsne_metric"] = splits[3]
 
-            coords = tsne_paras_dict[tsne_paras_dd_value]
             df.drop(labels=tsne_axis_names, axis="columns", inplace=True)
-            df["x_tsne"] = coords["x_tsne"]
-            df["y_tsne"] = coords["y_tsne"]
-            df["z_tsne"] = coords["z_tsne"]
+            coords_df = tsne_paras_dict[tsne_paras_dd_value]
+            df = df.join(coords_df, how="left")
 
         if ctx.triggered_id == "tsne_recalculation_button":
             # check whether learning rate is auto or a number
@@ -875,15 +873,11 @@ def get_callbacks(
             df_tsne = DataPreprocessor.generate_tsne(embeddings, tsne_paras)
             df_tsne.index = embedding_uids
 
-            df = df.join(df_tsne, how="outer")
+            df = df.join(df_tsne, how="left")
 
-            coords_dict = dict(
-                x_tsne=df_tsne["x_tsne"].to_list(),
-                y_tsne=df_tsne["y_tsne"].to_list(),
-                z_tsne=df_tsne["z_tsne"].to_list(),
-            )
+            coords_df = df[tsne_axis_names]
 
-            tsne_paras_dict[tsne_paras_string] = coords_dict
+            tsne_paras_dict[tsne_paras_string] = coords_df
 
         # String representation still needed if not button used
         else:

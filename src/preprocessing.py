@@ -785,11 +785,7 @@ class DataPreprocessor:
             + " ; "
             + str(tsne_metric)
         )
-        coords_dict = dict(
-            x_tsne=df["x_tsne"].to_list(),
-            y_tsne=df["y_tsne"].to_list(),
-            z_tsne=df["z_tsne"].to_list(),
-        )
-        tsne_paras_dict[tsne_paras_string] = coords_dict
+        coords_df = df[self.TSNE_AXIS_NAMES]
+        tsne_paras_dict[tsne_paras_string] = coords_df
 
         return tsne_paras_dict
