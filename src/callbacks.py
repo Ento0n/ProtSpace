@@ -1050,43 +1050,43 @@ def get_callbacks(
                         ),
                         overwrite=True,
                     )
+
+            x_coords = list()
+            y_coords = list()
+            z_coords = list()
+            for seq_id in seq_ids:
+                if seq_id != last_clicked_mol:
+                    if original_id_col is not None:
+                        seq_id = to_mapped_id([seq_id], original_id_col, df)[0]
+
+                    if dim_red == "UMAP":
+                        x_coords.append(df.at[seq_id, "x_umap"])
+                        y_coords.append(df.at[seq_id, "y_umap"])
+                        z_coords.append(df.at[seq_id, "z_umap"])
+                    elif dim_red == "PCA":
+                        x_coords.append(df.at[seq_id, "x_pca"])
+                        y_coords.append(df.at[seq_id, "y_pca"])
+                        z_coords.append(df.at[seq_id, "z_pca"])
+                    else:
+                        x_coords.append(df.at[seq_id, "x_tsne"])
+                        y_coords.append(df.at[seq_id, "y_tsne"])
+                        z_coords.append(df.at[seq_id, "z_tsne"])
+
+            if dim == "3D":
+                fig.update_traces(
+                    x=x_coords,
+                    y=y_coords,
+                    z=z_coords,
+                    selector=dict(marker_symbol="circle-open", marker_color="white"),
+                    overwrite=True,
+                )
             else:
-                x_coords = list()
-                y_coords = list()
-                z_coords = list()
-                for seq_id in seq_ids:
-                    if seq_id != last_clicked_mol:
-                        if original_id_col is not None:
-                            seq_id = to_mapped_id([seq_id], original_id_col, df)[0]
-
-                        if dim_red == "UMAP":
-                            x_coords.append(df.at[seq_id, "x_umap"])
-                            y_coords.append(df.at[seq_id, "y_umap"])
-                            z_coords.append(df.at[seq_id, "z_umap"])
-                        elif dim_red == "PCA":
-                            x_coords.append(df.at[seq_id, "x_pca"])
-                            y_coords.append(df.at[seq_id, "y_pca"])
-                            z_coords.append(df.at[seq_id, "z_pca"])
-                        else:
-                            x_coords.append(df.at[seq_id, "x_tsne"])
-                            y_coords.append(df.at[seq_id, "y_tsne"])
-                            z_coords.append(df.at[seq_id, "z_tsne"])
-
-                if dim == "3D":
-                    fig.update_traces(
-                        x=x_coords,
-                        y=y_coords,
-                        z=z_coords,
-                        selector=dict(marker_symbol="circle-open", marker_color="white"),
-                        overwrite=True,
-                    )
-                else:
-                    fig.update_traces(
-                        x=x_coords,
-                        y=y_coords,
-                        selector=dict(marker_symbol="circle-open", marker_color="white"),
-                        overwrite=True,
-                    )
+                fig.update_traces(
+                    x=x_coords,
+                    y=y_coords,
+                    selector=dict(marker_symbol="circle-open", marker_color="white"),
+                    overwrite=True,
+                )
 
         # Disable UMAP parameter input or not?
         disabled = False
