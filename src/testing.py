@@ -107,9 +107,9 @@ def setup():
     else:
         application = visualizator.get_base_app(umap_paras, tsne_paras, ids)
 
-    download_graph, expand_sequence = get_callbacks(application, df, original_id_col, umap_paras, tsne_paras, output_d, csv_header, embeddings, embedding_uids, distance_dic, umap_paras_dict, tsne_paras_dict, fasta_dict, structure_container)
+    download_graph, expand_sequence, handle_graph_canvas = get_callbacks(application, df, original_id_col, umap_paras, tsne_paras, output_d, csv_header, embeddings, embedding_uids, distance_dic, umap_paras_dict, tsne_paras_dict, fasta_dict, structure_container)
 
-    return download_graph, expand_sequence
+    return download_graph, expand_sequence, handle_graph_canvas
 
 
 def test_download_graph():
@@ -117,7 +117,7 @@ def test_download_graph():
         context_value.set(AttributeDict(**{"triggered_inputs": [{"prop_id": "graph_download_button.n_clicks"}, {"prop_id": "button_graph_all.n_clicks"}]}))
         return download_graph("Assigned group", 1, 1, "UMAP", "2D")
 
-    download_graph, expand_sequence = setup()
+    download_graph, two, three = setup()
     ctx = copy_context()
     output = ctx.run(run_callback)
     assert output is True
@@ -128,7 +128,7 @@ def test_expand_sequence():
         context_value.set(AttributeDict(**{"triggered_inputs": [{"prop_id": "expand_seq_button.n_clicks"}]}))
         return expand_sequence(1, 1)
 
-    download_graph, expand_sequence = setup()
+    one, expand_sequence, three = setup()
     ctx = copy_context()
     output = ctx.run(run_callback_1)
     assert output == (True, False)
@@ -139,12 +139,14 @@ def test_collapse_sequence():
         context_value.set(AttributeDict(**{"triggered_inputs": [{"prop_id": "dummy_prop_id.n_clicks"}]}))
         return expand_sequence(1, 1)
 
-    one, expand_sequence = setup()
+    one, expand_sequence, three = setup()
     ctx = copy_context()
     output = ctx.run(run_callback)
     assert output == (False, True)
 
 
-
-
+def test_open_graph_settings():
+    one, two, handle_graph_canvas = setup()
+    output = handle_graph_canvas(1)
+    assert output is True
 
