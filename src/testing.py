@@ -107,9 +107,9 @@ def setup():
     else:
         application = visualizator.get_base_app(umap_paras, tsne_paras, ids)
 
-    download_graph = get_callbacks(application, df, original_id_col, umap_paras, tsne_paras, output_d, csv_header, embeddings, embedding_uids, distance_dic, umap_paras_dict, tsne_paras_dict, fasta_dict, structure_container)
+    download_graph, expand_sequence = get_callbacks(application, df, original_id_col, umap_paras, tsne_paras, output_d, csv_header, embeddings, embedding_uids, distance_dic, umap_paras_dict, tsne_paras_dict, fasta_dict, structure_container)
 
-    return download_graph
+    return download_graph, expand_sequence
 
 
 def test_download_graph():
@@ -117,11 +117,34 @@ def test_download_graph():
         context_value.set(AttributeDict(**{"triggered_inputs": [{"prop_id": "graph_download_button.n_clicks"}, {"prop_id": "button_graph_all.n_clicks"}]}))
         return download_graph("Assigned group", 1, 1, "UMAP", "2D")
 
-    download_graph = setup()
+    download_graph, expand_sequence = setup()
     ctx = copy_context()
     output = ctx.run(run_callback)
     assert output is True
 
 
-if __name__ == "__main__":
-    test_download_graph()
+def test_expand_sequence():
+    def run_callback_1():
+        context_value.set(AttributeDict(**{"triggered_inputs": [{"prop_id": "expand_seq_button.n_clicks"}]}))
+        return expand_sequence(1, 1)
+
+    download_graph, expand_sequence = setup()
+    ctx = copy_context()
+    output = ctx.run(run_callback_1)
+    assert output == (True, False)
+
+
+def test_collapse_sequence():
+    def run_callback():
+        context_value.set(AttributeDict(**{"triggered_inputs": [{"prop_id": "dummy_prop_id.n_clicks"}]}))
+        return expand_sequence(1, 1)
+
+    one, expand_sequence = setup()
+    ctx = copy_context()
+    output = ctx.run(run_callback)
+    assert output == (False, True)
+
+
+
+
+

@@ -1609,4 +1609,4 @@ def get_callbacks(
         ]
         return dbc.ListGroup(children=list_group_items, flush=True)
 
-    return download_graph
+    return download_graph, expand_sequence
