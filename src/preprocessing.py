@@ -98,10 +98,10 @@ class DataPreprocessor:
             )
 
         # replace empty values with NA
-        df_csv.fillna("NA", inplace=True)
+        # df_csv.fillna("NA", inplace=True)
 
         # replace "None" values with NA
-        df_csv.replace(to_replace="None", value="NA", inplace=True)
+        # df_csv.replace(to_replace="None", value="NA", inplace=True)
 
         # save index name for df.csv
         index_name = df_csv.index.name
@@ -416,7 +416,7 @@ class DataPreprocessor:
                 print(f"Pre computed dataframe file df_{hdf_path.stem}.csv is loaded.")
 
             pres_df_csv = pd.read_csv(pres_df, index_col=0)
-            pres_df_csv.fillna("NA", inplace=True)
+            # pres_df_csv.fillna("NA", inplace=True)
 
             # Check whether no. of rows equals data
             if len(pres_df_csv) != len(df_csv):

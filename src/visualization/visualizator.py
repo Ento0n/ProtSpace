@@ -128,27 +128,27 @@ class Visualizator:
         numeric_flag = False
         if all(
             [
-                isinstance(item, int) or isinstance(item, float) or item == "NA"
+                isinstance(item, int) or isinstance(item, float)
                 for item in col_groups
             ]
         ):
-            # Only numeric values and "NA" in the group
+            # Only numeric values and np.nan in the group
             numeric_flag = True
 
             # Only one symbol to be used
             n_symbols = 1
 
-            # Find min and max value of the group, excluding "NA"
+            # Find min and max value of the group, excluding np.nan
             min_val = sys.float_info.max
             max_val = sys.float_info.min
             for item in col_groups:
-                if isinstance(item, int) or isinstance(item, float):
+                if isinstance(item, int) or isinstance(item, float) and not pd.isna(item):
                     if min_val > item:
                         min_val = item
                     if max_val < item:
                         max_val = item
 
-            if "NA" in col_groups:
+            if np.nan in col_groups:
                 no_na_len = len(col_groups) - 1
             else:
                 no_na_len = len(col_groups)
@@ -244,7 +244,7 @@ class Visualizator:
 
             pca_variance = list()
             for value in unique_variance_column:
-                if not pd.isna(value) and value != "NA":
+                if not pd.isna(value):
                     pca_variance.append(value)
 
             # Sort descending since the first component of PCA has more variance than the second and so on
@@ -355,11 +355,11 @@ class Visualizator:
         """
 
         # custom separator to sort str, int and float (str case-insensitive)
-        # order: 1. int and float 2. str 3. rest 4. NA
+        # order: 1. int and float 2. str 3. rest 4. np.nan
         def my_comparator(val):
-            if isinstance(val, float) or isinstance(val, int):
+            if isinstance(val, float) and not pd.isna(val) or isinstance(val, int):
                 return 0, val
-            elif val == "NA":
+            elif pd.isna(val):
                 return 3, val
             elif isinstance(val, str):
                 val = val.lower()
@@ -376,8 +376,8 @@ class Visualizator:
         col_groups = df[selected_column].unique().tolist()
         col_groups.sort(key=my_comparator)
 
-        # get nr of col groups without NA
-        if "NA" in col_groups:
+        # get nr of col groups without nan
+        if np.nan in col_groups:
             n_col_groups = len(col_groups) - 1
         else:
             n_col_groups = len(col_groups)
@@ -410,14 +410,14 @@ class Visualizator:
 
         # iterate over different values of the selected column
         for group_idx, group_value in enumerate(col_groups):
-            # Show only NA in legend if colorbar is shown
+            # Show only nan in legend if colorbar is shown
             show_legend = True
             if numeric_flag:
-                if group_value != "NA":
+                if not pd.isna(group_value):
                     show_legend = False
 
-            # set up opacity dependent on NA or not
-            if group_value == "NA":
+            # set up opacity dependent on nan or not
+            if pd.isna(group_value):
                 opacity = 0.3
                 symbol = "circle"
                 color = "lightgrey"
@@ -427,7 +427,10 @@ class Visualizator:
                 color = f"rgb{color_list[group_idx]}"
 
             # extract df with only group value
-            df_group = df[df[selected_column] == group_value]
+            if not pd.isna(group_value):
+                df_group = df[df[selected_column] == group_value]
+            else:
+                df_group = df[df[selected_column].isna()]
 
             if not two_d:
                 trace = go.Scatter3d(
