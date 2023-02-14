@@ -1608,3 +1608,5 @@ def get_callbacks(
             if key != seq_id
         ]
         return dbc.ListGroup(children=list_group_items, flush=True)
+
+    return download_graph
