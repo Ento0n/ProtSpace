@@ -1,0 +1,246 @@
+
+ oooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooo
+                                  ---  PhyML 3.3.20190909  ---                                             
+                              http://www.atgc-montpellier.fr/phyml                                          
+                             Copyright CNRS - Universite Montpellier                                 
+ oooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooo
+
+. Sequence filename: 			big2_1_phy
+. Data set: 				#1
+. Initial tree: 			BioNJ
+. Model of amino acids substitution: 	WAG
+. Number of taxa: 			438
+. Log-likelihood: 			-98162.65847
+. Unconstrained log-likelihood: 	-1225.04091
+. Composite log-likelihood: 		-292320.44038
+. Parsimony: 				20238
+. Tree size: 				108.24501
+. Discrete gamma model: 		Yes
+  - Number of classes: 			4
+  - Gamma shape parameter: 		1.338
+  - Relative rate in class 1: 		0.19918 [freq=0.250000] 		
+  - Relative rate in class 2: 		0.55917 [freq=0.250000] 		
+  - Relative rate in class 3: 		1.03930 [freq=0.250000] 		
+  - Relative rate in class 4: 		2.20236 [freq=0.250000] 		
+. Proportion of invariant: 		0.004
+
+. Run ID:				none
+. Random seed:				1632878998
+. Subtree patterns aliasing:		no
+. Version:				3.3.20190909
+. Time used:				1h40m26s (6026 seconds)
+
+ oooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooo
+ Suggested citations:
+ S. Guindon, JF. Dufayard, V. Lefort, M. Anisimova, W. Hordijk, O. Gascuel
+ "New algorithms and methods to estimate maximum-likelihood phylogenies: assessing the performance of PhyML 3.0."
+ Systematic Biology. 2010. 59(3):307-321.
+
+ S. Guindon & O. Gascuel
+ "A simple, fast, and accurate algorithm to estimate large phylogenies by maximum likelihood"
+ Systematic Biology. 2003. 52(5):696-704.
+ oooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooo
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+                     Starting SMS v1.8.4
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Input alignment    : big2_1_phy
+Data type          : Protein
+Number of taxa     : 438
+Number of sites    : 226
+Number of branches : 873
+Criterion          : AIC
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Step 1 : Set a fixed topology
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Step 2 : Select the best decoration
+  AIC=200316.55746  decoration : '+G+I'
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Step 3 : Select the best matrix
+  AIC=199791.27018  matrix : 'WAG'
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Step 4 : Select the best final decoration
+  AIC=199440.11740  decoration : '+G+I'
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Selected model        : WAG +G+I
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Substitution model      : WAG
+Equilibrium frequencies     : Model
+Proportion of invariable sites    : estimated (0.004)
+Number of substitution rate categories  : 4
+Gamma shape parameter     : estimated (1.338)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Suggested citations:
+SMS
+ Vincent Lefort, Jean-Emmanuel Longueville, Olivier Gascuel.
+ "SMS: Smart Model Selection in PhyML."
+ Molecular Biology and Evolution, msx149, 2017.
+PhyML
+ S. Guindon, JF. Dufayard,  V. Lefort,  M. Anisimova,
+ W. Hordijk, O. Gascuel
+ "New algorithms and methods to estimate maximum-likelihood
+ phylogenies: assessing the performance of PhyML 3.0."
+ Systematic Biology. 2010. 59(3):307-321.
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Additional step : Infer tree with model : 'WAG +G+I'
+
+. The NNI option is deprecated. PhyML now uses a mix of SPRs and NNIs.
+
+. Command line: /data/http/www/binaries/phyml/../sms/sms/phyml-src/phyml -i /data/http/www/exec/20210929-031943_Oh83/big2_1_phy -d aa -o tlr -m WAG -c 4 -a 1.338 -v 0.004 -f m -s NNI -b -5 --leave_duplicates --no_memory_check --print_trace --json_trace 
+
+
+
+
+
+  ////////////////////////////////////.\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+  \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\.//////////////////////////////////////////
+
+        . Sequence filename:         big2_1_phy
+        . Data type:           aa
+        . Alphabet size:         20
+        . Sequence format:         interleaved
+        . Number of data sets:         1
+        . Nb of bootstrapped data sets:      0
+        . Compute approximate likelihood ratio test:   yes (aBayes branch supports)
+        . Model name:          WAG
+        . Proportion of invariable sites:    0.004000
+        . Number of subst. rate catgs:       4
+        . Gamma distribution parameter:      1.338000
+        . 'Middle' of each rate class:       mean
+        . Amino acid equilibrium frequencies:    model
+        . Optimise tree topology:      yes
+        . Starting tree:         BioNJ
+        . Add random input tree:       no
+        . Optimise branch lengths:       yes
+        . Minimum length of an edge:       1e-08
+        . Optimise substitution model parameters:  no
+        . Run ID:          none
+        . Random seed:           1632878998
+        . Subtree patterns aliasing:       no
+        . Version:           3.3.20190909
+        . Byte alignment:        32
+        . AVX enabled:           yes
+        . SSE enabled:           yes
+
+  ////////////////////////////////////.\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+  \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\.//////////////////////////////////////////
+
+
+
+. 226 patterns found (out of a total of 226 sites). 
+
+. 1 sites without polymorphism (0.44%).
+
+
+. Computing pairwise distances...
+
+. Building BioNJ tree...
+
+. WARNING: this analysis requires at least 267 MB of memory space.
+
+
+. Score of initial tree: -99820.78
+
+. Starting first round of SPRs...
+
+       562s |   1 | lnL=    -98772.5 | depth=    9/  110 | improvements= 312 | delta_lnL=  228.8/ 1000.0   +
+      1095s |   2 | lnL=    -98799.3 | depth=   11/   66 | improvements= 311 | delta_lnL=  301.7/ 1000.0  
+      1620s |   3 | lnL=    -98679.2 | depth=    7/   39 | improvements= 329 | delta_lnL=  115.2/ 1000.0   +
+      2069s |   4 | lnL=    -98649.0 | depth=    7/   23 | improvements= 267 | delta_lnL=  183.5/ 1000.0   +
+      2268s |   5 | lnL=    -98597.4 | depth=    6/   13 | improvements= 267 | delta_lnL=   88.1/ 1000.0   +
+      2452s |   6 | lnL=    -98696.3 | depth=   11/   12 | improvements= 275 | delta_lnL=   45.6/  603.4  
+      2731s |   7 | lnL=    -98616.2 | depth=   10/   17 | improvements= 257 | delta_lnL=   57.0/  603.4  
+      2997s |   8 | lnL=    -98548.7 | depth=    6/   16 | improvements= 240 | delta_lnL=   29.2/  603.4   +
+      3179s |   9 | lnL=    -98505.7 | depth=    7/   12 | improvements= 240 | delta_lnL=   82.5/  603.4   +
+      3259s |  10 | lnL=    -98478.5 | depth=    7/   13 | improvements= 211 | delta_lnL=   89.2/  113.9   +
+      3340s |  11 | lnL=    -98368.3 | depth=    9/   13 | improvements= 181 | delta_lnL=   70.3/  113.9   +
+      3419s |  12 | lnL=    -98368.6 | depth=    7/   15 | improvements= 180 | delta_lnL=   27.3/  113.9  
+      3499s |  13 | lnL=    -98404.0 | depth=    6/   13 | improvements= 164 | delta_lnL=   30.7/  113.9  
+      3593s |  14 | lnL=    -98428.3 | depth=    6/   12 | improvements= 135 | delta_lnL=   51.8/  178.4  
+      3681s |  15 | lnL=    -98294.4 | depth=    4/   12 | improvements= 106 | delta_lnL=   15.4/  178.4   +
+      3760s |  16 | lnL=    -98278.0 | depth=    8/   10 | improvements= 103 | delta_lnL=   49.5/  178.4   +
+      3856s |  17 | lnL=    -98244.9 | depth=   11/   14 | improvements=  60 | delta_lnL=   11.9/  178.4   +
+      3915s |  18 | lnL=    -98232.7 | depth=    7/   17 | improvements=  48 | delta_lnL=    9.7/  103.7   +
+      3976s |  19 | lnL=    -98234.4 | depth=    5/   13 | improvements=  51 | delta_lnL=    9.7/  103.7  
+      4028s |  20 | lnL=    -98227.9 | depth=    4/   11 | improvements=  39 | delta_lnL=   15.3/  103.7   +
+      4080s |  21 | lnL=    -98217.0 | depth=    4/   10 | improvements=  52 | delta_lnL=   12.8/  103.7   +
+      4110s |  22 | lnL=    -98233.9 | depth=    7/   10 | improvements=  44 | delta_lnL=   25.1/   50.0  
+      4140s |  23 | lnL=    -98219.6 | depth=    6/   13 | improvements=  44 | delta_lnL=   10.1/   50.0  
+      4167s |  24 | lnL=    -98243.4 | depth=    7/   12 | improvements=  27 | delta_lnL=   21.9/   50.0  
+      4197s |  25 | lnL=    -98222.3 | depth=    3/   13 | improvements=  40 | delta_lnL=   18.9/   50.0  
+      4223s |  26 | lnL=    -98214.4 | depth=    4/    9 | improvements=  24 | delta_lnL=    7.6/   50.1   +
+      4251s |  27 | lnL=    -98215.7 | depth=    6/   10 | improvements=  33 | delta_lnL=   21.8/   50.1  
+      4279s |  28 | lnL=    -98227.3 | depth=    9/   12 | improvements=  32 | delta_lnL=    8.5/   50.1  
+      4309s |  29 | lnL=    -98221.7 | depth=    3/   15 | improvements=  42 | delta_lnL=    5.0/   50.1  
+      4336s |  30 | lnL=    -98207.0 | depth=    8/    9 | improvements=  31 | delta_lnL=   23.4/   50.0   +
+      4367s |  31 | lnL=    -98200.3 | depth=    7/   14 | improvements=  22 | delta_lnL=   31.4/   50.0   +
+      4393s |  32 | lnL=    -98215.2 | depth=    5/   13 | improvements=  23 | delta_lnL=    8.3/   50.0  
+      4421s |  33 | lnL=    -98212.8 | depth=    3/   11 | improvements=  25 | delta_lnL=    5.5/   50.0  
+      4457s |  34 | lnL=    -98206.0 | depth=    3/    9 | improvements=  22 | delta_lnL=   14.9/   62.8  
+      4488s |  35 | lnL=    -98204.4 | depth=    7/    9 | improvements=  22 | delta_lnL=   22.8/   62.8  
+      4519s |  36 | lnL=    -98221.7 | depth=    4/   13 | improvements=  23 | delta_lnL=    9.0/   62.8  
+      4548s |  37 | lnL=    -98208.5 | depth=    3/   10 | improvements=  14 | delta_lnL=   13.4/   62.8  
+
+. Second round of optimization...
+
+      4576s |  38 | lnL=    -98203.0 | depth=    3/   13 | improvements=  33 | delta_lnL=   12.9/   50.0  
+      4603s |  39 | lnL=    -98204.2 | depth=    3/   10 | improvements=  32 | delta_lnL=    7.0/   50.0  
+      4631s |  40 | lnL=    -98191.2 | depth=    2/    8 | improvements=  34 | delta_lnL=    4.3/   50.0   +
+      4665s |  41 | lnL=    -98192.1 | depth=    2/    6 | improvements=  33 | delta_lnL=    3.1/   50.0  
+      4683s |  42 | lnL=    -98195.6 | depth=    2/    6 | improvements=  27 | delta_lnL=   11.2/   25.7  
+      4701s |  43 | lnL=    -98191.3 | depth=    3/    6 | improvements=  23 | delta_lnL=    8.0/   25.7  
+      4718s |  44 | lnL=    -98184.5 | depth=    7/    7 | improvements=  21 | delta_lnL=   20.6/   25.7   +
+      4738s |  45 | lnL=    -98196.4 | depth=    3/   11 | improvements=  32 | delta_lnL=    4.7/   25.7  
+      4760s |  46 | lnL=    -98201.8 | depth=    1/    8 | improvements=  24 | delta_lnL=    0.0/   41.2  
+      4782s |  47 | lnL=    -98197.2 | depth=    3/    6 | improvements=  29 | delta_lnL=    2.3/   41.2  
+      4804s |  48 | lnL=    -98190.2 | depth=    2/    7 | improvements=  23 | delta_lnL=    7.5/   41.2  
+      4824s |  49 | lnL=    -98187.2 | depth=    1/    6 | improvements=  19 | delta_lnL=    0.0/   41.2  
+      4841s |  50 | lnL=    -98187.1 | depth=    2/    5 | improvements=  25 | delta_lnL=    3.2/   20.0  
+      4863s |  51 | lnL=    -98184.6 | depth=    2/    6 | improvements=  19 | delta_lnL=    5.2/   20.0  
+      4878s |  52 | lnL=    -98193.4 | depth=    2/    6 | improvements=  22 | delta_lnL=    3.3/   20.0  
+      4896s |  53 | lnL=    -98179.3 | depth=    2/    6 | improvements=  33 | delta_lnL=    2.4/   20.0   +
+      4912s |  54 | lnL=    -98185.6 | depth=    1/    6 | improvements=  19 | delta_lnL=    0.0/   20.0  
+      4927s |  55 | lnL=    -98185.2 | depth=    2/    5 | improvements=  22 | delta_lnL=    0.2/   20.0  
+      4943s |  56 | lnL=    -98180.3 | depth=    2/    6 | improvements=  17 | delta_lnL=    5.9/   20.0  
+      4958s |  57 | lnL=    -98176.7 | depth=    3/    6 | improvements=  14 | delta_lnL=    2.3/   20.0   +
+      4973s |  58 | lnL=    -98179.8 | depth=    2/    7 | improvements=  16 | delta_lnL=    2.3/   20.0  
+      4990s |  59 | lnL=    -98183.9 | depth=    3/    6 | improvements=  17 | delta_lnL=   12.1/   20.0  
+      5005s |  60 | lnL=    -98181.3 | depth=    1/    7 | improvements=  17 | delta_lnL=    0.0/   20.0  
+      5027s |  61 | lnL=    -98186.0 | depth=    5/    5 | improvements=  22 | delta_lnL=    5.3/   20.0  
+      5042s |  62 | lnL=    -98184.1 | depth=    3/    9 | improvements=  12 | delta_lnL=    3.1/   24.2  
+      5060s |  63 | lnL=    -98179.7 | depth=    2/    7 | improvements=  14 | delta_lnL=    4.7/   24.2  
+      5076s |  64 | lnL=    -98183.1 | depth=    2/    6 | improvements=  16 | delta_lnL=    0.7/   24.2  
+      5092s |  65 | lnL=    -98186.0 | depth=    2/    6 | improvements=  16 | delta_lnL=    0.7/   24.2  
+      5106s |  66 | lnL=    -98174.6 | depth=    3/    6 | improvements=  14 | delta_lnL=    3.5/   20.0   +
+      5120s |  67 | lnL=    -98171.9 | depth=    1/    7 | improvements=  10 | delta_lnL=    0.0/   20.0   +
+      5133s |  68 | lnL=    -98173.2 | depth=    1/    5 | improvements=   8 | delta_lnL=    0.0/   20.0  
+      5147s |  69 | lnL=    -98173.0 | depth=    2/    5 | improvements=   9 | delta_lnL=    4.9/   20.0  
+      5161s |  70 | lnL=    -98174.8 | depth=    1/    6 | improvements=  11 | delta_lnL=    0.0/   20.0  
+      5181s |  71 | lnL=    -98166.0 | depth=    2/    5 | improvements=  10 | delta_lnL=    1.8/   20.0   +
+      5195s |  72 | lnL=    -98171.5 | depth=    1/    6 | improvements=  15 | delta_lnL=    0.0/   20.0  
+      5208s |  73 | lnL=    -98171.3 | depth=    1/    5 | improvements=   6 | delta_lnL=    0.0/   20.0  
+      5223s |  74 | lnL=    -98173.2 | depth=    1/    5 | improvements=   7 | delta_lnL=    0.0/   20.0  
+      5236s |  75 | lnL=    -98170.1 | depth=    1/    5 | improvements=   5 | delta_lnL=    0.0/   20.0  
+
+. Third round of optimization...
+
+      5422s |  76 | lnL=    -98163.0 | depth=    1/   10 | improvements=   6 | delta_lnL=    0.0/  100.0 | triple moves=   5   +
+      5611s |  77 | lnL=    -98162.8 | depth=    0/    8 | improvements=   1 | delta_lnL=    0.0/  100.0 | triple moves=   5   +
+      5807s |  78 | lnL=    -98162.7 | depth=    0/    6 | improvements=   1 | delta_lnL=    0.0/  100.0 | triple moves=   5   +
+      6002s |  79 | lnL=    -98162.7 | depth=    0/    5 | improvements=   0 | delta_lnL=    0.0/  100.0 | triple moves=   5   +
+
+. Final optimisation steps...
+
+
+. Log likelihood of the current tree: -98162.658465761167462915182.
+
+. Calculating fast branch supports (using 'aBayes').
+
+. Printing the most likely tree in file 'big2_1_phy_phyml_tree.txt'.
+
+. Time used 1h40m47s
+
+oooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooo

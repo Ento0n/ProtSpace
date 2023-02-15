@@ -1,0 +1,459 @@
+--- KLK4
+Hosa KLK4
+Mumu Klk4
+Calu KLK4
+EreuK4
+--- KLK5
+Hosa KLK5
+KLK5 Homo sapiens GeneID25818
+Mumu Klk5
+Calu KLK5
+EreuK5
+SopaK5
+Phci_A_10
+--- KLK4/5
+Oran_A_11
+--- KLK13
+Oran A 03
+Mumu Klk13
+Hosa KLK13
+Calu KLK13
+SopaK13
+EreuK13
+Erinaceus europaeus GeneID103120804
+--- KLK7
+Oran A 09
+Phci A 08
+EreuK7
+Calu KLK7
+Mumu Klk7
+Hosa KLK7
+--- KLK6
+Oran A 10
+Phci A 09
+Mumu Klk6
+Hosa KLK6
+EreuK6
+SopaK6
+--- KLK8
+Oran A 08
+Phci A 07
+Hosa KLK8
+Mumu Klk8
+Calu KLK8
+EreuK8
+--- KLK11
+Oran A 05
+Phci A 04
+SopaK11
+EreuK11
+Erinaceus europaeus GeneID103120805
+Mumu Klk11
+Calu KLK11
+Hosa KLK11
+--- KLK9
+Oran A 07
+Phci A 06
+SopaK9
+EreuK9
+Calu KLK9
+Hosa KLK9
+Mumu Klk9
+--- KLK10
+Oran A 06
+Phci A 05
+EreuK10
+Calu KLK10
+SopaK10
+Hosa KLK10
+Mumu Klk10
+--- KLK12
+Oran A 04
+Mumu Klk12
+Hosa KLK12
+Calu KLK12
+EreuK12
+SopaK12
+Oran_A_13
+--- KLK15
+Alsi A 08
+Pesi B 08
+Alsi B 02
+Laag TKL2
+Oran A 12
+Phci A 11
+Hosa KLK15
+EreuK15
+Mumu Klk15
+Calu KLK15
+KLK15 Canis lupus
+Calu KLK1a
+SopaB11
+SopaB8
+SopaB9
+SopaB10
+SopaB4
+SopaB1
+--- KLK14
+Euma8
+Laag TKL8
+Vako A 01
+Oran A 01
+Phci A 01
+Mumu Klk14
+Hosa KLK14
+Hosa KLK 1
+SopaK14
+Erueu KLK14
+Calu KLK14
+--- Reptilian KLKs
+Alsi A 05
+Alsi A 06
+Alligator sinensis GeneID112549762
+Pesi B 07
+Alsi B 01
+Euma3
+Laag TKL3
+Vako A 06
+Alligator sinensis GeneID102369812
+Alsi A 03
+Pesi A 06
+Pesi A 05
+Alsi A 01
+Euma6
+Laag TKL6
+Vako A 03
+Alsi A 02
+Vako A 02
+Euma7
+Laag TKL7
+Nana TKL3
+PrmuB01
+Thel TKL1
+Pesi B 06
+Alligator sinensis GeneID102382711
+Laag TKL4
+Euma4
+Nana TKL1
+Vako A 05
+Euma5
+Laag TKL5
+Vako A 04
+Thel TKL2
+Nana TKL2
+PrmuB02
+Protobothrops mucrosquamatus GeneID107288023
+Pesi B 05
+Pesi B 04
+Pesi B 03
+Pesi A 04
+Pesi A 01
+Pesi A 03
+Pelodiscus sinensis GeneID112544765
+Pesi A 02
+Pelodiscus sinensis GeneID102446142
+Pesi B 01
+--- Mammalian KLK1
+Hosa KLK1
+Calu KLK1b
+KLK1 Canis lupus
+EreuK1b
+Erinaceus europaeus GeneID103120812
+SopaB2
+SopaB3
+SopaB7
+SopaB5
+Hosa KLK2
+Hosa KLK3
+Calu KLK2
+EreuK1a
+Erinaceus europaeus GeneID103120810
+MumuKlk1b3
+MumuKlk1b1
+MumuKlk1b9
+MumuKlk1b4
+MumuKlk1
+MumuKlk1b5
+MumuKlk1b11
+MumuKlk1b21
+MumuKlk1b24
+MumuKlk1b27
+MumuKlk1b22
+Mumu Klk1b8
+MumuKlk1b16
+Egfbp2 Mus musculus GeneID13647
+MumuKlk1b26
+Oran A 14
+--- non-mammalian KLK1
+Xetr TKL3
+Xetr TKL1
+Xetr TKL2
+Euma2
+Vako A 07
+Laag TKL1
+--- SVSP
+Prmu A 04
+Prmu A 11
+Crvi A 09
+Crvi A 07
+Crvi A 04
+Prmu A 05
+Crvi A 01
+Crvi A 03
+Crvi A 05
+Crvi A 10a
+Crvi A 10b
+Crvi A 08a
+Crvi A 08b
+Prmu A 01
+Prmu A 08
+Prmu A 10
+Prmu A 06
+Crvi A 02
+Prmu A 07
+--- SVL
+Nana SVL1
+Nana SVL2
+Thel SVL2
+Thel SVL1
+Vako_B_01
+Laag_SVL1
+Euma1
+Alsi_A_04
+Pesi_A_07
+--- Anionic trypsin II
+Alligator sinensis GeneID102385992
+Latimeria chalumnae GeneID102366613
+Pelodiscus sinensis GeneID102463318
+Alligator sinensis GeneID102385253
+Latimeria chalumnae GeneID102366350
+zgc 171509 Danio rerio GeneID100141339
+Danio rerio GeneID103908930
+zgc 92590 Danio rerio GeneID474322
+Vako A 08
+Alligator sinensis GeneID102385741
+Pelodiscus sinensis GeneID102443518
+Pelodiscus sinensis GeneID102445677
+Xetr out3
+Xetr out1
+Xetr out4
+Xetr out5
+Xetr out6
+Latimeria chalumnae GeneID102345227
+Latimeria chalumnae GeneID102349341
+Danio rerio GeneID322453
+Danio rerio GeneID100535672
+Rhincodon typus GeneID109924127 isoform X1
+Rhincodon typus GeneID109924125
+Rhincodon typus GeneID109924126 isoform X2
+Rhincodon typus GeneID109924126 isoform X1
+Latimeria chalumnae GeneID102350107
+Latimeria chalumnae GeneID106701818
+prss1 Danio rerio GeneID65223
+prss1 Xenopus tropicalis GeneID548509
+Xenopus tropicalis GeneID496623
+Xenopus tropicalis GeneID101730988 isoform X1
+prss2 Xenopus tropicalis GeneID496627
+Xenopus tropicalis GeneID116406450
+Alligator sinensis GeneID102370737
+Pelodiscus sinensis GeneID102445365
+Erinaceus europaeus GeneID103112861
+TMPRSS11D Lacerta agilis GeneID117060477
+Protobothrops mucrosquamatus GeneID107286910
+Protobothrops mucrosquamatus GeneID107286912
+Erinaceus europaeus GeneID103112820
+cationic trypsin Canis lupus familiaris GeneID475521
+2210010C04Rik Mus musculus GeneID67373
+1810009J06Rik Mus musculus GeneID73626
+Gm2663 Mus musculus GeneID100040208
+Pelodiscus sinensis GeneID102445111
+Alligator sinensis GeneID102370981
+Alligator sinensis GeneID102370981 2
+try10 Xenopus tropicalis GeneID496640
+Protobothrops mucrosquamatus GeneID107286913
+Protobothrops mucrosquamatus GeneID107286911
+PRSS2 Homo sapiens GeneID5645 isoform 1
+PRSS3 Homo sapiens GeneID5646 isoform X1
+PRSS2 Canis lupus
+Erinaceus europaeus GeneID103112821
+Erinaceus europaeus GeneID103112822
+Prss2 Mus musculus GeneID22072
+Try10 Mus musculus GeneID436522
+Try4 Mus musculus GeneID22074
+Try5 Mus musculus GeneID103964
+Gm5771 Mus musculus GeneID436523
+Prss1 Mus musculus GeneID114228
+Gm10334 Mus musculus GeneID100040233
+Prss3 Mus musculus GeneID22073
+--- Anionic trypsin I
+Rhincodon typus GeneID109925952
+Danio rerio GeneID565078
+Latimeria chalumnae GeneID102363265
+Rhincodon typus GeneID109920168
+zmp 0000001088 Danio rerio GeneID560086
+Latimeria chalumnae GeneID102356172
+Alligator sinensis GeneID102387651
+Pelodiscus sinensis GeneID102446786
+Protobothrops mucrosquamatus GeneID107291374
+--- Complement & Granzyme
+cfd Danio rerio GeneID553553
+cfd Xenopus tropicalis GeneID394945
+CFD Protobothrops mucrosquamatus GeneID107282291
+Alligator sinensis GeneID102381206
+Cfd Mus musculus GeneID11537 isoform 1
+CFD Homo sapiens GeneID1675 isoform 2
+CFD Canis lupus
+Latimeria chalumnae GeneID102347764
+prtn3 Xenopus tropicalis GeneID448597
+Prtn3 Mus musculus GeneID19152
+Elane Mus musculus GeneID50701
+ELANE Canis lupus
+Latimeria chalumnae GeneID102352835
+Latimeria chalumnae GeneID102359481
+Latimeria chalumnae GeneID102352566
+XB17329844 Xenopus tropicalis GeneID100497492
+Xenopus tropicalis GeneID496767
+Protobothrops mucrosquamatus GeneID114922240
+PRSS57 Alligator sinensis GeneID102388662
+Erinaceus europaeus GeneID103115097
+PRSS57 Homo sapiens GeneID400668 isoform 1
+Prss57 Mus musculus GeneID73106
+PRSS57 Canis lupus
+Latimeria chalumnae GeneID102345749 isoform X2
+Latimeria chalumnae GeneID102345749 isoform X1
+GZMM Alligator sinensis GeneID102386315
+gzmh Xenopus tropicalis GeneID496758
+Pelodiscus sinensis GeneID102454962
+Alligator sinensis GeneID102386560
+Latimeria chalumnae GeneID102354524
+Alligator sinensis GeneID102385169 isoform X1
+GZMM Homo sapiens GeneID3004 isoform 1
+Gzmm Mus musculus GeneID16904 isoform 1
+gzm3 Danio rerio GeneID100000986
+Danio rerio GeneID100001138
+Danio rerio GeneID100001065
+Danio rerio GeneID100001210
+Danio rerio GeneID558805
+Danio rerio GeneID100034628 isoform X2
+Danio rerio GeneID100034472 isoform X2
+Danio rerio GeneID100034478
+Danio rerio GeneID110439068
+Danio rerio GeneID110439063
+Danio rerio GeneID100034588
+Danio rerio GeneID110439065
+Danio rerio GeneID110439069
+Danio rerio GeneID100034439
+Danio rerio GeneID100034620
+Danio rerio GeneID100034650
+Danio rerio GeneID556860
+Danio rerio GeneID101886682
+Danio rerio GeneID556666
+Danio rerio GeneID100034605
+Danio rerio GeneID561111
+Danio rerio GeneID110439067
+Danio rerio GeneID556598
+Danio rerio GeneID567711
+Erinaceus europaeus GeneID103126417
+Erinaceus europaeus GeneID103126486
+Erinaceus europaeus GeneID103126467
+Erinaceus europaeus GeneID103126437
+Erinaceus europaeus GeneID103126447
+Erinaceus europaeus GeneID103126477
+Erinaceus europaeus GeneID103126532
+Mcpt8 Mus musculus GeneID17231
+GZMB Canis lupus
+Ctsg Mus musculus GeneID13035
+Erinaceus europaeus GeneID103126509
+CTSG Canis lupus
+Erinaceus europaeus GeneID103126503
+GZMH Homo sapiens GeneID2999 isoform 1
+gzma Canis lupus
+Gzmb Mus musculus GeneID14939
+Gzmc Mus musculus GeneID14940 isoform X2
+Gzmf Mus musculus GeneID14943
+Gzmn Mus musculus GeneID245839 isoform 2
+Gzmg Mus musculus GeneID14944
+Gzme Mus musculus GeneID14942
+Gzmd Mus musculus GeneID14941
+Pelodiscus sinensis GeneID102462712
+Alligator sinensis GeneID102388738
+Alligator sinensis GeneID102388488
+Pelodiscus sinensis GeneID102463197
+Alligator sinensis GeneID102367834
+Pelodiscus sinensis GeneID102454985
+Pelodiscus sinensis GeneID102450790
+Pelodiscus sinensis GeneID102450564
+Pelodiscus sinensis GeneID102455738
+Alligator sinensis GeneID102387989
+Alligator sinensis GeneID102371192
+Alligator sinensis GeneID102372276
+Alligator sinensis GeneID102374953
+Alligator sinensis GeneID112548405
+CMA1 Canis lupus 2
+CMA1 Canis lupus
+Cma1 Mus musculus GeneID17228
+Erinaceus europaeus GeneID103126550
+Erinaceus europaeus GeneID103126571
+Erinaceus europaeus GeneID103126542
+Mcpt4 Mus musculus GeneID17227
+Cma2 Mus musculus GeneID545055 isoform 1
+Mcpt9 Mus musculus GeneID17232
+Mcpt2 Mus musculus GeneID17225
+Mcpt1 Mus musculus GeneID17224
+Pelodiscus sinensis GeneID102463263
+Pelodiscus sinensis GeneID102461984
+Pelodiscus sinensis GeneID102463428
+Pelodiscus sinensis GeneID102461598
+Pelodiscus sinensis GeneID102455240
+Pelodiscus sinensis GeneID106732597
+Pelodiscus sinensis GeneID102458929
+Pelodiscus sinensis GeneID102459172
+Pelodiscus sinensis GeneID102462227
+Pelodiscus sinensis GeneID102455484
+Pelodiscus sinensis GeneID102462771
+Pelodiscus sinensis GeneID102455354
+Pelodiscus sinensis GeneID106732480
+Pelodiscus sinensis GeneID102460125
+Pelodiscus sinensis GeneID102453822
+Pelodiscus sinensis GeneID106732481
+Pelodiscus sinensis GeneID102459655
+Pelodiscus sinensis GeneID102462956
+Pelodiscus sinensis GeneID102460362
+Pelodiscus sinensis GeneID102444467
+Pelodiscus sinensis GeneID102455097
+Pelodiscus sinensis GeneID102454582
+Pelodiscus sinensis GeneID102462471
+Pelodiscus sinensis GeneID102455167
+Pelodiscus sinensis GeneID102454843
+Pelodiscus sinensis GeneID102462794
+Pelodiscus sinensis GeneID112547189
+Pelodiscus sinensis GeneID102458389
+Pelodiscus sinensis GeneID112547215
+Pelodiscus sinensis GeneID106731344
+gzma Danio rerio GeneID795070
+gzmk Danio rerio GeneID794999 isoform X1
+Alligator sinensis GeneID102383762
+gzmak Xenopus tropicalis GeneID100497188
+Latimeria chalumnae GeneID102346637
+Latimeria chalumnae GeneID102345118
+Protobothrops mucrosquamatus GeneID107283810
+gzma Xenopus tropicalis GeneID100135014 isoform X1
+GZMA Pelodiscus sinensis GeneID102462891
+Alligator sinensis GeneID102381782
+Alligator sinensis GeneID102381782 2
+Erinaceus europaeus GeneID103109779
+Erinaceus europaeus GeneID103109778
+Gzma Mus musculus GeneID14938
+GZMA Homo sapiens GeneID3001
+GZMA Canis lupus
+GZMK Latimeria chalumnae GeneID102348943
+GZMK Erinaceus europaeus GeneID103109798
+Gzmk Mus musculus GeneID14945
+GZMK Canis lupus
+Rhincodon typus GeneID109917820
+Rhincodon typus GeneID109931235
+Rhincodon typus GeneID109931234
+Rhincodon_typus_GeneID109917819
+Rhincodon_typus_GeneID109917818
+gzmk_Rhincodon_typus_GeneID109917821
+Rhincodon_typus_GeneID109918005

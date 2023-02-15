@@ -1,453 +1,458 @@
-﻿ID;Group;Species;Taxa
-mBibiA2;A;Bison bison bison;Placentalia
-mBibiA3;A;Bison bison bison;Placentalia
-mBibiA4;A;Bison bison bison;Placentalia
-mBotaA;A;Bos taurus;Placentalia
-mBotaA2;A;Bos taurus;Placentalia
-mBotaA3;A;Bos taurus;Placentalia
-mBotaA5;A;Bos taurus;Placentalia
-mCahiA;A;Capra hircus;Placentalia
-mCahiA2;A;Capra hircus;Placentalia
-mCahiA4;A;Capra hircus;Placentalia
-mCahiA5;A;Capra hircus;Placentalia
-mChlaA2;A;Chinchilla lanigera;Placentalia
-mChlaA3;A;Chinchilla lanigera;Placentalia
-mChlaA4;A;Chinchilla lanigera;Placentalia
-mCocrA2;A;Condylura cristata;Placentalia
-mCocrA3;A;Condylura cristata;Placentalia
-mDanoA;A;Dasypus novemcinctus;Placentalia
-mEledA1;A;Elephantulus edwardii;Placentalia
-mEledA2;A;Elephantulus edwardii;Placentalia
-mEledA3;A;Elephantulus edwardii;Placentalia
-mEqcaA;A;Equus caballus;Placentalia
-mEreuA1;A;Erinaceus europaeus;Placentalia
-mEreuA10;A;Erinaceus europaeus;Placentalia
-mEreuA11;A;Erinaceus europaeus;Placentalia
-mEreuA12;A;Erinaceus europaeus;Placentalia
-mEreuA13;A;Erinaceus europaeus;Placentalia
-mEreuA14;A;Erinaceus europaeus;Placentalia
-mEreuA15;A;Erinaceus europaeus;Placentalia
-mEreuA2;A;Erinaceus europaeus;Placentalia
-mEreuA3;A;Erinaceus europaeus;Placentalia
-mEreuA5;A;Erinaceus europaeus;Placentalia
-mEreuA6;A;Erinaceus europaeus;Placentalia
-mEreuA7;A;Erinaceus europaeus;Placentalia
-mEreuA8;A;Erinaceus europaeus;Placentalia
-mEreuA9;A;Erinaceus europaeus;Placentalia
-mHeglA1;A;Heterocephalus glaber;Placentalia
-mHeglA2;A;Heterocephalus glaber;Placentalia
-mHeglA3;A;Heterocephalus glaber;Placentalia
-mHosaA;A;Homo sapiens;Placentalia
-mLoafA1;A;Loxodonta africana;Placentalia
-mLoafA2;A;Loxodonta africana;Placentalia
-mMamaA1;A;Marmota marmota marmota;Placentalia
-mMimuA;A;Microcebus murinus;Placentalia
-mMumuA;A;Mus musculus;Placentalia
-mMyluA1;A;Myotis lucifugus;Placentalia
-mMyluA2;A;Myotis lucifugus;Placentalia
-mMyluA4;A;Myotis lucifugus;Placentalia
-mOcprA1;A;Ochotona princeps;Placentalia
-mOcprA2;A;Ochotona princeps;Placentalia
-mOcprA3;A;Ochotona princeps;Placentalia
-mOdviA1;A;Odocoileus virginianus texanus;Placentalia
-mOdviA2;A;Odocoileus virginianus texanus;Placentalia
-mOdviA3;A;Odocoileus virginianus texanus;Placentalia
-mOrcuA1;A;Oryctolagus cuniculus;Placentalia
-mOrcuA2;A;Oryctolagus cuniculus;Placentalia
-mOrcuA3;A;Oryctolagus cuniculus;Placentalia
-mOrcuA4;A;Oryctolagus cuniculus;Placentalia
-mOvarA1;A;Ovis aries;Placentalia
-mOvarA2;A;Ovis aries;Placentalia
-mOvarA3;A;Ovis aries;Placentalia
-mPahoA1;A;Pantholops hodgsonii;Placentalia
-mPahoA3;A;Pantholops hodgsonii;Placentalia
-mPahoA5;A;Pantholops hodgsonii;Placentalia
-mSoarA2;A;Sorex araneus;Placentalia
-mSoarA3;A;Sorex araneus;Placentalia
-mTrmaA2;A;Trichechus manatus latirostris;Placentalia
-bAncyB;B;Anser cygnoides;Aves
-bAnplB;B;Anas platyrhynchos platyrhynchos;Aves
-bApfoB;B;Aptenodytes forsteri;Aves
-bAqchB;B;Aquila chrysaetos canadensis;Aves
-bBareB;B;Balearica regulorum gibbericeps;Aves
-bChmaB;B;Chlamydotis macqueenii;Aves
-bCucaB;B;Cuculus canorus;Aves
-bGagaB;B;Gallus gallus;Aves
-bHaleB;B;Haliaeetus leucocephalus;Aves
-bNaauB;B;Nannopterum auritus;Aves
-bPafaB;B;Patagioenas fasciata monilis;Aves
-bPskrB;B;Psittacula krameri;Aves
-bPyadB;B;Pygoscelis adeliae;Aves
-bStocB;B;Strix occidentalis caurina;Aves
-bUrpeB;B;Urile pelagicus;Aves
-bAncyC;C;Anser cygnoides;Aves
-bAnplC;C;Anas platyrhynchos platyrhynchos;Aves
-bApauC;C;Apteryx australis mantelli;Aves
-bApfoC;C;Aptenodytes forsteri;Aves
-bAqchC;C;Aquila chrysaetos canadensis;Aves
-bBareC;C;Balearica regulorum gibbericeps;Aves
-bChmaC;C;Chlamydotis macqueenii;Aves
-bCucaC;C;Cuculus canorus;Aves
-bGagaC;C;Gallus gallus;Aves
-bHaleC;C;Haliaeetus leucocephalus;Aves
-bNaauC;C;Nannopterum auritus;Aves
-bOphoC;C;Opisthocomus hoazin;Aves
-bPafaC;C;Patagioenas fasciata monilis;Aves
-bPskrC;C;Psittacula krameri;Aves
-bPyadC;C;Pygoscelis adeliae;Aves
-bStocC;C;Strix occidentalis caurina;Aves
-bUrpeC;C;Urile pelagicus;Aves
-cAlmiC;C;Alligator mississippiensis;Crocodylia
-cAlsiC;C;Alligator sinensis;Crocodylia
-cCrpoC;C;Crocodylus porosus;Crocodylia
-cGavganC;C;Gavialis gangeticus;Crocodylia
-mAifuC;C;Ailurus fulgens styani;Placentalia
-mAimeC;C;Ailuropoda melanoleuca;Placentalia
-mBibiC;C;Bison bison bison;Placentalia
-mBotaC;C;Bos taurus;Placentalia
-mCahiC;C;Capra hircus;Placentalia
-mCaluC;C;Canis lupus familiaris;Placentalia
-mChlaC;C;Chinchilla lanigera;Placentalia
-mDanoC;C;Dasypus novemcinctus;Placentalia
-mEnluC;C;Enhydra lutris kenyoni;Placentalia
-mEqcaC;C;Equus caballus;Placentalia
-mEreuC;C;Erinaceus europaeus;Placentalia
-mLoafC;C;Loxodonta africana;Placentalia
-mMimuC;C;Microcebus murinus;Placentalia
-mModoC;C;Monodelphis domestica;Marsupialia
-mMumuC;C;Mus musculus;Placentalia
-mMupuC;C;Mustela putorius furo;Placentalia
-mMyluC;C;Myotis lucifugus;Placentalia
-mOcprC;C;Ochotona princeps;Placentalia
-mOdviC;C;Odocoileus virginianus texanus;Placentalia
-mOrcuC;C;Oryctolagus cuniculus;Placentalia
-mOrorC;C;Orcinus orca;Placentalia
-mOvarC;C;Ovis aries;Placentalia
-mPahoC;C;Pantholops hodgsonii;Placentalia
-mPatiC;C;Panthera tigris altaica;Placentalia
-mPhciC;C;Phascolarctos cinereus;Marsupialia
-mPtvaC;C;Pteropus vampyrus;Placentalia
-mSahaC;C;Sarcophilus harrisii;Marsupialia
-mSoarC;C;Sorex araneus;Placentalia
-mTrmaC;C;Trichechus manatus latirostris;Placentalia
-mUrmaC;C;Ursus maritimus;Placentalia
-bAncyD;D3;Anser cygnoides;Aves
-bAnplD;D3;Anas platyrhynchos platyrhynchos;Aves
-bApfoD;D3;Aptenodytes forsteri;Aves
-bAqchD;D3;Aquila chrysaetos canadensis;Aves
-bBareD;D3;Balearica regulorum gibbericeps;Aves
-bChmaD;D3;Chlamydotis macqueenii;Aves
-bCocoD;D3;Corvus cornix cornix;Aves
-bCucaD;D3;Cuculus canorus;Aves
-bGagaD;D3;Gallus gallus;Aves
-bHaleD;D3;Haliaeetus leucocephalus;Aves
-bNaauD;D3;Nannopterum auritus;Aves
-bOphoD;D3;Opisthocomus hoazin;Aves
-bPafaD;D3;Patagioenas fasciata monilis;Aves
-bPskrD;D3;Psittacula krameri;Aves
-bPyadD;D3;Pygoscelis adeliae;Aves
-bSecoD;D3;Setophaga coronata coronata;Aves
-bStocD;D3;Strix occidentalis caurina;Aves
-bUrpeD;D3;Urile pelagicus;Aves
-cAlmiD1;D1;Alligator mississippiensis;Crocodylia
-cAlmiD3;D3;Alligator mississippiensis;Crocodylia
-cAlsiD3;D3;Alligator sinensis;Crocodylia
-cChmyD1;D1;Chelonia mydas;Testudines
-cChmyD3;D3;Chelonia mydas;Testudines
-cChpiD1;D1;Chrysemys picta bellii;Testudines
-cChpiD2;D2;Chrysemys picta bellii;Testudines
-cChpiD3;D3;Chrysemys picta bellii;Testudines
-cCrpoD1;D1;Crocodylus porosus;Crocodylia
-cCrpoD3;D3;Crocodylus porosus;Crocodylia
-cGavganD1;D1;Gavialis gangeticus;Crocodylia
-cGavganD3;D3;Gavialis gangeticus;Crocodylia
-cGoagD1;D1;Gopherus agassizii;Testudines
-cGoagD2;D2;Gopherus agassizii;Testudines
-cGoagD3;D3;Gopherus agassizii;Testudines
-cPesiD1;D1;Pelodiscus sinensis;Testudines
-cPesiD2;D2;Pelodiscus sinensis;Testudines
-cPesiD3;D3;Pelodiscus sinensis;Testudines
-mAifuD;D1;Ailurus fulgens styani;Placentalia
-mAimeDa;D1;Ailuropoda melanoleuca;Placentalia
-mAimeDb;D1;Ailuropoda melanoleuca;Placentalia
-mBibiDa;D1;Bison bison bison;Placentalia
-mBibiDb;D1;Bison bison bison;Placentalia
-mBotaDa;D1;Bos taurus;Placentalia
-mBotaDb;D1;Bos taurus;Placentalia
-mCahiDa;D1;Capra hircus;Placentalia
-mCahiDb;D1;Capra hircus;Placentalia
-mCaluD;D1;Canis lupus familiaris;Placentalia
-mChlaD;D1;Chinchilla lanigera;Placentalia
-mCocrD;D1;Condylura cristata;Placentalia
-mDanoD;D1;Dasypus novemcinctus;Placentalia
-mEledD;D1;Elephantulus edwardii;Placentalia
-mEnluD;D1;Enhydra lutris kenyoni;Placentalia
-mEqcaD;D1;Equus caballus;Placentalia
-mEreuD;D1;Erinaceus europaeus;Placentalia
-mFecaD;D1;Felis catus;Placentalia
-mHeglD;D1;Heterocephalus glaber;Placentalia
-mHosaD;D1;Homo sapiens;Placentalia
-mLoafD;D1;Loxodonta africana;Placentalia
-mMamaD;D1;Marmota marmota marmota;Placentalia
-mMimuD;D1;Microcebus murinus;Placentalia
-mModoD;D1;Monodelphis domestica;Marsupialia
-mMumuD;D1;Mus musculus;Placentalia
-mMupuD;D1;Mustela putorius furo;Placentalia
-mMyluD;D1;Myotis lucifugus;Placentalia
-mNescD;D1;Neomonachus schauinslandi;Placentalia
-mOcprD;D1;Ochotona princeps;Placentalia
-mOdviD;D1;Odocoileus virginianus texanus;Placentalia
-mOran2;D1;Ornithorhynchus anatinus;Monotremata
-mOran4;D1;Ornithorhynchus anatinus;Monotremata
-mOranD;D1;Ornithorhynchus anatinus;Monotremata
-mOrcuD;D1;Oryctolagus cuniculus;Placentalia
-mOrorD;D1;Orcinus orca;Placentalia
-mOvarD;D1;Ovis aries;Placentalia
-mPahoD;D1;Pantholops hodgsonii;Placentalia
-mPatiD;D1;Panthera tigris altaica;Placentalia
-mPhciDa;D1;Phascolarctos cinereus;Marsupialia
-mPhciDb;D1;Phascolarctos cinereus;Marsupialia
-mPtvaD;D1;Pteropus vampyrus;Placentalia
-mSahaD;D1;Sarcophilus harrisii;Marsupialia
-mSoarD;D1;Sorex araneus;Placentalia
-mTrmaD;D1;Trichechus manatus latirostris;Placentalia
-mUrmaD;D1;Ursus maritimus;Placentalia
-sBocoD;D1;Boa constrictor constrictor;Squamata
-sCradD;D1;Crotalus adamanteus;Squamata
-sCrhoBD;D1;Crotalus horridus;Squamata
-sLabiD;D1;Lacerta bilineata;Squamata
-sLaviD;D1;Lacerta viridis;Squamata
-sNoscD;D1;Notechis scutatus;Squamata
-sOpgrDb;D1;Ophisaurus gracilis;Squamata
-sOphaD;D1;Ophiophagus hannah;Squamata
-sPoviD;D1;Pogona vitticeps;Squamata
-sPsteD;D1;Pseudonaja textilis;Squamata
-bAncyE;E;Anser cygnoides;Aves
-bAnplE;E;Anas platyrhynchos platyrhynchos;Aves
-bApfoE;E;Aptenodytes forsteri;Aves
-bBareE;E;Balearica regulorum gibbericeps;Aves
-bChmaE;E;Chlamydotis macqueenii;Aves
-bCocoE;E;Corvus cornix cornix;Aves
-bGagaE;E;Gallus gallus;Aves
-bOphoE;E;Opisthocomus hoazin;Aves
-bPskrE;E;Psittacula krameri;Aves
-bSecoE;E;Setophaga coronata coronata;Aves
-bStocE;E;Strix occidentalis caurina;Aves
-cAlmiE;E;Alligator mississippiensis;Crocodylia
-cAlsiE;E;Alligator sinensis;Crocodylia
-cCrpoE;E;Crocodylus porosus;Crocodylia
-cGavganE;E;Gavialis gangeticus;Crocodylia
-cGoagE;E;Gopherus agassizii;Testudines
-cPesiE;E;Pelodiscus sinensis;Testudines
-mAifuE;E;Ailurus fulgens styani;Placentalia
-mAimeE;E;Ailuropoda melanoleuca;Placentalia
-mBibiE;E;Bison bison bison;Placentalia
-mBotaE;E;Bos taurus;Placentalia
-mCahiE;E;Capra hircus;Placentalia
-mCaluE;E;Canis lupus familiaris;Placentalia
-mChlaE;E;Chinchilla lanigera;Placentalia
-mCocrE;E;Condylura cristata;Placentalia
-mEledE;E;Elephantulus edwardii;Placentalia
-mEnluE;E;Enhydra lutris kenyoni;Placentalia
-mEqcaE;E;Equus caballus;Placentalia
-mEreuE;E;Erinaceus europaeus;Placentalia
-mFecaE;E;Felis catus;Placentalia
-mHeglE;E;Heterocephalus glaber;Placentalia
-mHosaE;E;Homo sapiens;Placentalia
-mLoafE;E;Loxodonta africana;Placentalia
-mMamaE;E;Marmota marmota marmota;Placentalia
-mMimuE;E;Microcebus murinus;Placentalia
-mModoE;E;Monodelphis domestica;Marsupialia
-mMumuE;E;Mus musculus;Placentalia
-mMupuE;E;Mustela putorius furo;Placentalia
-mMyluE;E;Myotis lucifugus;Placentalia
-mNescE;E;Neomonachus schauinslandi;Placentalia
-mOcprE;E;Ochotona princeps;Placentalia
-mOdviE;E;Odocoileus virginianus texanus;Placentalia
-mOranE;E;Ornithorhynchus anatinus;Monotremata
-mOrcuE;E;Oryctolagus cuniculus;Placentalia
-mOrorE;E;Orcinus orca;Placentalia
-mPahoE;E;Pantholops hodgsonii;Placentalia
-mPatiE;E;Panthera tigris altaica;Placentalia
-mPhciE;E;Phascolarctos cinereus;Marsupialia
-mPtvaE;E;Pteropus vampyrus;Placentalia
-mSahaE;E;Sarcophilus harrisii;Marsupialia
-mSoarE;E;Sorex araneus;Placentalia
-mTrmaE;E;Trichechus manatus latirostris;Placentalia
-sBocoE;E;Boa constrictor constrictor;Squamata
-sCradE;E;Crotalus adamanteus;Squamata
-sCratE;E;Crotalus atrox;Squamata
-sCrheAE;E;Crotalus helleri;Squamata
-sCrheBE;E;Crotalus helleri;Squamata
-sCrhoBE;E;Crotalus horridus;Squamata
-sCrscAE;E;Crotalus scutulatus;Squamata
-sCrscBE;E;Crotalus scutulatus;Squamata
-sDeacE;E;Deinakgistrodon acutus;Squamata
-sLabiE;E;Lacerta bilineata;Squamata
-sLaviE;E;Lacerta viridis;Squamata
-sNoscE;E;Notechis scutatus;Squamata
-sOpgrE;E;Ophisaurus gracilis;Squamata
-sOphaE;E;Ophiophagus hannah;Squamata
-sPapiE;E;Paroedura picta;Squamata
-sPoviE;E;Pogona vitticeps;Squamata
-sPrflE;E;Protobothrops flavoviridis;Squamata
-sPrmuE;E;Protobothrops mucrosquamatus;Squamata
-sPsteE;E;Pseudonaja textilis;Squamata
-sPybiE;E;Python bivittatus;Squamata
-sVibeEa;E;Vipera berus berus;Squamata
-cChmyF;F;Chelonia mydas;Testudines
-cChpiF;F;Chrysemys picta bellii;Testudines
-cGoagF;F;Gopherus agassizii;Testudines
-cPesiF;F;Pelodiscus sinensis;Testudines
-mAifuF;F;Ailurus fulgens styani;Placentalia
-mAimeF;F;Ailuropoda melanoleuca;Placentalia
-mBibiF;F;Bison bison bison;Placentalia
-mBotaF;F;Bos taurus;Placentalia
-mCahiF;F;Capra hircus;Placentalia
-mCaluF;F;Canis lupus familiaris;Placentalia
-mChlaF;F;Chinchilla lanigera;Placentalia
-mCocrF;F;Condylura cristata;Placentalia
-mDanoF;F;Dasypus novemcinctus;Placentalia
-mEledF;F;Elephantulus edwardii;Placentalia
-mEnluF;F;Enhydra lutris kenyoni;Placentalia
-mEqcaF;F;Equus caballus;Placentalia
-mEreuF;F;Erinaceus europaeus;Placentalia
-mFecaF;F;Felis catus;Placentalia
-mHeglF;F;Heterocephalus glaber;Placentalia
-mHosaF;F;Homo sapiens;Placentalia
-mLoafF;F;Loxodonta africana;Placentalia
-mMamaF;F;Marmota marmota marmota;Placentalia
-mMimuF;F;Microcebus murinus;Placentalia
-mModoF;F;Monodelphis domestica;Marsupialia
-mMumuF;F;Mus musculus;Placentalia
-mMupuF;F;Mustela putorius furo;Placentalia
-mMyluF;F;Myotis lucifugus;Placentalia
-mNescF;F;Neomonachus schauinslandi;Placentalia
-mOcprF;F;Ochotona princeps;Placentalia
-mOdviF;F;Odocoileus virginianus texanus;Placentalia
-mOranF;F;Ornithorhynchus anatinus;Monotremata
-mOrcuF;F;Oryctolagus cuniculus;Placentalia
-mOvarF;F;Ovis aries;Placentalia
-mPahoF;F;Pantholops hodgsonii;Placentalia
-mPatiF;F;Panthera tigris altaica;Placentalia
-mPhciF;F;Phascolarctos cinereus;Marsupialia
-mPtvaF;F;Pteropus vampyrus;Placentalia
-mSahaF;F;Sarcophilus harrisii;Marsupialia
-mSoarF;F;Sorex araneus;Placentalia
-mTrmaF;F;Trichechus manatus latirostris;Placentalia
-sBocoF;F;Boa constrictor constrictor;Squamata
-sCradF;F;Crotalus adamanteus;Squamata
-sCratF;F;Crotalus atrox;Squamata
-sCrheAF;F;Crotalus helleri;Squamata
-sCrheBF;F;Crotalus helleri;Squamata
-sCrhoAF;F;Crotalus horridus;Squamata
-sCrhoBF;F;Crotalus horridus;Squamata
-sCrscAF;F;Crotalus scutulatus;Squamata
-sCrscBF;F;Crotalus scutulatus;Squamata
-sDeacF;F;Deinakgistrodon acutus;Squamata
-sLabiF;F;Lacerta bilineata;Squamata
-sLaviF;F;Lacerta viridis;Squamata
-sNoscF;F;Notechis scutatus;Squamata
-sOpgrF;F;Ophisaurus gracilis;Squamata
-sOphaF;F;Ophiophagus hannah;Squamata
-sPapiF;F;Paroedura picta;Squamata
-sPoviF;F;Pogona vitticeps;Squamata
-sPrmuF;F;Protobothrops mucrosquamatus;Squamata
-sPsteF;F;Pseudonaja textilis;Squamata
-sPybiF;F;Python bivittatus;Squamata
-sVibeF;F;Vipera berus berus;Squamata
-sBocoGo;G;Boa constrictor constrictor;Squamata
-sCradGa;G;Crotalus adamanteus;Squamata
-sCradGc;G;Crotalus adamanteus;Squamata
-sCratGa;G;Crotalus atrox;Squamata
-sCratGb;G;Crotalus atrox;Squamata
-sCratGc;G;Crotalus atrox;Squamata
-sCratGk49;G;Crotalus atrox;Squamata
-sCrheAGa1;G;Crotalus helleri;Squamata
-sCrheAGa2;G;Crotalus helleri;Squamata
-sCrheAGb;G;Crotalus helleri;Squamata
-sCrheAGc1;G;Crotalus helleri;Squamata
-sCrheBGa1;G;Crotalus helleri;Squamata
-sCrhoAGa1;G;Crotalus horridus;Squamata
-sCrhoAGa2;G;Crotalus horridus;Squamata
-sCrhoAGb;G;Crotalus horridus;Squamata
-sCrhoAGc1;G;Crotalus horridus;Squamata
-sCrhoBGc1;G;Crotalus horridus;Squamata
-sCrhoGa;G;Crotalus horridus;Squamata
-sCrhoGc;G;Crotalus horridus;Squamata
-sCrscAGa1;G;Crotalus scutulatus;Squamata
-sCrscAGa2;G;Crotalus scutulatus;Squamata
-sCrscAGb;G;Crotalus scutulatus;Squamata
-sCrscAGc1;G;Crotalus scutulatus;Squamata
-sCrscAGc2;G;Crotalus scutulatus;Squamata
-sCrscBGa1;G;Crotalus scutulatus;Squamata
-sCrscBGb;G;Crotalus scutulatus;Squamata
-sCrscBGc2;G;Crotalus scutulatus;Squamata
-sCrscBGk49;G;Crotalus scutulatus;Squamata
-sDeacGa;G;Deinakgistrodon acutus;Squamata
-sDeacGb;G;Deinakgistrodon acutus;Squamata
-sDeacGc;G;Deinakgistrodon acutus;Squamata
-sDeacGk49;G;Deinakgistrodon acutus;Squamata
-sLabiGo;G;Lacerta bilineata;Squamata
-sLaviGo;G;Lacerta viridis;Squamata
-sNoscGc;G;Notechis scutatus;Squamata
-sOpgrGo;G;Ophisaurus gracilis;Squamata
-sOphaGc;G;Ophiophagus hannah;Squamata
-sPapiGo;G;Paroedura picta;Squamata
-sPoviGo;G;Pogona vitticeps;Squamata
-sPrflGa1;G;Protobothrops flavoviridis;Squamata
-sPrflGa2;G;Protobothrops flavoviridis;Squamata
-sPrflGb;G;Protobothrops flavoviridis;Squamata
-sPrflGck;G;Protobothrops flavoviridis;Squamata
-sPrflGk49;G;Protobothrops flavoviridis;Squamata
-sPrmuGa1;G;Protobothrops mucrosquamatus;Squamata
-sPrmuGa2;G;Protobothrops mucrosquamatus;Squamata
-sPrmuGb;G;Protobothrops mucrosquamatus;Squamata
-sPrmuGck;G;Protobothrops mucrosquamatus;Squamata
-sPrmuGk49;G;Protobothrops mucrosquamatus;Squamata
-sPsteGc;G;Pseudonaja textilis;Squamata
-sVibeGa1;G;Vipera berus berus;Squamata
-sVibeGa2;G;Vipera berus berus;Squamata
-sVibeGa4;G;Vipera berus berus;Squamata
-Xela;pre_g2;Xenopus laevis;Anura
-mAifuV;V;Ailurus fulgens styani;Placentalia
-mBotaV;V;Bos taurus;Placentalia
-mCahiV;V;Capra hircus;Placentalia
-mCaluV;V;Canis lupus familiaris;Placentalia
-mChlaV;V;Chinchilla lanigera;Placentalia
-mCocrV;V;Condylura cristata;Placentalia
-mDanoV;V;Dasypus novemcinctus;Placentalia
-mEledV;V;Elephantulus edwardii;Placentalia
-mEnluV;V;Enhydra lutris kenyoni;Placentalia
-mEqcaV;V;Equus caballus;Placentalia
-mEreuV;V;Erinaceus europaeus;Placentalia
-mFecaV;V;Felis catus;Placentalia
-mHeglV;V;Heterocephalus glaber;Placentalia
-mHosaV;V;Homo sapiens;Placentalia
-mLoafV;V;Loxodonta africana;Placentalia
-mMamaV;V;Marmota marmota marmota;Placentalia
-mMimuV;V;Microcebus murinus;Placentalia
-mModoV1;V;Monodelphis domestica;Marsupialia
-mModoV2;V;Monodelphis domestica;Marsupialia
-mMumuV;V;Mus musculus;Placentalia
-mMupuV;V;Mustela putorius furo;Placentalia
-mMyluV;V;Myotis lucifugus;Placentalia
-mNescV;V;Neomonachus schauinslandi;Placentalia
-mOcprV;V;Ochotona princeps;Placentalia
-mOdviV;V;Odocoileus virginianus texanus;Placentalia
-mOran3;V;Ornithorhynchus anatinus;Monotremata
-mOrcuV;V;Oryctolagus cuniculus;Placentalia
-mOrorV;V;Orcinus orca;Placentalia
-mPahoV;V;Pantholops hodgsonii;Placentalia
-mPatiV;V;Panthera tigris altaica;Placentalia
-mPhciV1;V;Phascolarctos cinereus;Marsupialia
-mPhciV2;V;Phascolarctos cinereus;Marsupialia
-mPhciV3;V;Phascolarctos cinereus;Marsupialia
-mPtvaV;V;Pteropus vampyrus;Placentalia
-mSahaV1;V;Sarcophilus harrisii;Marsupialia
-mSahaV2;V;Sarcophilus harrisii;Marsupialia
-mSahaV4;V;Sarcophilus harrisii;Marsupialia
-mSahaV5;V;Sarcophilus harrisii;Marsupialia
-mSoarV;V;Sorex araneus;Placentalia
-mTrmaV;V;Trichechus manatus latirostris;Placentalia
-mUrmaV;V;Ursus maritimus;Placentalia
+uid,gene,strand,taxa_name,species,genus,family,order,gene_info
+mAimeC,Pla2g2C,+,Ailuropoda melanoleuca,Ailuropoda melanoleuca,Ailuropoda,Ursidae,Carnivora,
+mAimeF,Pla2g2F,-,Ailuropoda melanoleuca,Ailuropoda melanoleuca,Ailuropoda,Ursidae,Carnivora,
+mAimeDb,Pla2g2D1,+,Ailuropoda melanoleuca,Ailuropoda melanoleuca,Ailuropoda,Ursidae,Carnivora,
+mAimeDa,Pla2g2D1,+,Ailuropoda melanoleuca,Ailuropoda melanoleuca,Ailuropoda,Ursidae,Carnivora,
+mAimeV,Pla2g2V1,-,Ailuropoda melanoleuca,Ailuropoda melanoleuca,Ailuropoda,Ursidae,Carnivora,
+mAimeE,Pla2g2E,+,Ailuropoda melanoleuca,Ailuropoda melanoleuca,Ailuropoda,Ursidae,Carnivora,
+mAifuE,Pla2g2E,-,Ailurus styani,Ailurus styani,Ailurus,Ailuridae,Carnivora,
+mAifuV,Pla2g2V1,+,Ailurus styani,Ailurus styani,Ailurus,Ailuridae,Carnivora,
+mAifuD,Pla2g2D1,-,Ailurus styani,Ailurus styani,Ailurus,Ailuridae,Carnivora,
+mAifuF,Pla2g2F,+,Ailurus styani,Ailurus styani,Ailurus,Ailuridae,Carnivora,
+mAifuC,Pla2g2C,-,Ailurus styani,Ailurus styani,Ailurus,Ailuridae,Carnivora,
+cAlmiC,Pla2g2C,+,Alligator mississippiensis,Alligator mississippiensis,Alligator,Alligatoridae,Crocodylia,
+cAlmiD3,Pla2g2D3,+,Alligator mississippiensis,Alligator mississippiensis,Alligator,Alligatoridae,Crocodylia,
+cAlmiD1,Pla2g2D1,+,Alligator mississippiensis,Alligator mississippiensis,Alligator,Alligatoridae,Crocodylia,
+cAlmiE,Pla2g2E,+,Alligator mississippiensis,Alligator mississippiensis,Alligator,Alligatoridae,Crocodylia,(no exon 1)
+cAlsiD1,Pla2g2D1,-,Alligator sinensis,Alligator sinensis,Alligator,Alligatoridae,Crocodylia,(assembly gap exon 4 no exon 1)
+cAlsiD3,Pla2g2D3,-,Alligator sinensis,Alligator sinensis,Alligator,Alligatoridae,Crocodylia,
+cAlsiC,Pla2g2C,-,Alligator sinensis,Alligator sinensis,Alligator,Alligatoridae,Crocodylia,
+bAnplC,Pla2g2C,+,Anas platyrhynchos platyrhynchos,Anas platyrhynchos,Anas,Anatidae,Anseriformes,(no first exon)
+bAnplD,Pla2g2D3,+,Anas platyrhynchos platyrhynchos,Anas platyrhynchos,Anas,Anatidae,Anseriformes,
+bAnplB,Pla2g2B,+,Anas platyrhynchos platyrhynchos,Anas platyrhynchos,Anas,Anatidae,Anseriformes,
+bAnplE,Pla2g2E,+,Anas platyrhynchos platyrhynchos,Anas platyrhynchos,Anas,Anatidae,Anseriformes,(no first exon)
+bAncyE,Pla2g2E,-,Anser cygnoid,Anser cygnoid,Anser,Anatidae,Anseriformes,
+bAncyB,Pla2g2B,-,Anser cygnoid,Anser cygnoid,Anser,Anatidae,Anseriformes,
+bAncyD,Pla2g2D3,-,Anser cygnoid,Anser cygnoid,Anser,Anatidae,Anseriformes,
+bAncyC,Pla2g2C,-,Anser cygnoid,Anser cygnoid,Anser,Anatidae,Anseriformes,(no exon 1)
+bApfoE,Pla2g2E,-,Aptenodytes forsteri,Aptenodytes forsteri,Aptenodytes,Spheniscidae,Sphenisciformes,(no exon 1)
+bApfoB,Pla2g2B,-,Aptenodytes forsteri,Aptenodytes forsteri,Aptenodytes,Spheniscidae,Sphenisciformes,
+bApfoD,Pla2g2D3,-,Aptenodytes forsteri,Aptenodytes forsteri,Aptenodytes,Spheniscidae,Sphenisciformes,
+bApfoC,Pla2g2C,-,Aptenodytes forsteri,Aptenodytes forsteri,Aptenodytes,Spheniscidae,Sphenisciformes,
+bApauC,Pla2g2C,+,Apteryx mantelli mantelli,Apteryx mantelli,Apteryx,Apterygidae,Apterygiformes,
+bAqchB,Pla2g2B,-,Aquila chrysaetos canadensis,Aquila chrysaetos,Aquila,Accipitridae,Accipitriformes,
+bAqchD,Pla2g2D3,-,Aquila chrysaetos canadensis,Aquila chrysaetos,Aquila,Accipitridae,Accipitriformes,
+bAqchC,Pla2g2C,-,Aquila chrysaetos canadensis,Aquila chrysaetos,Aquila,Accipitridae,Accipitriformes,
+bBareC,Pla2g2C,+,Balearica regulorum gibbericeps,Balearica regulorum,Balearica,Gruidae,Gruiformes,
+bBareD,Pla2g2D3,+,Balearica regulorum gibbericeps,Balearica regulorum,Balearica,Gruidae,Gruiformes,
+bBareB,Pla2g2B,+,Balearica regulorum gibbericeps,Balearica regulorum,Balearica,Gruidae,Gruiformes,
+bBareE,Pla2g2E,+,Balearica regulorum gibbericeps,Balearica regulorum,Balearica,Gruidae,Gruiformes,
+mBibiE,Pla2g2E,-,Bison bison bison,Bison bison,Bison,Bovidae,Artiodactyla,
+mBibiA2,Pla2g2A,-,Bison bison bison,Bison bison,Bison,Bovidae,Artiodactyla,
+mBibiA3,Pla2g2A,-,Bison bison bison,Bison bison,Bison,Bovidae,Artiodactyla,
+mBibiA4,Pla2g2A,-,Bison bison bison,Bison bison,Bison,Bovidae,Artiodactyla,
+mBibiDa,Pla2g2D1,-,Bison bison bison,Bison bison,Bison,Bovidae,Artiodactyla,(alternative splicing possible)
+mBibiDb,Pla2g2D1,-,Bison bison bison,Bison bison,Bison,Bovidae,Artiodactyla,(alternative splicing possible)
+mBibiF,Pla2g2F,+,Bison bison bison,Bison bison,Bison,Bovidae,Artiodactyla,(truncated assembly gap)
+mBibiC,Pla2g2C,-,Bison bison bison,Bison bison,Bison,Bovidae,Artiodactyla,
+sBocoGo,Pla2g2G0,-,Boa constrictor constrictor,Boa constrictor,Boa,Boidae,Squamata,
+sBocoD,Pla2g2D1,+,Boa constrictor constrictor,Boa constrictor,Boa,Boidae,Squamata,(no exon 1)
+sBocoE,Pla2g2E,+,Boa constrictor constrictor,Boa constrictor,Boa,Boidae,Squamata,(no exon 1)
+sBocoF,Pla2g2F,+,Boa constrictor constrictor,Boa constrictor,Boa,Boidae,Squamata,
+mBotaC,Pla2g2C,+,Bos taurus,Bos taurus,Bos,Bovidae,Artiodactyla,
+mBotaF,Pla2g2F,-,Bos taurus,Bos taurus,Bos,Bovidae,Artiodactyla,
+mBotaDb,Pla2g2D1,+,Bos taurus,Bos taurus,Bos,Bovidae,Artiodactyla,
+mBotaDa,Pla2g2D1,+,Bos taurus,Bos taurus,Bos,Bovidae,Artiodactyla,
+mBotaV,Pla2g2V1,-,Bos taurus,Bos taurus,Bos,Bovidae,Artiodactyla,
+mBotaA5,Pla2g2A,+,Bos taurus,Bos taurus,Bos,Bovidae,Artiodactyla,
+mBotaA3,Pla2g2A,+,Bos taurus,Bos taurus,Bos,Bovidae,Artiodactyla,
+mBotaA,Pla2g2A,+,Bos taurus,Bos taurus,Bos,Bovidae,Artiodactyla,
+mCaluC,Pla2g2C,+,Canis lupus familiaris,Canis lupus,Canis,Canidae,Carnivora,
+mCaluF,Pla2g2F,-,Canis lupus familiaris,Canis lupus,Canis,Canidae,Carnivora,
+mCaluD1,Pla2g2D1,+,Canis lupus familiaris,Canis lupus,Canis,Canidae,Carnivora,
+mCaluV,Pla2g2V1,-,Canis lupus familiaris,Canis lupus,Canis,Canidae,Carnivora,
+mCaluE,Pla2g2E,+,Canis lupus familiaris,Canis lupus,Canis,Canidae,Carnivora,
+mCahiE,Pla2g2E,-,Capra hircus,Capra hircus,Capra,Bovidae,Artiodactyla,
+mCahiA,Pla2g2A,-,Capra hircus,Capra hircus,Capra,Bovidae,Artiodactyla,
+mCahiA2,Pla2g2A,-,Capra hircus,Capra hircus,Capra,Bovidae,Artiodactyla,
+mCahiA4,Pla2g2A,-,Capra hircus,Capra hircus,Capra,Bovidae,Artiodactyla,
+mCahiA5,Pla2g2A,-,Capra hircus,Capra hircus,Capra,Bovidae,Artiodactyla,
+mCahiV,Pla2g2V1,+,Capra hircus,Capra hircus,Capra,Bovidae,Artiodactyla,
+mCahiDa,Pla2g2D1,-,Capra hircus,Capra hircus,Capra,Bovidae,Artiodactyla,
+mCahiDb,Pla2g2D1,-,Capra hircus,Capra hircus,Capra,Bovidae,Artiodactyla,
+mCahiF,Pla2g2F,+,Capra hircus,Capra hircus,Capra,Bovidae,Artiodactyla,
+mCahiC,Pla2g2C,-,Capra hircus,Capra hircus,Capra,Bovidae,Artiodactyla,(no exon 1)
+cChmyD1,Pla2g2D1,-,Chelonia mydas,Chelonia mydas,Chelonia,Cheloniidae,Testudines,
+cChmyD3,Pla2g2D3,-,Chelonia mydas,Chelonia mydas,Chelonia,Cheloniidae,Testudines,
+cChmyF,Pla2g2F,+,Chelonia mydas,Chelonia mydas,Chelonia,Cheloniidae,Testudines,
+mChlaE,Pla2g2E,-,Chinchilla lanigera,Chinchilla lanigera,Chinchilla,Chinchillidae,Rodentia,(no exon 1)
+mChlaA2,Pla2g2A,-,Chinchilla lanigera,Chinchilla lanigera,Chinchilla,Chinchillidae,Rodentia,
+mChlaA3,Pla2g2A,-,Chinchilla lanigera,Chinchilla lanigera,Chinchilla,Chinchillidae,Rodentia,
+mChlaA4,Pla2g2A,-,Chinchilla lanigera,Chinchilla lanigera,Chinchilla,Chinchillidae,Rodentia,
+mChlaV,Pla2g2V1,+,Chinchilla lanigera,Chinchilla lanigera,Chinchilla,Chinchillidae,Rodentia,
+mChlaD,Pla2g2D1,-,Chinchilla lanigera,Chinchilla lanigera,Chinchilla,Chinchillidae,Rodentia,
+mChlaF,Pla2g2F,+,Chinchilla lanigera,Chinchilla lanigera,Chinchilla,Chinchillidae,Rodentia,
+mChlaC,Pla2g2C,-,Chinchilla lanigera,Chinchilla lanigera,Chinchilla,Chinchillidae,Rodentia,(no exon 1)
+bChmaE,Pla2g2E,-,Chlamydotis macqueenii,Chlamydotis macqueenii,Chlamydotis,Otididae,Gruiformes,
+bChmaB,Pla2g2B,-,Chlamydotis macqueenii,Chlamydotis macqueenii,Chlamydotis,Otididae,Gruiformes,
+bChmaD,Pla2g2D3,-,Chlamydotis macqueenii,Chlamydotis macqueenii,Chlamydotis,Otididae,Gruiformes,
+bChmaC,Pla2g2C,-,Chlamydotis macqueenii,Chlamydotis macqueenii,Chlamydotis,Otididae,Gruiformes,
+cChpiD1,Pla2g2D1,-,Chrysemys picta bellii,Chrysemys picta,Chrysemys,Emydidae,Testudines,
+cChpiD2,Pla2g2D2,-,Chrysemys picta bellii,Chrysemys picta,Chrysemys,Emydidae,Testudines,
+cChpiD3,Pla2g2D3,-,Chrysemys picta bellii,Chrysemys picta,Chrysemys,Emydidae,Testudines,(no exon 1)
+cChpiF,Pla2g2F,+,Chrysemys picta bellii,Chrysemys picta,Chrysemys,Emydidae,Testudines,(no exon 1)
+mCocrE,Pla2g2E,-,Condylura cristata,Condylura cristata,Condylura,Talpidae,Eulipotyphla,
+mCocrA2,Pla2g2A,+,Condylura cristata,Condylura cristata,Condylura,Talpidae,Eulipotyphla,
+mCocrA3,Pla2g2A,-,Condylura cristata,Condylura cristata,Condylura,Talpidae,Eulipotyphla,
+mCocrV,Pla2g2V1,+,Condylura cristata,Condylura cristata,Condylura,Talpidae,Eulipotyphla,
+mCocrD,Pla2g2D1,-,Condylura cristata,Condylura cristata,Condylura,Talpidae,Eulipotyphla,
+mCocrF,Pla2g2F,+,Condylura cristata,Condylura cristata,Condylura,Talpidae,Eulipotyphla,
+bCocoD,Pla2g2D3,+,Corvus cornix cornix,Corvus cornix,Corvus,Corvidae,Passeriformes,
+bCocoE,Pla2g2E,+,Corvus cornix cornix,Corvus cornix,Corvus,Corvidae,Passeriformes,
+cCrpoE,Pla2g2E,-,Crocodylus porosus,Crocodylus porosus,Crocodylus,Crocodylidae,Crocodylia,(no exon 1)
+cCrpoD1,Pla2g2D1,-,Crocodylus porosus,Crocodylus porosus,Crocodylus,Crocodylidae,Crocodylia,
+cCrpoD3,Pla2g2D3,-,Crocodylus porosus,Crocodylus porosus,Crocodylus,Crocodylidae,Crocodylia,
+cCrpoC,Pla2g2C,-,Crocodylus porosus,Crocodylus porosus,Crocodylus,Crocodylidae,Crocodylia,(no exon 1)
+sCradE,Pla2g2E,-,Crotalus adamanteus,Crotalus adamanteus,Crotalus,Viperidae,Squamata,
+sCradGc,Pla2g2Gc,-,Crotalus adamanteus,Crotalus adamanteus,Crotalus,Viperidae,Squamata,
+sCradGa,Pla2g2Ga,+,Crotalus adamanteus,Crotalus adamanteus,Crotalus,Viperidae,Squamata,
+sCradD,Pla2g2D1,-,Crotalus adamanteus,Crotalus adamanteus,Crotalus,Viperidae,Squamata,
+sCradF,Pla2g2F,+,Crotalus adamanteus,Crotalus adamanteus,Crotalus,Viperidae,Squamata,
+sCratE,Pla2g2E,-,Crotalus atrox,Crotalus atrox,Crotalus,Viperidae,Squamata,
+sCratGb,Pla2g2Gb,-,Crotalus atrox,Crotalus atrox,Crotalus,Viperidae,Squamata,
+sCratGk49,Pla2g2Gk,-,Crotalus atrox,Crotalus atrox,Crotalus,Viperidae,Squamata,
+sCratGc,Pla2g2Gc,-,Crotalus atrox,Crotalus atrox,Crotalus,Viperidae,Squamata,
+sCratGa,Pla2g2Ga,+,Crotalus atrox,Crotalus atrox,Crotalus,Viperidae,Squamata,
+sCratF,Pla2g2F,+,Crotalus atrox,Crotalus atrox,Crotalus,Viperidae,Squamata,
+sCrheAE,Pla2g2E,-,Crotalus oreganus helleri,Crotalus oreganus,Crotalus,Viperidae,Squamata,
+sCrheAGb,Pla2g2Gb,-,Crotalus oreganus helleri,Crotalus oreganus,Crotalus,Viperidae,Squamata,
+sCrheAGc1,Pla2g2Gc,-,Crotalus oreganus helleri,Crotalus oreganus,Crotalus,Viperidae,Squamata,(no first exon)
+sCrheAGa1,Pla2g2Ga,+,Crotalus oreganus helleri,Crotalus oreganus,Crotalus,Viperidae,Squamata,
+sCrheAGc2,Pla2g2Gc,-,Crotalus oreganus helleri,Crotalus oreganus,Crotalus,Viperidae,Squamata,(pseudogenised exon 2)
+sCrheAGa2,Pla2g2Ga,+,Crotalus oreganus helleri,Crotalus oreganus,Crotalus,Viperidae,Squamata,
+sCrheAF,Pla2g2F,+,Crotalus oreganus helleri,Crotalus oreganus,Crotalus,Viperidae,Squamata,
+sCrheBF,Pla2g2F,-,Crotalus oreganus helleri,Crotalus oreganus,Crotalus,Viperidae,Squamata,
+sCrheBGa1,Pla2g2Ga,-,Crotalus oreganus helleri,Crotalus oreganus,Crotalus,Viperidae,Squamata,
+sCrheBE,Pla2g2E,+,Crotalus oreganus helleri,Crotalus oreganus,Crotalus,Viperidae,Squamata,
+sCrhoAF,Pla2g2F,-,Crotalus horridus,Crotalus horridus,Crotalus,Viperidae,Squamata,
+sCrhoAGa2,Pla2g2Ga,-,Crotalus horridus,Crotalus horridus,Crotalus,Viperidae,Squamata,
+sCrhoAGb,Pla2g2Gb,-,Crotalus horridus,Crotalus horridus,Crotalus,Viperidae,Squamata,
+sCrhoAGc1,Pla2g2Gc,-,Crotalus horridus,Crotalus horridus,Crotalus,Viperidae,Squamata,
+sCrhoAGa1,Pla2g2Ga,+,Crotalus horridus,Crotalus horridus,Crotalus,Viperidae,Squamata,
+sCrhoBE,Pla2g2E,-,Crotalus horridus,Crotalus horridus,Crotalus,Viperidae,Squamata,
+sCrhoBGc1,Pla2g2Gc,-,Crotalus horridus,Crotalus horridus,Crotalus,Viperidae,Squamata,
+sCrhoBD,Pla2g2D1,-,Crotalus horridus,Crotalus horridus,Crotalus,Viperidae,Squamata,
+sCrhoBF,Pla2g2F,+,Crotalus horridus,Crotalus horridus,Crotalus,Viperidae,Squamata,
+sCrhoGa,Pla2g2Ga,-,Crotalus horridus,Crotalus horridus,Crotalus,Viperidae,Squamata,
+sCrhoGc,Pla2g2Gc,+,Crotalus horridus,Crotalus horridus,Crotalus,Viperidae,Squamata,
+sCrscAE,Pla2g2E,-,Crotalus scutulatus,Crotalus scutulatus,Crotalus,Viperidae,Squamata,
+sCrscAGb,Pla2g2Gb,-,Crotalus scutulatus,Crotalus scutulatus,Crotalus,Viperidae,Squamata,
+sCrscAGc1,Pla2g2Gc,-,Crotalus scutulatus,Crotalus scutulatus,Crotalus,Viperidae,Squamata,
+sCrscAGa1,Pla2g2Ga,+,Crotalus scutulatus,Crotalus scutulatus,Crotalus,Viperidae,Squamata,
+sCrscAGc2,Pla2g2Gc,-,Crotalus scutulatus,Crotalus scutulatus,Crotalus,Viperidae,Squamata,
+sCrscAGa2,Pla2g2Ga,+,Crotalus scutulatus,Crotalus scutulatus,Crotalus,Viperidae,Squamata,
+sCrscAF,Pla2g2F,+,Crotalus scutulatus,Crotalus scutulatus,Crotalus,Viperidae,Squamata,
+sCrscBE,Pla2g2E,-,Crotalus scutulatus,Crotalus scutulatus,Crotalus,Viperidae,Squamata,
+sCrscBGb,Pla2g2Gb,-,Crotalus scutulatus,Crotalus scutulatus,Crotalus,Viperidae,Squamata,
+sCrscBGk49,Pla2g2Gk,-,Crotalus scutulatus,Crotalus scutulatus,Crotalus,Viperidae,Squamata,
+sCrscBGc1,Pla2g2Gc,-,Crotalus scutulatus,Crotalus scutulatus,Crotalus,Viperidae,Squamata,
+sCrscBGa1,Pla2g2Ga,+,Crotalus scutulatus,Crotalus scutulatus,Crotalus,Viperidae,Squamata,
+sCrscBF,Pla2g2F,+,Crotalus scutulatus,Crotalus scutulatus,Crotalus,Viperidae,Squamata,
+bCucaC,Pla2g2C,+,Cuculus canorus,Cuculus canorus,Cuculus,Cuculidae,Cuculiformes,
+bCucaD3,Pla2g2D3,+,Cuculus canorus,Cuculus canorus,Cuculus,Cuculidae,Cuculiformes,
+bCucaB,Pla2g2B,+,Cuculus canorus,Cuculus canorus,Cuculus,Cuculidae,Cuculiformes,
+mDanoA,Pla2g2A,-,Dasypus novemcinctus,Dasypus novemcinctus,Dasypus,Dasypodidae,Cingulata,
+mDanoV,Pla2g2V1,+,Dasypus novemcinctus,Dasypus novemcinctus,Dasypus,Dasypodidae,Cingulata,
+mDanoD,Pla2g2D1,-,Dasypus novemcinctus,Dasypus novemcinctus,Dasypus,Dasypodidae,Cingulata,
+mDanoF,Pla2g2F,+,Dasypus novemcinctus,Dasypus novemcinctus,Dasypus,Dasypodidae,Cingulata,
+mDanoC,Pla2g2C,-,Dasypus novemcinctus,Dasypus novemcinctus,Dasypus,Dasypodidae,Cingulata,
+sDeacF,Pla2g2F,-,Deinagkistrodon acutus,Deinagkistrodon acutus,Deinagkistrodon,Viperidae,Squamata,
+sDeacGa,Pla2g2Ga,-,Deinagkistrodon acutus,Deinagkistrodon acutus,Deinagkistrodon,Viperidae,Squamata,
+sDeacGc,Pla2g2Gc,+,Deinagkistrodon acutus,Deinagkistrodon acutus,Deinagkistrodon,Viperidae,Squamata,
+sDeacGk49,Pla2g2Gk,+,Deinagkistrodon acutus,Deinagkistrodon acutus,Deinagkistrodon,Viperidae,Squamata,
+sDeacGb,Pla2g2Gb,+,Deinagkistrodon acutus,Deinagkistrodon acutus,Deinagkistrodon,Viperidae,Squamata,
+sDeacE,Pla2g2E,+,Deinagkistrodon acutus,Deinagkistrodon acutus,Deinagkistrodon,Viperidae,Squamata,
+mEledF,Pla2g2F,-,Elephantulus edwardii,Elephantulus edwardii,Elephantulus,Macroscelididae,Macroscelidea,
+mEledD1,Pla2g2D1,+,Elephantulus edwardii,Elephantulus edwardii,Elephantulus,Macroscelididae,Macroscelidea,
+mEledV,Pla2g2V1,-,Elephantulus edwardii,Elephantulus edwardii,Elephantulus,Macroscelididae,Macroscelidea,(no exon 1)
+mEledA3,Pla2g2A,+,Elephantulus edwardii,Elephantulus edwardii,Elephantulus,Macroscelididae,Macroscelidea,
+mEledA2,Pla2g2A,+,Elephantulus edwardii,Elephantulus edwardii,Elephantulus,Macroscelididae,Macroscelidea,
+mEledA1,Pla2g2A,+,Elephantulus edwardii,Elephantulus edwardii,Elephantulus,Macroscelididae,Macroscelidea,
+mEledE,Pla2g2E,+,Elephantulus edwardii,Elephantulus edwardii,Elephantulus,Macroscelididae,Macroscelidea,
+mEnluC,Pla2g2C,+,Enhydra lutris kenyoni,Enhydra lutris,Enhydra,Mustelidae,Carnivora,
+mEnluF,Pla2g2F,-,Enhydra lutris kenyoni,Enhydra lutris,Enhydra,Mustelidae,Carnivora,
+mEnluD1,Pla2g2D1,+,Enhydra lutris kenyoni,Enhydra lutris,Enhydra,Mustelidae,Carnivora,
+mEnluV,Pla2g2V1,-,Enhydra lutris kenyoni,Enhydra lutris,Enhydra,Mustelidae,Carnivora,
+mEnluE,Pla2g2E,+,Enhydra lutris kenyoni,Enhydra lutris,Enhydra,Mustelidae,Carnivora,
+mEqcaC,Pla2g2C,+,Equus caballus,Equus caballus,Equus,Equidae,Perissodactyla,
+mEqcaF,Pla2g2F,-,Equus caballus,Equus caballus,Equus,Equidae,Perissodactyla,
+mEqcaD,Pla2g2D1,+,Equus caballus,Equus caballus,Equus,Equidae,Perissodactyla,
+mEqcaV,Pla2g2V1,-,Equus caballus,Equus caballus,Equus,Equidae,Perissodactyla,
+mEqcaA,Pla2g2A,+,Equus caballus,Equus caballus,Equus,Equidae,Perissodactyla,
+mEqcaE,Pla2g2E,+,Equus caballus,Equus caballus,Equus,Equidae,Perissodactyla,
+mEreuC,Pla2g2C,+,Erinaceus europaeus,Erinaceus europaeus,Erinaceus,Erinaceidae,Eulipotyphla,
+mEreuF,Pla2g2F,-,Erinaceus europaeus,Erinaceus europaeus,Erinaceus,Erinaceidae,Eulipotyphla,(no exon F2 gaps)
+mEreuD1,Pla2g2D1,+,Erinaceus europaeus,Erinaceus europaeus,Erinaceus,Erinaceidae,Eulipotyphla,
+mEreuV,Pla2g2V1,-,Erinaceus europaeus,Erinaceus europaeus,Erinaceus,Erinaceidae,Eulipotyphla,
+mEreuA15,Pla2g2A,+,Erinaceus europaeus,Erinaceus europaeus,Erinaceus,Erinaceidae,Eulipotyphla,(no exon 1)
+mEreuA14,Pla2g2A,+,Erinaceus europaeus,Erinaceus europaeus,Erinaceus,Erinaceidae,Eulipotyphla,
+mEreuA13,Pla2g2A,+,Erinaceus europaeus,Erinaceus europaeus,Erinaceus,Erinaceidae,Eulipotyphla,
+mEreuA12,Pla2g2A,+,Erinaceus europaeus,Erinaceus europaeus,Erinaceus,Erinaceidae,Eulipotyphla,
+mEreuA11,Pla2g2A,+,Erinaceus europaeus,Erinaceus europaeus,Erinaceus,Erinaceidae,Eulipotyphla,
+mEreuA10,Pla2g2A,+,Erinaceus europaeus,Erinaceus europaeus,Erinaceus,Erinaceidae,Eulipotyphla,
+mEreuA9,Pla2g2A,+,Erinaceus europaeus,Erinaceus europaeus,Erinaceus,Erinaceidae,Eulipotyphla,
+mEreuA8,Pla2g2A,+,Erinaceus europaeus,Erinaceus europaeus,Erinaceus,Erinaceidae,Eulipotyphla,
+mEreuA7,Pla2g2A,+,Erinaceus europaeus,Erinaceus europaeus,Erinaceus,Erinaceidae,Eulipotyphla,
+mEreuA6,Pla2g2A,-,Erinaceus europaeus,Erinaceus europaeus,Erinaceus,Erinaceidae,Eulipotyphla,(no exon 1)
+mEreuA5,Pla2g2A,-,Erinaceus europaeus,Erinaceus europaeus,Erinaceus,Erinaceidae,Eulipotyphla,
+mEreuA3,Pla2g2A,+,Erinaceus europaeus,Erinaceus europaeus,Erinaceus,Erinaceidae,Eulipotyphla,
+mEreuA2,Pla2g2A,+,Erinaceus europaeus,Erinaceus europaeus,Erinaceus,Erinaceidae,Eulipotyphla,
+mEreuA1,Pla2g2A,+,Erinaceus europaeus,Erinaceus europaeus,Erinaceus,Erinaceidae,Eulipotyphla,
+mEreuE,Pla2g2E,+,Erinaceus europaeus,Erinaceus europaeus,Erinaceus,Erinaceidae,Eulipotyphla,
+mFecaE,Pla2g2E,-,Felis catus,Felis catus,Felis,Felidae,Carnivora,
+mFecaV,Pla2g2V1,+,Felis catus,Felis catus,Felis,Felidae,Carnivora,
+mFecaD,Pla2g2D1,-,Felis catus,Felis catus,Felis,Felidae,Carnivora,
+mFecaF,Pla2g2F,+,Felis catus,Felis catus,Felis,Felidae,Carnivora,
+bGagaE,Pla2g2E,-,Gallus gallus,Gallus gallus,Gallus,Phasianidae,Galliformes,
+bGagaB,Pla2g2B,-,Gallus gallus,Gallus gallus,Gallus,Phasianidae,Galliformes,
+bGagaD,Pla2g2D3,-,Gallus gallus,Gallus gallus,Gallus,Phasianidae,Galliformes,
+bGagaC,Pla2g2C,-,Gallus gallus,Gallus gallus,Gallus,Phasianidae,Galliformes,
+cGavganC,Pla2g2C,+,Gavialis gangeticus,Gavialis gangeticus,Gavialis,Gavialidae,Crocodylia,
+cGavganD3,Pla2g2D3,+,Gavialis gangeticus,Gavialis gangeticus,Gavialis,Gavialidae,Crocodylia,(no exon 1)
+cGavganD1,Pla2g2D1,+,Gavialis gangeticus,Gavialis gangeticus,Gavialis,Gavialidae,Crocodylia,(no exon 1)
+cGavganE,Pla2g2E,+,Gavialis gangeticus,Gavialis gangeticus,Gavialis,Gavialidae,Crocodylia,
+cGoagF,Pla2g2F,-,Gopherus agassizii,Gopherus agassizii,Gopherus,Testudinidae,Testudines,(no exon 1)
+cGoagD3,Pla2g2D3,+,Gopherus agassizii,Gopherus agassizii,Gopherus,Testudinidae,Testudines,(no exon 1)
+cGoagD2,Pla2g2D2,+,Gopherus agassizii,Gopherus agassizii,Gopherus,Testudinidae,Testudines,(no exon 1)
+cGoagD1,Pla2g2D1,+,Gopherus agassizii,Gopherus agassizii,Gopherus,Testudinidae,Testudines,(no exon 1)
+cGoagE,Pla2g2E,+,Gopherus agassizii,Gopherus agassizii,Gopherus,Testudinidae,Testudines,
+bHaleB,Pla2g2B,-,Haliaeetus leucocephalus,Haliaeetus leucocephalus,Haliaeetus,Accipitridae,Accipitriformes,
+bHaleD,Pla2g2D3,-,Haliaeetus leucocephalus,Haliaeetus leucocephalus,Haliaeetus,Accipitridae,Accipitriformes,
+bHaleC,Pla2g2C,-,Haliaeetus leucocephalus,Haliaeetus leucocephalus,Haliaeetus,Accipitridae,Accipitriformes,
+mHeglE,Pla2g2E,-,Heterocephalus glaber,Heterocephalus glaber,Heterocephalus,Bathyergidae,Rodentia,
+mHeglA1,Pla2g2A,-,Heterocephalus glaber,Heterocephalus glaber,Heterocephalus,Bathyergidae,Rodentia,
+mHeglA2,Pla2g2A,-,Heterocephalus glaber,Heterocephalus glaber,Heterocephalus,Bathyergidae,Rodentia,
+mHeglA3,Pla2g2A,-,Heterocephalus glaber,Heterocephalus glaber,Heterocephalus,Bathyergidae,Rodentia,
+mHeglV,Pla2g2V,+,Heterocephalus glaber,Heterocephalus glaber,Heterocephalus,Bathyergidae,Rodentia,
+mHeglD,Pla2g2D1,-,Heterocephalus glaber,Heterocephalus glaber,Heterocephalus,Bathyergidae,Rodentia,
+mHeglF,Pla2g2F,+,Heterocephalus glaber,Heterocephalus glaber,Heterocephalus,Bathyergidae,Rodentia,
+mHosaE,Pla2g2E,-,Homo sapiens,Homo sapiens,Homo,Hominidae,Primates,
+mHosaA,Pla2g2A,-,Homo sapiens,Homo sapiens,Homo,Hominidae,Primates,
+mHosaV,Pla2g2V1,+,Homo sapiens,Homo sapiens,Homo,Hominidae,Primates,
+mHosaD,Pla2g2D1,-,Homo sapiens,Homo sapiens,Homo,Hominidae,Primates,
+mHosaF,Pla2g2F,+,Homo sapiens,Homo sapiens,Homo,Hominidae,Primates,
+sLabiE,Pla2g2E,-,Lacerta bilineata,Lacerta bilineata,Lacerta,Lacertidae,Squamata,
+sLabiGo,Pla2g2G0,-,Lacerta bilineata,Lacerta bilineata,Lacerta,Lacertidae,Squamata,
+sLabiD,Pla2g2D1,-,Lacerta bilineata,Lacerta bilineata,Lacerta,Lacertidae,Squamata,
+sLabiF,Pla2g2F,+,Lacerta bilineata,Lacerta bilineata,Lacerta,Lacertidae,Squamata,
+sLaviF,Pla2g2F,-,Lacerta viridis,Lacerta viridis,Lacerta,Lacertidae,Squamata,
+sLaviD,Pla2g2D1,+,Lacerta viridis,Lacerta viridis,Lacerta,Lacertidae,Squamata,
+sLaviGo,Pla2g2G0,+,Lacerta viridis,Lacerta viridis,Lacerta,Lacertidae,Squamata,
+sLaviE,Pla2g2E,+,Lacerta viridis,Lacerta viridis,Lacerta,Lacertidae,Squamata,
+mLoafC,Pla2g2C,+,Loxodonta africana,Loxodonta africana,Loxodonta,Elephantidae,Proboscidea,
+mLoafF,Pla2g2F,-,Loxodonta africana,Loxodonta africana,Loxodonta,Elephantidae,Proboscidea,(no exons F gap)
+mLoafD,Pla2g2D1,+,Loxodonta africana,Loxodonta africana,Loxodonta,Elephantidae,Proboscidea,
+mLoafV,Pla2g2V1,-,Loxodonta africana,Loxodonta africana,Loxodonta,Elephantidae,Proboscidea,
+mLoafA2,Pla2g2A,+,Loxodonta africana,Loxodonta africana,Loxodonta,Elephantidae,Proboscidea,
+mLoafA1,Pla2g2A,+,Loxodonta africana,Loxodonta africana,Loxodonta,Elephantidae,Proboscidea,
+mLoafE,Pla2g2E,+,Loxodonta africana,Loxodonta africana,Loxodonta,Elephantidae,Proboscidea,
+mMamaF,Pla2g2F,-,Marmota marmota marmota,Marmota marmota,Marmota,Sciuridae,Rodentia,
+mMamaD,Pla2g2D1,+,Marmota marmota marmota,Marmota marmota,Marmota,Sciuridae,Rodentia,
+mMamaV,Pla2g2V1,-,Marmota marmota marmota,Marmota marmota,Marmota,Sciuridae,Rodentia,
+mMamaA1,Pla2g2A,+,Marmota marmota marmota,Marmota marmota,Marmota,Sciuridae,Rodentia,
+mMamaE,Pla2g2E,+,Marmota marmota marmota,Marmota marmota,Marmota,Sciuridae,Rodentia,(no exon 1)
+mMimiE,Pla2g2E,-,Microcebus murinus,Microcebus murinus,Microcebus,Cheirogaleidae,Primates,
+mMimiA,Pla2g2A,-,Microcebus murinus,Microcebus murinus,Microcebus,Cheirogaleidae,Primates,
+mMimiV,Pla2g2V1,+,Microcebus murinus,Microcebus murinus,Microcebus,Cheirogaleidae,Primates,
+mMimiD,Pla2g2D1,-,Microcebus murinus,Microcebus murinus,Microcebus,Cheirogaleidae,Primates,
+mMimiF,Pla2g2F,+,Microcebus murinus,Microcebus murinus,Microcebus,Cheirogaleidae,Primates,(no exon F2)
+mMimiC,Pla2g2C,-,Microcebus murinus,Microcebus murinus,Microcebus,Cheirogaleidae,Primates,(no exon 1)
+mModoC,Pla2g2C,+,Monodelphis domestica,Monodelphis domestica,Monodelphis,Didelphidae,Didelphimorphia,
+mModoF,Pla2g2F,-,Monodelphis domestica,Monodelphis domestica,Monodelphis,Didelphidae,Didelphimorphia,
+mModoD,Pla2g2D1,+,Monodelphis domestica,Monodelphis domestica,Monodelphis,Didelphidae,Didelphimorphia,
+mModoV2,Pla2g2V2,+,Monodelphis domestica,Monodelphis domestica,Monodelphis,Didelphidae,Didelphimorphia,(no exon 1)
+mModoV1,Pla2g2V2,+,Monodelphis domestica,Monodelphis domestica,Monodelphis,Didelphidae,Didelphimorphia,
+mModoE,Pla2g2E,+,Monodelphis domestica,Monodelphis domestica,Monodelphis,Didelphidae,Didelphimorphia,
+mMumuC,Pla2g2C,+,Mus musculus,Mus musculus,Mus,Muridae,Rodentia,
+mMumuF,Pla2g2F,-,Mus musculus,Mus musculus,Mus,Muridae,Rodentia,
+mMumuD1,Pla2g2D1,+,Mus musculus,Mus musculus,Mus,Muridae,Rodentia,
+mMumuV1,Pla2g2V1,-,Mus musculus,Mus musculus,Mus,Muridae,Rodentia,
+mMumuA,Pla2g2A,+,Mus musculus,Mus musculus,Mus,Muridae,Rodentia,
+mMumuE,Pla2g2E,+,Mus musculus,Mus musculus,Mus,Muridae,Rodentia,
+mMupuC,Pla2g2C,+,Mustela putorius furo,Mustela putorius,Mustela,Mustelidae,Carnivora,
+mMupuF,Pla2g2F,-,Mustela putorius furo,Mustela putorius,Mustela,Mustelidae,Carnivora,
+mMupuD,Pla2g2D1,+,Mustela putorius furo,Mustela putorius,Mustela,Mustelidae,Carnivora,
+mMupuV,Pla2g2V1,-,Mustela putorius furo,Mustela putorius,Mustela,Mustelidae,Carnivora,
+mMupuE,Pla2g2E,+,Mustela putorius furo,Mustela putorius,Mustela,Mustelidae,Carnivora,
+mMyluE,Pla2g2E,-,Myotis lucifugus,Myotis lucifugus,Myotis,Vespertilionidae,Chiroptera,
+mMyluA1,Pla2g2A,-,Myotis lucifugus,Myotis lucifugus,Myotis,Vespertilionidae,Chiroptera,
+mMyluA2,Pla2g2A,-,Myotis lucifugus,Myotis lucifugus,Myotis,Vespertilionidae,Chiroptera,
+mMyluA4,Pla2g2A,-,Myotis lucifugus,Myotis lucifugus,Myotis,Vespertilionidae,Chiroptera,
+mMyluV,Pla2g2V1,+,Myotis lucifugus,Myotis lucifugus,Myotis,Vespertilionidae,Chiroptera,
+mMyluD,Pla2g2D1,-,Myotis lucifugus,Myotis lucifugus,Myotis,Vespertilionidae,Chiroptera,
+mMyluF,Pla2g2F,+,Myotis lucifugus,Myotis lucifugus,Myotis,Vespertilionidae,Chiroptera,
+mMyluC,Pla2g2C,-,Myotis lucifugus,Myotis lucifugus,Myotis,Vespertilionidae,Chiroptera,
+bNaauB,Pla2g2B,-,Nannopterum,None,Nannopterum,Phalacrocoracidae,Pelecaniformes,
+bNaauD,Pla2g2D3,-,Nannopterum,None,Nannopterum,Phalacrocoracidae,Pelecaniformes,
+bNaauC,Pla2g2C,-,Nannopterum,None,Nannopterum,Phalacrocoracidae,Pelecaniformes,
+mNescE,Pla2g2E,-,Neomonachus schauinslandi,Neomonachus schauinslandi,Neomonachus,Phocidae,Carnivora,
+mNescV,Pla2g2V1,+,Neomonachus schauinslandi,Neomonachus schauinslandi,Neomonachus,Phocidae,Carnivora,
+mNescD,Pla2g2D1,-,Neomonachus schauinslandi,Neomonachus schauinslandi,Neomonachus,Phocidae,Carnivora,
+mNescF,Pla2g2F,+,Neomonachus schauinslandi,Neomonachus schauinslandi,Neomonachus,Phocidae,Carnivora,
+sNoscF,Pla2g2F,-,Notechis scutatus,Notechis scutatus,Notechis,Elapidae,Squamata,
+sNoscD,Pla2g2D1,+,Notechis scutatus,Notechis scutatus,Notechis,Elapidae,Squamata,
+sNoscGc,Pla2g2Gc,+,Notechis scutatus,Notechis scutatus,Notechis,Elapidae,Squamata,
+sNoscE,Pla2g2E,+,Notechis scutatus,Notechis scutatus,Notechis,Elapidae,Squamata,
+mOcprC,Pla2g2C,+,Ochotona princeps,Ochotona princeps,Ochotona,Ochotonidae,Lagomorpha,
+mOcprF,Pla2g2F,-,Ochotona princeps,Ochotona princeps,Ochotona,Ochotonidae,Lagomorpha,
+mOcprD,Pla2g2D1,+,Ochotona princeps,Ochotona princeps,Ochotona,Ochotonidae,Lagomorpha,
+mOcprV,Pla2g2V1,-,Ochotona princeps,Ochotona princeps,Ochotona,Ochotonidae,Lagomorpha,
+mOcprA3,Pla2g2A,+,Ochotona princeps,Ochotona princeps,Ochotona,Ochotonidae,Lagomorpha,
+mOcprA2,Pla2g2A,+,Ochotona princeps,Ochotona princeps,Ochotona,Ochotonidae,Lagomorpha,
+mOcprA1,Pla2g2A,+,Ochotona princeps,Ochotona princeps,Ochotona,Ochotonidae,Lagomorpha,
+mOcprE,Pla2g2E,+,Ochotona princeps,Ochotona princeps,Ochotona,Ochotonidae,Lagomorpha,
+mOdviC,Pla2g2C,+,Odocoileus virginianus texanus,Odocoileus virginianus,Odocoileus,Cervidae,Artiodactyla,
+mOdviF,Pla2g2F,-,Odocoileus virginianus texanus,Odocoileus virginianus,Odocoileus,Cervidae,Artiodactyla,
+mOdviD,Pla2g2D1,+,Odocoileus virginianus texanus,Odocoileus virginianus,Odocoileus,Cervidae,Artiodactyla,
+mOdviV,Pla2g2V1,-,Odocoileus virginianus texanus,Odocoileus virginianus,Odocoileus,Cervidae,Artiodactyla,
+mOdviA3,Pla2g2A,+,Odocoileus virginianus texanus,Odocoileus virginianus,Odocoileus,Cervidae,Artiodactyla,
+mOdviA2,Pla2g2A,+,Odocoileus virginianus texanus,Odocoileus virginianus,Odocoileus,Cervidae,Artiodactyla,
+mOdviA1,Pla2g2A,+,Odocoileus virginianus texanus,Odocoileus virginianus,Odocoileus,Cervidae,Artiodactyla,
+mOdviE,Pla2g2E,+,Odocoileus virginianus texanus,Odocoileus virginianus,Odocoileus,Cervidae,Artiodactyla,
+sOphaE,Pla2g2E,-,Ophiophagus hannah,Ophiophagus hannah,Ophiophagus,Elapidae,Squamata,
+sOphaGc,Pla2g2Gc,-,Ophiophagus hannah,Ophiophagus hannah,Ophiophagus,Elapidae,Squamata,
+sOphaD,Pla2g2D1,-,Ophiophagus hannah,Ophiophagus hannah,Ophiophagus,Elapidae,Squamata,
+sOphaF,Pla2g2F,+,Ophiophagus hannah,Ophiophagus hannah,Ophiophagus,Elapidae,Squamata,
+sOpgrF,Pla2g2F,-,Dopasia gracilis,Dopasia gracilis,Dopasia,Anguidae,Squamata,(no exon 1)
+sOpgrDb,Pla2g2D1,+,Dopasia gracilis,Dopasia gracilis,Dopasia,Anguidae,Squamata,
+sOpgrG0,Pla2g2G0,+,Dopasia gracilis,Dopasia gracilis,Dopasia,Anguidae,Squamata,
+mOpgrE,Pla2g2E,-,Dopasia gracilis,Dopasia gracilis,Dopasia,Anguidae,Squamata,
+bOphoC,Pla2g2C,+,Opisthocomus hoazin,Opisthocomus hoazin,Opisthocomus,Opisthocomidae,Opisthocomiformes,
+bOphoD,Pla2g2D3,+,Opisthocomus hoazin,Opisthocomus hoazin,Opisthocomus,Opisthocomidae,Opisthocomiformes,
+bOphoE,Pla2g2E,+,Opisthocomus hoazin,Opisthocomus hoazin,Opisthocomus,Opisthocomidae,Opisthocomiformes,
+mOrorE,Pla2g2E,-,Orcinus orca,Orcinus orca,Orcinus,Delphinidae,Artiodactyla,
+mOrorV,Pla2g2V1,+,Orcinus orca,Orcinus orca,Orcinus,Delphinidae,Artiodactyla,
+mOrorD,Pla2g2D1,-,Orcinus orca,Orcinus orca,Orcinus,Delphinidae,Artiodactyla,
+mOrorC,Pla2g2C,-,Orcinus orca,Orcinus orca,Orcinus,Delphinidae,Artiodactyla,(no exon 1)
+mOranF,Pla2g2F,-,Ornithorhynchus anatinus,Ornithorhynchus anatinus,Ornithorhynchus,Ornithorhynchidae,Monotremata,(no exon F2)
+mOranD,Pla2g2D1,+,Ornithorhynchus anatinus,Ornithorhynchus anatinus,Ornithorhynchus,Ornithorhynchidae,Monotremata,
+mOran4,Pla2g2D1,+,Ornithorhynchus anatinus,Ornithorhynchus anatinus,Ornithorhynchus,Ornithorhynchidae,Monotremata,
+mOran3,Pla2g2,-,Ornithorhynchus anatinus,Ornithorhynchus anatinus,Ornithorhynchus,Ornithorhynchidae,Monotremata,pre-V (no exon 1)
+mOran2,Pla2g2D2,+,Ornithorhynchus anatinus,Ornithorhynchus anatinus,Ornithorhynchus,Ornithorhynchidae,Monotremata,
+mOranE,Pla2g2E,+,Ornithorhynchus anatinus,Ornithorhynchus anatinus,Ornithorhynchus,Ornithorhynchidae,Monotremata,
+mOrcuC,Pla2g2C,+,Oryctolagus cuniculus,Oryctolagus cuniculus,Oryctolagus,Leporidae,Lagomorpha,
+mOrcuF,Pla2g2F,-,Oryctolagus cuniculus,Oryctolagus cuniculus,Oryctolagus,Leporidae,Lagomorpha,
+mOrcuD,Pla2g2D1,+,Oryctolagus cuniculus,Oryctolagus cuniculus,Oryctolagus,Leporidae,Lagomorpha,
+mOrcuV,Pla2g2V1,-,Oryctolagus cuniculus,Oryctolagus cuniculus,Oryctolagus,Leporidae,Lagomorpha,
+mOrcuA4,Pla2g2A,+,Oryctolagus cuniculus,Oryctolagus cuniculus,Oryctolagus,Leporidae,Lagomorpha,
+mOrcuA3,Pla2g2A,-,Oryctolagus cuniculus,Oryctolagus cuniculus,Oryctolagus,Leporidae,Lagomorpha,
+mOrcuA2,Pla2g2A,+,Oryctolagus cuniculus,Oryctolagus cuniculus,Oryctolagus,Leporidae,Lagomorpha,
+mOrcuA,Pla2g2A,+,Oryctolagus cuniculus,Oryctolagus cuniculus,Oryctolagus,Leporidae,Lagomorpha,
+mOrcuE,Pla2g2E,+,Oryctolagus cuniculus,Oryctolagus cuniculus,Oryctolagus,Leporidae,Lagomorpha,
+mOvarC,Pla2g2C,+,Ovis aries,Ovis aries,Ovis,Bovidae,Artiodactyla,
+mOvarF,Pla2g2F,-,Ovis aries,Ovis aries,Ovis,Bovidae,Artiodactyla,
+mOvarD,Pla2g2D1,+,Ovis aries,Ovis aries,Ovis,Bovidae,Artiodactyla,
+mOvarA3,Pla2g2A,+,Ovis aries,Ovis aries,Ovis,Bovidae,Artiodactyla,
+mOvarA2,Pla2g2A,+,Ovis aries,Ovis aries,Ovis,Bovidae,Artiodactyla,
+mOvarA1,Pla2g2A,+,Ovis aries,Ovis aries,Ovis,Bovidae,Artiodactyla,
+mPatiC,Pla2g2C,+,Panthera tigris altaica,Panthera tigris,Panthera,Felidae,Carnivora,
+mPatiF,Pla2g2F,-,Panthera tigris altaica,Panthera tigris,Panthera,Felidae,Carnivora,
+mPatiD,Pla2g2D1,+,Panthera tigris altaica,Panthera tigris,Panthera,Felidae,Carnivora,
+mPatiV,Pla2g2V1,-,Panthera tigris altaica,Panthera tigris,Panthera,Felidae,Carnivora,
+mPatiE,Pla2g2E,+,Panthera tigris altaica,Panthera tigris,Panthera,Felidae,Carnivora,
+mPahoC,Pla2g2C,+,Pantholops hodgsonii,Pantholops hodgsonii,Pantholops,Bovidae,Artiodactyla,
+mPahoF,Pla2g2F,-,Pantholops hodgsonii,Pantholops hodgsonii,Pantholops,Bovidae,Artiodactyla,
+mPahoD,Pla2g2D1,+,Pantholops hodgsonii,Pantholops hodgsonii,Pantholops,Bovidae,Artiodactyla,
+mPahoV,Pla2g2V1,-,Pantholops hodgsonii,Pantholops hodgsonii,Pantholops,Bovidae,Artiodactyla,
+mPahoA5,Pla2g2A,+,Pantholops hodgsonii,Pantholops hodgsonii,Pantholops,Bovidae,Artiodactyla,
+mPahoA3,Pla2g2A,+,Pantholops hodgsonii,Pantholops hodgsonii,Pantholops,Bovidae,Artiodactyla,
+mPahoA1,Pla2g2A,+,Pantholops hodgsonii,Pantholops hodgsonii,Pantholops,Bovidae,Artiodactyla,
+mPahoE,Pla2g2E,+,Pantholops hodgsonii,Pantholops hodgsonii,Pantholops,Bovidae,Artiodactyla,
+sPapiE,Pla2g2E,-,Paroedura picta,Paroedura picta,Paroedura,Gekkonidae,Squamata,
+sPapiG0,Pla2g2G0,-,Paroedura picta,Paroedura picta,Paroedura,Gekkonidae,Squamata,
+sPapiF,Pla2g2F,+,Paroedura picta,Paroedura picta,Paroedura,Gekkonidae,Squamata,(no exon 1)
+bPafaC,Pla2g2C,+,Patagioenas fasciata monilis,Patagioenas fasciata,Patagioenas,Columbidae,Columbiformes,
+bPafaD,Pla2g2D3,+,Patagioenas fasciata monilis,Patagioenas fasciata,Patagioenas,Columbidae,Columbiformes,
+bPafaB,Pla2g2B,+,Patagioenas fasciata monilis,Patagioenas fasciata,Patagioenas,Columbidae,Columbiformes,
+cPesiF,Pla2g2F,-,Pelodiscus sinensis,Pelodiscus sinensis,Pelodiscus,Trionychidae,Testudines,
+cPesiD3,Pla2g2D3,+,Pelodiscus sinensis,Pelodiscus sinensis,Pelodiscus,Trionychidae,Testudines,
+cPesiD2,Pla2g2D2,+,Pelodiscus sinensis,Pelodiscus sinensis,Pelodiscus,Trionychidae,Testudines,(no exon 1)
+cPesiD1,Pla2g2D1,+,Pelodiscus sinensis,Pelodiscus sinensis,Pelodiscus,Trionychidae,Testudines,
+cPesiE,Pla2g2E,+,Pelodiscus sinensis,Pelodiscus sinensis,Pelodiscus,Trionychidae,Testudines,
+mPhciC,Pla2g2C,+,Phascolarctos cinereus,Phascolarctos cinereus,Phascolarctos,Phascolarctidae,Diprotodontia,
+mPhciF,Pla2g2F,-,Phascolarctos cinereus,Phascolarctos cinereus,Phascolarctos,Phascolarctidae,Diprotodontia,
+mPhciDb,Pla2g2D1,+,Phascolarctos cinereus,Phascolarctos cinereus,Phascolarctos,Phascolarctidae,Diprotodontia,
+mPhciDa,Pla2g2D1,+,Phascolarctos cinereus,Phascolarctos cinereus,Phascolarctos,Phascolarctidae,Diprotodontia,
+mPhciV4,Pla2g2V2,+,Phascolarctos cinereus,Phascolarctos cinereus,Phascolarctos,Phascolarctidae,Diprotodontia,
+mPhciV3,Pla2g2V2,+,Phascolarctos cinereus,Phascolarctos cinereus,Phascolarctos,Phascolarctidae,Diprotodontia,
+mPhciV2,Pla2g2V2,+,Phascolarctos cinereus,Phascolarctos cinereus,Phascolarctos,Phascolarctidae,Diprotodontia,
+mPhciV1,Pla2g2V2,+,Phascolarctos cinereus,Phascolarctos cinereus,Phascolarctos,Phascolarctidae,Diprotodontia,
+mPhciE,Pla2g2E,+,Phascolarctos cinereus,Phascolarctos cinereus,Phascolarctos,Phascolarctidae,Diprotodontia,
+sPoviF,Pla2g2F,+,Pogona vitticeps,Pogona vitticeps,Pogona,Agamidae,Squamata,
+sPoviD,Pla2g2D1,+,Pogona vitticeps,Pogona vitticeps,Pogona,Agamidae,Squamata,
+sPoviG0,Pla2g2G0,+,Pogona vitticeps,Pogona vitticeps,Pogona,Agamidae,Squamata,
+sPoviE,Pla2g2E,+,Pogona vitticeps,Pogona vitticeps,Pogona,Agamidae,Squamata,
+sPrflGck,Pla2g2,+,Protobothrops flavoviridis,Protobothrops flavoviridis,Protobothrops,Viperidae,Squamata,preGk (probably a pseudogene)
+sPrflGk49,Pla2g2Gk,+,Protobothrops flavoviridis,Protobothrops flavoviridis,Protobothrops,Viperidae,Squamata,
+sPrflGb,Pla2g2Gb,+,Protobothrops flavoviridis,Protobothrops flavoviridis,Protobothrops,Viperidae,Squamata,
+sPrflGa2,Pla2g2Ga,+,Protobothrops flavoviridis,Protobothrops flavoviridis,Protobothrops,Viperidae,Squamata,
+sPrflGa1,Pla2g2Ga,+,Protobothrops flavoviridis,Protobothrops flavoviridis,Protobothrops,Viperidae,Squamata,
+sPrflE,Pla2g2E,+,Protobothrops flavoviridis,Protobothrops flavoviridis,Protobothrops,Viperidae,Squamata,
+sPrmuE,Pla2g2E,-,Protobothrops mucrosquamatus,Protobothrops mucrosquamatus,Protobothrops,Viperidae,Squamata,
+sPrmuGb,Pla2g2Gb,-,Protobothrops mucrosquamatus,Protobothrops mucrosquamatus,Protobothrops,Viperidae,Squamata,
+sPrmuGk49,Pla2g2Gk,-,Protobothrops mucrosquamatus,Protobothrops mucrosquamatus,Protobothrops,Viperidae,Squamata,
+sPrmuGck,Pla2g2,-,Protobothrops mucrosquamatus,Protobothrops mucrosquamatus,Protobothrops,Viperidae,Squamata,preGk
+sPrmuGa1,Pla2g2Ga,+,Protobothrops mucrosquamatus,Protobothrops mucrosquamatus,Protobothrops,Viperidae,Squamata,
+sPrmuGa2,Pla2g2Ga,+,Protobothrops mucrosquamatus,Protobothrops mucrosquamatus,Protobothrops,Viperidae,Squamata,
+sPrmuF,Pla2g2F,+,Protobothrops mucrosquamatus,Protobothrops mucrosquamatus,Protobothrops,Viperidae,Squamata,
+sPsteF,Pla2g2F,-,Pseudonaja textilis,Pseudonaja textilis,Pseudonaja,Elapidae,Squamata,
+sPsteD,Pla2g2D1,+,Pseudonaja textilis,Pseudonaja textilis,Pseudonaja,Elapidae,Squamata,
+sPsteGc,Pla2g2Gc,+,Pseudonaja textilis,Pseudonaja textilis,Pseudonaja,Elapidae,Squamata,
+sPsteE,Pla2g2E,+,Pseudonaja textilis,Pseudonaja textilis,Pseudonaja,Elapidae,Squamata,
+bPskrE,Pla2g2E,-,Psittacula krameri,Psittacula krameri,Psittacula,Psittacidae,Psittaciformes,
+bPskrB,Pla2g2B,-,Psittacula krameri,Psittacula krameri,Psittacula,Psittacidae,Psittaciformes,
+bPskrD,Pla2g2D3,-,Psittacula krameri,Psittacula krameri,Psittacula,Psittacidae,Psittaciformes,
+bPskrC,Pla2g2C,-,Psittacula krameri,Psittacula krameri,Psittacula,Psittacidae,Psittaciformes,
+mPtvaE,Pla2g2E,-,Pteropus vampyrus,Pteropus vampyrus,Pteropus,Pteropodidae,Chiroptera,(no exon 1)
+mPtvaV,Pla2g2V1,+,Pteropus vampyrus,Pteropus vampyrus,Pteropus,Pteropodidae,Chiroptera,
+mPtvaD,Pla2g2D1,-,Pteropus vampyrus,Pteropus vampyrus,Pteropus,Pteropodidae,Chiroptera,
+mPtvaF,Pla2g2F,+,Pteropus vampyrus,Pteropus vampyrus,Pteropus,Pteropodidae,Chiroptera,
+mPtvaC,Pla2g2C,-,Pteropus vampyrus,Pteropus vampyrus,Pteropus,Pteropodidae,Chiroptera,
+bPyadC,Pla2g2C,+,Pygoscelis adeliae,Pygoscelis adeliae,Pygoscelis,Spheniscidae,Sphenisciformes,
+bPyadD,Pla2g2D3,+,Pygoscelis adeliae,Pygoscelis adeliae,Pygoscelis,Spheniscidae,Sphenisciformes,
+bPyadB,Pla2g2B,+,Pygoscelis adeliae,Pygoscelis adeliae,Pygoscelis,Spheniscidae,Sphenisciformes,
+sPybiE,Pla2g2E,-,Python bivittatus,Python bivittatus,Python,Pythonidae,Squamata,
+sPybiF,Pla2g2F,+,Python bivittatus,Python bivittatus,Python,Pythonidae,Squamata,
+mSahaC,Pla2g2C,+,Sarcophilus harrisii,Sarcophilus harrisii,Sarcophilus,Dasyuridae,Dasyuromorphia,
+mSahaF,Pla2g2F,-,Sarcophilus harrisii,Sarcophilus harrisii,Sarcophilus,Dasyuridae,Dasyuromorphia,
+mSahaD,Pla2g2D1,+,Sarcophilus harrisii,Sarcophilus harrisii,Sarcophilus,Dasyuridae,Dasyuromorphia,
+mSahaV5,Pla2g2V1,-,Sarcophilus harrisii,Sarcophilus harrisii,Sarcophilus,Dasyuridae,Dasyuromorphia,
+mSahaV4,Pla2g2V2,+,Sarcophilus harrisii,Sarcophilus harrisii,Sarcophilus,Dasyuridae,Dasyuromorphia,
+mSahaV2,Pla2g2V1,+,Sarcophilus harrisii,Sarcophilus harrisii,Sarcophilus,Dasyuridae,Dasyuromorphia,
+mSahaE,Pla2g2E,-,Sarcophilus harrisii,Sarcophilus harrisii,Sarcophilus,Dasyuridae,Dasyuromorphia,
+mSahaV1,Pla2g2V2,-,Sarcophilus harrisii,Sarcophilus harrisii,Sarcophilus,Dasyuridae,Dasyuromorphia,
+bSecoE,Pla2g2E,-,Setophaga coronata coronata,Setophaga coronata,Setophaga,Parulidae,Passeriformes,
+bSecoD,Pla2g2D3,-,Setophaga coronata coronata,Setophaga coronata,Setophaga,Parulidae,Passeriformes,
+mSoarE,Pla2g2E,-,Sorex araneus,Sorex araneus,Sorex,Soricidae,Eulipotyphla,
+mSoarA2,Pla2g2A,+,Sorex araneus,Sorex araneus,Sorex,Soricidae,Eulipotyphla,
+mSoarA3,Pla2g2A,-,Sorex araneus,Sorex araneus,Sorex,Soricidae,Eulipotyphla,
+mSoarV,Pla2g2V1,+,Sorex araneus,Sorex araneus,Sorex,Soricidae,Eulipotyphla,
+mSoarD,Pla2g2D1,-,Sorex araneus,Sorex araneus,Sorex,Soricidae,Eulipotyphla,
+mSoarF,Pla2g2F,+,Sorex araneus,Sorex araneus,Sorex,Soricidae,Eulipotyphla,
+mSoarC,Pla2g2C,-,Sorex araneus,Sorex araneus,Sorex,Soricidae,Eulipotyphla,
+bStocE,Pla2g2E,-,Strix occidentalis caurina,Strix occidentalis,Strix,Strigidae,Strigiformes,
+bStocB,Pla2g2B,-,Strix occidentalis caurina,Strix occidentalis,Strix,Strigidae,Strigiformes,
+bStocD,Pla2g2D3,-,Strix occidentalis caurina,Strix occidentalis,Strix,Strigidae,Strigiformes,
+bStocC,Pla2g2C,-,Strix occidentalis caurina,Strix occidentalis,Strix,Strigidae,Strigiformes,
+sThbaF,Pla2g2F,-,Thermophis baileyi,Thermophis baileyi,Thermophis,Dipsadidae,Squamata,
+sThbaD,Pla2g2D1,+,Thermophis baileyi,Thermophis baileyi,Thermophis,Dipsadidae,Squamata,
+sThbaGc,Pla2g2Gc,+,Thermophis baileyi,Thermophis baileyi,Thermophis,Dipsadidae,Squamata,
+sThbaE,Pla2g2E,+,Thermophis baileyi,Thermophis baileyi,Thermophis,Dipsadidae,Squamata,
+mTrmaC,Pla2g2C,+,Trichechus manatus latirostris,Trichechus manatus,Trichechus,Trichechidae,Sirenia,
+mTrmaF,Pla2g2F,-,Trichechus manatus latirostris,Trichechus manatus,Trichechus,Trichechidae,Sirenia,
+mTrmaD,Pla2g2D1,+,Trichechus manatus latirostris,Trichechus manatus,Trichechus,Trichechidae,Sirenia,
+mTrmaV,Pla2g2V1,-,Trichechus manatus latirostris,Trichechus manatus,Trichechus,Trichechidae,Sirenia,
+mTrmaA2,Pla2g2A,+,Trichechus manatus latirostris,Trichechus manatus,Trichechus,Trichechidae,Sirenia,
+mTrmaE,Pla2g2E,+,Trichechus manatus latirostris,Trichechus manatus,Trichechus,Trichechidae,Sirenia,
+bUrpeC,Pla2g2C,+,Phalacrocorax,None,Phalacrocorax,Phalacrocoracidae,Pelecaniformes,
+bUrpeD,Pla2g2D3,+,Phalacrocorax,None,Phalacrocorax,Phalacrocoracidae,Pelecaniformes,
+bUrpeB,Pla2g2B,+,Phalacrocorax,None,Phalacrocorax,Phalacrocoracidae,Pelecaniformes,
+mUrmaC,Pla2g2C,+,Ursus maritimus,Ursus maritimus,Ursus,Ursidae,Carnivora,
+mUrmaD,Pla2g2D1,+,Ursus maritimus,Ursus maritimus,Ursus,Ursidae,Carnivora,
+mUrmaV,Pla2g2V1,-,Ursus maritimus,Ursus maritimus,Ursus,Ursidae,Carnivora,
+sVibeEa,Pla2g2E,-,Vipera berus berus,Vipera berus,Vipera,Viperidae,Squamata,
+sVibeGa1,Pla2g2Ga,-,Vipera berus berus,Vipera berus,Vipera,Viperidae,Squamata,
+sVibeGa2,Pla2g2Ga,-,Vipera berus berus,Vipera berus,Vipera,Viperidae,Squamata,
+sVibeGa4,Pla2g2Ga,+,Vipera berus berus,Vipera berus,Vipera,Viperidae,Squamata,
+sVibeF,Pla2g2F,+,Vipera berus berus,Vipera berus,Vipera,Viperidae,Squamata,
+Xela,Pla2g2,-,Xenopus laevis,Xenopus laevis,Xenopus,Pipidae,Anura,preg2
