@@ -658,6 +658,13 @@ def get_callbacks(
         :param dim: chosen dimension, 2D or 3D
         :return: Output variables
         """
+        def is_number(s):
+            try:
+                float(s)
+                return True
+            except ValueError:
+                return False
+
         # Check whether an input is triggered
         ctx = dash.callback_context
         if not ctx.triggered:
@@ -791,8 +798,8 @@ def get_callbacks(
         # If umap parameters are selected in the dropdown menu
         if ctx.triggered_id == "last_umap_paras_dd":
             splits = umap_paras_dd_value.split(" ; ")
-            umap_paras["n_neighbours"] = splits[0]
-            umap_paras["min_dist"] = splits[1]
+            umap_paras["n_neighbours"] = int(splits[0])
+            umap_paras["min_dist"] = float(splits[1])
             umap_paras["metric"] = splits[2]
 
             df.drop(labels=umap_axis_names, axis="columns", inplace=True)
@@ -836,8 +843,8 @@ def get_callbacks(
         if ctx.triggered_id == "last_tsne_paras_dd":
 
             splits = tsne_paras_dd_value.split(" ; ")
-            tsne_paras["iterations"] = splits[0]
-            tsne_paras["perplexity"] = splits[1]
+            tsne_paras["iterations"] = int(splits[0])
+            tsne_paras["perplexity"] = float(splits[1])
             tsne_paras["learning_rate"] = splits[2]
             tsne_paras["tsne_metric"] = splits[3]
 
@@ -847,7 +854,8 @@ def get_callbacks(
 
         if ctx.triggered_id == "tsne_recalculation_button":
             # check whether learning rate is auto or a number
-            if learning_rate.isnumeric():
+            learning_rate = learning_rate.replace(",", ".")
+            if is_number(learning_rate):
                 learning_rate = float(learning_rate)
             elif learning_rate != "auto":
                 raise PreventUpdate
