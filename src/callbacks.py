@@ -605,7 +605,7 @@ def get_callbacks(
         Input("iterations_input", "value"),
         Input("perplexity_input", "value"),
         Input("learning_rate_input", "value"),
-        Input("metric_input", "value"),
+        Input("tsne_metric_input", "value"),
         Input("tsne_recalculation_button", "n_clicks"),
         Input("last_tsne_paras_dd", "value"),
         Input("graph", "clickData"),
@@ -729,7 +729,7 @@ def get_callbacks(
             "iterations_input",
             "perplexity_input",
             "learning_rate_input",
-            "metric_input",
+            "tsne_metric_input",
         ]:
             raise PreventUpdate
 
@@ -790,17 +790,14 @@ def get_callbacks(
 
         # If umap parameters are selected in the dropdown menu
         if ctx.triggered_id == "last_umap_paras_dd":
-
             splits = umap_paras_dd_value.split(" ; ")
             umap_paras["n_neighbours"] = splits[0]
             umap_paras["min_dist"] = splits[1]
             umap_paras["metric"] = splits[2]
 
-            coords = umap_paras_dict[umap_paras_dd_value]
             df.drop(labels=umap_axis_names, axis="columns", inplace=True)
-            df["x_umap"] = coords["x_umap"]
-            df["y_umap"] = coords["y_umap"]
-            df["z_umap"] = coords["z_umap"]
+            coords_df = umap_paras_dict[umap_paras_dd_value]
+            df = df.join(coords_df, how="left")
 
         # If UMAP parameters are changed and accepted
         if ctx.triggered_id == "umap_recalculation_button":
@@ -818,15 +815,11 @@ def get_callbacks(
             df_umap = DataPreprocessor.generate_umap(embeddings, umap_paras)
             df_umap.index = embedding_uids
 
-            df = df.join(df_umap, how="outer")
+            df = df.join(df_umap, how="left")
 
-            coords_dict = dict(
-                x_umap=df_umap["x_umap"].to_list(),
-                y_umap=df_umap["y_umap"].to_list(),
-                z_umap=df_umap["z_umap"].to_list(),
-            )
+            coords_df = df[umap_axis_names]
 
-            umap_paras_dict[umap_paras_string] = coords_dict
+            umap_paras_dict[umap_paras_string] = coords_df
         # String representation of UMAP parameters still to be created if not button used
         else:
             umap_paras_string = (
@@ -848,11 +841,9 @@ def get_callbacks(
             tsne_paras["learning_rate"] = splits[2]
             tsne_paras["tsne_metric"] = splits[3]
 
-            coords = tsne_paras_dict[tsne_paras_dd_value]
             df.drop(labels=tsne_axis_names, axis="columns", inplace=True)
-            df["x_tsne"] = coords["x_tsne"]
-            df["y_tsne"] = coords["y_tsne"]
-            df["z_tsne"] = coords["z_tsne"]
+            coords_df = tsne_paras_dict[tsne_paras_dd_value]
+            df = df.join(coords_df, how="left")
 
         if ctx.triggered_id == "tsne_recalculation_button":
             # check whether learning rate is auto or a number
@@ -882,15 +873,11 @@ def get_callbacks(
             df_tsne = DataPreprocessor.generate_tsne(embeddings, tsne_paras)
             df_tsne.index = embedding_uids
 
-            df = df.join(df_tsne, how="outer")
+            df = df.join(df_tsne, how="left")
 
-            coords_dict = dict(
-                x_tsne=df_tsne["x_tsne"].to_list(),
-                y_tsne=df_tsne["y_tsne"].to_list(),
-                z_tsne=df_tsne["z_tsne"].to_list(),
-            )
+            coords_df = df[tsne_axis_names]
 
-            tsne_paras_dict[tsne_paras_string] = coords_dict
+            tsne_paras_dict[tsne_paras_string] = coords_df
 
         # String representation still needed if not button used
         else:
@@ -957,6 +944,7 @@ def get_callbacks(
                         size=15,
                         color="white",
                         symbol="circle-open",
+                        line=dict(color="black", width=1),
                     ),
                     showlegend=False,
                     hoverinfo="skip",
@@ -972,6 +960,7 @@ def get_callbacks(
                         size=15,
                         color="black",
                         symbol="circle-open",
+                        line=dict(color="black", width=1),
                     ),
                     showlegend=False,
                     hoverinfo="skip",
@@ -1061,6 +1050,43 @@ def get_callbacks(
                         ),
                         overwrite=True,
                     )
+
+            x_coords = list()
+            y_coords = list()
+            z_coords = list()
+            for seq_id in seq_ids:
+                if seq_id != last_clicked_mol:
+                    if original_id_col is not None:
+                        seq_id = to_mapped_id([seq_id], original_id_col, df)[0]
+
+                    if dim_red == "UMAP":
+                        x_coords.append(df.at[seq_id, "x_umap"])
+                        y_coords.append(df.at[seq_id, "y_umap"])
+                        z_coords.append(df.at[seq_id, "z_umap"])
+                    elif dim_red == "PCA":
+                        x_coords.append(df.at[seq_id, "x_pca"])
+                        y_coords.append(df.at[seq_id, "y_pca"])
+                        z_coords.append(df.at[seq_id, "z_pca"])
+                    else:
+                        x_coords.append(df.at[seq_id, "x_tsne"])
+                        y_coords.append(df.at[seq_id, "y_tsne"])
+                        z_coords.append(df.at[seq_id, "z_tsne"])
+
+            if dim == "3D":
+                fig.update_traces(
+                    x=x_coords,
+                    y=y_coords,
+                    z=z_coords,
+                    selector=dict(marker_symbol="circle-open", marker_color="white"),
+                    overwrite=True,
+                )
+            else:
+                fig.update_traces(
+                    x=x_coords,
+                    y=y_coords,
+                    selector=dict(marker_symbol="circle-open", marker_color="white"),
+                    overwrite=True,
+                )
 
         # Disable UMAP parameter input or not?
         disabled = False
@@ -1582,3 +1608,5 @@ def get_callbacks(
             if key != seq_id
         ]
         return dbc.ListGroup(children=list_group_items, flush=True)
+
+    return download_graph, expand_sequence, handle_graph_canvas

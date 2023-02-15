@@ -98,10 +98,10 @@ class DataPreprocessor:
             )
 
         # replace empty values with NA
-        df_csv.fillna("NA", inplace=True)
+        # df_csv.fillna("NA", inplace=True)
 
         # replace "None" values with NA
-        df_csv.replace(to_replace="None", value="NA", inplace=True)
+        # df_csv.replace(to_replace="None", value="NA", inplace=True)
 
         # save index name for df.csv
         index_name = df_csv.index.name
@@ -416,7 +416,7 @@ class DataPreprocessor:
                 print(f"Pre computed dataframe file df_{hdf_path.stem}.csv is loaded.")
 
             pres_df_csv = pd.read_csv(pres_df, index_col=0)
-            pres_df_csv.fillna("NA", inplace=True)
+            # pres_df_csv.fillna("NA", inplace=True)
 
             # Check whether no. of rows equals data
             if len(pres_df_csv) != len(df_csv):
@@ -759,12 +759,8 @@ class DataPreprocessor:
         min_dist = self.umap_paras["min_dist"]
         metric = self.umap_paras["metric"]
         umap_paras_string = str(n_neighbours) + " ; " + str(min_dist) + " ; " + metric
-        coords_dict = dict(
-            x_umap=df["x_umap"].to_list(),
-            y_umap=df["y_umap"].to_list(),
-            z_umap=df["z_umap"].to_list(),
-        )
-        umap_paras_dict[umap_paras_string] = coords_dict
+        coords_df = df[self.UMAP_AXIS_NAMES]
+        umap_paras_dict[umap_paras_string] = coords_df
 
         return umap_paras_dict
 
@@ -789,11 +785,7 @@ class DataPreprocessor:
             + " ; "
             + str(tsne_metric)
         )
-        coords_dict = dict(
-            x_tsne=df["x_tsne"].to_list(),
-            y_tsne=df["y_tsne"].to_list(),
-            z_tsne=df["z_tsne"].to_list(),
-        )
-        tsne_paras_dict[tsne_paras_string] = coords_dict
+        coords_df = df[self.TSNE_AXIS_NAMES]
+        tsne_paras_dict[tsne_paras_string] = coords_df
 
         return tsne_paras_dict
