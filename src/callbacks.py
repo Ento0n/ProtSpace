@@ -1602,29 +1602,38 @@ def get_callbacks(
             sorted(manhattan_id_to_dis.items(), key=lambda x: x[1])
         )
 
-        # Create the lists that are shown in the tabs
-        euclidean_list = get_list(euclidean_id_to_dis, seq_id)
-        cosine_list = get_list(cosine_id_to_dis, seq_id)
-        manhattan_list = get_list(manhattan_id_to_dis, seq_id)
+        # Create the tables that are shown in the tabs
+        euclidean_table = get_table(euclidean_id_to_dis, seq_id, "euclidean")
+        cosine_table = get_table(cosine_id_to_dis, seq_id, "cosine")
+        manhattan_table = get_table(manhattan_id_to_dis, seq_id, "manhattan")
+
+        # Create the tooltips for the IDs in the table
+        euclidean_tooltips = get_tooltips(euclidean_id_to_dis, seq_id, "euclidean")
+        cosine_tooltips = get_tooltips(cosine_id_to_dis, seq_id, "cosine")
+        manhattan_tooltips = get_tooltips(manhattan_id_to_dis, seq_id, "manhattan")
 
         # Header of the toast
         header = "Nearest neighbours"
 
         # Body of the toast
-        body = dbc.Tabs(
+        tabs = dbc.Tabs(
             children=[
-                dbc.Tab(euclidean_list, label="euclidean"),
-                dbc.Tab(cosine_list, label="cosine"),
-                dbc.Tab(manhattan_list, label="manhattan"),
+                dbc.Tab(euclidean_table, label="euclidean"),
+                dbc.Tab(cosine_table, label="cosine"),
+                dbc.Tab(manhattan_table, label="manhattan"),
             ],
             active_tab="tab-0",
         )
+
+        body = euclidean_tooltips + cosine_tooltips + manhattan_tooltips
+        # noinspection PyTypeChecker
+        body.append(tabs)
 
         return header, body, True
 
     def get_id_to_dis(idx: int, ids: list, metric: str):
         """
-        Creates a dictionary that has the ID of the niehgbours as key and the distance as value
+        Creates a dictionary that has the ID of the neighbours as key and the distance as value
         :param idx: index of the selected ID in the distance matrix
         :param ids: list with the IDs of neighbours
         :param metric: the to be processed metric
@@ -1636,22 +1645,45 @@ def get_callbacks(
         # create hashing that saves ID to distance
         id_to_dis = dict()
         for idx, value in enumerate(ids):
-            id_to_dis[value] = distance_row[idx]
+            id_to_dis[value] = round(distance_row[idx], 4)
 
         return id_to_dis
 
-    def get_list(id_to_dis: dict, seq_id: str):
+    def get_table(id_to_dis: dict, seq_id: str, metric: str):
         """
         Creates the Listgroup item that is shown in the web application for each neighbour
         :param id_to_dis: dictionary with IDs and distances
         :param seq_id: the selected ID, should not be displayed
+        :param metric: metric of the id_to_dis dictionary
         :return: The complete ListGroup shown in the tab of a metric
         """
-        list_group_items = [
-            dbc.ListGroupItem(f"{key}: {value}")
-            for key, value in id_to_dis.items()
-            if key != seq_id
-        ]
-        return dbc.ListGroup(children=list_group_items, flush=True)
+        table_rows = list()
+        for key, value in id_to_dis.items():
+            if key != seq_id:
+                unedited_key = key
+                if len(key) > 15:
+                    key = key[:15]
+                    key = key + "..."
+
+                table_rows.append(html.Tr([html.Td(key, id=f"{metric}_{unedited_key}"), html.Td(value)]))
+
+        table_body = html.Tbody(table_rows)
+
+        return dbc.Table(table_body, hover=True)
+
+    def get_tooltips(id_to_dis: dict, seq_id: str, metric: str):
+        """
+        Creates a list with tooltips for the IDs in the nearest neighbours table
+        :param id_to_dis: dictionary with IDs and distances
+        :param seq_id: the selected ID, should not be displayed
+        :param metric: metric of the id_to_dis dictionary
+        :return: The complete ListGroup shown in the tab of a metric
+        """
+        tooltips_list = list()
+        for key in id_to_dis.keys():
+            if key != seq_id and len(key) > 15:
+                tooltips_list.append(dbc.Tooltip(key, target=f"{metric}_{key}", placement="top"))
+
+        return tooltips_list
 
     return download_graph, expand_sequence, handle_graph_canvas
