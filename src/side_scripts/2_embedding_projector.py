@@ -33,7 +33,7 @@ df_csv = pd.read_csv(csv_path, index_col=0)
 
 df_csv, df_emb = df_csv.align(df_emb, join="left", axis=0)
 
-df_emb.dropna(how="all")
+df_emb.dropna(how="any", axis=0, inplace=True)
 
 df_emb, df_csv = df_emb.align(df_csv, join="left", axis=0)
 
