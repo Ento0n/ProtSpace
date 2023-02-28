@@ -31,12 +31,11 @@ df_csv = pd.read_csv(csv_path, index_col=0)
 
 # Fit files to IDs #
 
-if len(df_emb) > len(df_csv):
-    df_emb = df_emb.loc[df_emb.index.isin(df_csv.index)]
-elif len(df_emb) < len(df_csv):
-    df_csv = df_csv.loc[df_csv.index.isin(df_emb.index)]
+df_csv, df_emb = df_csv.align(df_emb, join="left", axis=0)
 
-df_emb, df_csv = df_emb.align(df_csv, join="left", axis=0) # align dataframes by Index
+df_emb.dropna(how="all")
+
+df_emb, df_csv = df_emb.align(df_csv, join="left", axis=0)
 
 # Save files #
 
