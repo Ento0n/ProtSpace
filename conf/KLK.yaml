@@ -1,0 +1,4 @@
+o: data/KLK
+hdf: data/KLK/KLK_esm2.h5
+csv: data/KLK/KLK.csv
+fasta: data/KLK/KLK.fasta
