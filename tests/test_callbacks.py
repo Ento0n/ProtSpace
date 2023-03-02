@@ -1,9 +1,9 @@
 from pathlib import Path
 
-from callbacks import get_callbacks, get_callbacks_pdb
-from preprocessing import  DataPreprocessor
-from structurecontainer import StructureContainer
-from visualization.visualizator import Visualizator
+from src.callbacks import get_callbacks, get_callbacks_pdb
+from src.preprocessing import  DataPreprocessor
+from src.structurecontainer import StructureContainer
+from src.visualization.visualizator import Visualizator
 
 from contextvars import copy_context
 from dash._callback_context import context_value
