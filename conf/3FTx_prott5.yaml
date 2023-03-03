@@ -1,0 +1,4 @@
+o: data/3FTx
+hdf: data/3FTx/3FTx_mature_prott5.h5
+csv: data/3FTx/3FTx.csv
+fasta: data/3FTx/3FTx_mature.fasta

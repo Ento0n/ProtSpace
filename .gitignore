@@ -1,11 +1,12 @@
-# colabfold output (too large)
+# ignore large files
 data/*/colabfold/out/
 data/*/PPIHP/out/
-data/3FTx/blast_out/
-data/3FTx/uniprot_entry/
 config/
 out/
 **.html
+
+# vscode settings
+.vscode/
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
