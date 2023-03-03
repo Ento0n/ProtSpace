@@ -12,7 +12,7 @@ from Bio import SeqIO
 from pandas import DataFrame
 from scipy.spatial.distance import cdist, pdist, squareform
 
-from .visualization.visualizator import Visualizator
+from src.visualization.visualizator import Visualizator
 
 
 class DataPreprocessor:

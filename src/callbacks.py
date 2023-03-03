@@ -14,9 +14,9 @@ from dash import Input, Output, State, html
 from dash.exceptions import PreventUpdate
 from pandas import DataFrame
 
-from .preprocessing import DataPreprocessor
-from .structurecontainer import StructureContainer
-from .visualization.visualizator import Visualizator
+from src.preprocessing import DataPreprocessor
+from src.structurecontainer import StructureContainer
+from src.visualization.visualizator import Visualizator
 
 
 def to_mapped_id(
