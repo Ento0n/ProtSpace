@@ -5,13 +5,12 @@ import argparse
 import sys
 from pathlib import Path
 
-from preprocessing import DataPreprocessor
-from visualization.visualizator import Visualizator
-
-from callbacks import get_callbacks, get_callbacks_pdb
-from structurecontainer import StructureContainer
-
 import yaml
+
+from .callbacks import get_callbacks, get_callbacks_pdb
+from .preprocessing import DataPreprocessor
+from .structurecontainer import StructureContainer
+from .visualization.visualizator import Visualizator
 
 
 class LoadConfFile(argparse.Action):
@@ -192,28 +191,40 @@ class Parser:
             "--output",
             required=False,
             type=str,
-            help=("Name of the output folder where generated files will be stored."),
+            help=(
+                "Name of the output folder where generated files will be"
+                " stored."
+            ),
         )
         # Required argument
         parser.add_argument(
             "--hdf",
             required=False,
             type=str,
-            help="Path to HDF5-file containing the per protein embeddings as a key-value pair, aka UID-embedding",
+            help=(
+                "Path to HDF5-file containing the per protein embeddings as a"
+                " key-value pair, aka UID-embedding"
+            ),
         )
         # Required argument
         parser.add_argument(
             "--csv",
             required=False,
             type=str,
-            help="Path to CSV-file containing groups/features by which the dots in the 3D-plot are colored",
+            help=(
+                "Path to CSV-file containing groups/features by which the dots"
+                " in the 3D-plot are colored"
+            ),
         )
         parser.add_argument(
             "-f",
             "--fasta",
             required=False,
             type=str,
-            help="Path to fasta file containing the ID and the according sequence.",
+            help=(
+                "Path to fasta file containing the ID and the according"
+                " sequence."
+            ),
         )
         # Optional argument
         parser.add_argument(
@@ -244,7 +255,10 @@ class Parser:
         parser.add_argument(
             "--html_cols",
             required=False,
-            help="CSV columns to be saved as html, either the column index(es) or column name(s).",
+            help=(
+                "CSV columns to be saved as html, either the column index(es)"
+                " or column name(s)."
+            ),
             nargs="+",
         )
         # Optional argument
@@ -344,7 +358,10 @@ class Parser:
             "--verbose",
             required=False,
             action="store_true",
-            help="By setting the verbose parameter, the script prints its internal operations.",
+            help=(
+                "By setting the verbose parameter, the script prints its"
+                " internal operations."
+            ),
         )
 
         args = parser.parse_args()
@@ -407,7 +424,8 @@ def required_arguments_check(hdf_path: Path, output_d: Path):
     if hdf_path is None or output_d is None:
         if hdf_path is None and output_d is None:
             raise Exception(
-                "hdf path and output directory must be given either in config file or as argument!"
+                "hdf path and output directory must be given either in config"
+                " file or as argument!"
             )
         elif hdf_path is None:
             raise Exception(
@@ -415,7 +433,8 @@ def required_arguments_check(hdf_path: Path, output_d: Path):
             )
         else:
             raise Exception(
-                "output directory must be given either in config file or as argument!"
+                "output directory must be given either in config file or as"
+                " argument!"
             )
 
 

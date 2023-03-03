@@ -3,15 +3,16 @@
 
 import os
 from pathlib import Path
-import h5py
-import pandas
-from scipy.spatial.distance import pdist, squareform, cdist
-import numpy as np
-import pandas as pd
-from pandas import DataFrame
-from Bio import SeqIO
 
-from visualization.visualizator import Visualizator
+import h5py
+import numpy as np
+import pandas
+import pandas as pd
+from Bio import SeqIO
+from pandas import DataFrame
+from scipy.spatial.distance import cdist, pdist, squareform
+
+from .visualization.visualizator import Visualizator
 
 
 class DataPreprocessor:
@@ -73,7 +74,9 @@ class DataPreprocessor:
             if df_csv_path.is_file():
                 os.remove(df_csv_path)
 
-        csv_less_flag = self._check_files(emb_h5file, label_csv_p, self.csv_separator)
+        csv_less_flag = self._check_files(
+            emb_h5file, label_csv_p, self.csv_separator
+        )
 
         mapped_flag = self._check_mapped(label_csv_p, self.csv_separator)
 
@@ -114,7 +117,12 @@ class DataPreprocessor:
         if self.fasta_path is not None:
             fasta_dict = self._read_fasta()
 
-        df_embeddings, csv_header, embeddings, embedding_uids = self._read_df_csv(
+        (
+            df_embeddings,
+            csv_header,
+            embeddings,
+            embedding_uids,
+        ) = self._read_df_csv(
             self.output_d,
             df_csv,
             emb_h5file,
@@ -194,7 +202,8 @@ class DataPreprocessor:
         # Check whether the h5 files is present (mandatory)
         if not hdf_path.is_file():
             raise FileNotFoundError(
-                f"The {hdf_path} file is missing! Check data directory and basename."
+                f"The {hdf_path} file is missing! Check data directory and"
+                " basename."
             )
 
         # Check whether csv file is present (csv less mode activated if not)
@@ -203,7 +212,8 @@ class DataPreprocessor:
             csv_less_flag = True
             if self.verbose:
                 print(
-                    "No csv file found!\nActivate csv less mode, no groups or features are visualized."
+                    "No csv file found!\nActivate csv less mode, no groups or"
+                    " features are visualized."
                 )
         # get csv headers to check whether csv only exists for mapping
         else:
@@ -351,7 +361,8 @@ class DataPreprocessor:
                             fig.write_html(output_d / f"3Dspace_{item}.html")
                     except Exception:
                         raise Exception(
-                            f"Given column name <{item}> for html output don't match column names in csv file!"
+                            f"Given column name <{item}> for html output don't"
+                            " match column names in csv file!"
                             + f"\npossible selection: {csv_header}"
                         )
 
@@ -380,11 +391,14 @@ class DataPreprocessor:
                             umap_paras=self.umap_paras,
                             tsne_paras=self.tsne_paras,
                         )
-                        fig.write_html(output_d / f"3Dspace_{csv_header[col]}.html")
+                        fig.write_html(
+                            output_d / f"3Dspace_{csv_header[col]}.html"
+                        )
                 # Mixed types in the html columns list, can't process this
                 else:
                     raise Exception(
-                        "Mixed input for html columns!\nEither column name or index is a valid input!"
+                        "Mixed input for html columns!\nEither column name or"
+                        " index is a valid input!"
                     )
 
     def _read_df_csv(
@@ -413,7 +427,10 @@ class DataPreprocessor:
         pres_df = output_d / f"df_{hdf_path.stem}.csv"
         if pres_df.is_file():
             if self.verbose:
-                print(f"Pre computed dataframe file df_{hdf_path.stem}.csv is loaded.")
+                print(
+                    f"Pre computed dataframe file df_{hdf_path.stem}.csv is"
+                    " loaded."
+                )
 
             pres_df_csv = pd.read_csv(pres_df, index_col=0)
             # pres_df_csv.fillna("NA", inplace=True)
@@ -460,7 +477,8 @@ class DataPreprocessor:
 
                         # save the new obtained df
                         pres_df_csv.to_csv(
-                            output_d / f"df_{hdf_path.stem}.csv", index_label=index_name
+                            output_d / f"df_{hdf_path.stem}.csv",
+                            index_label=index_name,
                         )
 
                     # save final column names
@@ -515,14 +533,17 @@ class DataPreprocessor:
 
         # data should be n_proteins x 1024 (ProtT5) OR n_proteins x 128 (ProtTucker)
         if self.verbose:
-            print(f"Shape of embeddings (num_proteins x embedding dim): {embs.shape}")
+            print(
+                "Shape of embeddings (num_proteins x embedding dim):"
+                f" {embs.shape}"
+            )
 
         if self.verbose:
             # get pairwise distances; should be n_proteins x n_proteins
             pairwise_dist = squareform(self._pairwise_distances(embs))
             print(
-                "Shape of pairwise distance matrix (num_proteins x num_proteins):"
-                f" {pairwise_dist.shape}"
+                "Shape of pairwise distance matrix (num_proteins x"
+                f" num_proteins): {pairwise_dist.shape}"
             )
 
         # generate dimensionality reduction components and merge it to CSV DataFrame
@@ -625,7 +646,9 @@ class DataPreprocessor:
             metric=umap_paras["metric"],
         )  # initialize umap; use random_state=42 for reproducibility
         umap_fit = fit.fit_transform(data)  # fit umap to our embeddings
-        df_umap = DataFrame(data=umap_fit, columns=["x_umap", "y_umap", "z_umap"])
+        df_umap = DataFrame(
+            data=umap_fit, columns=["x_umap", "y_umap", "z_umap"]
+        )
         return df_umap
 
     def _generate_pca(self, data: np.ndarray):
@@ -670,7 +693,9 @@ class DataPreprocessor:
             metric=tsne_paras["tsne_metric"],
         )
         tsne_fit = fit.fit_transform(data)
-        df_tsne = DataFrame(data=tsne_fit, columns=["x_tsne", "y_tsne", "z_tsne"])
+        df_tsne = DataFrame(
+            data=tsne_fit, columns=["x_tsne", "y_tsne", "z_tsne"]
+        )
 
         return df_tsne
 
@@ -693,7 +718,10 @@ class DataPreprocessor:
                 if not isinstance(value, float):
                     # Value is corrupted
                     if self.verbose:
-                        print(f"At least one value of the {col} column is corrupted!")
+                        print(
+                            f"At least one value of the {col} column is"
+                            " corrupted!"
+                        )
 
                     return False
 
@@ -721,7 +749,8 @@ class DataPreprocessor:
             )
             if self.verbose:
                 print(
-                    f"Missing column {col} from the .csv file has been added to the present df.csv file."
+                    f"Missing column {col} from the .csv file has been added to"
+                    " the present df.csv file."
                 )
 
         # return updated df
@@ -738,7 +767,6 @@ class DataPreprocessor:
 
         # iterate over csv uids
         for uid in csv_uids:
-
             if uid not in embeddings_uids:
                 missing.append(uid)
 
@@ -758,7 +786,9 @@ class DataPreprocessor:
         n_neighbours = self.umap_paras["n_neighbours"]
         min_dist = self.umap_paras["min_dist"]
         metric = self.umap_paras["metric"]
-        umap_paras_string = str(n_neighbours) + " ; " + str(min_dist) + " ; " + metric
+        umap_paras_string = (
+            str(n_neighbours) + " ; " + str(min_dist) + " ; " + metric
+        )
         coords_df = df[self.UMAP_AXIS_NAMES]
         umap_paras_dict[umap_paras_string] = coords_df
 

@@ -91,9 +91,13 @@ class Visualizator:
             # default luminosity is 50 and range from 35-65
             standard_lum = 50
             lum_range = Visualizator.n_samples_equation(n, val_range=30)
-            luminosity = (standard_lum - lum_range / 2) + np.random.ranf() * lum_range
+            luminosity = (
+                standard_lum - lum_range / 2
+            ) + np.random.ranf() * lum_range
             # color list in hls style
-            color_list.append(tuple([hue / 360, luminosity / 100, saturation / 100]))
+            color_list.append(
+                tuple([hue / 360, luminosity / 100, saturation / 100])
+            )
         if sort:
             color_list.sort()
 
@@ -114,7 +118,11 @@ class Visualizator:
 
     @staticmethod
     def handle_colorbar(
-        col_groups: list, fig: go.Figure, n_symbols: int, color_list: list, two_d: bool
+        col_groups: list,
+        fig: go.Figure,
+        n_symbols: int,
+        color_list: list,
+        two_d: bool,
     ):
         """
         Creates a colorbar trace for the plot if only numeric values are in the group.
@@ -142,7 +150,11 @@ class Visualizator:
             min_val = sys.float_info.max
             max_val = sys.float_info.min
             for item in col_groups:
-                if isinstance(item, int) or isinstance(item, float) and not pd.isna(item):
+                if (
+                    isinstance(item, int)
+                    or isinstance(item, float)
+                    and not pd.isna(item)
+                ):
                     if min_val > item:
                         min_val = item
                     if max_val < item:
@@ -217,7 +229,9 @@ class Visualizator:
         return numeric_flag, n_symbols, color_list
 
     @staticmethod
-    def customize_axis_titles(dim_red: str, fig: go.Figure, df: DataFrame, two_d: bool):
+    def customize_axis_titles(
+        dim_red: str, fig: go.Figure, df: DataFrame, two_d: bool
+    ):
         """
         Axis titles are edited dependent on dimensionality reduction (UMAP or PCA)
         :param dim_red: to be displayed dimensionality reduction
@@ -230,9 +244,15 @@ class Visualizator:
                 fig.update_layout(
                     # Remove axes ticks and labels as they are usually not informative
                     scene=dict(
-                        xaxis=dict(showticklabels=False, showspikes=False, title=""),
-                        yaxis=dict(showticklabels=False, showspikes=False, title=""),
-                        zaxis=dict(showticklabels=False, showspikes=False, title=""),
+                        xaxis=dict(
+                            showticklabels=False, showspikes=False, title=""
+                        ),
+                        yaxis=dict(
+                            showticklabels=False, showspikes=False, title=""
+                        ),
+                        zaxis=dict(
+                            showticklabels=False, showspikes=False, title=""
+                        ),
                     ),
                 )
             else:
@@ -283,7 +303,9 @@ class Visualizator:
                 )
 
     @staticmethod
-    def handle_title(dim_red: str, umap_paras: dict, tsne_paras: dict, fig: go.Figure):
+    def handle_title(
+        dim_red: str, umap_paras: dict, tsne_paras: dict, fig: go.Figure
+    ):
         """
         Sets up the title of the graph depending on the dimensionality reduction (UMAP or PCA)
         :param dim_red: to be displayed dimensionality reduction
@@ -295,7 +317,8 @@ class Visualizator:
         # Update title
         if dim_red == "UMAP":
             title = (
-                "UMAP" + f"<br>n_neighbours: {umap_paras['n_neighbours']},"
+                "UMAP"
+                + f"<br>n_neighbours: {umap_paras['n_neighbours']},"
                 f" min_dist: {umap_paras['min_dist']}, "
                 f"<br>metric: {umap_paras['metric']}"
             )
@@ -304,8 +327,10 @@ class Visualizator:
         else:
             title = (
                 "TSNE"
-                + f"<br>iterations: {tsne_paras['iterations']}, perplexity: {tsne_paras['perplexity']}, "
-                f"<br>learning_rate: {tsne_paras['learning_rate']}, metric: {tsne_paras['tsne_metric']}"
+                + f"<br>iterations: {tsne_paras['iterations']}, perplexity:"
+                f" {tsne_paras['perplexity']}, <br>learning_rate:"
+                f" {tsne_paras['learning_rate']}, metric:"
+                f" {tsne_paras['tsne_metric']}"
             )
 
         fig.update_layout(
@@ -325,7 +350,9 @@ class Visualizator:
         """
 
         # Set legend in right upper corner of the plot
-        fig.update_layout(legend=dict(yanchor="top", y=0.97, xanchor="right", x=0.99))
+        fig.update_layout(
+            legend=dict(yanchor="top", y=0.97, xanchor="right", x=0.99)
+        )
 
         # change margins of the graph
         fig.update_layout(margin=dict(l=1, r=1, t=1, b=1))
@@ -357,7 +384,11 @@ class Visualizator:
         # custom separator to sort str, int and float (str case-insensitive)
         # order: 1. int and float 2. str 3. rest 4. np.nan
         def my_comparator(val):
-            if isinstance(val, float) and not pd.isna(val) or isinstance(val, int):
+            if (
+                isinstance(val, float)
+                and not pd.isna(val)
+                or isinstance(val, int)
+            ):
                 return 0, val
             elif pd.isna(val):
                 return 3, val
@@ -472,7 +503,9 @@ class Visualizator:
                 )
             fig.add_trace(trace)
             # Give the different group values a number
-            df.loc[df[selected_column] == group_value, "class_index"] = group_idx
+            df.loc[
+                df[selected_column] == group_value, "class_index"
+            ] = group_idx
 
         # Set hover-info
         fig.update_traces(
@@ -498,7 +531,9 @@ class Visualizator:
 
         return fig
 
-    def get_base_app(self, umap_paras: dict, tsne_paras: dict, original_id_col: list):
+    def get_base_app(
+        self, umap_paras: dict, tsne_paras: dict, original_id_col: list
+    ):
         """
         Initializes the dash app in base.py
         :param umap_paras: Parameters of the UMAP calculation
@@ -515,7 +550,9 @@ class Visualizator:
             original_id_col,
         )
 
-    def get_pdb_app(self, orig_id_col: list[str], umap_paras: dict, tsne_paras: dict):
+    def get_pdb_app(
+        self, orig_id_col: list[str], umap_paras: dict, tsne_paras: dict
+    ):
         """
         Initializes the dash app in pdb.py
         :param orig_id_col: List of the original IDs
@@ -524,5 +561,10 @@ class Visualizator:
         :return: the application layout
         """
         return init_app_pdb(
-            orig_id_col, umap_paras, self.csv_header, self.fig, self.dim_red, tsne_paras
+            orig_id_col,
+            umap_paras,
+            self.csv_header,
+            self.fig,
+            self.dim_red,
+            tsne_paras,
         )

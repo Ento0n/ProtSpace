@@ -1,26 +1,27 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 
-from visualization.visualizator import Visualizator
-from structurecontainer import StructureContainer
-from preprocessing import DataPreprocessor
-
-from pathlib import Path
-from dash import Input, Output, State, html
-from dash.exceptions import PreventUpdate
-import dash
-import dash_bio.utils.ngl_parser as ngl_parser
-import plotly.graph_objects as go
-
-import dash_bootstrap_components as dbc
-
-from pandas import DataFrame
-import numpy as np
 import json
+from pathlib import Path
 from statistics import mean
 
+import dash
+import dash_bio.utils.ngl_parser as ngl_parser
+import dash_bootstrap_components as dbc
+import numpy as np
+import plotly.graph_objects as go
+from dash import Input, Output, State, html
+from dash.exceptions import PreventUpdate
+from pandas import DataFrame
 
-def to_mapped_id(sel_original_seq_ids: list, original_id_col: list, df: DataFrame):
+from .preprocessing import DataPreprocessor
+from .structurecontainer import StructureContainer
+from .visualization.visualizator import Visualizator
+
+
+def to_mapped_id(
+    sel_original_seq_ids: list, original_id_col: list, df: DataFrame
+):
     """
     Converts IDs from original to mapped
     :param sel_original_seq_ids: selected original sequence IDs
@@ -38,7 +39,9 @@ def to_mapped_id(sel_original_seq_ids: list, original_id_col: list, df: DataFram
     return seq_ids
 
 
-def to_original_id(sel_mapped_seq_ids: list, original_id_col: list, df: DataFrame):
+def to_original_id(
+    sel_mapped_seq_ids: list, original_id_col: list, df: DataFrame
+):
     """
     Converts IDs from mapped to original
     :param sel_mapped_seq_ids: selected mapped sequence IDs
@@ -436,7 +439,10 @@ def get_callbacks_pdb(
             raise PreventUpdate
 
         # sliders are used
-        if ctx.triggered_id == "height_slider" or ctx.triggered_id == "width_slider":
+        if (
+            ctx.triggered_id == "height_slider"
+            or ctx.triggered_id == "width_slider"
+        ):
             # set style of div accordingly
             div_style_dict["height"] = str(slider_height + 1) + "px"
             div_style_dict["width"] = str(slider_width + 1) + "px"
@@ -489,7 +495,9 @@ def get_callbacks_pdb(
         Input("filename_input", "value"),
         Input("mol_name_storage", "data"),
     )
-    def download_molecule(button_clicks: int, filename_input: str, mol_names: str):
+    def download_molecule(
+        button_clicks: int, filename_input: str, mol_names: str
+    ):
         """
         download option for molecule viewer, takes in selected sequence IDs in string format,
         a filename input and names the file accordingly
@@ -658,6 +666,7 @@ def get_callbacks(
         :param dim: chosen dimension, 2D or 3D
         :return: Output variables
         """
+
         def is_number(s):
             try:
                 float(s)
@@ -697,7 +706,11 @@ def get_callbacks(
         )
 
         # Prevent constant resetting of the graph
-        if ctx.triggered_id in ["n_neighbours_input", "min_dist_input", "metric_input"]:
+        if ctx.triggered_id in [
+            "n_neighbours_input",
+            "min_dist_input",
+            "metric_input",
+        ]:
             # Disable recalculating when one of the values is empty
             if min_dist is None or n_neighbours is None or metric is None:
                 return disable_recal_umap_button_return
@@ -769,7 +782,9 @@ def get_callbacks(
             clicked_seq_id = clickdata_to_seqid(click_data)
 
             if original_id_col is not None:
-                clicked_seq_id = to_mapped_id([clicked_seq_id], original_id_col, df)[0]
+                clicked_seq_id = to_mapped_id(
+                    [clicked_seq_id], original_id_col, df
+                )[0]
 
             # Add to seq ids or replace last clicked molecule
             if last_clicked_mol is None:
@@ -841,7 +856,6 @@ def get_callbacks(
 
         # If umap parameters are selected in the dropdown menu
         if ctx.triggered_id == "last_tsne_paras_dd":
-
             splits = tsne_paras_dd_value.split(" ; ")
             tsne_paras["iterations"] = int(splits[0])
             tsne_paras["perplexity"] = float(splits[1])
@@ -1014,14 +1028,18 @@ def get_callbacks(
                     x=[x],
                     y=[y],
                     z=[z],
-                    selector=dict(marker_symbol="circle-open", marker_color="black"),
+                    selector=dict(
+                        marker_symbol="circle-open", marker_color="black"
+                    ),
                     overwrite=True,
                 )
             else:
                 fig.update_traces(
                     x=[x],
                     y=[y],
-                    selector=dict(marker_symbol="circle-open", marker_color="black"),
+                    selector=dict(
+                        marker_symbol="circle-open", marker_color="black"
+                    ),
                     overwrite=True,
                 )
 
@@ -1122,14 +1140,18 @@ def get_callbacks(
                     x=x_coords,
                     y=y_coords,
                     z=z_coords,
-                    selector=dict(marker_symbol="circle-open", marker_color="white"),
+                    selector=dict(
+                        marker_symbol="circle-open", marker_color="white"
+                    ),
                     overwrite=True,
                 )
             else:
                 fig.update_traces(
                     x=x_coords,
                     y=y_coords,
-                    selector=dict(marker_symbol="circle-open", marker_color="white"),
+                    selector=dict(
+                        marker_symbol="circle-open", marker_color="white"
+                    ),
                     overwrite=True,
                 )
 
@@ -1195,7 +1217,8 @@ def get_callbacks(
         return False
 
     @app.callback(
-        Output("graph_offcanvas", "is_open"), Input("graph_settings_button", "n_clicks")
+        Output("graph_offcanvas", "is_open"),
+        Input("graph_settings_button", "n_clicks"),
     )
     def handle_graph_canvas(button_click: int):
         """
@@ -1272,9 +1295,13 @@ def get_callbacks(
                     True,
                 )
                 if not two_d:
-                    fig.write_html(output_d / f"3Dspace_{header}_{dim_red}.html")
+                    fig.write_html(
+                        output_d / f"3Dspace_{header}_{dim_red}.html"
+                    )
                 else:
-                    fig.write_image(output_d / f"2Dspace_{header}_{dim_red}.png")
+                    fig.write_image(
+                        output_d / f"2Dspace_{header}_{dim_red}.png"
+                    )
 
             return True
 
@@ -1344,7 +1371,9 @@ def get_callbacks(
                 info_text.append(
                     dbc.ListGroupItem(
                         [
-                            get_expand_sequence_tooltip(button_id="expand_seq_button"),
+                            get_expand_sequence_tooltip(
+                                button_id="expand_seq_button"
+                            ),
                             get_collapse_sequence_tooltip(
                                 button_id="collapse_seq_button"
                             ),
@@ -1369,7 +1398,9 @@ def get_callbacks(
                                                         style={
                                                             "padding": 0,
                                                             "border": "none",
-                                                            "background": "none",
+                                                            "background": (
+                                                                "none"
+                                                            ),
                                                         },
                                                     )
                                                 ],
@@ -1597,7 +1628,9 @@ def get_callbacks(
         euclidean_id_to_dis = dict(
             sorted(euclidean_id_to_dis.items(), key=lambda x: x[1])
         )
-        cosine_id_to_dis = dict(sorted(cosine_id_to_dis.items(), key=lambda x: x[1]))
+        cosine_id_to_dis = dict(
+            sorted(cosine_id_to_dis.items(), key=lambda x: x[1])
+        )
         manhattan_id_to_dis = dict(
             sorted(manhattan_id_to_dis.items(), key=lambda x: x[1])
         )
@@ -1608,9 +1641,13 @@ def get_callbacks(
         manhattan_table = get_table(manhattan_id_to_dis, seq_id, "manhattan")
 
         # Create the tooltips for the IDs in the table
-        euclidean_tooltips = get_tooltips(euclidean_id_to_dis, seq_id, "euclidean")
+        euclidean_tooltips = get_tooltips(
+            euclidean_id_to_dis, seq_id, "euclidean"
+        )
         cosine_tooltips = get_tooltips(cosine_id_to_dis, seq_id, "cosine")
-        manhattan_tooltips = get_tooltips(manhattan_id_to_dis, seq_id, "manhattan")
+        manhattan_tooltips = get_tooltips(
+            manhattan_id_to_dis, seq_id, "manhattan"
+        )
 
         # Header of the toast
         header = "Nearest neighbours"
@@ -1665,7 +1702,14 @@ def get_callbacks(
                     key = key[:15]
                     key = key + "..."
 
-                table_rows.append(html.Tr([html.Td(key, id=f"{metric}_{unedited_key}"), html.Td(value)]))
+                table_rows.append(
+                    html.Tr(
+                        [
+                            html.Td(key, id=f"{metric}_{unedited_key}"),
+                            html.Td(value),
+                        ]
+                    )
+                )
 
         table_body = html.Tbody(table_rows)
 
@@ -1682,7 +1726,9 @@ def get_callbacks(
         tooltips_list = list()
         for key in id_to_dis.keys():
             if key != seq_id and len(key) > 15:
-                tooltips_list.append(dbc.Tooltip(key, target=f"{metric}_{key}", placement="top"))
+                tooltips_list.append(
+                    dbc.Tooltip(key, target=f"{metric}_{key}", placement="top")
+                )
 
         return tooltips_list
 

@@ -5,7 +5,6 @@ import dash_bio as dashbio
 
 from .base import *
 
-
 representation_options = [
     {"label": "backbone", "value": "backbone"},
     {"label": "ball+stick", "value": "ball+stick"},
@@ -269,7 +268,9 @@ def init_app_pdb(
                                                     dbc.Button(
                                                         "",
                                                         id="reset_view_button",
-                                                        class_name="bi bi-arrow-counterclockwise",
+                                                        class_name=(
+                                                            "bi bi-arrow-counterclockwise"
+                                                        ),
                                                         color="dark",
                                                         outline=True,
                                                         style=main_button_style,
@@ -277,7 +278,9 @@ def init_app_pdb(
                                                     dbc.Button(
                                                         "",
                                                         id="molecules_settings_button",
-                                                        class_name="bi bi-gear-wide-connected",
+                                                        class_name=(
+                                                            "bi bi-gear-wide-connected"
+                                                        ),
                                                         outline=True,
                                                         color="dark",
                                                         style=main_button_style,

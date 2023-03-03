@@ -2,8 +2,8 @@
 # -*- coding: utf-8 -*-
 
 import dash_bootstrap_components as dbc
-from dash import Dash, dcc, html
 import plotly.graph_objects as go
+from dash import Dash, dcc, html
 
 metric_options = [
     "euclidean",
@@ -207,7 +207,9 @@ def get_graph_offcanvas(
                                                 type="number",
                                                 min=0,
                                                 step=1,
-                                                value=umap_paras["n_neighbours"],
+                                                value=umap_paras[
+                                                    "n_neighbours"
+                                                ],
                                             ),
                                         ],
                                         width=4,
@@ -300,7 +302,9 @@ def get_graph_offcanvas(
                                                 id="learning_rate_input",
                                                 min=1,
                                                 step=1,
-                                                value=tsne_paras["learning_rate"],
+                                                value=tsne_paras[
+                                                    "learning_rate"
+                                                ],
                                             ),
                                         ],
                                         width=4,
@@ -361,7 +365,9 @@ def get_graph_download_button_tooltip(button_id: str):
     :param button_id: target button id the tooltip is to be displayed
     :return: tooltip
     """
-    tooltip = dbc.Tooltip("Graph download", target=button_id, placement="bottom")
+    tooltip = dbc.Tooltip(
+        "Graph download", target=button_id, placement="bottom"
+    )
     return tooltip
 
 
@@ -457,7 +463,11 @@ def get_graph_container(
         # Storage to save last camera data (relayoutData)
         dcc.Store(id="relayoutData_save", storage_type="memory", data={}),
         get_graph_offcanvas(
-            umap_paras, umap_paras_string, dim_red, tsne_paras, tsne_paras_string
+            umap_paras,
+            umap_paras_string,
+            dim_red,
+            tsne_paras,
+            tsne_paras_string,
         ),
         get_settings_button_tooltip(button_id="graph_settings_button"),
         get_graph_download_button_tooltip(button_id="graph_download_button"),
@@ -582,8 +592,9 @@ def get_help_modal():
                                     html.Br(),
                                     html.H5("Group Selection"),
                                     html.P(
-                                        "Group selection is done by clicking on the dropdown menu above the graph "
-                                        "and selecting the wanted group."
+                                        "Group selection is done by clicking on"
+                                        " the dropdown menu above the graph and"
+                                        " selecting the wanted group."
                                     ),
                                     html.H5("Buttons"),
                                     dbc.Stack(
@@ -595,7 +606,8 @@ def get_help_modal():
                                                 style=help_modal_icon_style,
                                             ),
                                             html.P(
-                                                "Download a html or png file of the selected group."
+                                                "Download a html or png file of"
+                                                " the selected group."
                                             ),
                                         ],
                                     ),
@@ -604,34 +616,48 @@ def get_help_modal():
                                         gap=3,
                                         children=[
                                             html.I(
-                                                className="bi bi-gear-wide-connected",
+                                                className=(
+                                                    "bi bi-gear-wide-connected"
+                                                ),
                                                 style=help_modal_icon_style,
                                             ),
-                                            html.P("Open the settings to the graph."),
+                                            html.P(
+                                                "Open the settings to the"
+                                                " graph."
+                                            ),
                                         ],
                                     ),
                                     html.H5("Navigation"),
                                     html.B("Orbital rotation:"),
-                                    html.P("Click and hold the left mouse button."),
+                                    html.P(
+                                        "Click and hold the left mouse button."
+                                    ),
                                     html.B("Pan:"),
-                                    html.P("Click and hold the right mouse button."),
+                                    html.P(
+                                        "Click and hold the right mouse button."
+                                    ),
                                     html.B("Zoom:"),
                                     html.P(
-                                        "Scrolling with the mouse wheel zooms in and out "
-                                        "while in the graph with the cursor"
+                                        "Scrolling with the mouse wheel zooms"
+                                        " in and out while in the graph with"
+                                        " the cursor"
                                     ),
                                     html.H5("Molecule selection"),
                                     html.P(
-                                        "A molecule is selected by clicking on the corresponding dot in the graph"
+                                        "A molecule is selected by clicking on"
+                                        " the corresponding dot in the graph"
                                     ),
                                     html.H5("Legend"),
                                     html.P(
-                                        "By clicking on a group in the legend, it is hidden. Clicking on a hidden "
-                                        "group shows it again."
+                                        "By clicking on a group in the legend,"
+                                        " it is hidden. Clicking on a hidden"
+                                        " group shows it again."
                                     ),
                                     html.P(
-                                        "Double click on a displayed group to only show the selected group. "
-                                        "Double click again on it displays all groups."
+                                        "Double click on a displayed group to"
+                                        " only show the selected group. Double"
+                                        " click again on it displays all"
+                                        " groups."
                                     ),
                                 ]
                             ),
@@ -641,10 +667,13 @@ def get_help_modal():
                                     html.Br(),
                                     html.H5("Molecule selection"),
                                     html.P(
-                                        "In the dropdown menu above the molecule viewer the selected molecule(s) "
-                                        "are displayed. More can be selected by opening the dropdown-menu and "
-                                        "seledting more. Less can be selected by clicking on the x next to the "
-                                        "molecule ID"
+                                        "In the dropdown menu above the"
+                                        " molecule viewer the selected"
+                                        " molecule(s) are displayed. More can"
+                                        " be selected by opening the"
+                                        " dropdown-menu and seledting more."
+                                        " Less can be selected by clicking on"
+                                        " the x next to the molecule ID"
                                     ),
                                     html.H5("Buttons"),
                                     dbc.Stack(
@@ -652,11 +681,14 @@ def get_help_modal():
                                         gap=3,
                                         children=[
                                             html.I(
-                                                className="bi bi-arrow-counterclockwise",
+                                                className=(
+                                                    "bi bi-arrow-counterclockwise"
+                                                ),
                                                 style=help_modal_icon_style,
                                             ),
                                             html.P(
-                                                "Reset the view of the molecule viewer."
+                                                "Reset the view of the molecule"
+                                                " viewer."
                                             ),
                                         ],
                                     ),
@@ -665,23 +697,31 @@ def get_help_modal():
                                         gap=3,
                                         children=[
                                             html.I(
-                                                className="bi bi-gear-wide-connected",
+                                                className=(
+                                                    "bi bi-gear-wide-connected"
+                                                ),
                                                 style=help_modal_icon_style,
                                             ),
                                             html.P(
-                                                "Open the settings to the molecule viewer."
+                                                "Open the settings to the"
+                                                " molecule viewer."
                                             ),
                                         ],
                                     ),
                                     html.H5("Navigation"),
                                     html.B("Orbital rotation:"),
-                                    html.P("Click and hold the left mouse button."),
+                                    html.P(
+                                        "Click and hold the left mouse button."
+                                    ),
                                     html.B("Pan:"),
-                                    html.P("Click and hold the right mouse button."),
+                                    html.P(
+                                        "Click and hold the right mouse button."
+                                    ),
                                     html.B("Zoom:"),
                                     html.P(
-                                        "Scrolling with the mouse wheel zooms in and out "
-                                        "while in the graph with the cursor"
+                                        "Scrolling with the mouse wheel zooms"
+                                        " in and out while in the graph with"
+                                        " the cursor"
                                     ),
                                 ]
                             ),

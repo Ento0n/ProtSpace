@@ -1,11 +1,11 @@
+from contextvars import copy_context
 from pathlib import Path
 
 from src.callbacks import get_callbacks, get_callbacks_pdb
-from src.preprocessing import  DataPreprocessor
+from src.preprocessing import DataPreprocessor
 from src.structurecontainer import StructureContainer
 from src.visualization.visualizator import Visualizator
 
-from contextvars import copy_context
 from dash._callback_context import context_value
 from dash._utils import AttributeDict
 
@@ -149,4 +149,3 @@ def test_open_graph_settings():
     one, two, handle_graph_canvas = setup()
     output = handle_graph_canvas(1)
     assert output is True
-
