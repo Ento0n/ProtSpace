@@ -1,6 +1,6 @@
 # ignore large files
-data/*/colabfold/out/
-data/*/PPIHP/out/
+data/*
+!data/3FTx/
 config/
 out/
 **.html
