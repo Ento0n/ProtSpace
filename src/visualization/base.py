@@ -837,7 +837,7 @@ def get_header(app: Dash):
                     direction="horizontal",
                     gap=5,
                     children=[
-                        html.H1("ProtSpace3D", style={"color": "white"}),
+                        html.H1("RostSpace", style={"color": "white"}),
                         dcc.Loading(
                             color="white",
                             style={},
