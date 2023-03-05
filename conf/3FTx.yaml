@@ -1,4 +1,6 @@
 o: data/3FTx
-hdf: data/3FTx/3FTx_mature_esm2.h5
+hdf: data/3FTx/3FTx_mature_prott5.h5
 csv: data/3FTx/3FTx.csv
 fasta: data/3FTx/3FTx_mature.fasta
+pdb: data/3FTx/colabfold/pdb
+json: data/3FTx/colabfold/metric
