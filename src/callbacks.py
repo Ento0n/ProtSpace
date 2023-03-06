@@ -1596,11 +1596,13 @@ def get_callbacks(
         Output("neighbour_toast", "children"),
         Output("neighbour_toast", "is_open"),
         Input("graph", "clickData"),
+        Input("nearest_neighbours_switch", "value"),
     )
-    def show_neighbour_toast(click_data):
+    def show_neighbour_toast(click_data, switch):
         """
         Fills the toast showing nearest neighbours with data and opens it
         :param click_data: Holds data which data point is clicked
+        :param switch: bollean value whether the display nearest neighbours switch is on or off
         :return: ID of the molecule for the header, Body of the toast with data, Boolean whether toast is shown or not
         """
         # Check whether an input is triggered
@@ -1608,65 +1610,74 @@ def get_callbacks(
         if not ctx.triggered:
             raise PreventUpdate
 
-        # Which data point is clicked -> ID
-        seq_id = clickdata_to_seqid(click_data)
+        # Only calculate stuff if toast is to be displayed
+        header = []
+        body = []
+        if switch:
+            # Which data point is clicked -> ID
+            seq_id = clickdata_to_seqid(click_data)
 
-        # Convert embedding UIDS to original ID form if needed
-        ids = embedding_uids
-        if original_id_col is not None:
-            ids = to_original_id(embedding_uids, original_id_col, df)
+            # Convert embedding UIDS to original ID form if needed
+            ids = embedding_uids
+            if original_id_col is not None:
+                ids = to_original_id(embedding_uids, original_id_col, df)
 
-        # Get index of selected ID in the embedding IDs
-        idx = ids.index(seq_id)
+            # Get index of selected ID in the embedding IDs
+            idx = ids.index(seq_id)
 
-        # get id to distance dictionary for all 3 metrics
-        euclidean_id_to_dis = get_id_to_dis(idx, ids, "euclidean")
-        cosine_id_to_dis = get_id_to_dis(idx, ids, "cosine")
-        manhattan_id_to_dis = get_id_to_dis(idx, ids, "manhattan")
+            # get id to distance dictionary for all 3 metrics
+            euclidean_id_to_dis = get_id_to_dis(idx, ids, "euclidean")
+            cosine_id_to_dis = get_id_to_dis(idx, ids, "cosine")
+            manhattan_id_to_dis = get_id_to_dis(idx, ids, "manhattan")
 
-        # sort the dictionaries by their values in ascending order
-        euclidean_id_to_dis = dict(
-            sorted(euclidean_id_to_dis.items(), key=lambda x: x[1])
-        )
-        cosine_id_to_dis = dict(
-            sorted(cosine_id_to_dis.items(), key=lambda x: x[1])
-        )
-        manhattan_id_to_dis = dict(
-            sorted(manhattan_id_to_dis.items(), key=lambda x: x[1])
-        )
+            # sort the dictionaries by their values in ascending order
+            euclidean_id_to_dis = dict(
+                sorted(euclidean_id_to_dis.items(), key=lambda x: x[1])
+            )
+            cosine_id_to_dis = dict(
+                sorted(cosine_id_to_dis.items(), key=lambda x: x[1])
+            )
+            manhattan_id_to_dis = dict(
+                sorted(manhattan_id_to_dis.items(), key=lambda x: x[1])
+            )
 
-        # Create the tables that are shown in the tabs
-        euclidean_table = get_table(euclidean_id_to_dis, seq_id, "euclidean")
-        cosine_table = get_table(cosine_id_to_dis, seq_id, "cosine")
-        manhattan_table = get_table(manhattan_id_to_dis, seq_id, "manhattan")
+            # Create the tables that are shown in the tabs
+            euclidean_table = get_table(euclidean_id_to_dis, seq_id, "euclidean")
+            cosine_table = get_table(cosine_id_to_dis, seq_id, "cosine")
+            manhattan_table = get_table(manhattan_id_to_dis, seq_id, "manhattan")
 
-        # Create the tooltips for the IDs in the table
-        euclidean_tooltips = get_tooltips(
-            euclidean_id_to_dis, seq_id, "euclidean"
-        )
-        cosine_tooltips = get_tooltips(cosine_id_to_dis, seq_id, "cosine")
-        manhattan_tooltips = get_tooltips(
-            manhattan_id_to_dis, seq_id, "manhattan"
-        )
+            # Create the tooltips for the IDs in the table
+            euclidean_tooltips = get_tooltips(
+                euclidean_id_to_dis, seq_id, "euclidean"
+            )
+            cosine_tooltips = get_tooltips(cosine_id_to_dis, seq_id, "cosine")
+            manhattan_tooltips = get_tooltips(
+                manhattan_id_to_dis, seq_id, "manhattan"
+            )
 
-        # Header of the toast
-        header = "Nearest neighbours"
+            # Header of the toast
+            header = "Nearest neighbours"
 
-        # Body of the toast
-        tabs = dbc.Tabs(
-            children=[
-                dbc.Tab(euclidean_table, label="euclidean"),
-                dbc.Tab(cosine_table, label="cosine"),
-                dbc.Tab(manhattan_table, label="manhattan"),
-            ],
-            active_tab="tab-0",
-        )
+            # Body of the toast
+            tabs = dbc.Tabs(
+                children=[
+                    dbc.Tab(euclidean_table, label="euclidean"),
+                    dbc.Tab(cosine_table, label="cosine"),
+                    dbc.Tab(manhattan_table, label="manhattan"),
+                ],
+                active_tab="tab-0",
+            )
 
-        body = euclidean_tooltips + cosine_tooltips + manhattan_tooltips
-        # noinspection PyTypeChecker
-        body.append(tabs)
+            body = euclidean_tooltips + cosine_tooltips + manhattan_tooltips
+            # noinspection PyTypeChecker
+            body.append(tabs)
 
-        return header, body, True
+        # Close the nearest neighbours toast when toggle is switched off
+        is_open = False
+        if switch:
+            is_open = True
+
+        return header, body, is_open
 
     def get_id_to_dis(idx: int, ids: list, metric: str):
         """

@@ -188,6 +188,12 @@ def get_graph_offcanvas(
                 inline=True,
             ),
             html.Br(),
+            dbc.Switch(
+                id="nearest_neighbours_switch",
+                label="Display nearest neighbours",
+                value=False,
+            ),
+            html.Br(),
             dcc.Markdown("Dimensionality reduction"),
             dbc.Tabs(
                 id="dim_red_tabs",
