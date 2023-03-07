@@ -18,6 +18,7 @@ from scipy.spatial.distance import cdist, squareform
 from scipy.stats import spearmanr
 from itertools import groupby
 from sklearn.metrics import silhouette_score
+from sklearn.manifold import trustworthiness
 
 from src.preprocessing import DataPreprocessor
 from src.structurecontainer import StructureContainer
@@ -1794,11 +1795,15 @@ def get_callbacks(
         # silhouette score for currently selected dimensionality reduction space
         silhouette_score_current = silhouette(distmat_fit, labels)
 
+        # trustworthiness score
+        trustworthiness_score = trustworthiness(distmat_embs, distmat_fit, metric="precomputed")
+
         # Set up the body of the collapse, what will be displayed in the web browser
         collapse_body = dbc.Card(
             dbc.CardBody(
                 f"silhouette score embeddings: {round(silhouette_score_emb, 3)}  |  "
-                f"silhouette score {dim_red}: {round(silhouette_score_current, 3)}"
+                f"silhouette score {dim_red}: {round(silhouette_score_current, 3)}  |  "
+                f"trustworthiness score: {round(trustworthiness_score, 3)}"
             )
         )
 
