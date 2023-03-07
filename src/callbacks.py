@@ -1798,12 +1798,16 @@ def get_callbacks(
         # trustworthiness score
         trustworthiness_score = trustworthiness(distmat_embs, distmat_fit, metric="precomputed")
 
+        # spearman score
+        spearman_score = spearmanr(squareform(distmat_embs, checks=False), squareform(distmat_fit, checks=False))[0]
+
         # Set up the body of the collapse, what will be displayed in the web browser
         collapse_body = dbc.Card(
             dbc.CardBody(
                 f"silhouette score embeddings: {round(silhouette_score_emb, 3)}  |  "
                 f"silhouette score {dim_red}: {round(silhouette_score_current, 3)}  |  "
-                f"trustworthiness score: {round(trustworthiness_score, 3)}"
+                f"trustworthiness score: {round(trustworthiness_score, 3)}  |  "
+                f"spearman score: {round(spearman_score, 3)}"
             )
         )
 
