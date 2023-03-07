@@ -665,11 +665,6 @@ def get_help_modal():
                                         " in and out while in the graph with"
                                         " the cursor"
                                     ),
-                                    html.H5("Molecule selection"),
-                                    html.P(
-                                        "A molecule is selected by clicking on"
-                                        " the corresponding dot in the graph"
-                                    ),
                                     html.H5("Legend"),
                                     html.P(
                                         "By clicking on a group in the legend,"
@@ -685,19 +680,32 @@ def get_help_modal():
                                 ]
                             ),
                             dbc.ListGroupItem(
+                              children=[
+                                  html.H4("Molecule selection"),
+                                  html.P(
+                                      "The drop-down menu showing the selected moleulce(s), is located either right "
+                                      "to the group selection, or above the molecule viewer. This depends on whether "
+                                      "the molecule viewer section is displayed or not."
+                                  ),
+                                  html.P(
+                                      "A molecule is selected by clicking on the corresponding data point "
+                                      "in the graph. The selected molecule is then listed in the corresponding "
+                                      "drop-down menu and indicated with a black circle in the graph. It can be "
+                                      "deselected by deleting the entry in the drop-down menu."
+                                  ),
+                                  html.P(
+                                      "In the drop-down menu the selected molecule(s) are displayed. More can"
+                                      " be selected by opening the drop-down menu. By doing so the selected "
+                                      "molecules are indicated with a white circle. With the x next to the "
+                                      "molecule ID it can be deselected, and with the x on the right side of "
+                                      "the drop-down menu everything can be deselected at once."
+                                  ),
+                              ]
+                            ),
+                            dbc.ListGroupItem(
                                 children=[
                                     html.H4("Molecule viewer"),
                                     html.Br(),
-                                    html.H5("Molecule selection"),
-                                    html.P(
-                                        "In the dropdown menu above the"
-                                        " molecule viewer the selected"
-                                        " molecule(s) are displayed. More can"
-                                        " be selected by opening the"
-                                        " dropdown-menu and seledting more."
-                                        " Less can be selected by clicking on"
-                                        " the x next to the molecule ID"
-                                    ),
                                     html.H5("Buttons"),
                                     dbc.Stack(
                                         direction="horizontal",
