@@ -1,6 +1,6 @@
 # ignore large files
 data/*
-!data/3FTx/
+# !data/3FTx/
 config/
 out/
 **.html
