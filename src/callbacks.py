@@ -1753,8 +1753,9 @@ def get_callbacks(
         Output("correlation_collapse", "children"),
         Input("correlation_collapse_switch", "value"),
         Input("dd_menu", "value"),
+        Input("dim_red_tabs", "active_tab")
     )
-    def open_and_fill_correlation_collapse(switch, selected_group):
+    def open_and_fill_correlation_collapse(switch: bool, selected_group: str, dim_red: str):
         # Check whether an input is triggered
         ctx = dash.callback_context
         if not ctx.triggered:
@@ -1773,10 +1774,31 @@ def get_callbacks(
         # calculate the silhouette score for the embeddings
         silhouette_score_emb = silhouette(distmat_embs, labels)
 
+        # get coordinates of current selected dimensionality reduction to transform them into nd-array
+        if dim_red == "UMAP":
+            x = "x_umap"
+            y = "y_umap"
+            z = "z_umap"
+        elif dim_red == "PCA":
+            x = "x_pca"
+            y = "y_pca"
+            z = "z_pca"
+        else:
+            x = "x_tsne"
+            y = "y_tsne"
+            z = "z_tsne"
+
+        fit = df[[x, y, z]].to_numpy()
+        distmat_fit = ts_ss(fit, fit)
+
+        # silhouette score for currently selected dimensionality reduction space
+        silhouette_score_current = silhouette(distmat_fit, labels)
+
         # Set up the body of the collapse, what will be displayed in the web browser
         collapse_body = dbc.Card(
             dbc.CardBody(
-                f"silhouette score embeddings: {round(silhouette_score_emb, 3)}"
+                f"silhouette score embeddings: {round(silhouette_score_emb, 3)}  |  "
+                f"silhouette score {dim_red}: {round(silhouette_score_current, 3)}"
             )
         )
 
