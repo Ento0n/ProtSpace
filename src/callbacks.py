@@ -1770,14 +1770,16 @@ def get_callbacks(
         # get a distance matrix of the embeddings
         distmat_embs = ts_ss(embeddings, embeddings)
 
-        # get the labels of the current selected group
+        # get the labels of the current selected group, order of embeddings and df
         labels = list()
         for identification in embedding_uids:
             labels.append(df.at[identification, selected_group])
-        labels = numpy.asarray(labels)
+        labels_embeddings = numpy.asarray(labels)
+
+        labels_df = df[selected_group].to_numpy()
 
         # calculate the silhouette score for the embeddings
-        silhouette_score_emb = silhouette(distmat_embs, labels)
+        silhouette_score_emb = silhouette(distmat_embs, labels_embeddings)
 
         # get coordinates of current selected dimensionality reduction to transform them into nd-array
         if dim_red == "UMAP":
@@ -1797,7 +1799,7 @@ def get_callbacks(
         distmat_fit = ts_ss(fit, fit)
 
         # silhouette score for currently selected dimensionality reduction space
-        silhouette_score_current = silhouette(distmat_fit, labels)
+        silhouette_score_current = silhouette(distmat_fit, labels_df)
 
         # trustworthiness score
         trustworthiness_score = trustworthiness(distmat_embs, distmat_fit, n_neighbors=10, metric="precomputed")
