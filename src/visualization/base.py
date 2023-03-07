@@ -543,7 +543,6 @@ def get_graph_container(
 
 def get_correlation_scores_collapse():
     collapse = dbc.Collapse(
-        dbc.Card(dbc.CardBody("This is a test!")),
         id="correlation_collapse",
         is_open=False,
         style={"margin-top": "5px"}

@@ -14,6 +14,11 @@ from dash import Input, Output, State, html
 from dash.exceptions import PreventUpdate
 from pandas import DataFrame
 
+from scipy.spatial.distance import cdist, squareform
+from scipy.stats import spearmanr
+from itertools import groupby
+from sklearn.metrics import silhouette_score
+
 from src.preprocessing import DataPreprocessor
 from src.structurecontainer import StructureContainer
 from src.visualization.visualizator import Visualizator
@@ -1745,17 +1750,78 @@ def get_callbacks(
 
     @app.callback(
         Output("correlation_collapse", "is_open"),
+        Output("correlation_collapse", "children"),
         Input("correlation_collapse_switch", "value"),
+        Input("dd_menu", "value"),
     )
-    def open_and_fill_correlation_collapse(switch):
+    def open_and_fill_correlation_collapse(switch, selected_group):
         # Check whether an input is triggered
         ctx = dash.callback_context
         if not ctx.triggered:
             raise PreventUpdate
 
-        if switch:
-            return True
+        # Don't process stuff if switch is not activated but group is changed
+        if ctx.triggered_id == "dd_menu" and switch is False:
+            raise PreventUpdate
 
-        return False
+        # get a distance matrix of the embeddings
+        distmat_embs = ts_ss(embeddings, embeddings)
+
+        # get the labels of the current selected group
+        labels = np.array(df[selected_group])
+
+        # calculate the silhouette score for the embeddings
+        silhouette_score_emb = silhouette(distmat_embs, labels)
+
+        # Set up the body of the collapse, what will be displayed in the web browser
+        collapse_body = dbc.Card(
+            dbc.CardBody(
+                f"silhouette score embeddings: {round(silhouette_score_emb, 3)}"
+            )
+        )
+
+        if switch:
+            return True, collapse_body
+        else:
+            return False, collapse_body
+
+    def ts_ss(x1, x2):
+        """
+        Stands for triangle area similarity (TS) and sector area similarity (SS)
+        For more information: https://github.com/taki0112/Vector_Similarity
+        """
+        x1_norm = np.linalg.norm(x1, axis=-1)[:, np.newaxis]
+        x2_norm = np.linalg.norm(x2, axis=-1)[:, np.newaxis]
+        x_dot = x1_norm @ x2_norm.T
+
+        # cosine similarity
+        cosine_sim = 1 - cdist(x1, x2, metric='cosine')
+        cosine_sim[cosine_sim != cosine_sim] = 0
+        cosine_sim = np.clip(cosine_sim, -1, 1, out=cosine_sim)
+
+        # euclidean_distance
+        euclidean_dist = cdist(x1, x2, metric='euclidean')
+
+        # triangle_area_similarity
+        theta = np.arccos(cosine_sim) + np.radians(10)
+        triangle_similarity = (x_dot * np.abs(np.sin(theta))) / 2
+
+        # sectors area similarity
+        magnitude_diff = np.abs(x1_norm - x2_norm.T)
+        ed_plus_md = euclidean_dist + magnitude_diff
+        sector_similarity =  ed_plus_md * ed_plus_md * theta * np.pi / 360
+
+        # hybridize
+        similarity = triangle_similarity * sector_similarity
+        return similarity
+
+    def silhouette(distmat, labels, ignore=['']):
+        """Calculates the silhouette score of a distance matrix.
+        """
+        # exclude groups that have less than 2 groups
+        exclude = set(k for k, g in groupby(sorted(labels)) if sum(1 for _ in g) < 2)
+        exclude.update(set(ignore))
+        mask = [i not in exclude for i in labels]
+        return silhouette_score(distmat[mask, :][:, mask], labels[mask], metric='precomputed')
 
     return download_graph, expand_sequence, handle_graph_canvas
