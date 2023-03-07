@@ -8,6 +8,7 @@ from statistics import mean
 import dash
 import dash_bio.utils.ngl_parser as ngl_parser
 import dash_bootstrap_components as dbc
+import numpy
 import numpy as np
 import plotly.graph_objects as go
 from dash import Input, Output, State, html
@@ -1770,7 +1771,10 @@ def get_callbacks(
         distmat_embs = ts_ss(embeddings, embeddings)
 
         # get the labels of the current selected group
-        labels = np.array(df[selected_group])
+        labels = list()
+        for identification in embedding_uids:
+            labels.append(df.at[identification, selected_group])
+        labels = numpy.asarray(labels)
 
         # calculate the silhouette score for the embeddings
         silhouette_score_emb = silhouette(distmat_embs, labels)
@@ -1796,7 +1800,7 @@ def get_callbacks(
         silhouette_score_current = silhouette(distmat_fit, labels)
 
         # trustworthiness score
-        trustworthiness_score = trustworthiness(distmat_embs, distmat_fit, metric="precomputed")
+        trustworthiness_score = trustworthiness(distmat_embs, distmat_fit, n_neighbors=10, metric="precomputed")
 
         # spearman score
         spearman_score = spearmanr(squareform(distmat_embs, checks=False), squareform(distmat_fit, checks=False))[0]
@@ -1846,7 +1850,7 @@ def get_callbacks(
         similarity = triangle_similarity * sector_similarity
         return similarity
 
-    def silhouette(distmat, labels, ignore=['']):
+    def silhouette(distmat, labels, ignore=[np.NaN]):
         """Calculates the silhouette score of a distance matrix.
         """
         # exclude groups that have less than 2 groups
