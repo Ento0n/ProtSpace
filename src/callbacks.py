@@ -1743,4 +1743,19 @@ def get_callbacks(
 
         return tooltips_list
 
+    @app.callback(
+        Output("correlation_collapse", "is_open"),
+        Input("correlation_collapse_switch", "value"),
+    )
+    def open_and_fill_correlation_collapse(switch):
+        # Check whether an input is triggered
+        ctx = dash.callback_context
+        if not ctx.triggered:
+            raise PreventUpdate
+
+        if switch:
+            return True
+
+        return False
+
     return download_graph, expand_sequence, handle_graph_canvas

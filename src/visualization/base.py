@@ -194,6 +194,12 @@ def get_graph_offcanvas(
                 value=False,
             ),
             html.Br(),
+            dbc.Switch(
+              id="correlation_collapse_switch",
+              label="Display correlation scores",
+              value=False,
+            ),
+            html.Br(),
             dcc.Markdown("Dimensionality reduction"),
             dbc.Tabs(
                 id="dim_red_tabs",
@@ -477,6 +483,7 @@ def get_graph_container(
         ),
         get_settings_button_tooltip(button_id="graph_settings_button"),
         get_graph_download_button_tooltip(button_id="graph_download_button"),
+        get_correlation_scores_collapse(),
         dbc.Row(
             children=[
                 dbc.Col(
@@ -532,6 +539,17 @@ def get_graph_container(
     )
 
     return graph_container
+
+
+def get_correlation_scores_collapse():
+    collapse = dbc.Collapse(
+        dbc.Card(dbc.CardBody("This is a test!")),
+        id="correlation_collapse",
+        is_open=False,
+        style={"margin-top": "5px"}
+    )
+
+    return collapse
 
 
 def get_disclaimer_modal():
