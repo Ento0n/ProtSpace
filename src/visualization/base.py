@@ -188,13 +188,13 @@ def get_graph_offcanvas(
                 inline=True,
             ),
             html.Br(),
-            dbc.Switch(
-                id="nearest_neighbours_switch",
-                label="Display nearest neighbours",
-                value=False,
-                disabled=True,
-            ),
-            html.Br(),
+            # dbc.Switch(
+            #     id="nearest_neighbours_switch",
+            #     label="Display nearest neighbours",
+            #     value=False,
+            #     disabled=True,
+            # ),
+            # html.Br(),
             dbc.Switch(
               id="correlation_collapse_switch",
               label="Display correlation scores",

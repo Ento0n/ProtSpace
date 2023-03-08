@@ -1598,162 +1598,162 @@ def get_callbacks(
 
         return expand_hidden, collapse_hidden
 
-    @app.callback(
-        Output("neighbour_toast", "header"),
-        Output("neighbour_toast", "children"),
-        Output("neighbour_toast", "is_open"),
-        Output("load_nearest_neighbours_spinner", "children"),
-        Input("graph", "clickData"),
-        Input("nearest_neighbours_switch", "value"),
-    )
-    def show_neighbour_toast(click_data, switch):
-        """
-        Fills the toast showing nearest neighbours with data and opens it
-        :param click_data: Holds data which data point is clicked
-        :param switch: bollean value whether the display nearest neighbours switch is on or off
-        :return: ID of the molecule for the header, Body of the toast with data, Boolean whether toast is shown or not
-        """
-        # Check whether an input is triggered
-        ctx = dash.callback_context
-        if not ctx.triggered:
-            raise PreventUpdate
+    # @app.callback(
+    #     Output("neighbour_toast", "header"),
+    #     Output("neighbour_toast", "children"),
+    #     Output("neighbour_toast", "is_open"),
+    #     Output("load_nearest_neighbours_spinner", "children"),
+    #     Input("graph", "clickData"),
+    #     #Input("nearest_neighbours_switch", "value"),
+    # )
+    # def show_neighbour_toast(click_data, switch):
+    #     """
+    #     Fills the toast showing nearest neighbours with data and opens it
+    #     :param click_data: Holds data which data point is clicked
+    #     :param switch: bollean value whether the display nearest neighbours switch is on or off
+    #     :return: ID of the molecule for the header, Body of the toast with data, Boolean whether toast is shown or not
+    #     """
+    #     # Check whether an input is triggered
+    #     ctx = dash.callback_context
+    #     if not ctx.triggered:
+    #         raise PreventUpdate
 
-        # Check whether any point is selected
-        if click_data is None:
-            raise PreventUpdate
+    #     # Check whether any point is selected
+    #     if click_data is None:
+    #         raise PreventUpdate
 
-        # Only calculate stuff if toast is to be displayed
-        header = []
-        body = []
-        if switch:
-            # Which data point is clicked -> ID
-            seq_id = clickdata_to_seqid(click_data)
+    #     # Only calculate stuff if toast is to be displayed
+    #     header = []
+    #     body = []
+    #     if switch:
+    #         # Which data point is clicked -> ID
+    #         seq_id = clickdata_to_seqid(click_data)
 
-            # Convert embedding UIDS to original ID form if needed
-            ids = embedding_uids
-            if original_id_col is not None:
-                ids = to_original_id(embedding_uids, original_id_col, df)
+    #         # Convert embedding UIDS to original ID form if needed
+    #         ids = embedding_uids
+    #         if original_id_col is not None:
+    #             ids = to_original_id(embedding_uids, original_id_col, df)
 
-            # Get index of selected ID in the embedding IDs
-            idx = ids.index(seq_id)
+    #         # Get index of selected ID in the embedding IDs
+    #         idx = ids.index(seq_id)
 
-            # get id to distance dictionary for all 3 metrics
-            euclidean_id_to_dis = get_id_to_dis(idx, ids, "euclidean")
-            cosine_id_to_dis = get_id_to_dis(idx, ids, "cosine")
-            manhattan_id_to_dis = get_id_to_dis(idx, ids, "manhattan")
+    #         # get id to distance dictionary for all 3 metrics
+    #         euclidean_id_to_dis = get_id_to_dis(idx, ids, "euclidean")
+    #         cosine_id_to_dis = get_id_to_dis(idx, ids, "cosine")
+    #         manhattan_id_to_dis = get_id_to_dis(idx, ids, "manhattan")
 
-            # sort the dictionaries by their values in ascending order
-            euclidean_id_to_dis = dict(
-                sorted(euclidean_id_to_dis.items(), key=lambda x: x[1])
-            )
-            cosine_id_to_dis = dict(
-                sorted(cosine_id_to_dis.items(), key=lambda x: x[1])
-            )
-            manhattan_id_to_dis = dict(
-                sorted(manhattan_id_to_dis.items(), key=lambda x: x[1])
-            )
+    #         # sort the dictionaries by their values in ascending order
+    #         euclidean_id_to_dis = dict(
+    #             sorted(euclidean_id_to_dis.items(), key=lambda x: x[1])
+    #         )
+    #         cosine_id_to_dis = dict(
+    #             sorted(cosine_id_to_dis.items(), key=lambda x: x[1])
+    #         )
+    #         manhattan_id_to_dis = dict(
+    #             sorted(manhattan_id_to_dis.items(), key=lambda x: x[1])
+    #         )
 
-            # Create the tables that are shown in the tabs
-            euclidean_table = get_table(euclidean_id_to_dis, seq_id, "euclidean")
-            cosine_table = get_table(cosine_id_to_dis, seq_id, "cosine")
-            manhattan_table = get_table(manhattan_id_to_dis, seq_id, "manhattan")
+    #         # Create the tables that are shown in the tabs
+    #         euclidean_table = get_table(euclidean_id_to_dis, seq_id, "euclidean")
+    #         cosine_table = get_table(cosine_id_to_dis, seq_id, "cosine")
+    #         manhattan_table = get_table(manhattan_id_to_dis, seq_id, "manhattan")
 
-            # Create the tooltips for the IDs in the table
-            euclidean_tooltips = get_tooltips(
-                euclidean_id_to_dis, seq_id, "euclidean"
-            )
-            cosine_tooltips = get_tooltips(cosine_id_to_dis, seq_id, "cosine")
-            manhattan_tooltips = get_tooltips(
-                manhattan_id_to_dis, seq_id, "manhattan"
-            )
+    #         # Create the tooltips for the IDs in the table
+    #         euclidean_tooltips = get_tooltips(
+    #             euclidean_id_to_dis, seq_id, "euclidean"
+    #         )
+    #         cosine_tooltips = get_tooltips(cosine_id_to_dis, seq_id, "cosine")
+    #         manhattan_tooltips = get_tooltips(
+    #             manhattan_id_to_dis, seq_id, "manhattan"
+    #         )
 
-            # Header of the toast
-            header = "Nearest neighbours"
+    #         # Header of the toast
+    #         header = "Nearest neighbours"
 
-            # Body of the toast
-            tabs = dbc.Tabs(
-                children=[
-                    dbc.Tab(euclidean_table, label="euclidean"),
-                    dbc.Tab(cosine_table, label="cosine"),
-                    dbc.Tab(manhattan_table, label="manhattan"),
-                ],
-                active_tab="tab-0",
-            )
+    #         # Body of the toast
+    #         tabs = dbc.Tabs(
+    #             children=[
+    #                 dbc.Tab(euclidean_table, label="euclidean"),
+    #                 dbc.Tab(cosine_table, label="cosine"),
+    #                 dbc.Tab(manhattan_table, label="manhattan"),
+    #             ],
+    #             active_tab="tab-0",
+    #         )
 
-            body = euclidean_tooltips + cosine_tooltips + manhattan_tooltips
-            # noinspection PyTypeChecker
-            body.append(tabs)
+    #         body = euclidean_tooltips + cosine_tooltips + manhattan_tooltips
+    #         # noinspection PyTypeChecker
+    #         body.append(tabs)
 
-        # Close the nearest neighbours toast when toggle is switched off
-        is_open = False
-        if switch:
-            is_open = True
+    #     # Close the nearest neighbours toast when toggle is switched off
+    #     is_open = False
+    #     if switch:
+    #         is_open = True
 
-        return header, body, is_open, "spinner output"
+    #     return header, body, is_open, "spinner output"
 
-    def get_id_to_dis(idx: int, ids: list, metric: str):
-        """
-        Creates a dictionary that has the ID of the neighbours as key and the distance as value
-        :param idx: index of the selected ID in the distance matrix
-        :param ids: list with the IDs of neighbours
-        :param metric: the to be processed metric
-        :return: filled dictionary
-        """
-        # get row of selected data point
-        distance_row = distance_dic[metric][idx]
+    # def get_id_to_dis(idx: int, ids: list, metric: str):
+    #     """
+    #     Creates a dictionary that has the ID of the neighbours as key and the distance as value
+    #     :param idx: index of the selected ID in the distance matrix
+    #     :param ids: list with the IDs of neighbours
+    #     :param metric: the to be processed metric
+    #     :return: filled dictionary
+    #     """
+    #     # get row of selected data point
+    #     distance_row = distance_dic[metric][idx]
 
-        # create hashing that saves ID to distance
-        id_to_dis = dict()
-        for idx, value in enumerate(ids):
-            id_to_dis[value] = round(distance_row[idx], 4)
+    #     # create hashing that saves ID to distance
+    #     id_to_dis = dict()
+    #     for idx, value in enumerate(ids):
+    #         id_to_dis[value] = round(distance_row[idx], 4)
 
-        return id_to_dis
+    #     return id_to_dis
 
-    def get_table(id_to_dis: dict, seq_id: str, metric: str):
-        """
-        Creates the Listgroup item that is shown in the web application for each neighbour
-        :param id_to_dis: dictionary with IDs and distances
-        :param seq_id: the selected ID, should not be displayed
-        :param metric: metric of the id_to_dis dictionary
-        :return: The complete ListGroup shown in the tab of a metric
-        """
-        table_rows = list()
-        for key, value in id_to_dis.items():
-            if key != seq_id:
-                unedited_key = key
-                if len(key) > 15:
-                    key = key[:15]
-                    key = key + "..."
+    # def get_table(id_to_dis: dict, seq_id: str, metric: str):
+    #     """
+    #     Creates the Listgroup item that is shown in the web application for each neighbour
+    #     :param id_to_dis: dictionary with IDs and distances
+    #     :param seq_id: the selected ID, should not be displayed
+    #     :param metric: metric of the id_to_dis dictionary
+    #     :return: The complete ListGroup shown in the tab of a metric
+    #     """
+    #     table_rows = list()
+    #     for key, value in id_to_dis.items():
+    #         if key != seq_id:
+    #             unedited_key = key
+    #             if len(key) > 15:
+    #                 key = key[:15]
+    #                 key = key + "..."
 
-                table_rows.append(
-                    html.Tr(
-                        [
-                            html.Td(key, id=f"{metric}_{unedited_key}"),
-                            html.Td(value),
-                        ]
-                    )
-                )
+    #             table_rows.append(
+    #                 html.Tr(
+    #                     [
+    #                         html.Td(key, id=f"{metric}_{unedited_key}"),
+    #                         html.Td(value),
+    #                     ]
+    #                 )
+    #             )
 
-        table_body = html.Tbody(table_rows)
+    #     table_body = html.Tbody(table_rows)
 
-        return dbc.Table(table_body, hover=True)
+    #     return dbc.Table(table_body, hover=True)
 
-    def get_tooltips(id_to_dis: dict, seq_id: str, metric: str):
-        """
-        Creates a list with tooltips for the IDs in the nearest neighbours table
-        :param id_to_dis: dictionary with IDs and distances
-        :param seq_id: the selected ID, should not be displayed
-        :param metric: metric of the id_to_dis dictionary
-        :return: The complete ListGroup shown in the tab of a metric
-        """
-        tooltips_list = list()
-        for key in id_to_dis.keys():
-            if key != seq_id and len(key) > 15:
-                tooltips_list.append(
-                    dbc.Tooltip(key, target=f"{metric}_{key}", placement="top")
-                )
+    # def get_tooltips(id_to_dis: dict, seq_id: str, metric: str):
+    #     """
+    #     Creates a list with tooltips for the IDs in the nearest neighbours table
+    #     :param id_to_dis: dictionary with IDs and distances
+    #     :param seq_id: the selected ID, should not be displayed
+    #     :param metric: metric of the id_to_dis dictionary
+    #     :return: The complete ListGroup shown in the tab of a metric
+    #     """
+    #     tooltips_list = list()
+    #     for key in id_to_dis.keys():
+    #         if key != seq_id and len(key) > 15:
+    #             tooltips_list.append(
+    #                 dbc.Tooltip(key, target=f"{metric}_{key}", placement="top")
+    #             )
 
-        return tooltips_list
+    #     return tooltips_list
 
     @app.callback(
         Output("correlation_collapse", "is_open"),
