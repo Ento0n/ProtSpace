@@ -31,15 +31,15 @@ Example:
 rostspace -o data/Pla2g2 --hdf data/Pla2g2/Pla2g2_prott5.h5 --csv data/Pla2g2/Pla2g2.csv
 ```
 
-Alternatively the arguments can be provided with a configuration file in PyYaml format.
-
-Example:
+Alternatively the arguments can be provided with a configuration file in PyYaml format:
 
 ```shell
 o: data/Pla2g2
 hdf: data/Pla2g2/emb_esm2.h5
 csv: data/Pla2g2/Pla2g2.csv
 ```
+
+Example:
 
 ```shell
 rostspace -conf conf/Pla2g2.yaml
