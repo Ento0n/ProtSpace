@@ -1799,7 +1799,7 @@ def get_callbacks(
             if idx not in embeddings_dict:
                 continue
             ord_embeddings.append(embeddings_dict[idx])
-            labels.append(df.loc[idx, selected_group][0])
+            labels.append(df.loc[idx, selected_group])
             fit.append(df.loc[idx, [x, y, z]].tolist())
         ord_embeddings = numpy.asarray(ord_embeddings)
         labels = np.array(labels)
