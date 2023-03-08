@@ -45,3 +45,10 @@ Example:
 ```shell
 rostspace -conf conf/Pla2g2.yaml
 ```
+
+
+For more information to the arguments run
+
+```shell
+rostspace --help
+```
