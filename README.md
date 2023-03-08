@@ -33,6 +33,7 @@ rostspace -o data/Pla2g2 --hdf data/Pla2g2/Pla2g2_prott5.h5 --csv data/Pla2g2/Pl
 
 Alternatively the arguments can be provided with a configuration file in PyYaml format:
 
+Pla2g2.yaml
 ```shell
 o: data/Pla2g2
 hdf: data/Pla2g2/emb_esm2.h5
