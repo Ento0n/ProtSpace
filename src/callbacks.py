@@ -1773,21 +1773,6 @@ def get_callbacks(
         if ctx.triggered_id == "dd_menu" and switch is False:
             raise PreventUpdate
 
-        # get embeddings in order of the df
-        embeddings_dict = dict(zip(embedding_uids, embeddings))
-        ord_embeddings = list()
-        for identification in df.index:
-            ord_embeddings.append(embeddings_dict[identification])
-        ord_embeddings = numpy.asarray(ord_embeddings)
-
-        # get a distance matrix of the embeddings
-        distmat_embs = ts_ss(ord_embeddings, ord_embeddings)
-
-        # get the labels of the current selected group
-        labels = df[selected_group].to_numpy()
-
-        # calculate the silhouette score for the embeddings
-        silhouette_score_emb = silhouette(distmat_embs, labels)
 
         # get coordinates of current selected dimensionality reduction to transform them into nd-array
         if dim_red == "UMAP":
@@ -1802,17 +1787,34 @@ def get_callbacks(
             x = "x_tsne"
             y = "y_tsne"
             z = "z_tsne"
+        #fit = df[[x, y, z]].to_numpy()
 
-        fit = df[[x, y, z]].to_numpy()
-        distmat_fit = ts_ss(fit, fit)
+        # get embeddings in order of the df
+        embeddings_dict = dict(zip(embedding_uids, embeddings))
 
-        # silhouette score for currently selected dimensionality reduction space
+        ord_embeddings = list()
+        labels = list()
+        fit = list()
+        for idx in df.index.to_list():
+            if idx not in embeddings_dict:
+                continue
+            ord_embeddings.append(embeddings_dict[idx])
+            labels.append(df.loc[idx, selected_group][0])
+            fit.append(df.loc[idx, [x, y, z]].tolist())
+        ord_embeddings = numpy.asarray(ord_embeddings)
+        labels = np.array(labels)
+        fit = np.array(fit)
+
+        # create the distance matrix (for embeddings and reduced space)
+        distmat_embs = ts_ss(ord_embeddings, ord_embeddings)
+        distmat_fit = cdist(fit, fit, metric='euclidean') #ts_ss(fit, fit)
+
+        # calculate the silhouette score
+        silhouette_score_emb = silhouette(distmat_embs, labels)
         silhouette_score_current = silhouette(distmat_fit, labels)
 
-        # trustworthiness score
+        # trustworthiness + spearman score
         trustworthiness_score = trustworthiness(distmat_embs, distmat_fit, n_neighbors=10, metric="precomputed")
-
-        # spearman score
         spearman_score = spearmanr(squareform(distmat_embs, checks=False), squareform(distmat_fit, checks=False))[0]
 
         # Set up the body of the collapse, what will be displayed in the web browser
