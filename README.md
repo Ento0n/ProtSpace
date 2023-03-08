@@ -1,39 +1,37 @@
-# ProtSpace3D
+# RostSpace
 
-This is a bachelor thesis project, 
-Development of protein-embedding visualization tool.
-
-## Installing dependencies
-
-Python-poetry(https://python-poetry.org/) is used for installing the dependencies. Follow the instruction 
-on the website to install poetry.
-After that run
-
-```shell
-poetry install
-```
-
-to install the dependencies for this project.
+RostSpace is a embedding visualisation tool specialized for biologists, but not limited by this. It
+allows to display embeddings in a 3D or 2D graph.
 
 ## Running the script
 
-The script to be executed is processing.py with the arguments:
+After installing the tool with pypi, it can be started with
 
-    ->  -d          Name of the folder which holds the required data, .h5 .csv & .fasta (String)
-    ->  -b          Name of the files which are in the data folder, requires equal names (String)
-    ->  --sep       The character which seperates the columns in the .csv file (Character)
-    ->  --uid_col   The column number which holds the unique ID, starting from 0 (Integer)
-    ->  --html_cols If set, html file(s) of the selected column(s) is saved in data directory, starting from 1 ignoring the uid_col (Integer)
-    ->  --pdb       Name of the directory in the data directory, which holds the .pdb files for viewing the molecule (String)
+```shell
+rostspace
+```
+
+The required arguments are:
+
+    -o      Path to the output directory where all generated files are stored
+    --hdf   Path to HDF5-file containing the per protein embeddings as a key-value pair
+    --csv   Path to the csv-file containing the metadata
+
+Optional arguments are:
+
+    --pdb   Path to the directory that holds the .pdb-files
+    -v      Takes no value, if set the tool prints its internal process in the terminal
 
 Example:
 
 ```shell
-poetry run python app.py -d data/ex1 -b VA
+rostspace -o data/Pla2g2 --hdf data/Pla2g2/Pla2g2_prott5.h5 --csv data/Pla2g2/Pla2g2.csv
 ```
 
-or with molecule visualization
+Alternatively the arguments can be provided with a configuration file in yaml format.
+
+Example:
 
 ```shell
-poetry run python protspace3d/app.py -b Conotoxins_try1_mapped -d data/ex3 --pdb pdb
+rostspace -conf conf/Pla2g2.yaml
 ```
