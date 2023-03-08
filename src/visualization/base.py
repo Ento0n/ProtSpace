@@ -879,6 +879,26 @@ def get_header(app: Dash):
                                 )
                             ],
                         ),
+                        dcc.Loading(
+                            color="white",
+                            style={},
+                            children=[
+                                html.Div(
+                                    id="load_nearest_neighbours_spinner",
+                                    hidden=True,
+                                )
+                            ],
+                        ),
+                        dcc.Loading(
+                            color="white",
+                            style={},
+                            children=[
+                                html.Div(
+                                    id="load_correlation_scores_spinner",
+                                    hidden=True,
+                                )
+                            ],
+                        ),
                     ],
                 ),
                 style={"background-color": "black"},

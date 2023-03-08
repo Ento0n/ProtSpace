@@ -1602,6 +1602,7 @@ def get_callbacks(
         Output("neighbour_toast", "header"),
         Output("neighbour_toast", "children"),
         Output("neighbour_toast", "is_open"),
+        Output("load_nearest_neighbours_spinner", "children"),
         Input("graph", "clickData"),
         Input("nearest_neighbours_switch", "value"),
     )
@@ -1684,7 +1685,7 @@ def get_callbacks(
         if switch:
             is_open = True
 
-        return header, body, is_open
+        return header, body, is_open, "spinner output"
 
     def get_id_to_dis(idx: int, ids: list, metric: str):
         """
@@ -1753,6 +1754,7 @@ def get_callbacks(
     @app.callback(
         Output("correlation_collapse", "is_open"),
         Output("correlation_collapse", "children"),
+        Output("load_correlation_scores_spinner", "children"),
         Input("correlation_collapse_switch", "value"),
         Input("dd_menu", "value"),
         Input("dim_red_tabs", "active_tab")
@@ -1820,9 +1822,9 @@ def get_callbacks(
         )
 
         if switch:
-            return True, collapse_body
+            return True, collapse_body, "spinner output"
         else:
-            return False, collapse_body
+            return False, collapse_body, "spinner output"
 
     def ts_ss(x1, x2):
         """
