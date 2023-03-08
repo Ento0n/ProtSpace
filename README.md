@@ -1,54 +1,60 @@
 # RostSpace
 
-RostSpace is an embedding visualisation tool that allows to display any embeddings in a 3D or 2D graph. 
-For the dimensionality reduction UMAP, PCA and t-SNE are selectable.
-Additionally, features for biologists are implemented. It allows to display molecule structures or 
-sequences by providing a corresponding .pdb- or .fasta-file.
+RostSpace visualizes embeddings in 3D and 2D space and colors them by groups, provided throug a CSV file. Dimensionality reduction can be performed with UMAP, PCA or t-SNE. Additional features for biologists are implemented, to display molecule structures by providing PDB files.
 
-## Running the script
-
-After installing the tool with pypi, it can be started with
-
+## Installation
+RostSpace can be installed with `pip`:
 ```shell
-rostspace
+# install it with pip
+pip install rostspace
 ```
+
+## Getting started
+After installation, RostSpace can be run using the `rostspace` command.
 
 The required arguments are:
 
-    -o      Path to the output directory where all generated files are stored
-    --hdf   Path to HDF5-file containing the per protein embeddings as a key-value pair
+    -o      Path to the output directory where generated files are stored
+    --hdf   Path to HDF5-file containing the per protein embeddings as key-value pair
     --csv   Path to the .csv-file containing the metadata
 
 Optional arguments are:
 
+    --pdb   Path to the directory that holds the .pdb files
     --fasta Path to the .fasta-file
-    --pdb   Path to the directory that holds the .pdb-files
-    -v      Takes no value, if set the tool prints its internal process in the terminal
+    -v      Verbose -- prints internal process to the terminal
 
-Example:
+### Download example data
+Example data can be downloaded from [here](https://nextcloud.in.tum.de/index.php/s/BPWWA9tiXTawjjW).
 
-```shell
-rostspace -o data/Pla2g2 --hdf data/Pla2g2/Pla2g2_prott5.h5 --csv data/Pla2g2/Pla2g2.csv
-```
+### Run RostSpace
+RostSpace can be run by providing arguments on the command line, by giving it a YAML file, or a combination of both.
 
-Alternatively the arguments can be provided with a configuration file in PyYaml format:
+1. Giving arguments on the command line:
+    ```shell
+    rostspace -o data/KLK --hdf data/KLK/KLK_esm2.h5 --csv data/KLK/KLK.csv
+    ```
 
-Pla2g2.yaml
-```shell
-o: data/Pla2g2
-hdf: data/Pla2g2/emb_esm2.h5
-csv: data/Pla2g2/Pla2g2.csv
-```
+2. Creating a YAML file:
 
-Example:
+    Pla2g2.yaml
+    ```yaml
+    o: data/Pla2g2
+    hdf: data/Pla2g2/emb_esm2.h5
+    csv: data/Pla2g2/Pla2g2.csv
+    ```
 
-```shell
-rostspace -conf conf/Pla2g2.yaml
-```
+    ```bash
+    rostspace -conf conf/Pla2g2.yaml
+    ```
+
+3. Using a YAML file and giving extra arguments:
+    ```bash
+    rostspace -conf conf/Pla2g2.yaml --pdb data/Pla2g2/colabfold/pdb
+    ```
 
 
 For more information to the arguments run
-
 ```shell
 rostspace --help
 ```

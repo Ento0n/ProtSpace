@@ -1,5 +1,5 @@
 # ignore large files
-data/*
+data/
 # !data/3FTx/
 config/
 out/
