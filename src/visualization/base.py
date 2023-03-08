@@ -192,6 +192,7 @@ def get_graph_offcanvas(
                 id="nearest_neighbours_switch",
                 label="Display nearest neighbours",
                 value=False,
+                disabled=True,
             ),
             html.Br(),
             dbc.Switch(
