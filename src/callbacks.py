@@ -1618,6 +1618,10 @@ def get_callbacks(
         if not ctx.triggered:
             raise PreventUpdate
 
+        # Check whether any point is selected
+        if click_data is None:
+            raise PreventUpdate
+
         # Only calculate stuff if toast is to be displayed
         header = []
         body = []
