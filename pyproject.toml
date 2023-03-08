@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "RostSpace"
-version = "0.1.0"
+version = "0.1.1"
 description = "Protein Embedding Visualization Tool."
 authors = [
     "Anton Spannagl <antonspannagl@gmail.com>",
