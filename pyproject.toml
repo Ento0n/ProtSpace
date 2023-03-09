@@ -3,7 +3,7 @@ name = "RostSpace"
 version = "0.1.0"
 description = "Protein Embedding Visualization Tool."
 authors = [
-    "Anton Spannagl",
+    "Anton Spannagl <antonspannagl@gmail.com>",
     "Tobias Senoner <senoner@rostlab.org>",
     "Michael Heinzinger <mheinzinger@rostlab.org>"
 ]
