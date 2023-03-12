@@ -815,7 +815,7 @@ def get_callbacks(
         # convert dictionary state of graph figure into go object
         fig = go.Figure(fig)
 
-        umap_axis_names = ["x_umap", "y_umap", "z_umap"]
+        umap_axis_names = ["x_umap_3D", "y_umap_3D", "z_umap_3D", "x_umap_2D", "y_umap_2D"]
 
         # If umap parameters are selected in the dropdown menu
         if ctx.triggered_id == "last_umap_paras_dd":
@@ -859,7 +859,7 @@ def get_callbacks(
                 + umap_paras["metric"]
             )
 
-        tsne_axis_names = ["x_tsne", "y_tsne", "z_tsne"]
+        tsne_axis_names = ["x_tsne_3D", "y_tsne_3D", "z_tsne_3D", "x_tsne_2D", "y_tsne_2D"]
 
         # If umap parameters are selected in the dropdown menu
         if ctx.triggered_id == "last_tsne_paras_dd":
@@ -1017,20 +1017,20 @@ def get_callbacks(
             if original_id_col is not None:
                 seq_id = to_mapped_id([seq_id], original_id_col, df)[0]
 
-            if dim_red == "UMAP":
-                x = df.at[seq_id, "x_umap"]
-                y = df.at[seq_id, "y_umap"]
-                z = df.at[seq_id, "z_umap"]
-            elif dim_red == "PCA":
-                x = df.at[seq_id, "x_pca"]
-                y = df.at[seq_id, "y_pca"]
-                z = df.at[seq_id, "z_pca"]
-            else:
-                x = df.at[seq_id, "x_tsne"]
-                y = df.at[seq_id, "y_tsne"]
-                z = df.at[seq_id, "z_tsne"]
-
             if dim == "3D":
+                if dim_red == "UMAP":
+                    x = df.at[seq_id, "x_umap_3D"]
+                    y = df.at[seq_id, "y_umap_3D"]
+                    z = df.at[seq_id, "z_umap_3D"]
+                elif dim_red == "PCA":
+                    x = df.at[seq_id, "x_pca_3D"]
+                    y = df.at[seq_id, "y_pca_3D"]
+                    z = df.at[seq_id, "z_pca_3D"]
+                else:
+                    x = df.at[seq_id, "x_tsne_3D"]
+                    y = df.at[seq_id, "y_tsne_3D"]
+                    z = df.at[seq_id, "z_tsne_3D"]
+
                 fig.update_traces(
                     x=[x],
                     y=[y],
@@ -1041,6 +1041,16 @@ def get_callbacks(
                     overwrite=True,
                 )
             else:
+                if dim_red == "UMAP":
+                    x = df.at[seq_id, "x_umap_2D"]
+                    y = df.at[seq_id, "y_umap_2D"]
+                elif dim_red == "PCA":
+                    x = df.at[seq_id, "x_pca_2D"]
+                    y = df.at[seq_id, "y_pca_2D"]
+                else:
+                    x = df.at[seq_id, "x_tsne_2D"]
+                    y = df.at[seq_id, "y_tsne_2D"]
+
                 fig.update_traces(
                     x=[x],
                     y=[y],
@@ -1123,26 +1133,27 @@ def get_callbacks(
 
             x_coords = list()
             y_coords = list()
-            z_coords = list()
-            for seq_id in seq_ids:
-                if seq_id != last_clicked_mol:
-                    if original_id_col is not None:
-                        seq_id = to_mapped_id([seq_id], original_id_col, df)[0]
-
-                    if dim_red == "UMAP":
-                        x_coords.append(df.at[seq_id, "x_umap"])
-                        y_coords.append(df.at[seq_id, "y_umap"])
-                        z_coords.append(df.at[seq_id, "z_umap"])
-                    elif dim_red == "PCA":
-                        x_coords.append(df.at[seq_id, "x_pca"])
-                        y_coords.append(df.at[seq_id, "y_pca"])
-                        z_coords.append(df.at[seq_id, "z_pca"])
-                    else:
-                        x_coords.append(df.at[seq_id, "x_tsne"])
-                        y_coords.append(df.at[seq_id, "y_tsne"])
-                        z_coords.append(df.at[seq_id, "z_tsne"])
-
             if dim == "3D":
+                z_coords = list()
+
+                for seq_id in seq_ids:
+                    if seq_id != last_clicked_mol:
+                        if original_id_col is not None:
+                            seq_id = to_mapped_id([seq_id], original_id_col, df)[0]
+
+                            if dim_red == "UMAP":
+                                x_coords.append(df.at[seq_id, "x_umap_3D"])
+                                y_coords.append(df.at[seq_id, "y_umap_3D"])
+                                z_coords.append(df.at[seq_id, "z_umap_3D"])
+                            elif dim_red == "PCA":
+                                x_coords.append(df.at[seq_id, "x_pca_3D"])
+                                y_coords.append(df.at[seq_id, "y_pca_3D"])
+                                z_coords.append(df.at[seq_id, "z_pca_3D"])
+                            else:
+                                x_coords.append(df.at[seq_id, "x_tsne_3D"])
+                                y_coords.append(df.at[seq_id, "y_tsne_3D"])
+                                z_coords.append(df.at[seq_id, "z_tsne_3D"])
+
                 fig.update_traces(
                     x=x_coords,
                     y=y_coords,
@@ -1153,6 +1164,21 @@ def get_callbacks(
                     overwrite=True,
                 )
             else:
+                for seq_id in seq_ids:
+                    if seq_id != last_clicked_mol:
+                        if original_id_col is not None:
+                            seq_id = to_mapped_id([seq_id], original_id_col, df)[0]
+
+                            if dim_red == "UMAP":
+                                x_coords.append(df.at[seq_id, "x_umap_2D"])
+                                y_coords.append(df.at[seq_id, "y_umap_2D"])
+                            elif dim_red == "PCA":
+                                x_coords.append(df.at[seq_id, "x_pca_2D"])
+                                y_coords.append(df.at[seq_id, "y_pca_2D"])
+                            else:
+                                x_coords.append(df.at[seq_id, "x_tsne_2D"])
+                                y_coords.append(df.at[seq_id, "y_tsne_2D"])
+
                 fig.update_traces(
                     x=x_coords,
                     y=y_coords,
@@ -1775,17 +1801,17 @@ def get_callbacks(
 
         # get coordinates of current selected dimensionality reduction to transform them into nd-array
         if dim_red == "UMAP":
-            x = "x_umap"
-            y = "y_umap"
-            z = "z_umap"
+            x = "x_umap_3D"
+            y = "y_umap_3D"
+            z = "z_umap_3D"
         elif dim_red == "PCA":
             x = "x_pca"
             y = "y_pca"
             z = "z_pca"
         else:
-            x = "x_tsne"
-            y = "y_tsne"
-            z = "z_tsne"
+            x = "x_tsne_3D"
+            y = "y_tsne_3D"
+            z = "z_tsne_3D"
 
         # fit = df[[x, y, z]].to_numpy()
 

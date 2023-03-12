@@ -426,18 +426,29 @@ class Visualizator:
 
         df["class_index"] = np.ones(len(df)) * -100
 
-        if dim_red == "UMAP":
-            x = "x_umap"
-            y = "y_umap"
-            z = "z_umap"
-        elif dim_red == "PCA":
-            x = "x_pca"
-            y = "y_pca"
-            z = "z_pca"
+        if not two_d:
+            if dim_red == "UMAP":
+                x = "x_umap_3D"
+                y = "y_umap_3D"
+                z = "z_umap_3D"
+            elif dim_red == "PCA":
+                x = "x_pca_3D"
+                y = "y_pca_3D"
+                z = "z_pca_3D"
+            else:
+                x = "x_tsne_3D"
+                y = "y_tsne_3D"
+                z = "z_tsne_3D"
         else:
-            x = "x_tsne"
-            y = "y_tsne"
-            z = "z_tsne"
+            if dim_red == "UMAP":
+                x = "x_umap_2D"
+                y = "y_umap_2D"
+            elif dim_red == "PCA":
+                x = "x_pca_2D"
+                y = "y_pca_2D"
+            else:
+                x = "x_tsne_2D"
+                y = "y_tsne_2D"
 
         # iterate over different values of the selected column
         for group_idx, group_value in enumerate(col_groups):

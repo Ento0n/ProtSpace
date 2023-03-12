@@ -16,19 +16,23 @@ from src.visualization.visualizator import Visualizator
 
 
 class DataPreprocessor:
-    UMAP_AXIS_NAMES = ["x_umap", "y_umap", "z_umap"]
-    PCA_AXIS_NAMES = ["x_pca", "y_pca", "z_pca"]
-    TSNE_AXIS_NAMES = ["x_tsne", "y_tsne", "z_tsne"]
+    UMAP_AXIS_NAMES = ["x_umap_3D", "y_umap_3D", "z_umap_3D", "x_umap_2D", "y_umap_2D"]
+    PCA_AXIS_NAMES = ["x_pca_3D", "y_pca_3D", "z_pca_3D"]
+    TSNE_AXIS_NAMES = ["x_tsne_3D", "y_tsne_3D", "z_tsne_3D", "x_tsne_2D", "y_tsne_2D"]
     AXIS_NAMES = [
-        "x_umap",
-        "y_umap",
-        "z_umap",
-        "x_pca",
-        "y_pca",
-        "z_pca",
-        "x_tsne",
-        "y_tsne",
-        "z_tsne",
+        "x_umap_3D",
+        "y_umap_3D",
+        "z_umap_3D",
+        "x_umap_2D",
+        "y_umap_2D",
+        "x_pca_3D",
+        "y_pca_3D",
+        "z_pca_3D",
+        "x_tsne_3D",
+        "y_tsne_3D",
+        "z_tsne_3D",
+        "x_tsne_2D",
+        "y_tsne_2D",
     ]
 
     def __init__(
@@ -638,6 +642,7 @@ class DataPreprocessor:
         # Parameters: https://umap-learn.readthedocs.io/en/latest/parameters.html
         import umap
 
+        # 3D
         fit = umap.UMAP(
             n_neighbors=umap_paras["n_neighbours"],
             min_dist=umap_paras["min_dist"],
@@ -646,9 +651,26 @@ class DataPreprocessor:
             metric=umap_paras["metric"],
         )  # initialize umap; use random_state=42 for reproducibility
         umap_fit = fit.fit_transform(data)  # fit umap to our embeddings
-        df_umap = DataFrame(
-            data=umap_fit, columns=["x_umap", "y_umap", "z_umap"]
+        df_umap_3D = DataFrame(
+            data=umap_fit, columns=["x_umap_3D", "y_umap_3D", "z_umap_3D"]
         )
+
+        # 2D
+        fit = umap.UMAP(
+            n_neighbors=umap_paras["n_neighbours"],
+            min_dist=umap_paras["min_dist"],
+            random_state=42,
+            n_components=2,
+            metric=umap_paras["metric"],
+        )  # initialize umap; use random_state=42 for reproducibility
+        umap_fit = fit.fit_transform(data)  # fit umap to our embeddings
+        df_umap_2D = DataFrame(
+            data=umap_fit, columns=["x_umap_2D", "y_umap_2D"]
+        )
+
+        # Combine
+        df_umap = pd.concat([df_umap_2D, df_umap_3D], axis=1)
+
         return df_umap
 
     def _generate_pca(self, data: np.ndarray):
@@ -683,6 +705,7 @@ class DataPreprocessor:
         """
         from sklearn.manifold import TSNE
 
+        # 3D
         fit = TSNE(
             n_components=3,
             random_state=42,
@@ -693,9 +716,27 @@ class DataPreprocessor:
             metric=tsne_paras["tsne_metric"],
         )
         tsne_fit = fit.fit_transform(data)
-        df_tsne = DataFrame(
-            data=tsne_fit, columns=["x_tsne", "y_tsne", "z_tsne"]
+        df_tsne_3D = DataFrame(
+            data=tsne_fit, columns=["x_tsne_3D", "y_tsne_3D", "z_tsne_3D"]
         )
+
+        # 2D
+        fit = TSNE(
+            n_components=2,
+            random_state=42,
+            init="random",
+            learning_rate=tsne_paras["learning_rate"],
+            n_iter=tsne_paras["iterations"],
+            perplexity=tsne_paras["perplexity"],
+            metric=tsne_paras["tsne_metric"],
+        )
+        tsne_fit = fit.fit_transform(data)
+        df_tsne_2D = DataFrame(
+            data=tsne_fit, columns=["x_tsne_2D", "y_tsne_2D"]
+        )
+
+        # Combine
+        df_tsne = pd.concat([df_tsne_2D, df_tsne_3D], axis=1)
 
         return df_tsne
 
