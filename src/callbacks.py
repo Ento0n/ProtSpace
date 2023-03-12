@@ -1873,10 +1873,10 @@ def get_callbacks(
     def silhouette(distmat, labels, ignore=[np.NaN]):
         """Calculates the silhouette score of a distance matrix.
         """
-        # exclude groups that have less than 2 groups
+        # exclude groups that have less than 2 grgroupsoups
         exclude = set(k for k, g in groupby(sorted(labels)) if sum(1 for _ in g) < 2)
         exclude.update(set(ignore))
         mask = [i not in exclude for i in labels]
         return silhouette_score(distmat[mask, :][:, mask], labels[mask], metric='precomputed')
 
-    return download_graph, expand_sequence, handle_graph_canvas
+    return download_graph, expand_sequence, handle_graph_canvas, ts_ss, silhouette
